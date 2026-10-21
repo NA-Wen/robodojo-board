@@ -1,0 +1,16 @@
+{
+  "run_count": 42,
+  "video_refs": 126,
+  "events": 41,
+  "budget_cells_filled": 168,
+  "budget_totals": {
+    "abandonNearAction": 6,
+    "abandonNearTurn": 3,
+    "abandonActionLimit": 0,
+    "abandonTurnLimit": 0
+  },
+  "metric_event_reconciliation": "pass",
+  "ingestion_field_mapping": "pass",
+  "csv_mirror": "checked_by_official_validator",
+  "full_review_complete": false
+}

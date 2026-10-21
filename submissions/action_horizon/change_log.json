@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-21",
+  "status": "partial_audit",
+  "source_audit_sha256": "7718f18195bc914b42592a13e10b6c4e37bec23cca00a7c13e0aca3691949533",
+  "previous_cloud_group_sha256": "42a35906ef3e8403d1dc671c8b6e5acbd98c3fcb908c12f2e82c3f59e134cad8",
+  "changes": [
+    "预算四项按用户明确授权采用模型自述口径，168格不留空。",
+    "以本对话当前42run审核数据作为提交来源；全程未审核指标保留pending。",
+    "模型turn与轨迹观测阶段分开；视觉事件只用真实视频帧定位，不捏造精确turn/env。"
+  ],
+  "original_data_modified": false,
+  "full_review_complete": false
+}
