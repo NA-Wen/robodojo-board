@@ -43,11 +43,11 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     {id:'general',name:'总体表现',en:'GENERAL',desc:'先看任务结果与执行成本',cards:[
       outcome(),
       bars('平均得分','原生分数的算术平均，不合成行为总分',[['score','任务得分']],{mode:'mean',unit:'分',fixed:1,decimals:2,note:'当前任务等权；只有任务构成一致时，组间均值才便于比较。'}),
-      bars('平均执行成本','分别计算每条运行的成本', [['turns','运行轮数']],{mode:'mean',unit:'轮',decimals:1,note:'persistent-cap20：已核对的原生模型调用轮，轨迹阶段另存；其余实验按各自已核实口径，未知不填近似值。'}),
+      bars('平均执行成本','分别计算每条运行的成本', [['turns','运行轮数']],{mode:'mean',unit:'轮',decimals:1,note:'semantic-eef使用已核对的原生模型决策轮；其他组按各自来源口径，详见实验配置与覆盖说明。'}),
       bars('平均 action 次数','每条运行实际执行的控制步数',[['actions','实际控制步']],{mode:'mean',unit:'步',decimals:1,note:'包含成功和未成功运行；较少步骤也可能来自提前结束。'})
     ]},
     {id:'grasp',name:'夹取',en:'GRASP',desc:'抓取失败、恢复与目标选择',cards:[
-      bars('空夹与掉落','已确认事件；点击柱形查看该实验的事件', [['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{note:'空夹包括最终未重试的独立尝试；掉落要求在主动释放前失持。数值为已核查范围内的确认下界。'}),
+      bars('空夹与掉落','已确认事件；点击柱形查看该实验的事件', [['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{note:'semantic-eef空夹包含最终未重试的独立尝试，掉落仅计主动释放前失持；其他组口径见各组说明。'}),
       bars('涉及运行比例','至少发生过一次该事件的运行占比',[['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{mode:'incidence',unit:'%',fixed:100,decimals:1,note:'分母为有记录的运行数，不是抓取尝试数；不是抓取失败率。'}),
       bars('成功重夹与目标选择','需要关联失败事件和后续成功抓取',[['emptyRegrasp','空夹后成功重夹'],['dropRegrasp','掉落后成功重夹'],['wrongObject','选错物体']])
     ]},
@@ -62,7 +62,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       bars('掉落后异手恢复','单列辅助事件，保留实际支撑面',[['recoveryOther','另一手重新拾取','recovery_other']],{note:'不并入有意换手。semantic-eef 全批次：桌面 2 次、传送带 2 次；筛选后以当前事件为准。'})
     ]},
     {id:'view',name:'换视角',en:'VIEWPOINT',desc:'区分执行臂自身取景与异侧机械臂补充观察',cards:[
-      bars('补视野动作数','按实际执行的轨迹动作阶段计数',[['viewSame','同手臂调整'],['viewOppositeStages','异侧手臂调整','view']],{unit:'次',note:'同臂与异侧均按实际执行阶段计数；数值随筛选更新，同一观察缺口通过 gap_id 关联。'}),
+      bars('补视野动作数','按实际执行的轨迹动作阶段计数',[['viewSame','同手臂调整'],['viewOppositeStages','异侧手臂调整','view']],{unit:'次',note:'semantic-eef同臂与异侧均按实际执行阶段计数，同一缺口通过 gap_id 关联；历史组保留原审核动作口径。'}),
       bars('异侧观察缺口数（辅助）','同一观察缺口通过 gap_id 关联',[['viewEpisodes','观察缺口','view']],{unit:'个',note:'一次观察缺口可包含多个实际动作；此辅助数不属于26项动作阶段指标，不能与动作次数相加。'})
     ]},
     {id:'abandon',name:'放弃',en:'ABANDON',desc:'主动停止与系统强制结束需要分别判定',cards:[

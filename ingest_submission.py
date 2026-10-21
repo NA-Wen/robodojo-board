@@ -231,7 +231,7 @@ def to_group(doc):
 
     values = [{'name': k, 'value': v, 'known': v is not None}
               for k, v in setting.items() if k not in ('setting_id', 'unknown_reason')]
-    return {
+    converted = {
         'id': group['id'],
         'name': group.get('name') or group['id'],
         'coverage': group.get('coverage') or '',
@@ -246,6 +246,62 @@ def to_group(doc):
         'totals': totals,
         'cases': cases,
     }
+    # Keep semantic audit annotations through every CI regeneration. Other
+    # submission formats retain the existing conversion behavior.
+    if group['id'] == 'semantic' and all(
+            'event_annotations' in r.get('configuration', {}).get('audit_auxiliary', {})
+            for r in doc['runs']):
+        converted['submission_version'] = 'protocol-v1'
+        converted['submission_links'] = {
+            key: 'submissions/semantic/' + name for key, name in {
+                'bundle': 'submission.json', 'csv': 'task_metrics.csv',
+                'events': 'events.json', 'validation': 'validation_report.json',
+            }.items()
+        }
+        first_aux = doc['runs'][0]['configuration']['audit_auxiliary']
+        converted['methodology'] += [
+            first_aux['budget_interpretation'], first_aux['turn_definition'],
+            first_aux['action_definition'], first_aux['frame_mapping'],
+            '空夹包括无重试尝试；主动释放后落下不计掉落。',
+            '没有已知公开原始媒体URL，证据以三视角sha256、帧号和执行区间登记。',
+        ]
+        for case, run in zip(cases, doc['runs']):
+            aux = run['configuration']['audit_auxiliary']
+            case.update(submission_version='protocol-v1',
+                        decisions=run['result']['turns'], turns_basis='model_decisions',
+                        trajectory_stages=aux['executed_stages'],
+                        trajectory_records=aux['trajectory_records'],
+                        note='按协议同步；†为确认下界。动作与turn预算独立判断，媒体无公开URL时保留哈希与定位。')
+            case['metrics']['lowerBound'] = [
+                FIELD_TO_KEY[k] for k, s in run['metric_status'].items() if s == 'lower_bound']
+            raw_events = {e['id']: e for e in run['events']}
+            annotations = aux['event_annotations']
+            case['counts'] = {
+                'view_motions': run['metrics']['view_opposite'],
+                'view_same_motions': run['metrics']['view_same'],
+                'view_episodes': len({raw_events[eid].get('gap_id')
+                                      for eid, a in annotations.items()
+                                      if a['view_type'] == 'opposite'}),
+            }
+            for event in case['events']:
+                annotation = annotations[event['id']]
+                raw = raw_events[event['id']]
+                event.update(annotation)
+                event.update(gap_id=raw.get('gap_id'), media=raw['media'],
+                             turn_basis='model_call',
+                             view_motion_turns=annotation['trajectory_stages']
+                             if annotation['view_type'] else [])
+                event['evidence'][0].update(
+                    turn_basis='model_call', env_end=annotation['env_end_inclusive'],
+                    frame_end=annotation['frame_end'], tool=annotation['primitive'])
+            case['submission_events'] = run['events']
+            case['artifacts'] = run['artifacts']
+        converted['totals'].update({key: sum(c['metrics'].get(key) or 0 for c in cases)
+                                   for key in ('emptyRetry', 'drops', 'emptyRegrasp',
+                                               'dropRegrasp', 'directAttempts', 'directSuccess',
+                                               'tableAttempts', 'tableSuccess', 'supportAttempts',
+                                               'supportSuccess', 'viewSame', 'viewOpposite')})
+    return converted
 
 
 def main(argv):
