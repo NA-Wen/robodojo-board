@@ -39,14 +39,16 @@ def load_site(dist):
     return json.loads(raw[len(prefix):].rstrip().rstrip(';'))
 
 
-def _uniq(groups, key):
+def _collect(groups, key):
     vals = {c['episode'].get(key) for g in groups for c in g.get('cases', [])}
-    vals = {v for v in vals if v is not None}
-    return sorted(vals, key=lambda v: (str(type(v)), v))
+    return {v for v in vals if v is not None}
 
 
 def merge_into_site(dist, incoming_dir):
-    """把 incoming/*.json 合并进 data.js / audit-data.json（不依赖原始数据）。"""
+    """把 incoming/*.json 合并进 data.js / audit-data.json（不依赖原始数据）。
+
+    原则：只增不减。既有 filters 内容原样保留，新值并入；不认识的键不碰。
+    """
     data = load_site(dist)
     groups = data['groups']
     index = {g['id']: i for i, g in enumerate(groups)}
@@ -61,23 +63,68 @@ def merge_into_site(dist, incoming_dir):
             index[group['id']] = len(groups) - 1
             added.append(group['id'])
 
-    tasks = _uniq(groups, 'task')
-    sets = {g['id']: {c['episode']['task'] for c in g.get('cases', [])} for g in groups}
-    common = set.intersection(*sets.values()) if sets else set()
-    data['filters'] = {
-        'tasks': tasks,
-        'seeds': _uniq(groups, 'seed'),
-        'scenes': _uniq(groups, 'scene'),
-        'variants': _uniq(groups, 'variant'),
-        'capabilities': _uniq(groups, 'capability'),
-        'settings': [{'id': g['id'], 'name': g['name'],
-                      'label': (g.get('setting') or {}).get('label', g['name']),
-                      'coverage': (g.get('setting') or {}).get('coverage', '')} for g in groups],
-        'pairedTasks': len(common),
-        'note': f"{len(groups)} 个实验设置，{len(common)} 个任务在所有组中都有记录。",
-    }
-    data['pairedTasks'] = len(common)
-    data['matchedEpisodes'] = len(common)
+    filters = data.setdefault('filters', {})
+
+    # tasks：保留既有对象（含 instruction / paired 等字段），只追加缺失的任务
+    existing_tasks = filters.get('tasks') or []
+    by_name = {t['name']: t for t in existing_tasks if isinstance(t, dict)}
+    if len(by_name) != len(existing_tasks):  # 旧格式是字符串，做兼容
+        by_name = {t if isinstance(t, str) else t['name']: t for t in existing_tasks}
+    names_seen = [t if isinstance(t, str) else t['name'] for t in existing_tasks]
+
+    group_count = {}
+    case_by_task = {}
+    for g in groups:
+        for c in g.get('cases', []):
+            name = c['episode'].get('task')
+            if not name:
+                continue
+            group_count.setdefault(name, set()).add(g['id'])
+            case_by_task.setdefault(name, c)
+
+    paired = {n for n, gs in group_count.items() if len(gs) >= 2}
+    merged_tasks = []
+    for name in names_seen + [n for n in sorted(case_by_task) if n not in names_seen]:
+        prev = by_name.get(name)
+        if isinstance(prev, dict):
+            prev = dict(prev)
+            prev['paired'] = name in paired
+            merged_tasks.append(prev)
+        elif name in case_by_task:
+            c = case_by_task[name]
+            e = c['episode']
+            merged_tasks.append({'name': name, 'instruction': c.get('instruction', ''),
+                                 'variant': e.get('variant'), 'seed': e.get('seed'),
+                                 'scene': e.get('scene'), 'capability': e.get('capability'),
+                                 'paired': name in paired})
+        else:
+            merged_tasks.append({'name': name, 'instruction': '', 'paired': name in paired})
+    filters['tasks'] = merged_tasks
+
+    # 其余取值集合：并集，不缩
+    for key in ('seeds', 'scenes', 'variants', 'capabilities'):
+        old = list(filters.get(key) or [])
+        new_vals = _collect(groups, key.rstrip('s'))
+        merged = old + sorted(new_vals - set(old), key=lambda v: (str(type(v)), v))
+        filters[key] = merged
+
+    # settings：既有条目保留顺序与内容，追加新组
+    old_settings = {s['id']: s for s in (filters.get('settings') or []) if isinstance(s, dict)}
+    settings = []
+    for g in groups:
+        entry = dict(old_settings.get(g['id']) or {})
+        entry.setdefault('id', g['id'])
+        entry.setdefault('name', g['name'])
+        entry.setdefault('label', (g.get('setting') or {}).get('label', g['name']))
+        entry.setdefault('coverage', (g.get('setting') or {}).get('coverage', ''))
+        settings.append(entry)
+    filters['settings'] = settings
+
+    paired_n = len(paired)
+    filters['pairedTasks'] = paired_n
+    if not filters.get('note'):
+        filters['note'] = f"{len(groups)} 个实验设置，{paired_n} 个任务至少有 2 个设置的结果。"
+    data['pairedTasks'] = paired_n
 
     (open(os.path.join(dist, 'data.js'), 'w', encoding='utf-8')
      .write('window.AUDIT_DATA=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';'))
