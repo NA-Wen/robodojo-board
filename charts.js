@@ -1,8 +1,9 @@
 /* Homepage charts share the exact selected runs used by the task and event pages. */
 window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings}) {
   const active = groups.filter(g => runs.some(r => r.g.id === g.id));
-  const colors = {semantic:'#216950', persistent:'#c57b43'};
-  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || '#596fa4'}));
+  const mono = ['#0a0a0a','#7d7d7d','#3f3f3f','#a8a8a8','#5c5c5c'];
+  const colors = {semantic:mono[0], persistent:mono[1]};
+  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || mono[active.indexOf(g)%mono.length]}));
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
   const label = g => `<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`;
   const valueOf = (r,key) => key==='viewMotions' ? (r.c.counts.view_motions ?? null) : key==='viewOppositeStages' ? (r.c.submission_version?r.c.metrics.viewOpposite:(r.c.counts.view_motions??null)) : key==='viewEpisodes' ? (r.c.counts.view_episodes??r.c.metrics.viewOpposite??null) : r.c.metrics[key];
@@ -86,7 +87,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   const persistentPanel=persistent?`<div class="bc-source"><div><b>persistent-cap20 · 26项标准包已更新</b><p>42个run · 292条事件 · 0阻断 · 靠近action确认5次、turn确认4次（各3任务未知） · †为确认下界</p></div><a class="button" href="${esc(persistent.submission_links.budget_review)}">预算复核</a><a class="button" href="${esc(persistent.submission_links.xlsx)}">Excel</a><a class="button" href="${esc(persistent.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(persistent.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(persistent.submission_links.validation)}">校验记录</a></div>`:'';
   const scope=series.map(g=>`${g.name} ${g.runs.length} 条运行`).join(' / ');
   return `<div class="bc-intro"><div><p class="eyebrow">BEHAVIOR OVERVIEW</p><h1>从总体结果，到每一类行为</h1><p class="subtitle">${esc(scope)} · 所有图表随上方筛选联动</p></div><button class="button" id="export-scope">导出当前范围 JSON ↓</button></div>
-    <div class="bc-toolbar"><div class="bc-global-legend">${series.map(label).join('')}</div><span>颜色固定代表实验，不表示好坏</span></div>
+    <div class="bc-toolbar"><div class="bc-global-legend">${series.map(label).join('')}</div><span>灰阶固定代表实验，不表示好坏</span></div>
     <nav class="bc-section-nav" aria-label="行为分区">${sections.map((s,i)=>`<button data-chart-section="${s.id}"><small>${String(i).padStart(2,'0')}</small>${s.name}</button>`).join('')}</nav>
     ${sourcePanel}${semanticPanel}${persistentPanel}<div class="notice bc-notice">${active.length>1?`当前范围有 ${matched} 组相同 task / variant / seed / scene 可配对。各组任务构成、实验设置与证据覆盖不同，汇总值仅描述各自样本。`:'当前为单实验范围，图表描述所选样本。'} 事件数为确认下限；“待补标”不等于 0。${uncertainty?` 当前 ${uncertainty} 条事件待确认，未并入相应确认计数。`:''}${semanticRuns.length?' semantic-eef 的 3 次空夹/掉落待定事件只归入其中一类，不可双计；主动释放后落下已从掉落计数中排除。':''}</div>
     ${sections.map((s,i)=>`<section class="bc-section" id="behavior-${s.id}" aria-labelledby="behavior-title-${s.id}"><header class="bc-section-head"><span class="bc-section-number">${String(i).padStart(2,'0')}</span><div><p>${s.en}</p><h2 id="behavior-title-${s.id}">${s.name}</h2></div><span class="bc-section-description">${s.desc}</span></header><div class="bc-grid ${s.cards.length===4?'bc-grid-general':s.cards.length===3?'bc-grid-three':''}">${s.cards.join('')}</div></section>`).join('')}

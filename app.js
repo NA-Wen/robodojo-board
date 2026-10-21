@@ -15,7 +15,9 @@ function change(patch){Object.assign(state,patch);normalize();writeURL();render(
 function selectionLabel(){return fields.map(k=>({experiment:'实验设置',task:'task',variant:'variant',seed:'seed',scene:'scene'}[k])+': '+(state[k]==='all'?'全部':k==='experiment'?D.groups.find(g=>g.id===state[k]).name:state[k])).join(' · ')}
 function selector(){let base=records;const labels={experiment:'实验设置',task:'Task',variant:'Variant',seed:'Seed',scene:'Scene'};const controls=fields.map(k=>{const values=[...new Set(base.map(r=>get(r,k)))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));const h=`<label>${labels[k]}<select id="scope-${k}" data-scope="${k}" aria-label="${labels[k]}"><option value="all">全部${k==='experiment'?'实验设置':''}</option>${values.map(v=>`<option value="${esc(v)}" ${state[k]===v?'selected':''}>${esc(k==='experiment'?D.groups.find(g=>g.id===v).name:v)}</option>`).join('')}</select></label>`;base=base.filter(r=>state[k]==='all'||get(r,k)===state[k]);return h}).join('');return `<section class="scope-panel" aria-label="全局数据范围"><div class="scope-head"><b>选择实验与任务条件</b><button class="button" id="reset-scope">重置范围</button></div><div class="scope-controls">${controls}</div><p id="scope-summary">${esc(selectionLabel())} · <strong>${selected().length} 条运行</strong></p><small>可选条件来自实际运行记录；task、variant、seed、scene 均可筛选。切换页面保留筛选；指标、事件和导出均使用此范围。</small></section>`}
 function heading(title,text){return `<div class="heading"><div><p class="eyebrow">EXPERIMENT / TASK / SEED / SCENE</p><h1>${title}</h1><p class="subtitle">${text}</p></div><button class="button" id="export-scope">导出当前范围 JSON ↓</button></div>`}
-const gname=r=>`<span class="group-pill ${r.g.id==='persistent'?'persistent':''}">● ${esc(r.g.name)}</span>`;
+const GTONE=['#0a0a0a','#7d7d7d','#3f3f3f','#a8a8a8','#5c5c5c'];
+const gname=r=>{const i=Math.max(0,D.groups.findIndex(g=>g.id===r.g.id));
+  return `<span class="group-pill"><i class="sw" style="background:${GTONE[i%GTONE.length]}"></i>${esc(r.g.name)}</span>`;};
 function cell(c,key){const v=c.metrics[key],field=D.protocol.metrics.find(m=>m.key===key)?.field,status=c.metricStatus?.[field];if(v==null)return `<span class="pending" title="${esc(status||'na')}">${status==='unknown'?'未知':status==='na'?'NA':'待补标'}</span>`;const text=key==='success'?(v?'是':'否'):key==='score'?Number(v).toFixed(2):esc(v);return `<span title="${esc(status||'原审核口径')}">${text}${status==='lower_bound'?' †':''}</span>`}
 function sum(rs,key){const vs=rs.map(r=>r.c.metrics[key]).filter(v=>v!=null);return vs.length?vs.reduce((a,b)=>a+b,0):null}
 function sourceLinks(g,c){const src=c?.audit_source||g.audit_source;if(!src)return '';return `<p class="source-links"><a href="${esc(src.report_url)}" target="_blank" rel="noopener">${c?'本 case 的统计与关键帧':'完整报告 · 69 个 case'} ↗</a>${!c?` · <a href="${esc(src.counts_url)}" target="_blank" rel="noopener">纯文本统计</a> · <a href="${esc(src.bundle_url)}" download>JSON 与关键帧打包 ↓</a>`:''}<small>本机证据服务 · 原始报告</small></p>`}
@@ -63,7 +65,7 @@ function protocol(){
         </ul>
       </div>
     </div>
-    <pre class="code-block">curl -sO ${location.origin}/protocol.md
+    <pre class="code-block">curl -sO ${location.origin}${location.pathname}protocol.md
 python3 validate_submission.py ./my-submission</pre>
   </section>`;
 
@@ -72,7 +74,7 @@ python3 validate_submission.py ./my-submission</pre>
       ['输入',esc(P.contract.inputs.join('；'))],
       ['产出',P.contract.outputs.map(x=>`<code>${esc(x)}</code>`).join(' ')],
       ['校验',`<code>python3 validate_submission.py &lt;submission&gt;</code> → 0 阻断`],
-      ['同步',`<code>python3 ingest_submission.py &lt;submission&gt; --board &lt;dist&gt;</code>`],
+      ['同步','提 PR → 合并后自动入库并发布（默认云端看板）；本地兜底 <code>python3 ingest_submission.py &lt;submission&gt; --merge</code>'],
     ])+`<h3 style="margin:18px 0 8px">必须做到</h3>`+ul(P.contract.must.map(esc)));
 
   const layout=sec('layout','目录与产出',
