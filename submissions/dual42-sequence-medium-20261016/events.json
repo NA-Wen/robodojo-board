@@ -1,0 +1,1364 @@
+[
+  {
+    "run_id": "dual42-sequence-medium-20261016-build_tower-standard-s0-scene0",
+    "id": "build_tower-E01",
+    "category": "view",
+    "object": "木板右侧支撑点",
+    "arm": "right assists left",
+    "turns": [
+      34
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      15.2,
+      16.4
+    ],
+    "env_step": null,
+    "frame": 380,
+    "result": "executed",
+    "basis": "右腕撤离后 head 右侧支撑区域可见，左臂仍持板。a33 明确补充该接触点视野并实际执行19步。\n三路原视频0-based帧区间[380, 410]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[33]；关联env区间(332, 351]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：view_opposite。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/e36f54e9e2c149c2a71d/?dl=1",
+        "sha256": "8e8c4d4a31707a1e5a5a6b0ef19525ac595d927e4c597f192928fbed5e45778e",
+        "bytes": 2928023
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/93b8e97b47da411485db/?dl=1",
+        "sha256": "656f1246a113e3f26b60745db38e7593d3cbfcdf8ffc9936365cb78d8d389dee",
+        "bytes": 3871274
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/93361214c0c742918c28/?dl=1",
+        "sha256": "d8eea503e51d456a54d6c8dd9654a067b9e947660e13dd79a1cae1a3d87aa285",
+        "bytes": 2428999
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "tower-view-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-build_tower-standard-s0-scene0",
+    "id": "build_tower-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      93
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 1038,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"Built a stable two-level tower and returned both arms home, but insufficient steps remain to place the final two pieces safely.\\\",\\\"hindsight\\\":\\\"Reduce repeated grasp corrections and reserve more steps for the final placements and return motions.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[92]；关联env区间(1037, 1038]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-deposit_coin-standard-s0-scene0",
+    "id": "deposit_coin-E01",
+    "category": "empty_retry",
+    "object": "硬币",
+    "arm": "left",
+    "turns": [
+      8,
+      9
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      3.96,
+      4.8
+    ],
+    "env_step": null,
+    "frame": 99,
+    "result": "failed",
+    "basis": "左腕 f106 闭爪后，f113 提升时硬币仍在白色支架中；head 同时显示手臂升起。闭爪与提拉分段各执行 6、8 个控制步。\n三路原视频0-based帧区间[99, 120]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[7, 8]；关联env区间(89, 103]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：coin-grasp-1。 确认计数字段：empty_retry。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/b827099cf8de4918b6bb/?dl=1",
+        "sha256": "433abd0f1660a414f463bc5b015571e89cd0965c829b618505d529531f8e8359",
+        "bytes": 772705
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3675075ce0d04ca2bc42/?dl=1",
+        "sha256": "530f09860654f6a749a7633befb26c6af89b792964d0dc621a55b106ae5ecbc7",
+        "bytes": 1297555
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/d5440b4d55e64ff09387/?dl=1",
+        "sha256": "60610d486eed5cdaf8afb132fa80f6affaed5a01c45784418c424b629c725a6c",
+        "bytes": 228187
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-deposit_coin-standard-s0-scene0",
+    "id": "deposit_coin-E02",
+    "category": "other",
+    "object": "硬币",
+    "arm": "left",
+    "turns": [
+      11,
+      13
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      5.36,
+      6.48
+    ],
+    "env_step": null,
+    "frame": 134,
+    "result": "success",
+    "basis": "第二次闭爪后 f148 支架已空，硬币随左爪提起；f155–162 搬运中仍保持。只关联第一次空夹一次。\n三路原视频0-based帧区间[134, 162]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[10, 11, 12]；关联env区间(119, 151]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：coin-grasp-1。 确认计数字段：empty_regrasp。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/b827099cf8de4918b6bb/?dl=1",
+        "sha256": "433abd0f1660a414f463bc5b015571e89cd0965c829b618505d529531f8e8359",
+        "bytes": 772705
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3675075ce0d04ca2bc42/?dl=1",
+        "sha256": "530f09860654f6a749a7633befb26c6af89b792964d0dc621a55b106ae5ecbc7",
+        "bytes": 1297555
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/d5440b4d55e64ff09387/?dl=1",
+        "sha256": "60610d486eed5cdaf8afb132fa80f6affaed5a01c45784418c424b629c725a6c",
+        "bytes": 228187
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-deposit_coin-standard-s0-scene0",
+    "id": "deposit_coin-E03",
+    "category": "other",
+    "object": "硬币/存钱罐槽",
+    "arm": "left",
+    "turns": [
+      21,
+      24
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      10.88,
+      12.48
+    ],
+    "env_step": null,
+    "frame": 272,
+    "result": "failed",
+    "basis": "硬币对准槽后实际开爪，f287–297 脱离，f312 可见硬币在罐外桌面。主动释放后落偏，不计夹取掉落。小幅连续对齐合并一次。\n三路原视频0-based帧区间[272, 312]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[20, 21, 22, 23]；关联env区间(256, 285]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：fine_placement_fail。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/b827099cf8de4918b6bb/?dl=1",
+        "sha256": "433abd0f1660a414f463bc5b015571e89cd0965c829b618505d529531f8e8359",
+        "bytes": 772705
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3675075ce0d04ca2bc42/?dl=1",
+        "sha256": "530f09860654f6a749a7633befb26c6af89b792964d0dc621a55b106ae5ecbc7",
+        "bytes": 1297555
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/d5440b4d55e64ff09387/?dl=1",
+        "sha256": "60610d486eed5cdaf8afb132fa80f6affaed5a01c45784418c424b629c725a6c",
+        "bytes": 228187
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-deposit_coin-standard-s0-scene0",
+    "id": "deposit_coin-E04",
+    "category": "view",
+    "object": "硬币观察区",
+    "arm": "left",
+    "turns": [
+      4
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      2.68,
+      3.4
+    ],
+    "env_step": null,
+    "frame": 67,
+    "result": "executed",
+    "basis": "note 指明硬币离开腕视野后抬升找回观察；该段实际执行10步。head 显示抬升，腕视野由看不到硬币变为 f82–85 可见。\n三路原视频0-based帧区间[67, 85]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[3]；关联env区间(63, 73]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：view_same。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/b827099cf8de4918b6bb/?dl=1",
+        "sha256": "433abd0f1660a414f463bc5b015571e89cd0965c829b618505d529531f8e8359",
+        "bytes": 772705
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3675075ce0d04ca2bc42/?dl=1",
+        "sha256": "530f09860654f6a749a7633befb26c6af89b792964d0dc621a55b106ae5ecbc7",
+        "bytes": 1297555
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/d5440b4d55e64ff09387/?dl=1",
+        "sha256": "60610d486eed5cdaf8afb132fa80f6affaed5a01c45784418c424b629c725a6c",
+        "bytes": 228187
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "coin-view-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-deposit_coin-standard-s0-scene0",
+    "id": "deposit_coin-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      25
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 286,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The coin fell outside the bank, and only 15 environment steps remain—insufficient to recover it and complete insertion.\\\",\\\"hindsight\\\":\\\"The coin was successfully lifted, but transfer reach and wrist orientation consumed too much budget. A right-arm handoff planned earlier, with a top-down insertion and verified slot alignment before release, would avoid the tilted-jaw collision and failed drop.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[24]；关联env区间(285, 286]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-fill_pen_holder-standard-s0-scene0",
+    "id": "fill_pen_holder-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      84
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 923,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"Only the white pen remained inserted. The holder is upright on the table and both arms are home, but I could not complete all four placements.\\\",\\\"hindsight\\\":\\\"Use secure central grasps, rotate pens in clear workspace, and verify the lower end is inside the rim before release. Repeated reach failures and misplaced releases consumed the available motion budget.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[83]；关联env区间(922, 923]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-hang_mugs-random-s0-scene0",
+    "id": "hang_mugs-E01",
+    "category": "other",
+    "object": "杯架",
+    "arm": "none",
+    "turns": [],
+    "turn_precision": "unknown",
+    "time_range": [
+      24.2,
+      28.16
+    ],
+    "env_step": null,
+    "frame": 605,
+    "result": "no_confirmed_topple",
+    "basis": "加密检查显示杯架仍竖立；概览中透视变化不能证明杯架被碰倒。\n三路原视频0-based帧区间[605, 704]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[]；关联env区间(None, None]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。 候选已排除，不计事件指标。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/9ba33246bf114ff99f98/?dl=1",
+        "sha256": "ba218fb6fc84960d5a429d8fa939d052c878a3729e01b981a6ec01f8f4dc5d9e",
+        "bytes": 1894344
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/7b6244b9d71b4db4b352/?dl=1",
+        "sha256": "4e5559c8aa157007ed4d352c76c3ff821e60eb16863de6b20895b2755fc1d516",
+        "bytes": 1874452
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/145f995104284411aae6/?dl=1",
+        "sha256": "12bd5860d8c0c38306c906389d89c567790fd87f0e9062d94b866b453647b872",
+        "bytes": 2410126
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-hang_mugs-random-s0-scene0",
+    "id": "hang_mugs-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      66
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 692,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"I could not reliably carry and align the mugs with the rack; repeated grasp slips and unreachable wrist poses exhausted the practical manipulation budget.\\\",\\\"hindsight\\\":\\\"Use the arm nearest the rack from the outset, grasp across each mug body away from its handle, and establish a reachable hanging orientation before lifting. Smaller transport increments and an earlier unobstructed side view would reduce slips and alignment errors.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[65]；关联env区间(691, 692]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-insert_key-standard-s0-scene0",
+    "id": "insert_key-E01",
+    "category": "drop",
+    "object": "钥匙",
+    "arm": "left",
+    "turns": [
+      6,
+      8
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      2.96,
+      4.4
+    ],
+    "env_step": null,
+    "frame": 74,
+    "result": "lost",
+    "basis": "f74–98 钥匙随手臂离台并保持；f100–105 连续帧显示钥匙脱离闭合指尖，f110 落在桌上。a8 才请求并执行开爪。\n三路原视频0-based帧区间[74, 110]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[5, 7]；关联env区间(58, 110]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：key-drop-1。 确认计数字段：drop。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/fd3ce80958044956a56d/?dl=1",
+        "sha256": "08cfad5675f3ac04748180df7c70a4b8d512fbbe51cb1aafcaad0e0d09bbd809",
+        "bytes": 728302
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/0208ce7c4cc547d4b1bf/?dl=1",
+        "sha256": "dcf0f92be3f7bf8a05baa232be755997166463f108429c032b00baa2af0a9547",
+        "bytes": 1311460
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/64dd2fca781049b6a77c/?dl=1",
+        "sha256": "21fba7e3b6f7d643c5bf8f5bfb272777e6ea9f16e1d9c72e4c44c4e1c7de4b0d",
+        "bytes": 262284
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-insert_key-standard-s0-scene0",
+    "id": "insert_key-E02",
+    "category": "other",
+    "object": "钥匙",
+    "arm": "left",
+    "turns": [
+      12,
+      14
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      7.44,
+      10.32
+    ],
+    "env_step": null,
+    "frame": 186,
+    "result": "success",
+    "basis": "重新闭爪后钥匙随左臂提升、转腕并保持，f198–258 无再次分离。关联第一次钥匙掉落。\n三路原视频0-based帧区间[186, 258]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[11, 12, 13]；关联env区间(168, 240]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：key-drop-1。 确认计数字段：drop_regrasp。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/fd3ce80958044956a56d/?dl=1",
+        "sha256": "08cfad5675f3ac04748180df7c70a4b8d512fbbe51cb1aafcaad0e0d09bbd809",
+        "bytes": 728302
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/0208ce7c4cc547d4b1bf/?dl=1",
+        "sha256": "dcf0f92be3f7bf8a05baa232be755997166463f108429c032b00baa2af0a9547",
+        "bytes": 1311460
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/64dd2fca781049b6a77c/?dl=1",
+        "sha256": "21fba7e3b6f7d643c5bf8f5bfb272777e6ea9f16e1d9c72e4c44c4e1c7de4b0d",
+        "bytes": 262284
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-insert_key-standard-s0-scene0",
+    "id": "insert_key-E03",
+    "category": "view",
+    "object": "钥匙尖/锁孔",
+    "arm": "right assists left",
+    "turns": [
+      16
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      11.28,
+      12.24
+    ],
+    "env_step": null,
+    "frame": 282,
+    "result": "executed",
+    "basis": "左爪保持钥匙；右腕实际抬转并将锁孔纳入视野。a15 note 明确补看被工作手遮挡的锁孔，执行20步。该行为不是接收钥匙。\n三路原视频0-based帧区间[282, 306]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[15]；关联env区间(257, 277]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：view_opposite。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/fd3ce80958044956a56d/?dl=1",
+        "sha256": "08cfad5675f3ac04748180df7c70a4b8d512fbbe51cb1aafcaad0e0d09bbd809",
+        "bytes": 728302
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/0208ce7c4cc547d4b1bf/?dl=1",
+        "sha256": "dcf0f92be3f7bf8a05baa232be755997166463f108429c032b00baa2af0a9547",
+        "bytes": 1311460
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/64dd2fca781049b6a77c/?dl=1",
+        "sha256": "21fba7e3b6f7d643c5bf8f5bfb272777e6ea9f16e1d9c72e4c44c4e1c7de4b0d",
+        "bytes": 262284
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "key-view-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-insert_key-standard-s0-scene0",
+    "id": "insert_key-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      21
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 286,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The key was lifted, but handover and successful insertion were not completed. Too few environment steps remain to finish and return both arms safely.\\\",\\\"hindsight\\\":\\\"Use a secure bow grasp and plan the receiving-hand pose before lifting. Avoid the unreachable backward wrist tilt, and obtain an overhead slot view before approaching contact.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[20]；关联env区间(285, 286]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-make_kong-standard-s0-scene0",
+    "id": "make_kong-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      72
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 580,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The three matching tiles were flattened, but the replacement tile settled flat instead of upright. The remaining motion budget is insufficient to recover and return both arms.\\\",\\\"hindsight\\\":\\\"Use the right arm for the final placement, with a short-edge grasp that leaves the standing edge clear. Avoid carrying the left arm across the idle right arm, and reserve more budget for placement and returning home.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[71]；关联env区间(579, 580]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-make_toast-random-s0-scene0",
+    "id": "make_toast-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      84
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 769,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"Only one slice is seated. Repeated unreachable poses and contact prevented recovery of the second slice; both arms are back at their starting poses.\\\",\\\"hindsight\\\":\\\"Use the right arm directly for both upright slices. Preserve their orientation and verify deeper slot engagement before releasing; avoid unsupported staging and cross-arm transport.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[83]；关联env区间(768, 769]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pack_objects_into_box-random-s0-scene0",
+    "id": "pack_objects_into_box-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      81
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 1240,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"Three objects are in the box, but the car remains outside after repeated failed grasps. Both arms are back at their starting poses.\\\",\\\"hindsight\\\":\\\"The box should have been stabilized within easy reach before packing. Approaching its tall flaps caused repeated displacement, and tilted car grasps did not provide secure opposing contacts.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[80]；关联env区间(1239, 1240]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pick_from_conveyor_by_image-standard-s0-scene0",
+    "id": "pick_from_conveyor_by_image-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      26
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 298,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The basket was not secured and has moved beyond the reachable interception area. I cannot complete the required lifted-basket placement.\\\",\\\"hindsight\\\":\\\"I identified the cream puppy with brown ears correctly, but spent too long chasing the basket rim. An early overhead interception with sufficient lead for gripper closure would have been better.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[25]；关联env区间(297, 298]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "id": "plug_in_charger-E01",
+    "category": "other",
+    "object": "充电器/插座",
+    "arm": "left",
+    "turns": [
+      29,
+      42
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      11.2,
+      12.88
+    ],
+    "env_step": null,
+    "frame": 280,
+    "result": "failed",
+    "basis": "释放前充电器立于插座区域；实际开爪后 f294–301 倒向桌面，f308–322 仍横卧且插针未插入。此处只确认最后一轮失败，前面的退出/重试边界未逐帧穷尽。\n三路原视频0-based帧区间[280, 322]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]；关联env区间(233, 289]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：fine_placement_fail。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/bbc61894f4554657abbf/?dl=1",
+        "sha256": "7020a5e1efad5bf8e16cc79b11bc777d4503928c47abfb823d043e6719b89832",
+        "bytes": 880682
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/bd19a335f5344307bdb9/?dl=1",
+        "sha256": "84ff5560c3f121fb02f8e4157a6d5888531291e02e73946ab94e090745a09e3c",
+        "bytes": 1131582
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/10ba6d07b10a4507923d/?dl=1",
+        "sha256": "f6aa878298095b2077924afbf308b18d9bce02ef73a03ab5d4b24857118f6537",
+        "bytes": 777300
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "id": "plug_in_charger-E02",
+    "category": "other",
+    "object": "充电器",
+    "arm": "left→right",
+    "turns": [
+      43,
+      46
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      13.16,
+      14.28
+    ],
+    "env_step": null,
+    "frame": 329,
+    "result": "recovery_started",
+    "basis": "左臂放置失败后右臂接近倒下的充电器；这是放置失败后的恢复，不是主动桌面换手，也不是夹持中掉落。此采样区间尚未显示完整后续提拉。\n三路原视频0-based帧区间[329, 357]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[42, 43, 44, 45]；关联env区间(289, 344]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/bbc61894f4554657abbf/?dl=1",
+        "sha256": "7020a5e1efad5bf8e16cc79b11bc777d4503928c47abfb823d043e6719b89832",
+        "bytes": 880682
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/bd19a335f5344307bdb9/?dl=1",
+        "sha256": "84ff5560c3f121fb02f8e4157a6d5888531291e02e73946ab94e090745a09e3c",
+        "bytes": 1131582
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/10ba6d07b10a4507923d/?dl=1",
+        "sha256": "f6aa878298095b2077924afbf308b18d9bce02ef73a03ab5d4b24857118f6537",
+        "bytes": 777300
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "id": "plug_in_charger-E03",
+    "category": "view",
+    "object": "插座孔/充电器",
+    "arm": "right assists left",
+    "turns": [
+      13
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      7.52,
+      8.32
+    ],
+    "env_step": null,
+    "frame": 188,
+    "result": "executed",
+    "basis": "左臂持充电器不动，右腕实际抬转/移动，插座在右腕画面中可见。对应 note 明确获取 overhead alignment view；该独立轨迹阶段执行20步。\n三路原视频0-based帧区间[188, 208]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[12]；关联env区间(168, 188]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：view_opposite。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/bbc61894f4554657abbf/?dl=1",
+        "sha256": "7020a5e1efad5bf8e16cc79b11bc777d4503928c47abfb823d043e6719b89832",
+        "bytes": 880682
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/bd19a335f5344307bdb9/?dl=1",
+        "sha256": "84ff5560c3f121fb02f8e4157a6d5888531291e02e73946ab94e090745a09e3c",
+        "bytes": 1131582
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/10ba6d07b10a4507923d/?dl=1",
+        "sha256": "f6aa878298095b2077924afbf308b18d9bce02ef73a03ab5d4b24857118f6537",
+        "bytes": 777300
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "charger-view-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "id": "plug_in_charger-E04",
+    "category": "view",
+    "object": "插座孔/充电器",
+    "arm": "right assists left",
+    "turns": [
+      14
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      8.32,
+      8.96
+    ],
+    "env_step": null,
+    "frame": 208,
+    "result": "executed",
+    "basis": "左臂持充电器不动，右腕实际抬转/移动，插座在右腕画面中可见。对应 note 明确获取 overhead alignment view；该独立轨迹阶段执行20步。\n三路原视频0-based帧区间[208, 224]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[13]；关联env区间(188, 208]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：view_opposite。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/bbc61894f4554657abbf/?dl=1",
+        "sha256": "7020a5e1efad5bf8e16cc79b11bc777d4503928c47abfb823d043e6719b89832",
+        "bytes": 880682
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/bd19a335f5344307bdb9/?dl=1",
+        "sha256": "84ff5560c3f121fb02f8e4157a6d5888531291e02e73946ab94e090745a09e3c",
+        "bytes": 1131582
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/10ba6d07b10a4507923d/?dl=1",
+        "sha256": "f6aa878298095b2077924afbf308b18d9bce02ef73a03ab5d4b24857118f6537",
+        "bytes": 777300
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "charger-view-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "id": "plug_in_charger-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      51
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 351,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The charger was not seated and fell after release. Recovery secured it again, but the required upright wrist poses are unreachable, with insufficient remaining steps for another regrasp and return home.\\\",\\\"hindsight\\\":\\\"The first insertion needed a clearer side view of the pins and socket before release. A grasp and orientation plan verified for reachability would have avoided the failed recovery rotation.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[50]；关联env区间(350, 351]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pour_balls_into_vase-standard-s0-scene0",
+    "id": "pour_balls_into_vase-E01",
+    "category": "drop",
+    "object": "黄色装球杯",
+    "arm": "right",
+    "turns": [
+      12
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      3.6,
+      4.76
+    ],
+    "env_step": null,
+    "frame": 90,
+    "result": "lost",
+    "basis": "f90–110 杯随闭合右爪在空中搬运，f111–117 逐帧显示杯滑出指尖并落向桌面。该运输段无开爪，下一动作 a12 才开爪。\n三路原视频0-based帧区间[90, 119]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[11]；关联env区间(92, 120]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：cup-drop-1。 确认计数字段：drop。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/79cb2af18fe741cab5d0/?dl=1",
+        "sha256": "fb920f84b6cca8c9bef1839f015af3083faffc2a433584ac61a776d4af838030",
+        "bytes": 381275
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/05f7b6ba82dd42598c6e/?dl=1",
+        "sha256": "7caff425b9e57b46ee194462adf142aa969d99067982a07328ee1c492ee278a2",
+        "bytes": 87802
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/b3e09d239799473d8f15/?dl=1",
+        "sha256": "b23a42ff783fc69945d7785f26630a14802186f1e228d7d63487a79c51231602",
+        "bytes": 606077
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pour_balls_into_vase-standard-s0-scene0",
+    "id": "pour_balls_into_vase-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      19
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 148,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The cup slipped during transport and spilled balls onto the table. I cannot reliably recover all seven balls with the current grasp and reachable approaches.\\\",\\\"hindsight\\\":\\\"The initial grasp pinched only the rim and became unstable. I should have set the cup down and secured its body after the gripper nearly closed, rather than continuing transport.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[18]；关联env区间(147, 148]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pour_by_language-standard-s0-scene0",
+    "id": "pour_by_language-E01",
+    "category": "uncertain",
+    "object": "红瓶",
+    "arm": "left / held purple bottle",
+    "turns": [
+      9,
+      11
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      4.84,
+      5.68
+    ],
+    "env_step": null,
+    "frame": 121,
+    "result": "无法可靠分类，不计确认数",
+    "basis": "红瓶从直立变成横倒，发生在左臂携紫瓶横向经过时。接触体被遮挡，且完整语言任务指令未公开，红瓶是否属于非目标物不明。\n三路原视频0-based帧区间[121, 142]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[8, 9, 10]；关联env区间(108, 148]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "待确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/0d80aa4058be49529c51/?dl=1",
+        "sha256": "047008d3fc22dccc159e7a8b105f10d5eb769a0516f343b8738a144182a7260d",
+        "bytes": 2387294
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/b1c4961efa2a48f4890b/?dl=1",
+        "sha256": "a49f32363e36e0be9397bb8d00ecf68e7e1d5103b2ff940b965488c9c3ac1399",
+        "bytes": 2807483
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/e34d90aa22c24a8fbfdb/?dl=1",
+        "sha256": "da2ee98a163fdbbc551398c9bb5411e4c2d436c629b9b90d8e280b4d12dd7139",
+        "bytes": 1308567
+      }
+    ],
+    "uncertain_reason": "无法可靠分为手臂碰撞、持物碰撞及非目标物倾倒。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-pour_by_language-standard-s0-scene0",
+    "id": "pour_by_language-E02",
+    "category": "uncertain",
+    "object": "红瓶",
+    "arm": "right",
+    "turns": [],
+    "turn_precision": "unknown",
+    "time_range": [
+      26.36,
+      27.8
+    ],
+    "env_step": null,
+    "frame": 659,
+    "result": "无法可靠分类，不计确认数",
+    "basis": "右爪附近红瓶随后出现在桌面；需要核对相应释放执行阶段及连续帧，不能把画面变化直接分类为掉落。\n三路原视频0-based帧区间[659, 695]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[]；关联env区间(None, None]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "待确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/0d80aa4058be49529c51/?dl=1",
+        "sha256": "047008d3fc22dccc159e7a8b105f10d5eb769a0516f343b8738a144182a7260d",
+        "bytes": 2387294
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/b1c4961efa2a48f4890b/?dl=1",
+        "sha256": "a49f32363e36e0be9397bb8d00ecf68e7e1d5103b2ff940b965488c9c3ac1399",
+        "bytes": 2807483
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/e34d90aa22c24a8fbfdb/?dl=1",
+        "sha256": "da2ee98a163fdbbc551398c9bb5411e4c2d436c629b9b90d8e280b4d12dd7139",
+        "bytes": 1308567
+      }
+    ],
+    "uncertain_reason": "该片段的释放/失持时序未精确对齐。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sort_nesting_dolls_by_size-random-s0-scene0",
+    "id": "sort_nesting_dolls_by_size-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      83
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 1035,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The dolls are in size order and both arms are home, but the largest doll is not aligned with the row. Too few environment steps remain for a safe correction.\\\",\\\"hindsight\\\":\\\"A deeper initial grasp on the largest doll would have avoided repeated slips and preserved the budget needed for precise final alignment.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[82]；关联env区间(1034, 1035]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "id": "store_laptop_and_headphones-E01",
+    "category": "drop",
+    "object": "耳机",
+    "arm": "left",
+    "turns": [
+      9,
+      12
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      3.6,
+      5.2
+    ],
+    "env_step": null,
+    "frame": 90,
+    "result": "lost",
+    "basis": "f90–100 耳机悬空随左爪，f105–120 与闭合爪分离并落桌。a12 才开爪。\n三路原视频0-based帧区间[90, 130]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[8, 10, 11]；关联env区间(82, 115]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：headphone-drop-1。 确认计数字段：drop。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/ff8f635e68744bf491b2/?dl=1",
+        "sha256": "3ae8991533dcde41243f9176df874a13d63b3c963e62d79bcf6c7a7c250ec8d6",
+        "bytes": 1424415
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/ef8e7e7dc7c4431ca869/?dl=1",
+        "sha256": "6b3ae198812e551ccea9f8a581b8ee84285f3f75ff2b999a7f0b11008c0f46fb",
+        "bytes": 3400090
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3b097b80ec0a4aaaba8a/?dl=1",
+        "sha256": "829fe912691549685daf0944d6401990352d92e36e2df689d08a2be538898451",
+        "bytes": 999461
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "id": "store_laptop_and_headphones-E02",
+    "category": "other",
+    "object": "耳机",
+    "arm": "left",
+    "turns": [
+      17,
+      20
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      7.4,
+      9.6
+    ],
+    "env_step": null,
+    "frame": 185,
+    "result": "success",
+    "basis": "再次闭爪后的耳机在f190–240随手臂提拉、移动与转腕且保持悬空。关联第一次掉落。\n三路原视频0-based帧区间[185, 240]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[16, 17, 18, 19]；关联env区间(155, 189]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：headphone-drop-1。 确认计数字段：drop_regrasp。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/ff8f635e68744bf491b2/?dl=1",
+        "sha256": "3ae8991533dcde41243f9176df874a13d63b3c963e62d79bcf6c7a7c250ec8d6",
+        "bytes": 1424415
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/ef8e7e7dc7c4431ca869/?dl=1",
+        "sha256": "6b3ae198812e551ccea9f8a581b8ee84285f3f75ff2b999a7f0b11008c0f46fb",
+        "bytes": 3400090
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3b097b80ec0a4aaaba8a/?dl=1",
+        "sha256": "829fe912691549685daf0944d6401990352d92e36e2df689d08a2be538898451",
+        "bytes": 999461
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "id": "store_laptop_and_headphones-E03",
+    "category": "other",
+    "object": "耳机/支架",
+    "arm": "left",
+    "turns": [
+      30,
+      33
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      12.36,
+      14.04
+    ],
+    "env_step": null,
+    "frame": 309,
+    "result": "failed",
+    "basis": "耳机靠近支架后a30实际开爪；f315张爪，f321–339耳机滑离支架，f345–351耳机位于桌上。主动释放后悬挂失败，不计掉落。\n三路原视频0-based帧区间[309, 351]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[29, 30, 31, 32]；关联env区间(287, 320]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：fine_placement_fail。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/ff8f635e68744bf491b2/?dl=1",
+        "sha256": "3ae8991533dcde41243f9176df874a13d63b3c963e62d79bcf6c7a7c250ec8d6",
+        "bytes": 1424415
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/ef8e7e7dc7c4431ca869/?dl=1",
+        "sha256": "6b3ae198812e551ccea9f8a581b8ee84285f3f75ff2b999a7f0b11008c0f46fb",
+        "bytes": 3400090
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3b097b80ec0a4aaaba8a/?dl=1",
+        "sha256": "829fe912691549685daf0944d6401990352d92e36e2df689d08a2be538898451",
+        "bytes": 999461
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "id": "store_laptop_and_headphones-E04",
+    "category": "uncertain",
+    "object": "耳机",
+    "arm": "left",
+    "turns": [
+      50,
+      53
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      22.24,
+      24.44
+    ],
+    "env_step": null,
+    "frame": 556,
+    "result": "无法可靠分类，不计确认数",
+    "basis": "f567–578 耳机在手边，f600–611 已在桌上；采样及遮挡不足以严格确定稳定夹持与失持/主动开爪的边界。\n三路原视频0-based帧区间[556, 611]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[49, 50, 51, 52]；关联env区间(509, 572]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "待确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/ff8f635e68744bf491b2/?dl=1",
+        "sha256": "3ae8991533dcde41243f9176df874a13d63b3c963e62d79bcf6c7a7c250ec8d6",
+        "bytes": 1424415
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/ef8e7e7dc7c4431ca869/?dl=1",
+        "sha256": "6b3ae198812e551ccea9f8a581b8ee84285f3f75ff2b999a7f0b11008c0f46fb",
+        "bytes": 3400090
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3b097b80ec0a4aaaba8a/?dl=1",
+        "sha256": "829fe912691549685daf0944d6401990352d92e36e2df689d08a2be538898451",
+        "bytes": 999461
+      }
+    ],
+    "uncertain_reason": "需连续高分辨率核查 f567–600；不按模型 slip 自述计数。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "id": "store_laptop_and_headphones-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      56
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 595,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"Repeated headphone grasps slipped, and I could not establish a stable hanging placement within the remaining motion budget. The laptop remains untouched.\\\",\\\"hindsight\\\":\\\"A secure full-depth grasp at the headband crown and an upright carrying orientation should have been verified before transport. The side grasps left the cradle obstructed and caused repeated drops.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[55]；关联env区间(594, 595]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-swap_blocks-standard-s0-scene0",
+    "id": "swap_blocks-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      47
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 439,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The blocks appear swapped and both arms are home, but the environment has not confirmed completion. I cannot safely improve the sequence by adding extra presses.\\\",\\\"hindsight\\\":\\\"Performed left-to-middle, right-to-left, and middle-to-right transfers, each followed by one down-and-up button press. Button activation was not explicitly confirmed in feedback.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[46]；关联env区间(438, 439]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-E01",
+    "category": "direct_failed",
+    "object": "扫帚",
+    "arm": "left→right",
+    "turns": [
+      5,
+      18
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      7.28,
+      9.84
+    ],
+    "env_step": null,
+    "frame": 182,
+    "result": "failed",
+    "basis": "左爪持扫帚，右爪实际多次接近并闭合；f235–246 连续帧显示扫帚从双爪区域落到桌面，未见接收臂独立搬运。一次连续尝试，调整不拆分。\n三路原视频0-based帧区间[182, 246]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[4, 5, 6, 8, 11, 12, 13, 14, 15, 16, 17]；关联env区间(54, 226]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：direct_attempts。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/4f4be28df5bd46359b72/?dl=1",
+        "sha256": "6a9f1184362ba1e7149bd43a267852229147cc18c001c701baa2b68e4324a77d",
+        "bytes": 1694083
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3fef50fb0fc142ef9af6/?dl=1",
+        "sha256": "2d439afc07a1c0b2905e4b12615c596c1cff944056ee6449edd5ff2015d04386",
+        "bytes": 1716881
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/a838cf24eb9b43e98616/?dl=1",
+        "sha256": "1899402645592e9c52d83651ca4cc1b336b8ef8f87eab21f39cdf3124bdd1d6b",
+        "bytes": 1849424
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "broom-handoff-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-E02",
+    "category": "drop",
+    "object": "扫帚",
+    "arm": "left / during handoff",
+    "turns": [
+      18
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      9.4,
+      9.84
+    ],
+    "env_step": null,
+    "frame": 235,
+    "result": "lost",
+    "basis": "第一轮转交中扫帚从左爪失持并落到桌面；左爪直到a20才执行开爪，右臂未形成独立保持。\n三路原视频0-based帧区间[235, 246]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[17]；关联env区间(220, 226]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 恢复链：broom-drop-1。 确认计数字段：drop。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/4f4be28df5bd46359b72/?dl=1",
+        "sha256": "6a9f1184362ba1e7149bd43a267852229147cc18c001c701baa2b68e4324a77d",
+        "bytes": 1694083
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3fef50fb0fc142ef9af6/?dl=1",
+        "sha256": "2d439afc07a1c0b2905e4b12615c596c1cff944056ee6449edd5ff2015d04386",
+        "bytes": 1716881
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/a838cf24eb9b43e98616/?dl=1",
+        "sha256": "1899402645592e9c52d83651ca4cc1b336b8ef8f87eab21f39cdf3124bdd1d6b",
+        "bytes": 1849424
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "broom-handoff-1"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-E03",
+    "category": "direct_failed",
+    "object": "扫帚",
+    "arm": "left→right",
+    "turns": [
+      27,
+      36
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      16.88,
+      19.68
+    ],
+    "env_step": null,
+    "frame": 422,
+    "result": "failed",
+    "basis": "第二次左臂持扫帚、右臂接近闭爪、左臂释放。f466–473 扫帚落到桌面，f482–492 右爪离开且无物体。未满足独立保持并继续操作。\n三路原视频0-based帧区间[422, 492]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[26, 27, 30, 32, 33, 34, 35]；关联env区间(331, 451]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：direct_attempts。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/4f4be28df5bd46359b72/?dl=1",
+        "sha256": "6a9f1184362ba1e7149bd43a267852229147cc18c001c701baa2b68e4324a77d",
+        "bytes": 1694083
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3fef50fb0fc142ef9af6/?dl=1",
+        "sha256": "2d439afc07a1c0b2905e4b12615c596c1cff944056ee6449edd5ff2015d04386",
+        "bytes": 1716881
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/a838cf24eb9b43e98616/?dl=1",
+        "sha256": "1899402645592e9c52d83651ca4cc1b336b8ef8f87eab21f39cdf3124bdd1d6b",
+        "bytes": 1849424
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": "broom-handoff-2"
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-E04",
+    "category": "recovery_other",
+    "object": "扫帚",
+    "arm": "right",
+    "turns": [
+      37,
+      40
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      19.68,
+      21.28
+    ],
+    "env_step": null,
+    "frame": 492,
+    "result": "recovered",
+    "basis": "转交失败落桌后，右臂再次闭爪并提起扫帚。此前没有有意桌面中转计划与放置过程，因此作为辅助恢复事件，不计桌面换手。\n三路原视频0-based帧区间[492, 532]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[36, 37, 38, 39]；关联env区间(451, 499]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/4f4be28df5bd46359b72/?dl=1",
+        "sha256": "6a9f1184362ba1e7149bd43a267852229147cc18c001c701baa2b68e4324a77d",
+        "bytes": 1694083
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3fef50fb0fc142ef9af6/?dl=1",
+        "sha256": "2d439afc07a1c0b2905e4b12615c596c1cff944056ee6449edd5ff2015d04386",
+        "bytes": 1716881
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/a838cf24eb9b43e98616/?dl=1",
+        "sha256": "1899402645592e9c52d83651ca4cc1b336b8ef8f87eab21f39cdf3124bdd1d6b",
+        "bytes": 1849424
+      }
+    ],
+    "uncertain_reason": null,
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-E05",
+    "category": "uncertain",
+    "object": "双腕",
+    "arm": "both",
+    "turns": [
+      13,
+      14
+    ],
+    "turn_precision": "approx",
+    "time_range": [
+      7.28,
+      8.24
+    ],
+    "env_step": null,
+    "frame": 182,
+    "result": "无法可靠分类，不计确认数",
+    "basis": "双腕在图像中重叠且模型报告 interference。缺少可靠接触点及受碰位移的逐帧归因，不能仅按 note 或重叠判碰撞。\n三路原视频0-based帧区间[182, 206]；所查看离散帧详见configuration.audit.coverage。\n原轨迹action_index=[12, 13]；关联env区间(181, 210]。物理事件的turn为语义关联窗口，非官方同步映射；确切env_step未知。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "待确认",
+    "media": [
+      {
+        "camera": "head",
+        "url": "https://cloud.tsinghua.edu.cn/f/4f4be28df5bd46359b72/?dl=1",
+        "sha256": "6a9f1184362ba1e7149bd43a267852229147cc18c001c701baa2b68e4324a77d",
+        "bytes": 1694083
+      },
+      {
+        "camera": "left_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/3fef50fb0fc142ef9af6/?dl=1",
+        "sha256": "2d439afc07a1c0b2905e4b12615c596c1cff944056ee6449edd5ff2015d04386",
+        "bytes": 1716881
+      },
+      {
+        "camera": "right_wrist",
+        "url": "https://cloud.tsinghua.edu.cn/f/a838cf24eb9b43e98616/?dl=1",
+        "sha256": "1899402645592e9c52d83651ca4cc1b336b8ef8f87eab21f39cdf3124bdd1d6b",
+        "bytes": 1849424
+      }
+    ],
+    "uncertain_reason": "接触被双腕遮挡；未确认异常接触。",
+    "gap_id": null
+  },
+  {
+    "run_id": "dual42-sequence-medium-20261016-sweep_blocks-random-s0-scene0",
+    "id": "sweep_blocks-TERMINAL",
+    "category": "other",
+    "object": "运行终止",
+    "arm": "不适用（终止控制）",
+    "turns": [
+      56
+    ],
+    "turn_precision": "exact",
+    "time_range": null,
+    "env_step": 621,
+    "frame": null,
+    "result": "executed_give_up_budget_classification_separate",
+    "basis": "[{\"arguments\": \"{\\\"reason\\\":\\\"The left arm moved nearly half a metre away from its requested target and lost the dustpan. I cannot safely continue the sweep from this unexpected configuration.\\\",\\\"hindsight\\\":\\\"The handover needed a deeper shaft grasp and better wrist separation. Repeated wrist-limit errors should have prompted an earlier retreat and posture reset before manipulating the dustpan.\\\"}\", \"name\": \"give_up\"}]\nAcknowledged give_up.\n{\"episode_end_mid_chunk\": false, \"executed_controls\": 1, \"stopped_early\": false}\n{\"final_success_source\": \"original native result\", \"last_physical_ack_native_end\": [false], \"last_physical_ack_native_success\": [true]}\n原轨迹action_index=[55]；关联env区间(620, 621]。终止记录轮次为精确模型decision_index+1。 确认计数字段：无（辅助、终止、排除或待确认记录）。",
+    "confidence": "确认",
+    "media": [],
+    "uncertain_reason": "动作预算上限缺失；不能凭reason中的剩余步数反推。build_tower的steps不能明确指模型turn。",
+    "gap_id": null
+  }
+]
