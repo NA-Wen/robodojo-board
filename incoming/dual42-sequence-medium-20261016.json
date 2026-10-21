@@ -43,12 +43,12 @@
     "success": 13,
     "uncertain": 4,
     "turns": 2454,
-    "recovery_other": 1,
     "empty_retry": 1,
     "other": 23,
+    "recovery_other": 1,
+    "drop": 4,
     "direct_failed": 2,
-    "view": 5,
-    "drop": 4
+    "view": 5
   },
   "cases": [
     {
