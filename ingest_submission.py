@@ -236,7 +236,7 @@ def to_group(doc):
     for c in cases:
         run = by_run[c['run_id']]
         aux = (run.get('configuration') or {}).get('audit_auxiliary')
-        if not aux:
+        if not aux or group['id'] != 'persistent':
             continue
         has_audit = True
         c['instruction'] = aux.get('instruction', c['instruction'])
@@ -337,8 +337,6 @@ def to_group(doc):
                                                'dropRegrasp', 'directAttempts', 'directSuccess',
                                                'tableAttempts', 'tableSuccess', 'supportAttempts',
                                                'supportSuccess', 'viewSame', 'viewOpposite')})
-    return converted
-
     if has_audit:
         converted['submission_version'] = cases[0].get('submission_version', 'protocol-v1')
         converted['submission_links'] = {key: 'submissions/' + group['id'] + '/' + name for key, name in {
