@@ -72,7 +72,7 @@ python3 validate_submission.py ./my-submission</pre>
       ['输入',esc(P.contract.inputs.join('；'))],
       ['产出',P.contract.outputs.map(x=>`<code>${esc(x)}</code>`).join(' ')],
       ['校验',`<code>python3 validate_submission.py &lt;submission&gt;</code> → 0 阻断`],
-      ['同步',`<code>python3 ingest_submission.py &lt;submission&gt; --board &lt;dist&gt;</code>`],
+      ['同步','提 PR → 合并后自动入库并发布（默认云端看板）；本地兜底 <code>python3 ingest_submission.py &lt;submission&gt; --merge</code>'],
     ])+`<h3 style="margin:18px 0 8px">必须做到</h3>`+ul(P.contract.must.map(esc)));
 
   const layout=sec('layout','目录与产出',

@@ -14,7 +14,7 @@
 | 输入 | 数据包绝对路径；输出目录绝对路径；实验组标识；“靠近预算上限”阈值：使用率 ≥90% 且未达到上限 |
 | 产出 | submission.json；task_metrics.csv；events.json；report.html（可选） |
 | 校验 | `python3 validate_submission.py <submission>` → 0 阻断 |
-| 同步 | `python3 ingest_submission.py <submission> --board <dist>` |
+| 同步 | 提 PR → 合并后自动入库并发布（默认云端看板）；本地兜底 `python3 ingest_submission.py <submission> --merge` |
 
 必须做到：
 
@@ -359,11 +359,12 @@ run_id,group,task,variant,scene,seed,capability,setting_id,success,score,turns,a
 
 ## 7 · 看板同步
 
-1. 把校验通过的包放到 submissions/<group_id>/ 下（一个组一个目录）。
-2. 运行 validate_submission.py <submission>，必须 0 阻断项。
-3. 运行 ingest_submission.py <submission> --board <dist>，生成/更新看板组数据并写快照。
-4. 看板重建 data.js 后，新组出现在“实验设置”选择器里，seed / scene / variant 自动进入筛选项。
-5. 发布快照：记录 submission 文件的 sha256，旧快照不覆盖，纠错发新版本。
+1. 默认同步目标是云端看板：校验通过后把包放进 submissions/<group_id>/ 并提 PR，合并即自动同步，通常不需要任何本地命令。
+2. CI 在 PR 上运行 validate_submission.py；0 阻断才允许合并，阻断项直接贴在 PR 里。
+3. 合并后 publish-submission 自动执行 ingest --merge 写入 data.js，并提交一次 bot commit。
+4. Pages 随后发布，新组出现在“实验设置”选择器里，seed / scene / variant 自动进入筛选项（约 1–3 分钟）。
+5. 无法访问仓库时走 issue 提交或由维护者本地兜底：python3 ingest_submission.py <submission> --merge。
+6. 发布快照：记录 submission 文件的 sha256，旧快照不覆盖，纠错发新版本。
 
 字段映射：
 

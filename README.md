@@ -32,7 +32,7 @@ python3 -m http.server 8765
 1. 读 [protocol.md](protocol.md)，按规范产出 `submission.json`、`task_metrics.csv`、`events.json`（`report.html` 可选）。
 2. 自检：`python3 validate_submission.py <你的目录>`，必须是 0 阻断。
 3. 把目录放到 `submissions/<group_id>/`，提 PR。CI 会自动跑校验并把结果写在 PR 里。
-4. 合并后由维护者执行 `ingest_submission.py` + 重建 `data.js`，新组即出现在“实验设置”选择器里。
+4. 合并后 CI 自动执行 `ingest_submission.py --merge` 并提交 `data.js`，Pages 随即发布，新组出现在“实验设置”选择器里——**默认就是同步到云端看板，不需要人工操作**。
 
 ## 关于 `data.js`
 
