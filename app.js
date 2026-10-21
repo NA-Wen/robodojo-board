@@ -108,9 +108,12 @@ python3 validate_submission.py ./my-submission</pre>
     `<h3 style="margin:18px 0 8px">字段映射</h3>`+ul(P.ingest.mapping.map(esc)));
 
   const S=P.submit||{};
-  const repo=(()=>{const m=/^([^.]+)\.github\.io$/.exec(location.hostname);
+  const detected=(()=>{const m=/^([^.]+)\.github\.io$/.exec(location.hostname);
     const seg=location.pathname.split('/').filter(Boolean)[0];
-    return m?(seg?`${m[1]}/${seg}`:`${m[1]}/${m[1]}.github.io`):(S.repo||'<owner>/<repo>');})();
+    return m?(seg?`${m[1]}/${seg}`:`${m[1]}/${m[1]}.github.io`):null;})();
+  const repo=(()=>{if(!detected) return S.repo||'<owner>/<repo>';
+    const base=(S.repo||'').split('/')[1];
+    return base&&base.toLowerCase()===detected.split('/')[1].toLowerCase()?S.repo:detected;})();
   const repoName=repo.split('/')[1]||'repo';
   const withGit=(S.with_git||[]).map(l=>l
     .replaceAll('<owner>/<repo>',repo)
