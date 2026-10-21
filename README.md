@@ -1,6 +1,6 @@
 # RoboDojo · 行为评估看板
 
-双臂机器人 L3 操作任务的逐次行为核查看板：42 个任务 × 2 组实验设置，逐 run 记录成功率、空夹、掉落、换手、补视野与异常碰撞，并把每个事件指回**原始公开视频**。
+双臂机器人 L3 操作任务的逐次行为核查看板：semantic-eef 23 个任务 / 69 条运行 + persistent-cap20 42 条运行，逐 run 记录成功率、空夹、掉落、换手、补视野与异常碰撞，并把每个事件指回原始证据（semantic-eef 本地审核报告；persistent-cap20 原始公开视频）。
 
 - 看板：`index.html`（首页即入口，hash 路由）
 - 提交标准：**[protocol.md](protocol.md)** — 给 agent 的机读契约，同一份内容的表格版在页面 `#protocol`
@@ -45,3 +45,15 @@ python3 -m http.server 8765
 - 看板不托管图片或视频。事件证据指向原始公开视频文件；没有公开 URL 的证据只显示文字。
 - 视频与原始素材的版权归其原始发布方所有，本仓库不重新分发。
 - 指标口径与已知限制见 `#protocol` 与每组的 coverage 说明；`na` 表示未覆盖，**不是 0**。
+
+## semantic-eef 69-case 更新
+
+本地可用 `python3 work/update_semantic69.py`（从工作区根目录）复现更新；此适配器只替换 semantic 组，保留其他组与提交规范。旧构建脚本 `build_board.py` 对应早期 42-case 数据，不应用于重建当前批次。
+
+审核报告和关键帧由独立本机服务提供，不复制进看板：
+
+```bash
+python3 -m http.server 8766 --bind 127.0.0.1 --directory /Users/yufan/Documents/Codex/2026-10-21/users-yufan-projects-demos-semantic-eef-2/outputs
+```
+
+两组当前无相同 task / variant / seed / scene 的可配对运行。数据源、审核口径差异与未覆盖指标见看板配置区。
