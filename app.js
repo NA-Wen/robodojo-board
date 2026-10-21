@@ -19,7 +19,7 @@ const gname=r=>`<span class="group-pill ${r.g.id==='persistent'?'persistent':''}
 function cell(c,key){const v=c.metrics[key],field=D.protocol.metrics.find(m=>m.key===key)?.field,status=c.metricStatus?.[field];if(v==null)return `<span class="pending" title="${esc(status||'na')}">${status==='unknown'?'未知':status==='na'?'NA':'待补标'}</span>`;const text=key==='success'?(v?'是':'否'):key==='score'?Number(v).toFixed(2):esc(v);return `<span title="${esc(status||'原审核口径')}">${text}${status==='lower_bound'?' †':''}</span>`}
 function sum(rs,key){const vs=rs.map(r=>r.c.metrics[key]).filter(v=>v!=null);return vs.length?vs.reduce((a,b)=>a+b,0):null}
 function sourceLinks(g,c){const src=c?.audit_source||g.audit_source;if(!src)return '';return `<p class="source-links"><a href="${esc(src.report_url)}" target="_blank" rel="noopener">${c?'本 case 的统计与关键帧':'完整报告 · 69 个 case'} ↗</a>${!c?` · <a href="${esc(src.counts_url)}" target="_blank" rel="noopener">纯文本统计</a> · <a href="${esc(src.bundle_url)}" download>JSON 与关键帧打包 ↓</a>`:''}<small>本机证据服务 · 原始报告</small></p>`}
-function sourceNotes(g){return g.audit_source?`<ul class="source-notes">${g.methodology.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`:''}
+function sourceNotes(g){return g.methodology?.length?`<ul class="source-notes">${g.methodology.map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`:''}
 function settingPanels(){return D.groups.filter(g=>selected().some(r=>r.g.id===g.id)).map(g=>{const rs=selected().filter(r=>r.g.id===g.id), configs=[...new Set(rs.map(r=>JSON.stringify(Object.fromEntries(Object.entries(r.c.configuration).filter(([k])=>k!=='audit_auxiliary')))))];return `<details class="setting-panel"><summary>${esc(g.name)} · ${rs.length} 条运行 · ${configs.length} 种已记录配置</summary><p>证据覆盖：${esc(g.coverage)}</p>${sourceLinks(g)}${sourceNotes(g)}${configs.map(j=>{const conf=JSON.parse(j);return `<dl>${Object.entries(conf).map(([k,v])=>`<dt>${esc(k)}</dt><dd>${v==null?'未提供':esc(v)}</dd>`).join('')}</dl>`}).join('')}</details>`}).join('')}
 function overview(){return window.renderBehaviorOverview({runs:selected(),groups:D.groups,escape:esc,settings:settingPanels()})}
 function taskCell(r){return `<button class="task-button" data-run="${esc(r.c.run_id)}" data-exp="${r.g.id}">${esc(r.c.task)}<small>${esc(r.c.instruction)}</small></button>`}
@@ -72,7 +72,7 @@ python3 validate_submission.py ./my-submission</pre>
       ['输入',esc(P.contract.inputs.join('；'))],
       ['产出',P.contract.outputs.map(x=>`<code>${esc(x)}</code>`).join(' ')],
       ['校验',`<code>python3 validate_submission.py &lt;submission&gt;</code> → 0 阻断`],
-      ['同步','提 PR → 合并后自动入库并发布（默认云端看板）；本地兜底 <code>python3 ingest_submission.py &lt;submission&gt; --merge</code>'],
+      ['同步',`<code>python3 ingest_submission.py &lt;submission&gt; --board &lt;dist&gt;</code>`],
     ])+`<h3 style="margin:18px 0 8px">必须做到</h3>`+ul(P.contract.must.map(esc)));
 
   const layout=sec('layout','目录与产出',
