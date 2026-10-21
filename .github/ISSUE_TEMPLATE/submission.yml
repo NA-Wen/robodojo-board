@@ -1,0 +1,66 @@
+name: 提交实验组
+description: 没有 git 凭据时，用这个表单提交一个实验组的结果包
+title: "[submission] "
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        按 [protocol.md](../blob/main/protocol.md) 产出的包，请先本地跑
+        `python3 validate_submission.py <目录>`，确认 **0 阻断项** 再提交。
+        本仓库不接收视频或截图附件，只收公开 URL。
+
+  - type: input
+    id: group_id
+    attributes:
+      label: group_id
+      description: 与 submission.json 里 group.id 完全一致，小写字母数字与 . _ -
+      placeholder: exp-2026-10-persistent-cap20
+    validations:
+      required: true
+
+  - type: input
+    id: bundle_url
+    attributes:
+      label: 提交包下载地址
+      description: zip 或目录的公开直链；确保无需登录即可下载
+      placeholder: https://example.org/bundles/exp-2026-10.zip
+    validations:
+      required: true
+
+  - type: input
+    id: sha256
+    attributes:
+      label: submission.json 的 sha256
+      description: 运行 sha256sum submission.json 得到
+      placeholder: 64 位小写十六进制
+    validations:
+      required: true
+
+  - type: textarea
+    id: coverage
+    attributes:
+      label: 核查覆盖说明
+      description: 哪些类别看了完整视频，哪些只看稀疏帧；哪些指标标了 na 以及原因
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 其他说明（可选）
+      description: 与既有组的配置差异、重跑次数、已知问题
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 确认项
+      options:
+        - label: 已本地运行 validate_submission.py 且 0 阻断项
+          required: true
+        - label: 未修改原始数据，数值可由包内文件复算
+          required: true
+        - label: 未知项标为 na/unknown，没有用 0 冒充
+          required: true
+        - label: 媒体只提供公开 URL，未上传视频或截图
+          required: true

@@ -1,0 +1,71 @@
+name: validate-submission
+
+on:
+  pull_request:
+    paths:
+      - 'submissions/**'
+      - 'validate_submission.py'
+      - 'submission.schema.json'
+  push:
+    branches: [main]
+    paths:
+      - 'example/**'
+      - 'validate_submission.py'
+
+permissions:
+  contents: read
+
+jobs:
+  # 仓库自带的示例包必须永远能通过校验：它是「规范 + 校验器 + 示例」三者一致性的看门测试。
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate shipped example
+        run: python3 validate_submission.py example
+
+  # PR 里改动的提交目录逐个校验，任一不过即失败。
+  bundles:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: List changed bundles
+        id: list
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+          git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- submissions/ \
+            | awk -F/ 'NF>2 {print $1"/"$2}' | sort -u > /tmp/bundles.txt
+          echo "发现 $(wc -l < /tmp/bundles.txt) 个提交目录"
+          cat /tmp/bundles.txt
+
+      - name: Validate bundles
+        run: |
+          set -uo pipefail
+          fail=0
+          while read -r dir; do
+            [ -z "${dir:-}" ] && continue
+            if [ ! -f "$dir/submission.json" ]; then
+              echo "跳过 $dir：没有 submission.json"
+              continue
+            fi
+            echo "::group::validate $dir"
+            if python3 validate_submission.py "$dir"; then
+              echo "::endgroup::"
+            else
+              echo "::error file=$dir/submission.json::$dir 未通过校验"
+              echo "::endgroup::"
+              fail=1
+            fi
+          done < /tmp/bundles.txt
+          exit $fail

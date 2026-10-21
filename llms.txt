@@ -1,0 +1,21 @@
+# RoboDojo 行为看板 · 提交标准
+
+> 给 agent：这是 RoboDojo 行为看板的提交标准入口。先读 Markdown 规范，再读 JSON 规范，最后用校验器自检。
+
+- [protocol.md](protocol.md): 完整提交标准（Markdown，推荐先读）
+- [protocol.json](protocol.json): 同一规范的结构化版本（26 项指标、枚举、校验规则）
+- [submission.schema.json](submission.schema.json): submission.json 的 JSON Schema
+- [validate_submission.py](validate_submission.py): 离线校验器，0 阻断即可被看板接受
+- [ingest_submission.py](ingest_submission.py): 校验并写入看板数据
+- [index.html#protocol](index.html#protocol): 人类可读版本（同一内容的 HTML 渲染）
+
+## 最短路径
+
+```bash
+curl -O <base>/protocol.md
+curl -O <base>/protocol.json
+curl -O <base>/validate_submission.py
+python3 validate_submission.py <submission-dir>
+```
+
+规范版本：`2026-10-21 · v1` · schema：`robodojo-submission-v1`

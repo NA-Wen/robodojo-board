@@ -1,0 +1,160 @@
+{
+  "schema_version": "robodojo-submission-v1",
+  "group": {
+    "id": "exp-2026-10-example",
+    "name": "示例组",
+    "setting": {
+      "setting_id": "sha256:6f1c…",
+      "profile": "persistent",
+      "native_control_cap": 20,
+      "max_decisions": 100,
+      "model": "gpt-5.6-sol",
+      "client_version": "robodojo-l3/1.4.2"
+    },
+    "coverage": "三视角视频逐 turn 核查"
+  },
+  "runs": [
+    {
+      "run_id": "example-align_blocks-standard-s0-scene0",
+      "task": "align_blocks",
+      "variant": "standard",
+      "scene": 0,
+      "seed": 0,
+      "capability": "open",
+      "repeat": 0,
+      "result": {
+        "success": 0,
+        "score": 0.0,
+        "turns": 21,
+        "actions": 214
+      },
+      "metrics": {
+        "success": 0,
+        "score": 0.0,
+        "turns": 21,
+        "actions": 214,
+        "empty_retry": 2,
+        "drop": 1,
+        "empty_regrasp": 1,
+        "drop_regrasp": 0,
+        "direct_attempts": 1,
+        "direct_success": 1,
+        "table_attempts": 0,
+        "table_success": 0,
+        "support_attempts": 0,
+        "support_success": 0,
+        "view_same": 3,
+        "view_opposite": 1,
+        "abandon_near_action": 0,
+        "abandon_near_turn": 1,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0,
+        "collision_arms": 0,
+        "collision_arm_object": 1,
+        "collision_arm_table": 0,
+        "knockdown": 0,
+        "wrong_object": 0,
+        "fine_placement_fail": 1
+      },
+      "metric_status": {
+        "success": "confirmed",
+        "score": "confirmed",
+        "turns": "confirmed",
+        "actions": "confirmed",
+        "empty_retry": "confirmed",
+        "drop": "confirmed",
+        "empty_regrasp": "confirmed",
+        "drop_regrasp": "confirmed",
+        "direct_attempts": "confirmed",
+        "direct_success": "confirmed",
+        "table_attempts": "confirmed",
+        "table_success": "confirmed",
+        "support_attempts": "confirmed",
+        "support_success": "confirmed",
+        "view_same": "confirmed",
+        "view_opposite": "confirmed",
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed",
+        "collision_arms": "confirmed",
+        "collision_arm_object": "confirmed",
+        "collision_arm_table": "confirmed",
+        "knockdown": "na",
+        "wrong_object": "confirmed",
+        "fine_placement_fail": "lower_bound"
+      },
+      "configuration": {
+        "profile": "persistent",
+        "max_decisions": 100,
+        "native_control_cap": 20
+      },
+      "videos": [
+        {
+          "camera": "head",
+          "url": "https://example.org/runs/x/head.mp4",
+          "sha256": "4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9",
+          "bytes": 342139
+        }
+      ],
+      "artifacts": [
+        {
+          "kind": "native_terminal",
+          "url": "https://example.org/runs/x/native-terminal.json",
+          "sha256": "9c1f5b2e0d7a44c3b8e6f0a2d5c7b9e1f3a5c7d9e1b3f5a7c9d1e3b5f7a9c1d3"
+        }
+      ],
+      "events": [
+        {
+          "id": "align_blocks-01",
+          "category": "empty_retry",
+          "object": "block_2",
+          "arm": "左",
+          "turns": [
+            7,
+            9
+          ],
+          "turn_precision": "exact",
+          "env_step": 62,
+          "frame": 220,
+          "result": "未夹住，随后重试成功",
+          "basis": "head 第 175–225 帧；左腕 62–70",
+          "confidence": "确认",
+          "media": [
+            {
+              "camera": "head",
+              "url": "https://example.org/runs/x/head.mp4",
+              "sha256": "4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9",
+              "bytes": 342139
+            }
+          ]
+        },
+        {
+          "id": "align_blocks-02",
+          "category": "drop",
+          "object": "block_2",
+          "arm": "左",
+          "turns": [],
+          "turn_precision": "unknown",
+          "time_range": [
+            10.4,
+            11.2
+          ],
+          "env_step": null,
+          "frame": 260,
+          "result": "提拉过程中失持，无法对应到具体轮次",
+          "basis": "连续视频 10.4–11.2s，头部相机第 260 帧附近",
+          "confidence": "确认",
+          "media": [
+            {
+              "camera": "head",
+              "url": "https://example.org/runs/x/head.mp4",
+              "sha256": "4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9",
+              "bytes": 342139
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

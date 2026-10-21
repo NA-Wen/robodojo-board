@@ -1,0 +1,70 @@
+name: publish-submission
+
+# 合并 PR 后自动入库：校验 → 生成组数据 → 合并进 data.js → 提交 → Pages 自动发布。
+# 触发条件限定 submissions/，而本 workflow 的产物只改 data.js / audit-data.json / incoming/，
+# 因此不会再次触发自己。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'submissions/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-submission
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate all submission bundles
+        run: |
+          set -uo pipefail
+          fail=0
+          shopt -s nullglob
+          for dir in submissions/*/; do
+            dir="${dir%/}"
+            [ -f "$dir/submission.json" ] || continue
+            echo "::group::validate $dir"
+            if python3 validate_submission.py "$dir"; then
+              echo "::endgroup::"
+            else
+              echo "::error file=$dir/submission.json::$dir 未通过校验"
+              echo "::endgroup::"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Ingest and merge into data.js
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          for dir in submissions/*/; do
+            dir="${dir%/}"
+            [ -f "$dir/submission.json" ] || continue
+            echo "→ ingest $dir"
+            python3 ingest_submission.py "$dir" --board . --merge --force
+          done
+
+      - name: Commit regenerated data
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.js audit-data.json incoming
+          if git diff --cached --quiet; then
+            echo "数据无变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore: ingest submissions → data.js"
+          git push

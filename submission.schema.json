@@ -1,0 +1,636 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zefanw.github.io/robodojo-l3-dashboard/submission.schema.json",
+  "title": "RoboDojo board submission",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "group",
+    "runs"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "robodojo-submission-v1"
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "setting",
+        "coverage"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 3,
+          "pattern": "^[a-z0-9][a-z0-9._-]*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coverage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "setting": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "setting_id",
+            "profile",
+            "model",
+            "client_version"
+          ],
+          "properties": {
+            "setting_id": {
+              "type": "string",
+              "minLength": 8
+            },
+            "profile": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "native_control_cap": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "max_decisions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "model": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "client_version": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "unknown_reason": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "runs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/run"
+      }
+    }
+  },
+  "$defs": {
+    "metricValue": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "confirmed",
+        "lower_bound",
+        "na",
+        "unknown"
+      ]
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "camera",
+        "url",
+        "sha256"
+      ],
+      "properties": {
+        "camera": {
+          "enum": [
+            "head",
+            "left_wrist",
+            "right_wrist",
+            "other"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "bytes": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "category",
+        "object",
+        "arm",
+        "env_step",
+        "frame",
+        "result",
+        "basis",
+        "confidence",
+        "turn_precision",
+        "media"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "empty_retry",
+            "drop",
+            "direct_transfer",
+            "direct_failed",
+            "table_transfer",
+            "support_transfer",
+            "recovery_other",
+            "view",
+            "uncertain",
+            "other"
+          ]
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "arm": {
+          "type": "string",
+          "minLength": 1
+        },
+        "turns": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "turn_precision": {
+          "enum": [
+            "exact",
+            "approx",
+            "unknown"
+          ]
+        },
+        "time_range": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "env_step": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "frame": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "enum": [
+            "确认",
+            "待确认"
+          ]
+        },
+        "uncertain_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "gap_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "media": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "turns"
+          ],
+          "properties": {
+            "turns": {
+              "minItems": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "frame"
+          ],
+          "properties": {
+            "frame": {
+              "type": "integer"
+            }
+          }
+        },
+        {
+          "required": [
+            "time_range"
+          ]
+        }
+      ]
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_id",
+        "task",
+        "variant",
+        "scene",
+        "seed",
+        "capability",
+        "result",
+        "metrics",
+        "metric_status",
+        "configuration",
+        "videos",
+        "events"
+      ],
+      "properties": {
+        "run_id": {
+          "type": "string",
+          "minLength": 8
+        },
+        "task": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scene": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repeat": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "result": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "success",
+            "score",
+            "turns",
+            "actions"
+          ],
+          "properties": {
+            "success": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "enum": [
+                0,
+                1,
+                null
+              ]
+            },
+            "score": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1
+            },
+            "turns": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "actions": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "metrics": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "success",
+            "score",
+            "turns",
+            "actions",
+            "empty_retry",
+            "drop",
+            "empty_regrasp",
+            "drop_regrasp",
+            "direct_attempts",
+            "direct_success",
+            "table_attempts",
+            "table_success",
+            "support_attempts",
+            "support_success",
+            "view_same",
+            "view_opposite",
+            "abandon_near_action",
+            "abandon_near_turn",
+            "abandon_action_limit",
+            "abandon_turn_limit",
+            "collision_arms",
+            "collision_arm_object",
+            "collision_arm_table",
+            "knockdown",
+            "wrong_object",
+            "fine_placement_fail"
+          ],
+          "properties": {
+            "success": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "score": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "turns": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "actions": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "empty_retry": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "drop": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "empty_regrasp": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "drop_regrasp": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "direct_attempts": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "direct_success": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "table_attempts": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "table_success": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "support_attempts": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "support_success": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "view_same": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "view_opposite": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "abandon_near_action": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "abandon_near_turn": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "abandon_action_limit": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "abandon_turn_limit": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "collision_arms": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "collision_arm_object": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "collision_arm_table": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "knockdown": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "wrong_object": {
+              "$ref": "#/$defs/metricValue"
+            },
+            "fine_placement_fail": {
+              "$ref": "#/$defs/metricValue"
+            }
+          }
+        },
+        "metric_status": {
+          "type": "object",
+          "minProperties": 26,
+          "additionalProperties": false,
+          "properties": {
+            "success": {
+              "$ref": "#/$defs/status"
+            },
+            "score": {
+              "$ref": "#/$defs/status"
+            },
+            "turns": {
+              "$ref": "#/$defs/status"
+            },
+            "actions": {
+              "$ref": "#/$defs/status"
+            },
+            "empty_retry": {
+              "$ref": "#/$defs/status"
+            },
+            "drop": {
+              "$ref": "#/$defs/status"
+            },
+            "empty_regrasp": {
+              "$ref": "#/$defs/status"
+            },
+            "drop_regrasp": {
+              "$ref": "#/$defs/status"
+            },
+            "direct_attempts": {
+              "$ref": "#/$defs/status"
+            },
+            "direct_success": {
+              "$ref": "#/$defs/status"
+            },
+            "table_attempts": {
+              "$ref": "#/$defs/status"
+            },
+            "table_success": {
+              "$ref": "#/$defs/status"
+            },
+            "support_attempts": {
+              "$ref": "#/$defs/status"
+            },
+            "support_success": {
+              "$ref": "#/$defs/status"
+            },
+            "view_same": {
+              "$ref": "#/$defs/status"
+            },
+            "view_opposite": {
+              "$ref": "#/$defs/status"
+            },
+            "abandon_near_action": {
+              "$ref": "#/$defs/status"
+            },
+            "abandon_near_turn": {
+              "$ref": "#/$defs/status"
+            },
+            "abandon_action_limit": {
+              "$ref": "#/$defs/status"
+            },
+            "abandon_turn_limit": {
+              "$ref": "#/$defs/status"
+            },
+            "collision_arms": {
+              "$ref": "#/$defs/status"
+            },
+            "collision_arm_object": {
+              "$ref": "#/$defs/status"
+            },
+            "collision_arm_table": {
+              "$ref": "#/$defs/status"
+            },
+            "knockdown": {
+              "$ref": "#/$defs/status"
+            },
+            "wrong_object": {
+              "$ref": "#/$defs/status"
+            },
+            "fine_placement_fail": {
+              "$ref": "#/$defs/status"
+            }
+          }
+        },
+        "configuration": {
+          "type": "object"
+        },
+        "videos": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/media"
+          }
+        },
+        "artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "sha256"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string"
+              },
+              "url": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "sha256": {
+                "type": "string"
+              },
+              "bytes": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              }
+            }
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/event"
+          }
+        }
+      }
+    }
+  }
+}

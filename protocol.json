@@ -1,0 +1,682 @@
+{
+  "schema_version": "robodojo-submission-v1",
+  "version": "2026-10-21 · v1",
+  "title": "RoboDojo 行为看板 · 提交标准",
+  "lede": "面向其他 agent 的提交契约：按本规范产出的包，通过校验后可直接同步进看板，无需人工改数据。",
+  "contract": {
+    "inputs": [
+      "数据包绝对路径",
+      "输出目录绝对路径",
+      "实验组标识",
+      "“靠近预算上限”阈值：使用率 ≥90% 且未达到上限"
+    ],
+    "outputs": [
+      "submission.json",
+      "task_metrics.csv",
+      "events.json",
+      "report.html（可选）"
+    ],
+    "must": [
+      "读取 MANIFEST、demo.json 或 result.json、原始执行轨迹、配置、三视角图像及视频。",
+      "保留全部任务，包括失败与提前终止；同一任务多个 run 分行记录，不合并。",
+      "不得修改原始数据，也不得用模型自述代替实际执行或视觉证据。",
+      "完整读取轨迹，结合三视角核查动作前、中、后状态；疑难事件查看连续视频。",
+      "无法可靠判断的事件单列（uncertain），不强行分类。"
+    ]
+  },
+  "metrics": [
+    {
+      "index": 1,
+      "key": "success",
+      "field": "success",
+      "label": "成功与否",
+      "group": "任务结果与成本",
+      "kind": "bool",
+      "rule": "取原生结果的 success；score==1 才算成功。不得用模型自述、accepted 或 note 判定。",
+      "unknown": "原生结果缺失时写 null，状态 unknown。"
+    },
+    {
+      "index": 2,
+      "key": "score",
+      "field": "score",
+      "label": "得分",
+      "group": "任务结果与成本",
+      "kind": "score",
+      "rule": "原生任务得分，范围 0–1；与 success 分开保留，不用得分反推成功。",
+      "unknown": "缺失写 null，状态 unknown。"
+    },
+    {
+      "index": 3,
+      "key": "turns",
+      "field": "turns",
+      "label": "总体轮数",
+      "group": "任务结果与成本",
+      "kind": "number",
+      "rule": "先核实系统 turn 的定义：模型 turn、轨迹观测阶段、宏内部阶段分别核对；存在差异时增加辅助列，不得直接把 frames 长度当模型 turn 数。",
+      "unknown": "定义无法核实时整列标 NA，不要填近似值。"
+    },
+    {
+      "index": 4,
+      "key": "actions",
+      "field": "actions",
+      "label": "总体 action 次数",
+      "group": "任务结果与成本",
+      "kind": "number",
+      "rule": "仅指实际执行的控制步数：双臂同步一步计一个环境控制步；规划器拒绝的调用和未执行计划不计；须与原生累计值核对并解释差异。",
+      "unknown": "无法与原生值核对时标 unknown。"
+    },
+    {
+      "index": 5,
+      "key": "emptyRetry",
+      "field": "empty_retry",
+      "label": "空夹次数",
+      "group": "抓取与恢复",
+      "kind": "number",
+      "rule": "实际闭合但未形成有效夹持，包含之后没有重试的空夹；正常按压、推物、空手收爪不计；每次独立抓取尝试计一次。",
+      "unknown": "未覆盖该事件的核查范围时写 null 并标 na。"
+    },
+    {
+      "index": 6,
+      "key": "drops",
+      "field": "drop",
+      "label": "夹取掉落次数",
+      "group": "抓取与恢复",
+      "kind": "number",
+      "rule": "已离开支撑并形成夹持，随后在主动释放前失持；主动释放后的倒下或落偏不计入掉落。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 7,
+      "key": "emptyRegrasp",
+      "field": "empty_regrasp",
+      "label": "空夹后成功重夹次数",
+      "group": "抓取与恢复",
+      "kind": "number",
+      "rule": "同一物体在空夹后重新形成有效夹持，并在后续提拉或搬运中保持；连续多次空夹后一次抓稳只计一次，须关联此前失败链，不能重复归因。",
+      "unknown": "没有把失败链与成功抓取关联起来时写 null，标 na，不能写 0。"
+    },
+    {
+      "index": 8,
+      "key": "dropRegrasp",
+      "field": "drop_regrasp",
+      "label": "掉落后成功重夹次数",
+      "group": "抓取与恢复",
+      "kind": "number",
+      "rule": "同一物体在掉落后重新形成有效夹持并保持；关联掉落事件，同一掉落链只计一次成功重夹。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 9,
+      "key": "directAttempts",
+      "field": "direct_attempts",
+      "label": "直接换手行为出现次数",
+      "group": "直接换手",
+      "kind": "number",
+      "rule": "两臂直接转交同一物体的实际执行尝试，包含失败的尝试；纯文字计划不计。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 10,
+      "key": "directSuccess",
+      "field": "direct_success",
+      "label": "直接换手成功次数",
+      "group": "直接换手",
+      "kind": "number",
+      "rule": "要求接收臂独立保持该物体并继续操作，供给臂已释放；仅接触不算成功。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 11,
+      "key": "tableAttempts",
+      "field": "table_attempts",
+      "label": "桌面换手行为出现次数",
+      "group": "桌面换手",
+      "kind": "number",
+      "rule": "经由裸桌面中转换手的实际执行尝试；意外掉落之后另一臂拾取属于辅助事件，不算桌面换手。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 12,
+      "key": "tableSuccess",
+      "field": "table_success",
+      "label": "桌面换手成功次数",
+      "group": "桌面换手",
+      "kind": "number",
+      "rule": "中转后接收臂重新持物并继续操作。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 13,
+      "key": "supportAttempts",
+      "field": "support_attempts",
+      "label": "其他支撑面换手出现次数",
+      "group": "其他支撑面换手",
+      "kind": "number",
+      "rule": "经由桌面以外的支撑结构（容器边缘、支架等）中转换手，与桌面中转分开计数。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 14,
+      "key": "supportSuccess",
+      "field": "support_success",
+      "label": "其他支撑面换手成功次数",
+      "group": "其他支撑面换手",
+      "kind": "number",
+      "rule": "中转后接收臂重新持物并继续操作。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 15,
+      "key": "viewSame",
+      "field": "view_same",
+      "label": "同手臂补视野次数",
+      "group": "视野调整",
+      "kind": "number",
+      "rule": "执行臂为补足自身缺失观察而实际移动；普通任务接近、仅为避碰的移动不计；按实际执行的轨迹动作阶段计，一个阶段同类计一次。",
+      "unknown": "未单独核查执行臂自身补视野时 na。"
+    },
+    {
+      "index": 16,
+      "key": "viewOpposite",
+      "field": "view_opposite",
+      "label": "异侧手臂补视野次数",
+      "group": "视野调整",
+      "kind": "number",
+      "rule": "另一臂补看执行臂被遮挡区域，或撤离以恢复可见性；按动作阶段计。同一观察缺口的连续动作以 gap_id 关联，不与“观察轮数”混用。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 17,
+      "key": "abandonNearAction",
+      "field": "abandon_near_action",
+      "label": "靠近动作上限主动放弃次数",
+      "group": "主动放弃",
+      "kind": "number",
+      "rule": "动作预算使用率 ≥90% 且尚未达到上限时，明确执行或记录主动放弃，并有证据表明该预算是放弃原因；自动耗尽终止不算。",
+      "unknown": "缺少上限或终止证据时 unknown。"
+    },
+    {
+      "index": 18,
+      "key": "abandonNearTurn",
+      "field": "abandon_near_turn",
+      "label": "靠近 turn 上限主动放弃次数",
+      "group": "主动放弃",
+      "kind": "number",
+      "rule": "同上，针对 turn 预算。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 19,
+      "key": "abandonActionLimit",
+      "field": "abandon_action_limit",
+      "label": "达到动作上限主动放弃次数",
+      "group": "主动放弃",
+      "kind": "number",
+      "rule": "动作预算已耗尽且明确记录主动放弃；与“靠近动作上限”互斥，同一预算不得同时计两类。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 20,
+      "key": "abandonTurnLimit",
+      "field": "abandon_turn_limit",
+      "label": "达到 turn 上限主动放弃次数",
+      "group": "主动放弃",
+      "kind": "number",
+      "rule": "turn 预算已耗尽且明确记录主动放弃；与“靠近 turn 上限”互斥。两种预算同时满足时分别记录，并注明是同一终止事件。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 21,
+      "key": "collisionArms",
+      "field": "collision_arms",
+      "label": "两手臂非正常碰撞次数",
+      "group": "异常碰撞",
+      "kind": "number",
+      "rule": "要求实际非预期接触；正常抓取、推物、按压、装配接触及规划器拒绝不计；一次连续接触只计一次，分离后再次接触才算新事件。",
+      "unknown": "没有结构化碰撞证据时 na。"
+    },
+    {
+      "index": 22,
+      "key": "collisionArmObject",
+      "field": "collision_arm_object",
+      "label": "手臂与物体非正常碰撞次数",
+      "group": "异常碰撞",
+      "kind": "number",
+      "rule": "同上；正常操作中的有意接触不计。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 23,
+      "key": "collisionArmTable",
+      "field": "collision_arm_table",
+      "label": "手臂与桌面非正常碰撞次数",
+      "group": "异常碰撞",
+      "kind": "number",
+      "rule": "同上；抓取平面上的正常按压与放置不计。",
+      "unknown": "同上。"
+    },
+    {
+      "index": 24,
+      "key": "knockdown",
+      "field": "knockdown",
+      "label": "非目标物被碰倒次数",
+      "group": "新增三项",
+      "kind": "number",
+      "rule": "实际操作导致非目标物倒下或翻倒；仅被平移不计；同一动作可同时计入对应异常碰撞。",
+      "unknown": "未逐视频标注时 na。"
+    },
+    {
+      "index": 25,
+      "key": "wrongObject",
+      "field": "wrong_object",
+      "label": "选错物体次数",
+      "group": "新增三项",
+      "kind": "number",
+      "rule": "实际开始操作的对象不符合任务要求；仅文字判断错误不计；合法的中间操作或工具使用不计。",
+      "unknown": "未覆盖时 na。"
+    },
+    {
+      "index": 26,
+      "key": "finePlacementFail",
+      "field": "fine_placement_fail",
+      "label": "精细放置失败次数",
+      "group": "新增三项",
+      "kind": "number",
+      "rule": "一次实际插入、套入、悬挂、装配、堆叠或精确对齐尝试未达到要求；连续执行中的微调不逐帧计数；退出后重新尝试算新一次；普通搬运掉落不计此项。",
+      "unknown": "未覆盖时 na。"
+    }
+  ],
+  "metric_status": [
+    {
+      "value": "confirmed",
+      "label": "已确认",
+      "rule": "有明确执行与视觉证据。"
+    },
+    {
+      "value": "lower_bound",
+      "label": "确认下界",
+      "rule": "只确认到已核对范围内的发生次数，连续时间可能存在遗漏。"
+    },
+    {
+      "value": "na",
+      "label": "未覆盖 / 不适用",
+      "rule": "该类别不在本次核查范围内，不能读作 0。"
+    },
+    {
+      "value": "unknown",
+      "label": "未知",
+      "rule": "数据缺失或定义无法核实。"
+    }
+  ],
+  "cross_rules": [
+    "同一次直接换手失败后改为桌面中转：直接尝试计 1 次、桌面尝试计 1 次，分别记录。",
+    "意外掉落后由另一臂拾取：单列辅助事件（recovery_other），不算有意的桌面换手。",
+    "视野调整按实际执行的轨迹动作阶段计数；同一观察缺口的连续动作以 gap_id 关联，不与观察轮数混用。",
+    "动作预算与 turn 预算分别判断；同一预算的“靠近”与“达到”互斥；两种预算同时满足时分别记录并注明同一终止事件。",
+    "缺少预算上限或终止证据时，相关四项一律 unknown，不得用减法推算剩余预算。",
+    "视频事件无法精确到轮次时：turn_precision 写 unknown 或 approx，并用 frame 或 time_range 定位；不要用近似轮次冒充精确值。",
+    "计数是“确认下界”：0 只表示在已说明的核查范围内未确认发现，不代表连续时间绝无发生。",
+    "不同类别的事件不能相加当作“总失败次数”。"
+  ],
+  "events": {
+    "categories": [
+      {
+        "value": "empty_retry",
+        "label": "空夹后重试",
+        "rule": "闭合未形成有效夹持后，针对同一物体重新尝试。"
+      },
+      {
+        "value": "drop",
+        "label": "夹起后掉落",
+        "rule": "已形成夹持并离开支撑，主动释放前失持。"
+      },
+      {
+        "value": "direct_transfer",
+        "label": "直接换手成功",
+        "rule": "接收臂独立保持并继续操作。"
+      },
+      {
+        "value": "direct_failed",
+        "label": "直接换手失败",
+        "rule": "直接转交尝试未成立。"
+      },
+      {
+        "value": "table_transfer",
+        "label": "桌面中转换手",
+        "rule": "经裸桌面完成转交。"
+      },
+      {
+        "value": "support_transfer",
+        "label": "支撑面中转换手",
+        "rule": "经非桌面支撑结构完成转交。"
+      },
+      {
+        "value": "recovery_other",
+        "label": "另一手恢复（辅助）",
+        "rule": "掉落或失持后另一臂拾取，不计为有意换手。"
+      },
+      {
+        "value": "view",
+        "label": "补视野",
+        "rule": "为补足缺失观察而实际移动的手臂动作。"
+      },
+      {
+        "value": "uncertain",
+        "label": "待确认",
+        "rule": "证据不足，单列不归类。"
+      },
+      {
+        "value": "other",
+        "label": "其他补充发现",
+        "rule": "不属于以上类别但值得记录的观察。"
+      }
+    ],
+    "fields": [
+      {
+        "field": "id",
+        "type": "string",
+        "required": true,
+        "rule": "运行内唯一，建议 <task>-<序号>。"
+      },
+      {
+        "field": "category",
+        "type": "enum",
+        "required": true,
+        "rule": "取自事件类别枚举。"
+      },
+      {
+        "field": "object",
+        "type": "string",
+        "required": true,
+        "rule": "涉及物体或区域。"
+      },
+      {
+        "field": "arm",
+        "type": "string",
+        "required": true,
+        "rule": "执行臂，如 左 / 右 / 左→右。"
+      },
+      {
+        "field": "turns",
+        "type": "int[]",
+        "required": false,
+        "rule": "1-based 轮次窗口，升序。无法映射到轮次时留空，但必须用 frame 或 time_range 定位。"
+      },
+      {
+        "field": "turn_precision",
+        "type": "enum",
+        "required": true,
+        "rule": "exact / approx / unknown。轮次只是近似窗口时写 approx；完全无法映射时写 unknown，不得用推测值凑数。"
+      },
+      {
+        "field": "time_range",
+        "type": "float[2] | null",
+        "required": false,
+        "rule": "视频秒数区间 [start, end]，用于只能在连续视频里定位、无法对应到轮次的事件。"
+      },
+      {
+        "field": "env_step",
+        "type": "int|null",
+        "required": true,
+        "rule": "动作所在环境步；未知写 null。"
+      },
+      {
+        "field": "frame",
+        "type": "int|null",
+        "required": true,
+        "rule": "头部相机帧号；未知写 null。"
+      },
+      {
+        "field": "result",
+        "type": "string",
+        "required": true,
+        "rule": "该事件的结局，须与计数一致。"
+      },
+      {
+        "field": "basis",
+        "type": "string",
+        "required": true,
+        "rule": "判定依据：看过的图像/视频与关键画面。"
+      },
+      {
+        "field": "confidence",
+        "type": "enum",
+        "required": true,
+        "rule": "确认 / 待确认；待确认事件不得计入确认计数。"
+      },
+      {
+        "field": "media",
+        "type": "object[]",
+        "required": true,
+        "rule": "证据引用：每项 {camera, url|null, sha256, bytes}。有公开 URL 时看板直接外链。"
+      },
+      {
+        "field": "uncertain_reason",
+        "type": "string",
+        "required": false,
+        "rule": "confidence=待确认 时必填。"
+      },
+      {
+        "field": "gap_id",
+        "type": "string",
+        "required": false,
+        "rule": "同一观察缺口的连续补视野动作共享该 id。"
+      }
+    ],
+    "rules": [
+      "看板不托管图片或视频：证据必须给出公开可访问的 URL（原始存储直链）；没有公开 URL 时写 url=null 并给出 sha256，看板只显示文字证据。",
+      "不得上传裁剪、缩放、加字或插值的派生帧作为唯一证据；如需截图，仅作辅助并保留原始视频链接。",
+      "accepted、夹爪零开度、模型 note、请求 targets 均不能单独证明成功、掉落或碰撞。",
+      "特别核对动作截断：请求闭合或释放不等于已执行。"
+    ]
+  },
+  "files": [
+    {
+      "name": "submission.json",
+      "required": true,
+      "rule": "权威数据：组设置 + 每个 run 的 26 项指标、状态、事件与媒体引用。看板只读这个文件。"
+    },
+    {
+      "name": "task_metrics.csv",
+      "required": true,
+      "rule": "逐 run 一行的扁平镜像，必须与 submission.json 完全一致（校验器逐格比对）。"
+    },
+    {
+      "name": "events.json",
+      "required": true,
+      "rule": "事件明细数组，按 run_id 归属；与 submission.json 内嵌事件同源。"
+    },
+    {
+      "name": "report.html",
+      "required": false,
+      "rule": "可筛选的本地报告：逐任务表、汇总、事件证据与不确定项。"
+    }
+  ],
+  "columns": [
+    "run_id",
+    "group",
+    "task",
+    "variant",
+    "scene",
+    "seed",
+    "capability",
+    "setting_id",
+    "success",
+    "score",
+    "turns",
+    "actions",
+    "empty_retry",
+    "drop",
+    "empty_regrasp",
+    "drop_regrasp",
+    "direct_attempts",
+    "direct_success",
+    "table_attempts",
+    "table_success",
+    "support_attempts",
+    "support_success",
+    "view_same",
+    "view_opposite",
+    "abandon_near_action",
+    "abandon_near_turn",
+    "abandon_action_limit",
+    "abandon_turn_limit",
+    "collision_arms",
+    "collision_arm_object",
+    "collision_arm_table",
+    "knockdown",
+    "wrong_object",
+    "fine_placement_fail"
+  ],
+  "validation": {
+    "blocking": [
+      "submission.json 通过 JSON Schema；schema_version 正确。",
+      "组的 setting 必填：setting_id、profile 或明确的 null + 原因；不得用组名代替配置。",
+      "run_id 全局唯一；同一 (task, variant, scene, seed) 允许多条，但必须各自有 run_id 并标记 repeat。",
+      "每个 run 含全部 26 项指标，且每项都有 status（confirmed / lower_bound / na / unknown）。",
+      "success==1 时 score 必须为 1；success==0 时 score<1 或 null。",
+      "direct_success ≤ direct_attempts；table_success ≤ table_attempts；support_success ≤ support_attempts。",
+      "掉落后重夹 ≤ 掉落次数；空夹后重夹 ≤ 空夹次数。",
+      "每个事件必须能被定位：turns 非空、frame 非空、time_range 三者至少其一。",
+      "turns 若给出必须是 >=1 的整数且升序；turn_precision=unknown 时允许为空数组。",
+      "turn_precision=exact/approx 时 turns 不得为空；unknown 时不得编造轮次。",
+      "每个事件必须引用存在的 run_id，category 在枚举内。",
+      "confidence=待确认 的事件不得计入任何确认计数。",
+      "媒体引用必须带 sha256；url 非空时必须 https。",
+      "task_metrics.csv 每行必须与 submission.json 对应 run 的数值完全一致。",
+      "不得修改原始数据；报告中的数值必须能由包内文件复算。"
+    ],
+    "warnings": [
+      "存在 na / unknown 指标：报告须列出未覆盖类别。",
+      "没有任何事件证据的 run：允许，但报告须说明核查范围。",
+      "覆盖率低于 100%（事件数 < 成功/失败链应有数量）：提示可能漏标。",
+      "同一 (task, variant, scene, seed) 出现多条 run：看板将按均值 ± 标准差展示，并披露全部重跑。",
+      "媒体 url 为 null：该事件在看板上只有文字证据。"
+    ]
+  },
+  "ingest": {
+    "layout": [
+      "<submission>/",
+      "├─ submission.json     # 权威数据",
+      "├─ task_metrics.csv    # 与 submission.json 一致的镜像",
+      "├─ events.json         # 事件明细",
+      "└─ report.html         # 可选：本地报告"
+    ],
+    "steps": [
+      "把校验通过的包放到 submissions/<group_id>/ 下（一个组一个目录）。",
+      "运行 validate_submission.py <submission>，必须 0 阻断项。",
+      "运行 ingest_submission.py <submission> --board <dist>，生成/更新看板组数据并写快照。",
+      "看板重建 data.js 后，新组出现在“实验设置”选择器里，seed / scene / variant 自动进入筛选项。",
+      "发布快照：记录 submission 文件的 sha256，旧快照不覆盖，纠错发新版本。"
+    ],
+    "mapping": [
+      "submission.group → 选择器中的“实验设置”；setting_id 相同即同一设置。",
+      "run.episode(task, variant, scene, seed) → 选择器的 task / variant / seed / scene。",
+      "run.metrics[26] + metric_status → 逐任务矩阵与任务详情。",
+      "run.events[] → 事件与证据页；media.url 直接外链，无 URL 时只显示文字。",
+      "run.configuration + run.videos + run.artifacts → 任务详情中的设置与溯源区块。",
+      "report 覆盖率与 na/unknown 清单 → 总览中的“证据覆盖”与待补标提示。"
+    ]
+  },
+  "example": "{\n  \"schema_version\": \"robodojo-submission-v1\",\n  \"group\": {\n    \"id\": \"exp-2026-10-example\",\n    \"name\": \"示例组\",\n    \"setting\": {\n      \"setting_id\": \"sha256:6f1c…\",\n      \"profile\": \"persistent\",\n      \"native_control_cap\": 20,\n      \"max_decisions\": 100,\n      \"model\": \"gpt-5.6-sol\",\n      \"client_version\": \"robodojo-l3/1.4.2\"\n    },\n    \"coverage\": \"三视角视频逐 turn 核查\"\n  },\n  \"runs\": [\n    {\n      \"run_id\": \"example-align_blocks-standard-s0-scene0\",\n      \"task\": \"align_blocks\",\n      \"variant\": \"standard\",\n      \"scene\": 0,\n      \"seed\": 0,\n      \"capability\": \"open\",\n      \"repeat\": 0,\n      \"result\": {\n        \"success\": 0,\n        \"score\": 0.0,\n        \"turns\": 21,\n        \"actions\": 214\n      },\n      \"metrics\": {\n        \"success\": 0,\n        \"score\": 0.0,\n        \"turns\": 21,\n        \"actions\": 214,\n        \"empty_retry\": 2,\n        \"drop\": 1,\n        \"empty_regrasp\": 1,\n        \"drop_regrasp\": 0,\n        \"direct_attempts\": 1,\n        \"direct_success\": 1,\n        \"table_attempts\": 0,\n        \"table_success\": 0,\n        \"support_attempts\": 0,\n        \"support_success\": 0,\n        \"view_same\": 3,\n        \"view_opposite\": 1,\n        \"abandon_near_action\": 0,\n        \"abandon_near_turn\": 1,\n        \"abandon_action_limit\": 0,\n        \"abandon_turn_limit\": 0,\n        \"collision_arms\": 0,\n        \"collision_arm_object\": 1,\n        \"collision_arm_table\": 0,\n        \"knockdown\": 0,\n        \"wrong_object\": 0,\n        \"fine_placement_fail\": 1\n      },\n      \"metric_status\": {\n        \"success\": \"confirmed\",\n        \"score\": \"confirmed\",\n        \"turns\": \"confirmed\",\n        \"actions\": \"confirmed\",\n        \"empty_retry\": \"confirmed\",\n        \"drop\": \"confirmed\",\n        \"empty_regrasp\": \"confirmed\",\n        \"drop_regrasp\": \"confirmed\",\n        \"direct_attempts\": \"confirmed\",\n        \"direct_success\": \"confirmed\",\n        \"table_attempts\": \"confirmed\",\n        \"table_success\": \"confirmed\",\n        \"support_attempts\": \"confirmed\",\n        \"support_success\": \"confirmed\",\n        \"view_same\": \"confirmed\",\n        \"view_opposite\": \"confirmed\",\n        \"abandon_near_action\": \"confirmed\",\n        \"abandon_near_turn\": \"confirmed\",\n        \"abandon_action_limit\": \"confirmed\",\n        \"abandon_turn_limit\": \"confirmed\",\n        \"collision_arms\": \"confirmed\",\n        \"collision_arm_object\": \"confirmed\",\n        \"collision_arm_table\": \"confirmed\",\n        \"knockdown\": \"na\",\n        \"wrong_object\": \"confirmed\",\n        \"fine_placement_fail\": \"lower_bound\"\n      },\n      \"configuration\": {\n        \"profile\": \"persistent\",\n        \"max_decisions\": 100,\n        \"native_control_cap\": 20\n      },\n      \"videos\": [\n        {\n          \"camera\": \"head\",\n          \"url\": \"https://example.org/runs/x/head.mp4\",\n          \"sha256\": \"4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9\",\n          \"bytes\": 342139\n        }\n      ],\n      \"artifacts\": [\n        {\n          \"kind\": \"native_terminal\",\n          \"url\": \"https://example.org/runs/x/native-terminal.json\",\n          \"sha256\": \"9c1f5b2e0d7a44c3b8e6f0a2d5c7b9e1f3a5c7d9e1b3f5a7c9d1e3b5f7a9c1d3\"\n        }\n      ],\n      \"events\": [\n        {\n          \"id\": \"align_blocks-01\",\n          \"category\": \"empty_retry\",\n          \"object\": \"block_2\",\n          \"arm\": \"左\",\n          \"turns\": [\n            7,\n            9\n          ],\n          \"turn_precision\": \"exact\",\n          \"env_step\": 62,\n          \"frame\": 220,\n          \"result\": \"未夹住，随后重试成功\",\n          \"basis\": \"head 第 175–225 帧；左腕 62–70\",\n          \"confidence\": \"确认\",\n          \"media\": [\n            {\n              \"camera\": \"head\",\n              \"url\": \"https://example.org/runs/x/head.mp4\",\n              \"sha256\": \"4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9\",\n              \"bytes\": 342139\n            }\n          ]\n        },\n        {\n          \"id\": \"align_blocks-02\",\n          \"category\": \"drop\",\n          \"object\": \"block_2\",\n          \"arm\": \"左\",\n          \"turns\": [],\n          \"turn_precision\": \"unknown\",\n          \"time_range\": [\n            10.4,\n            11.2\n          ],\n          \"env_step\": null,\n          \"frame\": 260,\n          \"result\": \"提拉过程中失持，无法对应到具体轮次\",\n          \"basis\": \"连续视频 10.4–11.2s，头部相机第 260 帧附近\",\n          \"confidence\": \"确认\",\n          \"media\": [\n            {\n              \"camera\": \"head\",\n              \"url\": \"https://example.org/runs/x/head.mp4\",\n              \"sha256\": \"4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9\",\n              \"bytes\": 342139\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+  "example_fields": [
+    [
+      "schema_version",
+      "固定为 robodojo-submission-v1；不匹配直接拒绝。"
+    ],
+    [
+      "group.id / group.name",
+      "实验组标识与展示名；看板“实验设置”选择器用它。"
+    ],
+    [
+      "group.setting",
+      "配置指纹：setting_id 为配置内容的 sha256；profile、上限、模型、客户端版本必填，未知写 null 并给 reason。"
+    ],
+    [
+      "group.coverage",
+      "本次核查覆盖说明（哪些类别看了全视频、哪些只看稀疏帧）。"
+    ],
+    [
+      "runs[].run_id",
+      "全局唯一；重复运行另起 run_id，并令 repeat=1。"
+    ],
+    [
+      "runs[].task / variant / scene / seed / capability",
+      "任务条件键，看板按这五项筛选与配对。"
+    ],
+    [
+      "runs[].result",
+      "原生结果：success、score、turns、actions，不用模型自述替代。"
+    ],
+    [
+      "runs[].metrics",
+      "26 项指标；未知写 null，不要写 0。"
+    ],
+    [
+      "runs[].metric_status",
+      "每项指标的核查状态，取值 confirmed / lower_bound / na / unknown。"
+    ],
+    [
+      "runs[].configuration",
+      "实际生效配置快照，用于跨组对比与复现。"
+    ],
+    [
+      "runs[].videos[]",
+      "三视角原始视频：camera、url（公开直链或 null）、sha256、bytes。"
+    ],
+    [
+      "runs[].artifacts[]",
+      "原生产物（native_terminal / actions / config / source_lock）及哈希。"
+    ],
+    [
+      "runs[].events[]",
+      "事件证据；字段见 4.2，待确认事件不得计入确认计数。"
+    ]
+  ],
+  "submit": {
+    "needs": [
+      "目标仓库地址（见 protocol.json 的 submit.repo）",
+      "目录规则 submissions/<group_id>/",
+      "自检命令 validate_submission.py，必须 0 阻断"
+    ],
+    "with_git": [
+      "# 0 · 自检：必须 0 阻断，否则不必提交",
+      "python3 validate_submission.py ./my-submission",
+      "",
+      "# 1 · fork 并建分支",
+      "gh repo fork NA-Wen/robodojo-board --clone",
+      "cd robodojo-board && git checkout -b submission/<group_id>",
+      "",
+      "# 2 · 放入提交包（4 个文件）",
+      "mkdir -p submissions/<group_id>",
+      "cp -r ./my-submission/. submissions/<group_id>/",
+      "",
+      "# 3 · 提交并开 PR",
+      "git add submissions/<group_id>",
+      "git commit -m \"submission: <group_id>\"",
+      "git push -u origin submission/<group_id>",
+      "gh pr create --fill --title \"submission: <group_id>\""
+    ],
+    "without_git": [
+      "把 submission.json / task_metrics.csv / events.json（可选 report.html）打包，",
+      "上传到任意可公开下载的地址（zip 或目录均可）。",
+      "开 issue 选择「提交实验组」，填写 group_id、bundle 地址、submission.json 的 sha256。",
+      "维护者下载后跑同一条校验命令入库；你会在 issue 里收到通过或阻断原因。"
+    ],
+    "after_pr": [
+      "CI 自动运行 validate_submission.py，结果直接贴在 PR 上。",
+      "维护者 review 口径：覆盖范围、na 是否合理、事件证据是否指向可公开访问的原始文件。",
+      "合并后 CI 自动执行 ingest_submission.py --merge，把组写进 data.js 并提交。",
+      "Pages 随后自动发布，新组出现在「实验设置」选择器里，通常 10 分钟内。"
+    ],
+    "update_rules": [
+      "同一 group_id 重新提交 = 覆盖该组数据；旧版本保留在 git 历史里。",
+      "配置变了必须换 setting_id，不能沿用旧指纹，否则会被当成同一设置。",
+      "数值纠错要说明原因，且不得删除历史提交。",
+      "已被拒绝的包可以改好后重开 PR；不要新建重复的 group_id。"
+    ],
+    "repo": "NA-Wen/robodojo-board",
+    "name": "robodojo-board",
+    "issue_url": "https://github.com/NA-Wen/robodojo-board/issues/new?template=submission.yml"
+  }
+}

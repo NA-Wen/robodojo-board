@@ -1,0 +1,247 @@
+#!/usr/bin/env python3
+"""Validate a submission bundle and convert it into a board group.
+
+Usage:
+    python3 ingest_submission.py <submission-dir> --board <dist-dir> [--force]
+
+Writes <dist>/incoming/<group_id>.json. build_board.py picks that up on the next
+build, so the group appears in the board's setting selector without manual edits.
+Exit 0 = ingested, 1 = rejected by the validator, 2 = usage error.
+"""
+import glob
+import importlib.util
+import json
+import os
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+FIELD_TO_KEY = {
+    'success': 'success', 'score': 'score', 'turns': 'turns', 'actions': 'actions',
+    'empty_retry': 'emptyRetry', 'drop': 'drops', 'empty_regrasp': 'emptyRegrasp',
+    'drop_regrasp': 'dropRegrasp', 'direct_attempts': 'directAttempts',
+    'direct_success': 'directSuccess', 'table_attempts': 'tableAttempts',
+    'table_success': 'tableSuccess', 'support_attempts': 'supportAttempts',
+    'support_success': 'supportSuccess', 'view_same': 'viewSame', 'view_opposite': 'viewOpposite',
+    'abandon_near_action': 'abandonNearAction', 'abandon_near_turn': 'abandonNearTurn',
+    'abandon_action_limit': 'abandonActionLimit', 'abandon_turn_limit': 'abandonTurnLimit',
+    'collision_arms': 'collisionArms', 'collision_arm_object': 'collisionArmObject',
+    'collision_arm_table': 'collisionArmTable', 'knockdown': 'knockdown',
+    'wrong_object': 'wrongObject', 'fine_placement_fail': 'finePlacementFail',
+}
+CAMERA_LABEL = {'head': '头部', 'left_wrist': '左腕', 'right_wrist': '右腕', 'other': '其他'}
+
+
+def load_site(dist):
+    raw = open(os.path.join(dist, 'data.js'), encoding='utf-8').read()
+    prefix = 'window.AUDIT_DATA='
+    assert raw.startswith(prefix), 'data.js 格式不符'
+    return json.loads(raw[len(prefix):].rstrip().rstrip(';'))
+
+
+def _uniq(groups, key):
+    vals = {c['episode'].get(key) for g in groups for c in g.get('cases', [])}
+    vals = {v for v in vals if v is not None}
+    return sorted(vals, key=lambda v: (str(type(v)), v))
+
+
+def merge_into_site(dist, incoming_dir):
+    """把 incoming/*.json 合并进 data.js / audit-data.json（不依赖原始数据）。"""
+    data = load_site(dist)
+    groups = data['groups']
+    index = {g['id']: i for i, g in enumerate(groups)}
+    added, replaced = [], []
+    for path in sorted(glob.glob(os.path.join(incoming_dir, '*.json'))):
+        group = json.load(open(path, encoding='utf-8'))
+        if group['id'] in index:
+            groups[index[group['id']]] = group
+            replaced.append(group['id'])
+        else:
+            groups.append(group)
+            index[group['id']] = len(groups) - 1
+            added.append(group['id'])
+
+    tasks = _uniq(groups, 'task')
+    sets = {g['id']: {c['episode']['task'] for c in g.get('cases', [])} for g in groups}
+    common = set.intersection(*sets.values()) if sets else set()
+    data['filters'] = {
+        'tasks': tasks,
+        'seeds': _uniq(groups, 'seed'),
+        'scenes': _uniq(groups, 'scene'),
+        'variants': _uniq(groups, 'variant'),
+        'capabilities': _uniq(groups, 'capability'),
+        'settings': [{'id': g['id'], 'name': g['name'],
+                      'label': (g.get('setting') or {}).get('label', g['name']),
+                      'coverage': (g.get('setting') or {}).get('coverage', '')} for g in groups],
+        'pairedTasks': len(common),
+        'note': f"{len(groups)} 个实验设置，{len(common)} 个任务在所有组中都有记录。",
+    }
+    data['pairedTasks'] = len(common)
+    data['matchedEpisodes'] = len(common)
+
+    (open(os.path.join(dist, 'data.js'), 'w', encoding='utf-8')
+     .write('window.AUDIT_DATA=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';'))
+    (open(os.path.join(dist, 'audit-data.json'), 'w', encoding='utf-8')
+     .write(json.dumps(data, ensure_ascii=False, indent=2)))
+    return added, replaced
+
+
+def load_validator():
+    spec = importlib.util.spec_from_file_location(
+        'validate_submission', os.path.join(HERE, 'validate_submission.py'))
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def to_group(doc):
+    group = doc['group']
+    setting = group.get('setting') or {}
+    cases = []
+    for run in doc['runs']:
+        metrics = run.get('metrics') or {}
+        status = run.get('metric_status') or {}
+        board_metrics = {}
+        for field, key in FIELD_TO_KEY.items():
+            board_metrics[key] = metrics.get(field)
+        events = []
+        for e in run.get('events') or []:
+            turns = e.get('turns') or []
+            evidence = [{
+                'turn': turns[0] if turns else None,
+                'env_step': e.get('env_step'),
+                'frame': e.get('frame'),
+                'time_range': e.get('time_range'),
+                'precision': e.get('turn_precision'),
+                'cameras': sorted({m.get('camera') for m in (e.get('media') or []) if m.get('camera')}),
+            }]
+            note = e.get('result') or ''
+            if e.get('basis'):
+                note = f"{note}（依据：{e['basis']}）" if note else e['basis']
+            events.append({
+                'id': e.get('id'),
+                'category': e.get('category'),
+                'object': e.get('object'),
+                'arm': e.get('arm'),
+                'note': note,
+                'confidence': e.get('confidence'),
+                'turn_precision': e.get('turn_precision'),
+                'time_range': e.get('time_range'),
+                'turns': turns,
+                'view_motion_turns': [],
+                'evidence': evidence,
+                'uncertain_reason': e.get('uncertain_reason'),
+            })
+        board_metrics['uncertain'] = sum(1 for e in events if e.get('confidence') == '待确认')
+        board_metrics['recoveryOther'] = sum(1 for e in events if e.get('category') == 'recovery_other')
+        board_metrics['lowerBound'] = any(status.get(f) == 'lower_bound' for f in FIELD_TO_KEY)
+        videos = [{
+            'key': v.get('camera'),
+            'name': CAMERA_LABEL.get(v.get('camera'), v.get('camera')),
+            'url': v.get('url'),
+            'sha256': v.get('sha256'),
+            'bytes': v.get('bytes'),
+        } for v in (run.get('videos') or [])]
+        cases.append({
+            'run_id': run['run_id'],
+            'configuration': run.get('configuration') or {},
+            'task': run['task'],
+            'instruction': run.get('instruction') or run['task'],
+            'note': '',
+            'score': (run.get('result') or {}).get('score'),
+            'episode': {
+                'capability': run.get('capability'),
+                'scene': run.get('scene'),
+                'seed': run.get('seed'),
+                'task': run['task'],
+                'variant': run['variant'],
+            },
+            'controls': (run.get('result') or {}).get('actions'),
+            'decisions': (run.get('result') or {}).get('decisions'),
+            'turns': (run.get('result') or {}).get('turns'),
+            'counts': {},
+            'metrics': board_metrics,
+            'metricStatus': {m: status.get(m) for m in FIELD_TO_KEY},
+            'events': events,
+            'gallery': [],
+            'videos': videos,
+        })
+
+    totals = {'cases': len(cases)}
+    for c in cases:
+        for k, v in (c['metrics'] or {}).items():
+            if k in ('success', 'uncertain') and isinstance(v, (int, float)):
+                totals[k] = totals.get(k, 0) + v
+        if isinstance(c.get('turns'), int):
+            totals['turns'] = totals.get('turns', 0) + c['turns']
+    for cat in {e['category'] for c in cases for e in c['events']}:
+        totals[cat] = sum(1 for c in cases for e in c['events'] if e['category'] == cat)
+
+    values = [{'name': k, 'value': v, 'known': v is not None}
+              for k, v in setting.items() if k not in ('setting_id', 'unknown_reason')]
+    return {
+        'id': group['id'],
+        'name': group.get('name') or group['id'],
+        'coverage': group.get('coverage') or '',
+        'setting': {
+            'id': setting.get('setting_id'),
+            'label': group.get('name') or group['id'],
+            'source': 'submission.json → group.setting',
+            'values': values,
+            'unknown_reason': setting.get('unknown_reason'),
+        },
+        'methodology': [group.get('coverage') or ''],
+        'totals': totals,
+        'cases': cases,
+    }
+
+
+def main(argv):
+    args = [a for a in argv[1:] if not a.startswith('-')]
+    if not args or '--board' not in argv:
+        print(__doc__.strip())
+        return 2
+    path = args[0]
+    board = argv[argv.index('--board') + 1]
+    force = '--force' in argv
+    do_merge = '--merge' in argv
+
+    v = load_validator()
+    sub = os.path.join(path, 'submission.json')
+    if not os.path.exists(sub):
+        print(f'缺少 submission.json：{path}')
+        return 2
+    doc = json.load(open(sub, encoding='utf-8'))
+    rep = v.Report()
+    v.check_submission(doc, rep)
+    v.check_csv(path, doc, rep)
+    v.check_events(path, doc, rep)
+    if rep.blocking:
+        print(f'拒绝：{len(rep.blocking)} 个阻断项')
+        for b in rep.blocking:
+            print('  ✗ ' + b)
+        return 1
+
+    group = to_group(doc)
+    out_dir = os.path.join(board, 'incoming')
+    os.makedirs(out_dir, exist_ok=True)
+    out = os.path.join(out_dir, group['id'] + '.json')
+    if os.path.exists(out) and not force:
+        print(f'已存在 {out}；确认覆盖请加 --force')
+        return 1
+    json.dump(group, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+    print(f'已写入 {out}')
+    print(f"组 {group['id']}：{len(group['cases'])} 个 run，"
+          f"{sum(len(c['events']) for c in group['cases'])} 个事件")
+    if do_merge:
+        added, replaced = merge_into_site(board, out_dir)
+        print(f'已合并进 data.js：新增 {added or "无"}；更新 {replaced or "无"}')
+        print('刷新看板即可看到新组（无需原始数据）。')
+    else:
+        print('下一步：加 --merge 直接写入 data.js，'
+              '或运行 build_board.py 做完整重建。')
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main(sys.argv))
