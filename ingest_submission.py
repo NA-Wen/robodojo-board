@@ -229,9 +229,45 @@ def to_group(doc):
     for cat in {e['category'] for c in cases for e in c['events']}:
         totals[cat] = sum(1 for c in cases for e in c['events'] if e['category'] == cat)
 
+    # Preserve audit provenance supplied by standardized packages, including budget
+    # decision anchors. These annotations are evidence, not experiment settings.
+    by_run = {r['run_id']: r for r in doc['runs']}
+    has_audit = False
+    for c in cases:
+        run = by_run[c['run_id']]
+        aux = (run.get('configuration') or {}).get('audit_auxiliary')
+        if not aux:
+            continue
+        has_audit = True
+        c['instruction'] = aux.get('instruction', c['instruction'])
+        c['decisions'] = aux.get('native_model_decisions', c['turns'])
+        c['turns_basis'] = 'model_decisions'
+        c['trajectory_stages'] = aux.get('trajectory_stages')
+        c['submission_version'] = 'budget-v2' if aux.get('budget_review') else 'protocol-v1'
+        c['note'] = (aux.get('budget_review') or {}).get('adjudication', '')
+        c['metrics']['lowerBound'] = [FIELD_TO_KEY[f] for f, status in run['metric_status'].items() if status == 'lower_bound']
+        c['counts']['view_motions'] = run['metrics']['view_opposite']
+        c['counts']['view_same_motions'] = run['metrics']['view_same']
+        original = {e['id']: e for e in run['events']}
+        annotations = aux.get('event_annotations', {})
+        c['counts']['view_episodes'] = len({e.get('gap_id') for e in run['events'] if e.get('gap_id') and annotations.get(e['id'], {}).get('view_type') == 'opposite'})
+        for e in c['events']:
+            a = annotations.get(e['id'], {})
+            raw = original[e['id']]
+            for key in ['subcategory', 'related_event_ids', 'metric_contributions', 'trajectory_stages', 'view_type', 'budget_review']:
+                if key in a:
+                    e[key] = a[key]
+            e['gap_id'] = raw.get('gap_id')
+            e['media'] = raw.get('media', [])
+            e['turn_basis'] = 'model_call'
+            e['view_motion_turns'] = [a['executed_stage']] if a.get('executed_stage') is not None else []
+            e['evidence'][0]['turn_basis'] = 'model_call'
+        c['submission_events'] = run['events']
+        c['artifacts'] = run.get('artifacts', [])
+
     values = [{'name': k, 'value': v, 'known': v is not None}
               for k, v in setting.items() if k not in ('setting_id', 'unknown_reason')]
-    return {
+    converted = {
         'id': group['id'],
         'name': group.get('name') or group['id'],
         'coverage': group.get('coverage') or '',
@@ -246,6 +282,20 @@ def to_group(doc):
         'totals': totals,
         'cases': cases,
     }
+
+    if has_audit:
+        converted['submission_version'] = cases[0].get('submission_version', 'protocol-v1')
+        converted['submission_links'] = {key: 'submissions/' + group['id'] + '/' + name for key, name in {
+            'bundle':'submission.json', 'csv':'task_metrics.csv', 'xlsx':'metrics.xlsx',
+            'validation':'validation_report.json', 'budget_review':'budget_review.html'}.items()}
+        budget = [c['configuration']['audit_auxiliary'].get('budget_review') for c in cases]
+        if all(budget):
+            converted['budget_summary'] = {field: {
+                'confirmed_sum': sum(c['metrics'][FIELD_TO_KEY[field]] or 0 for c in cases),
+                'known_runs': sum(c['metrics'][FIELD_TO_KEY[field]] is not None for c in cases),
+                'unknown_tasks': [c['task'] for c in cases if c['metrics'][FIELD_TO_KEY[field]] is None]
+            } for field in ['abandon_near_action','abandon_near_turn','abandon_action_limit','abandon_turn_limit']}
+    return converted
 
 
 def main(argv):

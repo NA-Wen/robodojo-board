@@ -1,0 +1,5405 @@
+{
+  "version": "budget-v2",
+  "rule": "动作与turn预算独立判断；总动作上限取historical/publication-manifest.json的protocol.episode_control_limit，turn上限取model_decision_limit并与config.max_decisions对账。以首次明确因预算放弃的决定为锚点：控制步取该调用执行前env_step，模型轮取含该决定的1-based call_index；保留停止前后计数。回位及最终give_up合为同一放弃，不重复计数。≥90%且<100%为靠近，≥100%为达到；系统注入give_up排除。类型或因果不明确的相关项为unknown；明确不满足阈值或无预算放弃记录为0。",
+  "scope": "仅重审预算与终止日志；其他物理事件沿用protocol-v1审核，未声称新做全视频逐帧审计。",
+  "counts": {
+    "calls": 2843,
+    "trajectory": 2674,
+    "actions": 24203,
+    "feedback": 2870,
+    "candidates": 22
+  },
+  "summary": {
+    "abandon_near_action": {
+      "confirmed_sum": 5,
+      "known_runs": 39,
+      "unknown_tasks": [
+        "cover_blocks",
+        "pour_liquid_into_cup",
+        "store_laptop_and_headphones"
+      ]
+    },
+    "abandon_near_turn": {
+      "confirmed_sum": 4,
+      "known_runs": 39,
+      "unknown_tasks": [
+        "cover_blocks",
+        "fasten_screws",
+        "store_laptop_and_headphones"
+      ]
+    },
+    "abandon_action_limit": {
+      "confirmed_sum": 0,
+      "known_runs": 42,
+      "unknown_tasks": []
+    },
+    "abandon_turn_limit": {
+      "confirmed_sum": 0,
+      "known_runs": 42,
+      "unknown_tasks": []
+    }
+  },
+  "runs": [
+    {
+      "task": "align_blocks",
+      "run_id": "l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1",
+      "source_sha256": "138913fe438ee5ca9114f61e5501ba69f5c35a90888a79cf248fba66e5bb4011",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "130b13769da4b6f08f4f9ae992d9db0b8c0225c5c1b4e0b72290aad85a6d1f03",
+      "action_limit": 200,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 197,
+      "final_turns": 37,
+      "trajectory_stages": 37,
+      "model_calls_reviewed": 37,
+      "action_feedback_records": 37,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 194,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 33,
+          "trajectory": 33,
+          "env_step": 132,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The square has been released and the cubes remain in place. I will lift the empty gripper clear before resetting.",
+            "targets": {
+              "left_z": 0.84
+            }
+          },
+          "frame": 164
+        },
+        {
+          "call": 34,
+          "trajectory": 34,
+          "env_step": 136,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will return toward the initial grasp-point position and restore the wrist orientation in stages.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 48,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 169
+        },
+        {
+          "call": 35,
+          "trajectory": 35,
+          "env_step": 154,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The left grasp point is back at its starting position. I will finish restoring its initial orientation; the right arm has stayed home throughout.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 188
+        },
+        {
+          "call": 36,
+          "trajectory": 36,
+          "env_step": 174,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The last reset motion followed a long planner path and stopped early. I will use a nonsingular intermediate orientation close to home instead.",
+            "targets": {
+              "left_pitch_deg": 75,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 10
+            }
+          },
+          "frame": 209
+        },
+        {
+          "call": 37,
+          "trajectory": 37,
+          "env_step": 194,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish the reset with a small orientation correction, bringing the arm within its starting-pose tolerance.",
+            "targets": {
+              "left_pitch_deg": 82,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 5
+            }
+          },
+          "frame": 230
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "arrange_largest_number",
+      "run_id": "l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1",
+      "source_sha256": "5f04d18089682381e95383434c579c5e844abe2ae776c5aef515a919a5b46c0d",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "b6667ba9556454d28637976e60a97dbd4c6a413d09ba40e8b364751e0b860da9",
+      "action_limit": 1050,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 667,
+      "final_turns": 86,
+      "trajectory_stages": 84,
+      "model_calls_reviewed": 86,
+      "action_feedback_records": 86,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 658,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 82,
+          "trajectory": 80,
+          "env_step": 594,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The pads now read 6532 from left to right. I return both empty hands to their starting positions before restoring their starting orientations.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.9215,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 673
+        },
+        {
+          "call": 83,
+          "trajectory": 81,
+          "env_step": 606,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both hands reached their starting positions. I unwind the jaw rotations in stages before turning the tools back to their starting pitch.",
+            "targets": {
+              "left_yaw_deg": 0,
+              "right_yaw_deg": 50
+            }
+          },
+          "frame": 686
+        },
+        {
+          "call": 84,
+          "trajectory": 82,
+          "env_step": 624,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I finish unwinding the right wrist and begin restoring the left arm's starting pitch, with both hands clear of the digits.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 705
+        },
+        {
+          "call": 85,
+          "trajectory": 83,
+          "env_step": 642,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The row remains undisturbed. I finish restoring the left arm's starting pitch and turn the right arm halfway back.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "right_pitch_deg": 45
+            }
+          },
+          "frame": 724
+        },
+        {
+          "call": 86,
+          "trajectory": 84,
+          "env_step": 658,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The digits read 6532 on the pads, and the left arm is home. I restore the right arm's starting pitch to complete the return.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 741
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "build_tower",
+      "run_id": "l3_persistent_cap20_build_tower_s0_layout0_20261006_v1",
+      "source_sha256": "4c90c3e29396b42725e7a9f8e158299b7d2aa2d8277f923cba3e4dc45f3dac1a",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_build_tower_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "9855ae44f81987f6e2ade3629693cc2e6771b69423715a26d167a20df7bd97a7",
+      "action_limit": 1050,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 799,
+      "final_turns": 99,
+      "trajectory_stages": 97,
+      "model_calls_reviewed": 99,
+      "action_feedback_records": 99,
+      "termination": "model_give_up",
+      "anchor_call": 99,
+      "anchor_trajectory": 97,
+      "anchor_env_step": 798,
+      "action_usage_at_decision": 0.76,
+      "turn_usage_at_decision": 0.99,
+      "terminal_call": 99,
+      "terminal_env_step": 798,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 1,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C99明确因call/turn预算不足而give_up，99/100轮，计靠近turn一次。",
+      "candidates": [
+        {
+          "call": 99,
+          "trajectory": 97,
+          "env_step": 798,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I should have cleared the spare supports before placing the lower board. Trapping them beneath its ends required many extraction corrections and consumed the call budget.",
+            "reason": "The lower and middle layers are assembled and both arms are home, but the remaining call budget is insufficient to place the two top pieces safely."
+          },
+          "frame": 894
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 95,
+          "trajectory": 93,
+          "env_step": 728,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The lower and middle layers are stable, but the top pieces remain unplaced. I will preserve this assembly and return both empty arms toward their starting positions.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.9215,
+              "right_x": 0.3,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 820
+        },
+        {
+          "call": 96,
+          "trajectory": 94,
+          "env_step": 748,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both arms are near their starting positions. I will restore their wrist orientations in smaller rotation steps.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "right_yaw_deg": 45
+            }
+          },
+          "frame": 841
+        },
+        {
+          "call": 97,
+          "trajectory": 95,
+          "env_step": 764,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish returning the left wrist and bring the right wrist halfway back to its starting orientation.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "right_pitch_deg": 45,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 858
+        },
+        {
+          "call": 98,
+          "trajectory": 96,
+          "env_step": 781,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish returning both arms to their starting poses, leaving the completed lower and middle layers undisturbed. The two top pieces remain on the table.",
+            "targets": {
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 876
+        },
+        {
+          "call": 99,
+          "trajectory": 97,
+          "env_step": 798,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I should have cleared the spare supports before placing the lower board. Trapping them beneath its ends required many extraction corrections and consumed the call budget.",
+            "reason": "The lower and middle layers are assembled and both arms are home, but the remaining call budget is insufficient to place the two top pieces safely."
+          },
+          "frame": 894
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "classify_objects",
+      "run_id": "l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1",
+      "source_sha256": "9eec9aeb550e969a798cdf64366ae69ec68e57eec669ac19fe42520a93f905c4",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "818b32d559d3e725fc66238d002214bd0f7026bcb29b3cfe330518c22025d86c",
+      "action_limit": 1100,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 911,
+      "final_turns": 71,
+      "trajectory_stages": 68,
+      "model_calls_reviewed": 71,
+      "action_feedback_records": 71,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 910,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 67,
+          "trajectory": 64,
+          "env_step": 869,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Releasing the final doll inside white, completing the category placements.",
+            "targets": {
+              "left_gripper": 1
+            }
+          },
+          "frame": 932
+        },
+        {
+          "call": 68,
+          "trajectory": 65,
+          "env_step": 872,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All three categories are separated. Raising the empty left hand clear of the dolls before returning home.",
+            "targets": {
+              "left_z": 0.97
+            }
+          },
+          "frame": 936
+        },
+        {
+          "call": 69,
+          "trajectory": 66,
+          "env_step": 878,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The dolls and watches are settled inside their baskets. Returning the left hand to its starting location.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.94
+            }
+          },
+          "frame": 943
+        },
+        {
+          "call": 70,
+          "trajectory": 67,
+          "env_step": 898,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Restoring the left wrist orientation in a controlled step while keeping both grippers open.",
+            "targets": {
+              "left_pitch_deg": 70,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 964
+        },
+        {
+          "call": 71,
+          "trajectory": 68,
+          "env_step": 910,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Completing the left arm's return to its initial pose with all objects sorted and both grippers open.",
+            "targets": {
+              "left_pitch_deg": 90
+            }
+          },
+          "frame": 977
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "classify_objects_by_language",
+      "run_id": "l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1",
+      "source_sha256": "de968be5132c57543cf64329bb54a24e09e29049374ec122a6fcc4731f4e45f8",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "2adfdb0e2b777d10ef25d6705f8133bb62f0602dd55633491bedb3643560bc7a",
+      "action_limit": 1100,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 961,
+      "final_turns": 91,
+      "trajectory_stages": 90,
+      "model_calls_reviewed": 91,
+      "action_feedback_records": 91,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 956,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 87,
+          "trajectory": 86,
+          "env_step": 915,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The final lion is over the red basket interior with space beside the first. Lowering before release.",
+            "targets": {
+              "right_z": 0.87
+            }
+          },
+          "frame": 1000
+        },
+        {
+          "call": 88,
+          "trajectory": 87,
+          "env_step": 920,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Releasing the final wooden lion into the right basket. Then I will return the right arm to its starting pose.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 1006
+        },
+        {
+          "call": 89,
+          "trajectory": 88,
+          "env_step": 925,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All six objects are in their assigned baskets. Returning the right grasp point to its starting position.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 1012
+        },
+        {
+          "call": 90,
+          "trajectory": 89,
+          "env_step": 945,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The right grasp point is back at its start position. Restoring its orientation in two small rotations.",
+            "targets": {
+              "right_pitch_deg": 60,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 1033
+        },
+        {
+          "call": 91,
+          "trajectory": 90,
+          "env_step": 956,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both cars, both watches, and both wooden lions are in their assigned baskets. Completing the right arm's return to its original orientation.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 1045
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "cover_blocks",
+      "run_id": "l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1",
+      "source_sha256": "3f802a34a4c11c44e7a2e8e90f034b482f4518e32c20dd7d7d726d3bf232466c",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "e6e4eaa4ee4b45016087c28f485c88447e659839976dc6a94c3d2bc0d15977ec",
+      "action_limit": 800,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 784,
+      "final_turns": 96,
+      "trajectory_stages": 88,
+      "model_calls_reviewed": 96,
+      "action_feedback_records": 96,
+      "termination": "model_give_up",
+      "anchor_call": 96,
+      "anchor_trajectory": 88,
+      "anchor_env_step": 783,
+      "action_usage_at_decision": 0.97875,
+      "turn_usage_at_decision": 0.96,
+      "terminal_call": 96,
+      "terminal_env_step": 783,
+      "metrics": {
+        "abandon_near_action": null,
+        "abandon_near_turn": null,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "unknown",
+        "abandon_near_turn": "unknown",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {
+        "abandon_near_action": "C96明确说remaining budget，但未区分action/turn；当时783/800步与96/100轮均靠近上限，不能凭接近程度指定原因，两个near指标未知。两类均未达到上限。",
+        "abandon_near_turn": "C96明确说remaining budget，但未区分action/turn；当时783/800步与96/100轮均靠近上限，不能凭接近程度指定原因，两个near指标未知。两类均未达到上限。"
+      },
+      "adjudication": "C96明确说remaining budget，但未区分action/turn；当时783/800步与96/100轮均靠近上限，不能凭接近程度指定原因，两个near指标未知。两类均未达到上限。",
+      "candidates": [
+        {
+          "call": 96,
+          "trajectory": 88,
+          "env_step": 783,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A deeper, centered sidewall grasp prevented tilting on the final cover. Using that grasp consistently and checking stability with short lifts would have avoided the failed orientation recovery.",
+            "reason": "The covering and red-green-blue uncovering sequence is complete and both arms are home, but one cover remains on its side. The remaining budget is insufficient to correct it reliably."
+          },
+          "frame": 870
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 92,
+          "trajectory": 85,
+          "env_step": 757,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Use a smaller lowering move with a little more forward reach after the low target was refused.",
+            "targets": {
+              "right_y": -0.08,
+              "right_z": 1.0
+            }
+          },
+          "frame": 841
+        },
+        {
+          "call": 93,
+          "trajectory": 85,
+          "env_step": 757,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The planner refuses a lower pose with this tilt. Release the lightweight cover over the clear table area, away from the blocks, then return the arm home.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 841
+        },
+        {
+          "call": 94,
+          "trajectory": 86,
+          "env_step": 760,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return the empty right arm to its starting pose while the released cover settles on the clear table area.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 845
+        },
+        {
+          "call": 95,
+          "trajectory": 87,
+          "env_step": 780,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish the remaining small return-home correction. The uncovering sequence is complete, but the right cover has settled on its side rather than in the required orientation.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 866
+        },
+        {
+          "call": 96,
+          "trajectory": 88,
+          "env_step": 783,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A deeper, centered sidewall grasp prevented tilting on the final cover. Using that grasp consistently and checking stability with short lifts would have avoided the failed orientation recovery.",
+            "reason": "The covering and red-green-blue uncovering sequence is complete and both arms are home, but one cover remains on its side. The remaining budget is insufficient to correct it reliably."
+          },
+          "frame": 870
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "deposit_coin",
+      "run_id": "l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1",
+      "source_sha256": "c2c93ebc0c40beea401cca0511ac9023305909382c5721d8d094dea1c3a57bc3",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "010d4c390eabba0a200920bc9ac39cbcaa6b0b7c760c6e21831e84aa4e6ba028",
+      "action_limit": 300,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 286,
+      "final_turns": 42,
+      "trajectory_stages": 35,
+      "model_calls_reviewed": 42,
+      "action_feedback_records": 42,
+      "termination": "model_give_up",
+      "anchor_call": 42,
+      "anchor_trajectory": 35,
+      "anchor_env_step": 285,
+      "action_usage_at_decision": 0.95,
+      "turn_usage_at_decision": 0.42,
+      "terminal_call": 42,
+      "terminal_env_step": 285,
+      "metrics": {
+        "abandon_near_action": 1,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C42明确说too few environment steps；放弃前285/300=95%，计靠近action一次。",
+      "candidates": [
+        {
+          "call": 42,
+          "trajectory": 35,
+          "env_step": 285,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use a correctly centred upper-rim grasp while the coin is upright, clear the idle arm early, and plan a right-arm handoff before crossing to the bank. The unsuccessful grasp corrections and wrist rotations consumed the insertion and return budget.",
+            "reason": "The coin was lifted, but the left arm cannot reach the slot in the current grasp, and too few environment steps remain for a handoff and return home."
+          },
+          "frame": 319
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 38,
+          "trajectory": 34,
+          "env_step": 265,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The approach was obstructed by the idle right arm and stopped short. I will retract that arm to clear the insertion path.",
+            "targets": {
+              "right_y": -0.34
+            }
+          },
+          "frame": 298
+        },
+        {
+          "call": 39,
+          "trajectory": 34,
+          "env_step": 265,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The backward retraction was refused. I will move the idle hand outward to clear the working arm instead.",
+            "targets": {
+              "right_x": 0.45,
+              "right_z": 0.95
+            }
+          },
+          "frame": 298
+        },
+        {
+          "call": 40,
+          "trajectory": 35,
+          "env_step": 285,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The idle arm is clear. I will align the upright coin above the estimated slot position before lowering it.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": 0.3,
+              "left_y": -0.13,
+              "left_yaw_deg": 0,
+              "left_z": 0.9
+            }
+          },
+          "frame": 319
+        },
+        {
+          "call": 41,
+          "trajectory": 35,
+          "env_step": 285,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The centred target was unreachable. I will try a closer approach above the near end of the slot without changing the wrist orientation.",
+            "targets": {
+              "left_x": 0.28,
+              "left_y": -0.15,
+              "left_z": 0.89
+            }
+          },
+          "frame": 319
+        },
+        {
+          "call": 42,
+          "trajectory": 35,
+          "env_step": 285,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use a correctly centred upper-rim grasp while the coin is upright, clear the idle arm early, and plan a right-arm handoff before crossing to the bank. The unsuccessful grasp corrections and wrist rotations consumed the insertion and return budget.",
+            "reason": "The coin was lifted, but the left arm cannot reach the slot in the current grasp, and too few environment steps remain for a handoff and return home."
+          },
+          "frame": 319
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "fasten_screws",
+      "run_id": "l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1",
+      "source_sha256": "5a22f2fc18b44bbac2871ba40b205d5f88e7e7d9178df2a2b1f0571cb6cd59c0",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "6563340e70157a7f86892ba5cfa9fb812673deeba0201503bb63d1e53c6b5035",
+      "action_limit": 1900,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 1067,
+      "final_turns": 97,
+      "trajectory_stages": 95,
+      "model_calls_reviewed": 97,
+      "action_feedback_records": 97,
+      "termination": "model_give_up",
+      "anchor_call": 97,
+      "anchor_trajectory": 95,
+      "anchor_env_step": 1066,
+      "action_usage_at_decision": 0.5610526315789474,
+      "turn_usage_at_decision": 0.97,
+      "terminal_call": 97,
+      "terminal_env_step": 1066,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": null,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "unknown",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {
+        "abandon_near_turn": "C97的reason为无法验证/完成拧紧；hindsight称spent too many turns，不能确认是turn上限导致停止。靠近turn保留未知。"
+      },
+      "adjudication": "C97的reason为无法验证/完成拧紧；hindsight称spent too many turns，不能确认是turn上限导致停止。靠近turn保留未知。",
+      "candidates": [
+        {
+          "call": 97,
+          "trajectory": 95,
+          "env_step": 1066,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I spent too many turns alternating threading directions without establishing reliable axial advancement. A centered grasp at the nut's actual height and an early verified tightening direction were needed.",
+            "reason": "All three nuts are on their matching bolts, but I could not verify or achieve full tightening. Both arms are back at their starting poses with open grippers."
+          },
+          "frame": 1160
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 93,
+          "trajectory": 91,
+          "env_step": 1011,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish returning the right wrist to its initial orientation and remove the remaining left wrist yaw.",
+            "targets": {
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 1101
+        },
+        {
+          "call": 94,
+          "trajectory": 92,
+          "env_step": 1027,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The right arm is home. I will return the left grasp point to its initial position while keeping clear of the matched pairs.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 1118
+        },
+        {
+          "call": 95,
+          "trajectory": 93,
+          "env_step": 1035,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The left grasp point is home. I will restore its initial wrist orientation in two controlled rotations.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 1127
+        },
+        {
+          "call": 96,
+          "trajectory": 94,
+          "env_step": 1050,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will complete the left wrist's return to its starting pose, leaving both grippers open and the matched pairs undisturbed.",
+            "targets": {
+              "left_pitch_deg": 90
+            }
+          },
+          "frame": 1143
+        },
+        {
+          "call": 97,
+          "trajectory": 95,
+          "env_step": 1066,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I spent too many turns alternating threading directions without establishing reliable axial advancement. A centered grasp at the nut's actual height and an early verified tightening direction were needed.",
+            "reason": "All three nuts are on their matching bolts, but I could not verify or achieve full tightening. Both arms are back at their starting poses with open grippers."
+          },
+          "frame": 1160
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "fill_egg_holder",
+      "run_id": "l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1",
+      "source_sha256": "03d2457652db91179af4b1b2305eea009243fa311b10e9840357849ef7dd9be4",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "58b9197a84925feb9785084d94f2b2f8d46b82608635444aec72b21c69ec8961",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 695,
+      "final_turns": 88,
+      "trajectory_stages": 83,
+      "model_calls_reviewed": 88,
+      "action_feedback_records": 88,
+      "termination": "model_give_up",
+      "anchor_call": 81,
+      "anchor_trajectory": 77,
+      "anchor_env_step": 621,
+      "action_usage_at_decision": 0.8871428571428571,
+      "turn_usage_at_decision": 0.81,
+      "terminal_call": 88,
+      "terminal_env_step": 694,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C81/T77/E621明确因预算不足停止继续装蛋并放回桌面，后续只释放、回位，C88为同一终止的give_up。首个决定时621/700=88.714%、81/100=81%，两个near均不满足；不得按回位后的694步另计一次。",
+      "candidates": [
+        {
+          "call": 81,
+          "trajectory": 77,
+          "env_step": 621,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The remaining budget is insufficient to reopen, fill, and reclose the holder. Lower the recovered egg back to a stable tabletop position.",
+            "targets": {
+              "right_z": 0.805
+            }
+          },
+          "frame": 697
+        },
+        {
+          "call": 88,
+          "trajectory": 83,
+          "env_step": 694,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper, centered egg grasps and shorter transfers to prevent slipping. Keep the wrist clear of the open lid, and reserve more steps for lid manipulation and returning home.",
+            "reason": "Insufficient steps remain to finish. Two eggs are in the closed holder; one remains in the basket and one rests beside the holder."
+          },
+          "frame": 776
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 84,
+          "trajectory": 80,
+          "env_step": 634,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Clear the right hand from the objects and return the left arm toward its starting pose.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_z": 0.95
+            }
+          },
+          "frame": 713
+        },
+        {
+          "call": 85,
+          "trajectory": 81,
+          "env_step": 654,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return the empty right hand toward its starting position while unwinding its orientation.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 45
+            }
+          },
+          "frame": 734
+        },
+        {
+          "call": 86,
+          "trajectory": 82,
+          "env_step": 674,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish returning the right arm to its starting pose, leaving the objects stable.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 755
+        },
+        {
+          "call": 87,
+          "trajectory": 82,
+          "env_step": 674,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Unwind the wrist separately because the combined return pose was refused.",
+            "targets": {
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 755
+        },
+        {
+          "call": 88,
+          "trajectory": 83,
+          "env_step": 694,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper, centered egg grasps and shorter transfers to prevent slipping. Keep the wrist clear of the open lid, and reserve more steps for lid manipulation and returning home.",
+            "reason": "Insufficient steps remain to finish. Two eggs are in the closed holder; one remains in the basket and one rests beside the holder."
+          },
+          "frame": 776
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "fill_pen_holder",
+      "run_id": "l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1",
+      "source_sha256": "f670dc26d92d3ca66a3561df70d4bb27c51d242a2c929aaaadc30ccdebc39c4b",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "8ab55565708200c62c965efc013fbb06540c547f757da0d51844ada289b93eed",
+      "action_limit": 1100,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 971,
+      "final_turns": 98,
+      "trajectory_stages": 81,
+      "model_calls_reviewed": 98,
+      "action_feedback_records": 98,
+      "termination": "model_give_up",
+      "anchor_call": 98,
+      "anchor_trajectory": 81,
+      "anchor_env_step": 970,
+      "action_usage_at_decision": 0.8818181818181818,
+      "turn_usage_at_decision": 0.98,
+      "terminal_call": 98,
+      "terminal_env_step": 970,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未将停止归因于预算；末段说明不可达、插入失败和安全放置。C98靠近turn本身不构成预算放弃。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 94,
+          "trajectory": 78,
+          "env_step": 912,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Withdraw the right hand from the supported holder and return it toward its initial pose.",
+            "targets": {
+              "right_x": 0.3,
+              "right_y": -0.2,
+              "right_z": 0.92
+            }
+          },
+          "frame": 989
+        },
+        {
+          "call": 95,
+          "trajectory": 79,
+          "env_step": 932,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Use a shorter intermediate return after the previous plan took an indirect prefix.",
+            "targets": {
+              "right_x": 0.15,
+              "right_y": -0.2,
+              "right_z": 0.92
+            }
+          },
+          "frame": 1010
+        },
+        {
+          "call": 96,
+          "trajectory": 80,
+          "env_step": 952,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Continue returning the right hand home and begin restoring the empty left wrist toward its starting orientation.",
+            "targets": {
+              "left_pitch_deg": 0,
+              "right_x": 0.3,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 1031
+        },
+        {
+          "call": 97,
+          "trajectory": 81,
+          "env_step": 970,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Move the empty left hand back from the table objects while restoring its homeward orientation in an intermediate segment.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_y": -0.15,
+              "left_yaw_deg": 45,
+              "left_z": 0.9
+            }
+          },
+          "frame": 1050
+        },
+        {
+          "call": 98,
+          "trajectory": 81,
+          "env_step": 970,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The white pen was released behind the holder, and low lateral approaches displaced the cyan pen. I should have aligned insertions with the supporting grasp point, used lower sidewall grasps, and preserved a reachable arm configuration before extended reaches.",
+            "reason": "I could not complete all four insertions. The holder is upright on the table with the purple pen inside; the other three pens remain outside."
+          },
+          "frame": 1050
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "fold_clothes",
+      "run_id": "l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1",
+      "source_sha256": "d927ea3df0d6540de65671c9ed4dc0a4f7fd93740873d7736d0900d67f4e85f7",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "da4fdff90da10554ceb48cba6ac54ecb173e83c1bb7e516db41ba5324f8b8c14",
+      "action_limit": 500,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 410,
+      "final_turns": 52,
+      "trajectory_stages": 51,
+      "model_calls_reviewed": 52,
+      "action_feedback_records": 52,
+      "termination": "model_give_up",
+      "anchor_call": 52,
+      "anchor_trajectory": 51,
+      "anchor_env_step": 409,
+      "action_usage_at_decision": 0.818,
+      "turn_usage_at_decision": 0.52,
+      "terminal_call": 52,
+      "terminal_env_step": 409,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志无明确预算放弃因果；give_up记录具体操作失败/无法恢复，且未发现符合四项定义的预算放弃事件。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 48,
+          "trajectory": 47,
+          "env_step": 359,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The adjusted fold has been released. I am lifting clear before returning the left arm home.",
+            "targets": {
+              "left_z": 0.85
+            }
+          },
+          "frame": 405
+        },
+        {
+          "call": 49,
+          "trajectory": 48,
+          "env_step": 364,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The garment remains folded on the table. I am returning the left hand to its starting position.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 411
+        },
+        {
+          "call": 50,
+          "trajectory": 49,
+          "env_step": 378,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The left hand has reached home. I am restoring its starting orientation while leaving the folded garment untouched.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 426
+        },
+        {
+          "call": 51,
+          "trajectory": 50,
+          "env_step": 393,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I am completing the left arm's return to its original pose; the right arm is already home.",
+            "targets": {
+              "left_pitch_deg": 90
+            }
+          },
+          "frame": 442
+        },
+        {
+          "call": 52,
+          "trajectory": 51,
+          "env_step": 409,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I should have grasped the exact cuff and hem endpoints and allowed each released fold to settle before the next placement. Pinching inward from the edges left loose fabric that shifted during the final fold.",
+            "reason": "The garment is folded but remains bunched and uneven; I could not achieve a reliably neat, aligned fold. Both arms are back at their starting poses."
+          },
+          "frame": 459
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "general_pickup",
+      "run_id": "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1",
+      "source_sha256": "a1f3917401f5094e485fff184778819ce14626178dad1cc94cfe51e4e2902c2f",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_v1_general_pickup_s0_layout0_20261002_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "814c2087e7491105bb4062981c2f731b02a1e2573fc6e9b89c28bb6ff2864773",
+      "action_limit": 200,
+      "turn_limit": 100,
+      "per_call_action_limit": null,
+      "final_actions": 88,
+      "final_turns": 15,
+      "trajectory_stages": 12,
+      "model_calls_reviewed": 15,
+      "action_feedback_records": 15,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 83,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 11,
+          "trajectory": 8,
+          "env_step": 73,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The grasp point is still slightly high for the flat scissors. I will lower another six millimetres.",
+            "targets": {
+              "right_z": 0.777
+            }
+          },
+          "frame": 80
+        },
+        {
+          "call": 12,
+          "trajectory": 9,
+          "env_step": 74,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish the final few millimetres of descent and close around the mint green neck.",
+            "targets": {
+              "right_gripper": 0,
+              "right_z": 0.773
+            }
+          },
+          "frame": 82
+        },
+        {
+          "call": 13,
+          "trajectory": 10,
+          "env_step": 81,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The jaws have closed against the scissors' neck rather than fully shut. I will make a small test lift to confirm the grip.",
+            "targets": {
+              "right_z": 0.779
+            }
+          },
+          "frame": 90
+        },
+        {
+          "call": 14,
+          "trajectory": 11,
+          "env_step": 82,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The scissors stayed fixed between the jaws during the test lift. I will lift a few more millimetres to clear the table.",
+            "targets": {
+              "right_z": 0.785
+            }
+          },
+          "frame": 92
+        },
+        {
+          "call": 15,
+          "trajectory": 12,
+          "env_step": 83,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The scissors are securely held and clear of the table. I will raise them beyond 10 cm while drawing slightly back to stay within reach.",
+            "targets": {
+              "right_y": -0.05,
+              "right_z": 0.89
+            }
+          },
+          "frame": 94
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "hang_mugs",
+      "run_id": "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1",
+      "source_sha256": "946eaa57fca7b65bd57783eedbe1f836ccfe7a24394dc892003576c642d21fec",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "00716fe16c60d58a0084cc6331c0bdc4ff07f4f43dda17a8e556e9c99ec3973e",
+      "action_limit": 800,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 771,
+      "final_turns": 90,
+      "trajectory_stages": 83,
+      "model_calls_reviewed": 90,
+      "action_feedback_records": 90,
+      "termination": "model_give_up",
+      "anchor_call": 87,
+      "anchor_trajectory": 80,
+      "anchor_env_step": 731,
+      "action_usage_at_decision": 0.91375,
+      "turn_usage_at_decision": 0.87,
+      "terminal_call": 90,
+      "terminal_env_step": 770,
+      "metrics": {
+        "abandon_near_action": 1,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C87/E731已保留motion budget回位，C90明确剩余motion budget无法完成另两只。两锚点控制步使用率均≥90%，合并计靠近action一次；不因C90恰到90轮改判turn原因。",
+      "candidates": [
+        {
+          "call": 87,
+          "trajectory": 80,
+          "env_step": 731,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The red mug is visibly hanging by its handle with the jaws open. I will withdraw without disturbing it and preserve enough motion budget to return the arms.",
+            "targets": {
+              "left_x": -0.25,
+              "left_y": -0.14
+            }
+          },
+          "frame": 810
+        },
+        {
+          "call": 90,
+          "trajectory": 83,
+          "env_step": 770,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper body grasps that leave handles unobstructed. Align each handle opening with the peg axis using both wrist views before insertion; shallow handle grasps and misaligned approaches consumed most of the budget.",
+            "reason": "One mug is hung and both arms are home, but the remaining motion budget is insufficient to hang the other two."
+          },
+          "frame": 852
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 86,
+          "trajectory": 79,
+          "env_step": 728,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will release the mug at the aligned peg and inspect whether its handle supports it.",
+            "targets": {
+              "left_gripper": 1
+            }
+          },
+          "frame": 806
+        },
+        {
+          "call": 87,
+          "trajectory": 80,
+          "env_step": 731,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The red mug is visibly hanging by its handle with the jaws open. I will withdraw without disturbing it and preserve enough motion budget to return the arms.",
+            "targets": {
+              "left_x": -0.25,
+              "left_y": -0.14
+            }
+          },
+          "frame": 810
+        },
+        {
+          "call": 88,
+          "trajectory": 81,
+          "env_step": 742,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The red mug remains securely hung. I will return both empty arms toward their starting poses without disturbing the rack.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 822
+        },
+        {
+          "call": 89,
+          "trajectory": 82,
+          "env_step": 762,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both arms are close to their starting poses. I will finish returning them while leaving the successfully hung red mug undisturbed.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 843
+        },
+        {
+          "call": 90,
+          "trajectory": 83,
+          "env_step": 770,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper body grasps that leave handles unobstructed. Align each handle opening with the peg axis using both wrist views before insertion; shallow handle grasps and misaligned approaches consumed most of the budget.",
+            "reason": "One mug is hung and both arms are home, but the remaining motion budget is insufficient to hang the other two."
+          },
+          "frame": 852
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "imitate_sorting_sequence",
+      "run_id": "l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1",
+      "source_sha256": "7cb8c4fc2fb4070061fcdf517968306ce07ab5e9e476519e0d29f07c22a6189f",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "ff0f5bb552f41fc12ce16f5ca73ebc6d1abeee779ccceb55a244e5da675d8d0c",
+      "action_limit": 1600,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 1390,
+      "final_turns": 76,
+      "trajectory_stages": 98,
+      "model_calls_reviewed": 76,
+      "action_feedback_records": 100,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 1380,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 72,
+          "trajectory": 94,
+          "env_step": 1318,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The jaws have closed against the car's body. I will lift vertically and verify the hold before carrying it to the basket.",
+            "targets": {
+              "left_z": 0.94
+            }
+          },
+          "frame": 1411
+        },
+        {
+          "call": 73,
+          "trajectory": 95,
+          "env_step": 1330,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The gold car is securely lifted. I will carry it over the remaining space along the left side of the basket for the fifth placement.",
+            "targets": {
+              "left_x": -0.445,
+              "left_y": -0.095
+            }
+          },
+          "frame": 1424
+        },
+        {
+          "call": 74,
+          "trajectory": 96,
+          "env_step": 1345,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The car slipped free during transport but landed inside the basket as the fifth object. All five are now inside in order; I will open the hand and return toward the starting position.",
+            "targets": {
+              "left_gripper": 1,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.94
+            }
+          },
+          "frame": 1440
+        },
+        {
+          "call": 75,
+          "trajectory": 97,
+          "env_step": 1365,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All five objects remain inside the policy basket and the demonstration basket is untouched. I will restore the left hand's starting orientation in two stages.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 1461
+        },
+        {
+          "call": 76,
+          "trajectory": 98,
+          "env_step": 1380,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both grippers are open and all five objects remain in the basket in the copied order. I will finish restoring the left arm to its original pose; the right arm is already home.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 1477
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "insert_key",
+      "run_id": "l3_persistent_cap20_insert_key_s0_layout0_20261006_v1",
+      "source_sha256": "dbd4e9db8bfd25ed6900bf72ddeeff5daeb1d07efcbf81e8fbd03c2d932e2bec",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_insert_key_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "0d56203ec31165d84696a3412bb7785b9e592f0e9c7faa038d62dd6e00699fcc",
+      "action_limit": 300,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 270,
+      "final_turns": 28,
+      "trajectory_stages": 27,
+      "model_calls_reviewed": 28,
+      "action_feedback_records": 28,
+      "termination": "model_give_up",
+      "anchor_call": 28,
+      "anchor_trajectory": 27,
+      "anchor_env_step": 269,
+      "action_usage_at_decision": 0.8966666666666666,
+      "turn_usage_at_decision": 0.28,
+      "terminal_call": 28,
+      "terminal_env_step": 269,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C28明确environment steps，但决定时269/300=89.667%；give_up的1个控制步执行后才到270/300。按决定时点不计靠近action。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 24,
+          "trajectory": 23,
+          "env_step": 190,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The key is securely lifted. Bring the right hand toward its exposed shaft for the handover.",
+            "targets": {
+              "right_x": 0.08,
+              "right_y": -0.175,
+              "right_z": 0.9
+            }
+          },
+          "frame": 212
+        },
+        {
+          "call": 25,
+          "trajectory": 24,
+          "env_step": 210,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Move the receiving hand closer while beginning a downward approach.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_x": 0.02,
+              "right_y": -0.17,
+              "right_z": 0.88
+            }
+          },
+          "frame": 233
+        },
+        {
+          "call": 26,
+          "trajectory": 25,
+          "env_step": 230,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The receiving wrist is too close to the left hand. Raise and orient downward before approaching the exposed key.",
+            "targets": {
+              "right_pitch_deg": 0,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0,
+              "right_z": 0.93
+            }
+          },
+          "frame": 254
+        },
+        {
+          "call": 27,
+          "trajectory": 26,
+          "env_step": 250,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Approach the exposed shaft from above with rotated jaws to avoid the bow-holding fingers.",
+            "targets": {
+              "right_pitch_deg": 0,
+              "right_roll_deg": 0,
+              "right_x": -0.06,
+              "right_y": -0.146,
+              "right_yaw_deg": 45,
+              "right_z": 0.87
+            }
+          },
+          "frame": 275
+        },
+        {
+          "call": 28,
+          "trajectory": 27,
+          "env_step": 269,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The successful bow grasp required a farther rearward alignment. The receiving arm should have been oriented and positioned with greater separation before approaching the held key; the close approach displaced the holding arm and dropped the key.",
+            "reason": "The key was lifted, but slipped during the handover approach. Too few environment steps remain to safely regrasp, insert, turn, and return both arms home."
+          },
+          "frame": 295
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "insert_tubes",
+      "run_id": "l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1",
+      "source_sha256": "af6c92596e78e6d112dc8e128683a8c68564b8c7423b1c41d0e66c79a1b2c3e8",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "862fb38d2e9e1c5531c60aef1c31814e3dd14e855013e09be7559348c4e819dd",
+      "action_limit": 500,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 417,
+      "final_turns": 51,
+      "trajectory_stages": 40,
+      "model_calls_reviewed": 51,
+      "action_feedback_records": 51,
+      "termination": "model_give_up",
+      "anchor_call": 51,
+      "anchor_trajectory": 40,
+      "anchor_env_step": 416,
+      "action_usage_at_decision": 0.832,
+      "turn_usage_at_decision": 0.51,
+      "terminal_call": 51,
+      "terminal_env_step": 416,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C51/E416因剩余预算下继续尝试会增加碰撞风险而放弃；416/500=83.2%、51/100=51%，均未到90%。",
+      "candidates": [
+        {
+          "call": 51,
+          "trajectory": 40,
+          "env_step": 416,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I should have verified the tube axis from an unobstructed side view before rotating, and used a separated handoff approach rather than moving one wrist through the other arm's workspace.",
+            "reason": "I could not establish a reliable upright insertion grasp, and the attempted handoff caused arm contact. Continuing with the remaining budget would risk further collisions."
+          },
+          "frame": 455
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 47,
+          "trajectory": 36,
+          "env_step": 350,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Continue the corrective rotation so the tapered end hangs beneath the cap.",
+            "targets": {
+              "left_pitch_deg": -25,
+              "left_z": 0.86
+            }
+          },
+          "frame": 385
+        },
+        {
+          "call": 48,
+          "trajectory": 37,
+          "env_step": 358,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Bring the right gripper to the upright tube's lower body for a handoff, allowing a more reachable horizontal-wrist insertion grasp.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": -0.145,
+              "right_y": -0.18,
+              "right_yaw_deg": 0,
+              "right_z": 0.835
+            }
+          },
+          "frame": 394
+        },
+        {
+          "call": 49,
+          "trajectory": 38,
+          "env_step": 378,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Continue the handoff approach; the previous motion ended well short of the tube.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": -0.145,
+              "right_y": -0.18,
+              "right_yaw_deg": 0,
+              "right_z": 0.835
+            }
+          },
+          "frame": 415
+        },
+        {
+          "call": 50,
+          "trajectory": 39,
+          "env_step": 398,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The arms contacted during the handoff approach. Retract the right hand immediately to separate them before any further manipulation.",
+            "targets": {
+              "right_gripper": 1,
+              "right_y": -0.3,
+              "right_z": 0.96
+            }
+          },
+          "frame": 436
+        },
+        {
+          "call": 51,
+          "trajectory": 40,
+          "env_step": 416,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I should have verified the tube axis from an unobstructed side view before rotating, and used a separated handoff approach rather than moving one wrist through the other arm's workspace.",
+            "reason": "I could not establish a reliable upright insertion grasp, and the attempted handoff caused arm contact. Continuing with the remaining budget would risk further collisions."
+          },
+          "frame": 455
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "make_kong",
+      "run_id": "l3_persistent_cap20_make_kong_s0_layout0_20261006_v1",
+      "source_sha256": "86e44acd54ec6d2846f0a74f4fe9d43ff74d36e7621d241ba34b2cf60f03387e",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_make_kong_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "98cf0cc3114e6df67fc4fd270b89de3ae8a4a40ab7a41e54535adc8659859abe",
+      "action_limit": 600,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 449,
+      "final_turns": 100,
+      "trajectory_stages": 92,
+      "model_calls_reviewed": 100,
+      "action_feedback_records": 101,
+      "termination": "system_turn_limit",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 448,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整模型调用末段仍在执行/等待；其后decision_index=null的give_up理由为LLM call budget exhausted，属于系统注入，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 96,
+          "trajectory": 90,
+          "env_step": 423,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The replacement tile has been released and the matching trio remains flat. I lift away and begin returning the left arm home.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": 0.05,
+              "left_y": -0.23,
+              "left_yaw_deg": 0,
+              "left_z": 0.95
+            }
+          },
+          "frame": 512
+        },
+        {
+          "call": 97,
+          "trajectory": 90,
+          "env_step": 423,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The first return target was refused. I use a shorter reachable retreat across free space, away from the placed tile.",
+            "targets": {
+              "left_x": 0.05,
+              "left_y": -0.16,
+              "left_z": 0.92
+            }
+          },
+          "frame": 512
+        },
+        {
+          "call": 98,
+          "trajectory": 90,
+          "env_step": 423,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I reduce the retreat to a small inward lift to leave the extended configuration without disturbing the tile.",
+            "targets": {
+              "left_x": 0.2,
+              "left_z": 0.86
+            }
+          },
+          "frame": 512
+        },
+        {
+          "call": 99,
+          "trajectory": 90,
+          "env_step": 423,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The retreat planner is refusing the current tilted configuration. I first restore the wrist to the nominal horizontal orientation.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 512
+        },
+        {
+          "call": 100,
+          "trajectory": 91,
+          "env_step": 428,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The wrist is aligned again. I retreat inward and upward, leaving the released tile undisturbed.",
+            "targets": {
+              "left_x": 0.02,
+              "left_z": 0.93
+            }
+          },
+          "frame": 518
+        }
+      ],
+      "automatic_give_up": [
+        {
+          "acknowledged": true,
+          "action": "{\"arguments\":{\"reason\":\"LLM call budget exhausted\"},\"planned_waypoints\":1,\"tool\":\"give_up\"}",
+          "decision_index": null,
+          "feedback": "{\"cameras\":{\"head\":{\"end\":541,\"start\":540},\"left_wrist\":{\"end\":541,\"start\":540},\"right_wrist\":{\"end\":541,\"start\":540}},\"env_step_end\":449,\"env_step_start\":448,\"episode_end_mid_chunk\":false,\"executed_waypoints\":1,\"planned_waypoints\":1,\"stopped_early\":false}",
+          "native_control_segments": [
+            1
+          ],
+          "native_controls": 1,
+          "tool": "give_up"
+        }
+      ]
+    },
+    {
+      "task": "make_toast",
+      "run_id": "l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1",
+      "source_sha256": "4b6eade1ed9ddc3632d3797cd71f897a5ab689e9bf509bae09af14cbe8b6dcf4",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "ab52f7c2edaae92a6c524b55d07b140d735601c555eef53a19d0dd89337e65f7",
+      "action_limit": 1400,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 741,
+      "final_turns": 92,
+      "trajectory_stages": 80,
+      "model_calls_reviewed": 92,
+      "action_feedback_records": 92,
+      "termination": "model_give_up",
+      "anchor_call": 92,
+      "anchor_trajectory": 80,
+      "anchor_env_step": 740,
+      "action_usage_at_decision": 0.5285714285714286,
+      "turn_usage_at_decision": 0.92,
+      "terminal_call": 92,
+      "terminal_env_step": 740,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C92说明掉落后多次恢复失败，无明确预算因果；仅接近100轮不计预算放弃。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 88,
+          "trajectory": 77,
+          "env_step": 680,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return the left arm to its starting pose and unwind the right wrist in a separate, moderate rotation.",
+            "targets": {
+              "left_gripper": 1,
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 50
+            }
+          },
+          "frame": 756
+        },
+        {
+          "call": 89,
+          "trajectory": 78,
+          "env_step": 700,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish returning both empty arms to their initial poses, leaving the inserted slice undisturbed.",
+            "targets": {
+              "left_gripper": 1,
+              "right_gripper": 1,
+              "right_pitch_deg": 90,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 777
+        },
+        {
+          "call": 90,
+          "trajectory": 78,
+          "env_step": 700,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Unwind the remaining right-wrist yaw separately after the combined return motion was refused.",
+            "targets": {
+              "left_gripper": 1,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 777
+        },
+        {
+          "call": 91,
+          "trajectory": 79,
+          "env_step": 720,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Complete the right arm's return from its measured intermediate pose.",
+            "targets": {
+              "left_gripper": 1,
+              "right_gripper": 1,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 798
+        },
+        {
+          "call": 92,
+          "trajectory": 80,
+          "env_step": 740,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The second slice needed a deeper, better-aligned grasp and an earlier stability check. Recovery required a reachable side pinch across its thickness rather than repeated downward grasps wider than the jaw opening.",
+            "reason": "One slice is inserted, but the second slipped onto the table and repeated recovery attempts failed. The lever remains unpressed; both arms are back near their starting poses."
+          },
+          "frame": 819
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "match_and_pick_from_conveyor",
+      "run_id": "l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1",
+      "source_sha256": "e9c8f16cffa3e9037f0717f47efef09ebe17d6e260d57ac1a3931a89b0718403",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "a0be6719b36857d699b3aac07593e91d33a3151e9269c292fbb5ca027ac23dbc",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 604,
+      "final_turns": 64,
+      "trajectory_stages": 56,
+      "model_calls_reviewed": 64,
+      "action_feedback_records": 64,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 600,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 60,
+          "trajectory": 54,
+          "env_step": 560,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The toy remains securely held after the staged lift. I will bring it inward toward the arm base while raising it above the ten-centimetre threshold.",
+            "targets": {
+              "right_x": 0.46,
+              "right_y": -0.1,
+              "right_z": 0.89
+            }
+          },
+          "frame": 613
+        },
+        {
+          "call": 61,
+          "trajectory": 55,
+          "env_step": 580,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The previous motion executed only its first segment, but the toy stayed secure. I will finish the required lift with a short vertical move from the measured pose.",
+            "targets": {
+              "right_z": 0.883
+            }
+          },
+          "frame": 634
+        },
+        {
+          "call": 62,
+          "trajectory": 55,
+          "env_step": 580,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "A vertical lift is outside the current reach configuration. I will bring the held toy closer to the base while lifting, allowing the planner to reposition the arm.",
+            "targets": {
+              "right_x": 0.4,
+              "right_y": -0.12,
+              "right_z": 0.89
+            }
+          },
+          "frame": 634
+        },
+        {
+          "call": 63,
+          "trajectory": 55,
+          "env_step": 580,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will change the wrist orientation in free space while maintaining the secure grasp, to make a higher and more retracted pose reachable.",
+            "targets": {
+              "right_pitch_deg": 40
+            }
+          },
+          "frame": 634
+        },
+        {
+          "call": 64,
+          "trajectory": 56,
+          "env_step": 600,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The toy remains secure after tilting the wrist. I will try the higher lift from this new configuration.",
+            "targets": {
+              "right_z": 0.915
+            }
+          },
+          "frame": 655
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "organize_table",
+      "run_id": "l3_persistent_cap20_organize_table_s0_layout0_20261006_v1",
+      "source_sha256": "2f7b27d1c927384d40dd43a931c10bd91b818f7af197f952f51671184b6becca",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_organize_table_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "3b335ff3c8a23db9e2b08bd8e414dc91351123fb33c15370841aad011acf6056",
+      "action_limit": 1000,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 897,
+      "final_turns": 95,
+      "trajectory_stages": 88,
+      "model_calls_reviewed": 95,
+      "action_feedback_records": 95,
+      "termination": "model_give_up",
+      "anchor_call": 95,
+      "anchor_trajectory": 88,
+      "anchor_env_step": 896,
+      "action_usage_at_decision": 0.896,
+      "turn_usage_at_decision": 0.95,
+      "terminal_call": 95,
+      "terminal_env_step": 896,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 1,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C95明确因call/turn预算不足而give_up，95/100轮，计靠近turn一次。",
+      "candidates": [
+        {
+          "call": 95,
+          "trajectory": 88,
+          "env_step": 896,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The mouse reached the pad but is upside down; the clock reached the drawer top. The keyboard remains offset from its frame, and repeated figurine grasps slipped. More accurate sidewall grasps and earlier orientation checks were needed.",
+            "reason": "Unable to complete the remaining placements and drawer loading within the remaining call budget. Both arms are back at their starting poses."
+          },
+          "frame": 983
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 91,
+          "trajectory": 85,
+          "env_step": 852,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Restore the right arm's starting orientation and begin returning the left wrist in a staged rotation.",
+            "targets": {
+              "left_gripper": 1,
+              "left_pitch_deg": 45,
+              "left_yaw_deg": 45,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 936
+        },
+        {
+          "call": 92,
+          "trajectory": 86,
+          "env_step": 866,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Complete the left wrist's return to its starting orientation, leaving both grippers open.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 951
+        },
+        {
+          "call": 93,
+          "trajectory": 86,
+          "env_step": 866,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Split the refused return rotation into a smaller turn while holding the home position.",
+            "targets": {
+              "left_pitch_deg": 65,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 951
+        },
+        {
+          "call": 94,
+          "trajectory": 87,
+          "env_step": 886,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish restoring the left arm's home orientation after the smaller return rotation landed.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 972
+        },
+        {
+          "call": 95,
+          "trajectory": 88,
+          "env_step": 896,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The mouse reached the pad but is upside down; the clock reached the drawer top. The keyboard remains offset from its frame, and repeated figurine grasps slipped. More accurate sidewall grasps and earlier orientation checks were needed.",
+            "reason": "Unable to complete the remaining placements and drawer loading within the remaining call budget. Both arms are back at their starting poses."
+          },
+          "frame": 983
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "pack_objects_into_box",
+      "run_id": "l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1",
+      "source_sha256": "a36c93e65981f4e428f67614c7a6cb61c09baa2fec44ddfb54058118a0ff1fab",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "d5eba31df81b9f35d1025a6a8bfdaf11dfb784034abe3403267a2de5e77147f6",
+      "action_limit": 1300,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 1066,
+      "final_turns": 95,
+      "trajectory_stages": 91,
+      "model_calls_reviewed": 95,
+      "action_feedback_records": 95,
+      "termination": "model_give_up",
+      "anchor_call": 95,
+      "anchor_trajectory": 91,
+      "anchor_env_step": 1065,
+      "action_usage_at_decision": 0.8192307692307692,
+      "turn_usage_at_decision": 0.95,
+      "terminal_call": 95,
+      "terminal_env_step": 1065,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 1,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C95明确因call/turn预算不足而give_up，95/100轮，计靠近turn一次。",
+      "candidates": [
+        {
+          "call": 95,
+          "trajectory": 91,
+          "env_step": 1065,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Grasp objects nearer their centers to prevent rotation, clear the tall flaps before translating, and keep the box fixed while placing each object.",
+            "reason": "All four objects are in the box and both arms are home, but I cannot complete the remaining facing-direction corrections within the turn budget."
+          },
+          "frame": 1155
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 91,
+          "trajectory": 87,
+          "env_step": 1000,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The first orientation correction nearly landed. I will continue restoring the left wrist and finish returning the right wrist to its starting orientation.",
+            "targets": {
+              "left_pitch_deg": 60,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 30,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 1086
+        },
+        {
+          "call": 92,
+          "trajectory": 88,
+          "env_step": 1020,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The direct return generated a long path and barely advanced. I will use intermediate wrist angles instead.",
+            "targets": {
+              "left_pitch_deg": 60,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 30,
+              "right_pitch_deg": 75,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 20
+            }
+          },
+          "frame": 1107
+        },
+        {
+          "call": 93,
+          "trajectory": 89,
+          "env_step": 1040,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will complete the return to the starting positions and bring both wrists close to their original horizontal orientation.",
+            "targets": {
+              "left_pitch_deg": 85,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 5,
+              "left_z": 0.9215,
+              "right_pitch_deg": 85,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 5,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 1128
+        },
+        {
+          "call": 94,
+          "trajectory": 90,
+          "env_step": 1058,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both arms are back at their starting positions with open grippers. I will finish the last five degrees of wrist alignment.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 90,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 1147
+        },
+        {
+          "call": 95,
+          "trajectory": 91,
+          "env_step": 1065,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Grasp objects nearer their centers to prevent rotation, clear the tall flaps before translating, and keep the box fixed while placing each object.",
+            "reason": "All four objects are in the box and both arms are home, but I cannot complete the remaining facing-direction corrections within the turn budget."
+          },
+          "frame": 1155
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "pick_from_conveyor_by_image",
+      "run_id": "l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1",
+      "source_sha256": "cc4250e6e3c1336d24f785f75498f5ad32e0d2e36c2b1c16a50013eb51d7e9a0",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "8853e5f8361f76e5186966c8ca912637cc38069c59b9a7e03d8457a8a272bc85",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 275,
+      "final_turns": 29,
+      "trajectory_stages": 23,
+      "model_calls_reviewed": 29,
+      "action_feedback_records": 29,
+      "termination": "model_give_up",
+      "anchor_call": 29,
+      "anchor_trajectory": 23,
+      "anchor_env_step": 274,
+      "action_usage_at_decision": 0.3914285714285714,
+      "turn_usage_at_decision": 0.29,
+      "terminal_call": 29,
+      "terminal_env_step": 274,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志无明确预算放弃因果；give_up记录具体操作失败/无法恢复，且未发现符合四项定义的预算放弃事件。",
+      "candidates": [
+        {
+          "call": 29,
+          "trajectory": 23,
+          "env_step": 274,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I identified the target dog correctly but spent too long pursuing the moving basket rim. An early handle grasp, smaller independent wrist rotations, and better compensation for conveyor motion during gripper closure would have improved the attempt.",
+            "reason": "The basket has moved out of view and beyond the reachable working area without a secure grasp, so I cannot complete the required lifted-basket placement."
+          },
+          "frame": 296
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 25,
+          "trajectory": 19,
+          "env_step": 224,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will lower the open jaws farther onto the basket's left wall rather than closing above its edge.",
+            "targets": {
+              "right_gripper": 1,
+              "right_x": 0.51,
+              "right_z": 0.84
+            }
+          },
+          "frame": 242
+        },
+        {
+          "call": 26,
+          "trajectory": 20,
+          "env_step": 239,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "At this lower height the rim is just right of the jaw center. I will track it and close around the wall.",
+            "targets": {
+              "right_gripper": 0,
+              "right_x": 0.55
+            }
+          },
+          "frame": 258
+        },
+        {
+          "call": 27,
+          "trajectory": 21,
+          "env_step": 248,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The wall is still outside the closed jaws. I will reopen above it before one final lower pinch.",
+            "targets": {
+              "right_gripper": 1,
+              "right_z": 0.9
+            }
+          },
+          "frame": 268
+        },
+        {
+          "call": 28,
+          "trajectory": 22,
+          "env_step": 259,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The basket is nearing the edge of reach. I will make a final intercept of its visible left rim with open jaws.",
+            "targets": {
+              "right_x": 0.68,
+              "right_y": 0.015,
+              "right_z": 0.86
+            }
+          },
+          "frame": 280
+        },
+        {
+          "call": 29,
+          "trajectory": 23,
+          "env_step": 274,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I identified the target dog correctly but spent too long pursuing the moving basket rim. An early handle grasp, smaller independent wrist rotations, and better compensation for conveyor motion during gripper closure would have improved the attempt.",
+            "reason": "The basket has moved out of view and beyond the reachable working area without a secure grasp, so I cannot complete the required lifted-basket placement."
+          },
+          "frame": 296
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "play_Xylophone",
+      "run_id": "l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1",
+      "source_sha256": "3d3be3fabe352f4297fd3d669c28cd487c59a9ab903b177e3964a011b10cdab9",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "5535d6b40cacaae4b2615ee756b4befd445d6a56600e5ba404045cf55a3cd654",
+      "action_limit": 500,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 495,
+      "final_turns": 100,
+      "trajectory_stages": 101,
+      "model_calls_reviewed": 100,
+      "action_feedback_records": 101,
+      "termination": "system_turn_limit",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 494,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整模型调用末段仍在执行/等待；其后decision_index=null的give_up理由为LLM call budget exhausted，属于系统注入，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 96,
+          "trajectory": 96,
+          "env_step": 454,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will lift the tip more than 25 millimetres after the purple key and advance to the final magenta key.",
+            "targets": {
+              "left_x": -0.047,
+              "left_z": 0.835
+            }
+          },
+          "frame": 549
+        },
+        {
+          "call": 97,
+          "trajectory": 97,
+          "env_step": 463,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I am lowering above the final magenta key to the short final approach height.",
+            "targets": {
+              "left_z": 0.799
+            }
+          },
+          "frame": 559
+        },
+        {
+          "call": 98,
+          "trajectory": 98,
+          "env_step": 468,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I am making the final four-millimetre downward tap on the rightmost magenta key.",
+            "targets": {
+              "left_z": 0.795
+            }
+          },
+          "frame": 565
+        },
+        {
+          "call": 99,
+          "trajectory": 99,
+          "env_step": 469,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will lift the mallet more than 25 millimetres after the final strike to complete the required rebound.",
+            "targets": {
+              "left_z": 0.835
+            }
+          },
+          "frame": 567
+        },
+        {
+          "call": 100,
+          "trajectory": 100,
+          "env_step": 474,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The final rebound is complete. I am withdrawing the held mallet from the keys and returning the left arm toward its home pose.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.23,
+              "left_y": -0.18,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 573
+        }
+      ],
+      "automatic_give_up": [
+        {
+          "acknowledged": true,
+          "action": "{\"arguments\":{\"reason\":\"LLM call budget exhausted\"},\"planned_waypoints\":1,\"tool\":\"give_up\"}",
+          "decision_index": null,
+          "feedback": "{\"cameras\":{\"head\":{\"end\":596,\"start\":595},\"left_wrist\":{\"end\":596,\"start\":595},\"right_wrist\":{\"end\":596,\"start\":595}},\"env_step_end\":495,\"env_step_start\":494,\"episode_end_mid_chunk\":false,\"executed_waypoints\":1,\"planned_waypoints\":1,\"stopped_early\":false}",
+          "native_control_segments": [
+            1
+          ],
+          "native_controls": 1,
+          "tool": "give_up"
+        }
+      ]
+    },
+    {
+      "task": "play_stacking_toy",
+      "run_id": "l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1",
+      "source_sha256": "bffc66f6e771ca337be96f7470202b16523c0f182742a185cde28be9c8360b1b",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "fc36c9accda3101ac6fcc121abf07737b2db3abb84121fb76d0277dedaa09c9b",
+      "action_limit": 1200,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 486,
+      "final_turns": 91,
+      "trajectory_stages": 89,
+      "model_calls_reviewed": 91,
+      "action_feedback_records": 91,
+      "termination": "model_give_up",
+      "anchor_call": 91,
+      "anchor_trajectory": 89,
+      "anchor_env_step": 485,
+      "action_usage_at_decision": 0.4041666666666667,
+      "turn_usage_at_decision": 0.91,
+      "terminal_call": 91,
+      "terminal_env_step": 485,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 1,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C91明确因call/turn预算不足而give_up，91/100轮，计靠近turn一次。",
+      "candidates": [
+        {
+          "call": 91,
+          "trajectory": 89,
+          "env_step": 485,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I spent too many calls on misaligned yellow-square grasps and premature releases. I should have grasped parallel sides at the piece's actual height, calibrated peg alignment earlier, and verified full seating before release.",
+            "reason": "I seated the orange disk and returned both arms home, but cannot complete the remaining nine pieces within the remaining call budget."
+          },
+          "frame": 573
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 87,
+          "trajectory": 85,
+          "env_step": 429,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The orange disk has settled with the peg visible through its hole. I will withdraw vertically to verify that it remains seated.",
+            "targets": {
+              "right_z": 0.9
+            }
+          },
+          "frame": 513
+        },
+        {
+          "call": 88,
+          "trajectory": 86,
+          "env_step": 438,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The orange disk remains seated on its peg. I will return the right hand to its starting position without disturbing it.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 523
+        },
+        {
+          "call": 89,
+          "trajectory": 87,
+          "env_step": 452,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both hands are at their starting positions. I will restore their starting orientations in two stages.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 538
+        },
+        {
+          "call": 90,
+          "trajectory": 88,
+          "env_step": 469,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish restoring both arms to their starting poses, leaving the seated orange disk undisturbed.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 556
+        },
+        {
+          "call": 91,
+          "trajectory": 89,
+          "env_step": 485,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "I spent too many calls on misaligned yellow-square grasps and premature releases. I should have grasped parallel sides at the piece's actual height, calibrated peg alignment earlier, and verified full seating before release.",
+            "reason": "I seated the orange disk and returned both arms home, but cannot complete the remaining nine pieces within the remaining call budget."
+          },
+          "frame": 573
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "play_tic_tac_toe",
+      "run_id": "l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1",
+      "source_sha256": "c6df382023851174d3839b0df9af8dbc3b23b36b9524a3656776ba1ee97b4475",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "7289be362119805810ac52719a786ac5713cca5f274c46da212c0311dc33d26d",
+      "action_limit": 1100,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 261,
+      "final_turns": 100,
+      "trajectory_stages": 99,
+      "model_calls_reviewed": 100,
+      "action_feedback_records": 101,
+      "termination": "system_turn_limit",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 260,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整模型调用末段仍在执行/等待；其后decision_index=null的give_up理由为LLM call budget exhausted，属于系统注入，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 96,
+          "trajectory": 94,
+          "env_step": 255,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The opponent has not yet withdrawn from its cross. I will remain stationary until its turn is complete.",
+            "targets": {
+              "right_y": -0.2022
+            }
+          },
+          "frame": 348
+        },
+        {
+          "call": 97,
+          "trajectory": 95,
+          "env_step": 256,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The opponent remains over its cross and has not finished its turn. I will keep both arms stationary.",
+            "targets": {
+              "right_y": -0.2022
+            }
+          },
+          "frame": 350
+        },
+        {
+          "call": 98,
+          "trajectory": 96,
+          "env_step": 257,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The opponent has not yet withdrawn from its cross. I will remain stationary until its turn is complete.",
+            "targets": {
+              "right_y": -0.2022
+            }
+          },
+          "frame": 352
+        },
+        {
+          "call": 99,
+          "trajectory": 97,
+          "env_step": 258,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The opponent remains over its cross and has not finished its turn. I will keep both arms stationary.",
+            "targets": {
+              "right_y": -0.2022
+            }
+          },
+          "frame": 354
+        },
+        {
+          "call": 100,
+          "trajectory": 98,
+          "env_step": 259,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The opponent is beginning to withdraw from its cross. I will remain stationary until it finishes moving.",
+            "targets": {
+              "right_y": -0.2022
+            }
+          },
+          "frame": 356
+        }
+      ],
+      "automatic_give_up": [
+        {
+          "acknowledged": true,
+          "action": "{\"arguments\":{\"reason\":\"LLM call budget exhausted\"},\"planned_waypoints\":1,\"tool\":\"give_up\"}",
+          "decision_index": null,
+          "feedback": "{\"cameras\":{\"head\":{\"end\":360,\"start\":359},\"left_wrist\":{\"end\":360,\"start\":359},\"right_wrist\":{\"end\":360,\"start\":359}},\"env_step_end\":261,\"env_step_start\":260,\"episode_end_mid_chunk\":false,\"executed_waypoints\":1,\"planned_waypoints\":1,\"stopped_early\":false}",
+          "native_control_segments": [
+            1
+          ],
+          "native_controls": 1,
+          "tool": "give_up"
+        }
+      ]
+    },
+    {
+      "task": "plug_in_charger",
+      "run_id": "l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1",
+      "source_sha256": "cae18bb11543386af1a844abbfe011f630402b8f0deb7c0083b71e9d4b693e40",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "3a053d2f7c4d9ca19c7870d66f9df3bfbada46548f946f87a7fd586723579666",
+      "action_limit": 400,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 319,
+      "final_turns": 35,
+      "trajectory_stages": 34,
+      "model_calls_reviewed": 35,
+      "action_feedback_records": 35,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 310,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 31,
+          "trajectory": 31,
+          "env_step": 259,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will restore the left arm's starting position and orientation.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_yaw_deg": 0
+            }
+          },
+          "frame": 289
+        },
+        {
+          "call": 32,
+          "trajectory": 31,
+          "env_step": 259,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The combined return was refused. I will take a shorter translation first, keeping the current orientation.",
+            "targets": {
+              "left_x": -0.2
+            }
+          },
+          "frame": 289
+        },
+        {
+          "call": 33,
+          "trajectory": 32,
+          "env_step": 279,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The left arm is near home. I will rotate the observation wrist back toward its initial orientation.",
+            "targets": {
+              "right_pitch_deg": 45
+            }
+          },
+          "frame": 310
+        },
+        {
+          "call": 34,
+          "trajectory": 33,
+          "env_step": 299,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will translate the idle arm back to its initial grasp-point position before completing its rotation.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 331
+        },
+        {
+          "call": 35,
+          "trajectory": 34,
+          "env_step": 310,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The charger remains fully upright in the strip. I will restore the right arm's starting orientation.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 343
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "pour_balls_into_vase",
+      "run_id": "l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1",
+      "source_sha256": "8a003d65b0d966d7304742bbc96826c17cc9b3ae1f86089aca56707b8ee459a7",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "ca570c8d2b68bfe27df657eb7ae64c2a7d1e1f4386d14b45e43de775be976a3b",
+      "action_limit": 600,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 506,
+      "final_turns": 47,
+      "trajectory_stages": 41,
+      "model_calls_reviewed": 47,
+      "action_feedback_records": 47,
+      "termination": "model_give_up",
+      "anchor_call": 47,
+      "anchor_trajectory": 41,
+      "anchor_env_step": 505,
+      "action_usage_at_decision": 0.8416666666666667,
+      "turn_usage_at_decision": 0.47,
+      "terminal_call": 47,
+      "terminal_env_step": 505,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C47明确motion budget原因，但505/600=84.167%，未到90%，不计靠近action。",
+      "candidates": [
+        {
+          "call": 47,
+          "trajectory": 41,
+          "env_step": 505,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The cross-body right-arm grasp led to wrist limits and large planner detours. A grasp and arm choice that permits the full pouring rotation should be established before transporting the cup.",
+            "reason": "I could not achieve a controlled pouring angle over the vase within the remaining motion budget. The cup is still held; transfer of all seven balls is unverified."
+          },
+          "frame": 545
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 43,
+          "trajectory": 38,
+          "env_step": 456,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will bring the cup back over the vase before making any further pouring rotation.",
+            "targets": {
+              "right_x": -0.14,
+              "right_y": -0.055,
+              "right_z": 1.06
+            }
+          },
+          "frame": 493
+        },
+        {
+          "call": 44,
+          "trajectory": 39,
+          "env_step": 476,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The current wrist configuration is producing long detours. I will restore the upright grasp to regain a predictable motion path.",
+            "targets": {
+              "right_pitch_deg": 66,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 514
+        },
+        {
+          "call": 45,
+          "trajectory": 39,
+          "env_step": 476,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will shorten the reach in a smaller step before restoring the upright cup.",
+            "targets": {
+              "right_x": -0.13,
+              "right_y": -0.12,
+              "right_z": 1.18
+            }
+          },
+          "frame": 514
+        },
+        {
+          "call": 46,
+          "trajectory": 40,
+          "env_step": 485,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will unwind the wrist in a smaller stage while keeping the cup securely held.",
+            "targets": {
+              "right_pitch_deg": 66,
+              "right_roll_deg": 50,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 524
+        },
+        {
+          "call": 47,
+          "trajectory": 41,
+          "env_step": 505,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The cross-body right-arm grasp led to wrist limits and large planner detours. A grasp and arm choice that permits the full pouring rotation should be established before transporting the cup.",
+            "reason": "I could not achieve a controlled pouring angle over the vase within the remaining motion budget. The cup is still held; transfer of all seven balls is unverified."
+          },
+          "frame": 545
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "pour_by_language",
+      "run_id": "l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1",
+      "source_sha256": "b00bc8e57c2622aa349c0585ffa45b5202da36137f48536dca64cee21bc7ff8e",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "bb8b3f45a35b4f4469fec2066215ac7cf9f0b1babec2033c27a2bc4756e2d916",
+      "action_limit": 800,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 394,
+      "final_turns": 39,
+      "trajectory_stages": 29,
+      "model_calls_reviewed": 39,
+      "action_feedback_records": 39,
+      "termination": "model_give_up",
+      "anchor_call": 39,
+      "anchor_trajectory": 29,
+      "anchor_env_step": 393,
+      "action_usage_at_decision": 0.49125,
+      "turn_usage_at_decision": 0.39,
+      "terminal_call": 39,
+      "terminal_env_step": 393,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志无明确预算放弃因果；give_up记录具体操作失败/无法恢复，且未发现符合四项定义的预算放弃事件。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 35,
+          "trajectory": 27,
+          "env_step": 368,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The bottle has settled horizontally. Approach its body from above rather than pushing along its neck.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_y": 0.065,
+              "right_z": 0.89
+            }
+          },
+          "frame": 394
+        },
+        {
+          "call": 36,
+          "trajectory": 28,
+          "env_step": 388,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Refine the overhead approach to the violet bottle shoulder, away from the turquoise bottle.",
+            "targets": {
+              "right_pitch_deg": 20,
+              "right_x": 0.09,
+              "right_y": 0.08,
+              "right_z": 0.87
+            }
+          },
+          "frame": 415
+        },
+        {
+          "call": 37,
+          "trajectory": 28,
+          "env_step": 388,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Lower the angled jaws around the violet body, aiming for a deeper hold below its upper surface.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_x": 0.115,
+              "right_y": 0.09,
+              "right_z": 0.82
+            }
+          },
+          "frame": 415
+        },
+        {
+          "call": 38,
+          "trajectory": 29,
+          "env_step": 393,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The right jaw contacted the bottle instead of straddling it. Raise and align the jaw opening across its diagonal body.",
+            "targets": {
+              "right_yaw_deg": -45,
+              "right_z": 0.91
+            }
+          },
+          "frame": 421
+        },
+        {
+          "call": 39,
+          "trajectory": 29,
+          "env_step": 393,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "The initial body grasp was too shallow. I should have opened before approaching, aligned the jaws across the bottle, verified a stable low lift, and transported upright with clearance before tilting only over the target bowl.",
+            "reason": "The violet bottle slipped repeatedly and liquid spilled outside the requested black bowl; I cannot reliably complete the specified pours from this state."
+          },
+          "frame": 421
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "pour_liquid_into_cup",
+      "run_id": "l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1",
+      "source_sha256": "e95bc2b5098ebc8d2abf828a3eaed04cdce38030dbaa68ac03e76d7fa50afbc1",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "fbf16c0d4dfda437a613dd232a547d3aa443e132f8ace21a79f2272c9966fa97",
+      "action_limit": 400,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 396,
+      "final_turns": 38,
+      "trajectory_stages": 31,
+      "model_calls_reviewed": 38,
+      "action_feedback_records": 38,
+      "termination": "model_give_up",
+      "anchor_call": 38,
+      "anchor_trajectory": 31,
+      "anchor_env_step": 395,
+      "action_usage_at_decision": 0.9875,
+      "turn_usage_at_decision": 0.38,
+      "terminal_call": 38,
+      "terminal_env_step": 395,
+      "metrics": {
+        "abandon_near_action": null,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "unknown",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {
+        "abandon_near_action": "C38/E395只说insufficient time，未区分环境步预算或其他时间约束；395/400靠近action但因果类型未知。38/100不靠近turn。"
+      },
+      "adjudication": "C38/E395只说insufficient time，未区分环境步预算或其他时间约束；395/400靠近action但因果类型未知。38/100不靠近turn。",
+      "candidates": [
+        {
+          "call": 38,
+          "trajectory": 31,
+          "env_step": 395,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A secure upright grasp and verified spout-to-cup alignment were needed before tipping. The bottle has been returned upright and the arms are near their starting poses.",
+            "reason": "The liquid spilled onto the table rather than filling the cup, and there is insufficient time to recover."
+          },
+          "frame": 425
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 34,
+          "trajectory": 28,
+          "env_step": 349,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Withdraw the open jaws away from the bottle without dragging it.",
+            "targets": {
+              "right_x": 0.12,
+              "right_y": -0.19,
+              "right_z": 0.85
+            }
+          },
+          "frame": 376
+        },
+        {
+          "call": 35,
+          "trajectory": 29,
+          "env_step": 355,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The bottle is standing upright. Return the right arm to its initial pose; the left arm is already home.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 383
+        },
+        {
+          "call": 36,
+          "trajectory": 29,
+          "env_step": 355,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return toward home with position only before resetting the wrist orientation.",
+            "targets": {
+              "right_x": 0.25,
+              "right_z": 0.94
+            }
+          },
+          "frame": 383
+        },
+        {
+          "call": 37,
+          "trajectory": 30,
+          "env_step": 375,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Reset the wrist orientation near home, leaving both objects undisturbed.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 404
+        },
+        {
+          "call": 38,
+          "trajectory": 31,
+          "env_step": 395,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A secure upright grasp and verified spout-to-cup alignment were needed before tipping. The bottle has been returned upright and the arms are near their starting poses.",
+            "reason": "The liquid spilled onto the table rather than filling the cup, and there is insufficient time to recover."
+          },
+          "frame": 425
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "press_by_number",
+      "run_id": "l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1",
+      "source_sha256": "3200fb2e63c2b9a0626b803c6f7e619261590626d35c0fdbdd5e55a019aef742",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "4de0c5aa7d0e9a26b483d50287b0d190e373ebe46a280670a233b56d598cc0fd",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 338,
+      "final_turns": 42,
+      "trajectory_stages": 41,
+      "model_calls_reviewed": 42,
+      "action_feedback_records": 42,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 329,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 38,
+          "trajectory": 37,
+          "env_step": 292,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Press blue once to confirm the completed nine middle-red presses.",
+            "targets": {
+              "right_z": 0.777
+            }
+          },
+          "frame": 328
+        },
+        {
+          "call": 39,
+          "trajectory": 38,
+          "env_step": 297,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Lift clear to finish the second blue confirmation. All required presses are now complete; return both arms home.",
+            "targets": {
+              "right_z": 0.86
+            }
+          },
+          "frame": 334
+        },
+        {
+          "call": 40,
+          "trajectory": 39,
+          "env_step": 303,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return the right grasp point to its starting position before restoring orientation.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 341
+        },
+        {
+          "call": 41,
+          "trajectory": 40,
+          "env_step": 314,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both grasp points are home; restore the initial wrist orientations in two stages.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 353
+        },
+        {
+          "call": 42,
+          "trajectory": 41,
+          "env_step": 329,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish restoring both original arm poses and open grippers, leaving the buttons untouched.",
+            "targets": {
+              "left_gripper": 1,
+              "left_pitch_deg": 90,
+              "right_gripper": 1,
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 369
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "push_T",
+      "run_id": "l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1",
+      "source_sha256": "381320e281ca2d41837b369368f3905e7bd8a7d6f3cdf120655bf862d1e11c4b",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "0b10484aaa84aba7852fad7b442a2e67917ba771e2931293297c96f5cfbb01e3",
+      "action_limit": 600,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 211,
+      "final_turns": 48,
+      "trajectory_stages": 48,
+      "model_calls_reviewed": 48,
+      "action_feedback_records": 48,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 197,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 44,
+          "trajectory": 44,
+          "env_step": 162,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The gray stem border is now almost fully covered. I will release at table height and check that the T stays aligned.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 205
+        },
+        {
+          "call": 45,
+          "trajectory": 45,
+          "env_step": 167,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The T remains over the pad after release. I will clear the empty hand vertically to inspect the complete placement before returning home.",
+            "targets": {
+              "right_z": 0.825
+            }
+          },
+          "frame": 211
+        },
+        {
+          "call": 46,
+          "trajectory": 46,
+          "env_step": 171,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The T is resting over the pad with closely matching orientation. I will return the empty right hand to its starting position; the left arm has remained at home.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 216
+        },
+        {
+          "call": 47,
+          "trajectory": 47,
+          "env_step": 186,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The hand has returned to its starting position. I will restore its original orientation in two smaller rotations.",
+            "targets": {
+              "right_pitch_deg": 40,
+              "right_yaw_deg": -30
+            }
+          },
+          "frame": 232
+        },
+        {
+          "call": 48,
+          "trajectory": 48,
+          "env_step": 197,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish restoring the right hand's starting orientation, leaving the T on the pad and both arms at home.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 244
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "put_bottles_into_dustbin",
+      "run_id": "l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1",
+      "source_sha256": "16cfdbc57c6fbd070de2f089fceee44bbf24886b53f3df30379716756ec5d3ed",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "ad26e1dc02577a5f1ab4825c3bfd3a4454fa9d8128152c1326c799e3cecb2323",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 679,
+      "final_turns": 65,
+      "trajectory_stages": 60,
+      "model_calls_reviewed": 65,
+      "action_feedback_records": 65,
+      "termination": "model_give_up",
+      "anchor_call": 62,
+      "anchor_trajectory": 57,
+      "anchor_env_step": 637,
+      "action_usage_at_decision": 0.91,
+      "turn_usage_at_decision": 0.62,
+      "terminal_call": 65,
+      "terminal_env_step": 678,
+      "metrics": {
+        "abandon_near_action": 1,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C62/E637保留motion budget回位；C65明确剩余22步不足，和700−678=22相符。该差值只交叉核验明确来源的上限，未用模型自述反推上限；两个锚点均≥90%，合并计靠近action一次。",
+      "candidates": [
+        {
+          "call": 62,
+          "trajectory": 57,
+          "env_step": 637,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Three bottles have been released into the bin. Move both hands toward their starting positions, preserving enough motion budget to restore their orientations.",
+            "targets": {
+              "left_x": -0.3,
+              "left_y": -0.202,
+              "left_z": 0.922,
+              "right_x": 0.3,
+              "right_y": -0.202,
+              "right_z": 0.922
+            }
+          },
+          "frame": 693
+        },
+        {
+          "call": 65,
+          "trajectory": 60,
+          "env_step": 678,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper grasps on lying bottles, and use a supported transfer earlier to avoid wrist interference and repeated handover corrections.",
+            "reason": "Three bottles are in the dustbin and both arms are home, but the white bottle remains on the table. The remaining 22 steps are insufficient to retrieve and transfer it safely."
+          },
+          "frame": 737
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 61,
+          "trajectory": 56,
+          "env_step": 634,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The yellow bottle is above the dustbin with the other discarded bottles visible below. Release it.",
+            "targets": {
+              "left_gripper": 1
+            }
+          },
+          "frame": 689
+        },
+        {
+          "call": 62,
+          "trajectory": 57,
+          "env_step": 637,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Three bottles have been released into the bin. Move both hands toward their starting positions, preserving enough motion budget to restore their orientations.",
+            "targets": {
+              "left_x": -0.3,
+              "left_y": -0.202,
+              "left_z": 0.922,
+              "right_x": 0.3,
+              "right_y": -0.202,
+              "right_z": 0.922
+            }
+          },
+          "frame": 693
+        },
+        {
+          "call": 63,
+          "trajectory": 58,
+          "env_step": 647,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Restore both wrists toward their initial horizontal orientation in stages.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 704
+        },
+        {
+          "call": 64,
+          "trajectory": 59,
+          "env_step": 662,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Complete the return to the initial wrist orientations, leaving the three discarded bottles undisturbed.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 720
+        },
+        {
+          "call": 65,
+          "trajectory": 60,
+          "env_step": 678,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use deeper grasps on lying bottles, and use a supported transfer earlier to avoid wrist interference and repeated handover corrections.",
+            "reason": "Three bottles are in the dustbin and both arms are home, but the white bottle remains on the table. The remaining 22 steps are insufficient to retrieve and transfer it safely."
+          },
+          "frame": 737
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "solve_equation",
+      "run_id": "l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1",
+      "source_sha256": "30378f442f08b295628172a1b546ac8caadd9cd2704574250512898ac282861d",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "957af0f2aa4eecebf9a76fa2a1b505050bbcc778a39839aae9cb37088f3fcf9d",
+      "action_limit": 300,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 264,
+      "final_turns": 40,
+      "trajectory_stages": 36,
+      "model_calls_reviewed": 40,
+      "action_feedback_records": 40,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 259,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 36,
+          "trajectory": 32,
+          "env_step": 209,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The division token has settled on the blank pad, completing 8 ÷ 2 = 4. I will lift the open jaws clear before returning home.",
+            "targets": {
+              "right_z": 0.805
+            }
+          },
+          "frame": 240
+        },
+        {
+          "call": 37,
+          "trajectory": 33,
+          "env_step": 210,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The placed token remains centered on its pad. I will retract through a clear intermediate pose.",
+            "targets": {
+              "right_x": 0.05,
+              "right_y": -0.12,
+              "right_z": 0.9
+            }
+          },
+          "frame": 242
+        },
+        {
+          "call": 38,
+          "trajectory": 34,
+          "env_step": 226,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will return the right grasp point to its starting position before restoring the starting wrist orientation.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 259
+        },
+        {
+          "call": 39,
+          "trajectory": 35,
+          "env_step": 246,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The equation is complete and the hand is at its home position. I will restore the wrist orientation in two stages.",
+            "targets": {
+              "right_pitch_deg": 60,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 280
+        },
+        {
+          "call": 40,
+          "trajectory": 36,
+          "env_step": 259,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I will finish restoring the starting wrist orientation. The left arm is already at its original pose and the division token remains on the answer pad.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 294
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "sort_nesting_dolls_by_size",
+      "run_id": "l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1",
+      "source_sha256": "ccbb8a20c1ae6c5ad0e994ced2f50f024433a77065d768b3bc25b88b80a510c1",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "46a6f340bf25881bc775e447aea92d9de04fbefdd1480ee17c7880c8d368dc7c",
+      "action_limit": 1050,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 767,
+      "final_turns": 91,
+      "trajectory_stages": 89,
+      "model_calls_reviewed": 91,
+      "action_feedback_records": 91,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 755,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 87,
+          "trajectory": 85,
+          "env_step": 719,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I am lowering the largest doll five millimetres toward tabletop contact.",
+            "targets": {
+              "right_z": 0.848
+            }
+          },
+          "frame": 803
+        },
+        {
+          "call": 88,
+          "trajectory": 86,
+          "env_step": 720,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I am finishing the last small descent and releasing the largest doll at the right end of the row.",
+            "targets": {
+              "right_gripper": 1,
+              "right_z": 0.843
+            }
+          },
+          "frame": 805
+        },
+        {
+          "call": 89,
+          "trajectory": 87,
+          "env_step": 723,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All five dolls are arranged by size. I am lifting the empty right hand clear so the largest can settle, then returning home.",
+            "targets": {
+              "right_z": 0.99
+            }
+          },
+          "frame": 809
+        },
+        {
+          "call": 90,
+          "trajectory": 88,
+          "env_step": 737,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The five dolls are standing in increasing size order. I am moving the right arm back toward its starting position and orientation.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_x": 0.3004,
+              "right_y": -0.2022
+            }
+          },
+          "frame": 824
+        },
+        {
+          "call": 91,
+          "trajectory": 89,
+          "env_step": 755,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The dolls are left in their sorted row. I am completing the right arm's return to its original pose.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 843
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "stack_blocks",
+      "run_id": "l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1",
+      "source_sha256": "c0bcdf90fc9e665d58db1376c66e052f1059200826a631a3ead509aac2051d9c",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "c613221a259bba30f559f7725fb4efa2c2c9a22dd8045450cd4dcade2c14a27f",
+      "action_limit": 550,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 338,
+      "final_turns": 48,
+      "trajectory_stages": 46,
+      "model_calls_reviewed": 48,
+      "action_feedback_records": 48,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 329,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 44,
+          "trajectory": 42,
+          "env_step": 296,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The white cube is seated at the third-layer height. I will release it and check that all three blocks remain stacked.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 337
+        },
+        {
+          "call": 45,
+          "trajectory": 43,
+          "env_step": 301,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All three cubes remain stacked after release. I will lift the right hand clear before returning it home.",
+            "targets": {
+              "right_z": 0.94
+            }
+          },
+          "frame": 343
+        },
+        {
+          "call": 46,
+          "trajectory": 44,
+          "env_step": 309,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The three-block stack is stable. I will return the right grasp point to its starting position before restoring its orientation.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 352
+        },
+        {
+          "call": 47,
+          "trajectory": 45,
+          "env_step": 314,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The right hand is back at its starting position. I will restore its wrist orientation in two safe stages.",
+            "targets": {
+              "right_pitch_deg": 45
+            }
+          },
+          "frame": 358
+        },
+        {
+          "call": 48,
+          "trajectory": 46,
+          "env_step": 329,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The wooden, red, and white blocks remain in a stable three-block stack. I will complete the right arm's return to its original orientation.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 374
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "stack_blocks_by_language",
+      "run_id": "l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1",
+      "source_sha256": "2d4ae810c598d30075fb9377451ab05488b59a47c056afd18f0d4c2d0667bce0",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "e8821d1e6dd50b4509a20e1c0f3540b2795a968f762499b74812787dfdbf4d76",
+      "action_limit": 400,
+      "turn_limit": 100,
+      "per_call_action_limit": null,
+      "final_actions": 263,
+      "final_turns": 37,
+      "trajectory_stages": 35,
+      "model_calls_reviewed": 37,
+      "action_feedback_records": 37,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 254,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 33,
+          "trajectory": 31,
+          "env_step": 217,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The slight height shortfall indicates orange has contacted yellow. I will release it while keeping the hand stationary.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 247
+        },
+        {
+          "call": 34,
+          "trajectory": 32,
+          "env_step": 221,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Orange remains on the stack after release. I will lift the open gripper straight up to avoid disturbing the blocks.",
+            "targets": {
+              "right_z": 0.903
+            }
+          },
+          "frame": 252
+        },
+        {
+          "call": 35,
+          "trajectory": 33,
+          "env_step": 226,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The blue-yellow-orange stack remains standing. I will return the right hand to its original position before restoring its orientation.",
+            "targets": {
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 258
+        },
+        {
+          "call": 36,
+          "trajectory": 34,
+          "env_step": 239,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The right hand is back at its starting position and the stack is stable. I will restore its original orientation in two stages.",
+            "targets": {
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 272
+        },
+        {
+          "call": 37,
+          "trajectory": 35,
+          "env_step": 254,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The blocks remain stacked blue, yellow, then orange. I will complete the right arm's return to its original orientation.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 288
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "stack_bowls",
+      "run_id": "l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1",
+      "source_sha256": "082ce6ee2703147df974c92fa6b3dd1080cea016612b303ecbad974bea5145d9",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "b8ec4959c47f19d70505b6d41f3f86a0038f7fc16e85d3d543daf977636606a7",
+      "action_limit": 800,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 495,
+      "final_turns": 53,
+      "trajectory_stages": 48,
+      "model_calls_reviewed": 53,
+      "action_feedback_records": 53,
+      "termination": "native_success",
+      "anchor_call": null,
+      "anchor_trajectory": null,
+      "anchor_env_step": null,
+      "action_usage_at_decision": null,
+      "turn_usage_at_decision": null,
+      "terminal_call": null,
+      "terminal_env_step": 494,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志未记录因预算主动放弃；原生结果成功，末段正常完成操作或回位，主动放弃四项均0。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 49,
+          "trajectory": 44,
+          "env_step": 450,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The third bowl is seated among the other rims and the jaws have unloaded. I open them to let the stack settle freely.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 493
+        },
+        {
+          "call": 50,
+          "trajectory": 45,
+          "env_step": 456,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "All three bowls remain together after release. I lift the open right hand clear before returning it home.",
+            "targets": {
+              "right_z": 0.97
+            }
+          },
+          "frame": 500
+        },
+        {
+          "call": 51,
+          "trajectory": 46,
+          "env_step": 464,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The stack is stable. I begin rotating the empty right wrist back toward its initial orientation.",
+            "targets": {
+              "right_pitch_deg": 35,
+              "right_yaw_deg": 45
+            }
+          },
+          "frame": 509
+        },
+        {
+          "call": 52,
+          "trajectory": 47,
+          "env_step": 474,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I move the right hand back toward its starting position while completing most of the homeward wrist rotation.",
+            "targets": {
+              "right_pitch_deg": 70,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.94
+            }
+          },
+          "frame": 520
+        },
+        {
+          "call": 53,
+          "trajectory": 48,
+          "env_step": 494,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The three bowls remain stacked upright. I finish returning the right arm to its exact starting pose; the left arm is already home.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 541
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "store_laptop_and_headphones",
+      "run_id": "l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1",
+      "source_sha256": "0c3fc73fa41f49d7c3b3d6e6867237d9cb236f4aeb7e9a7a5ee4820e6acd7e34",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "1eff77134668cb2ed289218f4e5d239e95bfcb8daebdddeb6338b26861548053",
+      "action_limit": 800,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 788,
+      "final_turns": 100,
+      "trajectory_stages": 91,
+      "model_calls_reviewed": 100,
+      "action_feedback_records": 100,
+      "termination": "model_give_up",
+      "anchor_call": 98,
+      "anchor_trajectory": 89,
+      "anchor_env_step": 754,
+      "action_usage_at_decision": 0.9425,
+      "turn_usage_at_decision": 0.98,
+      "terminal_call": 100,
+      "terminal_env_step": 787,
+      "metrics": {
+        "abandon_near_action": null,
+        "abandon_near_turn": null,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "unknown",
+        "abandon_near_turn": "unknown",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {
+        "abandon_near_action": "C98/T89/E754已明确预算不足而回位，C100 give_up是同一事件。budget/steps未明确区分action和turn；754/800及98/100均靠近，两个near未知。C100不得再算一次达到turn主动放弃。",
+        "abandon_near_turn": "C98/T89/E754已明确预算不足而回位，C100 give_up是同一事件。budget/steps未明确区分action和turn；754/800及98/100均靠近，两个near未知。C100不得再算一次达到turn主动放弃。"
+      },
+      "adjudication": "C98/T89/E754已明确预算不足而回位，C100 give_up是同一事件。budget/steps未明确区分action和turn；754/800及98/100均靠近，两个near未知。C100不得再算一次达到turn主动放弃。",
+      "candidates": [
+        {
+          "call": 98,
+          "trajectory": 89,
+          "env_step": 754,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The remaining budget is insufficient for a safe regrasp and rack insertion. Return the right arm home while preserving the hung headphones and closed laptop.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3,
+              "right_y": -0.202,
+              "right_yaw_deg": 0,
+              "right_z": 0.922
+            }
+          },
+          "frame": 842
+        },
+        {
+          "call": 100,
+          "trajectory": 91,
+          "env_step": 787,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A deeper initial headphone grasp and more accurate lid-contact positioning would have saved budget. The laptop edge grasp caught the support and was released rather than forced.",
+            "reason": "Insufficient remaining steps to safely grasp and insert the laptop. The headphones are hung, and both arms are home; the laptop remains on its original support."
+          },
+          "frame": 877
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 96,
+          "trajectory": 87,
+          "env_step": 745,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The lift is blocked and the laptop has not risen, indicating the jaws caught the support. Release immediately rather than pull harder.",
+            "targets": {
+              "right_gripper": 1
+            }
+          },
+          "frame": 831
+        },
+        {
+          "call": 97,
+          "trajectory": 88,
+          "env_step": 747,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Withdraw the open gripper from the laptop support, leaving the closed laptop and hung headphones undisturbed.",
+            "targets": {
+              "right_y": -0.13,
+              "right_z": 0.92
+            }
+          },
+          "frame": 834
+        },
+        {
+          "call": 98,
+          "trajectory": 89,
+          "env_step": 754,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The remaining budget is insufficient for a safe regrasp and rack insertion. Return the right arm home while preserving the hung headphones and closed laptop.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3,
+              "right_y": -0.202,
+              "right_yaw_deg": 0,
+              "right_z": 0.922
+            }
+          },
+          "frame": 842
+        },
+        {
+          "call": 99,
+          "trajectory": 90,
+          "env_step": 774,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Complete the right arm's return to its original pose without disturbing either object.",
+            "targets": {
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 863
+        },
+        {
+          "call": 100,
+          "trajectory": 91,
+          "env_step": 787,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A deeper initial headphone grasp and more accurate lid-contact positioning would have saved budget. The laptop edge grasp caught the support and was released rather than forced.",
+            "reason": "Insufficient remaining steps to safely grasp and insert the laptop. The headphones are hung, and both arms are home; the laptop remains on its original support."
+          },
+          "frame": 877
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "store_tools_in_toolbox",
+      "run_id": "l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1",
+      "source_sha256": "f69e01ead342c21c6766357194e17367d6fca430db2715490e65a7bc204a1909",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "d6a4d721bdc380e47a0fab2bd7d9bea6dbcdbf7e3f4e7d9aef57a7a32891b278",
+      "action_limit": 900,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 849,
+      "final_turns": 82,
+      "trajectory_stages": 74,
+      "model_calls_reviewed": 82,
+      "action_feedback_records": 82,
+      "termination": "model_give_up",
+      "anchor_call": 82,
+      "anchor_trajectory": 74,
+      "anchor_env_step": 848,
+      "action_usage_at_decision": 0.9422222222222222,
+      "turn_usage_at_decision": 0.82,
+      "terminal_call": 82,
+      "terminal_env_step": 848,
+      "metrics": {
+        "abandon_near_action": 1,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C82明确motion budget不足以纠正并再次回位，848/900=94.222%，计靠近action一次。",
+      "candidates": [
+        {
+          "call": 82,
+          "trajectory": 74,
+          "env_step": 848,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Grasp closer to each tool's centre of mass, use shorter transfers to prevent slipping, and verify recess alignment and flat seating before releasing.",
+            "reason": "All four tools are in the toolbox and both arms are reset, but some tools are not fully seated. The remaining motion budget is insufficient for a safe correction and another reset."
+          },
+          "frame": 921
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 78,
+          "trajectory": 70,
+          "env_step": 791,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Withdraw vertically from the stored tools before returning both arms to their starting poses.",
+            "targets": {
+              "left_z": 0.9
+            }
+          },
+          "frame": 860
+        },
+        {
+          "call": 79,
+          "trajectory": 71,
+          "env_step": 797,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Return the left hand toward home while beginning a staged reset of the right wrist.",
+            "targets": {
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_z": 0.9215,
+              "right_pitch_deg": 55,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 25
+            }
+          },
+          "frame": 867
+        },
+        {
+          "call": 80,
+          "trajectory": 72,
+          "env_step": 817,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Continue the staged reset, restoring the right arm's original pose and turning the left wrist toward home.",
+            "targets": {
+              "left_pitch_deg": 60,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 888
+        },
+        {
+          "call": 81,
+          "trajectory": 73,
+          "env_step": 837,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Finish restoring the left arm to its original pose, leaving both grippers open.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215
+            }
+          },
+          "frame": 909
+        },
+        {
+          "call": 82,
+          "trajectory": 74,
+          "env_step": 848,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Grasp closer to each tool's centre of mass, use shorter transfers to prevent slipping, and verify recess alignment and flat seating before releasing.",
+            "reason": "All four tools are in the toolbox and both arms are reset, but some tools are not fully seated. The remaining motion budget is insufficient for a safe correction and another reset."
+          },
+          "frame": 921
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "swap_T",
+      "run_id": "l3_persistent_cap20_swap_T_s0_layout0_20261006_v1",
+      "source_sha256": "bd27c5fc9e3099cd4d40d42afcf5ce73477d5248259a0d9d6894ab27e2e3dce6",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_swap_T_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "2c8d9d1f1c377a46048c88c6ea2fefffbc35235ccbedce09c228302b3bc26b44",
+      "action_limit": 400,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 400,
+      "final_turns": 30,
+      "trajectory_stages": 29,
+      "model_calls_reviewed": 30,
+      "action_feedback_records": 30,
+      "termination": "action_limit_after_subgoal_abandonment",
+      "anchor_call": 30,
+      "anchor_trajectory": 29,
+      "anchor_env_step": 389,
+      "action_usage_at_decision": 0.9725,
+      "turn_usage_at_decision": 0.3,
+      "terminal_call": null,
+      "terminal_env_step": 389,
+      "metrics": {
+        "abandon_near_action": 1,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C30/T29/E389明确放弃右臂回位子目标并执行最后放置，389/400=97.25%，计靠近action一次。末动作结束到400步为系统终止，同一事件不计达到action主动放弃。",
+      "candidates": [
+        {
+          "call": 30,
+          "trajectory": 29,
+          "env_step": 389,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I lower blue at red's original location, make the last orientation correction, and release it. The remaining motion budget is insufficient to return the right arm home.",
+            "targets": {
+              "right_gripper": 1,
+              "right_yaw_deg": 85,
+              "right_z": 0.787
+            }
+          },
+          "frame": 417
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 26,
+          "trajectory": 25,
+          "env_step": 327,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The combined home rotation was refused, so I use a smaller wrist rotation while grasping blue.",
+            "targets": {
+              "left_pitch_deg": 80,
+              "left_yaw_deg": -15,
+              "right_gripper": 0
+            }
+          },
+          "frame": 351
+        },
+        {
+          "call": 27,
+          "trajectory": 26,
+          "env_step": 347,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I finish closing the right gripper around blue before lifting.",
+            "targets": {
+              "right_gripper": 0
+            }
+          },
+          "frame": 372
+        },
+        {
+          "call": 28,
+          "trajectory": 27,
+          "env_step": 349,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I transport the recovered blue block toward red's original location, beginning the turn that points its stem left.",
+            "targets": {
+              "right_x": -0.067,
+              "right_y": -0.176,
+              "right_yaw_deg": 15,
+              "right_z": 0.83
+            }
+          },
+          "frame": 375
+        },
+        {
+          "call": 29,
+          "trajectory": 28,
+          "env_step": 369,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I continue turning blue toward the original red orientation while lowering above its target.",
+            "targets": {
+              "right_yaw_deg": 70,
+              "right_z": 0.8
+            }
+          },
+          "frame": 396
+        },
+        {
+          "call": 30,
+          "trajectory": 29,
+          "env_step": 389,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I lower blue at red's original location, make the last orientation correction, and release it. The remaining motion budget is insufficient to return the right arm home.",
+            "targets": {
+              "right_gripper": 1,
+              "right_yaw_deg": 85,
+              "right_z": 0.787
+            }
+          },
+          "frame": 417
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "swap_blocks",
+      "run_id": "l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1",
+      "source_sha256": "7a0bcd687d9ea21fed2e117758c66d4d94b36c7ba9802be50044a8e0a421a25d",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "91ab021fb8f6636b7492ee66aa36b7544e66e4f4c929327130f1e21d75be00c9",
+      "action_limit": 700,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 501,
+      "final_turns": 67,
+      "trajectory_stages": 66,
+      "model_calls_reviewed": 67,
+      "action_feedback_records": 67,
+      "termination": "model_give_up",
+      "anchor_call": 67,
+      "anchor_trajectory": 66,
+      "anchor_env_step": 500,
+      "action_usage_at_decision": 0.7142857142857143,
+      "turn_usage_at_decision": 0.67,
+      "terminal_call": 67,
+      "terminal_env_step": 500,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "完整日志无明确预算放弃因果；give_up记录具体操作失败/无法恢复，且未发现符合四项定义的预算放弃事件。",
+      "candidates": [],
+      "terminal_calls": [
+        {
+          "call": 63,
+          "trajectory": 62,
+          "env_step": 467,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both grasp points are home; restoring their starting orientations in two controlled rotations.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 0,
+              "right_pitch_deg": 45,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 528
+        },
+        {
+          "call": 64,
+          "trajectory": 63,
+          "env_step": 482,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Completing the return to both original poses after all three placements and three button presses.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 544
+        },
+        {
+          "call": 65,
+          "trajectory": 64,
+          "env_step": 498,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The blocks are swapped, the middle mat is empty, and both arms have returned to their starting poses. Holding position after the three required presses.",
+            "targets": {
+              "left_gripper": 1,
+              "right_gripper": 1
+            }
+          },
+          "frame": 561
+        },
+        {
+          "call": 66,
+          "trajectory": 65,
+          "env_step": 499,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Maintaining the original arm poses with the completed swap undisturbed; no additional button presses.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_roll_deg": 0,
+              "left_x": -0.2996,
+              "left_y": -0.2022,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_pitch_deg": 90,
+              "right_roll_deg": 0,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_yaw_deg": 0,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 563
+        },
+        {
+          "call": 67,
+          "trajectory": 66,
+          "env_step": 500,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "Use a more centred, face-aligned grasp for the rotated block and centre the button contact more accurately before each single firm press.",
+            "reason": "The blocks are physically swapped and both arms are home, but the environment has not confirmed completion after the three attempted presses. I cannot safely repair an unregistered earlier press without violating the required sequence."
+          },
+          "frame": 565
+        }
+      ],
+      "automatic_give_up": []
+    },
+    {
+      "task": "sweep_blocks",
+      "run_id": "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1",
+      "source_sha256": "b817c65f1bb8103299452ecd0d4288c97f561265696430033fb183ac2582c2e2",
+      "source_artifact": "https://zefanw.github.io/robodojo-l3-dashboard/data/runs/l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1/historical/publication-manifest.json",
+      "source_manifest_sha256": "edd06bf7919cf428cd3bf02ed0e2bc44a96bfd326275332bbce6ca07cafe425d",
+      "action_limit": 1000,
+      "turn_limit": 100,
+      "per_call_action_limit": 20,
+      "final_actions": 737,
+      "final_turns": 98,
+      "trajectory_stages": 88,
+      "model_calls_reviewed": 98,
+      "action_feedback_records": 98,
+      "termination": "model_give_up",
+      "anchor_call": 98,
+      "anchor_trajectory": 88,
+      "anchor_env_step": 736,
+      "action_usage_at_decision": 0.736,
+      "turn_usage_at_decision": 0.98,
+      "terminal_call": 98,
+      "terminal_env_step": 736,
+      "metrics": {
+        "abandon_near_action": 0,
+        "abandon_near_turn": 0,
+        "abandon_action_limit": 0,
+        "abandon_turn_limit": 0
+      },
+      "metric_status": {
+        "abandon_near_action": "confirmed",
+        "abandon_near_turn": "confirmed",
+        "abandon_action_limit": "confirmed",
+        "abandon_turn_limit": "confirmed"
+      },
+      "unknown_reasons": {},
+      "adjudication": "C98明确写action budget，但当时736/1000=73.6%，不能因模型说预算不足就算靠近；也不能因98/100轮而换成turn原因。",
+      "candidates": [
+        {
+          "call": 98,
+          "trajectory": 88,
+          "env_step": 736,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A firmer middle-handle handover and better brush-to-pan alignment would avoid the recovery motions and repeated scattering at the pan lip.",
+            "reason": "I could not complete the sweep within the remaining action budget. Two objects are in the pan; three remain outside. Both arms are home and both tools are resting on the table."
+          },
+          "frame": 823
+        }
+      ],
+      "terminal_calls": [
+        {
+          "call": 94,
+          "trajectory": 84,
+          "env_step": 665,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I set down and release the broom, then begin returning the left wrist to its starting orientation.",
+            "targets": {
+              "left_pitch_deg": 45,
+              "left_roll_deg": 0,
+              "left_yaw_deg": 30,
+              "right_gripper": 1,
+              "right_z": 0.785
+            }
+          },
+          "frame": 748
+        },
+        {
+          "call": 95,
+          "trajectory": 85,
+          "env_step": 685,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "Both tools are resting on the table. I return the left wrist to its starting orientation and lift the right hand back toward its home position.",
+            "targets": {
+              "left_pitch_deg": 90,
+              "left_yaw_deg": 0,
+              "left_z": 0.9215,
+              "right_x": 0.3004,
+              "right_y": -0.2022,
+              "right_z": 0.9215
+            }
+          },
+          "frame": 769
+        },
+        {
+          "call": 96,
+          "trajectory": 86,
+          "env_step": 705,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "The left arm is home. I return the right wrist toward its initial orientation in a manageable rotation.",
+            "targets": {
+              "right_pitch_deg": 60,
+              "right_roll_deg": 0,
+              "right_yaw_deg": 0
+            }
+          },
+          "frame": 790
+        },
+        {
+          "call": 97,
+          "trajectory": 87,
+          "env_step": 725,
+          "tool": "move_eef",
+          "accepted": true,
+          "arguments": {
+            "note": "I finish returning the right arm to its starting pose. The tools are stable, but the sweep remains incomplete with three objects outside the pan.",
+            "targets": {
+              "right_pitch_deg": 90
+            }
+          },
+          "frame": 811
+        },
+        {
+          "call": 98,
+          "trajectory": 88,
+          "env_step": 736,
+          "tool": "give_up",
+          "accepted": true,
+          "arguments": {
+            "hindsight": "A firmer middle-handle handover and better brush-to-pan alignment would avoid the recovery motions and repeated scattering at the pan lip.",
+            "reason": "I could not complete the sweep within the remaining action budget. Two objects are in the pan; three remain outside. Both arms are home and both tools are resting on the table."
+          },
+          "frame": 823
+        }
+      ],
+      "automatic_give_up": []
+    }
+  ]
+}
