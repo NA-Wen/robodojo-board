@@ -24,7 +24,7 @@ COLUMNS = ['run_id', 'group', 'task', 'variant', 'scene', 'seed', 'capability', 
            'collision_arms', 'collision_arm_object', 'collision_arm_table',
            'knockdown', 'wrong_object', 'fine_placement_fail']
 METRICS = COLUMNS[8:]
-STATUSES = ('confirmed', 'lower_bound', 'na', 'unknown')
+STATUSES = ('confirmed', 'lower_bound', 'na', 'unknown', 'pending')
 CATEGORIES = ('empty_retry', 'drop', 'direct_transfer', 'direct_failed', 'table_transfer',
               'support_transfer', 'recovery_other', 'view', 'uncertain', 'other')
 SHA256 = re.compile(r'^[a-f0-9]{64}$')
@@ -124,6 +124,8 @@ def check_submission(doc, rep):
                 rep.fail(f"{tag}: metric_status.{m} 缺失")
             elif status[m] not in STATUSES:
                 rep.fail(f"{tag}: metric_status.{m}={status[m]!r} 不在枚举内")
+            elif status[m] == 'pending' and metrics.get(m) is not None:
+                rep.fail(f"{tag}: 待审核指标 {m} 必须留空；旧版值应单列保留")
         for m in ('success', 'score', 'turns', 'actions'):
             if m in metrics and m in res and metrics[m] != res[m]:
                 rep.fail(f"{tag}: metrics.{m}={metrics[m]!r} 与 result.{m}={res[m]!r} 不一致")
@@ -142,6 +144,9 @@ def check_submission(doc, rep):
         na = [m for m in METRICS if status.get(m) in ('na', 'unknown')]
         if na:
             rep.warn(f"{tag}: {len(na)} 项标为 na/unknown：{','.join(na)}")
+        pending = [m for m in METRICS if status.get(m) == 'pending']
+        if pending:
+            rep.warn(f"{tag}: {len(pending)} 项待审核，仅可作为阶段性结果：{','.join(pending)}")
 
         key = (run.get('task'), run.get('variant'), run.get('scene'), run.get('seed'))
         if key in seen_episode:

@@ -50,6 +50,9 @@ def merge_into_site(dist, incoming_dir, only=None):
     原则：只增不减。既有 filters 内容原样保留，新值并入；不认识的键不碰。
     """
     data = load_site(dist)
+    # The machine-readable protocol is authoritative for newly supported states.
+    with open(os.path.join(dist, 'protocol.json'), encoding='utf-8') as source:
+        data['protocol'] = json.load(source)
     groups = data['groups']
     index = {g['id']: i for i, g in enumerate(groups)}
     added, replaced = [], []
@@ -259,6 +262,11 @@ def to_group(doc):
             }.items()
         }
         first_aux = doc['runs'][0]['configuration']['audit_auxiliary']
+        if first_aux.get('review_completion') == 'pending':
+            converted['audit_completion'] = 'pending'
+            converted['submission_links']['coverage'] = 'submissions/semantic/review_coverage.csv'
+            converted['submission_links']['review_metrics'] = 'submissions/semantic/review_task_metrics.csv'
+            converted['submission_links']['completion'] = 'submissions/semantic/completion_validation.json'
         converted['methodology'] += [
             first_aux['budget_interpretation'], first_aux['turn_definition'],
             first_aux['action_definition'], first_aux['frame_mapping'],
@@ -296,7 +304,15 @@ def to_group(doc):
                     frame_end=annotation['frame_end'], tool=annotation['primitive'])
             case['submission_events'] = run['events']
             case['artifacts'] = run['artifacts']
-        converted['totals'].update({key: sum(c['metrics'].get(key) or 0 for c in cases)
+            if aux.get('review_completion') == 'pending':
+                case.update(audit_completion='pending',
+                            review_coverage=aux['review_coverage'],
+                            previous_metrics=aux['previous_protocol_metrics'],
+                            note='阶段性结果：三路全程观看及18项视觉指标待审核。旧版局部证据保留，未作为完成结果。')
+                case['metrics']['recoveryOther'] = None
+                case['counts']['view_episodes'] = None
+        converted['totals'].update({key: (sum(c['metrics'][key] for c in cases if c['metrics'].get(key) is not None)
+                                         if any(c['metrics'].get(key) is not None for c in cases) else None)
                                    for key in ('emptyRetry', 'drops', 'emptyRegrasp',
                                                'dropRegrasp', 'directAttempts', 'directSuccess',
                                                'tableAttempts', 'tableSuccess', 'supportAttempts',
