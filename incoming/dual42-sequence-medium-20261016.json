@@ -44,11 +44,11 @@
     "uncertain": 4,
     "turns": 2454,
     "empty_retry": 1,
-    "other": 23,
     "recovery_other": 1,
     "drop": 4,
-    "direct_failed": 2,
-    "view": 5
+    "other": 23,
+    "view": 5,
+    "direct_failed": 2
   },
   "cases": [
     {
