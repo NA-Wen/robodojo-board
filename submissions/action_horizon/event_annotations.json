@@ -1,0 +1,1235 @@
+[
+  {
+    "run_id": "dual42-horizon-medium-20261016-align_blocks-standard-s0-scene0",
+    "event_id": "E0018",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      6
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/0",
+      "/1",
+      "/2",
+      "/3",
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-build_tower-standard-s0-scene0",
+    "event_id": "E0014",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      6
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/0",
+      "/1",
+      "/2",
+      "/3",
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27",
+      "/28",
+      "/29",
+      "/30",
+      "/31",
+      "/32",
+      "/33",
+      "/34",
+      "/35",
+      "/36",
+      "/37",
+      "/38",
+      "/39",
+      "/40",
+      "/41",
+      "/42",
+      "/43",
+      "/44",
+      "/45",
+      "/46",
+      "/47",
+      "/48",
+      "/49",
+      "/50",
+      "/51",
+      "/52",
+      "/53",
+      "/54",
+      "/55",
+      "/56",
+      "/57",
+      "/58",
+      "/59",
+      "/60",
+      "/61",
+      "/62",
+      "/63",
+      "/64",
+      "/65",
+      "/66",
+      "/67",
+      "/68",
+      "/69",
+      "/70",
+      "/71",
+      "/72",
+      "/73",
+      "/74",
+      "/75",
+      "/76",
+      "/77",
+      "/78",
+      "/79",
+      "/80",
+      "/81",
+      "/82",
+      "/83",
+      "/84",
+      "/85",
+      "/86",
+      "/87",
+      "/88",
+      "/89",
+      "/90",
+      "/91",
+      "/92",
+      "/93",
+      "/94"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-build_tower-standard-s0-scene0",
+    "event_id": "E0022",
+    "metric_contributions": [
+      "abandon_near_action",
+      "abandon_near_turn"
+    ],
+    "raw_candidate_metric_ids": [
+      17,
+      18
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17,
+        18
+      ],
+      "action_term_present": true,
+      "turn_term_present": true,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "I could not complete a stable, centred tower within the remaining motion and decision budgets.",
+      "source_pointer": "/94",
+      "decision": "靠近动作上限主动放弃次数=1；靠近turn上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/94"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-classify_objects-standard-s0-scene0",
+    "event_id": "E0015",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      7
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-classify_objects_by_language-standard-s0-scene0",
+    "event_id": "E0016",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      7
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-deposit_coin-standard-s0-scene0",
+    "event_id": "E0001",
+    "metric_contributions": [
+      "empty_retry"
+    ],
+    "raw_candidate_metric_ids": [
+      5
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/10",
+      "/11"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-deposit_coin-standard-s0-scene0",
+    "event_id": "E0002",
+    "metric_contributions": [
+      "empty_regrasp"
+    ],
+    "raw_candidate_metric_ids": [
+      7
+    ],
+    "recovery_links": [
+      "E0001"
+    ],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/18",
+      "/19"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-deposit_coin-standard-s0-scene0",
+    "event_id": "E0003",
+    "metric_contributions": [
+      "drop"
+    ],
+    "raw_candidate_metric_ids": [
+      6
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/25",
+      "/26"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-deposit_coin-standard-s0-scene0",
+    "event_id": "E0006",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      15
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/14"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-deposit_coin-standard-s0-scene0",
+    "event_id": "E0023",
+    "metric_contributions": [
+      "abandon_near_action"
+    ],
+    "raw_candidate_metric_ids": [
+      17
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17
+      ],
+      "action_term_present": true,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The coin slipped during the cross-body transfer, and the remaining motion budget is insufficient to recover, insert it, and return both arms home.",
+      "source_pointer": "/27",
+      "decision": "靠近动作上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/27"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-fasten_screws-standard-s0-scene0",
+    "event_id": "E0017",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      7
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-fasten_screws-standard-s0-scene0",
+    "event_id": "E0024",
+    "metric_contributions": [
+      "abandon_near_action"
+    ],
+    "raw_candidate_metric_ids": [
+      17
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17
+      ],
+      "action_term_present": true,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "All three matching pairs are assembled and both arms are home, but I could not confirm sufficient tightening depth on the blue pair within the remaining motion-call budget.",
+      "source_pointer": "/95",
+      "decision": "靠近动作上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/95"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-fill_egg_holder-standard-s0-scene0",
+    "event_id": "E0020",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      6,
+      7,
+      8
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/0",
+      "/1",
+      "/2",
+      "/3",
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27",
+      "/28",
+      "/29",
+      "/30",
+      "/31",
+      "/32",
+      "/33",
+      "/34",
+      "/35",
+      "/36",
+      "/37",
+      "/38",
+      "/39",
+      "/40",
+      "/41",
+      "/42",
+      "/43",
+      "/44",
+      "/45",
+      "/46",
+      "/47",
+      "/48",
+      "/49",
+      "/50",
+      "/51",
+      "/52",
+      "/53",
+      "/54",
+      "/55",
+      "/56",
+      "/57",
+      "/58",
+      "/59",
+      "/60",
+      "/61",
+      "/62",
+      "/63",
+      "/64",
+      "/65",
+      "/66",
+      "/67",
+      "/68",
+      "/69",
+      "/70",
+      "/71",
+      "/72",
+      "/73",
+      "/74",
+      "/75",
+      "/76",
+      "/77",
+      "/78",
+      "/79",
+      "/80",
+      "/81",
+      "/82",
+      "/83",
+      "/84",
+      "/85",
+      "/86",
+      "/87",
+      "/88",
+      "/89",
+      "/90",
+      "/91",
+      "/92",
+      "/93",
+      "/94"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-fill_egg_holder-standard-s0-scene0",
+    "event_id": "E0025",
+    "metric_contributions": [
+      "abandon_near_action"
+    ],
+    "raw_candidate_metric_ids": [
+      17
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17
+      ],
+      "action_term_present": true,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Only one egg was placed. The remaining motion budget is insufficient to recover and place the other three eggs and close the lid.",
+      "source_pointer": "/95",
+      "decision": "靠近动作上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/95"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-fold_clothes-random-s0-scene0",
+    "event_id": "E0021",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      5,
+      6
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/0",
+      "/1",
+      "/2",
+      "/3",
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27",
+      "/28",
+      "/29",
+      "/30"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-hang_mugs-random-s0-scene0",
+    "event_id": "E0026",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": true,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Only the red mug is hanging; there is insufficient remaining budget to hang both pink mugs. Both arms are back at their starting poses.",
+      "source_pointer": "/99",
+      "decision": "预算类型不明，四类均未明确记录"
+    },
+    "source_json_pointers": [
+      "/99"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-insert_key-standard-s0-scene0",
+    "event_id": "E0004",
+    "metric_contributions": [
+      "direct_attempts",
+      "direct_success"
+    ],
+    "raw_candidate_metric_ids": [
+      9,
+      10
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-insert_key-standard-s0-scene0",
+    "event_id": "E0007",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      16
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/24",
+      "/25",
+      "/26"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-insert_key-standard-s0-scene0",
+    "event_id": "E0008",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      16
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/39"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-insert_key-standard-s0-scene0",
+    "event_id": "E0009",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      26
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/27",
+      "/28",
+      "/29",
+      "/30",
+      "/31",
+      "/32",
+      "/33",
+      "/34",
+      "/35",
+      "/36",
+      "/37",
+      "/38",
+      "/39",
+      "/40",
+      "/41",
+      "/42",
+      "/43",
+      "/44",
+      "/45",
+      "/46",
+      "/47",
+      "/48",
+      "/49",
+      "/50"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-insert_tubes-standard-s0-scene0",
+    "event_id": "E0027",
+    "metric_contributions": [
+      "abandon_near_action"
+    ],
+    "raw_candidate_metric_ids": [
+      17
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17
+      ],
+      "action_term_present": true,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Insufficient remaining steps to complete the insertions or return home.",
+      "source_pointer": "/47",
+      "decision": "靠近动作上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/47"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-make_kong-standard-s0-scene0",
+    "event_id": "E0028",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The three matching tiles are flat, but I could not safely place the stack tile upright at the row's right end. The carrying arm contacted the idle arm, and subsequent clearance motions were refused.",
+      "source_pointer": "/92",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/92"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-make_toast-random-s0-scene0",
+    "event_id": "E0011",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      6
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/9",
+      "/10",
+      "/11"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-make_toast-random-s0-scene0",
+    "event_id": "E0012",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      9,
+      10
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/27",
+      "/28",
+      "/29",
+      "/30",
+      "/31",
+      "/32",
+      "/33"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-make_toast-random-s0-scene0",
+    "event_id": "E0013",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      26
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/36",
+      "/37",
+      "/38",
+      "/39",
+      "/40",
+      "/41",
+      "/42",
+      "/43",
+      "/44",
+      "/45"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-make_toast-random-s0-scene0",
+    "event_id": "E0029",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Only one slice was inserted. Recovery attempts for the second slice failed; the lever remains unpressed. Both arms are back at their starting poses.",
+      "source_pointer": "/91",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/91"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-organize_table-standard-s0-scene0",
+    "event_id": "E0030",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": true,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Insufficient remaining budget to finish safely. The mouse, keyboard, and clock were placed, and both arms returned home; the figurine and drawer tasks remain incomplete.",
+      "source_pointer": "/92",
+      "decision": "预算类型不明，四类均未明确记录"
+    },
+    "source_json_pointers": [
+      "/92"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-pick_from_conveyor_by_image-standard-s0-scene0",
+    "event_id": "E0031",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The basket slipped during recovery behind the robot and is no longer visible or within the accessible tabletop workspace. I cannot safely complete placement into the lifted basket.",
+      "source_pointer": "/40",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/40"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-play_Xylophone-standard-s0-scene0",
+    "event_id": "E0032",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": true,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "I attempted all eight strikes and returned both arms home, but the environment has not confirmed completion. The remaining budget is insufficient for a reliable full retry.",
+      "source_pointer": "/78",
+      "decision": "预算类型不明，四类均未明确记录"
+    },
+    "source_json_pointers": [
+      "/78"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-play_stacking_toy-standard-s0-scene0",
+    "event_id": "E0033",
+    "metric_contributions": [
+      "abandon_near_turn"
+    ],
+    "raw_candidate_metric_ids": [
+      18
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        18
+      ],
+      "action_term_present": false,
+      "turn_term_present": true,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The remaining decision budget is insufficient to place all four purple stars. The orange, yellow, and blue pieces are on their pegs, and both arms are back at their starting poses.",
+      "source_pointer": "/98",
+      "decision": "靠近turn上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/98"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-play_tic_tac_toe-standard-s0-scene0",
+    "event_id": "E0034",
+    "metric_contributions": [
+      "abandon_near_turn"
+    ],
+    "raw_candidate_metric_ids": [
+      18
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        18
+      ],
+      "action_term_present": false,
+      "turn_term_present": true,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "I cannot fill the board within the remaining decision budget. One ring is placed in the center, and both arms are home; the opponent is still completing its first turn.",
+      "source_pointer": "/97",
+      "decision": "靠近turn上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/97"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "event_id": "E0010",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      6,
+      8
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/0",
+      "/1",
+      "/2",
+      "/3",
+      "/4",
+      "/5",
+      "/6",
+      "/7",
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19",
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27",
+      "/28",
+      "/29",
+      "/30"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-plug_in_charger-standard-s0-scene0",
+    "event_id": "E0035",
+    "metric_contributions": [
+      "abandon_near_action"
+    ],
+    "raw_candidate_metric_ids": [
+      17
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [
+        17
+      ],
+      "action_term_present": true,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": true,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "I could not achieve a reachable upright, socket-aligned insertion pose with the remaining motion budget.",
+      "source_pointer": "/30",
+      "decision": "靠近动作上限主动放弃次数=1"
+    },
+    "source_json_pointers": [
+      "/30"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-pour_balls_into_vase-standard-s0-scene0",
+    "event_id": "E0036",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The balls spilled outside the vase and scattered across the table, so I cannot reliably complete the transfer within this episode.",
+      "source_pointer": "/21",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/21"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-sort_nesting_dolls_by_size-random-s0-scene0",
+    "event_id": "E0037",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": true,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The dolls are in size order and both arms are home, but the row is not sufficiently straight to confirm completion within the remaining budget.",
+      "source_pointer": "/96",
+      "decision": "预算类型不明，四类均未明确记录"
+    },
+    "source_json_pointers": [
+      "/96"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-store_laptop_and_headphones-random-s0-scene0",
+    "event_id": "E0038",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "I could not establish a reliable headphone placement or regrasp after the headphones slipped onto the stand base. The laptop remains unstored.",
+      "source_pointer": "/70",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/70"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-store_tools_in_toolbox-standard-s0-scene0",
+    "event_id": "E0039",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "Unable to complete the remaining placements reliably. Both arms have been reset, but the hammer remains outside and the pliers overlap the tape measure.",
+      "source_pointer": "/93",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/93"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-swap_blocks-standard-s0-scene0",
+    "event_id": "E0040",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The blocks are visibly swapped and both arms are home, but the environment has not confirmed completion after the three attempted presses. I cannot safely repair an unregistered earlier press without violating the required sequence.",
+      "source_pointer": "/46",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/46"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-sweep_blocks-random-s0-scene0",
+    "event_id": "E0005",
+    "metric_contributions": [
+      "direct_attempts",
+      "direct_success"
+    ],
+    "raw_candidate_metric_ids": [
+      9,
+      10
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/8",
+      "/9",
+      "/10",
+      "/11",
+      "/12",
+      "/13",
+      "/14",
+      "/15",
+      "/16",
+      "/17",
+      "/18",
+      "/19"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-sweep_blocks-random-s0-scene0",
+    "event_id": "E0019",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [
+      6,
+      8
+    ],
+    "recovery_links": [],
+    "frame_mapping_status": "inferred_count_consistent_not_authoritative",
+    "budget_self_report": null,
+    "source_json_pointers": [
+      "/20",
+      "/21",
+      "/22",
+      "/23",
+      "/24",
+      "/25",
+      "/26",
+      "/27",
+      "/28",
+      "/29",
+      "/30",
+      "/31",
+      "/32",
+      "/33",
+      "/34",
+      "/35",
+      "/36",
+      "/37",
+      "/38",
+      "/39",
+      "/40",
+      "/41",
+      "/42",
+      "/43",
+      "/44",
+      "/45",
+      "/46",
+      "/47",
+      "/48",
+      "/49",
+      "/50",
+      "/51",
+      "/52",
+      "/53",
+      "/54",
+      "/55",
+      "/56",
+      "/57",
+      "/58",
+      "/59",
+      "/60",
+      "/61",
+      "/62",
+      "/63",
+      "/64",
+      "/65",
+      "/66",
+      "/67",
+      "/68",
+      "/69",
+      "/70",
+      "/71",
+      "/72",
+      "/73",
+      "/74",
+      "/75"
+    ]
+  },
+  {
+    "run_id": "dual42-horizon-medium-20261016-sweep_blocks-random-s0-scene0",
+    "event_id": "E0041",
+    "metric_contributions": [],
+    "raw_candidate_metric_ids": [],
+    "recovery_links": [],
+    "frame_mapping_status": "no_video_assertion",
+    "budget_self_report": {
+      "counted_metric_ids": [],
+      "action_term_present": false,
+      "turn_term_present": false,
+      "generic_budget_only": false,
+      "near_is_usage_proxy": false,
+      "actual_budget_utilization_verified": false,
+      "quoted_reason": "The broom handover succeeded, but I could not reliably sweep all objects into the dustpan. Repeated grasp slips and reach limitations left the pan tipped and the debris outside.",
+      "source_pointer": "/75",
+      "decision": "未自述预算导致放弃"
+    },
+    "source_json_pointers": [
+      "/75"
+    ]
+  }
+]
