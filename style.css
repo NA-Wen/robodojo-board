@@ -38,3 +38,210 @@
 .bc-source{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding:18px;background:#f0f5ec;border:1px solid #d5e1ce;border-radius:8px;margin-bottom:14px;font-size:12px}.bc-source>div{flex:1 1 300px}.bc-source p{font-size:11px;color:#718269;margin-top:5px}.source-links{line-height:1.9;margin:12px 0}.source-links a{color:#216950;text-decoration:underline}.source-links small{display:block;color:#718269}.source-notes{padding-left:18px;line-height:1.8;margin:12px 0}.setting-panel dd{overflow-wrap:anywhere}
 .bc-rings{flex-wrap:wrap}.bc-ring-item{min-width:0}.bc-ring-item .bc-legend{white-space:normal;justify-content:center;text-align:center;max-width:190px}.bc-series-name{min-width:0}.bc-series-name .bc-legend{white-space:normal;overflow-wrap:anywhere}.bc-global-legend .bc-legend{white-space:normal;overflow-wrap:anywhere}
 @media(max-width:800px){.bc-rings{gap:22px}.bc-ring-item{flex:0 1 140px}.bc-pending-line .bc-legend{white-space:normal;overflow-wrap:anywhere}.bc-global-legend{gap:12px}.bc-source .button{font-size:11px}}
+
+/* ============================================================
+   LIGHT THEME / 浅色版
+   柔和纸底 + 白卡片 + 深墨绿主色，轻阴影、柔圆角、发丝描边。
+   ============================================================ */
+:root{
+  --paper:#f6f7f5;  --card:#ffffff;
+  --ink:#17211d;    --ink-soft:#4a574f;  --muted:#78837c;
+  --hair:#e7eae6;   --hair-strong:#d6dbd5;
+  --accent:#14654e; --accent-soft:#e8f2ee; --accent-line:#bcd8cd;
+  --warm:#b1773d;   --warm-soft:#f7efe4;
+  --shadow-sm:0 1px 2px rgba(23,33,29,.05), 0 1px 3px rgba(23,33,29,.04);
+  --shadow-md:0 4px 14px rgba(23,33,29,.07), 0 1px 3px rgba(23,33,29,.05);
+  --bg:var(--paper); --panel:var(--card); --line:var(--hair);
+  --green:var(--accent); --green-soft:var(--accent-soft);
+  --orange:var(--warm); --orange-soft:var(--warm-soft);
+  --nav:#ffffff;
+}
+body{background:var(--paper);color:var(--ink);font-size:14px;-webkit-font-smoothing:antialiased}
+::selection{background:#d9ece4;color:#0d3f31}
+
+/* 侧栏：浅色、发丝分隔、选中态用淡绿块 */
+.sidebar{background:var(--nav);color:var(--ink);border-right:1px solid var(--hair);
+  box-shadow:1px 0 0 rgba(23,33,29,.02)}
+.brand{color:var(--ink)}
+.brand-icon{border:1px solid var(--accent-line);border-radius:9px;color:var(--accent);
+  background:var(--accent-soft)}
+.brand-icon span{color:var(--accent)}
+.brand small{color:var(--muted);letter-spacing:1.6px}
+.workspace{border:1px solid var(--hair);border-radius:8px;color:var(--ink-soft);background:#fbfcfb}
+.status-dot{background:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.nav-label{color:var(--muted)}
+.sidebar nav{gap:4px}
+.sidebar nav a{color:var(--ink-soft);border-radius:8px;border-left:0;padding:10px 12px;
+  transition:background .15s,color .15s}
+.sidebar nav a:hover{background:#f1f4f1;color:var(--ink)}
+.sidebar nav a[aria-current="page"],.sidebar nav a.active{
+  background:var(--accent-soft);color:#0f4d3b;font-weight:600}
+.sidebar nav a>span{opacity:.6}
+.sidebar-bottom{color:var(--muted);border-top:1px solid var(--hair);padding-top:18px}
+.sidebar-bottom b{color:var(--ink)}
+.sidebar-bottom a{color:var(--ink-soft);border-bottom:1px solid transparent}
+.sidebar-bottom a:hover{color:var(--accent);border-bottom-color:var(--accent-line)}
+.dataset-icon{border:1px solid var(--hair-strong);border-radius:8px;color:var(--accent);background:#fbfcfb}
+
+/* 顶栏 / 页脚 */
+.topbar{border-bottom:1px solid var(--hair);background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(1.1) blur(8px)}
+.breadcrumb{color:var(--muted)}
+.top-meta{color:var(--muted)}
+.snapshot{color:var(--accent);font-weight:500}
+footer{border-top:1px solid var(--hair);color:var(--muted)}
+
+/* 标题：收紧字距，弱化彩色，靠大小和字重分层 */
+h1,h2,h3{letter-spacing:-.018em;color:var(--ink)}
+h1{font-weight:650}
+.eyebrow{color:var(--accent);letter-spacing:.2em;font-weight:600;opacity:.85}
+.subtitle{color:var(--ink-soft)}
+
+/* 卡片：白底、柔圆角、轻阴影 */
+.panel,.bc-card,.entry-card,.setting-panel,.table-panel{
+  background:var(--card);border:1px solid var(--hair);border-radius:12px;
+  box-shadow:var(--shadow-sm)}
+
+/* 指标卡 */
+.metric{border:1px solid var(--hair);border-radius:12px;background:var(--card);
+  box-shadow:var(--shadow-sm);transition:box-shadow .18s,transform .18s}
+.metric:hover{box-shadow:var(--shadow-md)}
+.metric-value{color:var(--ink);font-weight:650;letter-spacing:-.03em}
+.metric-title{color:var(--ink-soft)}
+.metric-bottom,.metric-values{color:var(--muted)}
+
+/* 按钮：主色实心 / 次色描边 */
+.button,.icon-button{
+  border:1px solid var(--hair-strong);background:var(--card);color:var(--ink);
+  border-radius:8px;font-weight:500;box-shadow:var(--shadow-sm);
+  transition:background .15s,border-color .15s,color .15s,box-shadow .15s}
+.button:hover,.icon-button:hover{border-color:var(--accent-line);background:var(--accent-soft);
+  color:#0f4d3b}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* 表单：柔和描边，聚焦时主色环 */
+select,input[type=text],input[type=search]{
+  border:1px solid var(--hair-strong);border-radius:8px;background:var(--card);
+  color:var(--ink);transition:border-color .15s,box-shadow .15s}
+select:hover,input[type=text]:hover{border-color:var(--accent-line)}
+select:focus,input[type=text]:focus,select:focus-visible{
+  border-color:var(--accent)!important;box-shadow:0 0 0 3px var(--accent-soft)}
+.scope-panel{background:var(--card);border:1px solid var(--hair);border-radius:12px;
+  box-shadow:var(--shadow-sm)}
+.scope-head b{color:var(--ink)}
+.scope-controls label{color:var(--ink-soft);font-weight:500}
+.scope-panel>small{color:var(--muted)}
+#scope-summary{color:var(--ink-soft)}
+#scope-summary strong{color:var(--accent);font-weight:650}
+
+/* 标签：淡底柔角 */
+.tag,.group-pill,.badge{
+  background:#f3f6f3;color:var(--ink-soft);border:1px solid var(--hair);
+  border-radius:999px;font-weight:500;padding:2px 9px}
+.tag.warning,.tag[class*="warn"]{background:var(--warm-soft);color:#8a5a26;
+  border-color:#e8d3b6;font-weight:600}
+.group-pill{background:var(--card);border-color:var(--hair-strong);color:var(--ink);
+  border-radius:6px;font-size:11px;display:inline-flex;align-items:center;gap:6px;
+  padding:1px 8px;white-space:nowrap}
+.group-pill .sw{width:8px;height:8px;border-radius:2px;display:inline-block;flex:0 0 auto}
+.pending{color:var(--muted)}
+
+/* 表格：柔和表头、行悬停淡绿 */
+table{border-collapse:separate;border-spacing:0}
+th{background:#fafbf9;color:var(--muted);font-weight:600;border-bottom:1px solid var(--hair-strong);
+  letter-spacing:.02em}
+td{border-bottom:1px solid #f0f2ef}
+tbody tr:hover td{background:#f8faf8}
+.matrix th{background:#fafbf9}
+.matrix td:first-child{background:var(--card)}
+.matrix tbody tr:hover td:first-child{background:#f8faf8}
+
+/* 图表 */
+.bc-section-nav{background:var(--card);border:1px solid var(--hair);border-radius:10px;
+  box-shadow:var(--shadow-sm);overflow:hidden}
+.bc-section-nav button{border-right:1px solid var(--hair);transition:background .15s,color .15s}
+.bc-section-nav button:hover{background:var(--accent-soft)}
+.bc-section-number{background:var(--accent-soft);border:1px solid var(--accent-line);
+  border-radius:6px;color:#0f4d3b;font-weight:600}
+.bc-section-head p,.bc-section-description{color:var(--muted)}
+.bc-legend{color:var(--ink-soft)}
+.bc-legend i{border-radius:2px}
+.bc-track{background:#eef1ee!important;border-radius:999px}
+.bc-source{background:#fafbf9;border:1px solid var(--hair);border-radius:10px}
+.bc-source p{color:var(--muted)}
+.bc-global-legend{border-bottom:1px dashed var(--hair);padding-bottom:10px}
+
+/* 证据 / 链接 */
+.evidence-row{border-top:1px solid var(--hair)}
+.evidence-row:hover{background:#fafbf9}
+.ev-meta{color:var(--muted)}
+.evidence-row a,.source-links a,.entry-links a{color:var(--accent);text-decoration:none;
+  border-bottom:1px solid var(--accent-line)}
+.evidence-row a:hover,.source-links a:hover{border-bottom-color:var(--accent)}
+.source-links small,.evidence-note,.video-list small{color:var(--muted)}
+
+/* 代码块 */
+.code-block{background:#10231c;color:#e8f1ec;border-radius:10px;box-shadow:var(--shadow-sm);
+  white-space:pre-wrap;overflow-wrap:anywhere}
+code{background:#f1f4f1;border:1px solid var(--hair);border-radius:5px;padding:0 5px;color:#0f4d3b}
+.code-block code{background:none;border:0;padding:0;color:inherit}
+pre.code-block code{color:inherit;background:none}
+.mono-sm,.run-id{color:var(--muted)}
+
+/* 事件卡 */
+.event-list{gap:9px}
+.event-card{border:1px solid var(--hair);border-radius:10px;background:var(--card);
+  box-shadow:var(--shadow-sm);transition:border-color .15s,box-shadow .15s}
+.event-card:hover{border-color:var(--accent-line);box-shadow:var(--shadow-md)}
+.event-summary{padding:11px 14px;background:transparent}
+.event-icon{border:1px solid var(--accent-line);border-radius:50%;color:var(--accent);
+  background:var(--accent-soft);width:24px;height:24px;font-size:11px}
+.event-card[open]{border-color:var(--accent-line);box-shadow:var(--shadow-md)}
+.event-text>b{color:var(--ink)}
+.event-text small{line-height:1.5}
+
+/* 弹窗 */
+dialog{border:1px solid var(--hair);border-radius:14px;box-shadow:0 24px 64px rgba(16,32,26,.18)}
+dialog::backdrop{background:rgba(18,32,26,.42);backdrop-filter:blur(2px)}
+.dialog-head{border-bottom:1px solid var(--hair);color:var(--muted)}
+.detail-score{background:#fafbf9;border:1px solid var(--hair);border-radius:10px}
+.detail-score b{color:var(--ink);font-weight:650}
+.toast{background:#10231c;color:#fff;border-radius:8px;box-shadow:var(--shadow-md)}
+
+/* 节奏 */
+.panel+.panel{margin-top:18px}
+.bc-section{margin-bottom:30px}
+.metric{padding:16px 18px}
+
+/* ---- 收尾打磨：浅色代码块、去闷灰、柔和提示条 ---- */
+/* 代码块改为浅底，避免在浅色页面里出现一大块深色 */
+.code-block{background:#f8faf7;color:#22322b;border:1px solid var(--hair);
+  border-left:3px solid var(--accent-line);box-shadow:none;padding:14px 16px}
+pre.code-block code,.code-block code{color:inherit;background:none;border:0}
+
+/* 内层入口面板：白底发丝线，不再嵌套灰块 */
+.entry-card{background:var(--card)!important;border:1px solid var(--hair)!important;
+  border-radius:10px;box-shadow:none}
+.entry-card h3,.entry-card b{color:var(--ink)}
+.entry-card p{color:var(--muted)}
+.entry-links a{color:var(--accent)}
+.entry-links li,.entry-card li{border-top:1px dashed var(--hair)}
+
+/* 提示条：中性底 + 左侧主色细条，比整块暖色更克制 */
+.notice{background:#fbfcfa!important;border:1px solid var(--hair)!important;
+  border-left:3px solid var(--warm)!important;border-radius:8px;color:var(--ink-soft)}
+.notice b,.notice strong{color:var(--ink)}
+
+/* 徽标与标签再柔一点 */
+.tag,.badge{background:#f4f7f4;border-color:#e6ebe6;color:var(--ink-soft)}
+.group-pill{border-color:#e2e7e2}
+.event-icon{background:var(--accent-soft);border-color:var(--accent-line)}
+
+/* 正文对比度 */
+.metric-title,.scope-controls label,td{color:var(--ink)}
+.muted,small,.metric-bottom{color:var(--muted)}
+
+/* 表格：行高略收，表头更轻 */
+td{padding-top:9px;padding-bottom:9px}
+th{font-size:11px;text-transform:none}

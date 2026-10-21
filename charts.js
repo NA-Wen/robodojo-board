@@ -1,8 +1,9 @@
 /* Homepage charts share the exact selected runs used by the task and event pages. */
 window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings}) {
   const active = groups.filter(g => runs.some(r => r.g.id === g.id));
-  const colors = {semantic:'#216950', persistent:'#c57b43'};
-  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || '#596fa4'}));
+  const PAL=['#14654e','#b1773d','#4a5c8f','#8a6a86','#6f8a4a'];
+  const colors = {semantic:PAL[0], persistent:PAL[1]};
+  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || PAL[active.indexOf(g)%PAL.length]}));
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
   const label = g => `<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`;
   const valueOf = (r,key) => key==='viewMotions' ? (r.c.counts.view_motions ?? null) : key==='viewOppositeStages' ? (r.c.submission_version?r.c.metrics.viewOpposite:(r.c.counts.view_motions??null)) : key==='viewEpisodes' ? (r.c.counts.view_episodes??r.c.metrics.viewOpposite??null) : r.c.metrics[key];
