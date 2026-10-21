@@ -44,7 +44,7 @@ def _collect(groups, key):
     return {v for v in vals if v is not None}
 
 
-def merge_into_site(dist, incoming_dir):
+def merge_into_site(dist, incoming_dir, only=None):
     """把 incoming/*.json 合并进 data.js / audit-data.json（不依赖原始数据）。
 
     原则：只增不减。既有 filters 内容原样保留，新值并入；不认识的键不碰。
@@ -53,7 +53,8 @@ def merge_into_site(dist, incoming_dir):
     groups = data['groups']
     index = {g['id']: i for i, g in enumerate(groups)}
     added, replaced = [], []
-    for path in sorted(glob.glob(os.path.join(incoming_dir, '*.json'))):
+    paths = ([only] if only else sorted(glob.glob(os.path.join(incoming_dir, '*.json'))))
+    for path in paths:
         group = json.load(open(path, encoding='utf-8'))
         if group['id'] in index:
             groups[index[group['id']]] = group
@@ -120,11 +121,15 @@ def merge_into_site(dist, incoming_dir):
         settings.append(entry)
     filters['settings'] = settings
 
-    paired_n = len(paired)
-    filters['pairedTasks'] = paired_n
+    # 配对口径由看板构建方决定（可能按 task+variant+seed+scene），
+    # 增量并入不重算既有值，只在缺失时按 task 级别兜底。
+    if filters.get('pairedTasks') is None:
+        filters['pairedTasks'] = len(paired)
+    if data.get('pairedTasks') is None:
+        data['pairedTasks'] = filters['pairedTasks']
     if not filters.get('note'):
-        filters['note'] = f"{len(groups)} 个实验设置，{paired_n} 个任务至少有 2 个设置的结果。"
-    data['pairedTasks'] = paired_n
+        filters['note'] = (f"{len(groups)} 个实验设置，"
+                           f"{filters['pairedTasks']} 个任务至少有 2 个设置的结果。")
 
     (open(os.path.join(dist, 'data.js'), 'w', encoding='utf-8')
      .write('window.AUDIT_DATA=' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';'))
@@ -281,7 +286,8 @@ def main(argv):
     print(f"组 {group['id']}：{len(group['cases'])} 个 run，"
           f"{sum(len(c['events']) for c in group['cases'])} 个事件")
     if do_merge:
-        added, replaced = merge_into_site(board, out_dir)
+        added, replaced = merge_into_site(
+            board, out_dir, only=out)
         print(f'已合并进 data.js：新增 {added or "无"}；更新 {replaced or "无"}')
         print('刷新看板即可看到新组（无需原始数据）。')
     else:
