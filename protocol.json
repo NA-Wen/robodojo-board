@@ -306,6 +306,11 @@
       "value": "unknown",
       "label": "未知",
       "rule": "数据缺失或定义无法核实。"
+    },
+    {
+      "value": "pending",
+      "label": "待审核",
+      "rule": "核查尚未完成；指标值留空，旧值单列保留。有任何待审核项时只能交付阶段性结果，不得写NA或0冒充完成。"
     }
   ],
   "cross_rules": [
@@ -533,7 +538,7 @@
       "submission.json 通过 JSON Schema；schema_version 正确。",
       "组的 setting 必填：setting_id、profile 或明确的 null + 原因；不得用组名代替配置。",
       "run_id 全局唯一；同一 (task, variant, scene, seed) 允许多条，但必须各自有 run_id 并标记 repeat。",
-      "每个 run 含全部 26 项指标，且每项都有 status（confirmed / lower_bound / na / unknown）。",
+      "每个 run 含全部 26 项指标，且每项都有 status（confirmed / lower_bound / na / unknown / pending）。",
       "success==1 时 score 必须为 1；success==0 时 score<1 或 null。",
       "direct_success ≤ direct_attempts；table_success ≤ table_attempts；support_success ≤ support_attempts。",
       "掉落后重夹 ≤ 掉落次数；空夹后重夹 ≤ 空夹次数。",
@@ -615,7 +620,7 @@
     ],
     [
       "runs[].metric_status",
-      "每项指标的核查状态，取值 confirmed / lower_bound / na / unknown。"
+      "每项指标的核查状态，取值 confirmed / lower_bound / na / unknown / pending。"
     ],
     [
       "runs[].configuration",

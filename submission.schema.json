@@ -112,7 +112,8 @@
         "confirmed",
         "lower_bound",
         "na",
-        "unknown"
+        "unknown",
+        "pending"
       ]
     },
     "media": {

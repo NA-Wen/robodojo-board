@@ -88,6 +88,7 @@ run_id,group,task,variant,scene,seed,capability,setting_id,success,score,turns,a
 | --- | --- | --- |
 | `confirmed` | 已确认 | 有明确执行与视觉证据。 |
 | `lower_bound` | 确认下界 | 只确认到已核对范围内的发生次数，连续时间可能存在遗漏。 |
+| `pending` | 待审核 | 核查尚未完成；指标值留空，旧版值单列。有任何待审核项时只能交付阶段性结果，不得写NA或0冒充完成。 |
 | `na` | 未覆盖 / 不适用 | 该类别不在本次核查范围内，不能读作 0。 |
 | `unknown` | 未知 | 数据缺失或定义无法核实。 |
 
@@ -323,7 +324,7 @@ run_id,group,task,variant,scene,seed,capability,setting_id,success,score,turns,a
 | `runs[].task / variant / scene / seed / capability` | 任务条件键，看板按这五项筛选与配对。 |
 | `runs[].result` | 原生结果：success、score、turns、actions，不用模型自述替代。 |
 | `runs[].metrics` | 26 项指标；未知写 null，不要写 0。 |
-| `runs[].metric_status` | 每项指标的核查状态，取值 confirmed / lower_bound / na / unknown。 |
+| `runs[].metric_status` | 每项指标的核查状态，取值 confirmed / lower_bound / na / unknown / pending。 |
 | `runs[].configuration` | 实际生效配置快照，用于跨组对比与复现。 |
 | `runs[].videos[]` | 三视角原始视频：camera、url（公开直链或 null）、sha256、bytes。 |
 | `runs[].artifacts[]` | 原生产物（native_terminal / actions / config / source_lock）及哈希。 |
@@ -336,7 +337,7 @@ run_id,group,task,variant,scene,seed,capability,setting_id,success,score,turns,a
 1. submission.json 通过 JSON Schema；schema_version 正确。
 2. 组的 setting 必填：setting_id、profile 或明确的 null + 原因；不得用组名代替配置。
 3. run_id 全局唯一；同一 (task, variant, scene, seed) 允许多条，但必须各自有 run_id 并标记 repeat。
-4. 每个 run 含全部 26 项指标，且每项都有 status（confirmed / lower_bound / na / unknown）。
+4. 每个 run 含全部 26 项指标，且每项都有 status（confirmed / lower_bound / na / unknown / pending）。
 5. success==1 时 score 必须为 1；success==0 时 score<1 或 null。
 6. direct_success ≤ direct_attempts；table_success ≤ table_attempts；support_success ≤ support_attempts。
 7. 掉落后重夹 ≤ 掉落次数；空夹后重夹 ≤ 空夹次数。
@@ -440,3 +441,8 @@ issue 入口：https://github.com/NA-Wen/robodojo-board/issues/new?template=subm
 ---
 
 看板不托管图片或视频。事件证据必须给出公开可访问的原始文件 URL；没有公开 URL 时写 `url: null` 并给出 `sha256`，看板只显示文字证据。
+
+
+### 完整观看审计的完成门槛
+
+对要求三路视频全程观看的审计，必须提供 `review_coverage.csv`，逐 run、逐视角记录实际观看区间、可播放帧数/时长、损坏区间和重点复核区间。解码、元数据、生成关键帧及无人观察的播放不算观看。失败、提前结束与无明显异常的 run 均包含。所有 26 项须有审核状态；有 pending 时可入库为阶段性结果，但不能宣称审核完成。已有证据不足的候选单列保留定位与原因。
