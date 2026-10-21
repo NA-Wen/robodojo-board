@@ -20639,6 +20639,210 @@
           ]
         }
       ]
+    },
+    {
+      "id": "exp-2026-10-selftest",
+      "name": "CI 自检组",
+      "coverage": "三视角视频逐 turn 核查",
+      "setting": {
+        "id": "sha256:6f1c…",
+        "label": "CI 自检组",
+        "source": "submission.json → group.setting",
+        "values": [
+          {
+            "name": "profile",
+            "value": "persistent",
+            "known": true
+          },
+          {
+            "name": "native_control_cap",
+            "value": 20,
+            "known": true
+          },
+          {
+            "name": "max_decisions",
+            "value": 100,
+            "known": true
+          },
+          {
+            "name": "model",
+            "value": "gpt-5.6-sol",
+            "known": true
+          },
+          {
+            "name": "client_version",
+            "value": "robodojo-l3/1.4.2",
+            "known": true
+          }
+        ],
+        "unknown_reason": null
+      },
+      "methodology": [
+        "三视角视频逐 turn 核查"
+      ],
+      "totals": {
+        "cases": 1,
+        "success": 0,
+        "uncertain": 0,
+        "turns": 21,
+        "empty_retry": 1,
+        "drop": 1
+      },
+      "cases": [
+        {
+          "run_id": "selftest-align_blocks-standard-s0-scene0",
+          "configuration": {
+            "profile": "persistent",
+            "max_decisions": 100,
+            "native_control_cap": 20
+          },
+          "task": "align_blocks",
+          "instruction": "align_blocks",
+          "note": "",
+          "score": 0.0,
+          "episode": {
+            "capability": "open",
+            "scene": 0,
+            "seed": 0,
+            "task": "align_blocks",
+            "variant": "standard"
+          },
+          "controls": 214,
+          "decisions": null,
+          "turns": 21,
+          "counts": {},
+          "metrics": {
+            "success": 0,
+            "score": 0.0,
+            "turns": 21,
+            "actions": 214,
+            "emptyRetry": 2,
+            "drops": 1,
+            "emptyRegrasp": 1,
+            "dropRegrasp": 0,
+            "directAttempts": 1,
+            "directSuccess": 1,
+            "tableAttempts": 0,
+            "tableSuccess": 0,
+            "supportAttempts": 0,
+            "supportSuccess": 0,
+            "viewSame": 3,
+            "viewOpposite": 1,
+            "abandonNearAction": 0,
+            "abandonNearTurn": 1,
+            "abandonActionLimit": 0,
+            "abandonTurnLimit": 0,
+            "collisionArms": 0,
+            "collisionArmObject": 1,
+            "collisionArmTable": 0,
+            "knockdown": 0,
+            "wrongObject": 0,
+            "finePlacementFail": 1,
+            "uncertain": 0,
+            "recoveryOther": 0,
+            "lowerBound": true
+          },
+          "metricStatus": {
+            "success": "confirmed",
+            "score": "confirmed",
+            "turns": "confirmed",
+            "actions": "confirmed",
+            "empty_retry": "confirmed",
+            "drop": "confirmed",
+            "empty_regrasp": "confirmed",
+            "drop_regrasp": "confirmed",
+            "direct_attempts": "confirmed",
+            "direct_success": "confirmed",
+            "table_attempts": "confirmed",
+            "table_success": "confirmed",
+            "support_attempts": "confirmed",
+            "support_success": "confirmed",
+            "view_same": "confirmed",
+            "view_opposite": "confirmed",
+            "abandon_near_action": "confirmed",
+            "abandon_near_turn": "confirmed",
+            "abandon_action_limit": "confirmed",
+            "abandon_turn_limit": "confirmed",
+            "collision_arms": "confirmed",
+            "collision_arm_object": "confirmed",
+            "collision_arm_table": "confirmed",
+            "knockdown": "na",
+            "wrong_object": "confirmed",
+            "fine_placement_fail": "lower_bound"
+          },
+          "events": [
+            {
+              "id": "selftest-01",
+              "category": "empty_retry",
+              "object": "block_2",
+              "arm": "左",
+              "note": "未夹住，随后重试成功（依据：head 第 175–225 帧；左腕 62–70）",
+              "confidence": "确认",
+              "turn_precision": "exact",
+              "time_range": null,
+              "turns": [
+                7,
+                9
+              ],
+              "view_motion_turns": [],
+              "evidence": [
+                {
+                  "turn": 7,
+                  "env_step": 62,
+                  "frame": 220,
+                  "time_range": null,
+                  "precision": "exact",
+                  "cameras": [
+                    "head"
+                  ]
+                }
+              ],
+              "uncertain_reason": null
+            },
+            {
+              "id": "selftest-02",
+              "category": "drop",
+              "object": "block_2",
+              "arm": "左",
+              "note": "提拉过程中失持，无法对应到具体轮次（依据：连续视频 10.4–11.2s，头部相机第 260 帧附近）",
+              "confidence": "确认",
+              "turn_precision": "unknown",
+              "time_range": [
+                10.4,
+                11.2
+              ],
+              "turns": [],
+              "view_motion_turns": [],
+              "evidence": [
+                {
+                  "turn": null,
+                  "env_step": null,
+                  "frame": 260,
+                  "time_range": [
+                    10.4,
+                    11.2
+                  ],
+                  "precision": "unknown",
+                  "cameras": [
+                    "head"
+                  ]
+                }
+              ],
+              "uncertain_reason": null
+            }
+          ],
+          "gallery": [],
+          "videos": [
+            {
+              "key": "head",
+              "name": "头部",
+              "url": "https://example.org/runs/x/head.mp4",
+              "sha256": "4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9",
+              "bytes": 342139
+            }
+          ]
+        }
+      ]
     }
   ],
   "labels": {
@@ -21527,384 +21731,48 @@
   },
   "filters": {
     "tasks": [
-      {
-        "name": "align_blocks",
-        "instruction": "Use the set square to push the three blocks into a straight, aligned row, then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "arrange_largest_number",
-        "instruction": "Arrange the numbers from left to right to form the largest possible number, and place them on the pad.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "build_tower",
-        "instruction": "Build a tower using the wooden blocks and wooden boards.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "classify_objects",
-        "instruction": "Sort the objects by category into the three baskets.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "classify_objects_by_language",
-        "instruction": "Put car objects into the left basket, watch objects into the middle basket, and wooden_toy objects into the right basket, then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "cover_blocks",
-        "instruction": "Cover the blocks from left to right, remember their colors, then uncover them in the order: red, green, and blue.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "deposit_coin",
-        "instruction": "Pick up the coin from the holder and insert it precisely into the coin bank.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "fasten_screws",
-        "instruction": "Insert and tighten each screw into the nut of the same color.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "fill_egg_holder",
-        "instruction": "Place the four eggs from the basket into the egg holder, then close the lid.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "fill_pen_holder",
-        "instruction": "Hold the pen holder with one hand, place all pens into it with the other hand, then put it back down.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "fold_clothes",
-        "instruction": "Fold the clothes neatly.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "general_pickup",
-        "instruction": "Pick up the mint green scissors by 10 cm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "hang_mugs",
-        "instruction": "Hang all the mugs on the mug rack.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "imitate_sorting_sequence",
-        "instruction": "Observe the object placement order, remember it, then place the corresponding objects into the basket in the same order.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "insert_key",
-        "instruction": "Pick up the key, hand it over to the other hand, insert it into the keyhole, then turn it.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "insert_tubes",
-        "instruction": "Insert the three tubes into the rack one by one.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "make_kong",
-        "instruction": "Wait for the opponent to discard a tile, then declare a kong with the matching tiles.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "make_toast",
-        "instruction": "Pick up two slices of bread, place them into the toaster, and press the lever down.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "match_and_pick_from_conveyor",
-        "instruction": "Remember the first object on the conveyor, then pick the matching object when it appears again.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "organize_table",
-        "instruction": "Place the mouse on the mouse pad, push the keyboard into the frame, put the figurine on the stand, place the alarm clock on the drawer, then open the drawer and put all remaining miscellaneous items inside.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "pack_objects_into_box",
-        "instruction": "Place all the objects into the box with their front sides facing left.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "pick_from_conveyor_by_image",
-        "instruction": "Lift the basket more than 8 cm, identify the target object on the conveyor according to the image on the board, pick it up, and place it into the basket.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "play_Xylophone",
-        "instruction": "Pick up the mallet and strike all xylophone keys from left to right.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "play_stacking_toy",
-        "instruction": "Place all stacking toy pieces onto the correct pegs.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "play_tic_tac_toe",
-        "instruction": "Play tic-tac-toe as the first player and fill the board with the opponent.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "plug_in_charger",
-        "instruction": "Plug the charger into the power strip.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "pour_balls_into_vase",
-        "instruction": "Pour all the balls from the cup into the vase.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Precision",
-        "paired": true
-      },
-      {
-        "name": "pour_by_language",
-        "instruction": "Pour the liquid from the first violet bottle into the first black bowl, from the second red bottle into the second white bowl, and from the third turquoise bottle into the third brown bowl. Then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "pour_liquid_into_cup",
-        "instruction": "Pour the liquid from the bottle into the cup.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "press_by_number",
-        "instruction": "Press the two red buttons the required number of times according to the number cards, then press the blue button to confirm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "push_T",
-        "instruction": "Push the T-shaped block to align it precisely with the gray T-shaped pad.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "put_bottles_into_dustbin",
-        "instruction": "Pick up the bottles and throw them into the dustbin, using handover when needed.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Long-Horizon",
-        "paired": true
-      },
-      {
-        "name": "solve_equation",
-        "instruction": "Complete the equation by selecting the correct missing number or operator and placing it on the pad, then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "sort_nesting_dolls_by_size",
-        "instruction": "Arrange the five nesting dolls in a row from left to right, from smallest to largest.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "stack_blocks",
-        "instruction": "Stack the three blocks with different textures.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "stack_blocks_by_language",
-        "instruction": "stack the blocks from bottom to top in the order of blue, yellow, and orange, then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "stack_bowls",
-        "instruction": "Stack the three bowls together.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "store_laptop_and_headphones",
-        "instruction": "Hang the headphones on the headphone stand, close the laptop, then place it into the vertical laptop stand.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      },
-      {
-        "name": "store_tools_in_toolbox",
-        "instruction": "Place each tool into its matching position in the toolbox, then reset the robot arm.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Open",
-        "paired": true
-      },
-      {
-        "name": "swap_T",
-        "instruction": "Pick up the two T-shaped blocks, swap their positions, and place them back with the correct orientations.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "swap_blocks",
-        "instruction": "Swap the two blocks using the empty mat, pressing the button after each move.",
-        "variant": "standard",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Memory",
-        "paired": true
-      },
-      {
-        "name": "sweep_blocks",
-        "instruction": "Pick up the broom, hand it over to the right hand, then use the dustpan to sweep the objects.",
-        "variant": "random",
-        "seed": 0,
-        "scene": 0,
-        "capability": "Generalization",
-        "paired": true
-      }
+      "align_blocks",
+      "arrange_largest_number",
+      "build_tower",
+      "classify_objects",
+      "classify_objects_by_language",
+      "cover_blocks",
+      "deposit_coin",
+      "fasten_screws",
+      "fill_egg_holder",
+      "fill_pen_holder",
+      "fold_clothes",
+      "general_pickup",
+      "hang_mugs",
+      "imitate_sorting_sequence",
+      "insert_key",
+      "insert_tubes",
+      "make_kong",
+      "make_toast",
+      "match_and_pick_from_conveyor",
+      "organize_table",
+      "pack_objects_into_box",
+      "pick_from_conveyor_by_image",
+      "play_Xylophone",
+      "play_stacking_toy",
+      "play_tic_tac_toe",
+      "plug_in_charger",
+      "pour_balls_into_vase",
+      "pour_by_language",
+      "pour_liquid_into_cup",
+      "press_by_number",
+      "push_T",
+      "put_bottles_into_dustbin",
+      "solve_equation",
+      "sort_nesting_dolls_by_size",
+      "stack_blocks",
+      "stack_blocks_by_language",
+      "stack_bowls",
+      "store_laptop_and_headphones",
+      "store_tools_in_toolbox",
+      "swap_T",
+      "swap_blocks",
+      "sweep_blocks"
     ],
     "seeds": [
       0
@@ -21921,25 +21789,32 @@
       "Long-Horizon",
       "Memory",
       "Open",
-      "Precision"
+      "Precision",
+      "open"
     ],
     "settings": [
       {
         "id": "semantic",
         "name": "semantic-eef",
         "label": "semantic-eef",
-        "coverage": "稀疏动作前观测"
+        "coverage": ""
       },
       {
         "id": "persistent",
         "name": "persistent-cap20",
         "label": "persistent-cap20",
-        "coverage": "动作前观测 + 视频片段补查"
+        "coverage": ""
+      },
+      {
+        "id": "exp-2026-10-selftest",
+        "name": "CI 自检组",
+        "label": "CI 自检组",
+        "coverage": ""
       }
     ],
-    "pairedTasks": 42,
-    "note": "当前每个 task 在每个实验设置下只有 1 个 episode；seed 与 scene 各只有 1 个取值。"
+    "pairedTasks": 1,
+    "note": "3 个实验设置，1 个任务在所有组中都有记录。"
   },
-  "pairedTasks": 42,
-  "matchedEpisodes": 42
+  "pairedTasks": 1,
+  "matchedEpisodes": 1
 }
