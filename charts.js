@@ -1,7 +1,7 @@
 /* Homepage charts share the exact selected runs used by the task and event pages. */
 window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings}) {
   const active = groups.filter(g => runs.some(r => r.g.id === g.id));
-  const PAL=['#14654e','#b1773d','#4a5c8f','#8a6a86','#6f8a4a'];
+  const PAL=['#58A165','#E68A36','#438FC4','#9474B5','#CF626D'];
   const colors = {semantic:PAL[0], persistent:PAL[1]};
   const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || PAL[active.indexOf(g)%PAL.length]}));
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
@@ -58,7 +58,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     list.sort((a,b)=>b.score-a.score);
     const used=series.filter(g=>list.some(x=>x.vals.some(v=>v.g.id===g.id)));
     const max=axisMax(Math.max(...list.flatMap(x=>x.vals.map(v=>v.v)),1e-9));
-    const slot=Math.max(66,30+9*used.length);
+    const slot=Math.max(78,34+10*used.length);
     const PL=44,PR=10,PT=12,PB=18,H=210;
     const W=Math.round(PL+PR+slot*list.length);
     const bw=Math.min(16,(slot-8)/used.length);
@@ -229,7 +229,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     const N=sets.length;
     const jac=(a,b)=>{let both=0,either=0;for(const s of sets){const A=s.has(a),B=s.has(b);if(A&&B)both++;if(A||B)either++;}return either?both/either:0;};
     const diag=a=>sets.filter(s=>s.has(a)).length/N;
-    const tint=v=>v<=0?'transparent':`rgba(20,101,78,${(0.06+Math.min(1,v)*0.74).toFixed(2)})`;
+    const tint=v=>v<=0?'transparent':`rgba(45,107,70,${(0.06+Math.min(1,v)*0.74).toFixed(2)})`;
     const head=`<div class="bc-co-row bc-co-head"><span></span>${CATS.map(([k,n])=>`<span>${n}</span>`).join('')}</div>`;
     const body=CATS.map(([ka,na])=>`<div class="bc-co-row"><span class="bc-co-name">${na}</span>${CATS.map(([kb,nb])=>{
       const v=ka===kb?diag(ka):jac(ka,kb);
