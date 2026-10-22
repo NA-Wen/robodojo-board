@@ -121,6 +121,10 @@ def merge_into_site(dist, incoming_dir, only=None):
         entry.setdefault('name', g['name'])
         entry.setdefault('label', (g.get('setting') or {}).get('label', g['name']))
         entry.setdefault('coverage', (g.get('setting') or {}).get('coverage', ''))
+        if g['id'] in added + replaced:
+            entry.update(name=g['name'],
+                         label=(g.get('setting') or {}).get('label', g['name']),
+                         coverage=g.get('coverage', ''))
         settings.append(entry)
     filters['settings'] = settings
 
@@ -317,6 +321,46 @@ def to_group(doc):
                                                'dropRegrasp', 'directAttempts', 'directSuccess',
                                                'tableAttempts', 'tableSuccess', 'supportAttempts',
                                                'supportSuccess', 'viewSame', 'viewOpposite')})
+    # Preserve the completed log/image fallback audit across CI regeneration.
+    if doc['runs'] and all(r.get('configuration', {}).get('audit_auxiliary', {}).get(
+            'schema_version') == 'robodojo-log-image-audit-v3' for r in doc['runs']):
+        first_aux = doc['runs'][0]['configuration']['audit_auxiliary']
+        converted.update(submission_version='robodojo-log-image-audit-v3',
+                         audit_completion='completed_logs_and_images')
+        converted['submission_links'] = {
+            key: f"submissions/{group['id']}/{name}" for key, name in {
+                'report': 'report.html', 'bundle': 'submission.json',
+                'csv': 'task_metrics.csv', 'events': 'event_details.csv',
+                'audit': 'audit_data.json', 'coverage': 'review_coverage.csv',
+                'validation': 'validation_report.json',
+            }.items()
+        }
+        converted['methodology'].append(first_aux['budget_interpretation'])
+        for case, run in zip(cases, doc['runs']):
+            aux = run['configuration']['audit_auxiliary']
+            details = aux['run_details']
+            case.update(decisions=details['model_decisions'], turns_basis='model_decisions',
+                        trajectory_stages=details['executed_trajectory_stages'],
+                        trajectory_records=details['action_records'],
+                        review_coverage=aux['review_coverage'], artifacts=run['artifacts'],
+                        note=aux['coverage_note'] + ' ' + aux['budget_interpretation'])
+            case['metrics']['lowerBound'] = [FIELD_TO_KEY[k] for k, s in
+                                            run['metric_status'].items() if s == 'lower_bound']
+            case['counts'] = {'view_motions': run['metrics']['view_opposite'],
+                              'view_same_motions': run['metrics']['view_same'],
+                              'view_episodes': details['view_episode_count'],
+                              'view_decisions': details['view_adjustment_decision_count']}
+            for event in case['events']:
+                annotation = aux['event_annotations'][event['id']]
+                event.update(audit_annotation=annotation,
+                             chain_id=annotation.get('recovery_chain_id'),
+                             related_event_ids=annotation.get('recovery_failure_event_ids', []),
+                             gap_id=annotation.get('episode_id'),
+                             view_type='same' if annotation['category'] == 'same_arm_view_adjustment'
+                             else 'opposite' if annotation['category'] == 'other_arm_view_adjustment' else None,
+                             uncertainty=annotation.get('uncertainty_reason'))
+                frames = annotation.get('video_frame_interval')
+                event['evidence'][0].update(frame_end=frames[1] if frames else None)
     return converted
 
 
