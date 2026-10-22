@@ -1,16 +1,13 @@
 {
   "run_count": 42,
   "video_refs": 126,
-  "events": 41,
-  "budget_cells_filled": 168,
-  "budget_totals": {
-    "abandonNearAction": 6,
-    "abandonNearTurn": 3,
-    "abandonActionLimit": 0,
-    "abandonTurnLimit": 0
-  },
-  "metric_event_reconciliation": "pass",
-  "ingestion_field_mapping": "pass",
+  "events": 256,
+  "confirmed_events": 213,
+  "uncertain_events": 43,
+  "metric_event_reconciliation": "pass: all source confirmed counts match linked events",
+  "native_counts_reconciliation": "pass: unique decision_index and sum(native_controls)",
+  "video_and_artifact_hashes": "pass: recomputed from original local bytes",
   "csv_mirror": "checked_by_official_validator",
-  "full_review_complete": false
+  "sampled_review_complete": true,
+  "continuous_full_video_review_complete": false
 }
