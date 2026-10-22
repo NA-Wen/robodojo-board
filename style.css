@@ -245,3 +245,5 @@ pre.code-block code,.code-block code{color:inherit;background:none;border:0}
 /* 表格：行高略收，表头更轻 */
 td{padding-top:9px;padding-bottom:9px}
 th{font-size:11px;text-transform:none}
+
+.log-image-notice{display:block;font-size:14px;line-height:1.7}.log-image-notice p{margin:8px 0}.log-image-notice .source-links{display:block}
