@@ -349,3 +349,67 @@ th{font-size:11px;text-transform:none}
 .bc-card-dist .bc-card-head p{font-size:10.5px}
 .bc-card-dist .bc-footnote{font-size:10px}
 @media(max-width:800px){.bc-card-dist{padding:15px}}
+
+/* ---- 内嵌按 task 分布 ---- */
+.bc-mini{margin-top:10px;padding:10px 0 2px 12px;border-left:2px solid var(--hair);
+  display:flex;flex-direction:column;gap:2px}
+.bc-mini-cap{display:flex;align-items:baseline;gap:8px;margin-bottom:3px}
+.bc-mini-cap span{font-size:9.5px;font-weight:600;letter-spacing:.4px;color:var(--accent);
+  text-transform:uppercase}
+.bc-mini-cap small{font-size:9.5px;color:var(--muted)}
+.bc-mini-row{display:grid;grid-template-columns:minmax(96px,132px) 1fr 46px;gap:8px;align-items:center}
+.bc-mini-name{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ink-soft);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-mini-track{display:flex;height:7px;border-radius:2px;background:#eef1ee;overflow:hidden}
+.bc-mini-track i{display:block;height:100%}
+.bc-mini-track i+i{box-shadow:inset 1px 0 0 rgba(255,255,255,.9)}
+.bc-mini-val{text-align:right;font-size:10px;font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+.bc-mini-rest .bc-mini-name{color:var(--muted)}
+.bc-mini-rest{margin-top:3px;padding-top:4px;border-top:1px dashed var(--hair)}
+
+/* ---- 任务芯片网格 ---- */
+.bc-rank-summary{margin:2px 0 12px;font-size:12px;color:var(--ink-soft)}
+.bc-rank-summary strong{color:var(--ink)}
+.bc-chips{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:6px}
+.bc-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:6px 9px;border:1px solid var(--hair);border-radius:5px;background:#fff;min-width:0}
+.bc-chip-win{background:var(--accent-soft);border-color:#bcd8cd}
+.bc-chip-name{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--ink-soft);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-chip-win .bc-chip-name{color:var(--ink)}
+.bc-chip-meta{display:flex;align-items:center;gap:3px;flex:0 0 auto}
+.bc-chip-dot{display:block;width:7px;height:7px;border-radius:50%;border:1px solid #c8d2cb;background:#fff}
+.bc-chip-rate{font-size:9.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-left:3px}
+.bc-chip-win .bc-chip-rate{color:var(--accent);font-weight:600}
+@media(max-width:800px){.bc-chips{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}}
+
+/* ---- 纵向分组柱状图 ---- */
+.bc-tb{margin-top:12px;padding-top:10px;border-top:1px solid var(--hair)}
+.bc-tb-head{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+.bc-tb-head span{font-size:9.5px;font-weight:600;letter-spacing:.4px;color:var(--accent);text-transform:uppercase}
+.bc-tb-head small{font-size:9.5px;color:var(--muted)}
+.bc-bars{width:100%;height:auto;display:block}
+.bc-bar-label{font-size:9.5px;fill:#6f7c74;font-family:'IBM Plex Mono',monospace}
+.bc-tb-legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:2px;font-size:9.5px}
+.bc-grid-stack{grid-template-columns:1fr!important}
+
+/* 分组柱状图的 HTML 轴标签（CSS 旋转，避免 SVG 文本溢出） */
+.bc-bars{overflow:visible}
+.bc-xlab{display:flex;margin-top:6px;height:92px}
+.bc-xlab span{flex:1 1 0;min-width:0;position:relative}
+.bc-xlab b{position:absolute;right:2px;top:0;transform:rotate(-45deg);transform-origin:top right;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;color:#6f7c74;white-space:nowrap;
+  line-height:1.1;font-weight:400}
+
+/* 全量任务柱状图：横向滚动 */
+.bc-tb-scroll{overflow-x:auto;overflow-y:hidden;padding-bottom:4px;
+  scrollbar-width:thin;scrollbar-color:#cbd6cf transparent}
+.bc-tb-scroll::-webkit-scrollbar{height:8px}
+.bc-tb-scroll::-webkit-scrollbar-thumb{background:#cbd6cf;border-radius:4px}
+.bc-tb-scroll::-webkit-scrollbar-track{background:#f2f5f2;border-radius:4px}
+.bc-tb-inner{position:relative}
+.bc-xlab{display:flex;margin-top:4px;height:74px}
+.bc-xlab span{flex:1 1 0;min-width:0;position:relative}
+.bc-xlab b{position:absolute;right:3px;top:0;transform:rotate(-45deg);transform-origin:top right;
+  font-family:'IBM Plex Mono',monospace;font-size:9px;color:#6f7c74;white-space:nowrap;
+  line-height:1.1;font-weight:400}

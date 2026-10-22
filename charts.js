@@ -6,6 +6,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || PAL[active.indexOf(g)%PAL.length]}));
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
   const label = g => `<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`;
+  const BIGTASKBARS=new Set(['score','emptyRetry','drops','turns','actions','finePlacementFail']);
   const valueOf = (r,key) => key==='viewMotions' ? (r.c.counts.view_motions ?? null) : key==='viewOppositeStages' ? (r.c.submission_version?r.c.metrics.viewOpposite:(r.c.counts.view_motions??null)) : key==='viewEpisodes' ? (r.c.counts.view_episodes??r.c.metrics.viewOpposite??null) : r.c.metrics[key];
   const stats = (g,key,mode='sum') => {
     const vs=g.runs.map(r=>valueOf(r,key)).filter(v=>v!=null);
@@ -31,14 +32,57 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       const action=row.category ? `data-chart-category="${row.category}" data-chart-experiment="${g.id}"` : '';
       const Tag=row.category?'button':'div';
       return `<${Tag} class="bc-series" ${action} data-chart-value="${value}" data-chart-key="${row.key}" data-chart-group="${g.id}" aria-label="${esc(g.name)}，${row.name}，${num(value,decimals)}${unit}${suffix}"><span class="bc-series-name">${label(g)}</span><span class="bc-track" aria-hidden="true"><span style="width:${Math.min(100,value/max*100)}%;background:${g.color}"></span></span><span class="bc-number" style="color:${g.color}">${num(value,decimals)}<small>${unit}</small></span>${mode==='incidence'?`<span class="bc-denom">${affected}/${known} 条运行</span>`:''}</${Tag}>`;
-    }).join('')}</div>`).join('');
-    const card=`<article class="bc-card ${known.length?'':'bc-card-pending'}">${cardHead(title,subtitle,known.length?unit:'待补标')}${axis}<div class="bc-plot">${content}</div><p class="bc-footnote">${note || (known.length?'柱形从 0 起，同图共用刻度；数值按当前筛选计算。':'当前无完整标注，暂不绘制数值；此状态不表示未发生。')}</p></article>`;
-    // 每个指标自动跟一张按 task 的分布图（百分比口径不适合按 task 拆，跳过）
-    if(mode==='incidence') return [card];
-    const dists=all.map(row=>distribution(`${title} · ${row.name}`,`同一指标按 task 拆分，柱内按实验堆叠`,row.key,{mode:mode==='mean'?'mean':'sum',unit,decimals,top:8}))
-                   .filter(Boolean);
-    return [card,...dists];
+    }).join('')}</div>${mode==='incidence'?'':taskBars(row.key,{mode:mode==='mean'?'mean':'sum',unit,decimals})}`).join('');
+    const wide=all.some(r=>BIGTASKBARS.has(r.key));
+    const card=`<article class="bc-card ${wide?'bc-card-wide ':''}${known.length?'':'bc-card-pending'}">${cardHead(title,subtitle,known.length?unit:'待补标')}${axis}<div class="bc-plot">${content}</div><p class="bc-footnote">${note || (known.length?'柱形从 0 起，同图共用刻度；数值按当前筛选计算。':'当前无完整标注，暂不绘制数值；此状态不表示未发生。')}</p></article>`;
+    return card;
   }
+
+  // 纵向分组柱状图：横轴 task（全部画出，可横向滚动），纵轴数值，颜色=实验
+  function taskBars(key,{mode='sum',unit='次',decimals=0}={}) {
+    const byTask=new Map();
+    for(const g of series) for(const r of g.runs){
+      const t=r.c.task, v=valueOf(r,key);
+      if(!byTask.has(t)) byTask.set(t,{sum:{},cnt:{}});
+      const row=byTask.get(t);
+      if(v==null) continue;
+      row.sum[g.id]=(row.sum[g.id]||0)+v;
+      row.cnt[g.id]=(row.cnt[g.id]||0)+1;
+    }
+    const val=(row,gid)=>mode==='mean'?(row.cnt[gid]?row.sum[gid]/row.cnt[gid]:null):(row.sum[gid]??null);
+    const list=[...byTask.entries()].map(([t,row])=>({t,vals:series.map(g=>({g,v:val(row,g.id)})).filter(x=>x.v!=null)}))
+      .filter(x=>x.vals.length);
+    if(!list.length) return '';
+    const agg=x=>mode==='mean'?x.vals.reduce((a,b)=>a+b.v,0)/x.vals.length:x.vals.reduce((a,b)=>a+b.v,0);
+    list.forEach(x=>x.score=agg(x));
+    list.sort((a,b)=>b.score-a.score);
+    const used=series.filter(g=>list.some(x=>x.vals.some(v=>v.g.id===g.id)));
+    const max=axisMax(Math.max(...list.flatMap(x=>x.vals.map(v=>v.v)),1e-9));
+    const slot=Math.max(66,30+9*used.length);
+    const PL=44,PR=10,PT=12,PB=18,H=210;
+    const W=Math.round(PL+PR+slot*list.length);
+    const bw=Math.min(16,(slot-8)/used.length);
+    const y=v=>H-PB-(v/max)*(H-PT-PB);
+    const ticks=[0,max/2,max];
+    const grid=ticks.map(t=>`<line x1="${PL}" x2="${W-PR}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" class="bc-sc-grid"/><text x="${PL-8}" y="${(y(t)+3.5).toFixed(1)}" text-anchor="end" class="bc-sc-tick">${num(t,decimals)}</text>`).join('');
+    const bars=list.map((x,i)=>{
+      const cx=PL+slot*i+slot/2;
+      const start=cx-(bw*used.length)/2;
+      return x.vals.map(v=>{
+        const gi=used.findIndex(g=>g.id===v.g.id);
+        return `<rect x="${(start+bw*gi).toFixed(1)}" y="${y(v.v).toFixed(1)}" width="${Math.max(1,bw-1.2).toFixed(1)}" height="${Math.max(0,(H-PB-y(v.v))).toFixed(1)}" rx="1.5" fill="${v.g.color}" fill-opacity=".9"><title>${esc(x.t)} · ${esc(v.g.name)} · ${num(v.v,decimals)}${unit}</title></rect>`;
+      }).join('');
+    }).join('');
+    const legend=used.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('');
+    return `<div class="bc-tb">
+      <div class="bc-tb-head"><span>按 task</span><small>${mode==='mean'?'组内均值':'合计'} · 单位 ${unit} · 共 ${list.length} 个任务，可横向滑动查看全部</small></div>
+      <div class="bc-tb-scroll"><div class="bc-tb-inner" style="width:${W}px">
+        <svg class="bc-bars" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="按 task 的分组柱状图">${grid}${bars}</svg>
+        <div class="bc-xlab">${list.map(x=>`<span><b title="${esc(x.t)}">${esc(x.t.length>14?x.t.slice(0,13)+'…':x.t)}</b></span>`).join('')}</div>
+      </div></div>
+      <div class="bc-tb-legend">${legend}</div></div>`;
+  }
+
   function outcome() {
     return `<article class="bc-card">${cardHead('完全成功率','原生 success 为 1 的运行 / 当前运行数','%')}<div class="bc-rings">${series.map(g=>{
       const total=g.runs.length,n=g.runs.filter(r=>r.c.metrics.success===1).length,pct=n/total*100;
@@ -119,32 +163,35 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   }
 
 
-  // ── 补充 1：任务难度排序 ──
+  // ── 补充 1：任务难度排序（芯片网格）──
   function ranking() {
     const audited=series.filter(g=>g.audit_completion!=='pending');
-    if(!audited.length) return `<article class="bc-card bc-card-wide bc-card-pending">${cardHead('任务难度排序','按完全成功率升序，最难的在前','—')}<p class="bc-footnote">当前范围内没有已完成审核的实验。</p></article>`;
+    if(!audited.length) return `<article class="bc-card bc-card-wide bc-card-pending">${cardHead('任务难度排序','按完全成功率分组','—')}<p class="bc-footnote">当前范围内没有已完成审核的实验。</p></article>`;
     const byTask=new Map();
     for(const g of audited) for(const r of g.runs){
       const t=r.c.task;
       if(!byTask.has(t)) byTask.set(t,{cells:[],succ:0,n:0,empty:0,drop:0});
-      const row=byTask.get(t); const ok=r.c.metrics.success===1;
+      const row=byTask.get(t), ok=r.c.metrics.success===1;
       row.cells.push({g,ok}); row.n++; if(ok)row.succ++;
       row.empty+=(r.c.metrics.emptyRetry||0); row.drop+=(r.c.metrics.drops||0);
     }
     const list=[...byTask.entries()].map(([t,r])=>({t,...r}))
-      .sort((a,b)=>(a.succ/a.n)-(b.succ/b.n)||b.empty-a.empty);
-    const rows=list.map(x=>{
-      const cells=audited.map(g=>{
+      .sort((a,b)=>(a.succ/a.n)-(b.succ/b.n)||(b.empty+b.drop)-(a.empty+a.drop));
+    const never=list.filter(x=>x.succ===0).length;
+    const chip=x=>{
+      const dots=audited.map(g=>{
         const c=x.cells.find(c=>c.g.id===g.id);
-        if(!c) return `<i class="bc-rank-cell" title="${esc(g.name)}：未运行该 task"></i>`;
-        return `<i class="bc-rank-cell${c.ok?' bc-rank-ok':''}"${c.ok?` style="background:${g.color};border-color:${g.color}"`:''} title="${esc(g.name)}：${c.ok?'成功':'未成功'}"></i>`;
+        if(!c) return `<i class="bc-chip-dot" title="${esc(g.name)}：未运行"></i>`;
+        return `<i class="bc-chip-dot${c.ok?' bc-chip-ok':''}"${c.ok?` style="background:${g.color};border-color:${g.color}"`:''} title="${esc(g.name)}：${c.ok?'成功':'未成功'}"></i>`;
       }).join('');
-      const ev=x.empty||x.drop?`空夹 ${x.empty} · 掉落 ${x.drop}`:'—';
-      const pct=Math.round(x.succ/x.n*100);
-      return `<div class="bc-rank-row${pct?' bc-rank-has':''}"><span class="bc-rank-name" title="${esc(x.t)}">${esc(x.t)}</span><span class="bc-rank-cells">${cells}</span><span class="bc-rank-rate">${pct}<small>%</small></span><span class="bc-rank-events">${ev}</span></div>`;
-    }).join('');
-    const legend=audited.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')+`<span class="bc-rank-hint">实心＝成功，空心＝未成功；共 ${list.length} 个 task</span>`;
-    return `<article class="bc-card bc-card-wide">${cardHead('任务难度排序','按完全成功率升序；右侧为该 task 的空夹与掉落合计','排名')}<div class="bc-rank-legend">${legend}</div><div class="bc-rank">${rows}</div><p class="bc-footnote">只用已完成审核的实验；同一 task 在几组各跑一次，因此每行最多三格。semantic-eef 待复核，暂不参与排名。</p></article>`;
+      const ev=x.empty||x.drop?`空夹 ${x.empty} · 掉落 ${x.drop}`:'无空夹与掉落';
+      return `<div class="bc-chip${x.succ?' bc-chip-win':''}" title="${esc(x.t)} · ${Math.round(x.succ/x.n*100)}% 成功 · ${ev}"><span class="bc-chip-name">${esc(x.t)}</span><span class="bc-chip-meta">${dots}<span class="bc-chip-rate">${Math.round(x.succ/x.n*100)}%</span></span></div>`;
+    };
+    return `<article class="bc-card bc-card-wide">${cardHead('任务难度排序','按完全成功率升序；三格依次对应三个实验，实心＝成功','排名')}
+      <p class="bc-rank-summary"><strong>${never}</strong> / ${list.length} 个 task 在三个实验里全部失败；只有 <strong>${list.length-never}</strong> 个至少成功过一次。</p>
+      <div class="bc-chips">${list.map(chip).join('')}</div>
+      <div class="bc-sc-legend">${audited.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')}</div>
+      <p class="bc-footnote">只用已完成审核的实验；semantic-eef 待复核，暂不参与。悬停任意任务可看其空夹与掉落合计。</p></article>`;
   }
 
   // ── 补充 2：执行成本 vs 得分散点 ──
@@ -247,7 +294,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     <div class="bc-toolbar"><div class="bc-global-legend">${series.map(label).join('')}</div><span>颜色固定代表实验，不表示好坏</span></div>
     <nav class="bc-section-nav" aria-label="行为分区">${sections.map((s,i)=>`<button data-chart-section="${s.id}"><small>${String(i).padStart(2,'0')}</small>${s.name}</button>`).join('')}</nav>
     ${sourcePanel}${semanticPanel}${persistentPanel}<div class="notice bc-notice">${active.length>1?`当前范围有 ${matched} 组相同 task / variant / seed / scene 可配对。各组任务构成、实验设置与证据覆盖不同，汇总值仅描述各自样本。`:'当前为单实验范围，图表描述所选样本。'} 事件数为确认下限；“待补标”不等于 0。${uncertainty?` 当前 ${uncertainty} 条事件待确认，未并入相应确认计数。`:''}${semanticRuns.length?' semantic-eef 的 3 次空夹/掉落待定事件只归入其中一类，不可双计；主动释放后落下已从掉落计数中排除。':''}</div>
-    ${sections.map((s,i)=>{const cs=s.cards.flat().filter(Boolean);return `<section class="bc-section" id="behavior-${s.id}" aria-labelledby="behavior-title-${s.id}"><header class="bc-section-head"><span class="bc-section-number">${String(i).padStart(2,'0')}</span><div><p>${s.en}</p><h2 id="behavior-title-${s.id}">${s.name}</h2></div><span class="bc-section-description">${s.desc}</span></header><div class="bc-grid ${cs.length===4?'bc-grid-general':cs.length===3?'bc-grid-three':''}">${cs.join('')}</div></section>`}).join('')}
+    ${sections.map((s,i)=>{const cs=s.cards.flat().filter(Boolean);return `<section class="bc-section" id="behavior-${s.id}" aria-labelledby="behavior-title-${s.id}"><header class="bc-section-head"><span class="bc-section-number">${String(i).padStart(2,'0')}</span><div><p>${s.en}</p><h2 id="behavior-title-${s.id}">${s.name}</h2></div><span class="bc-section-description">${s.desc}</span></header><div class="bc-grid ${cs.some(c=>String(c).includes('bc-card-wide'))?'bc-grid-stack':(cs.length===4?'bc-grid-general':cs.length===3?'bc-grid-three':'')}">${cs.join('')}</div></section>`}).join('')}
     <details class="bc-config"><summary>查看实验配置与证据覆盖</summary><div class="settings-grid">${settings}</div></details>
     <div class="bc-bottom"><span>需要查看每个 task 的具体数值？</span><a class="button" data-page="cases" href="#cases">查看全部逐任务指标 →</a></div>`;
 };
