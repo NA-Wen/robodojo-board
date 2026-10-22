@@ -1,0 +1,72 @@
+{
+  "access": {
+    "auth": null,
+    "base_url": "https://na-wen.github.io/robodojo-board/api/v1",
+    "content_type": "application/json; charset=utf-8",
+    "cors": "*",
+    "method": "GET",
+    "note": "静态托管，无查询参数；请在客户端过滤，或使用 *.jsonl 流式读取。"
+  },
+  "api_version": "v1",
+  "caveats": [
+    "success 由原生 success 判定，score==1 才算成功，不得用模型自述或 note 推断。",
+    "事件类指标（空夹、掉落、视野）受审计深度影响：先查 runs.json 的 metric_status_counts。",
+    "persistent 组没有 metric_status，事件计数仅作原始记录，不可与其他组直接横比。",
+    "每个任务多为单次运行，单次结果无法区分设置差异与随机波动。"
+  ],
+  "counts": {
+    "events": 1162,
+    "groups": 4,
+    "runs": 195,
+    "task_rows": 149
+  },
+  "dataset_version": "2026-10-21 · semantic69",
+  "endpoints": {
+    "definitions": {
+      "bytes": 8152,
+      "description": "26 项指标与 10 类事件的定义、kind、说明",
+      "path": "definitions.json"
+    },
+    "events": {
+      "bytes": 446143,
+      "description": "每条事件一行：run_id、category、turns、审核状态",
+      "jsonl": "events.jsonl",
+      "path": "events.json",
+      "records": 1162
+    },
+    "groups": {
+      "bytes": 14052,
+      "description": "实验组元数据：设置、方法论、覆盖度、审计完成状态",
+      "path": "groups.json",
+      "records": 4
+    },
+    "runs": {
+      "bytes": 341226,
+      "description": "每条运行一行：任务、seed、scene、success、score、turns、actions、26 项指标、可信度",
+      "jsonl": "runs.jsonl",
+      "path": "runs.json",
+      "records": 195
+    },
+    "schema": {
+      "bytes": 2634,
+      "path": "schema.json"
+    },
+    "tasks": {
+      "bytes": 34823,
+      "description": "按 (实验组, 任务) 聚合：成功率、均分、均轮数、均动作、空夹与掉落合计",
+      "path": "tasks.json",
+      "records": 149
+    }
+  },
+  "examples": [
+    "curl -s https://na-wen.github.io/robodojo-board/api/v1/index.json",
+    "curl -s https://na-wen.github.io/robodojo-board/api/v1/runs.jsonl | jq -c 'select(.success==1)'",
+    "curl -s https://na-wen.github.io/robodojo-board/api/v1/tasks.json | jq -c '.[] | select(.group_id==\"action_horizon\")'",
+    "curl -s https://na-wen.github.io/robodojo-board/api/v1/events.jsonl | jq -c 'select(.category==\"empty_retry\")'"
+  ],
+  "generated_at": "2026-10-22T12:34:32Z",
+  "name": "robodojo-board",
+  "source_bytes": 17623734,
+  "source_dump": "../audit-data.json",
+  "source_sha256": "89e3a393e9aa75f6"
+}

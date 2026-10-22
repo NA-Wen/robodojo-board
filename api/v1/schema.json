@@ -1,0 +1,128 @@
+{
+  "$id": "robodojo-board/api/v1/schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "event": {
+      "properties": {
+        "category": {
+          "type": "string"
+        },
+        "confidence": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "review_status": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "task": {
+          "type": "string"
+        },
+        "turns": {
+          "items": {
+            "type": "integer"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "run_id",
+        "category"
+      ],
+      "type": "object"
+    },
+    "run": {
+      "properties": {
+        "actions": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "event_counts": {
+          "description": "按 category 汇总的事件数",
+          "type": "object"
+        },
+        "group_id": {
+          "type": "string"
+        },
+        "group_name": {
+          "type": "string"
+        },
+        "metric_status": {
+          "description": "每项指标的可信度：confirmed / lower_bound / unknown",
+          "type": "object"
+        },
+        "metrics": {
+          "description": "26 项指标全量，键见 definitions.json",
+          "type": "object"
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "scene": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "score": {
+          "description": "原生任务得分 0–1",
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "seed": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "success": {
+          "description": "1=完全成功；由原生 success 判定，score==1 才算成功",
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "task": {
+          "type": "string"
+        },
+        "turns": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "variant": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "run_id",
+        "group_id",
+        "task"
+      ],
+      "type": "object"
+    }
+  },
+  "title": "RoboDojo board API v1",
+  "type": "object"
+}

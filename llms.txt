@@ -19,3 +19,40 @@ python3 validate_submission.py <submission-dir>
 ```
 
 规范版本：`2026-10-21 · v1` · schema：`robodojo-submission-v1`
+
+## 数据 API（只读，静态）
+
+看板数据以预生成 JSON 暴露，`GET` 即可、无鉴权、`Access-Control-Allow-Origin: *`。
+base：`https://na-wen.github.io/robodojo-board/api/v1`
+
+| 端点 | 内容 | 大小 |
+| --- | --- | --- |
+| `index.json` | 清单：端点、记录数、字段说明、注意事项 | 3 KB |
+| `groups.json` | 4 个实验组的设置、方法论、覆盖度、审计状态 | 14 KB |
+| `definitions.json` | 26 项指标 + 10 类事件的定义 | 8 KB |
+| `runs.json` / `.jsonl` | 195 条运行：task、seed、scene、success、score、turns、actions、26 项指标、逐项可信度 | 333 KB |
+| `events.json` / `.jsonl` | 1162 条事件：run_id、category、turns、审核状态 | 436 KB |
+| `tasks.json` | 149 行（组×任务）聚合：成功率、均分、均轮数、空夹与掉落 | 34 KB |
+| `schema.json` | run / event 的 JSON Schema | 3 KB |
+
+```bash
+# 先读清单
+curl -s https://na-wen.github.io/robodojo-board/api/v1/index.json | jq .
+
+# 只要成功的运行
+curl -s https://na-wen.github.io/robodojo-board/api/v1/runs.jsonl | jq -c 'select(.success==1)'
+
+# 某组的任务聚合
+curl -s https://na-wen.github.io/robodojo-board/api/v1/tasks.json \
+  | jq -c '.[] | select(.group_id=="action_horizon")'
+```
+
+取数前必读 `index.json` 的 `caveats`：
+
+1. `success` 只认原生 success，`score==1` 才算成功，不得用模型自述或 `note` 推断。
+2. 事件类指标受审计深度影响，先看 `runs.json` 里的 `metric_status_counts`（confirmed / lower_bound / unknown）。
+3. `persistent` 组没有 `metric_status`，其事件计数仅作原始记录，不可与其他组直接横比。
+4. 多数任务只有单次运行，单次结果无法区分「设置差异」与「随机波动」。
+
+全量嵌套 dump 仍在 `../audit-data.json`（16.8 MB），仅在需要 `trajectory_records`、
+`gallery`、`videos` 等 API 未展开的字段时取用。
