@@ -247,3 +247,51 @@ td{padding-top:9px;padding-bottom:9px}
 th{font-size:11px;text-transform:none}
 
 .log-image-notice{display:block;font-size:14px;line-height:1.7}.log-image-notice p{margin:8px 0}.log-image-notice .source-links{display:block}
+
+/* ---- 分布图：按 task 堆叠 ---- */
+.bc-dist{display:flex;flex-direction:column;gap:2px;margin-top:4px}
+.bc-dist-row{display:grid;grid-template-columns:minmax(150px,1.55fr) minmax(60px,2.4fr) 56px minmax(60px,auto);
+  gap:10px;align-items:center;padding:4px 0}
+.bc-dist-label{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:-.2px;color:var(--ink-soft);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-dist-track{display:flex;height:14px;border-radius:3px;background:#eef1ee;overflow:hidden;
+  box-shadow:inset 0 0 0 1px rgba(23,33,29,.04)}
+.bc-dist-track i{display:block;height:100%;transition:width .2s}
+.bc-dist-track i+i{box-shadow:inset 1px 0 0 rgba(255,255,255,.85)}
+.bc-dist-total{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;font-size:12px}
+.bc-dist-total small{margin-left:2px;color:var(--muted);font-weight:400;font-size:10px}
+.bc-dist-meta{font-size:10px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bc-dist-rest .bc-dist-label,.bc-dist-rest .bc-dist-total{color:var(--ink-soft)}
+.bc-dist-rest{border-top:1px dashed var(--hair);margin-top:4px;padding-top:7px}
+@media(max-width:800px){
+  .bc-dist-row{grid-template-columns:minmax(64px,1fr) 2fr 46px;gap:8px}
+  .bc-dist-meta{display:none}
+}
+
+/* ---- 分布图：轮次位置热力图 ---- */
+.bc-heat{display:flex;flex-direction:column;gap:3px;margin-top:6px}
+.bc-heat-row{display:grid;grid-template-columns:minmax(120px,1.5fr) repeat(5,minmax(38px,1fr)) minmax(64px,auto);
+  gap:3px;align-items:center}
+.bc-heat-head span{font-size:10px;color:var(--muted);text-align:center;font-weight:500}
+.bc-heat-head span:first-child{text-align:left}
+.bc-heat-head span:last-child{text-align:right}
+.bc-heat-name{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bc-heat-cell{display:flex;align-items:center;justify-content:center;height:26px;border-radius:4px;
+  font-size:11px;font-variant-numeric:tabular-nums;font-weight:600;
+  box-shadow:inset 0 0 0 1px rgba(23,33,29,.05)}
+.bc-heat-cov{font-size:10px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+.bc-heat-cov.bc-heat-warn{color:#8a5a26;font-weight:600}
+.bc-heat-pending{grid-template-columns:minmax(120px,1.5fr) 1fr}
+.bc-heat-span{grid-column:2 / -1;font-size:10px;color:var(--muted)}
+@media(max-width:800px){
+  .bc-heat-row{grid-template-columns:minmax(70px,1.2fr) repeat(5,minmax(30px,1fr)) 46px}
+  .bc-heat-cell{height:22px;font-size:10px}
+}
+.bc-heat-cell.bc-heat-na{background:#f5f7f5!important;color:var(--muted);box-shadow:inset 0 0 0 1px var(--hair)}
+.bc-heat-row .bc-heat-name{max-width:100%}
+
+/* 分布图卡片贴合内容高度，避免拉伸留白 */
+.bc-grid{align-items:start}
+
+.bc-card-wide{grid-column:1 / -1}
+.bc-dist-row{grid-template-columns:minmax(150px,1.55fr) minmax(60px,2.4fr) 56px minmax(60px,auto)}
