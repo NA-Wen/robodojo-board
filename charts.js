@@ -32,7 +32,12 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       const Tag=row.category?'button':'div';
       return `<${Tag} class="bc-series" ${action} data-chart-value="${value}" data-chart-key="${row.key}" data-chart-group="${g.id}" aria-label="${esc(g.name)}，${row.name}，${num(value,decimals)}${unit}${suffix}"><span class="bc-series-name">${label(g)}</span><span class="bc-track" aria-hidden="true"><span style="width:${Math.min(100,value/max*100)}%;background:${g.color}"></span></span><span class="bc-number" style="color:${g.color}">${num(value,decimals)}<small>${unit}</small></span>${mode==='incidence'?`<span class="bc-denom">${affected}/${known} 条运行</span>`:''}</${Tag}>`;
     }).join('')}</div>`).join('');
-    return `<article class="bc-card ${known.length?'':'bc-card-pending'}">${cardHead(title,subtitle,known.length?unit:'待补标')}${axis}<div class="bc-plot">${content}</div><p class="bc-footnote">${note || (known.length?'柱形从 0 起，同图共用刻度；数值按当前筛选计算。':'当前无完整标注，暂不绘制数值；此状态不表示未发生。')}</p></article>`;
+    const card=`<article class="bc-card ${known.length?'':'bc-card-pending'}">${cardHead(title,subtitle,known.length?unit:'待补标')}${axis}<div class="bc-plot">${content}</div><p class="bc-footnote">${note || (known.length?'柱形从 0 起，同图共用刻度；数值按当前筛选计算。':'当前无完整标注，暂不绘制数值；此状态不表示未发生。')}</p></article>`;
+    // 每个指标自动跟一张按 task 的分布图（百分比口径不适合按 task 拆，跳过）
+    if(mode==='incidence') return [card];
+    const dists=all.map(row=>distribution(`${title} · ${row.name}`,`同一指标按 task 拆分，柱内按实验堆叠`,row.key,{mode:mode==='mean'?'mean':'sum',unit,decimals,top:8}))
+                   .filter(Boolean);
+    return [card,...dists];
   }
   function outcome() {
     return `<article class="bc-card">${cardHead('完全成功率','原生 success 为 1 的运行 / 当前运行数','%')}<div class="bc-rings">${series.map(g=>{
@@ -41,32 +46,41 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     }).join('')}</div><p class="bc-footnote">分母随筛选变化；部分完成不纳入完全成功。</p></article>`;
   }
 
-  // ── 分布图 1：某个指标的次数按 task 拆分（按组堆叠） ──
-  function distribution(title,subtitle,key,{top=10,unit='次',note=''}={}) {
+  // ── 分布图：任意指标按 task 拆分（计数=合计，均值=组内均值）──
+  function distribution(title, subtitle, key, {mode='sum', unit='次', decimals=0, top=8, note=''}={}) {
     const byTask=new Map();
     for(const g of series){
       for(const r of g.runs){
         const t=r.c.task;
-        if(!byTask.has(t)) byTask.set(t,{total:0,parts:{},runs:{},pending:{}});
+        if(!byTask.has(t)) byTask.set(t,{sum:{},cnt:{},runs:{},total:0});
         const row=byTask.get(t);
         row.runs[g.id]=(row.runs[g.id]||0)+1;
         const v=valueOf(r,key);
-        if(v==null){ row.pending[g.id]=(row.pending[g.id]||0)+1; continue; }
-        row.parts[g.id]=(row.parts[g.id]||0)+v;
+        if(v==null) continue;
+        row.sum[g.id]=(row.sum[g.id]||0)+v;
+        row.cnt[g.id]=(row.cnt[g.id]||0)+1;
         row.total+=v;
       }
     }
-    const sorted=[...byTask.entries()].filter(([,r])=>r.total>0).sort((a,b)=>b[1].total-a[1].total);
-    if(!sorted.length) return `<article class="bc-card bc-card-pending">${cardHead(title,subtitle,'待补标')}<p class="bc-footnote">当前范围内没有可用的确认次数；此状态不表示未发生。</p></article>`;
-    const shown=sorted.slice(0,top), rest=sorted.slice(top);
-    const max=Math.max(...shown.map(([,r])=>r.total),1);
-    const seg=(parts)=>series.filter(g=>(parts[g.id]||0)>0).map(g=>`<i style="width:${parts[g.id]/max*100}%;background:${g.color}" title="${esc(g.name)} · ${num(parts[g.id])}${unit}"></i>`).join('');
-    const meta=(row)=>`${Object.values(row.runs).reduce((a,b)=>a+b,0)} 条运行`;
-    const rowsHtml=shown.map(([t,row])=>`<div class="bc-dist-row"><span class="bc-dist-label" title="${esc(t)}">${esc(t)}</span><span class="bc-dist-track" aria-hidden="true">${seg(row.parts)}</span><span class="bc-dist-total">${num(row.total)}<small>${unit}</small></span><span class="bc-dist-meta">${esc(meta(row))}</span></div>`).join('');
-    const restParts={};rest.forEach(([,r])=>series.forEach(g=>{if(r.parts[g.id])restParts[g.id]=(restParts[g.id]||0)+r.parts[g.id]}));
-    const restTotal=rest.reduce((a,[,r])=>a+r.total,0);
-    const restRow=rest.length?`<div class="bc-dist-row bc-dist-rest"><span class="bc-dist-label">其他 ${rest.length} 个任务</span><span class="bc-dist-track" aria-hidden="true">${seg(restParts)}</span><span class="bc-dist-total">${num(restTotal)}<small>${unit}</small></span><span class="bc-dist-meta">合计</span></div>`:'';
-    return `<article class="bc-card">${cardHead(title,subtitle,unit)}<div class="bc-dist">${rowsHtml}${restRow}</div><p class="bc-footnote">${note || `只列出有确认次数的 task，按合计降序取前 ${shown.length} 个；柱长为组内堆叠，长度按同一刻度。悬停可看每组数值。`}</p></article>`;
+    const val=(row,gid)=>mode==='mean'? (row.cnt[gid]? row.sum[gid]/row.cnt[gid] : null) : (row.sum[gid]??null);
+    const scored=[...byTask.entries()].map(([t,row])=>({t,row,vals:series.map(g=>({g,v:val(row,g.id)})).filter(x=>x.v!=null)}))
+      .filter(x=>x.vals.length);
+    if(!scored.length) return '';
+    const agg=x=>mode==='mean'? x.vals.reduce((a,b)=>a+b.v,0)/x.vals.length : x.vals.reduce((a,b)=>a+b.v,0);
+    scored.forEach(x=>x.score=agg(x));
+    scored.sort((a,b)=>b.score-a.score);
+    const shown=scored.slice(0,top), rest=scored.slice(top);
+    const max=Math.max(...shown.map(x=>x.score),1e-9);
+    const seg=(vals)=>vals.map(x=>`<i style="width:${x.v/max*100}%;background:${x.g.color}" title="${esc(x.g.name)} · ${num(x.v,decimals)}${unit}"></i>`).join('');
+    const rows=shown.map(x=>`<div class="bc-dist-row"><span class="bc-dist-label" title="${esc(x.t)}">${esc(x.t)}</span><span class="bc-dist-track" aria-hidden="true">${seg(x.vals)}</span><span class="bc-dist-total">${num(x.score,decimals)}<small>${unit}</small></span><span class="bc-dist-meta">${Object.values(x.row.runs).reduce((a,b)=>a+b,0)} 条运行</span></div>`).join('');
+    const restRow=rest.length?(()=>{
+      const acc={};rest.forEach(x=>x.vals.forEach(({g,v})=>acc[g.id]=(acc[g.id]||0)+v));
+      const vals=series.filter(g=>acc[g.id]!=null&&acc[g.id]>0).map(g=>({g,v:mode==='mean'?acc[g.id]/rest.length:acc[g.id]}));
+      const tot=mode==='mean'? rest.reduce((a,x)=>a+x.score,0)/rest.length : Object.values(acc).reduce((a,b)=>a+b,0);
+      return `<div class="bc-dist-row bc-dist-rest"><span class="bc-dist-label">其他 ${rest.length} 个任务</span><span class="bc-dist-track" aria-hidden="true">${seg(vals)}</span><span class="bc-dist-total">${num(tot,decimals)}<small>${unit}</small></span><span class="bc-dist-meta">${mode==='mean'?'均值':'合计'}</span></div>`;
+    })():'';
+    const unitLabel = mode==='mean'? `均值${unit}` : unit;
+    return `<article class="bc-card bc-card-dist">${cardHead(title,subtitle,unitLabel)}<div class="bc-dist">${rows}${restRow}</div><p class="bc-footnote">${note || `按 task ${mode==='mean'?'取组内均值':'合计'}，柱内按实验堆叠，同图共用刻度；列出前 ${shown.length} 个 task${rest.length?`，其余 ${rest.length} 个合并为一行`:''}。`}</p></article>`;
   }
 
   // ── 分布图 2：事件发生在一次运行的第几轮（热力图，按组归一化） ──
@@ -104,6 +118,79 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     return `<article class="bc-card bc-card-wide">${cardHead(title,subtitle,'%')}<div class="bc-heat" role="table" aria-label="${esc(title)}">${head}${body}</div><p class="bc-footnote">${note || '每行按该组自身事件数归一化，便于在总量不同的组之间比较；单元格为该区间占可定位事件的比例，颜色深浅同步表示比例。'}</p></article>`;
   }
 
+
+  // ── 补充 1：任务难度排序 ──
+  function ranking() {
+    const audited=series.filter(g=>g.audit_completion!=='pending');
+    if(!audited.length) return `<article class="bc-card bc-card-wide bc-card-pending">${cardHead('任务难度排序','按完全成功率升序，最难的在前','—')}<p class="bc-footnote">当前范围内没有已完成审核的实验。</p></article>`;
+    const byTask=new Map();
+    for(const g of audited) for(const r of g.runs){
+      const t=r.c.task;
+      if(!byTask.has(t)) byTask.set(t,{cells:[],succ:0,n:0,empty:0,drop:0});
+      const row=byTask.get(t); const ok=r.c.metrics.success===1;
+      row.cells.push({g,ok}); row.n++; if(ok)row.succ++;
+      row.empty+=(r.c.metrics.emptyRetry||0); row.drop+=(r.c.metrics.drops||0);
+    }
+    const list=[...byTask.entries()].map(([t,r])=>({t,...r}))
+      .sort((a,b)=>(a.succ/a.n)-(b.succ/b.n)||b.empty-a.empty);
+    const rows=list.map(x=>{
+      const cells=audited.map(g=>{
+        const c=x.cells.find(c=>c.g.id===g.id);
+        if(!c) return `<i class="bc-rank-cell" title="${esc(g.name)}：未运行该 task"></i>`;
+        return `<i class="bc-rank-cell${c.ok?' bc-rank-ok':''}"${c.ok?` style="background:${g.color};border-color:${g.color}"`:''} title="${esc(g.name)}：${c.ok?'成功':'未成功'}"></i>`;
+      }).join('');
+      const ev=x.empty||x.drop?`空夹 ${x.empty} · 掉落 ${x.drop}`:'—';
+      const pct=Math.round(x.succ/x.n*100);
+      return `<div class="bc-rank-row${pct?' bc-rank-has':''}"><span class="bc-rank-name" title="${esc(x.t)}">${esc(x.t)}</span><span class="bc-rank-cells">${cells}</span><span class="bc-rank-rate">${pct}<small>%</small></span><span class="bc-rank-events">${ev}</span></div>`;
+    }).join('');
+    const legend=audited.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')+`<span class="bc-rank-hint">实心＝成功，空心＝未成功；共 ${list.length} 个 task</span>`;
+    return `<article class="bc-card bc-card-wide">${cardHead('任务难度排序','按完全成功率升序；右侧为该 task 的空夹与掉落合计','排名')}<div class="bc-rank-legend">${legend}</div><div class="bc-rank">${rows}</div><p class="bc-footnote">只用已完成审核的实验；同一 task 在几组各跑一次，因此每行最多三格。semantic-eef 待复核，暂不参与排名。</p></article>`;
+  }
+
+  // ── 补充 2：执行成本 vs 得分散点 ──
+  function scatter() {
+    const pts=[];
+    for(const g of series) for(const r of g.runs){
+      const x=r.c.metrics.turns, y=r.c.metrics.score;
+      if(x==null||y==null) continue;
+      pts.push({g,x,y});
+    }
+    if(!pts.length) return `<article class="bc-card bc-card-pending">${cardHead('执行成本 vs 得分','每条运行一个点','—')}<p class="bc-footnote">当前范围内没有同时具备轮数与得分的运行。</p></article>`;
+    const W=980,H=330,PL=46,PR=16,PT=14,PB=38;
+    const xmax=Math.max(...pts.map(p=>p.x))*1.06||1;
+    const sx=v=>PL+(v/xmax)*(W-PL-PR), sy=v=>H-PB-v*(H-PT-PB);
+    const yTicks=[0,.25,.5,.75,1];
+    const xStep=xmax>80?20:xmax>40?10:5;
+    const xTicks=[];for(let v=0;v<=xmax;v+=xStep)xTicks.push(v);
+    const gy=yTicks.map(v=>`<line x1="${PL}" x2="${W-PR}" y1="${sy(v).toFixed(1)}" y2="${sy(v).toFixed(1)}" class="bc-sc-grid"/><text x="${PL-10}" y="${(sy(v)+4).toFixed(1)}" text-anchor="end" class="bc-sc-tick">${v===0||v===1?v:v.toFixed(2)}</text>`).join('');
+    const gx=xTicks.map(v=>`<text x="${sx(v).toFixed(1)}" y="${H-PB+18}" text-anchor="middle" class="bc-sc-tick">${v}</text>`).join('');
+    const dots=pts.map(p=>`<circle cx="${sx(p.x).toFixed(1)}" cy="${sy(p.y).toFixed(1)}" r="3.4" fill="${p.g.color}" fill-opacity=".72" stroke="#fff" stroke-width=".7"><title>${esc(p.g.name)} · ${p.x} 轮 · ${p.y.toFixed(2)} 分</title></circle>`).join('');
+    return `<article class="bc-card bc-card-wide">${cardHead('执行成本 vs 得分','横轴轮数，纵轴任务得分；每条运行一个点','分')}<svg class="bc-scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="轮数与得分散点图">${gy}${gx}
+      <text x="${PL-10}" y="${PT-2}" text-anchor="end" class="bc-sc-tick">分</text>
+      <text x="${W-PR}" y="${H-8}" text-anchor="end" class="bc-sc-tick">轮</text>
+      ${dots}</svg>
+      <div class="bc-sc-legend">${series.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')}</div>
+      <p class="bc-footnote">得分取自原生结果，与事件审核状态无关，因此四组同图；点在下、右代表花费更多轮次却得分更低。</p></article>`;
+  }
+
+  // ── 补充 3：事件共现矩阵 ──
+  function cooccurrence() {
+    const CATS=[['view','视野调整'],['empty_retry','空夹'],['drop','掉落'],['table_transfer','换手'],['direct_failed','直抓失败'],['recovery_other','其他恢复']];
+    const audited=series.filter(g=>g.audit_completion!=='pending');
+    const sets=[];audited.forEach(g=>g.runs.forEach(r=>sets.push(new Set((r.c.events||[]).map(e=>e.category)))));
+    if(!sets.length) return `<article class="bc-card bc-card-pending">${cardHead('事件共现','同一运行内两类事件同时出现的比例','—')}<p class="bc-footnote">当前范围内没有可用的已审核事件。</p></article>`;
+    const N=sets.length;
+    const jac=(a,b)=>{let both=0,either=0;for(const s of sets){const A=s.has(a),B=s.has(b);if(A&&B)both++;if(A||B)either++;}return either?both/either:0;};
+    const diag=a=>sets.filter(s=>s.has(a)).length/N;
+    const tint=v=>v<=0?'transparent':`rgba(20,101,78,${(0.06+Math.min(1,v)*0.74).toFixed(2)})`;
+    const head=`<div class="bc-co-row bc-co-head"><span></span>${CATS.map(([k,n])=>`<span>${n}</span>`).join('')}</div>`;
+    const body=CATS.map(([ka,na])=>`<div class="bc-co-row"><span class="bc-co-name">${na}</span>${CATS.map(([kb,nb])=>{
+      const v=ka===kb?diag(ka):jac(ka,kb);
+      return `<span class="bc-co-cell" style="background:${tint(v)};color:${v>.55?'#fff':'var(--ink)'}" title="${na}${ka===kb?'（涉及运行占比）':` 与 ${nb} 同时出现`}：${(v*100).toFixed(0)}%">${v<=0?'·':(v*100).toFixed(0)+'%'}</span>`;
+    }).join('')}</div>`).join('');
+    return `<article class="bc-card bc-card-wide">${cardHead('事件共现','同一运行内两类事件同时出现的比例','%')}<div class="bc-co">${head}${body}</div><p class="bc-footnote">单元格为 Jaccard 比例（同时出现 / 至少出现其一），对角线为涉及该事件的运行占比；基于 ${N} 条已审核运行。数值越高说明两类现象越常结伴发生，不代表因果。</p></article>`;
+  }
+
   const sections=[
     {id:'general',name:'总体表现',en:'GENERAL',desc:'先看任务结果与执行成本',cards:[
       outcome(),
@@ -113,7 +200,6 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     ]},
     {id:'grasp',name:'夹取',en:'GRASP',desc:'抓取失败、恢复与目标选择',cards:[
       bars('空夹与掉落','已确认事件；点击柱形查看该实验的事件', [['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{note:'semantic-eef空夹包含最终未重试的独立尝试，掉落仅主动释放前失持；其他组口径见各组说明。'}),
-      distribution('空夹集中在哪些任务','按 task 汇总已确认空夹次数，柱内按实验堆叠','emptyRetry',{top:10,note:'只列出有确认空夹的 task，按合计降序取前 10 个，其余合并为一行。semantic-eef 正在等待完整复核，不计入。'}),
       bars('涉及运行比例','至少发生过一次该事件的运行占比',[['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{mode:'incidence',unit:'%',fixed:100,decimals:1,note:'分母为有记录的运行数，不是抓取尝试数；不是抓取失败率。'}),
       bars('成功重夹与目标选择','需要关联失败事件和后续成功抓取',[['emptyRegrasp','空夹后成功重夹'],['dropRegrasp','掉落后成功重夹'],['wrongObject','选错物体']]),
       positions('失败发生在第几轮','事件首次出现位置 ÷ 该 run 总轮数，按组归一化',['empty_retry','drop'],{note:'靠近 0% 表示刚上手就失败，靠近 100% 表示接近预算耗尽才失败。“可定位”列表示这批事件里有多少条带可用轮次；action_horizon 的抽帧审核只有帧号与时间范围，因此无法定位，标为 —。'})
@@ -139,6 +225,11 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     {id:'collision',name:'碰撞与扰动',en:'COLLISION',desc:'区分非正常接触与对非目标物的影响',cards:[
       bars('异常碰撞次数','正常抓取接触、任务要求的推碰不计',[['collisionArms','两手臂之间'],['collisionArmObject','手臂与物体'],['collisionArmTable','手臂与桌面']]),
       bars('非目标物被碰倒','目标操作过程中对其他物体的扰动',[['knockdown','非目标物被碰倒']])
+    ]},
+    {id:'profile',name:'任务画像',en:'PROFILE',desc:'按任务横切：难度排序、成本与得分的取舍、事件共现',cards:[
+      ranking(),
+      scatter(),
+      cooccurrence()
     ]}
   ];
   const episodes=new Map();for(const r of runs){const k=JSON.stringify([r.c.task,r.c.episode.variant,r.c.episode.seed,r.c.episode.scene]);if(!episodes.has(k))episodes.set(k,[]);episodes.get(k).push(r)}
@@ -156,7 +247,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     <div class="bc-toolbar"><div class="bc-global-legend">${series.map(label).join('')}</div><span>颜色固定代表实验，不表示好坏</span></div>
     <nav class="bc-section-nav" aria-label="行为分区">${sections.map((s,i)=>`<button data-chart-section="${s.id}"><small>${String(i).padStart(2,'0')}</small>${s.name}</button>`).join('')}</nav>
     ${sourcePanel}${semanticPanel}${persistentPanel}<div class="notice bc-notice">${active.length>1?`当前范围有 ${matched} 组相同 task / variant / seed / scene 可配对。各组任务构成、实验设置与证据覆盖不同，汇总值仅描述各自样本。`:'当前为单实验范围，图表描述所选样本。'} 事件数为确认下限；“待补标”不等于 0。${uncertainty?` 当前 ${uncertainty} 条事件待确认，未并入相应确认计数。`:''}${semanticRuns.length?' semantic-eef 的 3 次空夹/掉落待定事件只归入其中一类，不可双计；主动释放后落下已从掉落计数中排除。':''}</div>
-    ${sections.map((s,i)=>`<section class="bc-section" id="behavior-${s.id}" aria-labelledby="behavior-title-${s.id}"><header class="bc-section-head"><span class="bc-section-number">${String(i).padStart(2,'0')}</span><div><p>${s.en}</p><h2 id="behavior-title-${s.id}">${s.name}</h2></div><span class="bc-section-description">${s.desc}</span></header><div class="bc-grid ${s.cards.length===4?'bc-grid-general':s.cards.length===3?'bc-grid-three':''}">${s.cards.join('')}</div></section>`).join('')}
+    ${sections.map((s,i)=>{const cs=s.cards.flat().filter(Boolean);return `<section class="bc-section" id="behavior-${s.id}" aria-labelledby="behavior-title-${s.id}"><header class="bc-section-head"><span class="bc-section-number">${String(i).padStart(2,'0')}</span><div><p>${s.en}</p><h2 id="behavior-title-${s.id}">${s.name}</h2></div><span class="bc-section-description">${s.desc}</span></header><div class="bc-grid ${cs.length===4?'bc-grid-general':cs.length===3?'bc-grid-three':''}">${cs.join('')}</div></section>`}).join('')}
     <details class="bc-config"><summary>查看实验配置与证据覆盖</summary><div class="settings-grid">${settings}</div></details>
     <div class="bc-bottom"><span>需要查看每个 task 的具体数值？</span><a class="button" data-page="cases" href="#cases">查看全部逐任务指标 →</a></div>`;
 };
