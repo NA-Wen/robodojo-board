@@ -7,7 +7,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
   const label = g => `<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`;
   const BIGTASKBARS=new Set(['score','emptyRetry','drops','turns','actions','finePlacementFail']);
-  const valueOf = (r,key) => key==='viewMotions' ? (r.c.counts.view_motions ?? null) : key==='viewOppositeStages' ? (r.c.submission_version?r.c.metrics.viewOpposite:(r.c.counts.view_motions??null)) : key==='viewEpisodes' ? (r.c.counts.view_episodes??r.c.metrics.viewOpposite??null) : r.c.metrics[key];
+  const valueOf = (r,key) => key==='actionsPerTurn' ? ((r.c.metrics.turns>0&&r.c.metrics.actions!=null)?r.c.metrics.actions/r.c.metrics.turns:null) : key==='viewMotions' ? (r.c.counts.view_motions ?? null) : key==='viewOppositeStages' ? (r.c.submission_version?r.c.metrics.viewOpposite:(r.c.counts.view_motions??null)) : key==='viewEpisodes' ? (r.c.counts.view_episodes??r.c.metrics.viewOpposite??null) : r.c.metrics[key];
   const stats = (g,key,mode='sum') => {
     const vs=g.runs.map(r=>valueOf(r,key)).filter(v=>v!=null);
     if (!vs.length) return {value:null, known:0,total:g.runs.length};
@@ -23,7 +23,8 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   function bars(title,subtitle,rows,{unit='次',mode='sum',fixed=null,note='',decimals=0}={}) {
     const all=rows.map(([key,name,category])=>({key,name,category,values:series.map(g=>({g,...stats(g,key,mode)}))}));
     const known=all.flatMap(x=>x.values).filter(x=>x.value!==null);
-    const max=fixed ?? axisMax(Math.max(1,...known.map(x=>x.value)));
+    const autoMax=axisMax(Math.max(1,...known.map(x=>x.value)));
+    const max=(fixed!=null && known.every(x=>x.value<=fixed))?fixed:autoMax;
     const axis=known.length?`<div class="bc-axis" aria-hidden="true"><span>0</span><span>${num(max/2,Number.isInteger(max/2)?0:1)}</span><span>${num(max)}</span></div>`:'';
     const content=all.map(row=>`<div class="bc-measure" data-measure="${row.key}"><div class="bc-measure-label">${row.name}</div>${row.values.map(x=>{
       const {g,value,known,total,affected}=x;
@@ -243,7 +244,8 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       outcome(),
       bars('平均得分','原生分数的算术平均，不合成行为总分',[['score','任务得分']],{mode:'mean',unit:'分',fixed:1,decimals:2,note:'当前任务等权；只有任务构成一致时，组间均值才便于比较。'}),
       bars('平均执行成本','分别计算每条运行的成本', [['turns','运行轮数']],{mode:'mean',unit:'轮',decimals:1,note:'semantic-eef使用已核对的原生模型决策轮；其他组按各自来源口径，详见实验配置与覆盖说明。'}),
-      bars('平均 action 次数','每条运行实际执行的控制步数',[['actions','实际控制步']],{mode:'mean',unit:'步',decimals:1,note:'包含成功和未成功运行；较少步骤也可能来自提前结束。'})
+      bars('平均 action 次数','每条运行实际执行的控制步数',[['actions','实际控制步']],{mode:'mean',unit:'步',decimals:1,note:'包含成功和未成功运行；较少步骤也可能来自提前结束。'}),
+      bars('每轮对应的 action 数','一次决策平均执行多少个底层控制步；数值越高，单次决策执行得越长',[['actionsPerTurn','每轮 action 数']],{mode:'mean',unit:'个',decimals:1,fixed:12,note:'按每条运行的 action ÷ turn 取平均；只统计 turn>0 的运行。轮次越多、每次执行越短，这个值越低。'})
     ]},
     {id:'grasp',name:'夹取',en:'GRASP',desc:'抓取失败、恢复与目标选择',cards:[
       bars('空夹与掉落','已确认事件；点击柱形查看该实验的事件', [['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{note:'semantic-eef空夹包含最终未重试的独立尝试，掉落仅主动释放前失持；其他组口径见各组说明。'}),
