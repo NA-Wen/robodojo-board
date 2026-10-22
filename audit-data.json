@@ -52,14 +52,14 @@
         "success": 24,
         "uncertain": 14,
         "turns": 4121,
-        "drop": 62,
-        "direct_failed": 7,
         "table_transfer": 17,
-        "recovery_other": 4,
-        "view": 214,
-        "other": 115,
+        "drop": 62,
         "support_transfer": 1,
+        "view": 214,
         "empty_retry": 63,
+        "direct_failed": 7,
+        "recovery_other": 4,
+        "other": 115,
         "emptyRetry": null,
         "drops": null,
         "emptyRegrasp": null,
@@ -184751,10 +184751,10 @@
         "success": 15,
         "uncertain": 16,
         "turns": 2727,
+        "drop": 1,
         "empty_retry": 1,
         "other": 21,
-        "direct_transfer": 2,
-        "drop": 1
+        "direct_transfer": 2
       },
       "cases": [
         {
@@ -209189,13 +209189,13 @@
         "success": 13,
         "uncertain": 78,
         "turns": 2454,
-        "empty_retry": 38,
-        "other": 74,
         "recovery_other": 4,
         "view": 45,
-        "drop": 27,
         "direct_failed": 3,
-        "table_transfer": 11
+        "drop": 27,
+        "table_transfer": 11,
+        "empty_retry": 38,
+        "other": 74
       },
       "cases": [
         {
@@ -428403,7 +428403,7 @@
         "id": "semantic",
         "name": "semantic-eef",
         "label": "semantic-eef",
-        "coverage": "69个run、23项任务全部保留；4195条轨迹记录完整读取，模型轮4121与执行阶段4135分开核对，实际控制步38348。三视角抓取概要和相关事件前中后关键帧、疑难段加密帧核查，非207段视频每帧人工连续普查；行为数值为确认下界，碰撞、碰倒、精细放置仅定向核查，其余为NA。",
+        "coverage": "阶段性结果：69个run、207路视频尚未完成三视角全程观看。全量4195条轨迹和38348控制步已重新核对；207路视频完整解码、690源文件哈希通过。18项视觉指标逐run标pending，不能按NA或0统计；旧版局部事件证据另存。",
         "setting_id": "sha256:0d0bc94ab2640a0010e5431b8640927e84f36cc2f84aa41f13faa1ce8a69fd51"
       },
       {
@@ -428414,9 +428414,9 @@
       },
       {
         "id": "action_horizon",
-        "name": "action_horizon · first_round · 部分证据审查",
-        "label": "action_horizon · first_round · 部分证据审查",
-        "coverage": "42个run，全部2751条公开摘要已读；126路原视频哈希已核验；视觉为42组三视角稀疏概览+4个连续片段，2298/82851帧(2.77%)。完整轨迹/测量状态/精确动作视频映射缺失。视觉正数均为确认下界，其余NA；非完整视频普查。"
+        "name": "action_horizon · 阶段性审查 / 预算自述口径",
+        "label": "action_horizon · 阶段性审查 / 预算自述口径",
+        "coverage": "阶段性结果：42个run、126路原视频完整解码及哈希核对，0路完成连续全程观看；静态概览和局部逐帧证据不等于完整观看。全量2751条轨迹、2727个模型决策、25032控制步已核对。预算四项按用户授权改为模型自述编码：剩余不足代理靠近，不证明≥90%；0=未明确自述该类，4次泛称预算另列。视觉局部正数仅下界，其余待审核；不能宣称审核完成。"
       },
       {
         "id": "dual42-sequence-medium-20261016",

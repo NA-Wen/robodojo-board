@@ -43,10 +43,10 @@
     "success": 15,
     "uncertain": 16,
     "turns": 2727,
+    "drop": 1,
     "empty_retry": 1,
     "other": 21,
-    "direct_transfer": 2,
-    "drop": 1
+    "direct_transfer": 2
   },
   "cases": [
     {
