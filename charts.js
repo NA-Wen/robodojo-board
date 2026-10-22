@@ -239,6 +239,124 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
     return `<article class="bc-card bc-card-wide">${cardHead('事件共现','同一运行内两类事件同时出现的比例','%')}<div class="bc-co">${head}${body}</div><p class="bc-footnote">单元格为 Jaccard 比例（同时出现 / 至少出现其一），对角线为涉及该事件的运行占比；基于 ${N} 条已审核运行。数值越高说明两类现象越常结伴发生，不代表因果。</p></article>`;
   }
 
+
+  // ── 诊断 1：成功 vs 失败的执行特征 ──
+  function miniGB(cats,{unit='',decimals=1,fixed=null,title=''}={}) {
+    const used=series.filter(g=>cats.some(c=>c.vals.some(v=>v.g.id===g.id)));
+    const vals=cats.flatMap(c=>c.vals.map(v=>v.v));
+    if(!used.length||!vals.length) return '';
+    const auto=axisMax(Math.max(...vals,1e-9));
+    const max=(fixed!=null&&vals.every(v=>v<=fixed))?fixed:auto;
+    const W=760,H=172,PL=42,PR=12,PT=12,PB=30;
+    const slot=(W-PL-PR)/cats.length, bw=Math.min(30,slot*0.62/used.length);
+    const y=v=>H-PB-(v/max)*(H-PT-PB);
+    const grid=[0,max/2,max].map(t=>`<line x1="${PL}" x2="${W-PR}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" class="bc-sc-grid"/><text x="${PL-8}" y="${(y(t)+3.5).toFixed(1)}" text-anchor="end" class="bc-sc-tick">${num(t,decimals)}</text>`).join('');
+    const bars=cats.map((c,i)=>{
+      const st=PL+slot*i+slot/2-(bw*used.length)/2;
+      return c.vals.map(v=>{
+        const gi=used.findIndex(u=>u.id===v.g.id);
+        return `<rect x="${(st+bw*gi).toFixed(1)}" y="${y(v.v).toFixed(1)}" width="${Math.max(2,bw-3).toFixed(1)}" height="${Math.max(0,(H-PB-y(v.v))).toFixed(1)}" rx="2" fill="${v.g.color}"><title>${esc(v.g.name)} · ${esc(c.t)} · ${num(v.v,decimals)}${unit}</title></rect>`;
+      }).join('');
+    }).join('');
+    const labels=cats.map((c,i)=>{
+      const cx=(PL+slot*i+slot/2).toFixed(1);
+      const zero=c.vals.length>0&&c.vals.every(v=>v.v===0);
+      return `<text x="${cx}" y="${H-PB+17}" text-anchor="middle" class="bc-gb-label">${esc(c.t)}</text>`
+        +(zero?`<text x="${cx}" y="${(H-PB-5).toFixed(1)}" text-anchor="middle" class="bc-gb-zero">0%</text>`:'');
+    }).join('');
+    return `<div class="bc-gb">${title?`<div class="bc-gb-title">${title}</div>`:''}<svg viewBox="0 0 ${W} ${H}" class="bc-gb-svg" role="img" aria-label="${esc(title)}">${grid}${bars}${labels}</svg></div>`;
+  }
+
+  function successVsFail() {
+    const cat=(ok,fn)=>series.map(g=>{
+      const rs=g.runs.filter(r=>(r.c.metrics.turns||0)>0 && (r.c.metrics.success===1)===ok);
+      if(!rs.length) return null;
+      return {g,v:fn(rs)};
+    }).filter(Boolean);
+    const apt=[{t:'成功',vals:cat(true,rs=>rs.reduce((s,r)=>s+r.c.metrics.actions,0)/rs.reduce((s,r)=>s+r.c.metrics.turns,0))},
+               {t:'失败',vals:cat(false,rs=>rs.reduce((s,r)=>s+r.c.metrics.actions,0)/rs.reduce((s,r)=>s+r.c.metrics.turns,0))}];
+    const turns=[{t:'成功',vals:cat(true,rs=>rs.reduce((s,r)=>s+r.c.metrics.turns,0)/rs.length)},
+                 {t:'失败',vals:cat(false,rs=>rs.reduce((s,r)=>s+r.c.metrics.turns,0)/rs.length)}];
+    return `<article class="bc-card bc-card-wide">${cardHead('成功与失败的成本差异','同一实验内部对比：成功的运行和失败的运行，执行节奏有什么不同','对比')}
+      <div class="bc-gb-pair">${miniGB(apt,{unit:'个',decimals:1,title:'每轮 action 数'})}${miniGB(turns,{unit:'轮',decimals:0,title:'平均轮数'})}</div>
+      <p class="bc-footnote">四组方向一致：成功的运行每轮动作更多、总轮数更少；失败的运行轮数更多而每轮更短——失败更像“反复犹豫”而不是“一口气走远”。只统计轮数大于 0 的运行。</p></article>`;
+  }
+
+  // ── 诊断 2：得分分布 ──
+  function shareBars(rows,{unit='%'}={}) {
+    if(!rows.length) return '';
+    return `<div class="bc-share">${rows.map(row=>`<div class="bc-share-row"><span class="bc-share-name">${label(row.g)}</span><span class="bc-share-track">${row.segs.map(sg=>sg.v>0?`<i style="width:${(sg.v*100).toFixed(1)}%;background:${sg.color}" title="${esc(sg.label)} ${(sg.v*100).toFixed(1)}${unit}">${sg.v>.09?`<b>${Math.round(sg.v*100)}%</b>`:''}</i>`:'').join('')}</span></div>`).join('')}</div>`;
+  }
+
+  function scoreDistribution() {
+    const BUCKETS=[['0 分',v=>v===0],['0–50%',v=>v>0&&v<=0.5],['50–100%',v=>v>0.5&&v<1],['100%',v=>v===1]];
+    const RAMP=['#e6ede7','#9BC99A','#58A165','#2D6B46'];
+    const rows=series.map(g=>{
+      const n=g.runs.length;
+      const counts=BUCKETS.map(([lab,test])=>g.runs.filter(r=>test(r.c.metrics.score||0)).length);
+      return {g,segs:BUCKETS.map(([lab],i)=>({label:lab,v:counts[i]/n,color:RAMP[i]}))};
+    });
+    const legend=BUCKETS.map(([lab],i)=>`<span class="bc-legend"><i style="background:${RAMP[i]}"></i>${lab}</span>`).join('');
+    return `<article class="bc-card bc-card-wide">${cardHead('得分分布','每个实验内部，运行得分落在各区间内的比例','占比')}
+      ${shareBars(rows)}
+      <div class="bc-tb-legend">${legend}</div>
+      <p class="bc-footnote">得分实际上只有三档：0 分、部分完成（≤0.5）、满分。全库落在 50–100% 区间的运行只有 3 条——任务结果接近“成/不成”，平均值 0.4 左右是把两端拉平后的假象。</p></article>`;
+  }
+
+  // ── 诊断 3：空夹次数与成功率 ──
+  function emptyRetryOutcome() {
+    const BINS=[['0 次',v=>v===0],['1–2 次',v=>v>=1&&v<=2],['3–5 次',v=>v>=3&&v<=5],['6 次以上',v=>v>=6]];
+    const cats=BINS.map(([lab,f])=>({t:lab,vals:series.map(g=>{
+      const rs=g.runs.filter(r=>f(r.c.metrics.emptyRetry||0));
+      if(!rs.length) return null;
+      return {g,v:100*rs.filter(r=>r.c.metrics.success===1).length/rs.length};
+    }).filter(Boolean)}));
+    const total=BINS.map(([lab,f])=>{
+      const rs=series.flatMap(g=>g.runs).filter(r=>f(r.c.metrics.emptyRetry||0));
+      return {lab,n:rs.length,s:rs.filter(r=>r.c.metrics.success===1).length};
+    });
+    const legend=series.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('');
+    return `<article class="bc-card bc-card-wide">${cardHead('空夹次数与成功率','把运行按“记录了几次空夹”分组，看成功率怎么变','%')}
+      ${miniGB(cats,{unit:'%',decimals:0,fixed:100})}
+      <div class="bc-tb-legend">${legend}</div>
+      <p class="bc-footnote">合并四组：${total.map(t=>`${t.lab} ${t.s}/${t.n}`).join(' · ')}。空夹 3 次以上的运行没有一次成功，它更像是“已经卡住”的标记，而不是原因。</p></article>`;
+  }
+
+  // ── 诊断 4：可重复性 ──
+  function repeatability() {
+    const multi=series.filter(g=>{const m=new Map();g.runs.forEach(r=>m.set(r.c.task,(m.get(r.c.task)||0)+1));return [...m.values()].some(n=>n>1)});
+    if(!multi.length) return `<article class="bc-card bc-card-wide bc-card-pending">${cardHead('可重复性','同一任务多次运行的结果是否一致','—')}<p class="bc-footnote">当前范围内没有任务被重复运行，无法评估稳定性。</p></article>`;
+    const g=multi[0], byTask=new Map();
+    for(const r of g.runs){ if(!byTask.has(r.c.task)) byTask.set(r.c.task,[]); byTask.get(r.c.task).push(r); }
+    const rows=[...byTask.entries()].map(([t,rs])=>({t,rs,succ:rs.filter(r=>r.c.metrics.success===1).length}))
+      .sort((a,b)=>a.succ-b.succ||a.t.localeCompare(b.t));
+    const mixed=rows.filter(x=>x.succ>0&&x.succ<x.rs.length);
+    return `<article class="bc-card bc-card-wide">${cardHead('可重复性','同一任务多次运行的结果是否一致','次数')}
+      <p class="bc-rank-summary">${esc(g.name)} 有 <strong>${rows.length}</strong> 个任务各跑了 ${rows[0].rs.length} 次，其中 <strong>${mixed.length}</strong> 个任务结果不一致——同一任务既成功过也失败过。</p>
+      <div class="bc-rep">${rows.map(x=>{
+        const dots=x.rs.map(r=>`<i class="bc-rep-dot${r.c.metrics.success===1?' bc-rep-ok':''}" title="得分 ${(r.c.metrics.score||0).toFixed(2)}"></i>`).join('');
+        const flaky=x.succ>0&&x.succ<x.rs.length;
+        return `<div class="bc-rep-row${flaky?' bc-rep-flaky':''}"><span class="bc-rep-name" title="${esc(x.t)}">${esc(x.t)}</span><span class="bc-rep-dots">${dots}</span><span class="bc-rep-score">${x.succ}/${x.rs.length}</span></div>`;
+      }).join('')}</div>
+      <p class="bc-footnote">实心点＝该次运行完全成功。标为不一致的任务，单次运行的结果不足以判断设置优劣——这也是跨实验比较要多种子复跑的原因。</p></article>`;
+  }
+
+  // ── 诊断 5：审计完整度 ──
+  function auditQuality() {
+    const ST=[['confirmed','已确认','#58A165'],['lower_bound','下界','#E68A36'],['unknown','未知','#cbd5cc']];
+    const rows=series.map(g=>{
+      const c={};let n=0;
+      for(const r of g.runs) for(const v of Object.values(r.c.metricStatus||{})){c[v]=(c[v]||0)+1;n++;}
+      if(!n) return {g,segs:ST.map(([k,lab,color])=>({label:lab,v:k==='unknown'?1:0,color}))};
+      return {g,segs:ST.map(([k,lab,color])=>({label:lab,v:(c[k]||0)/n,color}))};
+    }).filter(Boolean);
+    if(!rows.length) return '';
+    return `<article class="bc-card bc-card-wide">${cardHead('审计完整度','26 项指标里有明确结论的比例；剩下的是下界与未知','状态')}
+      ${shareBars(rows)}
+      <div class="bc-tb-legend">${ST.map(([k,lab,color])=>`<span class="bc-legend"><i style="background:${color}"></i>${lab}</span>`).join('')}</div>
+      <p class="bc-footnote">“下界”表示事件确实发生过但计数可能偏少；“未知”表示无法判定。事件类指标横比前必须先看这张图——各组的审计深度并不相同。</p></article>`;
+  }
+
   const sections=[
     {id:'general',name:'总体表现',en:'GENERAL',desc:'先看任务结果与执行成本',cards:[
       outcome(),
@@ -279,6 +397,13 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       ranking(),
       scatter(),
       cooccurrence()
+    ]},
+    {id:'insight',name:'诊断',en:'DIAGNOSTICS',desc:'拆开平均值：成败差异、结果分布、稳定性与审计深度',cards:[
+      successVsFail(),
+      scoreDistribution(),
+      emptyRetryOutcome(),
+      repeatability(),
+      auditQuality()
     ]}
   ];
   const episodes=new Map();for(const r of runs){const k=JSON.stringify([r.c.task,r.c.episode.variant,r.c.episode.seed,r.c.episode.scene]);if(!episodes.has(k))episodes.set(k,[]);episodes.get(k).push(r)}
