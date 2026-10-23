@@ -43,14 +43,14 @@
     "success": 15,
     "uncertain": 81,
     "turns": 2843,
-    "view": 59,
-    "direct_transfer": 1,
+    "direct_failed": 4,
     "other": 79,
     "table_transfer": 9,
-    "direct_failed": 4,
-    "empty_retry": 47,
+    "view": 59,
     "support_transfer": 1,
-    "drop": 26
+    "direct_transfer": 1,
+    "drop": 26,
+    "empty_retry": 47
   },
   "cases": [
     {

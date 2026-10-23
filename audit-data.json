@@ -47,12 +47,12 @@
         "uncertain": 78,
         "turns": 2815,
         "drop": 35,
-        "table_transfer": 8,
         "view": 210,
-        "empty_retry": 47,
         "other": 80,
+        "support_transfer": 2,
+        "table_transfer": 8,
         "direct_failed": 8,
-        "support_transfer": 2
+        "empty_retry": 47
       },
       "cases": [
         {
@@ -54395,14 +54395,14 @@
         "success": 15,
         "uncertain": 81,
         "turns": 2843,
-        "view": 59,
-        "direct_transfer": 1,
+        "direct_failed": 4,
         "other": 79,
         "table_transfer": 9,
-        "direct_failed": 4,
-        "empty_retry": 47,
+        "view": 59,
         "support_transfer": 1,
-        "drop": 26
+        "direct_transfer": 1,
+        "drop": 26,
+        "empty_retry": 47
       },
       "cases": [
         {
@@ -99761,10 +99761,10 @@
         "turns": 2727,
         "direct_failed": 2,
         "direct_transfer": 3,
-        "table_transfer": 9,
-        "drop": 29,
         "empty_retry": 43,
         "other": 66,
+        "drop": 29,
+        "table_transfer": 9,
         "view": 61
       },
       "cases": [
@@ -115885,13 +115885,13 @@
         "success": 13,
         "uncertain": 78,
         "turns": 2454,
-        "recovery_other": 4,
-        "empty_retry": 38,
-        "drop": 27,
-        "direct_failed": 3,
         "view": 45,
-        "other": 74,
-        "table_transfer": 11
+        "direct_failed": 3,
+        "recovery_other": 4,
+        "table_transfer": 11,
+        "drop": 27,
+        "empty_retry": 38,
+        "other": 74
       },
       "cases": [
         {
@@ -333227,12 +333227,12 @@
         "uncertain": 68,
         "turns": 2812,
         "drop": 35,
-        "direct_transfer": 1,
-        "direct_failed": 1,
         "other": 56,
-        "view": 48,
+        "empty_retry": 17,
+        "direct_transfer": 1,
         "table_transfer": 8,
-        "empty_retry": 17
+        "direct_failed": 1,
+        "view": 48
       },
       "cases": [
         {
@@ -348220,12 +348220,12 @@
         "success": 17,
         "uncertain": 92,
         "turns": 2938,
-        "view": 49,
         "direct_transfer": 2,
-        "direct_failed": 2,
         "table_transfer": 11,
         "empty_retry": 16,
         "drop": 28,
+        "direct_failed": 2,
+        "view": 49,
         "other": 44
       },
       "cases": [

@@ -44,12 +44,12 @@
     "uncertain": 68,
     "turns": 2812,
     "drop": 35,
-    "direct_transfer": 1,
-    "direct_failed": 1,
     "other": 56,
-    "view": 48,
+    "empty_retry": 17,
+    "direct_transfer": 1,
     "table_transfer": 8,
-    "empty_retry": 17
+    "direct_failed": 1,
+    "view": 48
   },
   "cases": [
     {

@@ -64,9 +64,9 @@
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/tasks.json | jq -c '.[] | select(.group_id==\"action_horizon\")'",
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/events.jsonl | jq -c 'select(.category==\"empty_retry\")'"
   ],
-  "generated_at": "2026-10-23T14:41:55Z",
+  "generated_at": "2026-10-23T14:50:45Z",
   "name": "robodojo-board",
   "source_bytes": 16910495,
   "source_dump": "../audit-data.json",
-  "source_sha256": "de9ff063b6d06524"
+  "source_sha256": "ee1de82d46945e66"
 }

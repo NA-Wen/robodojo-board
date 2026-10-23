@@ -45,10 +45,10 @@
     "turns": 2727,
     "direct_failed": 2,
     "direct_transfer": 3,
-    "table_transfer": 9,
-    "drop": 29,
     "empty_retry": 43,
     "other": 66,
+    "drop": 29,
+    "table_transfer": 9,
     "view": 61
   },
   "cases": [

@@ -43,12 +43,12 @@
     "success": 17,
     "uncertain": 92,
     "turns": 2938,
-    "view": 49,
     "direct_transfer": 2,
-    "direct_failed": 2,
     "table_transfer": 11,
     "empty_retry": 16,
     "drop": 28,
+    "direct_failed": 2,
+    "view": 49,
     "other": 44
   },
   "cases": [
