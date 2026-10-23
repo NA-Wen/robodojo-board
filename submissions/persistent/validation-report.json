@@ -1,0 +1,46 @@
+{
+  "accepted": true,
+  "blocking": [],
+  "warnings": [
+    "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1: 没有任何事件证据，报告需说明核查覆盖范围",
+    "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1: 2 项标为 na/unknown：empty_regrasp,drop_regrasp",
+    "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1: 2 项标为 na/unknown：abandon_near_action,abandon_near_turn"
+  ],
+  "counts": {
+    "runs": 42,
+    "metric_cells": 1092,
+    "events": 307,
+    "event_statuses": {
+      "confirmed": 226,
+      "uncertain": 81
+    },
+    "coverage_views": 126,
+    "native_successes": 15,
+    "native_failures": 27,
+    "native_model_decisions": 2843,
+    "native_actual_controls": 24203,
+    "inspected_frame_records": 79215,
+    "unknown_cells": 4,
+    "source_metric_statuses": {
+      "native": 148,
+      "zero_confirmed": 725,
+      "confirmed": 136,
+      "self_report_confirmed": 10,
+      "lower_bound_with_candidates": 69,
+      "unavailable": 4
+    }
+  },
+  "checks": {
+    "all_current_fingerprints_approved": true,
+    "native_values_recomputed_and_unchanged": true,
+    "all_metric_cells_preserved": true,
+    "confirmed_event_counts_recomputed": true,
+    "same_metric_physical_events_deduplicated": true,
+    "recovery_chains_deduplicated": true,
+    "csv_and_flat_events_exact_mirrors": true,
+    "base_action_and_event_padding_covered": true,
+    "all_video_and_embedded_artifact_hashes_recomputed": true
+  },
+  "submission_sha256": "ca3e8a1a1e8a0708d93cb3287b9f18de7144aeb1ae25e36bd696aed166ce8ff8",
+  "latest_online_protocol_verified": false
+}

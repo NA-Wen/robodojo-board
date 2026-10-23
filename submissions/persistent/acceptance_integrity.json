@@ -1,0 +1,277 @@
+{
+  "source_read_only": true,
+  "all_current_fingerprints_unchanged": true,
+  "fingerprints": [
+    {
+      "run_id": "l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "c3ff087303d65b950ab409611f45dea24c195f594cb3b55865f56b6c399d2dcd",
+      "recomputed_fingerprint": "c3ff087303d65b950ab409611f45dea24c195f594cb3b55865f56b6c399d2dcd",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "b8f326e5ca6699baa45e4aa0ba0123fc21a46961b116f8ede616c4bfe829d3ad",
+      "recomputed_fingerprint": "b8f326e5ca6699baa45e4aa0ba0123fc21a46961b116f8ede616c4bfe829d3ad",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_build_tower_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "839931ee958ffa66709f46c3922c0d571d67f942edc516628409e68cfe498126",
+      "recomputed_fingerprint": "839931ee958ffa66709f46c3922c0d571d67f942edc516628409e68cfe498126",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "7b498f7c27dcdaf5a4e9cc0ddaaa4955e5d8db9b2413e0b8541556c2f3a5c3dc",
+      "recomputed_fingerprint": "7b498f7c27dcdaf5a4e9cc0ddaaa4955e5d8db9b2413e0b8541556c2f3a5c3dc",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "57c09d85635e6f43bad0902369ba2ecd7397f40af30f6ef58b3dce9d68284c05",
+      "recomputed_fingerprint": "57c09d85635e6f43bad0902369ba2ecd7397f40af30f6ef58b3dce9d68284c05",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "5399f7b1605df99fee4951f2161ae2581a2c865c9f96e6f9e3718fee08ad310b",
+      "recomputed_fingerprint": "5399f7b1605df99fee4951f2161ae2581a2c865c9f96e6f9e3718fee08ad310b",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "85ecac7e85311d2e2fd349d4db591f499bd601b2adf67633e08b14a0040f31e3",
+      "recomputed_fingerprint": "85ecac7e85311d2e2fd349d4db591f499bd601b2adf67633e08b14a0040f31e3",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "79117b9e22fa33d921ca214cb361d91f75d4f60e6379019411d13f0c8afc2e05",
+      "recomputed_fingerprint": "79117b9e22fa33d921ca214cb361d91f75d4f60e6379019411d13f0c8afc2e05",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "d3f9a817b742073375e2c6d3914d19e4d4273ab6bb431b7872bf17455760b190",
+      "recomputed_fingerprint": "d3f9a817b742073375e2c6d3914d19e4d4273ab6bb431b7872bf17455760b190",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "4fe213ec9282fb09d65467ffa9c665107a44bd26233f582d79c4b41c6aa56ffb",
+      "recomputed_fingerprint": "4fe213ec9282fb09d65467ffa9c665107a44bd26233f582d79c4b41c6aa56ffb",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "b4b5ed99d1fbfced47b4793834a88190d26f256cfa70aaabcef8e9ec9daac5f5",
+      "recomputed_fingerprint": "b4b5ed99d1fbfced47b4793834a88190d26f256cfa70aaabcef8e9ec9daac5f5",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1",
+      "manifest_fingerprint": "9b0e7a37bfae4f330a35cea956fc2fe78bd61447eea2ef523f9cee445413572a",
+      "recomputed_fingerprint": "9b0e7a37bfae4f330a35cea956fc2fe78bd61447eea2ef523f9cee445413572a",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "2d564e755307ee58a2431c945dba65c86733133d46816a41f3c915a05f9f05b4",
+      "recomputed_fingerprint": "2d564e755307ee58a2431c945dba65c86733133d46816a41f3c915a05f9f05b4",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "3c1f46c0c59e1b20701a5a5e81bc80ce008f71784a13ffc9e26a99ecb5861ee6",
+      "recomputed_fingerprint": "3c1f46c0c59e1b20701a5a5e81bc80ce008f71784a13ffc9e26a99ecb5861ee6",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_insert_key_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "0ab195dd08e01662adfb8cfd1d79ba3bfa22ee7301b66fce0b386a388cf6a68f",
+      "recomputed_fingerprint": "0ab195dd08e01662adfb8cfd1d79ba3bfa22ee7301b66fce0b386a388cf6a68f",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "0223a526e5e9097707805cd3b7e0c93e5d87245e772908e8aa55d10194a998df",
+      "recomputed_fingerprint": "0223a526e5e9097707805cd3b7e0c93e5d87245e772908e8aa55d10194a998df",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_make_kong_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "73dd45c47b69e223260dbf13f45ce1663751f56793b43557bb229a792a0519af",
+      "recomputed_fingerprint": "73dd45c47b69e223260dbf13f45ce1663751f56793b43557bb229a792a0519af",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "d74dfcf7c1753cc4f1e7e2d0a2ad9796de39022126954c3699df0cff65ef7bed",
+      "recomputed_fingerprint": "d74dfcf7c1753cc4f1e7e2d0a2ad9796de39022126954c3699df0cff65ef7bed",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "1e5a4f86ba9eede394a1922cdf82a8a8f5e62d42a7843da9d8c38f86bd33eec6",
+      "recomputed_fingerprint": "1e5a4f86ba9eede394a1922cdf82a8a8f5e62d42a7843da9d8c38f86bd33eec6",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_organize_table_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "aa98c85ec65602a3059e4129dab1aabb79b70361715c073fc3c5f4a4bf9693ee",
+      "recomputed_fingerprint": "aa98c85ec65602a3059e4129dab1aabb79b70361715c073fc3c5f4a4bf9693ee",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "120f48686ae5f19da5e7d3825d3eb4b99a20f4f4e71095d602b5b94a609a0351",
+      "recomputed_fingerprint": "120f48686ae5f19da5e7d3825d3eb4b99a20f4f4e71095d602b5b94a609a0351",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "56a08281003409d63a77216a1d21e0123269f3162873e842777f16f43fe9142e",
+      "recomputed_fingerprint": "56a08281003409d63a77216a1d21e0123269f3162873e842777f16f43fe9142e",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "5f0a022379cfc62446709ab9b1c8a08b8937854043df85513989eba9034541a8",
+      "recomputed_fingerprint": "5f0a022379cfc62446709ab9b1c8a08b8937854043df85513989eba9034541a8",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "d014e36b6414ad272551ac993fd5f87ee65a60fa9b5856668c88bdc6091bc769",
+      "recomputed_fingerprint": "d014e36b6414ad272551ac993fd5f87ee65a60fa9b5856668c88bdc6091bc769",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "01214a10f22ee2e238422eca2cb6ff5754a1928645448296cdc5067cfccfe062",
+      "recomputed_fingerprint": "01214a10f22ee2e238422eca2cb6ff5754a1928645448296cdc5067cfccfe062",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "32106038732b4176725f2cd2281634fa4e7245bdfa06345b53dfaa2ec0211fc3",
+      "recomputed_fingerprint": "32106038732b4176725f2cd2281634fa4e7245bdfa06345b53dfaa2ec0211fc3",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "b5f7d77400d7731dd9b87bd3f0803a52c92d236eea9034fa256287628665f841",
+      "recomputed_fingerprint": "b5f7d77400d7731dd9b87bd3f0803a52c92d236eea9034fa256287628665f841",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "4652ac88c107df836b65707e5f4d77e10ccbaa2cfd8f1a2aaec5a8def9f5600b",
+      "recomputed_fingerprint": "4652ac88c107df836b65707e5f4d77e10ccbaa2cfd8f1a2aaec5a8def9f5600b",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "2b540dd23156e70f7cf3f36b137dbdb87ab6ab17d444b6e9b8f81c5dfb93fbc1",
+      "recomputed_fingerprint": "2b540dd23156e70f7cf3f36b137dbdb87ab6ab17d444b6e9b8f81c5dfb93fbc1",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "ddd5b055c668b6693deea8981cbfcb113a984528d5fe48ba017d6b90ed5475d2",
+      "recomputed_fingerprint": "ddd5b055c668b6693deea8981cbfcb113a984528d5fe48ba017d6b90ed5475d2",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "ca79963ec84e7e90f152f1361c3eafe0c7d9ca836f63bef5103fcbc28b78e6ff",
+      "recomputed_fingerprint": "ca79963ec84e7e90f152f1361c3eafe0c7d9ca836f63bef5103fcbc28b78e6ff",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "01ebe9c247e6c8984df18718bc187034a6ea01df4f53999a557eec3220052485",
+      "recomputed_fingerprint": "01ebe9c247e6c8984df18718bc187034a6ea01df4f53999a557eec3220052485",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "2940c8824162e48b537089a79f72db37123601fe88e0e0c48b943adbd700279b",
+      "recomputed_fingerprint": "2940c8824162e48b537089a79f72db37123601fe88e0e0c48b943adbd700279b",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "6f55408282205fb6459968c1a807f0cb2f41cce153394f6aa697988af0f6c57a",
+      "recomputed_fingerprint": "6f55408282205fb6459968c1a807f0cb2f41cce153394f6aa697988af0f6c57a",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "9e1bf5ee695a5242f056d96204bf8796a83f730d9ab237e0f135167888e4aa4b",
+      "recomputed_fingerprint": "9e1bf5ee695a5242f056d96204bf8796a83f730d9ab237e0f135167888e4aa4b",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1",
+      "manifest_fingerprint": "1abe7361d4ffe2a67e57d81a908637c6aa2bb886485118d396859054b928fedb",
+      "recomputed_fingerprint": "1abe7361d4ffe2a67e57d81a908637c6aa2bb886485118d396859054b928fedb",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "bded16254df7640610a1423200623d2872969ae17f670d0de1c61823cdf1b41d",
+      "recomputed_fingerprint": "bded16254df7640610a1423200623d2872969ae17f670d0de1c61823cdf1b41d",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "c1d642cb2906044739a6ffc1d3dc498358324f3406d4548a98cf396b10ad0ca5",
+      "recomputed_fingerprint": "c1d642cb2906044739a6ffc1d3dc498358324f3406d4548a98cf396b10ad0ca5",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "8a6c5ade8352b9a7b5f808767ca289efc932e7397e3460c46e8ed9116f76560d",
+      "recomputed_fingerprint": "8a6c5ade8352b9a7b5f808767ca289efc932e7397e3460c46e8ed9116f76560d",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_swap_T_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "f39a041ee8ac663f2af0a758da6c9f441125bee9a3ce9dcc5e111c6a8480a6d3",
+      "recomputed_fingerprint": "f39a041ee8ac663f2af0a758da6c9f441125bee9a3ce9dcc5e111c6a8480a6d3",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "d0657962023a9004bf38241d22edb4ef863d8c71f9b2bdddb57763a6c4e5ddbe",
+      "recomputed_fingerprint": "d0657962023a9004bf38241d22edb4ef863d8c71f9b2bdddb57763a6c4e5ddbe",
+      "unchanged": true
+    },
+    {
+      "run_id": "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1",
+      "manifest_fingerprint": "4113ffca1d67b839b409499fd29f946571a69f47beb56c869ac424424a8ae7ae",
+      "recomputed_fingerprint": "4113ffca1d67b839b409499fd29f946571a69f47beb56c869ac424424a8ae7ae",
+      "unchanged": true
+    }
+  ],
+  "submission_sha256": "ca3e8a1a1e8a0708d93cb3287b9f18de7144aeb1ae25e36bd696aed166ce8ff8",
+  "source_main_result_sha256": "a601b0a9fd8550ca36f1e205db0f83292fc1f5b2c48fda3ca126d39caa1ff901",
+  "prior_main_state_sha256": "5b57093004c0d6cfe3568262ffb3b2a72204e010bb803d590fd852dc2f68903b",
+  "prior_batch_approval_records": {
+    "rolling-main/batch-1792673727774459000/review-record.json": "e2026d5ff54bb6a2e4c0a5254408974ab26e48c932e66011a3f4529e1bae59f7",
+    "rolling-main/batch-1792677218843989000/review-record.json": "546126871950d9a85f316b8f32f29be9b4f339b751a8d3c86fbcf0c8958d5562",
+    "rolling-main/batch-1792679374803945000/review-record.json": "f185a0439c67497a40fdc1c8f9a6afd919d8dd9b1412beb07fd2fab264731e6c",
+    "rolling-main/batch-1792681403740950000/review-record.json": "2dd893e1d5921e3a2cbd014c8654c50d3a2b509ee429dbbaa458dae066b7f53f",
+    "rolling-main/batch-1792683454245771000/review-record.json": "b063421859cbf169a3e0fe8b46416b54e55f7e099b3403deddd003968a9b4037",
+    "rolling-main/batch-1792685442211226000/review-record.json": "3e6d04bb191e318b979ef400bf1d45d8eb4b3ab25b2e46bcaacc080f732d0dcd",
+    "rolling-main/batch-1792686459885827000/review-record.json": "0dda9e687aa88d91805ab793aa8faeb3e2a78e0738e8e0e0e46a0f88abb7b55b",
+    "rolling-main/batch-1792687502190294000/review-record.json": "f547dae99e896303da6e360453a2fc4a3033a96121d4b5b959ed1b2209632824",
+    "rolling-main/batch-1792688581176137000/review-record.json": "9dc27159f73e4af7ac1edecb8aac7b321c8e725c45c47924bb570b631e4fdf9e",
+    "rolling-main/batch-1792689613923475000/review-record.json": "b15792088ace73b0f6947b2f5addba05441db1b11415fba132d1726b9c711ae8",
+    "rolling-main/batch-1792690421830069000/review-record.json": "ade4dd6ee555e5081309e2acde0a9d79c313b18a621740fcd7c180b2aa85dc1a",
+    "rolling-main/batch-1792723878927769000/review-record.json": "715a1150b1f318211856ba39c79946e772c2fda237b2a4589c2c243325e74e24",
+    "rolling-main/batch-1792728395498164000/review-record.json": "426261c17c88c9e34aa18b205b6d3a51fb70d332844267deea3d261832423b27",
+    "rolling-main/batch-1792731222452082000/review-record.json": "8e0a29813c030823518fd9840b89f51327b7dd669f18db3e9046ea40deb0e7a1"
+  }
+}

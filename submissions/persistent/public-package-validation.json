@@ -1,0 +1,11 @@
+{
+  "personal_absolute_path_matches": [],
+  "raw_session_logs_included": false,
+  "credentials_or_authentication_files_included": false,
+  "provider_configuration_included": false,
+  "changes_limited_to": "submissions/persistent/",
+  "git_history_retains_previous_version": true,
+  "source_values_and_unknowns_unchanged": true,
+  "flat_events_and_canonical_events_equal": true,
+  "submission_sha256": "ca3e8a1a1e8a0708d93cb3287b9f18de7144aeb1ae25e36bd696aed166ce8ff8"
+}

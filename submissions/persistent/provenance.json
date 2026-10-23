@@ -1,0 +1,3241 @@
+{
+  "audit_data_sha256": "42d687d9609efcee1a6405bc95fd749c8938de6e093e828167e4ddb359560b86",
+  "runs": [
+    {
+      "run_id": "l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "align_blocks",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 342139,
+            "sha256": "4a6477177d65b80c9006b4bace9f9fea925d3b0c1de724b1b671823457333fe9",
+            "url": "https://cloud.tsinghua.edu.cn/f/7c15dfed1d114135885a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/7c15dfed1d114135885a/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1017090,
+            "sha256": "dd0f8bb9860d6510bb3ce75a7c7b803265ab5132e0ef77607284eed055bbda3a",
+            "url": "https://cloud.tsinghua.edu.cn/f/6bb48cc4a0f548548e6a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6bb48cc4a0f548548e6a/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 121409,
+            "sha256": "237ea7a2c9a4d736290d42e030d7f62ff59e96b66e5a4f54fedfe7dd4ba26690",
+            "url": "https://cloud.tsinghua.edu.cn/f/5fa73ab5aa8645bea14a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/5fa73ab5aa8645bea14a/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "14a45820a3f9f5d7bbb67e557c27461d0d0b11b5d7fbb4eefb2a6f66fc3e6486",
+        "actions.json": "9d85d60e27211fa07d6d5ff38fc6caa5aca64659a2e7d2fcdb93ec657fb3f843",
+        "config.json": "659f6846ebca22f71a1b9f3632bade201476ab8ed807c64657d2f667f5f86b47",
+        "source-lock.json": "3f229b7bb779890f8f84ec6a585ebd126c3cde15d45fd41ab9f1a9745631cdfd",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "6c965f403669be20237ccdd8b8dc61429b075c7d47dc413ef894ccb13232a2a5",
+        "historical/native-acks.json": "a0eb92d4687983df314b5b33636910dda984c305b69a67faf81179ca694b07d3",
+        "historical/trajectory.json": "286f53ecb8fd0bebdb8b377dbafcd8e4d83ba0f50422beea586f011ce2fac381",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "0521ee73cfa8bb99383cc3d2a2177b8e9333177ff2a6f8b2271b34edb477362c",
+        "historical/publication-manifest.json": "130b13769da4b6f08f4f9ae992d9db0b8c0225c5c1b4e0b72290aad85a6d1f03",
+        "provenance.json": "ca856afe9d30c438d56006590ffa431c707946627707ea22ba77efc06dc7eeb3",
+        "result.json": "138913fe438ee5ca9114f61e5501ba69f5c35a90888a79cf248fba66e5bb4011"
+      },
+      "canonical_result_sha256": "6ee480da17d93a19a6f02b6be1500bce03cd6968ec6bcab1450506b7a7237e03",
+      "assignment_sha256": "34aa8ee67b28059e74a38efc5a58ce9b211b6da9621941827e16f1b590c01990",
+      "review_plan_sha256": "8711a091d552b27d44afda4e8eabe4f34f1cf93e08bc14ac0e018e4309bd57be",
+      "approved_fingerprint": "c3ff087303d65b950ab409611f45dea24c195f594cb3b55865f56b6c399d2dcd"
+    },
+    {
+      "run_id": "l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "arrange_largest_number",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1738164,
+            "sha256": "9c589287f87b99d3f6072c705b9239fe06d18676c3cc98c7fe33ff63d5116a9d",
+            "url": "https://cloud.tsinghua.edu.cn/f/e427ce61e6454c229b4b/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e427ce61e6454c229b4b/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2150773,
+            "sha256": "67e73d666e8f11cd2bcd0d765f3d0890f4b38a09c80d87a303cbe1d5d1232fd1",
+            "url": "https://cloud.tsinghua.edu.cn/f/b638cbb47b8e4ed094c9/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/b638cbb47b8e4ed094c9/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2155098,
+            "sha256": "3d898fd35c96250e49f1882f94c9d6bcbb52f3c16b2310466bb7df7e1ec3139e",
+            "url": "https://cloud.tsinghua.edu.cn/f/b2031091c96547028041/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/b2031091c96547028041/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "0ca22e5102be932620bd70e870210ed59f4885e7adc8672fd54b457f1bafb155",
+        "actions.json": "b8b5a86557bf5c5619f7deb008d40b460fcc6b2542cad5351dd37b797035a1be",
+        "config.json": "6ab8de673aba66899f35de1e755bd472ef9af8553180b4df89777bdc8be381e5",
+        "source-lock.json": "a7d23d531280985a42ded16b4b0f76e42c60307e37a6d8e144a5fb7b462510bd",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "f21890bc048a472f3208ebb09f916d19ebe4fccee2bb655d5bd886746f566844",
+        "historical/native-acks.json": "6b188980aa822dcb1bbb8c9b551ff68df2f1e2ec538098c1702b1d82afc22dcd",
+        "historical/trajectory.json": "9157851325a03c2f39a5fb939491391e1009d2b50c75ae640973f048fbcb4ba3",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "fe305ae377de0f7d37243554d2aba6402670a3037388b093016bdfcc63336fce",
+        "historical/publication-manifest.json": "b6667ba9556454d28637976e60a97dbd4c6a413d09ba40e8b364751e0b860da9",
+        "provenance.json": "bc0158a6758b6822fad344f0512d5998ef3d8726e977cf396e59a116bdde9bfc",
+        "result.json": "5f04d18089682381e95383434c579c5e844abe2ae776c5aef515a919a5b46c0d"
+      },
+      "canonical_result_sha256": "082c9129369628fb67e16531faabfff813ceec268210d56defc09e4191bf79e9",
+      "assignment_sha256": "b41549a03ce106b8fea824bad3a20ea6db758a6ccc5ff8cdfc83c4f663ebdc14",
+      "review_plan_sha256": "8083627bcf0773617de05852e5324a20cfa04f75470ea46809635912deedabfa",
+      "approved_fingerprint": "b8f326e5ca6699baa45e4aa0ba0123fc21a46961b116f8ede616c4bfe829d3ad"
+    },
+    {
+      "run_id": "l3_persistent_cap20_build_tower_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_build_tower_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_build_tower_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "build_tower",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.3,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1738155,
+            "sha256": "baf8418ad3bf987ff81837fdf94c62b3f06c2a49082e8c169b0cafb1b50d7a2e",
+            "url": "https://cloud.tsinghua.edu.cn/f/31df5e7cbe2142c08b6f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/31df5e7cbe2142c08b6f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2726210,
+            "sha256": "4a7f3a02fd95902888c91128a287ddcc38a455491a01f3b2bca2d660bed6a3de",
+            "url": "https://cloud.tsinghua.edu.cn/f/bedbc0cb062446d4b2b0/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/bedbc0cb062446d4b2b0/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2429162,
+            "sha256": "718fc0a3ee726610b5c3b16983aaaea226cb7cc5dad8cb471e81f804e5da6d25",
+            "url": "https://cloud.tsinghua.edu.cn/f/90adab9be1604130ae95/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/90adab9be1604130ae95/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "4941945df1b8a1c652e8db1a2bac24ad18f52a362c97885863c5e13701c8ac2d",
+        "actions.json": "2fd60a1588129ecb8eea3f3170c133a10b6ae88d0f83c39a0f23bb8e94a19b0a",
+        "config.json": "19d643359eb6febd6108e72549e838f5bbe09dc83360ac5918a8886e68aa2176",
+        "source-lock.json": "728d14b5359a91f7c36b0400907cc917745e869d881dcf9095b7a57c489089af",
+        "historical/native-result.json": "dbf911b5bcc11f49cf92adaa1ae66225f867f8b5787de023705093fa8c2e0da5",
+        "historical/episode-complete.json": "2f7004bfe657d5a7abcd0bdad7ba1827a8a51bcf416c4afc854c6997fedf9c4b",
+        "historical/native-acks.json": "3794f4a6e51ae2bff581d2ff4defe73298b54799df9fdb09779e1d80009a4adc",
+        "historical/trajectory.json": "ab399b4a00d0a1fc2abe7607887350d8c70af4d3e542cc0d1fe7547a6228ce28",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "92cb742088954b97d0561640a54ed2b9adee925471785f0199ad02c851b03211",
+        "historical/publication-manifest.json": "9855ae44f81987f6e2ade3629693cc2e6771b69423715a26d167a20df7bd97a7",
+        "provenance.json": "0bf2ab89fb2ee229e242e23992cc42b598d0f5186f72951739b256993657af50",
+        "result.json": "4c90c3e29396b42725e7a9f8e158299b7d2aa2d8277f923cba3e4dc45f3dac1a"
+      },
+      "canonical_result_sha256": "35ea0cb4d0c3698f6016a0933e865053bcecbba1cbc82b4de0108c02c50dc952",
+      "assignment_sha256": "0eebd08ed667854a0883239f052d699f758658b03495c37c854926c04e7407ea",
+      "review_plan_sha256": "a09d657281ca9d1edb886ccf8feeccb2602ede769703cf7dbc705965a7d47107",
+      "approved_fingerprint": "839931ee958ffa66709f46c3922c0d571d67f942edc516628409e68cfe498126"
+    },
+    {
+      "run_id": "l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "classify_objects",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2326352,
+            "sha256": "d92af0ad1a1c56141a3be404784510a2dda11e2a105f459b6df3102bb14ce485",
+            "url": "https://cloud.tsinghua.edu.cn/f/5a68d693e7ab41fd80dc/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/5a68d693e7ab41fd80dc/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 4171641,
+            "sha256": "65aa0dfb47df34f10165bc8fd26f13ad1eb3ade2f116bca5b77959dff211b680",
+            "url": "https://cloud.tsinghua.edu.cn/f/f025b4f8d0a04b0499c8/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/f025b4f8d0a04b0499c8/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3412523,
+            "sha256": "998e73fbf16e380b96dee2fff09295db97304f2181a91d7836aa8cc6569d4899",
+            "url": "https://cloud.tsinghua.edu.cn/f/5ed106779bdc4277886e/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/5ed106779bdc4277886e/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "6004e67755c37167eb87ecdf84fbc9fc1af921ae90afe39687527bab02d09353",
+        "actions.json": "b537dc8e9cfe6fc1ca68b3c8f8cdfbb7bcddfe38658eab2fc965cb667f0aca0f",
+        "config.json": "8674b0534eaf7346ade397aa1684f3b3d6f5362765d1734be5a5f04e81c34420",
+        "source-lock.json": "b099001df33f3f5cd0bf228d110c8abd334a90bcd99751df7e8d10ae332885a2",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "43d861bb53afee5dfb79b525c6d5457eec3059b589e4bffd1ed104fb55f0c0d6",
+        "historical/native-acks.json": "e278e695b3229b2f264bd71319b0f8f2ff6857a2713fe0c770fdf3b1eb850585",
+        "historical/trajectory.json": "e2b6a2e865c449c88da505b1c0e3a8d5034a6f8fd82d57255b5c8f1f00b28ed9",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "827685b0fb8c8bf86670e4c6d541ced9987b0908784ef4fc8a36dfbf5d396de1",
+        "historical/publication-manifest.json": "818b32d559d3e725fc66238d002214bd0f7026bcb29b3cfe330518c22025d86c",
+        "provenance.json": "c9c28ab5d54696f89548a8eb0b4a4552fcec917716669a3ca71504f8fff800c6",
+        "result.json": "9eec9aeb550e969a798cdf64366ae69ec68e57eec669ac19fe42520a93f905c4"
+      },
+      "canonical_result_sha256": "9718928c01d123c948a74b648bc274443d3d5b425ae2a910ecbc60f146d57d6c",
+      "assignment_sha256": "d585e1245163229d4177d420321109454f0d7f8317743254764572c197352c1a",
+      "review_plan_sha256": "f0b67a853368fad9d784b6c2f882b8ef814d12637a6121ba44ffe6fc0d6c9b02",
+      "approved_fingerprint": "7b498f7c27dcdaf5a4e9cc0ddaaa4955e5d8db9b2413e0b8541556c2f3a5c3dc"
+    },
+    {
+      "run_id": "l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "classify_objects_by_language",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1926382,
+            "sha256": "4a1a3ca0f486f8f216f0120e22837d74f5fe39b6c91fe41e4faa43139f91ff49",
+            "url": "https://cloud.tsinghua.edu.cn/f/20d3145945394e1180a8/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/20d3145945394e1180a8/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3711911,
+            "sha256": "4ba13ac6b7770182d1771535390f7189e9be90ef72a9c5716533aefb27a0e7ef",
+            "url": "https://cloud.tsinghua.edu.cn/f/f67ad2d7bb984c4e9e58/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/f67ad2d7bb984c4e9e58/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1625523,
+            "sha256": "53b1fc3b79a1cb47f744db14d6ac4a2f71adf2b2ce8871bf3478bcee93aca1e9",
+            "url": "https://cloud.tsinghua.edu.cn/f/b76c8ab6565741f9a089/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/b76c8ab6565741f9a089/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "56f9db47d913d87863bedb6ba448c1c2225752503f69e4ea64ffb92813518bac",
+        "actions.json": "f6c5d38fca07c31adb4e4c0ea34984952c0f173bff5a9abb4ce9d91125918639",
+        "config.json": "f1b12c0fd561ae46c8eb3891e665720473052cd42946a816c7d46cd6c8c9fc2f",
+        "source-lock.json": "fce8a080fcda8630d3feceff42762cb3f19c829d721f287168bac79129eb90f1",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "44a4bce235168b56c61160799e1526541182da1a1e7dbb3ab1a141b37b6ca979",
+        "historical/native-acks.json": "1335e07f99cc6cff1f01c89f0ee10200eb682f7216f6ccee9d7b2a2d7729ed14",
+        "historical/trajectory.json": "2420b89cc96d00b1e32772b0a478bf9f0c327577458907817d1bae69408fbbe0",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "fc24d412542a1adf7f9f9b5e0c8477e6cdbee622242b2b9f55b331ec63242f3c",
+        "historical/publication-manifest.json": "2adfdb0e2b777d10ef25d6705f8133bb62f0602dd55633491bedb3643560bc7a",
+        "provenance.json": "f0a2c9598d869073e71435cb638fd8eeb4ba7f3f74593327317b25a212ff48e0",
+        "result.json": "de968be5132c57543cf64329bb54a24e09e29049374ec122a6fcc4731f4e45f8"
+      },
+      "canonical_result_sha256": "5598beda2ab90dde7cfefebba15d18cc9fd742a43c00a05dff3b9e7328b34e1a",
+      "assignment_sha256": "f6c310ec8159b67fd38b78670af0036c4a4607f0e7a17f225d9121e5d1205da3",
+      "review_plan_sha256": "13c70fb9a248e52b59009cdd38685ac20a741b59a047a5f1e3e6666401f952f0",
+      "approved_fingerprint": "57c09d85635e6f43bad0902369ba2ecd7397f40af30f6ef58b3dce9d68284c05"
+    },
+    {
+      "run_id": "l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "cover_blocks",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.15,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1477125,
+            "sha256": "c4f54fdbca8892ed667614a2a14292209f3d2d203186f8f828f71d68c475202b",
+            "url": "https://cloud.tsinghua.edu.cn/f/270ec2b2ac60487c919f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/270ec2b2ac60487c919f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1879782,
+            "sha256": "5e4b76b426ea85e739adfd6bbe681b78ae196d40bd03bca4f35be74721435b51",
+            "url": "https://cloud.tsinghua.edu.cn/f/692d677bf86946dfb86f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/692d677bf86946dfb86f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1727355,
+            "sha256": "f6da6b6bc2ba9fcfd72185a4e5ce14ba8cb3026339254282d124225472353db6",
+            "url": "https://cloud.tsinghua.edu.cn/f/cf393ca623eb41faae39/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/cf393ca623eb41faae39/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "6765b3470a08b0bffdc4668fad079a8087810158fe45b605b34dee2e1ef637ed",
+        "actions.json": "b35acdb802374f2282255901ba48fdb3ef80b25821ec4402fdd0b76bdc1c763d",
+        "config.json": "0d74cc8973a3d8b31ebc26635a403fa74fc16446187afed1cd2d9e34e9c40a3b",
+        "source-lock.json": "16b10d45d2bb1eff27412c14fe6e2d5ab142730bfc7710d60cb4cb292b180584",
+        "historical/native-result.json": "bad662dd5a359e7ee7b314f3066964111b95e6e7cfa809037c302798a57f5456",
+        "historical/episode-complete.json": "16fb0f9dbaf9d0e2c6d0d9674bdd0304f27dca1b7c2b653378a311487acb05df",
+        "historical/native-acks.json": "5fcc50b7beb2ad00ec501bb665e214f5b8595d8c9c650cb1451df01d14ad071c",
+        "historical/trajectory.json": "1b238f83183a287f6742471cd05c64316247f164407ea54feb77c153364b1856",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "0c73d6103da667901540d3b29474d3759701e4f52193f95f7e3a425debf09772",
+        "historical/publication-manifest.json": "e6e4eaa4ee4b45016087c28f485c88447e659839976dc6a94c3d2bc0d15977ec",
+        "provenance.json": "76979227e510972ed1cee9c0386ce5acdfaee5f806a1817e73ae2379a975f41e",
+        "result.json": "3f802a34a4c11c44e7a2e8e90f034b482f4518e32c20dd7d7d726d3bf232466c"
+      },
+      "canonical_result_sha256": "0591d6473cbfc6ab5093d5e8211a681ea13e7b3d783337ca7d9d6f02799737e6",
+      "assignment_sha256": "b3cc2c1337b81b6b8f39852a4be506e1bb34c67ed1a8e295383bd5375b4f5fb0",
+      "review_plan_sha256": "44281804e30f942ec6ace305feb417ab5fc4022745068977a2cd6fa99d6a7309",
+      "approved_fingerprint": "5399f7b1605df99fee4951f2161ae2581a2c865c9f96e6f9e3718fee08ad310b"
+    },
+    {
+      "run_id": "l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "deposit_coin",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.2,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 546636,
+            "sha256": "6a46ad8c9fc46253422f0bb70bb4bae109abed2984fb0e922624080c3300d161",
+            "url": "https://cloud.tsinghua.edu.cn/f/2f993ac2b71340578b77/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/2f993ac2b71340578b77/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1190725,
+            "sha256": "832179110b50261480ec66d0182594dc1a241d7487ae59f06ac5630a76d1d2e3",
+            "url": "https://cloud.tsinghua.edu.cn/f/28847dec0f9e4443abaa/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/28847dec0f9e4443abaa/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 262526,
+            "sha256": "9cd113966e3e3f044bbcebd2f5e9dbe573209009452baff73e6afd3b991d0012",
+            "url": "https://cloud.tsinghua.edu.cn/f/f364702a251d4871a2be/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/f364702a251d4871a2be/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "3e8ba4ca0e84180e43939c919dc52cd94736c03e7b7999a2eee242db096e5c69",
+        "actions.json": "e853f62374e95dbb36fb3017ca5c0330bd80309d989fe521a7f266ebd0a7e6da",
+        "config.json": "9a1c8c698e4728a3959b53f084a6715a668e5bad2b255e57faed501663af19be",
+        "source-lock.json": "a32b8978969cc75a70cc68e8afdaaabe581a0a807ff3161fa04e17c8fefe5654",
+        "historical/native-result.json": "f74368830c253fca1034ef9281b5549febc9402e930aa8b32c0569fed92af7bb",
+        "historical/episode-complete.json": "37f7fcb06e651da429923a7a5d916939494e170ea4180d673cc21599b9955b8a",
+        "historical/native-acks.json": "ae228d2e3a2b346dd42b475fed1740f92966814f66fc9a93affae57614f000a5",
+        "historical/trajectory.json": "89a552f3f8e0fb18c4559fdd1de95f8d81ac28ad64909939c91a8c51a2f01911",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "c52ea450cbbf928ab81a1c0e675632931fa767ddf7ae1de25623d6885b8bea9b",
+        "historical/publication-manifest.json": "010d4c390eabba0a200920bc9ac39cbcaa6b0b7c760c6e21831e84aa4e6ba028",
+        "provenance.json": "8ac9ef817c689e2935f5629f34e29d8d80d239343dff2e428f263eacee18623a",
+        "result.json": "c2c93ebc0c40beea401cca0511ac9023305909382c5721d8d094dea1c3a57bc3"
+      },
+      "canonical_result_sha256": "79fcec0398adf3a52d7abeba00b4818b91687ab0d1592ab3a3485d916e7d136f",
+      "assignment_sha256": "082ec95d7a599d5f51666930802640c87a0100907ca0787d9106d0465a636a45",
+      "review_plan_sha256": "03499743f270c832be4a2076ce972d0b70ae2abead745ffba172b4ceb949e5eb",
+      "approved_fingerprint": "85ecac7e85311d2e2fd349d4db591f499bd601b2adf67633e08b14a0040f31e3"
+    },
+    {
+      "run_id": "l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "fasten_screws",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.2,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1391183,
+            "sha256": "83d2d90fbab5fa3dbd9e6ffb895897397bbd7226cd04e9f196cae1668139e379",
+            "url": "https://cloud.tsinghua.edu.cn/f/c2ef4905ea1d45858828/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/c2ef4905ea1d45858828/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3186378,
+            "sha256": "7eb6979ab2b1807b5af789d6f71ca506b64119c153548cb354fe04a50f35235e",
+            "url": "https://cloud.tsinghua.edu.cn/f/6bd8f5d1271b4d848cb2/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6bd8f5d1271b4d848cb2/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2655074,
+            "sha256": "fb480ef6837872508a78c6355b1feb093738687a145155b1b29c316d6bcc8e15",
+            "url": "https://cloud.tsinghua.edu.cn/f/1fce2bee4d4443f58bef/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/1fce2bee4d4443f58bef/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "fbafdfe5a16b8227895b35b150c1f467b2adb1aa25b4ebbf8f821a6d2cb98654",
+        "actions.json": "6114f726745236f0831d18ff011bf0f6f8e876919b2ae75afbd30961b38fe105",
+        "config.json": "b9ac6d69bc04ce58205cdcb8ddd989ba1bc52f75bb4c8b91538a493e0c3c87ce",
+        "source-lock.json": "2cdc9eeeb76152a431f6bd45f536575a98c0d64446b6a00d3a6755af61c7166c",
+        "historical/native-result.json": "f74368830c253fca1034ef9281b5549febc9402e930aa8b32c0569fed92af7bb",
+        "historical/episode-complete.json": "4b8370a1ca6512c42bd5fe28dfbf8ea1bebc481ec0039ff83abd3e4e22d598ee",
+        "historical/native-acks.json": "d4e69be1ec05d7de91c81657569736376216dea1ea55d04e273eb8cd13e3d593",
+        "historical/trajectory.json": "5d99fdf3906af705b95a8e43c8865c5dbf2dbd16143e26fc6d9f50573da4bd06",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "3eaaa8590930057d57bad848f6b05da74ce6a86bd69939ca6e249b00aa07018e",
+        "historical/publication-manifest.json": "6563340e70157a7f86892ba5cfa9fb812673deeba0201503bb63d1e53c6b5035",
+        "provenance.json": "e511811b5df7473efb7b5b63d32736e14b25e6b2a12f27e246d85af6c8fc1094",
+        "result.json": "5a22f2fc18b44bbac2871ba40b205d5f88e7e7d9178df2a2b1f0571cb6cd59c0"
+      },
+      "canonical_result_sha256": "a70a16f2a0f1a4448e42f964c1d82f7b8f3a5dfe966e532f770d102626ec051b",
+      "assignment_sha256": "9b3b61801f4440d36b770b4078dd8e93d50c6c189aecc6477dfd646e516ac0a4",
+      "review_plan_sha256": "c6fd4445e60e953fb76c38cae3f13d0f813dd9b2262c4dc3cb28deba72c307c5",
+      "approved_fingerprint": "79117b9e22fa33d921ca214cb361d91f75d4f60e6379019411d13f0c8afc2e05"
+    },
+    {
+      "run_id": "l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "fill_egg_holder",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.1,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1241914,
+            "sha256": "c8cb472b2354fcef3452b81df7b9eb9df3ccf62ed5e8c0e2c78cac3aba28a3d2",
+            "url": "https://cloud.tsinghua.edu.cn/f/17c3425c9f3440d9a700/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/17c3425c9f3440d9a700/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 695354,
+            "sha256": "456b74d365645a38238a89e554f66f450843158e5600921b47fc1c6e4a708e0c",
+            "url": "https://cloud.tsinghua.edu.cn/f/71faa12b2c9d434291a2/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/71faa12b2c9d434291a2/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 5987896,
+            "sha256": "f301ce093b1b6b7c6b96dd26cfad7f353cfbf953a71a2fea89ef9eaee71bcb2a",
+            "url": "https://cloud.tsinghua.edu.cn/f/33013948c15e48c1b639/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/33013948c15e48c1b639/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "b1b361a28615f03db9433b64cf134c1514a5162fb70e0509ae9551e200e2d473",
+        "actions.json": "9bfd2fee5ec915c21392ed6c226afa3cd13a724235082cf4e888119827620109",
+        "config.json": "7144e6160bde71f0ef6c5e5f428abc73b6f1880867282a10be9b3d4988688e0d",
+        "source-lock.json": "5850d4a9879a0bbfb803b0da954915cd41eec7fc3aeb91b73e266d381fd80eb5",
+        "historical/native-result.json": "e42539ac2fbee970d87b6ba5a00cb3b630592744e6ae019164320305b4681ce5",
+        "historical/episode-complete.json": "442981c73a22da5749625d18c5639d3b3be7e3361a0abc80a8d260e90454b44d",
+        "historical/native-acks.json": "747086b8a2ab18e10d89e08479e529075ff6bceafc418b9a42bc866bb4431151",
+        "historical/trajectory.json": "175fc84c50130eb34c223d7051990982c16b8ac8fc49dc1235e2f8672a845f9b",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "db91259447aa9d5acdf27ee527e51b70bfe56809a60e2527c21b35883bd90b4d",
+        "historical/publication-manifest.json": "58b9197a84925feb9785084d94f2b2f8d46b82608635444aec72b21c69ec8961",
+        "provenance.json": "0ebbe0ac91bee187674b18c675e79ae08b4f4547463da02843a87d9f97e4e7bb",
+        "result.json": "03d2457652db91179af4b1b2305eea009243fa311b10e9840357849ef7dd9be4"
+      },
+      "canonical_result_sha256": "05540c56a6e0afdd6a78c67fe4d656f4d6dd43ac10e064b442cd0f52b0c3b316",
+      "assignment_sha256": "9b88720d7028e1c49ce59b25c93799dbf1f6c5ad6e975042e2b5ec3e8ae2fb76",
+      "review_plan_sha256": "c7cf126798f615f93dec77992cd5fee377c86e7f980c7af5bd7606f0b698f73d",
+      "approved_fingerprint": "d3f9a817b742073375e2c6d3914d19e4d4273ab6bb431b7872bf17455760b190"
+    },
+    {
+      "run_id": "l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "fill_pen_holder",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.1,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2001569,
+            "sha256": "64b326093182bca9c359864eb05af516422b09465fcf43df1759bd3031096807",
+            "url": "https://cloud.tsinghua.edu.cn/f/cf49452edf9940af8db4/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/cf49452edf9940af8db4/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3932888,
+            "sha256": "3265d2bf6f43b2e5336df17691196e93a0376743cd40ff3fcf823a221fc6e527",
+            "url": "https://cloud.tsinghua.edu.cn/f/1b2e761c3de8433cbd3c/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/1b2e761c3de8433cbd3c/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1578060,
+            "sha256": "3a1868a45552377c0f5ede02a4ff76a375486c1791a85b4637153a433545e99b",
+            "url": "https://cloud.tsinghua.edu.cn/f/2c536806f7694243b099/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/2c536806f7694243b099/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "688b3f65591bdce7a6af167d2d5fff28a371cc2450450a8bc5413ebd5faf1273",
+        "actions.json": "608972ecbee275d6bb1af3e0f3a8b813bfb1a51a4cbd05530cda56eafe4a9ab4",
+        "config.json": "9d0858aecda1e52390b0d48ced840aad568b4ae992a10cece4dd57c23a1c64a1",
+        "source-lock.json": "5b60e1108a23accd1d6cd1eabc91b0f5e62d834f206eb6ad0d228858c8251ac2",
+        "historical/native-result.json": "e42539ac2fbee970d87b6ba5a00cb3b630592744e6ae019164320305b4681ce5",
+        "historical/episode-complete.json": "aac2693ed06adc1746676446dcfb7a60359aea63e9562d8ec60dc836d637c8db",
+        "historical/native-acks.json": "e411831772428d0360a95b3b611eee9681001b7f5c129855047d79f741ba9ee5",
+        "historical/trajectory.json": "0b19695831b6782378702572bf5af240c3822de3ae3f908eeb4f045bd9584dc5",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "ce1b1bebfa0ef169b4382b58e5ac1241e987052e4866d625e28c399598a679a7",
+        "historical/publication-manifest.json": "8ab55565708200c62c965efc013fbb06540c547f757da0d51844ada289b93eed",
+        "provenance.json": "c5bdb891c70f72f9ace48c1f5c46e08137afdf3cb6b7ce44132fd42d58b523f9",
+        "result.json": "f670dc26d92d3ca66a3561df70d4bb27c51d242a2c929aaaadc30ccdebc39c4b"
+      },
+      "canonical_result_sha256": "1c0843f3a2a81382966b810eba0b82fb440e04611397205db4f2fd91bc1f8e71",
+      "assignment_sha256": "199bd0e92caa4dddbd3931956f8c0d12d7a9be5e89bf5a125ee21b7fc50c2a1c",
+      "review_plan_sha256": "95d1369e9c408f5719390e15d02f66656fa2e8f0895120f857bce0a2ad55e11b",
+      "approved_fingerprint": "4fe213ec9282fb09d65467ffa9c665107a44bd26233f582d79c4b41c6aa56ffb"
+    },
+    {
+      "run_id": "l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "fold_clothes",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.2,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1430010,
+            "sha256": "ddf278c6b9e346d479b2205f934d85ffcc3f9f95ac5268a1796d257dcf9df219",
+            "url": "https://cloud.tsinghua.edu.cn/f/53acfc2e085d400badd5/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/53acfc2e085d400badd5/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2042071,
+            "sha256": "c097d45a02f37270797ef605cf383566f91b5eedca36a8bfaaf0986426bd6251",
+            "url": "https://cloud.tsinghua.edu.cn/f/c428159da7734f799225/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/c428159da7734f799225/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1585516,
+            "sha256": "1a1efb204f997d18796c01b5a0e7c8df17da42093a3f8e5b439b55d28b58d0f6",
+            "url": "https://cloud.tsinghua.edu.cn/f/7f7abf24c92e4bc99a50/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/7f7abf24c92e4bc99a50/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "0f8056b9875b1b3a0680af8a31c68b6ce33134c4e60c07039bd982e511f5f402",
+        "actions.json": "2b00cf3817948b45e7bc3b6a3f18ac66147636e2a5a32f659159c7080be9de77",
+        "config.json": "278cee26eb067dfaa8e78ea355285975a01aa8604acb6c7cf7991eb2c35a37bf",
+        "source-lock.json": "6d91878d67eb590ee29ab62dc3ce6dc8e085be30299432985bd6e0e865214424",
+        "historical/native-result.json": "f74368830c253fca1034ef9281b5549febc9402e930aa8b32c0569fed92af7bb",
+        "historical/episode-complete.json": "de308a11646dd957f06503d8225df30b5794d1392c274f7caeade15172e3d470",
+        "historical/native-acks.json": "674f8090317e2b477a029467e4cc9633e18ef12ff5183af88d78159cf42337f4",
+        "historical/trajectory.json": "0d257d3c49f48244247bfe0ab261733ff2f702a26e51229e29cc1bf84a9c28cb",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "de1b46e48c59a0a92869648901ffca56f5d0c364a8eedc2836b8bb56e78ee193",
+        "historical/publication-manifest.json": "da4fdff90da10554ceb48cba6ac54ecb173e83c1bb7e516db41ba5324f8b8c14",
+        "provenance.json": "a3eb19488ba95fde9b0559a942f69fa6fe3478af755671713ad49a3ae01c0e3c",
+        "result.json": "d927ea3df0d6540de65671c9ed4dc0a4f7fd93740873d7736d0900d67f4e85f7"
+      },
+      "canonical_result_sha256": "aa489f94729a286927a8495d399de54b47fefa31d83379e3a9eaaeeefc94dc64",
+      "assignment_sha256": "0b526e5b493da5a38c18f45abb8cac31d26832b9eb5751e5b2f7729213662145",
+      "review_plan_sha256": "8017a9ba2f6eeac95e011abfa5be13f1aad62aa6123e454fb9571da309b88d24",
+      "approved_fingerprint": "b4b5ed99d1fbfced47b4793834a88190d26f256cfa70aaabcef8e9ec9daac5f5"
+    },
+    {
+      "run_id": "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1",
+      "source": {
+        "run_id": "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_v1_general_pickup_s0_layout0_20261002_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "general_pickup",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 164742,
+            "sha256": "5f452be2b5833a1453474f4255a68f2be44597a3785b797b931f4baf96606137",
+            "url": "https://cloud.tsinghua.edu.cn/f/406fcc2dc8504be79825/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/406fcc2dc8504be79825/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 58837,
+            "sha256": "667704056ea77b6dc9c6a844b256c7d5e2d9dcaf7bac72279bd5e7eb5e2236d2",
+            "url": "https://cloud.tsinghua.edu.cn/f/845f5a6c74bc4730aa2a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/845f5a6c74bc4730aa2a/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 492031,
+            "sha256": "9c6921ff708724183c48b33d4ac213582eef220d1c594cfe92adfb1abc9008b8",
+            "url": "https://cloud.tsinghua.edu.cn/f/65c38d8a60744f9c863e/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/65c38d8a60744f9c863e/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "345c9b64e3834e6d59cf43f962cebb11c90385888b5773096699744469854cb6",
+        "actions.json": "ec09e011e7317d6c23a0e1159a828a196ad0b9e9d85c5ab85f5ac6bff93b512d",
+        "config.json": "b584bb901e1bddd7d896b79b5ff9512718de0d83778a9737fedeb09b931498a6",
+        "source-lock.json": "cd9b77055a61d8096838a8d57f3f20a5a6a8922175d1e797c59ce70fdae258b6",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "993fbec6969a33d04eb96161fa2b0909080f486eb0fa28138bc6871132c5c390",
+        "historical/native-acks.json": "6d7bdcc5b6472a9ccbd95b42903fed7db9415c5ffd988bcb23c6b8beba8968ba",
+        "historical/trajectory.json": "83fca16659bbacf5359ae3273abad5e4bc78ccd41b11a4781cf0200eb35d1cb9",
+        "historical/source-lock.json": "213be2fac2ef0b6535a170677821c84095787d03c9c1d4f156d71760ae3ea247",
+        "historical/costs.json": "5e609ca292b848331ba5ac93a7c83c462822e61697714a7049fbf242297965ae",
+        "historical/publication-manifest.json": "814c2087e7491105bb4062981c2f731b02a1e2573fc6e9b89c28bb6ff2864773",
+        "provenance.json": "41e7eb2334c73bbfe8d93f3c8fa3df6e011686544552aa7c8eaf3baaba9c4f70",
+        "result.json": "a1f3917401f5094e485fff184778819ce14626178dad1cc94cfe51e4e2902c2f"
+      },
+      "canonical_result_sha256": "5932fb104b093e57d35b0210f431b85e60b4a621f6564ad56e33010b3197bb78",
+      "assignment_sha256": "a266135cb49c48bb9610e789ba4cdc301042f672fa5d31f767cc45bc68c38024",
+      "review_plan_sha256": "fe4c234ca4d17c6cbb5c981f6d8ca02d8068ba85bc9b418bb9c19eface532bb0",
+      "approved_fingerprint": "9b0e7a37bfae4f330a35cea956fc2fe78bd61447eea2ef523f9cee445413572a"
+    },
+    {
+      "run_id": "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "hang_mugs",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.15,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1601032,
+            "sha256": "fbe96c9213079f1f05e441a938bcbe0638b9d2f9849c15506410e297b940cbec",
+            "url": "https://cloud.tsinghua.edu.cn/f/37a977452f7849a89394/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/37a977452f7849a89394/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2406949,
+            "sha256": "5fa5ecc906b6e9a1e081abc7e2a12c9cfc6704c436d96fa0dfcf2195d7349f21",
+            "url": "https://cloud.tsinghua.edu.cn/f/6b472a9e6bd240b18b66/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6b472a9e6bd240b18b66/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1811106,
+            "sha256": "9798d6b8abeb7d4ab3525b837f0769d6e46af8e6af30fa0cbf1471a6423a32cb",
+            "url": "https://cloud.tsinghua.edu.cn/f/e025a1b0df6e43e4b607/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e025a1b0df6e43e4b607/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "6545f1841a6bc710ee7196753aca39297435c99868329cd2da871941138ec250",
+        "actions.json": "98b2c99e4247d8cb0fbd73c262011a63bb43a4a283ba4f6ba01da47e00cd92f9",
+        "config.json": "33760056a39c0b2a19bc7c7b75759d1d6cd09b9f9fd64cb58cebfe4c8c13687c",
+        "source-lock.json": "04fcd7ec87a7870edf713c069dd155a2f2a03107f061a6d7a4d236a8b20266d7",
+        "historical/native-result.json": "bad662dd5a359e7ee7b314f3066964111b95e6e7cfa809037c302798a57f5456",
+        "historical/episode-complete.json": "74469ab825fe41e25eed3ec17680763969adb2356fc22e9046034bf38ca2f877",
+        "historical/native-acks.json": "7196f4d19986f091a671aa95443ea21e71fa3f676807102596cf0ad2eb517a17",
+        "historical/trajectory.json": "6e79e1013ce98145c610363325140bfe9659eb2b659511b429ac166a4ca673b8",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "dfd30722ea8eb879aea9dbd1593ced4315a92143a7d4d9a8b62e73ff1295dd23",
+        "historical/publication-manifest.json": "00716fe16c60d58a0084cc6331c0bdc4ff07f4f43dda17a8e556e9c99ec3973e",
+        "provenance.json": "e98ec36bf79060385ca3e05a7d5769f31483f97706baee893965078c0a71ab2e",
+        "result.json": "946eaa57fca7b65bd57783eedbe1f836ccfe7a24394dc892003576c642d21fec"
+      },
+      "canonical_result_sha256": "061ff85d0df9d6302ad660b29de7d957f54cc9f9eaf96c9952a029aeb0b10fe2",
+      "assignment_sha256": "d7e7acd5a4b258cf550f50d519f819a65e6f4d7c6829dbcdf2b1f6f40c8bebf6",
+      "review_plan_sha256": "30ec96b1cc6e4a335f2c4d969daeb9214cad34fef9655b29b2cb67c61d77ff7e",
+      "approved_fingerprint": "2d564e755307ee58a2431c945dba65c86733133d46816a41f3c915a05f9f05b4"
+    },
+    {
+      "run_id": "l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "imitate_sorting_sequence",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2221159,
+            "sha256": "e578a1722314e8cb43cc7cc81879a0fa2acaf02213f87da6c4310269df1ad652",
+            "url": "https://cloud.tsinghua.edu.cn/f/d5880f9d4d044f3b842a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d5880f9d4d044f3b842a/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 4288171,
+            "sha256": "f319f7d107f886455a111c83ad803e291546bfdca47a4c7aafc023be96c3162d",
+            "url": "https://cloud.tsinghua.edu.cn/f/4288138e9830457795cb/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/4288138e9830457795cb/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1794048,
+            "sha256": "79519b97ec76026e867c88ddf1bab564bddd4a038454d2b500c2ddb7fc0708aa",
+            "url": "https://cloud.tsinghua.edu.cn/f/94d7811836874b64b82f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/94d7811836874b64b82f/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "398abf9db8b0e90ba067326986a8251c3b6da6f9be2f593e25a63d2bb1b01750",
+        "actions.json": "a1acfdbdf6d5e5413d70b8747da7f15993517d9059b3e836deecad1ffc421894",
+        "config.json": "33703cd69c07d1b4de988010667bc486e74811be5aa6c4fd89f671f0ad002598",
+        "source-lock.json": "6fae376077142f5aa619ec559acd2c28ddf0e6e9b1569aacd7c87c07b667919f",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "c5d779f8de587c72459bf7b89ab8ff98e0a74d3e5538543db31b5979045aa7b1",
+        "historical/native-acks.json": "3cfbdf7c1b6df6ce8c35d896d890571ac960b5c67b0e2d81bcef73fa68689e09",
+        "historical/trajectory.json": "31b2546ec0855c593be56e46c68a2fc8c01256712e983b578de9ecff4434abcb",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "521cf81046668cf44b708f125ef2caec824fe72d04bef9fc7b0e9af8ea2ec57d",
+        "historical/publication-manifest.json": "ff0f5bb552f41fc12ce16f5ca73ebc6d1abeee779ccceb55a244e5da675d8d0c",
+        "provenance.json": "f5372d99cc681a69895b46df74e13f2fc68642d9c4c646ae04d470288a031293",
+        "result.json": "7cb8c4fc2fb4070061fcdf517968306ce07ab5e9e476519e0d29f07c22a6189f"
+      },
+      "canonical_result_sha256": "bb830de632be7a53668e04a481f089123943f7c8e1e8e7b443b262fba0458993",
+      "assignment_sha256": "de5ac6f8335a7d719509ab157b829922dd6edd2fd81b403e8d328b0fb8560e53",
+      "review_plan_sha256": "d402814f73aa702c899be048c68c08b2641dbfea9dae1901192131d04cbff579",
+      "approved_fingerprint": "3c1f46c0c59e1b20701a5a5e81bc80ce008f71784a13ffc9e26a99ecb5861ee6"
+    },
+    {
+      "run_id": "l3_persistent_cap20_insert_key_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_insert_key_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_insert_key_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "insert_key",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.15,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 503709,
+            "sha256": "21d724f85a849856c9838aa7fce31e6174d7b1190de5aa8b5ce89cfc8a01aa55",
+            "url": "https://cloud.tsinghua.edu.cn/f/bcf2808abcf942acb14c/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/bcf2808abcf942acb14c/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 963303,
+            "sha256": "c78e30efa56f05ee7105131894e154b4acccdea5c5f88ff0565dc080d9e76e8c",
+            "url": "https://cloud.tsinghua.edu.cn/f/e896e77c53d841d08b0f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e896e77c53d841d08b0f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 376917,
+            "sha256": "cd3239ecffcf4b5e7133fecce718c88e2768ef67bf45f99e8a7ee09ccb5ca881",
+            "url": "https://cloud.tsinghua.edu.cn/f/6fd4a65ea99949569160/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6fd4a65ea99949569160/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "abfd7d8bda39b7f44186de429e27940a6d2d58ee1fabd287c1c809f6fe9a1b88",
+        "actions.json": "448e88f766db2895bad1d9c5dbd938e26fe6acbd6956ba2da6b1fb017fbecdfb",
+        "config.json": "8c2a3e8d93549750d145eff80c45b7fc083a6c9898c3d97eccfed7ced35dc9b4",
+        "source-lock.json": "45f697f1f19e6b79497b30b4b31f28ad98871ecc0e63bb89bf88309217a73eba",
+        "historical/native-result.json": "bad662dd5a359e7ee7b314f3066964111b95e6e7cfa809037c302798a57f5456",
+        "historical/episode-complete.json": "832948ad5554b48319f722eded0ecc80d84161ec406bc189d155e231c96d6b79",
+        "historical/native-acks.json": "c68b01402f6126a9c9bc4e09d6c30f8ffea3ad8a42ec82e093165325871653b5",
+        "historical/trajectory.json": "2403115280f3aba1f326694690bcf81b8156cccc5bc045fceb9c69e855407542",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "f58f83963eddfd4516d632f1da7132071fe5c0303c1094133a7075561c15d358",
+        "historical/publication-manifest.json": "0d56203ec31165d84696a3412bb7785b9e592f0e9c7faa038d62dd6e00699fcc",
+        "provenance.json": "13feb75cc8377e50dd8defa697dfc205a060e3c91b3a872e883af0732e150fb0",
+        "result.json": "dbd4e9db8bfd25ed6900bf72ddeeff5daeb1d07efcbf81e8fbd03c2d932e2bec"
+      },
+      "canonical_result_sha256": "d5538bd8c40b196748effd7eecaf8b951ac1717fa781cfe29a31d6f09ba863ac",
+      "assignment_sha256": "babd5c7054caef4f906137b4ad4ccee14fd96ee893f3687bb21e3f50d6db8638",
+      "review_plan_sha256": "81e10af20a5ba16c13d3529c9a246b3c67701516d3bfaf3268e04a98a09fc711",
+      "approved_fingerprint": "0ab195dd08e01662adfb8cfd1d79ba3bfa22ee7301b66fce0b386a388cf6a68f"
+    },
+    {
+      "run_id": "l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "insert_tubes",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 965519,
+            "sha256": "9325b97e448d9c61a7509961aa26863db2a215fc27c62b2c14b06bdced57f4d7",
+            "url": "https://cloud.tsinghua.edu.cn/f/18db442967a44282bb29/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/18db442967a44282bb29/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1513446,
+            "sha256": "2427156c2b3b8f8eb46804847ad1bbf825c8aa45df2b9a8e30a2a97eb25a25d3",
+            "url": "https://cloud.tsinghua.edu.cn/f/cc5f974b8c0c4b0ea81b/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/cc5f974b8c0c4b0ea81b/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 980938,
+            "sha256": "2aa591fc58e22b358a70c65043df3c28ee7f41e7aa3cbb63efebc560b494559f",
+            "url": "https://cloud.tsinghua.edu.cn/f/55ced524794f4776b664/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/55ced524794f4776b664/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "ba99280960d4d2d18ea258d460da6e4367ced5186b67bca22d376b6da1f404f2",
+        "actions.json": "e3830e9bb5c06542c9e57a1c4f8ca43574f2d1bc783ca6ba7061638ec73361a4",
+        "config.json": "4b7c975eccb0245a513edb3e9bd80f54b8bea2ac8d3e137207bb9a349e155865",
+        "source-lock.json": "73829d07fae2e3c82dc7633afdb2724f2fcc832dad77314b4b96204d9745ea6f",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "82e349df910d2342a8e5fcf72124ef13dc21676ea4ffe52682fe032dc39f5813",
+        "historical/native-acks.json": "d95da553664beafa765f54935a365cde71c9b0601088f51c97a287abe51bacd4",
+        "historical/trajectory.json": "9d567396dc3da23bdf668580a64887c730c38d6ea5c6c7f652e806102f08b89d",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "6934be6d8da99f46530e60fe02948f5218fe30ba5d6ed0bc42fa9d26cbf1f62d",
+        "historical/publication-manifest.json": "862fb38d2e9e1c5531c60aef1c31814e3dd14e855013e09be7559348c4e819dd",
+        "provenance.json": "26e2acddd129a9fc661e2e78a991f26f5695d98477babc29c02b90e2fdb0283b",
+        "result.json": "af6c92596e78e6d112dc8e128683a8c68564b8c7423b1c41d0e66c79a1b2c3e8"
+      },
+      "canonical_result_sha256": "016d18a88737ec34884493216368a4fd9dc8afc311ea401530d423940487990b",
+      "assignment_sha256": "ac28996ea3eff8bb03c3a8e2e9fedb2a3b5fa22b41c001100b5834c329679899",
+      "review_plan_sha256": "0c029e87181653e2879748a10bfec81402f28510d759c9459c982b85ea402d80",
+      "approved_fingerprint": "0223a526e5e9097707805cd3b7e0c93e5d87245e772908e8aa55d10194a998df"
+    },
+    {
+      "run_id": "l3_persistent_cap20_make_kong_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_make_kong_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_make_kong_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "make_kong",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 927153,
+            "sha256": "42a57684e7d084cd4820824eee17ac69cd8878a9b3f7a728317bd7041b56b1e8",
+            "url": "https://cloud.tsinghua.edu.cn/f/a176c8b60488412caf24/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/a176c8b60488412caf24/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1223983,
+            "sha256": "efb82557c4fe6d548cdf67eea6a775e295ac6db54def330de27a3e7883764cef",
+            "url": "https://cloud.tsinghua.edu.cn/f/c59babca4ef049c4a577/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/c59babca4ef049c4a577/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1190496,
+            "sha256": "7f4943613585e9baa502c5f42bf6af5e4e7b8885708457fe9089726d7c1b0f9f",
+            "url": "https://cloud.tsinghua.edu.cn/f/dd350e5f75ea4383a9d1/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/dd350e5f75ea4383a9d1/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "414966ae41a9f354253f19f664ea464f2fdfb84fa0e7dcbdc6b72574d1896599",
+        "actions.json": "b4fc3ae168070bac1326ca189265e002ea908d9cb5a6d3d83f7fcbca47110e99",
+        "config.json": "20d3012d0aaa1cc13440c3069298078bc2a73c21b67a3cea55d826a9a9e70d34",
+        "source-lock.json": "86dd6e545f1f12a09123140c117fbc6b20b622f95ea5e40ce2a06581e2f2b9bc",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "0fc740a1b69fbe5972af9b6ef524492f4130db62779ef9036f343da13e5630a8",
+        "historical/native-acks.json": "1fca874535f0113cff18c0a5c2914a4527c06c5e31712bb2b12732006269526d",
+        "historical/trajectory.json": "1b63e057f19e2aa02fafa5bd2e81ac7f35ba020101d7f88097c126e189998433",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "aa1a13a044bb4473bbc0ca2ec05b7f1d146ef7f658e5ff1e99e83593f792b1d4",
+        "historical/publication-manifest.json": "98cf0cc3114e6df67fc4fd270b89de3ae8a4a40ab7a41e54535adc8659859abe",
+        "provenance.json": "424d6ef1fae51db8bcf2462711e19f2e398810bcc8806c91cd692b69d6cb0003",
+        "result.json": "86e44acd54ec6d2846f0a74f4fe9d43ff74d36e7621d241ba34b2cf60f03387e"
+      },
+      "canonical_result_sha256": "4057000715c1ff3ef1c02a274e47ec492f30a08ee60bd9f39239708469e6e2e1",
+      "assignment_sha256": "86837a1504c0f027045f0538145c9fd187368de907560ef81548c01c2671c3a5",
+      "review_plan_sha256": "dbde8564a1ad3daf4a717e03d44c5d9d2b7eb15ee9065d5a05fb4303e55e42ac",
+      "approved_fingerprint": "73dd45c47b69e223260dbf13f45ce1663751f56793b43557bb229a792a0519af"
+    },
+    {
+      "run_id": "l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "make_toast",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1649435,
+            "sha256": "32550afde403f028c3374cb58af23f6a132296ba5ed550f4af497a9bddf30494",
+            "url": "https://cloud.tsinghua.edu.cn/f/2ca54bc4a5b449eb92cb/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/2ca54bc4a5b449eb92cb/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2716151,
+            "sha256": "54078bd7ac04f7d9bc7df3de04e9b61eecb1393e89e4db71d7e60eba8a532a8d",
+            "url": "https://cloud.tsinghua.edu.cn/f/1411a295143a405e88ba/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/1411a295143a405e88ba/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3639457,
+            "sha256": "dcdeebd8ff5e276a6f1e404bc7369f47b820c0c3b564364b1a2a18056b31ea68",
+            "url": "https://cloud.tsinghua.edu.cn/f/bcec30b4f9294070abcb/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/bcec30b4f9294070abcb/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "5a46666cdf197a6e57908978b1c024cd278c0033b1b6b623898db3d2d712ea0e",
+        "actions.json": "d450c68fbdcf6c05ffc00bb38c4cbf01b632861a911e6029786899c09d2d1750",
+        "config.json": "98a3bd9418a3d83d7700eb1c7adcc0f6dc5005c678af6ff1d2c3e9542910a072",
+        "source-lock.json": "cdf26335eb5fd81af104ced4813fd3f8c971da0f61009ad62d271e010c0aee7d",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "b869082057ef5905f7c86cecc76ef1975c073545aa62f55b25fbbbabe3549ed5",
+        "historical/native-acks.json": "96b92142bd17c2bde78c0d97c3ffe5e89bfc8ec6f7ccdf4b2610fb661f8d1d87",
+        "historical/trajectory.json": "09f10f2bcb04f309f78d681ab23872302b23b085b5ea6d291f3632f982bca5e8",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "84253dc4ca19d9d760f12d8f0f11fc63e45e69ecd07807a2c4131f170ffb9e57",
+        "historical/publication-manifest.json": "ab52f7c2edaae92a6c524b55d07b140d735601c555eef53a19d0dd89337e65f7",
+        "provenance.json": "d1207b7dd3ca2f95059a028e04ea46836861978d878ed6288413bfcc441a084c",
+        "result.json": "4b6eade1ed9ddc3632d3797cd71f897a5ab689e9bf509bae09af14cbe8b6dcf4"
+      },
+      "canonical_result_sha256": "3e4b5c8df51b408730631fac8f8fae3518cf3d3c66a779563e109a4d11465da7",
+      "assignment_sha256": "5b54c158377cc4286ed2dc436d4dae025461e0a0611d39ac3009bf1014eefd8d",
+      "review_plan_sha256": "3ac0353eee6fb18d115b9e9db883413beabc0f92863ac31872d46d42ec303082",
+      "approved_fingerprint": "d74dfcf7c1753cc4f1e7e2d0a2ad9796de39022126954c3699df0cff65ef7bed"
+    },
+    {
+      "run_id": "l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "match_and_pick_from_conveyor",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1031024,
+            "sha256": "b22cc86aa57828fefc355637cf2382a12de7b217802acf7c314e0abb10b4d971",
+            "url": "https://cloud.tsinghua.edu.cn/f/ae13802fc5c04fcc9dd9/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/ae13802fc5c04fcc9dd9/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1158447,
+            "sha256": "e9ebb87db306e94230c30df4150dc863b3b32d63b51083b09d75f95e3f5649f3",
+            "url": "https://cloud.tsinghua.edu.cn/f/83522521ecb64c9ea5d7/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/83522521ecb64c9ea5d7/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1041426,
+            "sha256": "0a0871cb148970da1bcce49a192df28f0b936ddca47dbf683bad5f182ee80fe5",
+            "url": "https://cloud.tsinghua.edu.cn/f/6b704000698d4770ba3b/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6b704000698d4770ba3b/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "0141b3432cdd6eb699e80f130a8592f8131b89e55d7a25f97a49e308b8a6d10b",
+        "actions.json": "366a3c19697264113341d50a86a1037a8e74412effa678a31e73401fb510e822",
+        "config.json": "ce7a58c8e8dadf9d312168ff5f2270ee563bfe3e86ed8de859c6cc7cfb55b4dd",
+        "source-lock.json": "be79037a135c8edbb161b2955e2445c56b2f2ec6ba6568c6917b271dd68f2073",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "756304d987908cbce75ee575c5cd85895e9beecf5487dac5c765aa8f37934520",
+        "historical/native-acks.json": "c0756df495171152b9765908b54dd2324a47eb2dea787372e3541d1b28e68f21",
+        "historical/trajectory.json": "71112a8689acb9abb5e6e1111ebc77f5885557bed0d3457cc9b73c9c2031a58c",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "78d6d565895033e74546714a9aec352a1b6c063a6f3d728a69eb7902b96c1c46",
+        "historical/publication-manifest.json": "a0be6719b36857d699b3aac07593e91d33a3151e9269c292fbb5ca027ac23dbc",
+        "provenance.json": "661b3286de78d8ca8d260cf94da0f24e231ed0b41edda640123421c95e31c885",
+        "result.json": "e9c8f16cffa3e9037f0717f47efef09ebe17d6e260d57ac1a3931a89b0718403"
+      },
+      "canonical_result_sha256": "0660f790bf507c625da9526999e39622581e56d1d8abe352c9dae782e6b0e274",
+      "assignment_sha256": "13c9c6dc3612eba7700b9be85003f04e4ef21225eb8b2580001b35d7f88efbbd",
+      "review_plan_sha256": "b0451ecde395345808bdfafd0cbee3afc257265061a3b23384a1569fdab3e9d2",
+      "approved_fingerprint": "1e5a4f86ba9eede394a1922cdf82a8a8f5e62d42a7843da9d8c38f86bd33eec6"
+    },
+    {
+      "run_id": "l3_persistent_cap20_organize_table_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_organize_table_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_organize_table_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "organize_table",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.25,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1752553,
+            "sha256": "a0a7a318e626fa77c3248b21cfafebe57ea4cc9c7dfe6005262649987e0675ca",
+            "url": "https://cloud.tsinghua.edu.cn/f/8e8e21bdc72e46f89ef0/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/8e8e21bdc72e46f89ef0/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3779179,
+            "sha256": "b9771233cf5fe43c80f781a040c317cd71d949dd032862ffcb8de0d1600fe96a",
+            "url": "https://cloud.tsinghua.edu.cn/f/09ceedc3d01541579170/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/09ceedc3d01541579170/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2229704,
+            "sha256": "25d23f7eb2786463b396481f1f8fb0def06ca6e6c0a9ab1e97e4c317051b5d0b",
+            "url": "https://cloud.tsinghua.edu.cn/f/d1d191475d5a407491fa/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d1d191475d5a407491fa/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "97484d22273cdb43ead7c63f0eace403bf748602329125c6e6f311411c5ae868",
+        "actions.json": "c0e51ca5eba03f672a190074a4975652a6d7fe2607564bbce8051213aa9fca86",
+        "config.json": "774f8eccf7a7f6d776f9dc0edd0b2f99b532f564c2432e268e32df10f57816d5",
+        "source-lock.json": "16e6dc335f334e35ea96e303e95f39d31a230bc8711994d92659a91723eba133",
+        "historical/native-result.json": "83966fe4d1efc49153ac9d92ce221e4df4573ec0f5154777c2f227aa2cd8b45c",
+        "historical/episode-complete.json": "fdc6c0001cfdbfa2ced80823e2ce9ade7ae26c010d37eca22b7ad765f5d2ea01",
+        "historical/native-acks.json": "0983f793db004d62a3068f2603bfcf73d65848cb4dd8338ffddff4641fa5da78",
+        "historical/trajectory.json": "d9e4a195d2f589c4d94dad9ea156e630ca21fa19fb0c8e7b308b1b900fc2c8bf",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "04a31c8318189b25736e909030fa5485003bc0ac163613552d1d1bf4f78662d4",
+        "historical/publication-manifest.json": "3b335ff3c8a23db9e2b08bd8e414dc91351123fb33c15370841aad011acf6056",
+        "provenance.json": "aab38b193c16d29286cffe1be8f4d37ca63d78421f65f63850162fe8e9ef7c80",
+        "result.json": "2f7b27d1c927384d40dd43a931c10bd91b818f7af197f952f51671184b6becca"
+      },
+      "canonical_result_sha256": "12b7a392b4d40eff3b406e1bf73fb16580b763ca3cdbdb8d1b0e3e1abf1454be",
+      "assignment_sha256": "ef188e2fdf9aee775604bbad38c3025c76fcccef1db83f5f5617875a1e6ced7a",
+      "review_plan_sha256": "055e12753c314eb9336c14f2f8bc55a41ac868de7339408d82eacba76a2be1c4",
+      "approved_fingerprint": "aa98c85ec65602a3059e4129dab1aabb79b70361715c073fc3c5f4a4bf9693ee"
+    },
+    {
+      "run_id": "l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "pack_objects_into_box",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.25,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2259852,
+            "sha256": "264c97e83d89976946e881debb9ae66a2ed81ffa0b89b0303928dadc650d6892",
+            "url": "https://cloud.tsinghua.edu.cn/f/92565be9f5b74d648a95/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/92565be9f5b74d648a95/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2870372,
+            "sha256": "d0b8851c6de377252ee460f30c463a33405ecaef6f36614866bb5841d6340d88",
+            "url": "https://cloud.tsinghua.edu.cn/f/25dbe1ae4de044eebfd2/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/25dbe1ae4de044eebfd2/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2234438,
+            "sha256": "f09221033003e02bfb1561a2ac60580d90904764b811a48931f92ff1c0e35f13",
+            "url": "https://cloud.tsinghua.edu.cn/f/faa561ee4ac84276a457/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/faa561ee4ac84276a457/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "21e5ec12149484e5459f2887d7e309eab59a9b1c4285cfb984ed2d473ad43096",
+        "actions.json": "ab8484c97bfd514c5ef30eef8f3640f2e4346f1028b2dca4b44360f832d34720",
+        "config.json": "5fb439a8d3461c57e1f34d8c3928e754a9dcca3a1f2f40847975f9f2f690d2fa",
+        "source-lock.json": "192ff95164cc00b76b901279ad87a8fd67fa05f40c36a3af99ecbb157c447b6f",
+        "historical/native-result.json": "83966fe4d1efc49153ac9d92ce221e4df4573ec0f5154777c2f227aa2cd8b45c",
+        "historical/episode-complete.json": "e8102a0b29ec60a080293df28c79f65a85470ed61cf283e1336e3f8ee750c311",
+        "historical/native-acks.json": "afb35f7fa1e4d016172b2610f08908774116447119d4672ed8a8b5846789af14",
+        "historical/trajectory.json": "81e2e267630b38fc699274e800b1d9a283a30d5ba662852d5139685f84501880",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "4dc664b06fa8fa52f88c4c7881a2320528591e6d346e5daa408bde55bc93ecc8",
+        "historical/publication-manifest.json": "d5eba31df81b9f35d1025a6a8bfdaf11dfb784034abe3403267a2de5e77147f6",
+        "provenance.json": "36d957fd3d63306249dfac27ada0fcf42cd3f87fc7cd202b4902353f014cb6ac",
+        "result.json": "a36c93e65981f4e428f67614c7a6cb61c09baa2fec44ddfb54058118a0ff1fab"
+      },
+      "canonical_result_sha256": "10cc88dbc818f4be20b479dc70c02db7ac35789054582270da744f068dab00a5",
+      "assignment_sha256": "74c35ab705f62701359246c4da90ce0882b6b78bd319cd69a5b3659aa0026c36",
+      "review_plan_sha256": "2d0c610b4a4273ede45cb0005b38fbb4af41beef733444e24ef96e7ed96abd34",
+      "approved_fingerprint": "120f48686ae5f19da5e7d3825d3eb4b99a20f4f4e71095d602b5b94a609a0351"
+    },
+    {
+      "run_id": "l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "pick_from_conveyor_by_image",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 628254,
+            "sha256": "d5013a07840b99d54f57228d9ebc71123d7a3b0438f5cf85c2533a132d65040d",
+            "url": "https://cloud.tsinghua.edu.cn/f/52ba7fbe585e44089dd4/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/52ba7fbe585e44089dd4/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 692835,
+            "sha256": "b1dde84c91ce2eaabbd4ca2fd00fe7390ca74f06c938127e5061cb76c6fff95d",
+            "url": "https://cloud.tsinghua.edu.cn/f/8f9d70a218764bdc9e68/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/8f9d70a218764bdc9e68/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1016596,
+            "sha256": "67d07b1a973c338e4ade1d3c35d185b3f212b0100bf809638d8e14121ff732c8",
+            "url": "https://cloud.tsinghua.edu.cn/f/d10188a5ea9d436aa748/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d10188a5ea9d436aa748/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "bae22c30cded1b9d71e03c19fe4bebb2ddbccb2430fbd91f5705b7803f4eb25a",
+        "actions.json": "f79ade953edae67706dff524f1cd859ed9794ba2602f56c1530ac015953d176b",
+        "config.json": "374afc474de4646e8ca788af76b662ef73617df9c4951b236ac41189b50bd03f",
+        "source-lock.json": "7ac590a930b33b18ba443542c8381fbaa87100c663b365894406bdb0f480fc67",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "871d843aed7a05cae649c37c723a126600d1d9b16061ed73d5f1999e54a3db68",
+        "historical/native-acks.json": "cf8fa3e9e98e4676bf7f8ac9dc8745c49dff05a72926ed5f2e4122b301405878",
+        "historical/trajectory.json": "956c22a6861f99fee2a9ce49c3d08dfcdfe98376a40617c7775dc0f607d7bc5d",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "2c64d3648ea193515301ea72f5646c4a42aa96b958448e2a4cc7128804ab1529",
+        "historical/publication-manifest.json": "8853e5f8361f76e5186966c8ca912637cc38069c59b9a7e03d8457a8a272bc85",
+        "provenance.json": "36f57287c6220ae7c2711795761fc66a8e586272713f6a3b8892ac80802b1cbe",
+        "result.json": "cc4250e6e3c1336d24f785f75498f5ad32e0d2e36c2b1c16a50013eb51d7e9a0"
+      },
+      "canonical_result_sha256": "ef68eb315d74c2137d2bba1e522bf72d0f598657607f2c400525a8052835a1da",
+      "assignment_sha256": "c86d45cf2ba460a9aa7ce9c2c2b3d64acbf82d26af49a55487769f6709717ae3",
+      "review_plan_sha256": "7b693e5d1144a4a868e78c33daffc755ec08300db0e5baff40acb5c3f2c1ab21",
+      "approved_fingerprint": "56a08281003409d63a77216a1d21e0123269f3162873e842777f16f43fe9142e"
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "play_Xylophone",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 990334,
+            "sha256": "ff76c5fa552d60da03080bb32b760f77480b3956f56dd8d3f2c1f1604b4f4cb8",
+            "url": "https://cloud.tsinghua.edu.cn/f/465fad0db8d24a468dc1/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/465fad0db8d24a468dc1/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3574322,
+            "sha256": "22007c04cccb5fd608a3a2a130f8319b433e58cb8fca484b86c859e4d4f94e5b",
+            "url": "https://cloud.tsinghua.edu.cn/f/2911af40c1d445f29646/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/2911af40c1d445f29646/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 261935,
+            "sha256": "610d38885cd08da8cf2ccdd7eb220b86b237f8a8d8cf9e41957c64c0380e2f70",
+            "url": "https://cloud.tsinghua.edu.cn/f/7a50b72cf42c48c18ac3/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/7a50b72cf42c48c18ac3/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "b3682617b985afc5c95fdd4a67bac48bf8aa4e13c6ab9a5ceafb907d27577790",
+        "actions.json": "9bd6b62bfab3cd49b71c54d5b6a08a01db00339bc606dd0d97d915daa31e2dfc",
+        "config.json": "df5b4c03e0f1aabd153a451f4f33157e463f1e8da638fa8fe4dbe4b078dacc6d",
+        "source-lock.json": "fe9afc523ef94f5e4e9c3a00a8724288a42e6f0fd8ee6941836c7086220c942d",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "8f69a703f0327db3645475f7cb56c902a1ac6208c2901dbd66b1f3b68cc67d59",
+        "historical/native-acks.json": "e994cad607bb404c60c042c00d9953ab0c65a2b4bf930fc583ed3ebeb782ad65",
+        "historical/trajectory.json": "1db0d4a6746522cce94e4746b8451b5a549660a8f118fd3993b50eb976c26c76",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "9968367517b9c1ef0c8c7b5ee1c72f16a49faf1eb9be2fc5ed0011c1393d0e92",
+        "historical/publication-manifest.json": "5535d6b40cacaae4b2615ee756b4befd445d6a56600e5ba404045cf55a3cd654",
+        "provenance.json": "a53316966d2fc94ff948919a414577ff54e9e769cc4c0b0ccd788d3575b5c802",
+        "result.json": "3d3be3fabe352f4297fd3d669c28cd487c59a9ab903b177e3964a011b10cdab9"
+      },
+      "canonical_result_sha256": "0c9638080e743e8ca6680d871494c43a299fa537c245aa12c579c1111803da41",
+      "assignment_sha256": "b39bdbb8b0a8ee4b5bcc558e008e847085f64ed8b4d29bdc495699cd9d5ffed4",
+      "review_plan_sha256": "9ed7a6e92dd05d9183a4af7294adbad79ae05ba1120fde86b859d82331a78fb9",
+      "approved_fingerprint": "5f0a022379cfc62446709ab9b1c8a08b8937854043df85513989eba9034541a8"
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "play_stacking_toy",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.1,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1045191,
+            "sha256": "9c5cfd8aec60b999297bf4a7caee8a0dd6ab3720c419ceb17745c8e8e8a633ae",
+            "url": "https://cloud.tsinghua.edu.cn/f/36435124402c4a18a2ff/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/36435124402c4a18a2ff/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1717370,
+            "sha256": "c2e0498bf1d703ae9b3df1930fb4e45ef5a3d4355b126980adec6b06c9ee207a",
+            "url": "https://cloud.tsinghua.edu.cn/f/29377ac869dc40feafc1/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/29377ac869dc40feafc1/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1513972,
+            "sha256": "5d4c6ac7f843e4384f19c4966161a88be338cedc46e43f1fec505fd8d308d763",
+            "url": "https://cloud.tsinghua.edu.cn/f/ed6ef06783c847fd8612/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/ed6ef06783c847fd8612/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "ebe0dd2a563fca4d9f31381f3d7f4a42988c6602725db26723c50d12828cd2ac",
+        "actions.json": "3d5d5b2e114a4deab1742e68714d59f35ac7dd24c6f7db7a06dfe4bc1d5e3feb",
+        "config.json": "3efb34ce68408e8f5af450de65b3fddcf9c91b8e2d48ad6a23e6aeff622afb0f",
+        "source-lock.json": "a2fdcb3dbf81d895c57e548c0c661d4d980c38051bf07010eec4b1b96ea1b8d4",
+        "historical/native-result.json": "e42539ac2fbee970d87b6ba5a00cb3b630592744e6ae019164320305b4681ce5",
+        "historical/episode-complete.json": "1357b0896d349ff08591b14c36d6b43dd90d06145b4d3b2bb2ca13a1a0a02759",
+        "historical/native-acks.json": "3875dc863cbaf69c9f08e949944049ff18b94b456bd94f985f1dc20961360e8e",
+        "historical/trajectory.json": "a002d811aa4515ec7ff20346d03dc384c1f8b8fa605846c3fbc2df34987bfe64",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "5a258259ee4da8b0b9c758a7e9b616b85d3f539af8d01245977e9e8be9cbac4e",
+        "historical/publication-manifest.json": "fc36c9accda3101ac6fcc121abf07737b2db3abb84121fb76d0277dedaa09c9b",
+        "provenance.json": "bb73590326c98cd5708e9f540b87be7840dad1aa5e0c70f5a1150b2c224097f3",
+        "result.json": "bffc66f6e771ca337be96f7470202b16523c0f182742a185cde28be9c8360b1b"
+      },
+      "canonical_result_sha256": "1bb641decb1d91f8e28592f5f89394ea01c9463f1891cd395649ff994572845e",
+      "assignment_sha256": "3037d7f9da386fd75a1a6800159e0e7c6c0e19ae9965d73a1145aaddd91eec2b",
+      "review_plan_sha256": "50463f3213dce702e5aed77212da035f453c4441c9c0c167d4fba3d68adc4893",
+      "approved_fingerprint": "d014e36b6414ad272551ac993fd5f87ee65a60fa9b5856668c88bdc6091bc769"
+    },
+    {
+      "run_id": "l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "play_tic_tac_toe",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.1,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 520058,
+            "sha256": "932f842892c877b5db9a39be01ba6eaaabb31a872c1466fb3aca1eb3344949a9",
+            "url": "https://cloud.tsinghua.edu.cn/f/54626a88a040468f913d/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/54626a88a040468f913d/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1057859,
+            "sha256": "49665eff377ebb5a47ddfafc2d3ab75c87d2289a82dc2abb4add6a2429626c58",
+            "url": "https://cloud.tsinghua.edu.cn/f/240c225a280649c6945e/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/240c225a280649c6945e/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 312627,
+            "sha256": "847afd4313de785451659756c2f6ef77960756befb1c57efcb358095cd95f9e0",
+            "url": "https://cloud.tsinghua.edu.cn/f/b64a4b48ba954baa80dd/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/b64a4b48ba954baa80dd/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "c11c390879d78c0b5f88c632b3fc0f96654bf77c9308d30539ffb855673ec313",
+        "actions.json": "0223131f766d6510dc0d9aa9905dd23b8d00510ccdb7bfb170e78c38664c87b4",
+        "config.json": "734f8f954d19d051352d3a9de9d014b0ebafaef39395a2076cce642611c50dd8",
+        "source-lock.json": "87e77dc2e1d8ce4375ba47bc250259a55cc09be9cf452b40b30e1eaed97f92d1",
+        "historical/native-result.json": "e42539ac2fbee970d87b6ba5a00cb3b630592744e6ae019164320305b4681ce5",
+        "historical/episode-complete.json": "2ede6823ee17240eda13362185036fd9ab4f59021612af30fda4b2e471550492",
+        "historical/native-acks.json": "7d271307034ff7375ea440bd35d838b61cb2fdc2edbccebd68de8f927e9e6454",
+        "historical/trajectory.json": "3fa784d175624603033745018140569218a8c4f84461c4a7c435957b257180ca",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "ad43a8a14f914cb66522911786cec7dfd509d857046925b2608535fb4a7dc01e",
+        "historical/publication-manifest.json": "7289be362119805810ac52719a786ac5713cca5f274c46da212c0311dc33d26d",
+        "provenance.json": "5f7edd28a010c51ba8f9922bec622c28439e1a21d3c94cdd19747678c9c28dc5",
+        "result.json": "c6df382023851174d3839b0df9af8dbc3b23b36b9524a3656776ba1ee97b4475"
+      },
+      "canonical_result_sha256": "c2c8601ba2e2fd13930a0c2fa74fd8f7f5468d3ea23fcc388f06125a4d6c163c",
+      "assignment_sha256": "14d19746e001d0807a8ae326f78c51263f027bebb1e1e186258b8303d5c457c2",
+      "review_plan_sha256": "d94c43f0c36319cae65d3b50e2c52ea62264c647ca05e6992efb782533a64589",
+      "approved_fingerprint": "01214a10f22ee2e238422eca2cb6ff5754a1928645448296cdc5067cfccfe062"
+    },
+    {
+      "run_id": "l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "plug_in_charger",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 617891,
+            "sha256": "5eef833633bf3777f35899bd0f3ead780f4884ed34bd1acb9a569aa13157de23",
+            "url": "https://cloud.tsinghua.edu.cn/f/75f5b5fee424498e8fe5/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/75f5b5fee424498e8fe5/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 967858,
+            "sha256": "9b8dcfa15c1ce20427b43e7f57532b544372d4f5a51a44a5102d7efecdc260ea",
+            "url": "https://cloud.tsinghua.edu.cn/f/d154ec73d46741d28f05/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d154ec73d46741d28f05/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 658208,
+            "sha256": "0b5cc914e45ca65454509631624b906e217168ca3e880efffdfdcd6524c461c0",
+            "url": "https://cloud.tsinghua.edu.cn/f/79792b61804d4eebad68/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/79792b61804d4eebad68/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "88f3fe40d108bd8006680eae755981028e0722b3081ff3d9584de1d33a8b26e8",
+        "actions.json": "f35aff26b773c54fb5caa78a792d4e8858f34de462920c8a747aec6fabd9b9f9",
+        "config.json": "b837b25821eb73e9c10e51f5fb8f4473aa642b8eedcd290ba81fd3cbfbb2e60b",
+        "source-lock.json": "05b08b4a55af758f28aab1dadf4a52e2cc579b57d46dcbd34ffe16abc9d82987",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "fa091a081e53eea88970a4c918d5fda94a8f71e951d162a8e6b355bfbf30ab27",
+        "historical/native-acks.json": "779592bdfab2b54b0f6926e74ecba1780adf458da668f5d8f120e13821814eaa",
+        "historical/trajectory.json": "3abc00b31d4a8d223ff9208ff8b5b0c8296f4a01ad5f5633bbe4a29f209fd73f",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "459c16ff35994ab70f5506caaf6232ac507492901b0a1576a56d345277e6471a",
+        "historical/publication-manifest.json": "3a053d2f7c4d9ca19c7870d66f9df3bfbada46548f946f87a7fd586723579666",
+        "provenance.json": "9a996c827070edf95b628da546fc811c1f3d17bf2889f64a62f46524320c66ca",
+        "result.json": "cae18bb11543386af1a844abbfe011f630402b8f0deb7c0083b71e9d4b693e40"
+      },
+      "canonical_result_sha256": "fd94153bfe3d61bb3007968f606809bb127aa4cb2046097ea32180cd68728072",
+      "assignment_sha256": "08142273925d186019bbb994285e8f29a31f31604b7fac27b2f31c6df2207923",
+      "review_plan_sha256": "9ae9430a87ec4c49587dbf139a62a9d633840cd7a75ecd46353b7eda6226db9c",
+      "approved_fingerprint": "32106038732b4176725f2cd2281634fa4e7245bdfa06345b53dfaa2ec0211fc3"
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "pour_balls_into_vase",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 935391,
+            "sha256": "9235781f06298af52a50214a7c4d9d07a84b7966b9a6ae69bd7a3bb90857950a",
+            "url": "https://cloud.tsinghua.edu.cn/f/8b6b99bb387346f59a90/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/8b6b99bb387346f59a90/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 878305,
+            "sha256": "838697bb8aa1123593588297647fa4b00f6c32c340dc3a03a53e198823feb81f",
+            "url": "https://cloud.tsinghua.edu.cn/f/a0558922aa6d492fb8dd/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/a0558922aa6d492fb8dd/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1296636,
+            "sha256": "fcd43e47c6be1f95011981eb6038ca29551f622468f841dff627d1ba7b6ff60f",
+            "url": "https://cloud.tsinghua.edu.cn/f/491dd7dccc9141fd86fc/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/491dd7dccc9141fd86fc/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "d2e07a820f0fc84e184628b30c3fec5c7f985d4509cfb8bba660f10c5a518d6f",
+        "actions.json": "f3ed844c393242028a45b7563ef59a1ed2c52a534730e5fd3eb864cb4dc537c7",
+        "config.json": "60884a6b80c126626831d6116184f078be3c3fddfdd80708aa9c629de0e46cc9",
+        "source-lock.json": "76cb94f426ffc863e6f240e580263de0dd1219dca99f0fa6fd67c5c09850e377",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "6248347d9db41513bbad6a7a44ee168f32f6aebfa14ee5f7fcb96a9e6916832f",
+        "historical/native-acks.json": "6aa6d8512ee9e1aba238818d443e5894cf026b9be92ff893be31981ed1baf11a",
+        "historical/trajectory.json": "a2593010dd259aae64d82cfba1290f3ed29d771f44310e4a97f98cd67c173229",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "ff4f4375c2209e8bcc560a57aca6a768f170e97e85e17f300bc4057c639a1daf",
+        "historical/publication-manifest.json": "ca570c8d2b68bfe27df657eb7ae64c2a7d1e1f4386d14b45e43de775be976a3b",
+        "provenance.json": "16e0137f33590f1563ff881917043363e49672ad41f27f893195537b9c8c0154",
+        "result.json": "8a003d65b0d966d7304742bbc96826c17cc9b3ae1f86089aca56707b8ee459a7"
+      },
+      "canonical_result_sha256": "f504b3ab7a3b9264133e843919b06102ff98a4ca94ac0694f26a31dc9289d4f9",
+      "assignment_sha256": "caa26d8905358ac21a01c67fd06f435c6dd37cedd9febf1f143b5f7ec6b16cd2",
+      "review_plan_sha256": "6bb2c39341f85a4d9d922564e7952b7f6646ef73652dcfd7b34b49ca24fec783",
+      "approved_fingerprint": "b5f7d77400d7731dd9b87bd3f0803a52c92d236eea9034fa256287628665f841"
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "pour_by_language",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 925110,
+            "sha256": "1aa539c36da92d801da469bed3010210f0d85f1ded60b402bcb918ae1c71dc47",
+            "url": "https://cloud.tsinghua.edu.cn/f/cbe8fd354f31475a99a8/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/cbe8fd354f31475a99a8/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1290629,
+            "sha256": "28091ba222ffc808dac2b62a26c83163c58e8fdd0a7e4cf4870d24144187cb7e",
+            "url": "https://cloud.tsinghua.edu.cn/f/f94aaac736a449b484ad/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/f94aaac736a449b484ad/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 442126,
+            "sha256": "16110ad6ed6757b8312826e6d9de5a0d817f14a4d59e1638b44f922e62979404",
+            "url": "https://cloud.tsinghua.edu.cn/f/5be300b1a707445b9c00/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/5be300b1a707445b9c00/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "235cca2d354e4575e874675c6a6fab2d54448479c8d39fc7a9f30c6985617254",
+        "actions.json": "7ec6bc436dace689e4658f1571631c934911fd4afee46839e0b1d1298a8d34e4",
+        "config.json": "7520ac9e515e1fdf1c5db403bdbd7e5428c6202ec4765bc2d6114a8722669850",
+        "source-lock.json": "1090b20697ae7474dde4c48a1a8c918d65bae96c08318cef6e2f03baa9eaf607",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "383d4c200679cd181ee3ad5ebb0128381f8ad73e142e69b890f4ccc3e95dc5a2",
+        "historical/native-acks.json": "982e967de3f83c0c318525d7c5534a4b448963ac71a70ec705083e4e7647657e",
+        "historical/trajectory.json": "aa8ddedcac57d4e2544890320fc2da9af7d48ddca2ef5f8ef6f3190db8e85a0b",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "259c8985b6d9915f651121e5cce1f91a9aed367ba436bf939eed143fd31dda6f",
+        "historical/publication-manifest.json": "bb8b3f45a35b4f4469fec2066215ac7cf9f0b1babec2033c27a2bc4756e2d916",
+        "provenance.json": "729403faedcdb2ae71d6f675a89a9b9130c50229b635923a1058065ce9997527",
+        "result.json": "b00bc8e57c2622aa349c0585ffa45b5202da36137f48536dca64cee21bc7ff8e"
+      },
+      "canonical_result_sha256": "9a28dd56d19d217f7f4d917d9c9af20360d1b8ecb264e13987437bc712cf4c70",
+      "assignment_sha256": "1c0e9f0f3a73f36ab538b1d1fd38e1d7c4b9e95fb7cc7f91a2ede69e78186998",
+      "review_plan_sha256": "c0a2e55370d9b5488bfb00cd274ba66c5660f044771d25e884de24b3b5cba490",
+      "approved_fingerprint": "4652ac88c107df836b65707e5f4d77e10ccbaa2cfd8f1a2aaec5a8def9f5600b"
+    },
+    {
+      "run_id": "l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "pour_liquid_into_cup",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1067326,
+            "sha256": "5690b177430b77f2537836d2109f4b34c9764438fd091e142f81d1493b17d030",
+            "url": "https://cloud.tsinghua.edu.cn/f/2eb2c2aae4744d6295d7/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/2eb2c2aae4744d6295d7/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 238076,
+            "sha256": "320e70128ba2039e7b267ed86486e9365ae0892da855a52c16d03ad938f1fdb0",
+            "url": "https://cloud.tsinghua.edu.cn/f/d159aed7a69546b98513/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d159aed7a69546b98513/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2060112,
+            "sha256": "d2459b119bb92693ed637ac65e9f509ab525e60f6398e8dff9b3aa4aefadd52c",
+            "url": "https://cloud.tsinghua.edu.cn/f/a543d7ed837543f0b72f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/a543d7ed837543f0b72f/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "92f291beb04227e14c6229e227aa8683fb5b332221c975f5c3af02361f030154",
+        "actions.json": "15e2a7492f48da1548b679ebc77033309253acb45e9817bb73e1e10472569acb",
+        "config.json": "73034d578b3d42ec9a121fcf88b538d75e16b9a72c8d159050d402703b55de39",
+        "source-lock.json": "bd0038261093532ee7cfb5d8d3b07e368dfb0f4543060b7b7bbb839f38559569",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "2cf5c99d1805adb6d33a4bd315ad6c42e307808b31b1ce6e2d9bd6cb09f9b64f",
+        "historical/native-acks.json": "aec9ad0410ed7d11d97c57b2feacbb504343c0ac96146074742807a980901d5d",
+        "historical/trajectory.json": "4f4228068e4fb026c7ae8fb6dcb86ac4e519fa62468b23e54c8efdfd882676ce",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "3cdb5cba25d731ee034c34baf09bacb610778fe07f729411b6d1d61517d7283f",
+        "historical/publication-manifest.json": "fbf16c0d4dfda437a613dd232a547d3aa443e132f8ace21a79f2272c9966fa97",
+        "provenance.json": "31220d082ea4128cdd55cb2636879c1728c927b17df880f0fac6c0125654459a",
+        "result.json": "e95bc2b5098ebc8d2abf828a3eaed04cdce38030dbaa68ac03e76d7fa50afbc1"
+      },
+      "canonical_result_sha256": "9cbc6f06608368194500c3aa80179e9a2acd74406d2d8943ed0add585494a0d1",
+      "assignment_sha256": "7afad0fd0ba9db0914011a741a75d0b22f54f13bfee908bd1ed2c4de169c39da",
+      "review_plan_sha256": "8122985789304078c056952e94d215564b963863ec7a23f87c35984f0efa6a86",
+      "approved_fingerprint": "2b540dd23156e70f7cf3f36b137dbdb87ab6ab17d444b6e9b8f81c5dfb93fbc1"
+    },
+    {
+      "run_id": "l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "press_by_number",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 696099,
+            "sha256": "1f681c07391cc0a104677c3e5600677f6c34a0efb9c9713f3a967b9ea065e9d8",
+            "url": "https://cloud.tsinghua.edu.cn/f/50fd825d88e54fd29d00/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/50fd825d88e54fd29d00/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1254481,
+            "sha256": "ab71df3e4b4a04a7a3076d8b27ba286774be359f9fc679953a1c188ec0aa276d",
+            "url": "https://cloud.tsinghua.edu.cn/f/40f7a14830b141c6a781/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/40f7a14830b141c6a781/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 766488,
+            "sha256": "3fb20c539e555faad6150f38e358dae9628c8f8bcad687b02d76fe737358239a",
+            "url": "https://cloud.tsinghua.edu.cn/f/03efb7fd00b943a29e6e/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/03efb7fd00b943a29e6e/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "fe87fc4a0274fa0e32838d8ab34f6ac9071b44f43939dd851752620c977416da",
+        "actions.json": "73f64b75db92e4f64abec78bc2808a6d2a3221de8b98c275617ed052f7b4cef3",
+        "config.json": "de2f7f05f9557650b0f77ee5840f3ae0b404082de291bee79c3772ebee5a1a02",
+        "source-lock.json": "2b411b57f3ab18f14aa00560e82c8cc31ec486af27feb0676190fe75b180ad83",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "33cd16feefb95f91bc8f636c8312b9145cba4d07f51641475655274f56361337",
+        "historical/native-acks.json": "24f954e0e27d58db69786b3d2bc75c21203ad80a6227e99303e84f032d797088",
+        "historical/trajectory.json": "c689536365736307645c81f1ab5cd16dcef779636e45589e3aa4f1130ab3d95a",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "412fa106b2bc0f4356164de417b2b5c21f0647a89f88f58e5c125b74563b0dd2",
+        "historical/publication-manifest.json": "4de0c5aa7d0e9a26b483d50287b0d190e373ebe46a280670a233b56d598cc0fd",
+        "provenance.json": "549a10f88be491765cbd404d2abea37d57c84798108ac913a9dbedd4873e5619",
+        "result.json": "3200fb2e63c2b9a0626b803c6f7e619261590626d35c0fdbdd5e55a019aef742"
+      },
+      "canonical_result_sha256": "708bc8fe5c85a0eba346bb987cc205b35d976c9ea068027b8ccb5d6b0a11bf45",
+      "assignment_sha256": "388db3a35b1f5bb821139e3292e48c54e22175ce1f79b5fd0d239dcc7f14d635",
+      "review_plan_sha256": "7e559fa1f618ef723ab95e89bea27049119d4ba1c62d86fc237138c0320f9b5e",
+      "approved_fingerprint": "ddd5b055c668b6693deea8981cbfcb113a984528d5fe48ba017d6b90ed5475d2"
+    },
+    {
+      "run_id": "l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "push_T",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 748409,
+            "sha256": "743c62f753a6f1f42cd83c7d528b411c766ba1e79b11e272e5b330cef2ad3942",
+            "url": "https://cloud.tsinghua.edu.cn/f/3ad2b5fb913b468d87d0/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/3ad2b5fb913b468d87d0/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 267752,
+            "sha256": "e338133559127d95de14cc2f42239dd110bbf3ef935f8b255efaa972b32495ea",
+            "url": "https://cloud.tsinghua.edu.cn/f/0e6a056fd35f4e6abf75/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/0e6a056fd35f4e6abf75/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 4558445,
+            "sha256": "d222f5bd79ee9f50b6bc0073489088db28ab7d5ab0bfe6bfc3815f31f1eb07ac",
+            "url": "https://cloud.tsinghua.edu.cn/f/9bcca468088540e48a54/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/9bcca468088540e48a54/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "57fbf570f42888633432cdfe9dc7ce4b2483ca59f747d16aa19d9f5437c5c161",
+        "actions.json": "ff8cc6b11aea5f66905b8f34988e703a4605f20c2558c9bc8b51ade22abee928",
+        "config.json": "b50ce61743244e83329b2d32f7af6efb3cf76a88e8bbf6de0a35822eb118562c",
+        "source-lock.json": "281585ef450e73edd5575d669f80d60aff6d74ddea96e98f29ca4df8906ad495",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "3935a97d31aa31c0c074df37ceef16bf6eae76187e1391e380589d03ae38391f",
+        "historical/native-acks.json": "0bc62a7a2241d8abbf69ffed4ce4fb4a3dfc605f50a3f53146f25885fa71155a",
+        "historical/trajectory.json": "93d4f7af429d2d66932595236c564fadbe01738b5d640bea2ba83b07731ee59e",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "36a3f46146be78cb93cf28312e99ac5db31c163b918a0d10e512cdbe8ced38cf",
+        "historical/publication-manifest.json": "0b10484aaa84aba7852fad7b442a2e67917ba771e2931293297c96f5cfbb01e3",
+        "provenance.json": "0a0237becf94775fa8f6aa95922893942cdd80870c35d65211f588c671c0c830",
+        "result.json": "381320e281ca2d41837b369368f3905e7bd8a7d6f3cdf120655bf862d1e11c4b"
+      },
+      "canonical_result_sha256": "eaa59f1873cb62e856dc8f65a69ad76d99adc7a547316b33438f02153dd061b3",
+      "assignment_sha256": "23cb16efae68d30f3badb9336b6bfe20c40f474025824815dc07da8d23627d9a",
+      "review_plan_sha256": "3c9f3de6ca728574511c79585bdd86d9162f620bfcd6acba740ca9b8cd79b24b",
+      "approved_fingerprint": "ca79963ec84e7e90f152f1361c3eafe0c7d9ca836f63bef5103fcbc28b78e6ff"
+    },
+    {
+      "run_id": "l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "put_bottles_into_dustbin",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.4,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1491950,
+            "sha256": "dc09190af219512f746d5a98bd8c560d95224096b267986a8219905b40ed4e32",
+            "url": "https://cloud.tsinghua.edu.cn/f/61db816baa094b5da342/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/61db816baa094b5da342/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2296226,
+            "sha256": "88af7f5b19da61e09b97ff73bbaeda34ef9c9784677776604e668ef985c44434",
+            "url": "https://cloud.tsinghua.edu.cn/f/30ffa386d10d4897b009/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/30ffa386d10d4897b009/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1769493,
+            "sha256": "853480216fa52b675f10194383454c627298b831ef684890df0a6f0c80fdbe4a",
+            "url": "https://cloud.tsinghua.edu.cn/f/8c9c9799919e44a5a253/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/8c9c9799919e44a5a253/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "b25f0b799974e7acc03c1f4c0707be26b073bba01ee73fea5eda0cc5743ff6cc",
+        "actions.json": "019b587af72920859cf500ed597f2a572bc2a68e07155afd95ae83c7d036f350",
+        "config.json": "7e43f24f906651c0ce8b99d11a81fb9c19dd016dbf2f0bd3cc77a31642969519",
+        "source-lock.json": "b8c3d9b33efa0813de7cdc4690550f095b2e1f6c65c858da51896403c94bed53",
+        "historical/native-result.json": "b57494283a6fde3cab86291202fcd1f75c8894f4a7c3ecb5b9601580d950176d",
+        "historical/episode-complete.json": "eafa7c4b4414eeea4219f8121711e3fd4444f0fe7b7f6820fed42e8fc471869a",
+        "historical/native-acks.json": "bf06a914468047ee2c3d402bcb9a016663353d93440ba520f41faab2a39e47f2",
+        "historical/trajectory.json": "8876f1454776b68ee7aeb8953cd2e041a9860bfee64f014c2b6b50cb74ba63e6",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "c57c73d81606ab2fb54a13879864d9730170e8223617970912dfc3f737bc674b",
+        "historical/publication-manifest.json": "ad26e1dc02577a5f1ab4825c3bfd3a4454fa9d8128152c1326c799e3cecb2323",
+        "provenance.json": "71a40e6a87fb8b037145df57726c4e6481420da679d18d08ee22a84909762cdf",
+        "result.json": "16cfdbc57c6fbd070de2f089fceee44bbf24886b53f3df30379716756ec5d3ed"
+      },
+      "canonical_result_sha256": "01e9c08e15d62b83b805c4205b3a6d472602121b5601187a774a47c224a0a913",
+      "assignment_sha256": "40bf95331c7f0ea28691bb988c83d4c8d03e22fa12f236659090eb1ececf68df",
+      "review_plan_sha256": "a55bd3e90812ad8795b357628f124fee65469529fcf9c52e25ac554ccde24088",
+      "approved_fingerprint": "01ebe9c247e6c8984df18718bc187034a6ea01df4f53999a557eec3220052485"
+    },
+    {
+      "run_id": "l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "solve_equation",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 494474,
+            "sha256": "f220482726089c55e932ffac3453eef110f1ef2b5a0baf93039231e9c92e5df4",
+            "url": "https://cloud.tsinghua.edu.cn/f/a1501ebe2c6547ddade2/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/a1501ebe2c6547ddade2/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 162753,
+            "sha256": "566c0c84f3a3607f0ff9ed31fbd0bace36ed3cb301320bd8b44f8461d25505e2",
+            "url": "https://cloud.tsinghua.edu.cn/f/03ab05dc405847428f70/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/03ab05dc405847428f70/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1156345,
+            "sha256": "4378022d65bad3089c2d8504166230deea5636efe001bb2aa5b1fbcf2fcbd338",
+            "url": "https://cloud.tsinghua.edu.cn/f/567272397c86434298ba/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/567272397c86434298ba/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "ffd56d028b8dc4e24ab9a9bddef81c7518ba80c9fe28519cd79f564cd303bb91",
+        "actions.json": "de410ddc265a1888a955e4f96047b28057e6603999361477ed3fb84078debfb8",
+        "config.json": "d30b3a45d777b81a36c94f48941b14a78176ab23ec7cda68cf6e796c48c656bd",
+        "source-lock.json": "1083df5b7c2388733a7eb48ad06fdc5c00056b1e6b9896f4e60ebf21798b6563",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "fea8ac4230b19b89b83a964a7a29171676b5115a5fd7311fd6d84a9b29f03228",
+        "historical/native-acks.json": "f6087bcd765167f7687a7bef569ec2b4b762545ef221fa6f0bf3f62fca7cdf6e",
+        "historical/trajectory.json": "3ea223fb799286c061edc66ad9df4203fc7ba3ebbee0ee0e786607cec85e281f",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "0dbfb9dab9fa6afa561946c4e82caa3c3f4a09619912ad0ba5d67eaa394a54fb",
+        "historical/publication-manifest.json": "957af0f2aa4eecebf9a76fa2a1b505050bbcc778a39839aae9cb37088f3fcf9d",
+        "provenance.json": "a4b70ac0e03be5d6843d6a56dd2a2a924cc786cc20241cfa78c56cd9355784fb",
+        "result.json": "30378f442f08b295628172a1b546ac8caadd9cd2704574250512898ac282861d"
+      },
+      "canonical_result_sha256": "ffdf5bebd9c73cfb63da96c24a30d8e253e8a1cd75bf33f775a9610d2f9d5357",
+      "assignment_sha256": "ea3aa35be5ad565325868f8f2d092530d8e6a47477bef5c3741050cd48daf40b",
+      "review_plan_sha256": "c6ad437d5a2f7fb8b85ff8d3778d10d79c8d93d11d3a689c85f17976bbd510b2",
+      "approved_fingerprint": "2940c8824162e48b537089a79f72db37123601fe88e0e0c48b943adbd700279b"
+    },
+    {
+      "run_id": "l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "sort_nesting_dolls_by_size",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2170891,
+            "sha256": "76f1f6359cb8706b729cd42e0d236ece071913f53fdedad29243fa2c88a81b24",
+            "url": "https://cloud.tsinghua.edu.cn/f/8be544bd37cf446ca3d3/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/8be544bd37cf446ca3d3/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2267642,
+            "sha256": "2707a5878a321b3d2bcfe5020dea5d9002955e41b6d41310ceaa9b9929c3492d",
+            "url": "https://cloud.tsinghua.edu.cn/f/6fed1195f8414f75b543/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/6fed1195f8414f75b543/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2415384,
+            "sha256": "e09509060527fc084c6b1b09f31e7e98efee0e39b49cb97bead89ee80d044a0a",
+            "url": "https://cloud.tsinghua.edu.cn/f/52fc4239c8574c2ab0a7/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/52fc4239c8574c2ab0a7/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "c35dbdd65cb759422bb637a4afcc92e23efd6f94551197e7172aa524bf775da4",
+        "actions.json": "4744d45043fa7b6af15d27a23a2f0ea6e5439951b9fd51f1820b6ea0d21523d1",
+        "config.json": "b80ad4a7cfa84d8227f9fa51263888de352ec8b54a6f9e6b94e48bd03760582a",
+        "source-lock.json": "7c27cacadd446bea4ec0933888fb4467fe29d263253106bbe83bb9700f17ebc0",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "e45a7a88aa3bd075c73786b09619b5f7a84c1525885c755f3d947fb97486e910",
+        "historical/native-acks.json": "5618773f2a456c9fac4634fb6ba18b2328499ca698a6a409e2f350b533083731",
+        "historical/trajectory.json": "72f0fc8acc73e106d0991ed844ca74b971d8b603333a5130b42751d28c7d3bff",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "26039177437c328b9188e6dcef1455a066529fe25b7ab4f08a0def39619c04b4",
+        "historical/publication-manifest.json": "46a6f340bf25881bc775e447aea92d9de04fbefdd1480ee17c7880c8d368dc7c",
+        "provenance.json": "98a9895c15cf84c4227585c6a4230ba76a1091b14d28df0ca1a28ed15b3cd27d",
+        "result.json": "ccbb8a20c1ae6c5ad0e994ced2f50f024433a77065d768b3bc25b88b80a510c1"
+      },
+      "canonical_result_sha256": "e1e28a95c0b300d82aa05082f1c8f5cc829148b1303291fc4bd40b097ccf4fc6",
+      "assignment_sha256": "83fb98b9bf2d4183247939a720d995758f89c4cace83d01a5f0a4a826185dd85",
+      "review_plan_sha256": "2dee5fd14350390be1245bb3cc58ae4683932e8694370dda2ede0ca59d83493c",
+      "approved_fingerprint": "6f55408282205fb6459968c1a807f0cb2f41cce153394f6aa697988af0f6c57a"
+    },
+    {
+      "run_id": "l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "stack_blocks",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 775314,
+            "sha256": "ea4c8e0cd3b049c11d438fb0475d14fce5c1451af990e5dfcf8c646ed9b2a824",
+            "url": "https://cloud.tsinghua.edu.cn/f/d5cd552ddd1342d7a787/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d5cd552ddd1342d7a787/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 733358,
+            "sha256": "ef1e5709fc5b66ce259f5bb68c26f4026cb9b8a623861a693d1b30542be1b39c",
+            "url": "https://cloud.tsinghua.edu.cn/f/73ddd38e5b304052b9e4/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/73ddd38e5b304052b9e4/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 632605,
+            "sha256": "a651864e69286bafe8b9bae79c423206d2c6b460fd4fc9ab6d119db895d9b242",
+            "url": "https://cloud.tsinghua.edu.cn/f/3c47c1fd9e7d426186ce/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/3c47c1fd9e7d426186ce/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "66582ff05f09038688a149cb4d7001369e834d53fc9d200d54446a5cce47f51f",
+        "actions.json": "0a0eb573b9ba158be5450438c9fb79286a8d5939ae2f9b73145ecaa405c26a41",
+        "config.json": "3106fef7b36ec4792dedb34ba6562f8b47b823588a1ed1d876c892cf877929fb",
+        "source-lock.json": "f9aee9dc84826f2fa3ca89f66fdc0e7db55824a187e1a99b62f2cec3a5a815e0",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "f19b8d4ca263e6905ed30dfc510c81d8cd8e0dfbaac51776b4669cebf5623577",
+        "historical/native-acks.json": "5a216f18663f59c5c9286769d37c495287acef91a26486d0f4b857848c80dc69",
+        "historical/trajectory.json": "6b341ea01472c3e3e8e702661ef5302f4fac2a018091e75356e6348037eec961",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "c5e395e8cad95ba34d15571415d2c573de252de533bcde269186561e3a919470",
+        "historical/publication-manifest.json": "c613221a259bba30f559f7725fb4efa2c2c9a22dd8045450cd4dcade2c14a27f",
+        "provenance.json": "ecafdf346dab056d366ecba3f4689fecf48d3f2598a77bb4bbd5a5630018cd37",
+        "result.json": "c0bcdf90fc9e665d58db1376c66e052f1059200826a631a3ead509aac2051d9c"
+      },
+      "canonical_result_sha256": "ccdb2b403d5adbc3428f8c4fe1aa714bf66c99bcc32dce517da5b201582ae5e2",
+      "assignment_sha256": "4d2cd90143cc1229ebfa6d306b0d1ba6f75c04aaae85ad2f1dbe523e9a7c2d24",
+      "review_plan_sha256": "1c0bb7ff62ada569ea5dbd706eb092c0aece3a6b8382fda79f1b6a7c852491b2",
+      "approved_fingerprint": "9e1bf5ee695a5242f056d96204bf8796a83f730d9ab237e0f135167888e4aa4b"
+    },
+    {
+      "run_id": "l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1",
+      "source": {
+        "run_id": "l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "stack_blocks_by_language",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 592374,
+            "sha256": "4bbc5fe5c5b32c4f2f9eb9b7aa057d9f59e9092596e1eb67e40315bb57b8bf59",
+            "url": "https://cloud.tsinghua.edu.cn/f/85acb1d8bb4049e8871e/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/85acb1d8bb4049e8871e/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 865941,
+            "sha256": "8256d3152a63cb9d01289aa73243f6c0a3bf51d43e3e92389d2f1dbbb4669c97",
+            "url": "https://cloud.tsinghua.edu.cn/f/9ccbb36c68624138b9ff/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/9ccbb36c68624138b9ff/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 604110,
+            "sha256": "3e3c2818ccf8c10384323acfc2568976068ed6bd0c961f18d38232ca45184ee7",
+            "url": "https://cloud.tsinghua.edu.cn/f/e670d30eb249472cad09/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e670d30eb249472cad09/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "a9bf404a1c2283e98724c60ea26905ed40917c44199bc79f7d2d13967e944cf3",
+        "actions.json": "3a1360309339712b5756cb0044292ebf9989a28285f0d68ede6a1b9d1c02a958",
+        "config.json": "5ce468da7049e357aa7a6406d779b8f5806490cb6062c287b5419ce4c379c422",
+        "source-lock.json": "15bfb84f267e25ec3984731c4279839b796e7f04fb4d0478fb079c458295f686",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "072ce947b4be0bd02ec343a00499ff8279a0e046993ef7e165b1cc9915eb5b9a",
+        "historical/native-acks.json": "26a1489d17feaf24c034f8490c583cdae4005492648bbd41d706bf09109e0be9",
+        "historical/trajectory.json": "06ad58348a02399c5110437b605bcb3efd1381b6198ce03162f6ba800d5dfbac",
+        "historical/source-lock.json": "213be2fac2ef0b6535a170677821c84095787d03c9c1d4f156d71760ae3ea247",
+        "historical/costs.json": "70abd497e23ad3a97408873743e787ea9f70941faf9f1b9650419d4ac05f7c39",
+        "historical/publication-manifest.json": "e8821d1e6dd50b4509a20e1c0f3540b2795a968f762499b74812787dfdbf4d76",
+        "provenance.json": "0cc80373585db0d4ec2ade0f617bea135b80034037acd9b56dc891b085dd0803",
+        "result.json": "2d4ae810c598d30075fb9377451ab05488b59a47c056afd18f0d4c2d0667bce0"
+      },
+      "canonical_result_sha256": "2a40d9a84f43aaad561efa4c7c9f5f0f4f0db58d0db3fc95d428aef3c573e6af",
+      "assignment_sha256": "2450d654546d58250b19bd95abb66f476589cfe4da6f960baae197ead1e1ea07",
+      "review_plan_sha256": "31dea61b005c0de4c881db40ef14acb1670668f1cac9bc697609f8e7689f70e4",
+      "approved_fingerprint": "1abe7361d4ffe2a67e57d81a908637c6aa2bb886485118d396859054b928fedb"
+    },
+    {
+      "run_id": "l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "stack_bowls",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 1.0,
+          "success": true
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1503191,
+            "sha256": "c938e3016c435f8017f94cc5c6cf810d99fe532e6704ab8025249a2ae7b42413",
+            "url": "https://cloud.tsinghua.edu.cn/f/73d1630795444a1eb7f1/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/73d1630795444a1eb7f1/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2348818,
+            "sha256": "6999bc54f6c7f3d208cf40f749bdda858a67341a321ac5df5682d6bd1b05b7e3",
+            "url": "https://cloud.tsinghua.edu.cn/f/fafca8faec0a4dfea720/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/fafca8faec0a4dfea720/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3449921,
+            "sha256": "d5106373218306c3a7b692ba05933f74eccd98a8d88bbab539eb18a628a88c9d",
+            "url": "https://cloud.tsinghua.edu.cn/f/bd82b0bd08e249489dd0/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/bd82b0bd08e249489dd0/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "f8528cbec9e21138b1d30156077a7a8a217868b3df37acf8b56ff8f687f07900",
+        "actions.json": "f04e0a74df281af963a07a7878ba3bbab46d98f0f3b4e2f05fdf2133745a8327",
+        "config.json": "b33c5d37cd6448d76498a2038b68c5281448279124d20e3a76cb0da2b274de78",
+        "source-lock.json": "8d74443b4569dd25862887441876d284c863238f8faf88aeefdc5fe207450b0e",
+        "historical/native-result.json": "528c40b8b5030bd8314105df4c4bbdbe184e1fe5fcc9f7cb88b9f61ecbf93236",
+        "historical/episode-complete.json": "1966ce6e95fae87e6edb8f79878a730ae3c7ed42916cd97496c4741e1ff45fe9",
+        "historical/native-acks.json": "699215a40ea29b973d3687ea69b5dc1610fbe41d3c6772045cb868212b48c2f5",
+        "historical/trajectory.json": "6a785cd486fbb600b4fa9162552af5e7495bd8517a5ddb321f2305df55bfc51b",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "9181292706fc581415c2b06b75832f48b434b0478dff09eb93d528b0d8b2fbf8",
+        "historical/publication-manifest.json": "b8ec4959c47f19d70505b6d41f3f86a0038f7fc16e85d3d543daf977636606a7",
+        "provenance.json": "fba17f8e804e35f914dd84c1bd219af1a43be51c6fd35091d0b05e601e767105",
+        "result.json": "082ce6ee2703147df974c92fa6b3dd1080cea016612b303ecbad974bea5145d9"
+      },
+      "canonical_result_sha256": "c3d9f5ccc1346efe95c59acdc3f10ed915aaf4b7ccc8d899da1684acc5e28921",
+      "assignment_sha256": "7fc5b89cd13177e4141317986c9a66b31dc1379e4dacd8d61da8d8d83043b7e4",
+      "review_plan_sha256": "0fa0c060f46e1d7fd093ac0a44d4148eef658094f71d61f8c3fab6b9d4a4ec1d",
+      "approved_fingerprint": "bded16254df7640610a1423200623d2872969ae17f670d0de1c61823cdf1b41d"
+    },
+    {
+      "run_id": "l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "store_laptop_and_headphones",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.2,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1826935,
+            "sha256": "602ef406369b1a27772eec019aeb939abf5061a559b674d3061095b1c1426245",
+            "url": "https://cloud.tsinghua.edu.cn/f/e1589366a43d433a9efb/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e1589366a43d433a9efb/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2643562,
+            "sha256": "a2866d4bc2fd6939146cd375fa6a499eb72aef656ea909a1d883c12eb16a4934",
+            "url": "https://cloud.tsinghua.edu.cn/f/d836340319d746f1b253/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d836340319d746f1b253/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2066387,
+            "sha256": "99e2b0ecfa07802eac1c57e8b0c9a49032aaa7ae2e6bf1120af6ffa97f2c504b",
+            "url": "https://cloud.tsinghua.edu.cn/f/49df536da01e459ea581/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/49df536da01e459ea581/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "137c08a994949a2a48d486d0693f85ac7dcf078dd021cfc01350db7796df0ef3",
+        "actions.json": "3225bb058f36e195a603d36240879d99b06ce1c5d655ad58deb57698f597a42b",
+        "config.json": "2a5301019f791261f90b6aeab6e27f73c88098ffb2c0dd346dd27b20f58f1f04",
+        "source-lock.json": "3015dbcbd5afea6c006ba0e457e0c631be7a0970ec43154081e8a967c557eb79",
+        "historical/native-result.json": "f74368830c253fca1034ef9281b5549febc9402e930aa8b32c0569fed92af7bb",
+        "historical/episode-complete.json": "8884e204e94daed9a216478e66e64a6160fd4aea84a65e94041f93155da99b07",
+        "historical/native-acks.json": "ede7758606c3f6a9a2d2d4fc2976afef836bac99ce4ee1d71b195f479a7bc11a",
+        "historical/trajectory.json": "c50d1003867f27dd295ba5882ac27939b68b4f9b2ff62e7170b15c40757c11a7",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "13e2c09e03cb3cbfc19f36141263e2d0a01a6b36777c3dabfc0ad30a59d775f0",
+        "historical/publication-manifest.json": "1eff77134668cb2ed289218f4e5d239e95bfcb8daebdddeb6338b26861548053",
+        "provenance.json": "7b1cdd1f912e8898d02d63ed268c06f33ed21538ab522dfc8aabb4a25a5b2755",
+        "result.json": "0c3fc73fa41f49d7c3b3d6e6867237d9cb236f4aeb7e9a7a5ee4820e6acd7e34"
+      },
+      "canonical_result_sha256": "aa5a503e21f4aac203afc1dd9e9a58ec87348c897e9c435ae7efaaee7a377f63",
+      "assignment_sha256": "f790e9352937d63896f3010e21fdaac54e8e65c07f2877c07d306bf4de031bc8",
+      "review_plan_sha256": "56729c9dfed7801a8990a3a5fecf48f31a1702cad8a451739b07c5744b71c0f2",
+      "approved_fingerprint": "c1d642cb2906044739a6ffc1d3dc498358324f3406d4548a98cf396b10ad0ca5"
+    },
+    {
+      "run_id": "l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "store_tools_in_toolbox",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1697319,
+            "sha256": "e23861887381d1ff8c47dfdefb356c1ed937f39f66861860fdd0e4323d801162",
+            "url": "https://cloud.tsinghua.edu.cn/f/21a4248b2afe4f3cab2b/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/21a4248b2afe4f3cab2b/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 3791270,
+            "sha256": "0eba35ac4922d5cb60aebf7a1cb868774dca193301118c685715e462eb3cea40",
+            "url": "https://cloud.tsinghua.edu.cn/f/445496b023ef4b2aac3f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/445496b023ef4b2aac3f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2752521,
+            "sha256": "c38da4adc0e21509b417e66417f6e6c60e006da18dae9ab437beece559fcde86",
+            "url": "https://cloud.tsinghua.edu.cn/f/d840b1203399430f8e2a/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/d840b1203399430f8e2a/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "591c5a548063005e355e8e027423e547dc57487097af601b2cc27e194ddb4cf6",
+        "actions.json": "81b5591a76095465753eb66b463bc0da6e885132bc57471dc83a5821e6191afa",
+        "config.json": "a86bfad346377efd2463faad1024ce7fe20e5b987b4c44c5a3ffb44cd557be1b",
+        "source-lock.json": "8361e8d2ae79f558139ae0709f37d33410564295fda865d20e9f5b59af9c8e03",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "e6242265303fb43f0541c94bd779d00cac4a261883f586a78b2063d120504455",
+        "historical/native-acks.json": "0b55edc086308668911711090738e3084c7c6a0d97243ae7e04749ab802fa2c4",
+        "historical/trajectory.json": "341954dd14c9b06521f3cc8ee2ebc999065139c383b68c4ae2ad6fa677f417bf",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "4ce00cc7827600dade361c92dcf3ab369247a4d3d6360d50a72df5ae3f7ed8d9",
+        "historical/publication-manifest.json": "d6a4d721bdc380e47a0fab2bd7d9bea6dbcdbf7e3f4e7d9aef57a7a32891b278",
+        "provenance.json": "24ea010639131dc374c4217ed69ad2c47e6f0b07d8e3c73ee17d58aa422452b7",
+        "result.json": "f69e01ead342c21c6766357194e17367d6fca430db2715490e65a7bc204a1909"
+      },
+      "canonical_result_sha256": "e09d00cea7872ea12c372533b1d1e91e08002452c7f0301d8164a23460e60234",
+      "assignment_sha256": "1a9fa5ae30b79b4a3fe449901b63f65a8463c5254344710ff9bedadd4227f4e5",
+      "review_plan_sha256": "cbac3b9c751d881b5d59ab78d3258991b95e902950cedc10fe8a938bc71c2983",
+      "approved_fingerprint": "8a6c5ade8352b9a7b5f808767ca289efc932e7397e3460c46e8ed9116f76560d"
+    },
+    {
+      "run_id": "l3_persistent_cap20_swap_T_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_swap_T_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_swap_T_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "swap_T",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1023359,
+            "sha256": "276f5ff612ef563c941b2c9fe92cf2bb3c4da65a9ab46ea00e6564f66bcf3fee",
+            "url": "https://cloud.tsinghua.edu.cn/f/e75715e08d714e29a03f/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/e75715e08d714e29a03f/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1420945,
+            "sha256": "8a26f696a72f98ef8cff2859a1cd0a22adfdcd2ed44306dfaabe672a45d57c48",
+            "url": "https://cloud.tsinghua.edu.cn/f/ebef5ea31b7643eaad44/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/ebef5ea31b7643eaad44/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1463510,
+            "sha256": "cd8023df9516fa9ad7cee49be110f5dda22185c36f1eec6a9668904b874a7dea",
+            "url": "https://cloud.tsinghua.edu.cn/f/87367e8fca5d427aba3b/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/87367e8fca5d427aba3b/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "118c4eacb534889b22a7951cdf8ae0ee198731f860ab7d5f2a1b63e3992486c8",
+        "actions.json": "2b41f9a8ae31f6c24e4e81e1d58e24a54d604f1ef86288e147fc8ca4fb7021ca",
+        "config.json": "d351aff51faf59bf72413e876ec1391dc6b602532139f336f93edca74905d111",
+        "source-lock.json": "2b9095ad59b0452dd6cdf1c6043555e22048a0f0a4b4ebfbef627eb30c1fc0b7",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "5a265bbcba00f79c944eaf533a42ed2a450a627f06eadc90df5b2171ba80ece5",
+        "historical/native-acks.json": "90c757acde97125a26139849479d4cc80808fc1f9bc9b8e74d8081f1b19864c9",
+        "historical/trajectory.json": "93eb41b7654f785eb9c613c9351c4e038390406f2124043b0cc566ca2d5b44f3",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "b6d839e88f7e4025cbad49cf63bda3727e163e6295de37a751afcaf3cd5eed57",
+        "historical/publication-manifest.json": "2c8d9d1f1c377a46048c88c6ea2fefffbc35235ccbedce09c228302b3bc26b44",
+        "provenance.json": "36a7fd4057b6d2f75391f6a66862c39c73849d9be883731fb9eb8064b5e83a85",
+        "result.json": "bd27c5fc9e3099cd4d40d42afcf5ce73477d5248259a0d9d6894ab27e2e3dce6"
+      },
+      "canonical_result_sha256": "95b0bf8c1f0c65f0cd21f263d1eee2ec5181d08963660e970d81aef1dd053dba",
+      "assignment_sha256": "4aa75a318df3366359f6e6be9602d53f446c7f161b114a9b535504e184ff5185",
+      "review_plan_sha256": "fc0ed4e9d89855f69528dc5241fb2449c25a8642546f16c7ec1dab05f12d9215",
+      "approved_fingerprint": "f39a041ee8ac663f2af0a758da6c9f441125bee9a3ce9dcc5e111c6a8480a6d3"
+    },
+    {
+      "run_id": "l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "swap_blocks",
+          "variant": "standard"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 968262,
+            "sha256": "ed588959172305bae994020d423b12257ca4809554adfca57fe2583d40e9f30c",
+            "url": "https://cloud.tsinghua.edu.cn/f/028d99e05354447ab947/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/028d99e05354447ab947/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1433708,
+            "sha256": "ac2ec093697cf80993fec9286888d92b4b084411636770922be2277abcddeeee",
+            "url": "https://cloud.tsinghua.edu.cn/f/94e0625cdfe94c01acd7/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/94e0625cdfe94c01acd7/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1440975,
+            "sha256": "6984e1d7ba5818799f27aa746c10a326b33c42fff508d0fdf28356f62b071b40",
+            "url": "https://cloud.tsinghua.edu.cn/f/0f0400c3c6f8491fa3f6/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/0f0400c3c6f8491fa3f6/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "f8504fb096bf49b50d5e6625eb0477b2b6f93fcf2363059c23865daf5bbb518c",
+        "actions.json": "e2eddeb0f222a563b7eb23206a46c3d58017fc6bbae718d42d85cc44e91c410e",
+        "config.json": "783ebd47468216e87b58af6d59032cfd4dc0c01a73081165cab78c2a9465dfa4",
+        "source-lock.json": "e29de0916c4b86a2233d91a9b9ac822b7ec4622df4e97db917c110428b9d30d4",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "b48ed5951952b01a6c7df70a8e12cfb4f467e8d55a6839fc6b0083a2c38b0b35",
+        "historical/native-acks.json": "fd92b6e5c00e6823e36e8498a26629f67fd0183ab0e3d1de09516094c2ad4d91",
+        "historical/trajectory.json": "b5dc732cb2b1a240e30dd1c9767755f5402a13df30ca8d2ea88a8112eb0d34b0",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "d5af67c86158157050ee4c20193f8eb8248d9b5ac1984a7138ceea849ed37b67",
+        "historical/publication-manifest.json": "91ab021fb8f6636b7492ee66aa36b7544e66e4f4c929327130f1e21d75be00c9",
+        "provenance.json": "44290e205fa588d764a2262d053c4a229a873f166c50ac3e7043889dd03061b9",
+        "result.json": "7a0bcd687d9ea21fed2e117758c66d4d94b36c7ba9802be50044a8e0a421a25d"
+      },
+      "canonical_result_sha256": "2673f56a96eb97d1cb470175ed4dd476a02c7b6e4a0ce1aa1d41c29a1ed83b28",
+      "assignment_sha256": "b24e4d502122301d3ff80fcfafc76dab5736df4a9c4a27c4b9a4449deb4861b2",
+      "review_plan_sha256": "8259515f6df6e8ad46e6e6ce564a97ac1156740b164d24a8bc34475ecdac6484",
+      "approved_fingerprint": "d0657962023a9004bf38241d22edb4ef863d8c71f9b2bdddb57763a6c4e5ddbe"
+    },
+    {
+      "run_id": "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1",
+      "source": {
+        "run_id": "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1",
+        "source": {
+          "api_detail_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1.json",
+          "experiment_id": "27b842299e63b01aec72e4050550bc8b4102412d13c78be704464e53ad8f5fee",
+          "experiment_name": "persistent-cap20",
+          "snapshot_id": "9b0b58974d936fd10872e8f6a4c2cb188e6f3cf7fab5cafc39e93b2ae19a86de",
+          "round": 1,
+          "selection": "medium-cap20-rounds4-v2"
+        },
+        "episode": {
+          "task": "sweep_blocks",
+          "variant": "random"
+        },
+        "scene": 0,
+        "seed": 0,
+        "outcome": {
+          "score": 0.0,
+          "success": false
+        },
+        "videos": [
+          {
+            "path": "head.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1744399,
+            "sha256": "efbf780e6d36c93d0dc257a468fcffec9329e3d78fabe7fd8b8795e2266ea74c",
+            "url": "https://cloud.tsinghua.edu.cn/f/ab45810c3a05428192bf/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/ab45810c3a05428192bf/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "left_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 1477820,
+            "sha256": "2caba690f4f2c6871b0b005ff7c9cd122ed8a169abbd70e50eb2cd4a7140279e",
+            "url": "https://cloud.tsinghua.edu.cn/f/992cfdf080a540f8b6bf/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/992cfdf080a540f8b6bf/?dl=1",
+            "storage": "original_public_video"
+          },
+          {
+            "path": "right_wrist.mp4",
+            "media_type": "video/mp4",
+            "bytes": 2561990,
+            "sha256": "04ddabdace1e72ec98694c09398bbb20dbba12f405b33df13fba5f212631f7fd",
+            "url": "https://cloud.tsinghua.edu.cn/f/7fd000d34c6e4639bc89/?dl=1",
+            "source_url": "https://cloud.tsinghua.edu.cn/f/7fd000d34c6e4639bc89/?dl=1",
+            "storage": "original_public_video"
+          }
+        ],
+        "download": {
+          "verified_sha256": true,
+          "status": "complete"
+        },
+        "format_note": "Raw MP4 videos from the public API; result.json contains the complete API detail and embedded evidence."
+      },
+      "source_hashes": {
+        "native-terminal.json": "32d101b732243ce357d35d0ad2b03066152fed731bace94b0a17826d06751774",
+        "actions.json": "eebd09e01d28233ea5b8759fdc740ff4c13a4397a1913889d07d3e7bce056829",
+        "config.json": "ac10182a23943f6f7208b5f67a991c381fcc1f2681eef023647a64db3254cac2",
+        "source-lock.json": "11e2aefa14d9331abe1ffc91d8353cbf80bb7b7718573a61edd0c31506201553",
+        "historical/native-result.json": "465e1866958f68fe9715fddac39d09a00909fb1fdf10ea7347f2a5e56a3dc73f",
+        "historical/episode-complete.json": "5bff39e4a7d890dc6a92424303fbe46657aa6c7c4d52c28c08d0f3834ccd9e9a",
+        "historical/native-acks.json": "f406f8b813ad4ef3c5798ed7aed97dfb9bbba9787a02e790da84eafccd7d50fd",
+        "historical/trajectory.json": "54a3193047629ef13d6ec09331b5a95ebb1ac2c80675c61d5176dee83febb587",
+        "historical/source-lock.json": "980e3947b6ff99fc0448edd342a3ffbeac4e1ff50acc57dfb7cc72060a416b69",
+        "historical/costs.json": "a2f0373223d5e789fe5b82c2a899a626b9ac89b06b9c860fb1c37300b4c297e2",
+        "historical/publication-manifest.json": "edd06bf7919cf428cd3bf02ed0e2bc44a96bfd326275332bbce6ca07cafe425d",
+        "provenance.json": "d5ebd0f6560afe40e45f2eebe7ea7449f66b7a974768480ac1853a8423fb7a70",
+        "result.json": "b817c65f1bb8103299452ecd0d4288c97f561265696430033fb183ac2582c2e2"
+      },
+      "canonical_result_sha256": "bb111b719f13ddfb871ae01a9ea668ad5157bec204d2aa7684dc062ae2ab5c10",
+      "assignment_sha256": "4b07e9413f9984e4e89c8b0296abaf2ecfacb020afaf30f5673026a1dd3415b7",
+      "review_plan_sha256": "c95fafee1079d2ab5da34e5b667f14b276f1d49cd764cb6f833f1d5317338a78",
+      "approved_fingerprint": "4113ffca1d67b839b409499fd29f946571a69f47beb56c869ac424424a8ae7ae"
+    }
+  ],
+  "original_source_read_only": true,
+  "portable_references": "source-data/<task>/ and audit-source/ are logical evidence identifiers, not hosted file URLs."
+}
