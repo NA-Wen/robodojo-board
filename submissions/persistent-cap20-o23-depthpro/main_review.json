@@ -1,0 +1,20 @@
+{
+  "approved": false,
+  "summary": "42个run、126路视频和244条事件的结果/覆盖/检查索引已核对：0.2秒基础扫描、已选连续窗口及外侧1源帧、事件前后0.2秒覆盖均通过；26项指标与事件计数、原生控制步一致。但汇总交付辅助列未通过：42行model_responses为空，21行control_step_check.response_count与原生响应数不符，internal_macro_stages混用非零执行调用数，故暂不批准。未要求因同步缺失重看全程。",
+  "recheck_requests": [
+    {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+      "instruction": "修正汇总生成逻辑并应用全部42个run；逐run差异见main-verification/main_current_auxiliary_discrepancies.json。此run原生model_responses=90、actions调用记录89；总task_metrics.csv的model_responses为空、control_step_check.response_count=89、action_count=78。将响应数、全部调用数、非零实际执行调用数、环境控制步674分别命名保留；78不得作为未导出的宏内部阶段数。其他run同样从规范result_file及原始日志重建辅助列；独立轨迹/宏内部阶段客观缺失则留空说明。同步修正总CSV、audit_data.json的辅助元数据和HTML，清除与run内已修正交付的冲突，重新校验后提交main；保留既有真实看图记录，不补造、不重看已检查帧。"
+    },
+    {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+      "instruction": "重点验收上述汇总修复在含非模型记录的run上生效：原生模型决策94、模型响应95，actions共118条（包含24条非模型记录），非零执行记录115；总表当前control_step_check.response_count=118，不得以全部轨迹调用记录代替模型响应。明确115的执行调用口径，不当作已确认宏内部阶段；控制步1398保持与原生一致。核对run内task_metrics.csv、规范result_file、总表及HTML一致，无需重新抽帧。"
+    }
+  ],
+  "uncertainties": [
+    "全部run原始任务指令正文缺失，m25留空；不能根据任务名或note独立确认选错物体为0。",
+    "动作/env_step到视频PTS缺少可靠同步映射；仅保留可核实的日志序列及视频局部时间，不推造精确对应，也不因此要求全程全帧。",
+    "遮挡、离支撑高度、接触及部分预算类型/阈值仍有客观不确定，保留事件明细候选与确认下界；基础抽帧和局部连续源帧复核不能排除所有短暂事件。",
+    "本次main核验已有逐帧观察与批次检查记录及其覆盖一致性，未重复查看此前已检查图像；索引完整不等于独立重做视觉感知。"
+  ]
+}

@@ -1,0 +1,1472 @@
+[
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "align_blocks",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 36,
+      "model_responses": 36,
+      "native_controls": 167,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "c572f86f5299294b3a12f2cf40754560417b8876af1991e3c249236d0c687bba",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-scene0",
+      "model_decisions": 36,
+      "model_responses": 36,
+      "all_call_records": 36,
+      "model_call_records": 36,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 36,
+      "native_controls": 167,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "arrange_largest_number",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 98,
+      "model_responses": 99,
+      "native_controls": 749,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "551e5a430995df4ff8d121449ef76ccb11c480529ca13063e92606d9752ff94a",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-random-s0-scene0",
+      "model_decisions": 98,
+      "model_responses": 99,
+      "all_call_records": 98,
+      "model_call_records": 98,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 94,
+      "native_controls": 749,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "build_tower",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 89,
+      "model_responses": 90,
+      "native_controls": 674,
+      "native_terminal": true,
+      "score": 0.1,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "25b89178ac40584cc00f0bcf2719a1a56d45168c10adff1000771d602b8e1e2e",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+      "model_decisions": 89,
+      "model_responses": 90,
+      "all_call_records": 89,
+      "model_call_records": 89,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 78,
+      "native_controls": 674,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "classify_objects",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 92,
+      "model_responses": 93,
+      "native_controls": 913,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "cd697a8916a70012ec8555f8245361a61f37be86d4ea867e42845f0e16c31a2e",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard-s0-scene0",
+      "model_decisions": 92,
+      "model_responses": 93,
+      "all_call_records": 92,
+      "model_call_records": 92,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 88,
+      "native_controls": 913,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_language-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "classify_objects_by_language",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 912,
+      "native_terminal": true,
+      "score": 0.4,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "741d0e082b723c0e1bacf99215948aef6c673192e4a379c46b524768509842a8",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_language-standard-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 100,
+      "model_call_records": 100,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 88,
+      "native_controls": 912,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "cover_blocks",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 57,
+      "model_responses": 57,
+      "native_controls": 322,
+      "native_terminal": true,
+      "score": 0.05,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "c3c9ca99d0bca78d08ca4c8bb1701ccceb1ea962aac7e3f9aca488e841f47570",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-scene0",
+      "model_decisions": 57,
+      "model_responses": 57,
+      "all_call_records": 57,
+      "model_call_records": 57,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 49,
+      "native_controls": 322,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "deposit_coin",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 34,
+      "model_responses": 34,
+      "native_controls": 284,
+      "native_terminal": true,
+      "score": 0.2,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "516d55e639436ed9fb5d8a52bbac72df109070e3527e4218a5d557f4085ca503",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-scene0",
+      "model_decisions": 34,
+      "model_responses": 34,
+      "all_call_records": 34,
+      "model_call_records": 34,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 31,
+      "native_controls": 284,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "fasten_screws",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 91,
+      "model_responses": 92,
+      "native_controls": 1113,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "ca67d5b465b50ee1f984d1f8cba48a1a618cce0c99878e76e636a75f64bdeec6",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0-scene0",
+      "model_decisions": 91,
+      "model_responses": 92,
+      "all_call_records": 91,
+      "model_call_records": 91,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 89,
+      "native_controls": 1113,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "fill_egg_holder",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 91,
+      "model_responses": 92,
+      "native_controls": 653,
+      "native_terminal": true,
+      "score": 0.1,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "b9e0b7c6f728759262bd3d1e4b5a7f5728d7b6b8b5c81d43f35c1b0146342890",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-s0-scene0",
+      "model_decisions": 91,
+      "model_responses": 92,
+      "all_call_records": 91,
+      "model_call_records": 91,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 89,
+      "native_controls": 653,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "fill_pen_holder",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 72,
+      "model_responses": 73,
+      "native_controls": 668,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "8c36272579b38634150717456a39bb3bec02d6dc7b9f338ba50325a982caf5a1",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-s0-scene0",
+      "model_decisions": 72,
+      "model_responses": 73,
+      "all_call_records": 72,
+      "model_call_records": 72,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 57,
+      "native_controls": 668,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "fold_clothes",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 40,
+      "model_responses": 40,
+      "native_controls": 329,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "f33534735d2f05788be2a2a0943dd1c926dbf3eeaf8f7a5dc9e1d2c532b94a82",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-scene0",
+      "model_decisions": 40,
+      "model_responses": 40,
+      "all_call_records": 40,
+      "model_call_records": 40,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 38,
+      "native_controls": 329,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "general_pickup",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 11,
+      "model_responses": 11,
+      "native_controls": 70,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "ba15eb1a36f68f92cf1d916e7fdc91ff97c183785af72fafb8834ff693324f57",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s0-scene0",
+      "model_decisions": 11,
+      "model_responses": 11,
+      "all_call_records": 11,
+      "model_call_records": 11,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 11,
+      "native_controls": 70,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "hang_mugs",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 777,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "b16ce43594f7582ebf5a57037fe2f4de86298ca4f71ccd92d3f008df58b80bf3",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 100,
+      "model_call_records": 100,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 93,
+      "native_controls": 777,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "imitate_sorting_sequence",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 94,
+      "model_responses": 95,
+      "native_controls": 1398,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "29956f8ad3a08b4e861e8ebf91fdf81060a32fd65a575014c49de4ee8e980fe7",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+      "model_decisions": 94,
+      "model_responses": 95,
+      "all_call_records": 118,
+      "model_call_records": 94,
+      "non_model_records": 24,
+      "nonzero_executed_call_records": 115,
+      "native_controls": 1398,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "insert_key",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 30,
+      "model_responses": 30,
+      "native_controls": 300,
+      "native_terminal": true,
+      "score": 0.15,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "81a39cf0308836c8d76ac2a31d69bcd8d6b31181bf319a3a88b324e1834e75d6",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-scene0",
+      "model_decisions": 30,
+      "model_responses": 30,
+      "all_call_records": 30,
+      "model_call_records": 30,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 30,
+      "native_controls": 300,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "insert_tubes",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 65,
+      "model_responses": 66,
+      "native_controls": 500,
+      "native_terminal": true,
+      "score": 0.4,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "6a69b525abff1221f712ad830bb7766aef5e6564975913fa5894b166f781655c",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-scene0",
+      "model_decisions": 65,
+      "model_responses": 66,
+      "all_call_records": 65,
+      "model_call_records": 65,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 63,
+      "native_controls": 500,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "make_kong",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 93,
+      "model_responses": 94,
+      "native_controls": 439,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "e174f846d206eda4e56d86b1e1ff9bee0fa37b6b719b27c443742bf4d44b0979",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-scene0",
+      "model_decisions": 93,
+      "model_responses": 94,
+      "all_call_records": 93,
+      "model_call_records": 93,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 86,
+      "native_controls": 439,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "make_toast",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 81,
+      "model_responses": 82,
+      "native_controls": 625,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "6ba1b475c587248021a697047e91d498202bf4f8c57328a11255d90367c2b34f",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scene0",
+      "model_decisions": 81,
+      "model_responses": 82,
+      "all_call_records": 81,
+      "model_call_records": 81,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 74,
+      "native_controls": 625,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conveyor-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "match_and_pick_from_conveyor",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 48,
+      "model_responses": 48,
+      "native_controls": 420,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "b6cb5a7c7f4c2d428fa811745b4fd156fb387058a72feca4370932eba1cf68bc",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conveyor-standard-s0-scene0",
+      "model_decisions": 48,
+      "model_responses": 48,
+      "all_call_records": 48,
+      "model_call_records": 48,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 43,
+      "native_controls": 420,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "organize_table",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 95,
+      "model_responses": 96,
+      "native_controls": 794,
+      "native_terminal": true,
+      "score": 0.25,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "41e693da8e4299dc796fac9d811f9103abefa2e21676e615f83b579ef806227d",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s0-scene0",
+      "model_decisions": 95,
+      "model_responses": 96,
+      "all_call_records": 95,
+      "model_call_records": 95,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 89,
+      "native_controls": 794,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "pack_objects_into_box",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 83,
+      "model_responses": 84,
+      "native_controls": 947,
+      "native_terminal": true,
+      "score": 0.5,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "c12179f43b1b5c521ba3fd0ced67e7800939c67093c956c249edfc560b16ac9e",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-random-s0-scene0",
+      "model_decisions": 83,
+      "model_responses": 84,
+      "all_call_records": 83,
+      "model_call_records": 83,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 78,
+      "native_controls": 947,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_image-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "pick_from_conveyor_by_image",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 700,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "9d491bc3a5f1a49ead59195dfdece85a7fb3157819c184200802a4eeb0ff03bb",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_image-standard-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 101,
+      "model_call_records": 100,
+      "non_model_records": 1,
+      "nonzero_executed_call_records": 81,
+      "native_controls": 700,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "play_Xylophone",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 71,
+      "model_responses": 71,
+      "native_controls": 310,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "55d2e69ca3ef794f4057ecb89d3c519de971a753b4dd01d108825d9863031902",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s0-scene0",
+      "model_decisions": 71,
+      "model_responses": 71,
+      "all_call_records": 71,
+      "model_call_records": 71,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 68,
+      "native_controls": 310,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "play_stacking_toy",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 694,
+      "native_terminal": true,
+      "score": 0.6,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "d25be66d4dd734773dd2409604325eb4146f1e60e8ad116e4cf17cbbb27a115f",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standard-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 101,
+      "model_call_records": 100,
+      "non_model_records": 1,
+      "nonzero_executed_call_records": 99,
+      "native_controls": 694,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "play_tic_tac_toe",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 253,
+      "native_terminal": true,
+      "score": 0.1,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "c4b288d8ce83397f0c753a7d6133199e5edf78948b1c8e011ade57149b9e7417",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 101,
+      "model_call_records": 100,
+      "non_model_records": 1,
+      "nonzero_executed_call_records": 100,
+      "native_controls": 253,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "plug_in_charger",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 35,
+      "model_responses": 35,
+      "native_controls": 380,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "300130030e9f1eff41592db974a17724e2d6fd67050d6b61d87c0853404878ae",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-s0-scene0",
+      "model_decisions": 35,
+      "model_responses": 35,
+      "all_call_records": 35,
+      "model_call_records": 35,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 34,
+      "native_controls": 380,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-standard-s0-scene0",
+    "episode": {
+      "capability": "Precision",
+      "scene": 0,
+      "seed": 0,
+      "task": "pour_balls_into_vase",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 51,
+      "model_responses": 51,
+      "native_controls": 392,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "0f2db418cfb0ec73e1fa39c11c6c4e2bc318277508b063a6d5448021cc369b4c",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-standard-s0-scene0",
+      "model_decisions": 51,
+      "model_responses": 51,
+      "all_call_records": 51,
+      "model_call_records": 51,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 36,
+      "native_controls": 392,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "pour_by_language",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 65,
+      "model_responses": 65,
+      "native_controls": 662,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "744d145bd64fb842fc18bb2cb1dbaa3b99c2d2551b7a1f198218ae24a80ec191",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard-s0-scene0",
+      "model_decisions": 65,
+      "model_responses": 65,
+      "all_call_records": 65,
+      "model_call_records": 65,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 55,
+      "native_controls": 662,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "pour_liquid_into_cup",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 40,
+      "model_responses": 40,
+      "native_controls": 400,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "792aa7149b5849374323f368f71325ee5f944db9de8dd0f5141fc0b330277f5f",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-random-s0-scene0",
+      "model_decisions": 40,
+      "model_responses": 40,
+      "all_call_records": 40,
+      "model_call_records": 40,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 37,
+      "native_controls": 400,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "press_by_number",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 39,
+      "model_responses": 39,
+      "native_controls": 294,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "b628b858cc607c5dbf34ff2329d272de6552543f0a0f57ba749b63845c30c2bf",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-s0-scene0",
+      "model_decisions": 39,
+      "model_responses": 39,
+      "all_call_records": 39,
+      "model_call_records": 39,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 38,
+      "native_controls": 294,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "push_T",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 95,
+      "model_responses": 96,
+      "native_controls": 232,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "c41d7a607f9692930e65b8954994da810dbe9875a7592abe90a2f7826c2a80a8",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0",
+      "model_decisions": 95,
+      "model_responses": 96,
+      "all_call_records": 95,
+      "model_call_records": 95,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 95,
+      "native_controls": 232,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-standard-s0-scene0",
+    "episode": {
+      "capability": "Long-Horizon",
+      "scene": 0,
+      "seed": 0,
+      "task": "put_bottles_into_dustbin",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 72,
+      "model_responses": 73,
+      "native_controls": 648,
+      "native_terminal": true,
+      "score": 0.25,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "6838be2322c119e58a6a63d83071df019db171d653fb23131a86ca01c73c6b28",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-standard-s0-scene0",
+      "model_decisions": 72,
+      "model_responses": 73,
+      "all_call_records": 72,
+      "model_call_records": 72,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 68,
+      "native_controls": 648,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "solve_equation",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 39,
+      "model_responses": 39,
+      "native_controls": 288,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "49e1c03772e75d5e4bc64c1addf2e41e3e4dd3225f23e657a992f1ff04955ea4",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s0-scene0",
+      "model_decisions": 39,
+      "model_responses": 39,
+      "all_call_records": 39,
+      "model_call_records": 39,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 35,
+      "native_controls": 288,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_size-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "sort_nesting_dolls_by_size",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 81,
+      "model_responses": 82,
+      "native_controls": 787,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "a2e2beded14419af05722e6e65e4bfef4b067d806c7e96096e1af42cca54057d",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_size-random-s0-scene0",
+      "model_decisions": 81,
+      "model_responses": 82,
+      "all_call_records": 81,
+      "model_call_records": 81,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 77,
+      "native_controls": 787,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "stack_blocks",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 54,
+      "model_responses": 54,
+      "native_controls": 377,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "a9db7aa826446aeab29617c39f0cb9fde00fbd7df742633d780ec11d20c5a3c4",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-scene0",
+      "model_decisions": 54,
+      "model_responses": 54,
+      "all_call_records": 54,
+      "model_call_records": 54,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 52,
+      "native_controls": 377,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "stack_blocks_by_language",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 48,
+      "model_responses": 48,
+      "native_controls": 360,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "0f961cb2dea6da96f6a24d9673bf2cf459621c264ca2ab52643ce988867f4f1e",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-standard-s0-scene0",
+      "model_decisions": 48,
+      "model_responses": 48,
+      "all_call_records": 48,
+      "model_call_records": 48,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 45,
+      "native_controls": 360,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "stack_bowls",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 63,
+      "model_responses": 64,
+      "native_controls": 614,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "d174ac9a83cfcc87328b43ce41ab18687171fb82dffce758221e0f7f66dda567",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-scene0",
+      "model_decisions": 63,
+      "model_responses": 64,
+      "all_call_records": 63,
+      "model_call_records": 63,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 61,
+      "native_controls": 614,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphones-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "store_laptop_and_headphones",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 91,
+      "model_responses": 92,
+      "native_controls": 690,
+      "native_terminal": true,
+      "score": 0.2,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "01c1df2dd10032011d8e8de972c7b7a3c7cd5590d214156aad6517fb1b709e94",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphones-random-s0-scene0",
+      "model_decisions": 91,
+      "model_responses": 92,
+      "all_call_records": 91,
+      "model_call_records": 91,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 79,
+      "native_controls": 690,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-standard-s0-scene0",
+    "episode": {
+      "capability": "Open",
+      "scene": 0,
+      "seed": 0,
+      "task": "store_tools_in_toolbox",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 100,
+      "model_responses": 101,
+      "native_controls": 761,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "f193c7b5745cac5e630cd2764ec5aaa2500fe2faeeba7a6b5301380542e22753",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-standard-s0-scene0",
+      "model_decisions": 100,
+      "model_responses": 101,
+      "all_call_records": 100,
+      "model_call_records": 100,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 88,
+      "native_controls": 761,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "swap_T",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 44,
+      "model_responses": 44,
+      "native_controls": 387,
+      "native_terminal": true,
+      "score": 1.0,
+      "status": "complete",
+      "success": true
+    },
+    "native_terminal_sha256": "b8d67b355461cb02d039f2902a33cb3c630b257241a87a1828f2208d8c5e67a8",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0",
+      "model_decisions": 44,
+      "model_responses": 44,
+      "all_call_records": 44,
+      "model_call_records": 44,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 41,
+      "native_controls": 387,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-scene0",
+    "episode": {
+      "capability": "Memory",
+      "scene": 0,
+      "seed": 0,
+      "task": "swap_blocks",
+      "variant": "standard"
+    },
+    "native_outcome": {
+      "model_decisions": 58,
+      "model_responses": 58,
+      "native_controls": 421,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "a8ee3165d49a53928a617cf46e91a2032302f7e915a09e560b3ef3dd47fca538",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-scene0",
+      "model_decisions": 58,
+      "model_responses": 58,
+      "all_call_records": 58,
+      "model_call_records": 58,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 56,
+      "native_controls": 421,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-scene0",
+    "episode": {
+      "capability": "Generalization",
+      "scene": 0,
+      "seed": 0,
+      "task": "sweep_blocks",
+      "variant": "random"
+    },
+    "native_outcome": {
+      "model_decisions": 92,
+      "model_responses": 93,
+      "native_controls": 737,
+      "native_terminal": true,
+      "score": 0.0,
+      "status": "complete",
+      "success": false
+    },
+    "native_terminal_sha256": "c9d5881e9f18e05facb734d75d2450dbfbe675a93abc773393476cca5cc8f59a",
+    "auxiliary": {
+      "run_id": "l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-scene0",
+      "model_decisions": 92,
+      "model_responses": 93,
+      "all_call_records": 92,
+      "model_call_records": 92,
+      "non_model_records": 0,
+      "nonzero_executed_call_records": 84,
+      "native_controls": 737,
+      "internal_macro_stages": null,
+      "independent_system_turns": null,
+      "trajectory_observation_stages": null,
+      "unknown_reason": "原生未导出独立系统turn、轨迹观测阶段及宏内部逐阶段状态；非零调用数不能作为宏内部阶段。",
+      "scene": 0
+    }
+  }
+]
