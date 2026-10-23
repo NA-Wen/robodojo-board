@@ -1,0 +1,11 @@
+{
+  "runs": 42,
+  "videos": 126,
+  "base_interval_seconds": 0.2,
+  "method": "mixed: base scans and selected continuous source-frame windows; actual intervals and inspected observations in coverage CSV and indices",
+  "continuous_full_video_review_complete": false,
+  "index_positions_are_not_a_claim_of_independent_full_frame_viewing": true,
+  "total_source_frame_positions": 78630,
+  "total_inspected_index_records": 65898,
+  "final_recheck_required": true
+}

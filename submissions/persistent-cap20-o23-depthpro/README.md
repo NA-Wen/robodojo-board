@@ -1,0 +1,11 @@
+用户授权提交当前阶段性结果；rolling批准42/42，final main尚未批准，汇总辅助列修正仍需final recheck。42 run、126路视频、全部26项指标；0.2秒基础抽帧及关键动作、疑点和事件边界局部连续窗口，逐run实际覆盖另列，不宣称全帧观看或连续播放。确认视觉计数为声明覆盖内下界，候选不计数；原始指令、精确同步及宏内部阶段等未知保持null。
+
+事件共244条：确认152，待确认92。未解决项见main_review.json及逐run event_annotations.json中的uncertainties/limitations。
+原始任务指令缺失，m25未知；遮挡/瞬时接触/失持分类及预算疑点保留。缺少精确动作视频同步，不推测。
+本次不重跑审核或重看视频，导出核对不等于新增视觉审核。源canonical与原生结果及事件保留；源汇总错误只在此公开包修正。
+final recheck需验证全部42行响应数/全部调用/非零执行调用/非模型记录/环境控制步，及scene、宏内部阶段null与原始来源和三种交付一致。当前修正不代表main最终批准。
+每run的采样、局部连续区间、已检查帧位置与观察分别见review_coverage.csv、review_inspected_frames.json；即使某路索引含全部帧位置，也不据此宣称全帧原图观看。
+26项指标数值与canonical逐值一致；视觉指标使用lower_bound，unknown留null；待审核的final验收独立列为final_recheck_required，不用pending覆盖已经核查的指标。
+setting_id为setting-config.json完整公共参数规范化字节SHA256；六种原始config封装仅locked_config_sha256不同，各run原文件hash分别保留；native_control_cap=20是每调用上限。公开目录不含源session日志、凭证或provider配置。
+
+公开包复核：安装jsonschema后运行 python verify_package.py；官方validator/schema快照及SHA256记录随包附带。校验零阻断不代表final main批准。

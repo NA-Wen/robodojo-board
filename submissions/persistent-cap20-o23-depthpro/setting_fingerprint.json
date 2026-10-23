@@ -1,0 +1,6 @@
+{
+  "setting_id": "sha256:9aa1fb524df003ab334304bebdab4d54f89cd559400d761208123c27cb7bb638",
+  "algorithm": "SHA256(setting-config.json exact UTF-8 bytes): schema_version and complete identical ordered parameters, JSON sort_keys=True compact separators plus newline",
+  "excluded": "per-run locked_config_sha256 differs across 6 wrappers despite identical public parameters; all raw config hashes retained in source_manifest.json",
+  "all_42_parameter_sets_equal": true
+}

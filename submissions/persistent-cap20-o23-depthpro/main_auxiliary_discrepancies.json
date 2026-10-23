@@ -1,0 +1,1011 @@
+[
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 94
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 93,
+        "expected": 94
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 86,
+        "expected": 93
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "86",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 94,
+    "action_records": 93
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 30
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "30",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 30,
+    "action_records": 30
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 58
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 56,
+        "expected": 58
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "56",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 58,
+    "action_records": 58
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 36
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "36",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 36,
+    "action_records": 36
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_language-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 100,
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 88,
+        "expected": 100
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "88",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 100
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 48
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 45,
+        "expected": 48
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "45",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 48,
+    "action_records": 48
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 100,
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 88,
+        "expected": 100
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "88",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 100
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 39
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 38,
+        "expected": 39
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "38",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 39,
+    "action_records": 39
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_size-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 82
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 81,
+        "expected": 82
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 77,
+        "expected": 81
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "77",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 82,
+    "action_records": 81
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 95
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 118,
+        "expected": 95
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 115,
+        "expected": 118
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "115",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 95,
+    "action_records": 118
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 34
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 31,
+        "expected": 34
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "31",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 34,
+    "action_records": 34
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 82
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 81,
+        "expected": 82
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 74,
+        "expected": 81
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "74",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 82,
+    "action_records": 81
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 73
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 72,
+        "expected": 73
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 57,
+        "expected": 72
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "57",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 73,
+    "action_records": 72
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 11
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "11",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 11,
+    "action_records": 11
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 73
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 72,
+        "expected": 73
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 68,
+        "expected": 72
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "68",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 73,
+    "action_records": 72
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 44
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 41,
+        "expected": 44
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "41",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 44,
+    "action_records": 44
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 100,
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 93,
+        "expected": 100
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "93",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 100
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 100,
+        "expected": 101
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "100",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 101
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 96
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 95,
+        "expected": 96
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 89,
+        "expected": 95
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "89",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 96,
+    "action_records": 95
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 96
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 95,
+        "expected": 96
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "95",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 96,
+    "action_records": 95
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 35
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 34,
+        "expected": 35
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "34",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 35,
+    "action_records": 35
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 66
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 65,
+        "expected": 66
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 63,
+        "expected": 65
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "63",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 66,
+    "action_records": 65
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 99
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 98,
+        "expected": 99
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 94,
+        "expected": 98
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "94",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 99,
+    "action_records": 98
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 40
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 37,
+        "expected": 40
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "37",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 40,
+    "action_records": 40
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 84
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 83,
+        "expected": 84
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 78,
+        "expected": 83
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "78",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 84,
+    "action_records": 83
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 91,
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 89,
+        "expected": 91
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "89",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 92,
+    "action_records": 91
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 99,
+        "expected": 101
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "99",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 101
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conveyor-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 48
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 43,
+        "expected": 48
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "43",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 48,
+    "action_records": 48
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 65
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 55,
+        "expected": 65
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "55",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 65,
+    "action_records": 65
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 93
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 92,
+        "expected": 93
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 84,
+        "expected": 92
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "84",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 93,
+    "action_records": 92
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 39
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 35,
+        "expected": 39
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "35",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 39,
+    "action_records": 39
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 54
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 52,
+        "expected": 54
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "52",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 54,
+    "action_records": 54
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 93
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 92,
+        "expected": 93
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 88,
+        "expected": 92
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "88",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 93,
+    "action_records": 92
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 71
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 68,
+        "expected": 71
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "68",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 71,
+    "action_records": 71
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_image-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 101
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 81,
+        "expected": 101
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "81",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 101,
+    "action_records": 101
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphones-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 91,
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 79,
+        "expected": 91
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "79",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 92,
+    "action_records": 91
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 91,
+        "expected": 92
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 89,
+        "expected": 91
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "89",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 92,
+    "action_records": 91
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 40
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 38,
+        "expected": 40
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "38",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 40,
+    "action_records": 40
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 57
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 49,
+        "expected": 57
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "49",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 57,
+    "action_records": 57
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 64
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 63,
+        "expected": 64
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 61,
+        "expected": 63
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "61",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 64,
+    "action_records": 63
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 90
+      },
+      {
+        "field": "control_step_check.response_count",
+        "actual": 89,
+        "expected": 90
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 78,
+        "expected": 89
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "78",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 90,
+    "action_records": 89
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-standard-s0-scene0",
+    "issues": [
+      {
+        "field": "model_responses",
+        "actual": "",
+        "expected": 51
+      },
+      {
+        "field": "control_step_check.action_count",
+        "actual": 36,
+        "expected": 51
+      },
+      {
+        "field": "internal_macro_stages",
+        "actual": "36",
+        "problem": "汇总从assignment counts.macro_stages生成，未区分非零调用数与未导出宏内部阶段；应按原生阶段定义核实或留空。"
+      }
+    ],
+    "native_responses": 51,
+    "action_records": 51
+  }
+]

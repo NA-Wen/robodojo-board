@@ -1,0 +1,68 @@
+{
+  "authorization": "用户明确授权按当前结果实际提交，覆盖此前全部main批准前置条件；不伪造批准。",
+  "stage": "user_authorized_interim",
+  "rolling_approved": 42,
+  "rolling_total": 42,
+  "final_main_approved": false,
+  "final_recheck_required": true,
+  "audit_source_sha256": "22b594e5710ac60540118a875805206a3bdd17f16e83839b0f401c78337290ae",
+  "source_main_review": {
+    "approved": false,
+    "recheck_requests": [
+      {
+        "instruction": "修复全部42个run的汇总辅助列，差异详见main-verification/main_current_auxiliary_discrepancies.json。本run原生响应90次、调用记录89条，总表model_responses却为空，control_step_check.response_count=89。区分响应、调用、非零执行记录和环境控制步；不可将78条非零执行调用当作宏内部阶段。同步修正CSV、JSON和HTML，再提交核验。保留既有图像检查记录，无需重看。",
+        "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0"
+      },
+      {
+        "instruction": "核验汇总修复正确处理非模型记录：模型决策94、响应95，全部调用记录118，其中非模型记录24；当前汇总response_count=118错误。115为非零执行记录，不能直接当作宏内部阶段。控制步1398保持原生一致，并核对run内交付与总交付一致。",
+        "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0"
+      }
+    ],
+    "summary": "42个run的126路覆盖索引通过0.2秒基础扫描、选定局部连续窗口及事件边界覆盖检查；26项指标、244条事件及原生控制步核对一致。但总表42行响应数为空，21行辅助响应计数错误，宏内部阶段口径混用，交付尚未全部通过。详细结论已保存main-verification/main_review.json。",
+    "uncertainties": [
+      "原始任务指令缺失，m25继续留空。",
+      "动作与视频精确同步缺失，不推造对应关系，也不因此要求全程全帧。",
+      "遮挡、接触、失持分类及预算状态等客观疑点继续保留，不视为零事件。",
+      "本次核验既有观察记录和覆盖索引，未重复查看已检查图像；不宣称连续观看或遍历全部源帧。"
+    ]
+  },
+  "export_corrections": "仅在提交包按原生结果与actions修复响应数、调用计数、scene；未导出宏内部阶段null；不修改审核源。",
+  "group_resolution": {
+    "group_id": "persistent-cap20-o23-depthpro",
+    "source_experiment_name": "persistent-cap20-o23-depthpro",
+    "existing_matching_group": null,
+    "checked": "latest public audit-data.json, origin/main submissions and board groups; no matching setting/profile present",
+    "setting_id": "sha256:9aa1fb524df003ab334304bebdab4d54f89cd559400d761208123c27cb7bb638"
+  },
+  "protocol_files": {
+    "protocol.md": {
+      "url": "https://na-wen.github.io/robodojo-board/protocol.md",
+      "sha256": "9e5d99795ae827c38ba2486426eec94869c9d2cd52c31d10a748deb340f6940a"
+    },
+    "protocol.json": {
+      "url": "https://na-wen.github.io/robodojo-board/protocol.json",
+      "sha256": "b33929b498398936e9c1e216ad134716240db4314f7e243d9dcf645d45e158b7"
+    },
+    "submission.schema.json": {
+      "url": "https://na-wen.github.io/robodojo-board/submission.schema.json",
+      "sha256": "4ac5c04f6ea6df015a776f57f107567ed8959085c37340cf9ac164e7d4245551"
+    },
+    "validate_submission.py": {
+      "url": "https://na-wen.github.io/robodojo-board/validate_submission.py",
+      "sha256": "fcfb353af3c3016a9d19d272e4567e57ec718e6e14061d0ec9e691a03303267e"
+    }
+  },
+  "source_read_only": true,
+  "coverage": "用户授权提交当前阶段性结果；rolling批准42/42，final main尚未批准，汇总辅助列修正仍需final recheck。42 run、126路视频、全部26项指标；0.2秒基础抽帧及关键动作、疑点和事件边界局部连续窗口，逐run实际覆盖另列，不宣称全帧观看或连续播放。确认视觉计数为声明覆盖内下界，候选不计数；原始指令、精确同步及宏内部阶段等未知保持null。",
+  "audit_model_history": {
+    "initial_audit": "gpt-6.1-sol",
+    "continuation": "gpt-6.1-sol"
+  },
+  "unresolved": [
+    "全部run原始任务指令正文缺失，m25留空；不能根据任务名或note独立确认选错物体为0。",
+    "动作/env_step到视频PTS缺少可靠同步映射；仅保留可核实的日志序列及视频局部时间，不推造精确对应，也不因此要求全程全帧。",
+    "遮挡、离支撑高度、接触及部分预算类型/阈值仍有客观不确定，保留事件明细候选与确认下界；基础抽帧和局部连续源帧复核不能排除所有短暂事件。",
+    "本次main核验已有逐帧观察与批次检查记录及其覆盖一致性，未重复查看此前已检查图像；索引完整不等于独立重做视觉感知。"
+  ],
+  "submission_scope": "only this source group; no other O23 group included"
+}

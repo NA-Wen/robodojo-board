@@ -1,0 +1,2447 @@
+[
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-s_cff513",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-s_cff513/results/l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-s_cff513.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 89,
+      "controls": 674,
+      "responses": 90,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 7,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 1,
+        "uncertain": 6
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 753,
+        "decoded": 753,
+        "extracted": 753,
+        "inspected": 684,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 753,
+        "decoded": 753,
+        "extracted": 753,
+        "inspected": 684,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 753,
+        "decoded": 753,
+        "extracted": 753,
+        "inspected": 684,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-_b43dc3",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-_b43dc3/results/l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-_b43dc3.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 34,
+      "controls": 284,
+      "responses": 34,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m05",
+        "m06",
+        "m07",
+        "m08",
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 6,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 5,
+        "confirmed": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 316,
+        "decoded": 316,
+        "extracted": 316,
+        "inspected": 316,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 316,
+        "decoded": 316,
+        "extracted": 316,
+        "inspected": 316,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 316,
+        "decoded": 316,
+        "extracted": 316,
+        "inspected": 316,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-_89fcf6",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-_89fcf6/results/l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-_89fcf6.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 65,
+      "controls": 500,
+      "responses": 66,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 3,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 563,
+        "decoded": 563,
+        "extracted": 563,
+        "inspected": 563,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 563,
+        "decoded": 563,
+        "extracted": 563,
+        "inspected": 563,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 563,
+        "decoded": 563,
+        "extracted": 563,
+        "inspected": 563,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s_07e738",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s_07e738/results/l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s_07e738.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 71,
+      "controls": 310,
+      "responses": 71,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 2,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 379,
+        "decoded": 379,
+        "extracted": 379,
+        "inspected": 379,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 379,
+        "decoded": 379,
+        "extracted": 379,
+        "inspected": 379,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 379,
+        "decoded": 379,
+        "extracted": 379,
+        "inspected": 379,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-_a341ce",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-_a341ce/results/l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-_a341ce.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 36,
+      "controls": 167,
+      "responses": 36,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 0,
+      "progress_stage": "complete",
+      "event_status": {}
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 203,
+        "decoded": 203,
+        "extracted": 203,
+        "inspected": 203,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 203,
+        "decoded": 203,
+        "extracted": 203,
+        "inspected": 203,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 203,
+        "decoded": 203,
+        "extracted": 203,
+        "inspected": 203,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_language-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_langu_b551c6",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_langu_b551c6/results/l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_langu_b551c6.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 100,
+      "controls": 912,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 10,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 3,
+        "confirmed": 7
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 953,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 953,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 953,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-_bd6fb0",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-_bd6fb0/results/l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-_bd6fb0.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 57,
+      "controls": 322,
+      "responses": 57,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 372,
+        "decoded": 372,
+        "extracted": 372,
+        "inspected": 372,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 372,
+        "decoded": 372,
+        "extracted": 372,
+        "inspected": 372,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 372,
+        "decoded": 372,
+        "extracted": 372,
+        "inspected": 372,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-sc_c30105",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-sc_c30105/results/l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-sc_c30105.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 40,
+      "controls": 329,
+      "responses": 40,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 367,
+        "decoded": 367,
+        "extracted": 367,
+        "inspected": 367,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 367,
+        "decoded": 367,
+        "extracted": 367,
+        "inspected": 367,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 367,
+        "decoded": 367,
+        "extracted": 367,
+        "inspected": 367,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s_7a6359",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s_7a6359/results/l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s_7a6359.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 11,
+      "controls": 70,
+      "responses": 11,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 81,
+        "decoded": 81,
+        "extracted": 81,
+        "inspected": 81,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 81,
+        "decoded": 81,
+        "extracted": 81,
+        "inspected": 81,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 81,
+        "decoded": 81,
+        "extracted": 81,
+        "inspected": 81,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-_2dad5a",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-_2dad5a/results/l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-_2dad5a.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 118,
+      "controls": 1398,
+      "responses": 95,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 6,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 6
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 1513,
+        "decoded": 1513,
+        "extracted": 1513,
+        "inspected": 960,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 1513,
+        "decoded": 1513,
+        "extracted": 1513,
+        "inspected": 960,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 1513,
+        "decoded": 1513,
+        "extracted": 1513,
+        "inspected": 960,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-sce_b52f71",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-sce_b52f71/results/l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-sce_b52f71.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 93,
+      "controls": 439,
+      "responses": 94,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m24",
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 1,
+        "uncertain": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 526,
+        "decoded": 526,
+        "extracted": 526,
+        "inspected": 526,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 526,
+        "decoded": 526,
+        "extracted": 526,
+        "inspected": 526,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 526,
+        "decoded": 526,
+        "extracted": 526,
+        "inspected": 526,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conveyor-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conve_a9dade",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conve_a9dade/results/l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conve_a9dade.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 48,
+      "controls": 420,
+      "responses": 48,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_continuous_actions",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 14,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 13,
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 463,
+        "decoded": 463,
+        "extracted": 463,
+        "inspected": 463,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 463,
+        "decoded": 463,
+        "extracted": 463,
+        "inspected": 463,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 463,
+        "decoded": 463,
+        "extracted": 463,
+        "inspected": 463,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s_fb5be2",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s_fb5be2/results/l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s_fb5be2.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 95,
+      "controls": 794,
+      "responses": 96,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m24",
+        "m25",
+        "m26"
+      ],
+      "events": 11,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 7,
+        "uncertain": 4
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 884,
+        "decoded": 884,
+        "extracted": 884,
+        "inspected": 760,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 884,
+        "decoded": 884,
+        "extracted": 884,
+        "inspected": 760,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 884,
+        "decoded": 884,
+        "extracted": 884,
+        "inspected": 760,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_image-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_ima_1166ac",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_ima_1166ac/results/l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_ima_1166ac.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 101,
+      "controls": 700,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 11,
+      "progress_stage": "completed_metadata_v2_repair",
+      "event_status": {
+        "confirmed": 5,
+        "uncertain": 6
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 781,
+        "decoded": 781,
+        "extracted": 781,
+        "inspected": 781,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 781,
+        "decoded": 781,
+        "extracted": 781,
+        "inspected": 781,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 781,
+        "decoded": 781,
+        "extracted": 781,
+        "inspected": 781,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standar_cec07c",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standar_cec07c/results/l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standar_cec07c.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 101,
+      "controls": 694,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": "complete_metadata_corrected",
+      "event_status": {
+        "confirmed": 2,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 794,
+        "decoded": 794,
+        "extracted": 794,
+        "inspected": 747,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 794,
+        "decoded": 794,
+        "extracted": 794,
+        "inspected": 747,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 794,
+        "decoded": 794,
+        "extracted": 794,
+        "inspected": 747,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-_f7a513",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-_f7a513/results/l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-_f7a513.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 35,
+      "controls": 380,
+      "responses": 35,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": null,
+      "event_status": {
+        "confirmed": 2,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 415,
+        "decoded": 415,
+        "extracted": 415,
+        "inspected": 415,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 415,
+        "decoded": 415,
+        "extracted": 415,
+        "inspected": 415,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 415,
+        "decoded": 415,
+        "extracted": 415,
+        "inspected": 415,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-stan_471f08",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-stan_471f08/results/l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-stan_471f08.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 51,
+      "controls": 392,
+      "responses": 51,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 3,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 429,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 429,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 429,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard_377e9d",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard_377e9d/results/l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard_377e9d.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 65,
+      "controls": 662,
+      "responses": 65,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 2,
+        "uncertain": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 718,
+        "decoded": 718,
+        "extracted": 718,
+        "inspected": 587,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 718,
+        "decoded": 718,
+        "extracted": 718,
+        "inspected": 587,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 718,
+        "decoded": 718,
+        "extracted": 718,
+        "inspected": 587,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-_49a1cd",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-_49a1cd/results/l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-_49a1cd.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 39,
+      "controls": 294,
+      "responses": 39,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 332,
+        "decoded": 332,
+        "extracted": 332,
+        "inspected": 332,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 332,
+        "decoded": 332,
+        "extracted": 332,
+        "inspected": 332,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 332,
+        "decoded": 332,
+        "extracted": 332,
+        "inspected": 332,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s_b79702",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s_b79702/results/l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s_b79702.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 39,
+      "controls": 288,
+      "responses": 39,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete_validated",
+      "event_status": {
+        "confirmed": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 323,
+        "decoded": 323,
+        "extracted": 323,
+        "inspected": 291,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 323,
+        "decoded": 323,
+        "extracted": 323,
+        "inspected": 291,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 323,
+        "decoded": 323,
+        "extracted": 323,
+        "inspected": 291,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-_9b5d20",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-_9b5d20/results/l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-_9b5d20.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 48,
+      "controls": 360,
+      "responses": 48,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 405,
+        "decoded": 405,
+        "extracted": 405,
+        "inspected": 210,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 405,
+        "decoded": 405,
+        "extracted": 405,
+        "inspected": 207,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 405,
+        "decoded": 405,
+        "extracted": 405,
+        "inspected": 207,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-sce_98f37e",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-sce_98f37e/results/l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-sce_98f37e.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 63,
+      "controls": 614,
+      "responses": 64,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 3,
+      "progress_stage": null,
+      "event_status": {
+        "confirmed": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 675,
+        "decoded": 675,
+        "extracted": 675,
+        "inspected": 369,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 675,
+        "decoded": 675,
+        "extracted": 675,
+        "inspected": 369,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 675,
+        "decoded": 675,
+        "extracted": 675,
+        "inspected": 369,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-st_94d271",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-st_94d271/results/l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-st_94d271.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 100,
+      "controls": 761,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25",
+        "m26"
+      ],
+      "events": 24,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 18,
+        "uncertain": 6
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 850,
+        "decoded": 850,
+        "extracted": 850,
+        "inspected": 632,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 850,
+        "decoded": 850,
+        "extracted": 850,
+        "inspected": 632,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 850,
+        "decoded": 850,
+        "extracted": 850,
+        "inspected": 632,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0_4eaef5",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0_4eaef5/results/l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0_4eaef5.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 44,
+      "controls": 387,
+      "responses": 44,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 428,
+        "decoded": 428,
+        "extracted": 428,
+        "inspected": 185,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 428,
+        "decoded": 428,
+        "extracted": 428,
+        "inspected": 185,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 428,
+        "decoded": 428,
+        "extracted": 428,
+        "inspected": 185,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-s_825ea6",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-s_825ea6/results/l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-s_825ea6.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 58,
+      "controls": 421,
+      "responses": 58,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25",
+        "m26"
+      ],
+      "events": 0,
+      "progress_stage": "complete",
+      "event_status": {}
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 478,
+        "decoded": 478,
+        "extracted": 478,
+        "inspected": 233,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 478,
+        "decoded": 478,
+        "extracted": 478,
+        "inspected": 233,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 478,
+        "decoded": 478,
+        "extracted": 478,
+        "inspected": 233,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-ra_2b1f1c",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-ra_2b1f1c/results/l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-ra_2b1f1c.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 98,
+      "controls": 749,
+      "responses": 99,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 2,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 843,
+        "decoded": 843,
+        "extracted": 843,
+        "inspected": 786,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 843,
+        "decoded": 843,
+        "extracted": 843,
+        "inspected": 786,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 843,
+        "decoded": 843,
+        "extracted": 843,
+        "inspected": 786,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard_583878",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard_583878/results/l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard_583878.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 92,
+      "controls": 913,
+      "responses": 93,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": null,
+      "event_status": {
+        "uncertain": 3,
+        "confirmed": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 890,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 890,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 1001,
+        "decoded": 1001,
+        "extracted": 1001,
+        "inspected": 890,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0_405454",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0_405454/results/l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0_405454.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 91,
+      "controls": 1113,
+      "responses": 92,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 1202,
+        "decoded": 1202,
+        "extracted": 1202,
+        "inspected": 1066,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 1202,
+        "decoded": 1202,
+        "extracted": 1202,
+        "inspected": 1066,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 1202,
+        "decoded": 1202,
+        "extracted": 1202,
+        "inspected": 1066,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-_6edb18",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-_6edb18/results/l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-_6edb18.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 91,
+      "controls": 653,
+      "responses": 92,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 19,
+      "progress_stage": null,
+      "event_status": {
+        "confirmed": 7,
+        "uncertain": 12
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 743,
+        "decoded": 743,
+        "extracted": 743,
+        "inspected": 743,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 743,
+        "decoded": 743,
+        "extracted": 743,
+        "inspected": 743,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 743,
+        "decoded": 743,
+        "extracted": 743,
+        "inspected": 743,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-_4c2676",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-_4c2676/results/l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-_4c2676.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 72,
+      "controls": 668,
+      "responses": 73,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m05",
+        "m06",
+        "m07",
+        "m08",
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 9,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 5,
+        "uncertain": 4
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 726,
+        "decoded": 726,
+        "extracted": 726,
+        "inspected": 726,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 726,
+        "decoded": 726,
+        "extracted": 726,
+        "inspected": 726,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 726,
+        "decoded": 726,
+        "extracted": 726,
+        "inspected": 726,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene_0d0d22",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene_0d0d22/results/l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene_0d0d22.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 100,
+      "controls": 777,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 19,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 13,
+        "uncertain": 6
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 871,
+        "decoded": 871,
+        "extracted": 871,
+        "inspected": 809,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 871,
+        "decoded": 871,
+        "extracted": 871,
+        "inspected": 809,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 871,
+        "decoded": 871,
+        "extracted": 871,
+        "inspected": 809,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scen_032187",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scen_032187/results/l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scen_032187.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 81,
+      "controls": 625,
+      "responses": 82,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 2,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 699,
+        "decoded": 699,
+        "extracted": 699,
+        "inspected": 699,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 699,
+        "decoded": 699,
+        "extracted": 699,
+        "inspected": 699,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 699,
+        "decoded": 699,
+        "extracted": 699,
+        "inspected": 699,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-ran_bfb1b3",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-ran_bfb1b3/results/l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-ran_bfb1b3.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 83,
+      "controls": 947,
+      "responses": 84,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25",
+        "m26"
+      ],
+      "events": 9,
+      "progress_stage": "completed",
+      "event_status": {
+        "confirmed": 6,
+        "uncertain": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 1026,
+        "decoded": 1026,
+        "extracted": 1026,
+        "inspected": 946,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 1026,
+        "decoded": 1026,
+        "extracted": 1026,
+        "inspected": 946,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 1026,
+        "decoded": 1026,
+        "extracted": 1026,
+        "inspected": 946,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard_a62551",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard_a62551/results/l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard_a62551.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 101,
+      "controls": 253,
+      "responses": 101,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete_v2_plan_repaired",
+      "event_status": {
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 354,
+        "decoded": 354,
+        "extracted": 354,
+        "inspected": 354,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 354,
+        "decoded": 354,
+        "extracted": 354,
+        "inspected": 354,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 354,
+        "decoded": 354,
+        "extracted": 354,
+        "inspected": 354,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-rand_5d64ca",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-rand_5d64ca/results/l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-rand_5d64ca.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 40,
+      "controls": 400,
+      "responses": 40,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 5
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 437,
+        "decoded": 437,
+        "extracted": 437,
+        "inspected": 437,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 437,
+        "decoded": 437,
+        "extracted": 437,
+        "inspected": 437,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 437,
+        "decoded": 437,
+        "extracted": 437,
+        "inspected": 437,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0_422951",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0_422951/results/l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0_422951.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 95,
+      "controls": 232,
+      "responses": 96,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 4,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 4
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 327,
+        "decoded": 327,
+        "extracted": 327,
+        "inspected": 274,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 327,
+        "decoded": 327,
+        "extracted": 327,
+        "inspected": 274,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 327,
+        "decoded": 327,
+        "extracted": 327,
+        "inspected": 274,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-_8eb238",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-_8eb238/results/l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-_8eb238.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 72,
+      "controls": 648,
+      "responses": 73,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m24",
+        "m25"
+      ],
+      "events": 9,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 6,
+        "uncertain": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 717,
+        "decoded": 717,
+        "extracted": 717,
+        "inspected": 438,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 717,
+        "decoded": 717,
+        "extracted": 717,
+        "inspected": 438,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 717,
+        "decoded": 717,
+        "extracted": 717,
+        "inspected": 438,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_size-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_siz_0a1b85",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_siz_0a1b85/results/l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_siz_0a1b85.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 81,
+      "controls": 787,
+      "responses": 82,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 3,
+      "progress_stage": null,
+      "event_status": {
+        "confirmed": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 864,
+        "decoded": 864,
+        "extracted": 864,
+        "inspected": 630,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 864,
+        "decoded": 864,
+        "extracted": 864,
+        "inspected": 630,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 864,
+        "decoded": 864,
+        "extracted": 864,
+        "inspected": 630,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-sc_90ca01",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-sc_90ca01/results/l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-sc_90ca01.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 54,
+      "controls": 377,
+      "responses": 54,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 1,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 264,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 264,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 429,
+        "decoded": 429,
+        "extracted": 429,
+        "inspected": 264,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphones-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphon_8ccad1",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphon_8ccad1/results/l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphon_8ccad1.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 91,
+      "controls": 690,
+      "responses": 92,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m25"
+      ],
+      "events": 7,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 5,
+        "uncertain": 2
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 770,
+        "decoded": 770,
+        "extracted": 770,
+        "inspected": 365,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 770,
+        "decoded": 770,
+        "extracted": 770,
+        "inspected": 365,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 770,
+        "decoded": 770,
+        "extracted": 770,
+        "inspected": 365,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-sc_456dbb",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-sc_456dbb/results/l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-sc_456dbb.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 92,
+      "controls": 737,
+      "responses": 93,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 5,
+      "progress_stage": null,
+      "event_status": {
+        "confirmed": 4,
+        "uncertain": 1
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 822,
+        "decoded": 822,
+        "extracted": 822,
+        "inspected": 373,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 822,
+        "decoded": 822,
+        "extracted": 822,
+        "inspected": 373,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 822,
+        "decoded": 822,
+        "extracted": 822,
+        "inspected": 373,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-scene0",
+    "workdir": "audit-source/run-l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-sc_93c6b0",
+    "result_file": "audit-source/run-l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-sc_93c6b0/results/l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-sc_93c6b0.json",
+    "issues": [],
+    "stats": {
+      "logs": 7,
+      "actions": 30,
+      "controls": 300,
+      "responses": 30,
+      "status": "complete",
+      "plan_policy": "sampled_0p2_visual_windows",
+      "unavailable": [
+        "m17",
+        "m19",
+        "m25"
+      ],
+      "events": 11,
+      "progress_stage": "complete",
+      "event_status": {
+        "confirmed": 8,
+        "uncertain": 3
+      }
+    },
+    "coverage": [
+      {
+        "view": "head",
+        "n": 330,
+        "decoded": 330,
+        "extracted": 330,
+        "inspected": 330,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "left_wrist",
+        "n": 330,
+        "decoded": 330,
+        "extracted": 330,
+        "inspected": 330,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      },
+      {
+        "view": "right_wrist",
+        "n": 330,
+        "decoded": 330,
+        "extracted": 330,
+        "inspected": 330,
+        "base_missing": [],
+        "dense_missing": [],
+        "event_missing": [],
+        "plan_missing": []
+      }
+    ]
+  }
+]

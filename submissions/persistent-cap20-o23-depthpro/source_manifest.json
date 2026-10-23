@@ -1,0 +1,632 @@
+[
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-_a341ce/results/l3-o23-depthpro-precision4-20261019-a3-align_blocks-standard-s0-_a341ce.json",
+    "canonical_result_sha256": "a196ced98761b176eb97f506a789cea93a42b17c8bb60413158a361479d223ce",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "165a99d48761813b9addf1d0f060d542602eee6299971fedc8fc38e6634f9033",
+      "actions.json": "cd6f623893a544a31bfd555823ed07e30926c10ac27febb6eb387bede26163ed",
+      "native-terminal.json": "c572f86f5299294b3a12f2cf40754560417b8876af1991e3c249236d0c687bba",
+      "manifest.json": "2bb07eb83235538f71316331eaa5d98ce95be783eb823b41f302dbeb806973e1",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "1a179c42bcaacf1ba1056d058718585a74ba79048b2f20a98f25a71681510a89"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-ra_2b1f1c/results/l3-o23-depthpro-precision4-20261019-a4-arrange_largest_number-ra_2b1f1c.json",
+    "canonical_result_sha256": "5174da9006222c5952b1f223fae84f9b851ca8b7c9332235793fccc97e8f76b5",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "0b09b9ad192d46351a344a6b22033836d18843ceeb7bb09bb0479e55f6a141a3",
+      "actions.json": "90ff2f978d164e5a46b0720e4c3cbb1918505c0edff820b783e0f42ff57c034e",
+      "native-terminal.json": "551e5a430995df4ff8d121449ef76ccb11c480529ca13063e92606d9752ff94a",
+      "manifest.json": "77d78bd05ae3564f248075dd75abd0decdb7342020f3a3f62c4147004fd50ae3",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "faab735697a8b4698653dfc4a1849e13ea74c7ecb5e7fa868d7046c60b9d7f3b"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-s_cff513/results/l3-o23-depthpro-precision4-20261019-a2-build_tower-standard-s0-s_cff513.json",
+    "canonical_result_sha256": "38f7b30283fbf62a1c2d95d01b94c1ff99b1b73ab2eb91a63f73171d05ddd004",
+    "raw_files": {
+      "config.json": "bc84dfb70c6e4f2315cdd46b22758e1e87cc8e41a0574bb87b6cbf86c55b2a46",
+      "result.json": "f3a6bca597ed73007317be07b2dbbf3b9c10f44d4f66bb4ca78c9fc96b9b1abb",
+      "actions.json": "3c977ed8affd6c9d03938e4e9594e40052a162e10337a358c7ec676670927fb9",
+      "native-terminal.json": "25b89178ac40584cc00f0bcf2719a1a56d45168c10adff1000771d602b8e1e2e",
+      "manifest.json": "9ef1ba7f0de666d48a6b2fddefc68b923b2471ac8c576f7adeef2b53dbbade71",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "cc27d184dde3d8cb2c593e257ef3b8f9a3aad0bee7cfe086682a0fa0df070916"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard_583878/results/l3-o23-depthpro-precision4-20261019-a4-classify_objects-standard_583878.json",
+    "canonical_result_sha256": "03489c636ff0d5fff94d48ce7788bacb71fc68e993d8adf5173e825bf675d85b",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "17eeae992035831634ec6b751165a350920a910b1049374ab3ddbb0cf776edf4",
+      "actions.json": "f6044ded02067a3622bbd338446a1ceeca7a9a22c3f5fb2c5bffa30a5f948cfa",
+      "native-terminal.json": "cd697a8916a70012ec8555f8245361a61f37be86d4ea867e42845f0e16c31a2e",
+      "manifest.json": "f5657762292a53eb906d13958b181c95712de11eeffdcd7da3cc300b67511465",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "200332a6130ad05ba10d467652a18ddf680da827205237ee2aee59479caccf0f"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_language-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_langu_b551c6/results/l3-o23-depthpro-precision4-20261019-a3-classify_objects_by_langu_b551c6.json",
+    "canonical_result_sha256": "95d7c214e28d0af47938f07820645ba803793a5b6cb323299009593b5f89b0f8",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "051e5782bf592ee08ea835404a0f70eb60565b65587016f85a4956545253763a",
+      "actions.json": "963dacd90b883f9b006258b4bfb49a2a8c104dd722b688e5a6206452fda6b9de",
+      "native-terminal.json": "741d0e082b723c0e1bacf99215948aef6c673192e4a379c46b524768509842a8",
+      "manifest.json": "41b2b00c8fc18d74b9b7e81e767f7e6d0579959897077124d11132098d13053c",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "6f31f5b3814e77b1304318fa67c5c98eb520c435db29331e6c9ec9ff524fc672"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-_bd6fb0/results/l3-o23-depthpro-precision4-20261019-a3-cover_blocks-standard-s0-_bd6fb0.json",
+    "canonical_result_sha256": "720dbc75376d0b884d6f86d302bc88adf5039738565247837b23508fe7da15a2",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "62dd7e744fa300ec117d9337fb6a3529b5d1d67a1922bd6f07901cb52a071d65",
+      "actions.json": "1b97567c99ec334c622e0e543fc8e6caea5ea3a4f3bb6cee150e4a4460324fde",
+      "native-terminal.json": "c3c9ca99d0bca78d08ca4c8bb1701ccceb1ea962aac7e3f9aca488e841f47570",
+      "manifest.json": "c73ddd4b86f6bad786f6aa8d4dc6d12ba8958cacada3661982672145f742d1eb",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "d46076c5e1dc29f65a837c0da9e225dd9436cf85fbc408fa266a803f47f15b34"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-_b43dc3/results/l3-o23-depthpro-precision4-20261019-a2-deposit_coin-standard-s0-_b43dc3.json",
+    "canonical_result_sha256": "fd1349686a3ed05b183a7faebe2c6ee1f92b1bcba037bdea3693cbf46d9e581d",
+    "raw_files": {
+      "config.json": "bc84dfb70c6e4f2315cdd46b22758e1e87cc8e41a0574bb87b6cbf86c55b2a46",
+      "result.json": "de7a9e1a665d9fe124c086581449e8424c996b6ed147e448e1c944ba367af2f5",
+      "actions.json": "39b10e1b6f730ffaf415b9f4412a2dee09d8149af231d2560921819fe5e50831",
+      "native-terminal.json": "516d55e639436ed9fb5d8a52bbac72df109070e3527e4218a5d557f4085ca503",
+      "manifest.json": "95d4c88bc0bdc85f024b0de00b1b0b459663fc1962fd095961f121d0c8e73e27",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "508ac6df1296282a95571a6f91c804e4955496c11611f9821c6a917b49c837a7"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0_405454/results/l3-o23-depthpro-precision4-20261019-a4-fasten_screws-standard-s0_405454.json",
+    "canonical_result_sha256": "37935ae9c986ceef0a0958bf4b114b6378d6e382af32641f1288b5658835094d",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "da66b6f03680a3247091379f50b6e2b92cdadf2f9812537d8d77f359d6fb5165",
+      "actions.json": "03a28758aa6b8ed7513e6741035a3d0129565f0ffaf0a42704740b6d10f7b394",
+      "native-terminal.json": "ca67d5b465b50ee1f984d1f8cba48a1a618cce0c99878e76e636a75f64bdeec6",
+      "manifest.json": "f206c8eb4e4d77fd8ee7af077b0a9ba88f60852ed1936af2c1a5c1a301b245ca",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "d560f072e60a18ab5efed934aebab1f29a7549eca4f0788e50f37a1d3e2eb755"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-_6edb18/results/l3-o23-depthpro-precision4-20261019-a4-fill_egg_holder-standard-_6edb18.json",
+    "canonical_result_sha256": "4eb3156f3fff331ab8825c3e7539c04eaa79c7fa60689208ec42c6651cf9cbda",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "88fc5ed942ffa4d43d2bee61b936cc4759f4c7df2a5a5d6c901ae1dcb6d2688f",
+      "actions.json": "6069c109fd73fefe8a1d50b2e1c5977beb8c3dd1d6aaea8a3e9cf4a3b992440d",
+      "native-terminal.json": "b9e0b7c6f728759262bd3d1e4b5a7f5728d7b6b8b5c81d43f35c1b0146342890",
+      "manifest.json": "e9c91da2b21aa827b67da9d1e2169908e513812ea295546618cf4a35243ef414",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "51de3dbd9c5113f50dd0f9947c22c07fa6e1955b1b64482dc733ec2be19a2b63"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-_4c2676/results/l3-o23-depthpro-precision4-20261019-a4-fill_pen_holder-standard-_4c2676.json",
+    "canonical_result_sha256": "429415e180c837a19e34800295efff3b8ca4d619d253c5631f89a4065901b828",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "6e9b92e2bee56164477b0ebf97d13ef9b3478cc59401e682bed246c97bdcbfd4",
+      "actions.json": "089342153b68733c90651bf7915de3973ee34c86b9d9e42dc9e28ae18711a4ce",
+      "native-terminal.json": "8c36272579b38634150717456a39bb3bec02d6dc7b9f338ba50325a982caf5a1",
+      "manifest.json": "194ce3c0b19ad271911bf52f982329e600fa87a4b2857375103dfc07803da236",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "9291cbd8b58765a8aab8e6a55af6383bccae595c5dbc178d13f53733310b07a7"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-sc_c30105/results/l3-o23-depthpro-precision4-20261019-a3-fold_clothes-random-s0-sc_c30105.json",
+    "canonical_result_sha256": "a2813550bd153499efe75c8cdc646be8bcf271fd6f16a26942b5bc8f86d7f30d",
+    "raw_files": {
+      "config.json": "0e4ff304dd05cdf3d6364118dffc478d359b8c8ef294fc285779ae3108545ccb",
+      "result.json": "d2e0eae4c54cd46cde388435425a7316edd07c5193217f65ac692c90f484363f",
+      "actions.json": "1198407f1f06f5ff964f1b1200ad7442806ae9ba018dfd0754549b7940d3c7e0",
+      "native-terminal.json": "f33534735d2f05788be2a2a0943dd1c926dbf3eeaf8f7a5dc9e1d2c532b94a82",
+      "manifest.json": "39972981c81bfe4093ecb5e6aa33614cca7dcfb0193268b7035025fa9caa855b",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "85875dc1d898543c1c205eee34ac706e1d1a353e26296413ac266f3bf37447b9"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s_7a6359/results/l3-o23-depthpro-precision4-20261019-a3-general_pickup-standard-s_7a6359.json",
+    "canonical_result_sha256": "79feaf9062640a3faa7207eba800aafbee89783342d394200add3f45032f4f7c",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "30f3535686f4f0cfeab82c32d9a21ca873ff2889be3968133e16f724c38fa0be",
+      "actions.json": "47bc9487b3106bb681996bab77a30839da1ed21483d45b19011c058ca4948675",
+      "native-terminal.json": "ba15eb1a36f68f92cf1d916e7fdc91ff97c183785af72fafb8834ff693324f57",
+      "manifest.json": "df2e9e88d55e8a80ee0a01b4ef115521a5bb97b14907e785731fd652d5c316bb",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "d57c4906d1520797ef78e302ad3622b21a437ccc74bf43596c2d778f6c312bab"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene_0d0d22/results/l3-o23-depthpro-precision4-20261019-a4-hang_mugs-random-s0-scene_0d0d22.json",
+    "canonical_result_sha256": "e2dda0b9694120443c95c62d0c0bd51b27fe389645010e76d942bbc9a0673fe0",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "ca2a2ba4788cbba87187be7bbf8614645c8fc1545aa7f52cd979ced4fc59b9b2",
+      "actions.json": "b8916c446305672e51ba37aadd2238dd81d8e64a3e24e575058959646c1dab6d",
+      "native-terminal.json": "b16ce43594f7582ebf5a57037fe2f4de86298ca4f71ccd92d3f008df58b80bf3",
+      "manifest.json": "64b248755dc4017e2a036347d787138e6ed4789c8959625d15e27c714dda11a3",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "ae83d5d3a39084e397f5022c8af0d111b7e7b79d5c13e13124ebe97fdb01f069"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-_2dad5a/results/l3-o23-depthpro-precision4-20261019-a3-imitate_sorting_sequence-_2dad5a.json",
+    "canonical_result_sha256": "e2dfd7b72f5658bb04f45d49f700d2637ddd489cee24901d0b0a3439bc7eba56",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "8f66411f8c047264c3464489b53c538d7cd6bda4af516bd04831fc9004b9e0ff",
+      "actions.json": "870bedd483c667d6d3da8fab6f488166883f59faeebfc82007566ecabc62fd83",
+      "native-terminal.json": "29956f8ad3a08b4e861e8ebf91fdf81060a32fd65a575014c49de4ee8e980fe7",
+      "manifest.json": "0097d56f71687ade9649cd894b2aee120af8d195a6630c6cceb54b214ddc5076",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "8033636bab72e5b3b89d3839592a8dc8ce3b5b0f30c1f375ea8b7ab2029301be"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-sc_93c6b0/results/l3-o23-depthpro-precision4-20261019-v1-insert_key-standard-s0-sc_93c6b0.json",
+    "canonical_result_sha256": "39297aa2338d931022ba07a8a7c561828118420e1f3e2f1b103fae6dec1ac42b",
+    "raw_files": {
+      "config.json": "c1c3a7d601076bd6964cb1ed37a79fbfdeedf8c64f2091dce0f9ca96929f629a",
+      "result.json": "bc041c14b47e43ff16f06069d2c6a8f2e68fa7233d57966cac2742fac25f3711",
+      "actions.json": "ed35d33cdcbda86776358351d662cf208e0117907ae89f25836fad6e436394ad",
+      "native-terminal.json": "81a39cf0308836c8d76ac2a31d69bcd8d6b31181bf319a3a88b324e1834e75d6",
+      "manifest.json": "b934fd152fd448c0cb0a5b9d768157f22ae59d22184dbf8c4729890cbd34b4b0",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "63f62d9ad79e5a116356385dd4f1da27df659ad126e302f792179188ae9838cc"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-_89fcf6/results/l3-o23-depthpro-precision4-20261019-a2-insert_tubes-standard-s0-_89fcf6.json",
+    "canonical_result_sha256": "46f2462262fbf733b4aa3bb640900e9e40e0d53b5262cd666642576de51f4585",
+    "raw_files": {
+      "config.json": "c530c65509a373208904a6992f0fb691e85c9285e1e9ec490e79ef735d0e5ae6",
+      "result.json": "68c5dc884e5caa334d3788424ab5d7c1c0d31c3117a18ff34cacc730986c0120",
+      "actions.json": "205f3ace6d6eadff3e3c361cd112241d758ea4021b296f961da968cd611bb8f0",
+      "native-terminal.json": "6a69b525abff1221f712ad830bb7766aef5e6564975913fa5894b166f781655c",
+      "manifest.json": "baaecaa1f513ff11af74a36775c2e4ef2b057fb71670fe9dc1e7c84e31b67e60",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "8f581c64628e40f948497a88f4149ccf55138739a41362a5edca3220bfcb40b9"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-sce_b52f71/results/l3-o23-depthpro-precision4-20261019-a3-make_kong-standard-s0-sce_b52f71.json",
+    "canonical_result_sha256": "24f534ba499968ac925d3ae880d1008286451389747022deaf1820b0cb30faae",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "6ab2bceb3140a4037948f0b1e64aab43ff1bb4345d521682001a8b9f68d98c1f",
+      "actions.json": "55a76b54e744ffd1dfbcbb13d0e76d4831a1935e689c1b8cfa62175c18f81f44",
+      "native-terminal.json": "e174f846d206eda4e56d86b1e1ff9bee0fa37b6b719b27c443742bf4d44b0979",
+      "manifest.json": "2851593b1a61a791575e22423b5fca16adcb4106b2c646e36869f26ab9198763",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "2743806012a6112ef00ce3be75cfdfea51f452e99519547b8a21ad846c61fb15"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scen_032187/results/l3-o23-depthpro-precision4-20261019-a4-make_toast-random-s0-scen_032187.json",
+    "canonical_result_sha256": "42172dcde1a78b9816c4d2a247db679a7bea6fd94e42e84f79698f2cd62f509c",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "9f49c57092ce8f24ec93eebdba1e43ecf8ff61ecea1b2dca28aaaaae186bcb00",
+      "actions.json": "c1f7d75609c028663ed34408f0303911b886f0595b0897b9ccd367bc3b4de8bf",
+      "native-terminal.json": "6ba1b475c587248021a697047e91d498202bf4f8c57328a11255d90367c2b34f",
+      "manifest.json": "c40fb664e10020cec8b02d8cc888cb6023101b9284c286c6b864db91815972f7",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "945c4ece794fe59fad569ca313b71251158fb4176f5307631cf3704754436b59"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conveyor-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conve_a9dade/results/l3-o23-depthpro-precision4-20261019-a3-match_and_pick_from_conve_a9dade.json",
+    "canonical_result_sha256": "9d237b934db7410af144617e8f1b861a1ba0437536faf3a1b3485843336d8cc7",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "f2257459f13ab47b8428ab3a3bedac3697a57afc3e02f6f7484111c52b79391e",
+      "actions.json": "111be5d683ad9671a108adf6effa27f53e62b39b647ce2cacf86fa941e1d153a",
+      "native-terminal.json": "b6cb5a7c7f4c2d428fa811745b4fd156fb387058a72feca4370932eba1cf68bc",
+      "manifest.json": "e055d3cfb3f3560b724f82868f0f390f443f1331ae3b9f40f6321fc13da6e8a4",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "a114ad9b587e12e8ace54fb4302d992efcecd1012d9afebcf63c3e34634fcd37"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s_fb5be2/results/l3-o23-depthpro-precision4-20261019-a3-organize_table-standard-s_fb5be2.json",
+    "canonical_result_sha256": "ccc517726a8ff737a21b23e520b596c26d907e758acce94a038d65d1919c7741",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "f36602f1463de6f1cb0c53128802184ff2ba051fb66cb6705be216c75c475fe0",
+      "actions.json": "ee6e8de5ef753ba80403b30adcda5922bbf6ff944eb2d0f834e8523964a68a55",
+      "native-terminal.json": "41e693da8e4299dc796fac9d811f9103abefa2e21676e615f83b579ef806227d",
+      "manifest.json": "e87b8a8afb56e40e3bdef54db01019527a62a6816f9b4f6bb9b3918b58dabb54",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "25eb084ca49a181da0b8892d7fc4dd0382425d42a4b72e5b0232b7cd37c04db6"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-ran_bfb1b3/results/l3-o23-depthpro-precision4-20261019-a4-pack_objects_into_box-ran_bfb1b3.json",
+    "canonical_result_sha256": "dbd2d67d72ddb468db26f86a2c2c429d5d41da19041c83d42285574cc0a0090e",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "dc1953710f85ca4118aeb7baca42748a453d3d2f0d8c7ad21769317710d732b6",
+      "actions.json": "e7ba823ea16e877b74499b255f6b276b6eb2a4c4fc2dd4266037fe1d41f58210",
+      "native-terminal.json": "c12179f43b1b5c521ba3fd0ced67e7800939c67093c956c249edfc560b16ac9e",
+      "manifest.json": "8b3355a40cde2e5e1be7b37044bc3fd9edb7b5273fac6ea762244a4ffe0b99c6",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "4b9e4029cef9d47a950ca9a0e704b4cfe98a67bde7a012e58cbd34e33bdafc72"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_image-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_ima_1166ac/results/l3-o23-depthpro-precision4-20261019-a3-pick_from_conveyor_by_ima_1166ac.json",
+    "canonical_result_sha256": "bff0288db70a8a900abecbd287702774cc09ee242d7a58c053d8a8bc3ca6cebb",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "dfdbf425ca4e08f38f35750b576266ab9696010c0eed8d15e168db88d5f6ee62",
+      "actions.json": "97be19962a0285b20d78bbae0f86beabe536c448d739d7f3baa5c7860a351204",
+      "native-terminal.json": "9d491bc3a5f1a49ead59195dfdece85a7fb3157819c184200802a4eeb0ff03bb",
+      "manifest.json": "818ef9b0b8e29ba21a8d31979a76db5b3037e25ce08ea023665ca6d84c302f56",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "4f83031510b8d877551d7faf3de2e313df6cf89c2ede0dc9c704dd1f08ad2c62"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s_07e738/results/l3-o23-depthpro-precision4-20261019-a2-play_Xylophone-standard-s_07e738.json",
+    "canonical_result_sha256": "e51528c57ef2d3a71e4ba7a70c9b578b939f26a4d644976be64ae92c14a9af7c",
+    "raw_files": {
+      "config.json": "c530c65509a373208904a6992f0fb691e85c9285e1e9ec490e79ef735d0e5ae6",
+      "result.json": "a358dcfe9b71105556ee08b6cb49a3261ac6f3b618dd8fde0fc35b1bf166448e",
+      "actions.json": "a0ac055da1e7c342bab4234625d22d545046844cd7b9c778bf1625ba31a04e79",
+      "native-terminal.json": "55d2e69ca3ef794f4057ecb89d3c519de971a753b4dd01d108825d9863031902",
+      "manifest.json": "390435978161f2dd61e771ea8f0fa1b031722f6295fe613a56b3c4e59670f9d4",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "ee9d085ae423348c26b593437fc90f8d9526cd43d71a99e38d02aec1b7295097"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standar_cec07c/results/l3-o23-depthpro-precision4-20261019-a3-play_stacking_toy-standar_cec07c.json",
+    "canonical_result_sha256": "414b28fbad7d5b7bec129add2645d9af84507e5e191f23b105443f22575bd8eb",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "aece2899e615fb60792f3fd1eac1c37a18ae8cd761eeaee7ef16d40f06d52af4",
+      "actions.json": "c228f4545e4c69a3b411dbcc2c0f8d792bb198e0219f2bd53c582a82c1c78556",
+      "native-terminal.json": "d25be66d4dd734773dd2409604325eb4146f1e60e8ad116e4cf17cbbb27a115f",
+      "manifest.json": "a3bd3c6cdc00106c522b3bbfc3ce641b74db9a748c1ee033f133a6e0a7594442",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "da7b5e6dae6726174ad6c099248e91fb7ca596cbcb439cc311a37a8cdfa20934"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard_a62551/results/l3-o23-depthpro-precision4-20261019-a4-play_tic_tac_toe-standard_a62551.json",
+    "canonical_result_sha256": "d5b926407a3849560562b19175390734e8db8b818a1979f95f8cba4ceb8f7819",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "10d57fdd8abca2de4eaa387e293dbd2eac53b51455f91c9274c89f514bb343aa",
+      "actions.json": "c610932a169949824981831b3bcc085e4112e9245b0fd729dfb5410fed94eda6",
+      "native-terminal.json": "c4b288d8ce83397f0c753a7d6133199e5edf78948b1c8e011ade57149b9e7417",
+      "manifest.json": "4299727f3a9e36c738fb54b59e8fd6e8d8831e80e011e913da5865471d892d83",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "f067efdb2b84eda220efc8085f6df7f4b9cc244cf0dad5ea20e7a6df80be75b7"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-_f7a513/results/l3-o23-depthpro-precision4-20261019-a3-plug_in_charger-standard-_f7a513.json",
+    "canonical_result_sha256": "f76aac2556d17ff5dda5602fac176c07e1b95a45efe08e5ae2d95e1e956df83b",
+    "raw_files": {
+      "config.json": "0e4ff304dd05cdf3d6364118dffc478d359b8c8ef294fc285779ae3108545ccb",
+      "result.json": "29acd24a14b74037eab46e0f00c527ea0786649e1f8ec56db057d429931aae05",
+      "actions.json": "3e01d38780f3829885ef765aff97f4b5a588885cde84db4974c432ac14f8fac8",
+      "native-terminal.json": "300130030e9f1eff41592db974a17724e2d6fd67050d6b61d87c0853404878ae",
+      "manifest.json": "5495219107d5d3cc86ecec5536e756f1b77a881ea668094beae2534e6c86cddf",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "c82ff21233d7ab6b8fc7775fc27e7fef3b118ca9241ad6a929fc80e661c2c385"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-stan_471f08/results/l3-o23-depthpro-precision4-20261019-a3-pour_balls_into_vase-stan_471f08.json",
+    "canonical_result_sha256": "0eabed555a7da67f0ea510624ac161412dd7e26b5b825830715e57d5e01d3f03",
+    "raw_files": {
+      "config.json": "0e4ff304dd05cdf3d6364118dffc478d359b8c8ef294fc285779ae3108545ccb",
+      "result.json": "c2fe1a6410ffacbce00c3c5f6b9edbb3d0df3059f8970f17a7f8d9f2ef03041e",
+      "actions.json": "2aeb2c613666a3ac15e55c6c8994de816041bac1ed332a29e098d63cbcd06ba9",
+      "native-terminal.json": "0f2db418cfb0ec73e1fa39c11c6c4e2bc318277508b063a6d5448021cc369b4c",
+      "manifest.json": "07af820298d43183b4dd511f1da0b31e15832cb0a7c99ded7044931193075f3d",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "54975481cb8a076336f9b86fe3c190b1aeabfeb1cef9e1b1fc9be1f804488426"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard_377e9d/results/l3-o23-depthpro-precision4-20261019-a3-pour_by_language-standard_377e9d.json",
+    "canonical_result_sha256": "3a11c4c8439c8ffe34a56cfd7f130881341b3a696371fd6f2a691ba18789c7f1",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "b5fad7a08ed638738b4c267947d42a540a8014f27ec78d4d6b3eeda2eb65ec56",
+      "actions.json": "67c97b6fa297c7eabc5583a2610083efc9a7c1ab43ef2cff13b3e15e177848d3",
+      "native-terminal.json": "744d145bd64fb842fc18bb2cb1dbaa3b99c2d2551b7a1f198218ae24a80ec191",
+      "manifest.json": "924092c9a02df297d9564314e5a4e13793c47fa8131fa4a6912068df8df5fe1c",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "76b52368cfc1f6e7c26cce55f61188bae0fa6e2987de535062c3b023948d3c1b"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-rand_5d64ca/results/l3-o23-depthpro-precision4-20261019-a4-pour_liquid_into_cup-rand_5d64ca.json",
+    "canonical_result_sha256": "c27d45e2f85d36207d08292f4575d5b24dbb95e10f76ea8b7e8b64ed15345a52",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "ca66283134fb2e1a3722acb8d3a2299915fd2c33f958a9462dba8f432c193390",
+      "actions.json": "edbe139cc024e8959e39a2fe3774db7ff225604cd790f29cfa77e64480683d68",
+      "native-terminal.json": "792aa7149b5849374323f368f71325ee5f944db9de8dd0f5141fc0b330277f5f",
+      "manifest.json": "4430f417ddc6bf5b512258f8a825e45bfa9175d4c50fa58336cb38d638d31e29",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "45a92a9f3ea8cf5cf467e126eae77c19e25a24fd48633551d2c74eaad88319fb"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-_49a1cd/results/l3-o23-depthpro-precision4-20261019-a3-press_by_number-standard-_49a1cd.json",
+    "canonical_result_sha256": "81c26e8e97ade09f8d4895b543aef2565d54455933417262da57dec2427e1574",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "268088c4311998b86e911bfc2f1bb964921e6c9ce443285ce74058e09c9c84ab",
+      "actions.json": "6b5300069ed03709d5ebef0333f9bad2593674b103a96f2bd16633be60610200",
+      "native-terminal.json": "b628b858cc607c5dbf34ff2329d272de6552543f0a0f57ba749b63845c30c2bf",
+      "manifest.json": "bab9234a9201a0774ba76f8db6d5c89c558870b7b51fb8619f5231903f0bb2e2",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "0a666a6beb5fbb582b663ecf32880c03a6ab710972edab7c8811204e321cd609"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0_422951/results/l3-o23-depthpro-precision4-20261019-a4-push_T-random-s0-scene0_422951.json",
+    "canonical_result_sha256": "83f3e49de183d071341e7fba3168df94823cd4fdd4825fcaa8560cdf95e9b6d1",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "6072aaeb893b124700d27caaee28f0b9b897f723e0457ddd8e48bcbaf36a362a",
+      "actions.json": "723d8f3eddb8a2a5e42e3924010eb0a3b4ef3d5e9b4df42f3e19e4a9dfce02cb",
+      "native-terminal.json": "c41d7a607f9692930e65b8954994da810dbe9875a7592abe90a2f7826c2a80a8",
+      "manifest.json": "60cb2c48ea60c7d27fd290816cdc27246ffb821fb0bdc74fc1475c2c017cbbe1",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "a3ba64d49780a567cf5c34160459d7a06ee0628d9a519d385e073780d8a29a57"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-_8eb238/results/l3-o23-depthpro-precision4-20261019-a4-put_bottles_into_dustbin-_8eb238.json",
+    "canonical_result_sha256": "e1b9c54f4977aa45c907256f71e8e72b504d38e9d3c245c69b0a6fa80538453f",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "5c98a8746be412d1fc25c1a7634c12df01c5a1e5e84a5d8edb00ca332c91ffcf",
+      "actions.json": "fcb55f40076650bfb756f7aef78c453a1c8ac69e251798340961a011a6d22fd2",
+      "native-terminal.json": "6838be2322c119e58a6a63d83071df019db171d653fb23131a86ca01c73c6b28",
+      "manifest.json": "2eef6eb44c8aa1e39190760437d9e7ab69f232a4599fbfde233535b65033ea6a",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "f0a4b2a6269c0ba3aeeec1ccf5cb1558546e6521a70d5eb17056ddaf7c0feb62"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s_b79702/results/l3-o23-depthpro-precision4-20261019-a3-solve_equation-standard-s_b79702.json",
+    "canonical_result_sha256": "c4436099d8737b954720a738ac6ed43a4c67d69aea55915e576e191b2c867641",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "1757b264565dbbbfac6672d697913ec2dc13c6166ee739583aaea62e2354ca0b",
+      "actions.json": "0f5cf4e5d14014bee86f4bb5e95ae07237713ba51bf709047cb770e5b160e840",
+      "native-terminal.json": "49e1c03772e75d5e4bc64c1addf2e41e3e4dd3225f23e657a992f1ff04955ea4",
+      "manifest.json": "d406496bea7d4477c74216be9749c3c60e570a4dfab9be1d2d2ee926541bbed0",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "b3e375faf935e906ccb6e3d0dd5f799d0b5360a024c2ed6ac0ec2bbb714b06fa"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_size-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_siz_0a1b85/results/l3-o23-depthpro-precision4-20261019-a4-sort_nesting_dolls_by_siz_0a1b85.json",
+    "canonical_result_sha256": "8e8cfb777435353b31cb00df81cf732d792e9e9e7938fe5b288b7cc792cf1942",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "2952b0e4544c200b9237f683742f12f644c576456499b4b803e0b16443f0a61a",
+      "actions.json": "6c27c0248a8c85571022fcdb8444fe61d41a2b18730aea1be43dc93b356e986c",
+      "native-terminal.json": "a2e2beded14419af05722e6e65e4bfef4b067d806c7e96096e1af42cca54057d",
+      "manifest.json": "426d9a804ca868701af527401ff48a600e0e4233f2ed2d8e53cacaa5d1dc18d1",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "1c96e0acd4da209bae37265ea69c619910222dc7d97db715722387b8a7553253"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-sc_90ca01/results/l3-o23-depthpro-precision4-20261019-a4-stack_blocks-random-s0-sc_90ca01.json",
+    "canonical_result_sha256": "18a9b2009e2c04f393170a93b4221437261d869d71a660dbf9986adbbf73a750",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "a495516d7db53a5fba251f64370376e99bf331d992948f1c6b4c4b9a8f2d0d08",
+      "actions.json": "523a379be379c63b905d2490a86f46326ce1c1cc7f4413b0fe6a5b33881d6fff",
+      "native-terminal.json": "a9db7aa826446aeab29617c39f0cb9fde00fbd7df742633d780ec11d20c5a3c4",
+      "manifest.json": "4c6d8b5b659ee0017369f907de9eff0d4c1e5937203d2798eb86bf9d31160d55",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "d77862fff664437f8c7bb5a11dde34a63a8a82fdc2b595dd59e63ba629b6d764"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-_9b5d20/results/l3-o23-depthpro-precision4-20261019-a3-stack_blocks_by_language-_9b5d20.json",
+    "canonical_result_sha256": "a2be5f5f094f2f832e03459ad250445d12db9c91729071064963fe799534fd38",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "ed1bf02673bd1f5851ed9afa2fd395fe3d6d85b9bef7bccd902486e1c24f4968",
+      "actions.json": "a0eec50c72c7b57d8de89c9d2186f7eb9eef2b34aac2ebe1f3d7c513251c2e75",
+      "native-terminal.json": "0f961cb2dea6da96f6a24d9673bf2cf459621c264ca2ab52643ce988867f4f1e",
+      "manifest.json": "66f2f0f6e8d9eb73a14925739687f44dd103e6c86a7e66093dbbb894b9ce299c",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "7db6be27d4f28a8c11849d397dd466e5d0441f502e7c14824d1a434f0b6957ec"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-sce_98f37e/results/l3-o23-depthpro-precision4-20261019-a3-stack_bowls-random-s0-sce_98f37e.json",
+    "canonical_result_sha256": "b76ae1af1a95deacd7c8a8d9194cf6dcdc1e6776ea41a00be9079414f6dddd35",
+    "raw_files": {
+      "config.json": "0e4ff304dd05cdf3d6364118dffc478d359b8c8ef294fc285779ae3108545ccb",
+      "result.json": "798016c69cce7ebce87510cb3b4cedf0d51b958f157c232bb4722b60dc1e8987",
+      "actions.json": "73c7a654e9794d6187c1b3a664ca12edaae8ba0df41502e2fab26ea59a2143b3",
+      "native-terminal.json": "d174ac9a83cfcc87328b43ce41ab18687171fb82dffce758221e0f7f66dda567",
+      "manifest.json": "8d66debee86bd48d2b808ccfbe544f83e6595d1fb1383e96171689a291b41a12",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "d56debbf6a87d6c44876d79fe06b4448cf2f17c7bc2e61859859b67988184913"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphones-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphon_8ccad1/results/l3-o23-depthpro-precision4-20261019-a4-store_laptop_and_headphon_8ccad1.json",
+    "canonical_result_sha256": "e3ce02e457d9361d3bce518018e9c76c62f8f21dceacdcecfb40f1770d71e4d1",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "c5208bec278cd1a343a07dd71c39a5739e3837cc8a5fdba53705af8534dfc284",
+      "actions.json": "9f5b520450349121554929b9aeb2e76e824a5e1e04c5037fdcbc13f8a8834997",
+      "native-terminal.json": "01c1df2dd10032011d8e8de972c7b7a3c7cd5590d214156aad6517fb1b709e94",
+      "manifest.json": "1fa2dae116acbcedee34632b38d665e9613d04344aa5b1721c71f97ad4755678",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "91d60ca7bd031632f75f3aa86adf02a204b303b6a2bed55e0ddcb1a091b55a2b"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-st_94d271/results/l3-o23-depthpro-precision4-20261019-a3-store_tools_in_toolbox-st_94d271.json",
+    "canonical_result_sha256": "27710722ebd23cdedc8a2830c3032acd4404481bfeb8215b07ca463581b5386b",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "af38083a19958ee9e3fc7d818476c816ad7f38aee1354723f437a2b1db45a18f",
+      "actions.json": "1c4f5495c2530716a53fb76d9278cf4e2dd5ac0c4d0e8d38f1b6fe1837254ef9",
+      "native-terminal.json": "f193c7b5745cac5e630cd2764ec5aaa2500fe2faeeba7a6b5301380542e22753",
+      "manifest.json": "7d81acfed10da8f0298339659db7d4ccd9883113d582be36e3a4c4ea57a8f7d9",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "fc747095b06754d0256302fd4a01b6002273960f457550ad670284d2420051fe"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0_4eaef5/results/l3-o23-depthpro-precision4-20261019-a3-swap_T-standard-s0-scene0_4eaef5.json",
+    "canonical_result_sha256": "e5b991469a730f39bbbdc22929449521554d3ae3d6b11b08b459336ddedd00e4",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "771288ff06a1f1de4626a1bba5099e951f4569ec7fdf90542b40f619d78e96c0",
+      "actions.json": "f7729b6c15423582d8466ca0878c64b3c5741f6595b734889e1ff9a3cb0d1a8e",
+      "native-terminal.json": "b8d67b355461cb02d039f2902a33cb3c630b257241a87a1828f2208d8c5e67a8",
+      "manifest.json": "169155625a360a928dd4086493723397fc2c3029fd2f07e052d0c176db18d138",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "9691c44e5a66e19f0ed5bac83e2e0de33d2355de35dcc4b79a06d3309cace8e1"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-s_825ea6/results/l3-o23-depthpro-precision4-20261019-a3-swap_blocks-standard-s0-s_825ea6.json",
+    "canonical_result_sha256": "1c911f2446cd7362dd33a67a864f0e4f7448757107d1f73a916d0671de791173",
+    "raw_files": {
+      "config.json": "d4b003a4ceee604ffca911850175a5af17de3915829e223df364a055bdfb8c01",
+      "result.json": "c421778590c9b2331cd94c33174aeca31b2909c15b57dfe7d635fa15a53d3bf3",
+      "actions.json": "aacb43b61bccda607ff5d6c3c396dcb573bb7268a7fbf7ac82ef1128022fbdc8",
+      "native-terminal.json": "a8ee3165d49a53928a617cf46e91a2032302f7e915a09e560b3ef3dd47fca538",
+      "manifest.json": "4d29800469b020aa68adbda41cb42ef23369e9240667e080773795f356bfddfc",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "9f2744d888e90869c6ad45681463572ddd4ea921ec9e383c074bc922b9dff852"
+    },
+    "media_hashes_verified": true
+  },
+  {
+    "run_id": "l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-scene0",
+    "canonical_result": "audit-source/run-l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-sc_456dbb/results/l3-o23-depthpro-precision4-20261019-a4-sweep_blocks-random-s0-sc_456dbb.json",
+    "canonical_result_sha256": "85c58c6014c3d89a1db79dbddbdb1b4ddf4e8d7269562500d4282fdc569d26db",
+    "raw_files": {
+      "config.json": "d14ce6ec37b26004bfecb3cdeb84d442add1da97d9c2f1b522d8f29732bd3be3",
+      "result.json": "ca2dac82b5e676bcb84b6d6c6b403d9e43b640feb913339d0235f0fa925f2f48",
+      "actions.json": "27a4d9c5ce765912a9bc18963283e8bf322eeed719e73650df09031822a0e370",
+      "native-terminal.json": "c9d5881e9f18e05facb734d75d2450dbfbe675a93abc773393476cca5cc8f59a",
+      "manifest.json": "1808c7c5d22383b784c76f267400e1fbbaa856b29e2ba7191eab678272e6b0fc",
+      "source-lock.json": "829925708e10d2d786a30b112a6e6e074d6a2fbff64dd403f45f485a61f751ca",
+      "provenance.json": "a5ac32da92358c7ccb16d1aaf6b6df00d263171545cab72678ce4bae2a098779"
+    },
+    "media_hashes_verified": true
+  }
+]
