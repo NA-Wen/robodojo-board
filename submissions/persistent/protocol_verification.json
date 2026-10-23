@@ -30,6 +30,14 @@
       "matches_origin_main": true
     }
   ],
-  "latest_online_verified": false,
-  "reason": "Sandbox DNS cannot resolve raw.githubusercontent.com; local files match synchronized origin/main. Executor must re-fetch before push."
+  "latest_online_verified": true,
+  "reason": "The submission main encountered sandbox DNS failure. The executor fetched all four files from the public board on 2026-10-23 and independently verified exact SHA256 matches before push.",
+  "executor_verification": {
+    "source_base_url": "https://na-wen.github.io/robodojo-board/",
+    "all_four_public_files_match_local_sha256": true,
+    "official_validator_blocking": 0,
+    "json_schema_errors": 0,
+    "source_metric_cells_equal": 1092,
+    "public_package_privacy_findings": 0
+  }
 }
