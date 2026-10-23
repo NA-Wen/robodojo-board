@@ -1,0 +1,19 @@
+{
+  "group_id": "o23-compact-medium-r1",
+  "setting_id": "sha256:022e0c4606d1a12b4fda1bdeaf10b826dee5b7e956f1cd9e78819a695d4aefd1",
+  "source_audit_sha256": "cb5be942c96445187eeac427675ee462295a91014749a1bef392614da9700b2c",
+  "stage": "user-authorized current-stage result",
+  "main_approved": false,
+  "rolling_approval_count": "未最终批准；audit_data.main_review.approved=false",
+  "final_recheck_required": [
+    "arrange_largest_number run recheck_requested",
+    "原始任务指令缺失/PTS映射缺失/部分响应数缺失等问题"
+  ],
+  "sampling": "0.2秒基础扫描与局部连续窗口，非全帧连续观看",
+  "run_count": 42,
+  "event_count": 234,
+  "known_issues": [
+    "l3-o23-full-ik42-medium-r1-20261017-arrange_largest_number-random-s0-scene0: recheck_requested"
+  ],
+  "pending_policy": "recheck相关指标留空并标pending；不伪造批准或证据"
+}
