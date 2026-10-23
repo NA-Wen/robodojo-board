@@ -129,7 +129,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   }
 
   // ── 分布图 2：事件发生在一次运行的第几轮（热力图，按组归一化） ──
-  function positions(title,subtitle,cats,{note=''}={}) {
+  function positions(title,subtitle,cats,{note='',basis='decisions'}={}) {
     const BUCKETS=['前 20%','20–40%','40–60%','60–80%','后 20%'];
     const rows=series.map(g=>{
       if(g.audit_completion==='pending') return {g,pending:true};
@@ -139,26 +139,37 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
         for(const e of (r.c.events||[])){
           if(!cats.includes(e.category)) continue;
           total++;
-          if(!T||!Array.isArray(e.turns)||!e.turns.length) continue;
+          let fraction=null;
+          if(basis==='video') {
+            const duration=r.c.video_duration_seconds, range=e.time_range;
+            if(Number.isFinite(duration)&&duration>0&&Array.isArray(range)&&range.length===2&&
+                range.every(Number.isFinite)&&0<=range[0]&&range[0]<=range[1]&&range[1]<=duration)
+              fraction=range[0]/duration;
+          } else if(Number.isInteger(T)&&T>0) {
+            const window=e.decision_window;
+            if(Array.isArray(window)&&window.length===2&&window.every(Number.isInteger)&&
+                0<=window[0]&&window[0]<=window[1]&&window[1]<T) fraction=window[0]/T;
+            else if(Array.isArray(e.turns)&&e.turns.length&&
+                e.turns.every(t=>Number.isInteger(t)&&1<=t&&t<=T)) fraction=(Math.min(...e.turns)-1)/T;
+          }
+          if(fraction===null) continue;
           pos++;
-          acc[Math.min(4,Math.max(0,Math.floor(Math.min(...e.turns)/T*5)))]++;
+          acc[Math.min(4,Math.floor(fraction*5))]++;
         }
       }
       return {g,acc,total,pos};
     });
-    const usable=rows.filter(r=>!r.pending&&r.pos>0);
-    if(!usable.length) return `<article class="bc-card bc-card-pending">${cardHead(title,subtitle,'—')}<p class="bc-footnote">当前范围内没有可定位轮次的事件。</p></article>`;
     const tint=(color,a)=>color+Math.round(Math.min(.9,Math.max(.05,a))*255).toString(16).padStart(2,'0');
     const head=`<div class="bc-heat-row bc-heat-head"><span>实验</span>${BUCKETS.map(b=>`<span>${b}</span>`).join('')}<span>可定位</span></div>`;
     const body=rows.map(r=>{
       if(r.pending) return `<div class="bc-heat-row bc-heat-pending"><span class="bc-heat-name">${label(r.g)}</span><span class="bc-heat-span">待审核，暂不计入</span></div>`;
-      const cov=r.pos/r.total;
+      const cov=r.total?r.pos/r.total:1;
       const cells=r.pos?BUCKETS.map((b,i)=>{
         const pct=r.acc[i]/r.pos*100;
         return `<span class="bc-heat-cell" style="background:${tint(r.g.color,pct/100)};color:${pct>55?'#fff':'var(--ink)'}" title="${esc(r.g.name)} · ${b} · ${pct.toFixed(1)}%（${r.acc[i]}/${r.pos} 个事件）">${pct<0.5?'·':pct.toFixed(0)+'%'}</span>`;
-      }).join(''):BUCKETS.map(()=>`<span class="bc-heat-cell bc-heat-na" title="${esc(r.g.name)}：这批事件只有帧号与时间范围，没有可用轮次">—</span>`).join('');
+      }).join(''):BUCKETS.map(()=>`<span class="bc-heat-cell bc-heat-na" title="${esc(r.g.name)}：${basis==='video'?'缺少有效视频时间或已核实的完整时长':'缺少有效决策区间或轮次'}">—</span>`).join('');
       const warn=cov<0.5?' bc-heat-warn':'';
-      return `<div class="bc-heat-row"><span class="bc-heat-name">${label(r.g)}</span>${cells}<span class="bc-heat-cov${warn}" title="能定位到轮次的事件占比">${r.pos}/${r.total}${cov<0.5?' ⚠':''}</span></div>`;
+      return `<div class="bc-heat-row" data-position-group="${esc(r.g.id)}" data-position-basis="${basis}" data-position-counts="${r.acc.join(',')}"><span class="bc-heat-name">${label(r.g)}</span>${cells}<span class="bc-heat-cov${warn}" title="具备${basis==='video'?'视频进度':'决策进度'}位置的事件数 / 全部相关事件数">${r.pos}/${r.total}${cov<0.5?' ⚠':''}</span></div>`;
     }).join('');
     return `<article class="bc-card bc-card-wide">${cardHead(title,subtitle,'%')}<div class="bc-heat" role="table" aria-label="${esc(title)}">${head}${body}</div><p class="bc-footnote">${note || '每行按该组自身事件数归一化，便于在总量不同的组之间比较；单元格为该区间占可定位事件的比例，颜色深浅同步表示比例。'}</p></article>`;
   }
@@ -369,7 +380,8 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       bars('空夹与掉落','已确认事件；点击柱形查看该实验的事件', [['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{note:'semantic-eef空夹包含最终未重试的独立尝试，掉落仅主动释放前失持；其他组口径见各组说明。'}),
       bars('涉及运行比例','至少发生过一次该事件的运行占比',[['emptyRetry','已记录空夹','empty_retry'],['drops','夹起后掉落','drop']],{mode:'incidence',unit:'%',fixed:100,decimals:1,note:'分母为有记录的运行数，不是抓取尝试数；不是抓取失败率。'}),
       bars('成功重夹与目标选择','需要关联失败事件和后续成功抓取',[['emptyRegrasp','空夹后成功重夹'],['dropRegrasp','掉落后成功重夹'],['wrongObject','选错物体']]),
-      positions('失败发生在第几轮','事件首次出现位置 ÷ 该 run 总轮数，按组归一化',['empty_retry','drop'],{note:'靠近 0% 表示刚上手就失败，靠近 100% 表示接近预算耗尽才失败。“可定位”列表示这批事件里有多少条带可用轮次；action_horizon 的抽帧审核只有帧号与时间范围，因此无法定位，标为 —。'})
+      positions('失败发生在视频的哪个阶段','视觉证据区间起点 ÷ 该 run 完整视频时长',['empty_retry','drop'],{basis:'video',note:'按已记录视觉区间的起点分桶；宽区间不代表精确失败瞬间。只使用已有时间范围与三路一致的已核实时长，缺少时长的组保持未知；不由轮次推算视频时间。'}),
+      positions('失败关联的决策进度','日志决策窗口起点 ÷ 该 run 总决策数',['empty_retry','drop'],{note:'日志零基决策区间与协议一基轮次分别归一化；取窗口起点，不代表精确视频对时。没有可靠决策对应关系的事件保留未知。100%表示运行末段，不等于预算耗尽。'})
     ]},
     {id:'place',name:'放置',en:'PLACE',desc:'精细放置单独统计，与持物搬运中的掉落分开',cards:[
       bars('精细放置失败次数','插入、悬挂、对齐等操作未达目标',[['finePlacementFail','精细放置失败']]),
@@ -413,7 +425,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   const source=semanticRuns.length?groups.find(g=>g.id==='semantic').audit_source:null;
   const sourcePanel=source?`<div class="bc-source"><div><b>semantic-eef · 69 case 审核已接入</b><p>当前选中 ${semanticRuns.length} 条 · 动作记录与关键帧核查，非全视频逐帧审核</p></div><a class="button" href="${esc(source.report_url)}" target="_blank" rel="noopener">完整报告与证据 ↗</a><a class="button" href="${esc(source.counts_url)}" target="_blank" rel="noopener">统计表 ↗</a><a class="button" href="${esc(source.bundle_url)}" download>完整打包 ↓</a></div>`:'';
   const semantic=active.find(g=>g.id==='semantic'&&g.submission_links);
-  const semanticPanel=semantic?`<div class="bc-source"><div><b>semantic-eef · ${semantic.audit_completion==='pending'?'阶段性结果：完整审核未完成':'26项标准包已同步'}</b><p>${semantic.audit_completion==='pending'?'69个run / 207路视频全程观看待审核 · 旧版497条事件保留，不作为最终计数':'69个run · 497条事件 · †为确认下界'}</p></div><a class="button" href="${esc(semantic.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(semantic.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(semantic.submission_links.events)}">events.json</a><a class="button" href="${esc(semantic.submission_links.validation)}">校验记录</a>${semantic.submission_links.coverage?`<a class="button" href="${esc(semantic.submission_links.coverage)}">观看覆盖记录</a>`:''}</div>`:'';
+  const semanticPanel=semantic?`<div class="bc-source"><div><b>semantic-eef · ${semantic.audit_completion==='pending'?'阶段性结果：完整审核未完成':'26项标准包已同步'}</b><p>${semantic.cases.length}个run · ${semantic.cases.reduce((n,c)=>n+(c.events||[]).length,0)}条事件 · ${semantic.audit_completion==='pending'?'完整审核待完成，旧版事件不作为最终计数':'†为确认下界'}</p></div><a class="button" href="${esc(semantic.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(semantic.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(semantic.submission_links.events)}">events.json</a><a class="button" href="${esc(semantic.submission_links.validation)}">校验记录</a>${semantic.submission_links.coverage?`<a class="button" href="${esc(semantic.submission_links.coverage)}">观看覆盖记录</a>`:''}</div>`:'';
   const persistent=active.find(g=>g.id==='persistent'&&g.submission_links);
   const persistentPanel=persistent?`<div class="bc-source"><div><b>persistent-cap20 · 26项标准包已更新</b><p>42个run · 292条事件 · 0阻断 · 靠近action确认5次、turn确认4次（各3任务未知） · †为确认下界</p></div><a class="button" href="${esc(persistent.submission_links.budget_review)}">预算复核</a><a class="button" href="${esc(persistent.submission_links.xlsx)}">Excel</a><a class="button" href="${esc(persistent.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(persistent.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(persistent.submission_links.validation)}">校验记录</a></div>`:'';
   const scope=series.map(g=>`${g.name} ${g.runs.length} 条运行`).join(' / ');
