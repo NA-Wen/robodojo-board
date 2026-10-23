@@ -15,10 +15,10 @@
     "每个任务多为单次运行，单次结果无法区分设置差异与随机波动。"
   ],
   "counts": {
-    "events": 1162,
+    "events": 1133,
     "groups": 4,
-    "runs": 195,
-    "task_rows": 149
+    "runs": 168,
+    "task_rows": 168
   },
   "dataset_version": "2026-10-21 · semantic69",
   "endpoints": {
@@ -28,34 +28,34 @@
       "path": "definitions.json"
     },
     "events": {
-      "bytes": 446143,
+      "bytes": 366413,
       "description": "每条事件一行：run_id、category、turns、审核状态",
       "jsonl": "events.jsonl",
       "path": "events.json",
-      "records": 1162
+      "records": 1133
     },
     "groups": {
-      "bytes": 14052,
+      "bytes": 12864,
       "description": "实验组元数据：设置、方法论、覆盖度、审计完成状态",
       "path": "groups.json",
       "records": 4
     },
     "runs": {
-      "bytes": 341226,
+      "bytes": 289862,
       "description": "每条运行一行：任务、seed、scene、success、score、turns、actions、26 项指标、可信度",
       "jsonl": "runs.jsonl",
       "path": "runs.json",
-      "records": 195
+      "records": 168
     },
     "schema": {
       "bytes": 2634,
       "path": "schema.json"
     },
     "tasks": {
-      "bytes": 34823,
+      "bytes": 39576,
       "description": "按 (实验组, 任务) 聚合：成功率、均分、均轮数、均动作、空夹与掉落合计",
       "path": "tasks.json",
-      "records": 149
+      "records": 168
     }
   },
   "examples": [
@@ -64,9 +64,9 @@
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/tasks.json | jq -c '.[] | select(.group_id==\"action_horizon\")'",
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/events.jsonl | jq -c 'select(.category==\"empty_retry\")'"
   ],
-  "generated_at": "2026-10-22T12:34:32Z",
+  "generated_at": "2026-10-23T04:26:30Z",
   "name": "robodojo-board",
-  "source_bytes": 17623734,
+  "source_bytes": 11185069,
   "source_dump": "../audit-data.json",
-  "source_sha256": "89e3a393e9aa75f6"
+  "source_sha256": "615edd4e060f9398"
 }

@@ -1,22 +1,16 @@
 [
   {
-    "audit_completion": "pending",
-    "coverage": "阶段性结果：69个run、207路视频尚未完成三视角全程观看。全量4195条轨迹和38348控制步已重新核对；207路视频完整解码、690源文件哈希通过。18项视觉指标逐run标pending，不能按NA或0统计；旧版局部事件证据另存。",
+    "audit_completion": null,
+    "coverage": "已批准的42个首轮run、126路视频及完整动作日志；0.2秒基础扫描，动作、疑点及事件边界连续源帧复核。共468条事件，390条确认、78条待确认；候选不计确认值。本次仅导出已完成审核，不重新看图；实际帧索引与历史批次限制单列，不能解释为全帧原图逐张观看或全程连续播放。视觉计数为已声明覆盖内的确认下界；未知保持null，原生指标及逐run不确定项保留。实际索引记录为78969/80397个源帧位置；未记录位置及各路比例见覆盖表。历史图像批次曾超出每批12张源帧的限制，不能宣称历史批次全部合规。",
     "id": "semantic",
     "methodology": [
-      "阶段性结果：69个run、207路视频尚未完成三视角全程观看。全量4195条轨迹和38348控制步已重新核对；207路视频完整解码、690源文件哈希通过。18项视觉指标逐run标pending，不能按NA或0统计；旧版局部事件证据另存。",
-      "动作预算与turn预算独立判断，遵循用户原始统计要求。总action上限缺失，两项action放弃指标null/unknown；turn上限原生max_decisions=100，可独立核查。协议§3.2“相关四项一律unknown”存在歧义，本包显式保留turn结果，未据action缺失将turn信息一并抹去。",
-      "去重后的非空decision_index计为model turn，显示编号为decision_index+1。72条defer_llm及2条自动give_up不计模型turn。轨迹记录数、宏执行阶段数另列。",
-      "仅累计native_controls；每个native_control_segments只累计一次，双臂同步为同一环境步。拒绝或未执行计划为0。defer_llm的实际环境步计入总action，并另列non_model_controls。",
-      "各执行阶段录制n_controls+1帧；frame为0基，视频25fps。env_start_boundary为前置累计边界，执行步为(start,end]。视频段拼接含边界帧，视频秒不等于真实墙钟耗时。证据区间是动作覆盖范围，不是精确物理事件起止帧。",
-      "空夹包括无重试尝试；主动释放后落下不计掉落。",
-      "没有已知公开原始媒体URL，证据以三视角sha256、帧号和执行区间登记。"
+      "已批准的42个首轮run、126路视频及完整动作日志；0.2秒基础扫描，动作、疑点及事件边界连续源帧复核。共468条事件，390条确认、78条待确认；候选不计确认值。本次仅导出已完成审核，不重新看图；实际帧索引与历史批次限制单列，不能解释为全帧原图逐张观看或全程连续播放。视觉计数为已声明覆盖内的确认下界；未知保持null，原生指标及逐run不确定项保留。实际索引记录为78969/80397个源帧位置；未记录位置及各路比例见覆盖表。历史图像批次曾超出每批12张源帧的限制，不能宣称历史批次全部合规。"
     ],
-    "name": "semantic-eef",
-    "runs": 69,
+    "name": "semantic-eef · 首轮42 · 已验收",
+    "runs": 42,
     "setting": {
-      "id": "sha256:0d0bc94ab2640a0010e5431b8640927e84f36cc2f84aa41f13faa1ce8a69fd51",
-      "label": "semantic-eef",
+      "id": "sha256:f2ad94065bce85bfb30ddd268b3a72060d22c6b6124b667d535f68ce8b8c193b",
+      "label": "semantic-eef · 首轮42 · 已验收",
       "source": "submission.json → group.setting",
       "unknown_reason": null,
       "values": [
@@ -47,42 +41,21 @@
         }
       ]
     },
-    "submission_links": {
-      "bundle": "submissions/semantic/submission.json",
-      "completion": "submissions/semantic/completion_validation.json",
-      "coverage": "submissions/semantic/review_coverage.csv",
-      "csv": "submissions/semantic/task_metrics.csv",
-      "events": "submissions/semantic/events.json",
-      "review_metrics": "submissions/semantic/review_task_metrics.csv",
-      "validation": "submissions/semantic/validation_report.json"
-    },
-    "submission_version": "protocol-v1",
-    "tasks": 23,
+    "submission_links": null,
+    "submission_version": null,
+    "tasks": 42,
     "totals": {
-      "cases": 69,
-      "directAttempts": null,
-      "directSuccess": null,
-      "direct_failed": 7,
-      "drop": 62,
-      "dropRegrasp": null,
-      "drops": null,
-      "emptyRegrasp": null,
-      "emptyRetry": null,
-      "empty_retry": 63,
-      "other": 115,
-      "recovery_other": 4,
-      "success": 24,
-      "supportAttempts": null,
-      "supportSuccess": null,
-      "support_transfer": 1,
-      "tableAttempts": null,
-      "tableSuccess": null,
-      "table_transfer": 17,
-      "turns": 4121,
-      "uncertain": 14,
-      "view": 214,
-      "viewOpposite": null,
-      "viewSame": null
+      "cases": 42,
+      "direct_failed": 8,
+      "drop": 35,
+      "empty_retry": 47,
+      "other": 80,
+      "success": 18,
+      "support_transfer": 2,
+      "table_transfer": 8,
+      "turns": 2815,
+      "uncertain": 78,
+      "view": 210
     }
   },
   {
