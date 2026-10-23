@@ -1,0 +1,35 @@
+{
+  "repository_origin_main": "dbde9b265e019edd94035eb00bf51fbe0e456612",
+  "files": [
+    {
+      "file": "protocol.md",
+      "retrieval_exit_code": 6,
+      "error": "curl: (6) Could not resolve host: raw.githubusercontent.com",
+      "local_sha256": "9e5d99795ae827c38ba2486426eec94869c9d2cd52c31d10a748deb340f6940a",
+      "matches_origin_main": true
+    },
+    {
+      "file": "protocol.json",
+      "retrieval_exit_code": 6,
+      "error": "curl: (6) Could not resolve host: raw.githubusercontent.com",
+      "local_sha256": "b33929b498398936e9c1e216ad134716240db4314f7e243d9dcf645d45e158b7",
+      "matches_origin_main": true
+    },
+    {
+      "file": "submission.schema.json",
+      "retrieval_exit_code": 6,
+      "error": "curl: (6) Could not resolve host: raw.githubusercontent.com",
+      "local_sha256": "4ac5c04f6ea6df015a776f57f107567ed8959085c37340cf9ac164e7d4245551",
+      "matches_origin_main": true
+    },
+    {
+      "file": "validate_submission.py",
+      "retrieval_exit_code": 6,
+      "error": "curl: (6) Could not resolve host: raw.githubusercontent.com",
+      "local_sha256": "fcfb353af3c3016a9d19d272e4567e57ec718e6e14061d0ec9e691a03303267e",
+      "matches_origin_main": true
+    }
+  ],
+  "latest_online_verified": false,
+  "reason": "Sandbox DNS cannot resolve raw.githubusercontent.com; local files match synchronized origin/main. Executor must re-fetch before push."
+}

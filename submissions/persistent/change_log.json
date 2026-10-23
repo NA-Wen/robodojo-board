@@ -1,13 +1,50 @@
 {
-  "version": "budget-v2",
-  "previous_submission_sha256": "bfb2d3ee8a86cdbb59cc130bdc9f2e8f5efbd409e046044c3599e09c098f163f",
-  "changes": [
-    "重新检查42任务的2843次模型调用、2674个轨迹阶段、完整动作反馈、原生终局及历史发布清单；对预算/停止候选和末段上下文逐条判读。",
-    "修正此前漏读：42份历史发布清单均有episode_control_limit，总action上限范围200–1900；cap20仍只是单次执行截断。",
-    "恢复靠近action上限主动放弃5次、靠近turn上限4次；两类达到上限主动放弃均0。3次系统turn耗尽单列。",
-    "靠近action：39个任务有确定数值、3个未知；靠近turn：39个任务有确定数值、3个未知。每格未知保留原因。",
-    "insert_key放弃前269/300步（89.667%），give_up执行后270步不倒推为靠近；fill_egg_holder在C81/E621已放弃，后续回位到694步不构成第二次放弃。",
-    "swap_T在C30/E389明确放弃回位子目标，计靠近action一次；之后执行至400步自动结束不再计达到上限主动放弃。",
-    "保持其他22项指标、原生结果、配置指纹与非预算事件不变；预算事件补充精确调用定位、清单来源及计数贡献。"
-  ]
+  "date": "2026-10-23",
+  "group_id": "persistent",
+  "previous_submission_sha256": "aca9e69b05210daf08afd45ec241126f6f291505aacaaa40a1abdc407b755b5a",
+  "submission_sha256": "ca3e8a1a1e8a0708d93cb3287b9f18de7144aeb1ae25e36bd696aed166ce8ff8",
+  "source_audit_sha256": "42d687d9609efcee1a6405bc95fd749c8938de6e093e828167e4ddb359560b86",
+  "setting_id_unchanged": "sha256:5a58fe46ca1cd6bc8e96664e6e8c893422609d2a75bf9ece097326ca632ac2fc",
+  "counts_recomputed": {
+    "runs": 42,
+    "metric_cells": 1092,
+    "events": 307,
+    "event_statuses": {
+      "confirmed": 226,
+      "uncertain": 81
+    },
+    "coverage_views": 126,
+    "native_successes": 15,
+    "native_failures": 27,
+    "native_model_decisions": 2843,
+    "native_actual_controls": 24203,
+    "inspected_frame_records": 79215,
+    "unknown_cells": 4,
+    "source_metric_statuses": {
+      "native": 148,
+      "zero_confirmed": 725,
+      "confirmed": 136,
+      "self_report_confirmed": 10,
+      "lower_bound_with_candidates": 69,
+      "unavailable": 4
+    }
+  },
+  "replacement": "Complete accepted audit replaces the budget-stage version; all previous versions remain in Git history.",
+  "removed_or_replaced_old_files": [
+    "budget_review.csv",
+    "budget_review.html",
+    "budget_review.json",
+    "change_log.json",
+    "events.json",
+    "metric_status.csv",
+    "metrics.xlsx",
+    "report.html",
+    "setting_fingerprint.json",
+    "source_verification.json",
+    "submission.json",
+    "task_metrics.csv",
+    "validation_report.json"
+  ],
+  "scope": "Only submissions/persistent/; no semantic, action_horizon or generated board data changes.",
+  "method": "42个run完整日志与三视角静态抽帧审核，经main批准全部当前指纹。保留26指标、307条事件和126路覆盖。全程0.2秒基础扫描含首尾；所有执行动作、疑点及事件前后边界连续源帧复核。不代表全帧观看或连续播放；确认计数为所声明范围内下界。历史批次按实际检查记录披露：常规批次三视角各4帧，部分补查为单视角6/8/12帧；逐视角记录不能一概相加为同一次请求，不宣称所有历史批次统一大小。未知null，候选保留但不计确认值；原生结果与模型自述及命令ACK分开。"
 }

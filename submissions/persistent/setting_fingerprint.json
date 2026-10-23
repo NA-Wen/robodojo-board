@@ -605,5 +605,25 @@
         "simulator_package_isaacsim": "Sim5.1"
       }
     }
+  },
+  "group_match": "Source public execution parameters match existing persistent group and previous PR configuration exactly.",
+  "previous_setting_id": "sha256:5a58fe46ca1cd6bc8e96664e6e8c893422609d2a75bf9ece097326ca632ac2fc",
+  "setting_id_unchanged": true,
+  "excluded_fields": "historical_* fields are provenance identifiers, not execution settings; complete config bytes are SHA-bound in provenance.",
+  "site_comparison": {
+    "source": "repository audit-data.json persistent group",
+    "source_sha256": "f6bbe3a4f1af5708f7dcb2694b7b9d3dbc7242d51c3654a674e1abf19dae73ea",
+    "values": {
+      "client_version": "0.153.4",
+      "feedback": "original-arrival",
+      "full_history": true,
+      "max_decisions": 100,
+      "model": "gpt-6-astra",
+      "native_control_cap": 20,
+      "profile": "persistent-cap20",
+      "thinking_effort": "medium"
+    },
+    "match": true,
+    "live_network_reverification": false
   }
 }

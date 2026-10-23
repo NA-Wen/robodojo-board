@@ -1,0 +1,842 @@
+[
+  {
+    "run_id": "l3_persistent_cap20_align_blocks_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/align_blocks/actions.json",
+      "source-data/align_blocks/config.json",
+      "source-data/align_blocks/historical/costs.json",
+      "source-data/align_blocks/historical/episode-complete.json",
+      "source-data/align_blocks/historical/native-acks.json",
+      "source-data/align_blocks/historical/native-result.json",
+      "source-data/align_blocks/historical/publication-manifest.json",
+      "source-data/align_blocks/historical/source-lock.json",
+      "source-data/align_blocks/historical/trajectory.json",
+      "source-data/align_blocks/native-terminal.json",
+      "source-data/align_blocks/provenance.json",
+      "source-data/align_blocks/result.json",
+      "source-data/align_blocks/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_arrange_largest_number_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/arrange_largest_number/actions.json",
+      "source-data/arrange_largest_number/config.json",
+      "source-data/arrange_largest_number/historical/costs.json",
+      "source-data/arrange_largest_number/historical/episode-complete.json",
+      "source-data/arrange_largest_number/historical/native-acks.json",
+      "source-data/arrange_largest_number/historical/native-result.json",
+      "source-data/arrange_largest_number/historical/publication-manifest.json",
+      "source-data/arrange_largest_number/historical/source-lock.json",
+      "source-data/arrange_largest_number/historical/trajectory.json",
+      "source-data/arrange_largest_number/native-terminal.json",
+      "source-data/arrange_largest_number/provenance.json",
+      "source-data/arrange_largest_number/result.json",
+      "source-data/arrange_largest_number/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_build_tower_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/build_tower/actions.json",
+      "source-data/build_tower/config.json",
+      "source-data/build_tower/historical/costs.json",
+      "source-data/build_tower/historical/episode-complete.json",
+      "source-data/build_tower/historical/native-acks.json",
+      "source-data/build_tower/historical/native-result.json",
+      "source-data/build_tower/historical/publication-manifest.json",
+      "source-data/build_tower/historical/source-lock.json",
+      "source-data/build_tower/historical/trajectory.json",
+      "source-data/build_tower/native-terminal.json",
+      "source-data/build_tower/provenance.json",
+      "source-data/build_tower/result.json",
+      "source-data/build_tower/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_classify_objects_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/classify_objects/actions.json",
+      "source-data/classify_objects/config.json",
+      "source-data/classify_objects/historical/costs.json",
+      "source-data/classify_objects/historical/episode-complete.json",
+      "source-data/classify_objects/historical/native-acks.json",
+      "source-data/classify_objects/historical/native-result.json",
+      "source-data/classify_objects/historical/publication-manifest.json",
+      "source-data/classify_objects/historical/source-lock.json",
+      "source-data/classify_objects/historical/trajectory.json",
+      "source-data/classify_objects/native-terminal.json",
+      "source-data/classify_objects/provenance.json",
+      "source-data/classify_objects/result.json",
+      "source-data/classify_objects/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_classify_objects_by_language_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/classify_objects_by_language/actions.json",
+      "source-data/classify_objects_by_language/config.json",
+      "source-data/classify_objects_by_language/historical/costs.json",
+      "source-data/classify_objects_by_language/historical/episode-complete.json",
+      "source-data/classify_objects_by_language/historical/native-acks.json",
+      "source-data/classify_objects_by_language/historical/native-result.json",
+      "source-data/classify_objects_by_language/historical/publication-manifest.json",
+      "source-data/classify_objects_by_language/historical/source-lock.json",
+      "source-data/classify_objects_by_language/historical/trajectory.json",
+      "source-data/classify_objects_by_language/native-terminal.json",
+      "source-data/classify_objects_by_language/provenance.json",
+      "source-data/classify_objects_by_language/result.json",
+      "source-data/classify_objects_by_language/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_cover_blocks_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/cover_blocks/actions.json",
+      "source-data/cover_blocks/config.json",
+      "source-data/cover_blocks/historical/costs.json",
+      "source-data/cover_blocks/historical/episode-complete.json",
+      "source-data/cover_blocks/historical/native-acks.json",
+      "source-data/cover_blocks/historical/native-result.json",
+      "source-data/cover_blocks/historical/publication-manifest.json",
+      "source-data/cover_blocks/historical/source-lock.json",
+      "source-data/cover_blocks/historical/trajectory.json",
+      "source-data/cover_blocks/native-terminal.json",
+      "source-data/cover_blocks/provenance.json",
+      "source-data/cover_blocks/result.json",
+      "source-data/cover_blocks/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_deposit_coin_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/deposit_coin/actions.json",
+      "source-data/deposit_coin/config.json",
+      "source-data/deposit_coin/historical/costs.json",
+      "source-data/deposit_coin/historical/episode-complete.json",
+      "source-data/deposit_coin/historical/native-acks.json",
+      "source-data/deposit_coin/historical/native-result.json",
+      "source-data/deposit_coin/historical/publication-manifest.json",
+      "source-data/deposit_coin/historical/source-lock.json",
+      "source-data/deposit_coin/historical/trajectory.json",
+      "source-data/deposit_coin/native-terminal.json",
+      "source-data/deposit_coin/provenance.json",
+      "source-data/deposit_coin/result.json",
+      "source-data/deposit_coin/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_fasten_screws_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/fasten_screws/actions.json",
+      "source-data/fasten_screws/config.json",
+      "source-data/fasten_screws/historical/costs.json",
+      "source-data/fasten_screws/historical/episode-complete.json",
+      "source-data/fasten_screws/historical/native-acks.json",
+      "source-data/fasten_screws/historical/native-result.json",
+      "source-data/fasten_screws/historical/publication-manifest.json",
+      "source-data/fasten_screws/historical/source-lock.json",
+      "source-data/fasten_screws/historical/trajectory.json",
+      "source-data/fasten_screws/native-terminal.json",
+      "source-data/fasten_screws/provenance.json",
+      "source-data/fasten_screws/result.json",
+      "source-data/fasten_screws/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_fill_egg_holder_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/fill_egg_holder/actions.json",
+      "source-data/fill_egg_holder/config.json",
+      "source-data/fill_egg_holder/historical/costs.json",
+      "source-data/fill_egg_holder/historical/episode-complete.json",
+      "source-data/fill_egg_holder/historical/native-acks.json",
+      "source-data/fill_egg_holder/historical/native-result.json",
+      "source-data/fill_egg_holder/historical/publication-manifest.json",
+      "source-data/fill_egg_holder/historical/source-lock.json",
+      "source-data/fill_egg_holder/historical/trajectory.json",
+      "source-data/fill_egg_holder/native-terminal.json",
+      "source-data/fill_egg_holder/provenance.json",
+      "source-data/fill_egg_holder/result.json",
+      "source-data/fill_egg_holder/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_fill_pen_holder_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/fill_pen_holder/actions.json",
+      "source-data/fill_pen_holder/config.json",
+      "source-data/fill_pen_holder/historical/costs.json",
+      "source-data/fill_pen_holder/historical/episode-complete.json",
+      "source-data/fill_pen_holder/historical/native-acks.json",
+      "source-data/fill_pen_holder/historical/native-result.json",
+      "source-data/fill_pen_holder/historical/publication-manifest.json",
+      "source-data/fill_pen_holder/historical/source-lock.json",
+      "source-data/fill_pen_holder/historical/trajectory.json",
+      "source-data/fill_pen_holder/native-terminal.json",
+      "source-data/fill_pen_holder/provenance.json",
+      "source-data/fill_pen_holder/result.json",
+      "source-data/fill_pen_holder/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_fold_clothes_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/fold_clothes/actions.json",
+      "source-data/fold_clothes/config.json",
+      "source-data/fold_clothes/historical/costs.json",
+      "source-data/fold_clothes/historical/episode-complete.json",
+      "source-data/fold_clothes/historical/native-acks.json",
+      "source-data/fold_clothes/historical/native-result.json",
+      "source-data/fold_clothes/historical/publication-manifest.json",
+      "source-data/fold_clothes/historical/source-lock.json",
+      "source-data/fold_clothes/historical/trajectory.json",
+      "source-data/fold_clothes/native-terminal.json",
+      "source-data/fold_clothes/provenance.json",
+      "source-data/fold_clothes/result.json",
+      "source-data/fold_clothes/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_v1_general_pickup_s0_layout0_20261002_v1",
+    "source_log_references": [
+      "source-data/general_pickup/actions.json",
+      "source-data/general_pickup/config.json",
+      "source-data/general_pickup/historical/costs.json",
+      "source-data/general_pickup/historical/episode-complete.json",
+      "source-data/general_pickup/historical/native-acks.json",
+      "source-data/general_pickup/historical/native-result.json",
+      "source-data/general_pickup/historical/publication-manifest.json",
+      "source-data/general_pickup/historical/source-lock.json",
+      "source-data/general_pickup/historical/trajectory.json",
+      "source-data/general_pickup/native-terminal.json",
+      "source-data/general_pickup/provenance.json",
+      "source-data/general_pickup/result.json",
+      "source-data/general_pickup/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_hang_mugs_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/hang_mugs/actions.json",
+      "source-data/hang_mugs/config.json",
+      "source-data/hang_mugs/historical/costs.json",
+      "source-data/hang_mugs/historical/episode-complete.json",
+      "source-data/hang_mugs/historical/native-acks.json",
+      "source-data/hang_mugs/historical/native-result.json",
+      "source-data/hang_mugs/historical/publication-manifest.json",
+      "source-data/hang_mugs/historical/source-lock.json",
+      "source-data/hang_mugs/historical/trajectory.json",
+      "source-data/hang_mugs/native-terminal.json",
+      "source-data/hang_mugs/provenance.json",
+      "source-data/hang_mugs/result.json",
+      "source-data/hang_mugs/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_imitate_sorting_sequence_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/imitate_sorting_sequence/actions.json",
+      "source-data/imitate_sorting_sequence/config.json",
+      "source-data/imitate_sorting_sequence/historical/costs.json",
+      "source-data/imitate_sorting_sequence/historical/episode-complete.json",
+      "source-data/imitate_sorting_sequence/historical/native-acks.json",
+      "source-data/imitate_sorting_sequence/historical/native-result.json",
+      "source-data/imitate_sorting_sequence/historical/publication-manifest.json",
+      "source-data/imitate_sorting_sequence/historical/source-lock.json",
+      "source-data/imitate_sorting_sequence/historical/trajectory.json",
+      "source-data/imitate_sorting_sequence/native-terminal.json",
+      "source-data/imitate_sorting_sequence/provenance.json",
+      "source-data/imitate_sorting_sequence/result.json",
+      "source-data/imitate_sorting_sequence/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_insert_key_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/insert_key/actions.json",
+      "source-data/insert_key/config.json",
+      "source-data/insert_key/historical/costs.json",
+      "source-data/insert_key/historical/episode-complete.json",
+      "source-data/insert_key/historical/native-acks.json",
+      "source-data/insert_key/historical/native-result.json",
+      "source-data/insert_key/historical/publication-manifest.json",
+      "source-data/insert_key/historical/source-lock.json",
+      "source-data/insert_key/historical/trajectory.json",
+      "source-data/insert_key/native-terminal.json",
+      "source-data/insert_key/provenance.json",
+      "source-data/insert_key/result.json",
+      "source-data/insert_key/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_insert_tubes_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/insert_tubes/actions.json",
+      "source-data/insert_tubes/config.json",
+      "source-data/insert_tubes/historical/costs.json",
+      "source-data/insert_tubes/historical/episode-complete.json",
+      "source-data/insert_tubes/historical/native-acks.json",
+      "source-data/insert_tubes/historical/native-result.json",
+      "source-data/insert_tubes/historical/publication-manifest.json",
+      "source-data/insert_tubes/historical/source-lock.json",
+      "source-data/insert_tubes/historical/trajectory.json",
+      "source-data/insert_tubes/native-terminal.json",
+      "source-data/insert_tubes/provenance.json",
+      "source-data/insert_tubes/result.json",
+      "source-data/insert_tubes/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_make_kong_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/make_kong/actions.json",
+      "source-data/make_kong/config.json",
+      "source-data/make_kong/historical/costs.json",
+      "source-data/make_kong/historical/episode-complete.json",
+      "source-data/make_kong/historical/native-acks.json",
+      "source-data/make_kong/historical/native-result.json",
+      "source-data/make_kong/historical/publication-manifest.json",
+      "source-data/make_kong/historical/source-lock.json",
+      "source-data/make_kong/historical/trajectory.json",
+      "source-data/make_kong/native-terminal.json",
+      "source-data/make_kong/provenance.json",
+      "source-data/make_kong/result.json",
+      "source-data/make_kong/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_make_toast_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/make_toast/actions.json",
+      "source-data/make_toast/config.json",
+      "source-data/make_toast/historical/costs.json",
+      "source-data/make_toast/historical/episode-complete.json",
+      "source-data/make_toast/historical/native-acks.json",
+      "source-data/make_toast/historical/native-result.json",
+      "source-data/make_toast/historical/publication-manifest.json",
+      "source-data/make_toast/historical/source-lock.json",
+      "source-data/make_toast/historical/trajectory.json",
+      "source-data/make_toast/native-terminal.json",
+      "source-data/make_toast/provenance.json",
+      "source-data/make_toast/result.json",
+      "source-data/make_toast/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": "18b277880506ea64e711edf156a05ad9dc3237f33d00ab1a8e84bd0570d0dc80"
+  },
+  {
+    "run_id": "l3_persistent_cap20_match_and_pick_from_conveyor_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/match_and_pick_from_conveyor/actions.json",
+      "source-data/match_and_pick_from_conveyor/config.json",
+      "source-data/match_and_pick_from_conveyor/historical/costs.json",
+      "source-data/match_and_pick_from_conveyor/historical/episode-complete.json",
+      "source-data/match_and_pick_from_conveyor/historical/native-acks.json",
+      "source-data/match_and_pick_from_conveyor/historical/native-result.json",
+      "source-data/match_and_pick_from_conveyor/historical/publication-manifest.json",
+      "source-data/match_and_pick_from_conveyor/historical/source-lock.json",
+      "source-data/match_and_pick_from_conveyor/historical/trajectory.json",
+      "source-data/match_and_pick_from_conveyor/native-terminal.json",
+      "source-data/match_and_pick_from_conveyor/provenance.json",
+      "source-data/match_and_pick_from_conveyor/result.json",
+      "source-data/match_and_pick_from_conveyor/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_organize_table_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/organize_table/actions.json",
+      "source-data/organize_table/config.json",
+      "source-data/organize_table/historical/costs.json",
+      "source-data/organize_table/historical/episode-complete.json",
+      "source-data/organize_table/historical/native-acks.json",
+      "source-data/organize_table/historical/native-result.json",
+      "source-data/organize_table/historical/publication-manifest.json",
+      "source-data/organize_table/historical/source-lock.json",
+      "source-data/organize_table/historical/trajectory.json",
+      "source-data/organize_table/native-terminal.json",
+      "source-data/organize_table/provenance.json",
+      "source-data/organize_table/result.json",
+      "source-data/organize_table/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_pack_objects_into_box_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/pack_objects_into_box/actions.json",
+      "source-data/pack_objects_into_box/config.json",
+      "source-data/pack_objects_into_box/historical/costs.json",
+      "source-data/pack_objects_into_box/historical/episode-complete.json",
+      "source-data/pack_objects_into_box/historical/native-acks.json",
+      "source-data/pack_objects_into_box/historical/native-result.json",
+      "source-data/pack_objects_into_box/historical/publication-manifest.json",
+      "source-data/pack_objects_into_box/historical/source-lock.json",
+      "source-data/pack_objects_into_box/historical/trajectory.json",
+      "source-data/pack_objects_into_box/native-terminal.json",
+      "source-data/pack_objects_into_box/provenance.json",
+      "source-data/pack_objects_into_box/result.json",
+      "source-data/pack_objects_into_box/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_pick_from_conveyor_by_image_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/pick_from_conveyor_by_image/actions.json",
+      "source-data/pick_from_conveyor_by_image/config.json",
+      "source-data/pick_from_conveyor_by_image/historical/costs.json",
+      "source-data/pick_from_conveyor_by_image/historical/episode-complete.json",
+      "source-data/pick_from_conveyor_by_image/historical/native-acks.json",
+      "source-data/pick_from_conveyor_by_image/historical/native-result.json",
+      "source-data/pick_from_conveyor_by_image/historical/publication-manifest.json",
+      "source-data/pick_from_conveyor_by_image/historical/source-lock.json",
+      "source-data/pick_from_conveyor_by_image/historical/trajectory.json",
+      "source-data/pick_from_conveyor_by_image/native-terminal.json",
+      "source-data/pick_from_conveyor_by_image/provenance.json",
+      "source-data/pick_from_conveyor_by_image/result.json",
+      "source-data/pick_from_conveyor_by_image/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_play_Xylophone_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/play_Xylophone/provenance.json",
+      "source-data/play_Xylophone/result.json",
+      "source-data/play_Xylophone/config.json",
+      "source-data/play_Xylophone/native-terminal.json",
+      "source-data/play_Xylophone/actions.json",
+      "source-data/play_Xylophone/source-lock.json",
+      "source-data/play_Xylophone/historical/trajectory.json",
+      "source-data/play_Xylophone/historical/native-acks.json",
+      "source-data/play_Xylophone/historical/episode-complete.json",
+      "source-data/play_Xylophone/historical/native-result.json",
+      "source-data/play_Xylophone/historical/publication-manifest.json",
+      "source-data/play_Xylophone/historical/source-lock.json",
+      "source-data/play_Xylophone/historical/costs.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_play_stacking_toy_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/play_stacking_toy/provenance.json",
+      "source-data/play_stacking_toy/result.json",
+      "source-data/play_stacking_toy/config.json",
+      "source-data/play_stacking_toy/native-terminal.json",
+      "source-data/play_stacking_toy/actions.json",
+      "source-data/play_stacking_toy/source-lock.json",
+      "source-data/play_stacking_toy/historical/trajectory.json",
+      "source-data/play_stacking_toy/historical/native-acks.json",
+      "source-data/play_stacking_toy/historical/episode-complete.json",
+      "source-data/play_stacking_toy/historical/native-result.json",
+      "source-data/play_stacking_toy/historical/publication-manifest.json",
+      "source-data/play_stacking_toy/historical/source-lock.json",
+      "source-data/play_stacking_toy/historical/costs.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_play_tic_tac_toe_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/play_tic_tac_toe/actions.json",
+      "source-data/play_tic_tac_toe/config.json",
+      "source-data/play_tic_tac_toe/historical/costs.json",
+      "source-data/play_tic_tac_toe/historical/episode-complete.json",
+      "source-data/play_tic_tac_toe/historical/native-acks.json",
+      "source-data/play_tic_tac_toe/historical/native-result.json",
+      "source-data/play_tic_tac_toe/historical/publication-manifest.json",
+      "source-data/play_tic_tac_toe/historical/source-lock.json",
+      "source-data/play_tic_tac_toe/historical/trajectory.json",
+      "source-data/play_tic_tac_toe/native-terminal.json",
+      "source-data/play_tic_tac_toe/provenance.json",
+      "source-data/play_tic_tac_toe/result.json",
+      "source-data/play_tic_tac_toe/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_plug_in_charger_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/plug_in_charger/actions.json",
+      "source-data/plug_in_charger/config.json",
+      "source-data/plug_in_charger/historical/costs.json",
+      "source-data/plug_in_charger/historical/episode-complete.json",
+      "source-data/plug_in_charger/historical/native-acks.json",
+      "source-data/plug_in_charger/historical/native-result.json",
+      "source-data/plug_in_charger/historical/publication-manifest.json",
+      "source-data/plug_in_charger/historical/source-lock.json",
+      "source-data/plug_in_charger/historical/trajectory.json",
+      "source-data/plug_in_charger/native-terminal.json",
+      "source-data/plug_in_charger/provenance.json",
+      "source-data/plug_in_charger/result.json",
+      "source-data/plug_in_charger/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_pour_balls_into_vase_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/pour_balls_into_vase/actions.json",
+      "source-data/pour_balls_into_vase/config.json",
+      "source-data/pour_balls_into_vase/historical/costs.json",
+      "source-data/pour_balls_into_vase/historical/episode-complete.json",
+      "source-data/pour_balls_into_vase/historical/native-acks.json",
+      "source-data/pour_balls_into_vase/historical/native-result.json",
+      "source-data/pour_balls_into_vase/historical/publication-manifest.json",
+      "source-data/pour_balls_into_vase/historical/source-lock.json",
+      "source-data/pour_balls_into_vase/historical/trajectory.json",
+      "source-data/pour_balls_into_vase/native-terminal.json",
+      "source-data/pour_balls_into_vase/provenance.json",
+      "source-data/pour_balls_into_vase/result.json",
+      "source-data/pour_balls_into_vase/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_pour_by_language_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/pour_by_language/actions.json",
+      "source-data/pour_by_language/config.json",
+      "source-data/pour_by_language/historical/costs.json",
+      "source-data/pour_by_language/historical/episode-complete.json",
+      "source-data/pour_by_language/historical/native-acks.json",
+      "source-data/pour_by_language/historical/native-result.json",
+      "source-data/pour_by_language/historical/publication-manifest.json",
+      "source-data/pour_by_language/historical/source-lock.json",
+      "source-data/pour_by_language/historical/trajectory.json",
+      "source-data/pour_by_language/native-terminal.json",
+      "source-data/pour_by_language/provenance.json",
+      "source-data/pour_by_language/result.json",
+      "source-data/pour_by_language/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_pour_liquid_into_cup_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/pour_liquid_into_cup/actions.json",
+      "source-data/pour_liquid_into_cup/config.json",
+      "source-data/pour_liquid_into_cup/historical/costs.json",
+      "source-data/pour_liquid_into_cup/historical/episode-complete.json",
+      "source-data/pour_liquid_into_cup/historical/native-acks.json",
+      "source-data/pour_liquid_into_cup/historical/native-result.json",
+      "source-data/pour_liquid_into_cup/historical/publication-manifest.json",
+      "source-data/pour_liquid_into_cup/historical/source-lock.json",
+      "source-data/pour_liquid_into_cup/historical/trajectory.json",
+      "source-data/pour_liquid_into_cup/native-terminal.json",
+      "source-data/pour_liquid_into_cup/provenance.json",
+      "source-data/pour_liquid_into_cup/result.json",
+      "source-data/pour_liquid_into_cup/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_press_by_number_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/press_by_number/actions.json",
+      "source-data/press_by_number/config.json",
+      "source-data/press_by_number/historical/costs.json",
+      "source-data/press_by_number/historical/episode-complete.json",
+      "source-data/press_by_number/historical/native-acks.json",
+      "source-data/press_by_number/historical/native-result.json",
+      "source-data/press_by_number/historical/publication-manifest.json",
+      "source-data/press_by_number/historical/source-lock.json",
+      "source-data/press_by_number/historical/trajectory.json",
+      "source-data/press_by_number/native-terminal.json",
+      "source-data/press_by_number/provenance.json",
+      "source-data/press_by_number/result.json",
+      "source-data/press_by_number/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_push_T_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/push_T/actions.json",
+      "source-data/push_T/config.json",
+      "source-data/push_T/historical/costs.json",
+      "source-data/push_T/historical/episode-complete.json",
+      "source-data/push_T/historical/native-acks.json",
+      "source-data/push_T/historical/native-result.json",
+      "source-data/push_T/historical/publication-manifest.json",
+      "source-data/push_T/historical/source-lock.json",
+      "source-data/push_T/historical/trajectory.json",
+      "source-data/push_T/native-terminal.json",
+      "source-data/push_T/provenance.json",
+      "source-data/push_T/result.json",
+      "source-data/push_T/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_put_bottles_into_dustbin_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/put_bottles_into_dustbin/actions.json",
+      "source-data/put_bottles_into_dustbin/config.json",
+      "source-data/put_bottles_into_dustbin/historical/costs.json",
+      "source-data/put_bottles_into_dustbin/historical/episode-complete.json",
+      "source-data/put_bottles_into_dustbin/historical/native-acks.json",
+      "source-data/put_bottles_into_dustbin/historical/native-result.json",
+      "source-data/put_bottles_into_dustbin/historical/publication-manifest.json",
+      "source-data/put_bottles_into_dustbin/historical/source-lock.json",
+      "source-data/put_bottles_into_dustbin/historical/trajectory.json",
+      "source-data/put_bottles_into_dustbin/native-terminal.json",
+      "source-data/put_bottles_into_dustbin/provenance.json",
+      "source-data/put_bottles_into_dustbin/result.json",
+      "source-data/put_bottles_into_dustbin/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_solve_equation_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/solve_equation/actions.json",
+      "source-data/solve_equation/config.json",
+      "source-data/solve_equation/historical/costs.json",
+      "source-data/solve_equation/historical/episode-complete.json",
+      "source-data/solve_equation/historical/native-acks.json",
+      "source-data/solve_equation/historical/native-result.json",
+      "source-data/solve_equation/historical/publication-manifest.json",
+      "source-data/solve_equation/historical/source-lock.json",
+      "source-data/solve_equation/historical/trajectory.json",
+      "source-data/solve_equation/native-terminal.json",
+      "source-data/solve_equation/provenance.json",
+      "source-data/solve_equation/result.json",
+      "source-data/solve_equation/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_sort_nesting_dolls_by_size_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/sort_nesting_dolls_by_size/provenance.json",
+      "source-data/sort_nesting_dolls_by_size/result.json",
+      "source-data/sort_nesting_dolls_by_size/config.json",
+      "source-data/sort_nesting_dolls_by_size/native-terminal.json",
+      "source-data/sort_nesting_dolls_by_size/actions.json",
+      "source-data/sort_nesting_dolls_by_size/source-lock.json",
+      "source-data/sort_nesting_dolls_by_size/historical/trajectory.json",
+      "source-data/sort_nesting_dolls_by_size/historical/native-acks.json",
+      "source-data/sort_nesting_dolls_by_size/historical/episode-complete.json",
+      "source-data/sort_nesting_dolls_by_size/historical/native-result.json",
+      "source-data/sort_nesting_dolls_by_size/historical/publication-manifest.json",
+      "source-data/sort_nesting_dolls_by_size/historical/source-lock.json",
+      "source-data/sort_nesting_dolls_by_size/historical/costs.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_stack_blocks_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/stack_blocks/actions.json",
+      "source-data/stack_blocks/config.json",
+      "source-data/stack_blocks/historical/costs.json",
+      "source-data/stack_blocks/historical/episode-complete.json",
+      "source-data/stack_blocks/historical/native-acks.json",
+      "source-data/stack_blocks/historical/native-result.json",
+      "source-data/stack_blocks/historical/publication-manifest.json",
+      "source-data/stack_blocks/historical/source-lock.json",
+      "source-data/stack_blocks/historical/trajectory.json",
+      "source-data/stack_blocks/native-terminal.json",
+      "source-data/stack_blocks/provenance.json",
+      "source-data/stack_blocks/result.json",
+      "source-data/stack_blocks/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_v1_stack_blocks_by_language_s0_layout0_20261002_v1",
+    "source_log_references": [
+      "source-data/stack_blocks_by_language/actions.json",
+      "source-data/stack_blocks_by_language/config.json",
+      "source-data/stack_blocks_by_language/historical/costs.json",
+      "source-data/stack_blocks_by_language/historical/episode-complete.json",
+      "source-data/stack_blocks_by_language/historical/native-acks.json",
+      "source-data/stack_blocks_by_language/historical/native-result.json",
+      "source-data/stack_blocks_by_language/historical/publication-manifest.json",
+      "source-data/stack_blocks_by_language/historical/source-lock.json",
+      "source-data/stack_blocks_by_language/historical/trajectory.json",
+      "source-data/stack_blocks_by_language/native-terminal.json",
+      "source-data/stack_blocks_by_language/provenance.json",
+      "source-data/stack_blocks_by_language/result.json",
+      "source-data/stack_blocks_by_language/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_stack_bowls_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/stack_bowls/actions.json",
+      "source-data/stack_bowls/config.json",
+      "source-data/stack_bowls/historical/costs.json",
+      "source-data/stack_bowls/historical/episode-complete.json",
+      "source-data/stack_bowls/historical/native-acks.json",
+      "source-data/stack_bowls/historical/native-result.json",
+      "source-data/stack_bowls/historical/publication-manifest.json",
+      "source-data/stack_bowls/historical/source-lock.json",
+      "source-data/stack_bowls/historical/trajectory.json",
+      "source-data/stack_bowls/native-terminal.json",
+      "source-data/stack_bowls/provenance.json",
+      "source-data/stack_bowls/result.json",
+      "source-data/stack_bowls/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_store_laptop_and_headphones_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/store_laptop_and_headphones/provenance.json",
+      "source-data/store_laptop_and_headphones/result.json",
+      "source-data/store_laptop_and_headphones/config.json",
+      "source-data/store_laptop_and_headphones/native-terminal.json",
+      "source-data/store_laptop_and_headphones/actions.json",
+      "source-data/store_laptop_and_headphones/source-lock.json",
+      "source-data/store_laptop_and_headphones/historical/trajectory.json",
+      "source-data/store_laptop_and_headphones/historical/native-acks.json",
+      "source-data/store_laptop_and_headphones/historical/episode-complete.json",
+      "source-data/store_laptop_and_headphones/historical/native-result.json",
+      "source-data/store_laptop_and_headphones/historical/publication-manifest.json",
+      "source-data/store_laptop_and_headphones/historical/source-lock.json",
+      "source-data/store_laptop_and_headphones/historical/costs.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_store_tools_in_toolbox_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/store_tools_in_toolbox/actions.json",
+      "source-data/store_tools_in_toolbox/config.json",
+      "source-data/store_tools_in_toolbox/historical/costs.json",
+      "source-data/store_tools_in_toolbox/historical/episode-complete.json",
+      "source-data/store_tools_in_toolbox/historical/native-acks.json",
+      "source-data/store_tools_in_toolbox/historical/native-result.json",
+      "source-data/store_tools_in_toolbox/historical/publication-manifest.json",
+      "source-data/store_tools_in_toolbox/historical/source-lock.json",
+      "source-data/store_tools_in_toolbox/historical/trajectory.json",
+      "source-data/store_tools_in_toolbox/native-terminal.json",
+      "source-data/store_tools_in_toolbox/provenance.json",
+      "source-data/store_tools_in_toolbox/result.json",
+      "source-data/store_tools_in_toolbox/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_swap_T_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/swap_T/actions.json",
+      "source-data/swap_T/config.json",
+      "source-data/swap_T/historical/costs.json",
+      "source-data/swap_T/historical/episode-complete.json",
+      "source-data/swap_T/historical/native-acks.json",
+      "source-data/swap_T/historical/native-result.json",
+      "source-data/swap_T/historical/publication-manifest.json",
+      "source-data/swap_T/historical/source-lock.json",
+      "source-data/swap_T/historical/trajectory.json",
+      "source-data/swap_T/native-terminal.json",
+      "source-data/swap_T/provenance.json",
+      "source-data/swap_T/result.json",
+      "source-data/swap_T/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_swap_blocks_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/swap_blocks/actions.json",
+      "source-data/swap_blocks/config.json",
+      "source-data/swap_blocks/historical/costs.json",
+      "source-data/swap_blocks/historical/episode-complete.json",
+      "source-data/swap_blocks/historical/native-acks.json",
+      "source-data/swap_blocks/historical/native-result.json",
+      "source-data/swap_blocks/historical/publication-manifest.json",
+      "source-data/swap_blocks/historical/source-lock.json",
+      "source-data/swap_blocks/historical/trajectory.json",
+      "source-data/swap_blocks/native-terminal.json",
+      "source-data/swap_blocks/provenance.json",
+      "source-data/swap_blocks/result.json",
+      "source-data/swap_blocks/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  },
+  {
+    "run_id": "l3_persistent_cap20_sweep_blocks_random_s0_layout0_20261006_v1",
+    "source_log_references": [
+      "source-data/sweep_blocks/actions.json",
+      "source-data/sweep_blocks/config.json",
+      "source-data/sweep_blocks/historical/costs.json",
+      "source-data/sweep_blocks/historical/episode-complete.json",
+      "source-data/sweep_blocks/historical/native-acks.json",
+      "source-data/sweep_blocks/historical/native-result.json",
+      "source-data/sweep_blocks/historical/publication-manifest.json",
+      "source-data/sweep_blocks/historical/source-lock.json",
+      "source-data/sweep_blocks/historical/trajectory.json",
+      "source-data/sweep_blocks/native-terminal.json",
+      "source-data/sweep_blocks/provenance.json",
+      "source-data/sweep_blocks/result.json",
+      "source-data/sweep_blocks/source-lock.json"
+    ],
+    "review_status": "complete",
+    "source_read_receipt_sha256": null
+  }
+]

@@ -1,0 +1,184 @@
+[
+  {
+    "metric": "success",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 15,
+    "mean": 0.35714285714285715
+  },
+  {
+    "metric": "score",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 17.85,
+    "mean": 0.42500000000000004
+  },
+  {
+    "metric": "turns",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 2843,
+    "mean": 67.69047619047619
+  },
+  {
+    "metric": "actions",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 24203,
+    "mean": 576.2619047619048
+  },
+  {
+    "metric": "empty_retry",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 47,
+    "mean": 1.119047619047619
+  },
+  {
+    "metric": "drop",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 26,
+    "mean": 0.6190476190476191
+  },
+  {
+    "metric": "empty_regrasp",
+    "known_n": 41,
+    "unknown_n": 1,
+    "sum": 19,
+    "mean": 0.4634146341463415
+  },
+  {
+    "metric": "drop_regrasp",
+    "known_n": 41,
+    "unknown_n": 1,
+    "sum": 18,
+    "mean": 0.43902439024390244
+  },
+  {
+    "metric": "direct_attempts",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 5,
+    "mean": 0.11904761904761904
+  },
+  {
+    "metric": "direct_success",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 1,
+    "mean": 0.023809523809523808
+  },
+  {
+    "metric": "table_attempts",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 9,
+    "mean": 0.21428571428571427
+  },
+  {
+    "metric": "table_success",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 9,
+    "mean": 0.21428571428571427
+  },
+  {
+    "metric": "support_attempts",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 1,
+    "mean": 0.023809523809523808
+  },
+  {
+    "metric": "support_success",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 1,
+    "mean": 0.023809523809523808
+  },
+  {
+    "metric": "view_same",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 25,
+    "mean": 0.5952380952380952
+  },
+  {
+    "metric": "view_opposite",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 34,
+    "mean": 0.8095238095238095
+  },
+  {
+    "metric": "abandon_near_action",
+    "known_n": 41,
+    "unknown_n": 1,
+    "sum": 6,
+    "mean": 0.14634146341463414
+  },
+  {
+    "metric": "abandon_near_turn",
+    "known_n": 41,
+    "unknown_n": 1,
+    "sum": 4,
+    "mean": 0.0975609756097561
+  },
+  {
+    "metric": "abandon_action_limit",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 0,
+    "mean": 0.0
+  },
+  {
+    "metric": "abandon_turn_limit",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 0,
+    "mean": 0.0
+  },
+  {
+    "metric": "collision_arms",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 6,
+    "mean": 0.14285714285714285
+  },
+  {
+    "metric": "collision_arm_object",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 7,
+    "mean": 0.16666666666666666
+  },
+  {
+    "metric": "collision_arm_table",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 0,
+    "mean": 0.0
+  },
+  {
+    "metric": "knockdown",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 1,
+    "mean": 0.023809523809523808
+  },
+  {
+    "metric": "wrong_object",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 0,
+    "mean": 0.0
+  },
+  {
+    "metric": "fine_placement_fail",
+    "known_n": 42,
+    "unknown_n": 0,
+    "sum": 20,
+    "mean": 0.47619047619047616
+  }
+]
