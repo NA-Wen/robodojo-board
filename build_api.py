@@ -39,7 +39,7 @@ def case_events(group: dict) -> list[dict]:
                 **{k: ev.get(k) for k in (
                     "id", "category", "object", "arm", "turns", "frame_start", "frame_end",
                     "time_range", "turn_precision", "review_status", "confidence",
-                    "chain_id", "recovery_event_id", "view_type",
+                    "chain_id", "recovery_event_id", "view_type", "decision_window", "position_source",
                 ) if k in ev},
             })
     return out
@@ -70,6 +70,7 @@ def flatten_run(group: dict, case: dict) -> dict:
         "turns": metrics.get("turns"),
         "actions": metrics.get("actions"),
         "turns_basis": case.get("turns_basis"),
+        "video_duration_seconds": case.get("video_duration_seconds"),
         "audit_completion": case.get("audit_completion"),
         "submission_version": case.get("submission_version"),
         "metrics": metrics,

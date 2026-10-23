@@ -153,7 +153,7 @@ def load_validator():
     return mod
 
 
-def to_group(doc):
+def to_group(doc, annotations=None, coverage=None):
     group = doc['group']
     setting = group.get('setting') or {}
     cases = []
@@ -361,6 +361,40 @@ def to_group(doc):
                              uncertainty=annotation.get('uncertainty_reason'))
                 frames = annotation.get('video_frame_interval')
                 event['evidence'][0].update(frame_end=frames[1] if frames else None)
+    # Approved video audits retain independent log and video coordinates.
+    # A decision window does not assert an exact video-to-decision mapping.
+    if annotations is not None and coverage is not None:
+        by_run = {r['run_id']: r for r in annotations}
+        for case in cases:
+            source = by_run[case['run_id']]
+            events = {e['event_id']: e for e in source['source_events']}
+            views = [c for c in coverage['coverage'] if c['run_id'] == case['run_id']]
+            case['review_coverage'] = views
+            durations = [v.get('duration_seconds') for v in views]
+            if (len(views) == 3 and {v['view'] for v in views} ==
+                    {'head', 'left_wrist', 'right_wrist'} and
+                    all(isinstance(d, (int, float)) and d > 0 for d in durations) and
+                    len(set(durations)) == 1):
+                case['video_duration_seconds'] = durations[0]
+            for event in case['events']:
+                annotation = events[event['id']]
+                event['audit_annotation'] = annotation
+                lo, hi = annotation.get('decision_start'), annotation.get('decision_end')
+                if (type(lo) is int and type(hi) is int and
+                        0 <= lo <= hi < case['metrics']['turns']):
+                    event['decision_window'] = [lo, hi]
+                event['position_source'] = {
+                    'decisions': 'event_annotations.json',
+                    'video_duration': 'coverage.json',
+                    'video_time': 'submission.json',
+                }
+        converted['submission_links'] = {
+            key: f"submissions/{group['id']}/{name}" for key, name in {
+                'bundle': 'submission.json', 'csv': 'task_metrics.csv',
+                'events': 'events.json', 'validation': 'validation-report.json',
+                'coverage': 'coverage.json', 'annotations': 'event_annotations.json',
+            }.items()
+        }
     return converted
 
 
@@ -390,7 +424,13 @@ def main(argv):
             print('  ✗ ' + b)
         return 1
 
-    group = to_group(doc)
+    supplemental = {}
+    if doc['runs'] and all(r.get('configuration', {}).get('audit_auxiliary', {}).get(
+            'review_method') == 'sampled_0p2_continuous_actions' for r in doc['runs']):
+        for key, name in [('annotations', 'event_annotations.json'), ('coverage', 'coverage.json')]:
+            with open(os.path.join(path, name), encoding='utf-8') as source:
+                supplemental[key] = json.load(source)
+    group = to_group(doc, **supplemental)
     out_dir = os.path.join(board, 'incoming')
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, group['id'] + '.json')

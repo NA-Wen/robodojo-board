@@ -41,7 +41,14 @@
         }
       ]
     },
-    "submission_links": null,
+    "submission_links": {
+      "annotations": "submissions/semantic/event_annotations.json",
+      "bundle": "submissions/semantic/submission.json",
+      "coverage": "submissions/semantic/coverage.json",
+      "csv": "submissions/semantic/task_metrics.csv",
+      "events": "submissions/semantic/events.json",
+      "validation": "submissions/semantic/validation-report.json"
+    },
     "submission_version": null,
     "tasks": 42,
     "totals": {

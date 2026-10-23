@@ -28,20 +28,20 @@
       "path": "definitions.json"
     },
     "events": {
-      "bytes": 366413,
+      "bytes": 433350,
       "description": "每条事件一行：run_id、category、turns、审核状态",
       "jsonl": "events.jsonl",
       "path": "events.json",
       "records": 1133
     },
     "groups": {
-      "bytes": 12864,
+      "bytes": 13219,
       "description": "实验组元数据：设置、方法论、覆盖度、审计完成状态",
       "path": "groups.json",
       "records": 4
     },
     "runs": {
-      "bytes": 289862,
+      "bytes": 294937,
       "description": "每条运行一行：任务、seed、scene、success、score、turns、actions、26 项指标、可信度",
       "jsonl": "runs.jsonl",
       "path": "runs.json",
@@ -64,9 +64,9 @@
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/tasks.json | jq -c '.[] | select(.group_id==\"action_horizon\")'",
     "curl -s https://na-wen.github.io/robodojo-board/api/v1/events.jsonl | jq -c 'select(.category==\"empty_retry\")'"
   ],
-  "generated_at": "2026-10-23T04:26:30Z",
+  "generated_at": "2026-10-23T04:51:25Z",
   "name": "robodojo-board",
-  "source_bytes": 11185069,
+  "source_bytes": 12780474,
   "source_dump": "../audit-data.json",
-  "source_sha256": "615edd4e060f9398"
+  "source_sha256": "f6bbe3a4f1af5708"
 }
