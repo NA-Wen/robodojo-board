@@ -1,5 +1,5 @@
 {
-  "setting_id": "sha256:0d0bc94ab2640a0010e5431b8640927e84f36cc2f84aa41f13faa1ce8a69fd51",
+  "setting_id": "sha256:f2ad94065bce85bfb30ddd268b3a72060d22c6b6124b667d535f68ce8b8c193b",
   "canonical_encoding": "UTF-8 JSON; ensure_ascii=False; sort_keys=True; separators=(comma,colon)",
   "configuration": {
     "common": {
@@ -29,7 +29,7 @@
       "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
     },
     "per_run": {
-      "semantic-eef-devset69-cap20-20261020-restart3-align_blocks-standard-s0-scene1": {
+      "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -55,7 +55,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-align_blocks-standard-s0-scene2": {
+      "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -81,7 +81,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-align_blocks-standard-s0-scene3": {
+      "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -107,7 +107,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-arrange_largest_number-random-s0-scene1": {
+      "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -133,7 +133,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-arrange_largest_number-standard-s0-scene0": {
+      "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -159,7 +159,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-arrange_largest_number-standard-s0-scene1": {
+      "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -185,7 +185,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects-standard-s0-scene1": {
+      "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -211,7 +211,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects-standard-s0-scene2": {
+      "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -237,7 +237,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects-standard-s0-scene3": {
+      "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -263,7 +263,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects_by_language-standard-s0-scene1": {
+      "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -289,7 +289,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects_by_language-standard-s0-scene2": {
+      "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -315,7 +315,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-classify_objects_by_language-standard-s0-scene3": {
+      "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -341,7 +341,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-cover_blocks-standard-s0-scene1": {
+      "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -367,7 +367,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-cover_blocks-standard-s0-scene2": {
+      "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -393,7 +393,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-cover_blocks-standard-s0-scene3": {
+      "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -419,7 +419,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fasten_screws-standard-s0-scene1": {
+      "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -445,7 +445,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fasten_screws-standard-s0-scene2": {
+      "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -471,7 +471,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fasten_screws-standard-s0-scene3": {
+      "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -497,7 +497,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fold_clothes-random-s0-scene1": {
+      "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -523,7 +523,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fold_clothes-standard-s0-scene0": {
+      "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -549,7 +549,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-fold_clothes-standard-s0-scene1": {
+      "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -575,7 +575,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-general_pickup-standard-s0-scene1": {
+      "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -601,7 +601,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-general_pickup-standard-s0-scene2": {
+      "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -627,7 +627,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-general_pickup-standard-s0-scene3": {
+      "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -653,7 +653,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-imitate_sorting_sequence-standard-s0-scene1": {
+      "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -679,7 +679,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-imitate_sorting_sequence-standard-s0-scene2": {
+      "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -705,7 +705,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-imitate_sorting_sequence-standard-s0-scene3": {
+      "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -731,7 +731,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-match_and_pick_from_conveyor-standard-s0-scene1": {
+      "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -757,7 +757,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-match_and_pick_from_conveyor-standard-s0-scene2": {
+      "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -783,7 +783,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-match_and_pick_from_conveyor-standard-s0-scene3": {
+      "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -809,7 +809,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pack_objects_into_box-random-s0-scene1": {
+      "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -835,7 +835,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pack_objects_into_box-standard-s0-scene0": {
+      "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -861,7 +861,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pack_objects_into_box-standard-s0-scene1": {
+      "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -887,7 +887,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pick_from_conveyor_by_image-standard-s0-scene1": {
+      "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -913,7 +913,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pick_from_conveyor_by_image-standard-s0-scene2": {
+      "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -939,7 +939,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-pick_from_conveyor_by_image-standard-s0-scene3": {
+      "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -965,7 +965,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-play_Xylophone-standard-s0-scene1": {
+      "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -991,7 +991,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-play_Xylophone-standard-s0-scene2": {
+      "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -1017,7 +1017,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-play_Xylophone-standard-s0-scene3": {
+      "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -1043,7 +1043,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-plug_in_charger-standard-s0-scene1": {
+      "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -1069,7 +1069,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-plug_in_charger-standard-s0-scene2": {
+      "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -1095,709 +1095,7 @@
         "simulator_python": "3.11.17",
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       },
-      "semantic-eef-devset69-cap20-20261020-restart3-plug_in_charger-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-pour_balls_into_vase-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-pour_balls_into_vase-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-pour_balls_into_vase-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-press_by_number-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-press_by_number-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-press_by_number-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-push_T-random-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-push_T-standard-s0-scene0": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-push_T-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-put_bottles_into_dustbin-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-put_bottles_into_dustbin-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-put_bottles_into_dustbin-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-solve_equation-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-solve_equation-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-solve_equation-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-sort_nesting_dolls_by_size-random-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-sort_nesting_dolls_by_size-standard-s0-scene0": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-sort_nesting_dolls_by_size-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_blocks_by_language-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_blocks_by_language-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_blocks_by_language-standard-s0-scene3": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_bowls-random-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_bowls-standard-s0-scene0": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-stack_bowls-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-swap_T-standard-s0-scene1": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-swap_T-standard-s0-scene2": {
-        "client_version": "0.153.4",
-        "effort": "medium",
-        "feedback": "original-arrival",
-        "l3-semantic-eef-deploy_source_sha256": "1872c2b8466e2436f8aff57fcb3f28cf72eb2784e9388763e298dcc92d745552",
-        "l3-semantic-eef_source_sha256": "1c7f0181f31b926ed773e93677912397c208d1c1b9fd37659efc1272eff73c3f",
-        "max_decisions": 100,
-        "model": "gpt-6-astra",
-        "native_control_cap": 20,
-        "observations": "original-rgb-state",
-        "profile": "custom-semantic-eef",
-        "prompt": "historical-l3-eef",
-        "recipes": true,
-        "semantic_eef.enabled": true,
-        "semantic_eef.orientation_tolerance_deg": 5,
-        "semantic_eef.per_stage_action_cap": 20,
-        "semantic_eef.position_tolerance_m": 0.01,
-        "semantic_eef.prompt": "Semantic tools use the same controller and precision as move_eef. Use grasp or place for grasp-point or placement corrections, including partial poses; use move_eef for bimanual or combined pose/gripper commands. Normally open the gripper with release before grasp or pick; these macros never open it automatically. Normally call place while holding an object with a closed gripper command. These are planning guidelines, not enforced preconditions. Use close_gripper=false or open_gripper=false to inspect arrival before a separate clamp or release. Inspect measured feedback after every call and continue a partial macro from the actual state; never assume later stages ran.",
-        "simulator_package_isaaclab": "0.54.3",
-        "simulator_package_isaacsim": "5.1.0.0",
-        "simulator_package_numpy": "1.26.4",
-        "simulator_package_torch": "2.7.0",
-        "simulator_package_warp-lang": "1.17.0",
-        "simulator_python": "3.11.17",
-        "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
-      },
-      "semantic-eef-devset69-cap20-20261020-restart3-swap_T-standard-s0-scene3": {
+      "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0": {
         "client_version": "0.153.4",
         "effort": "medium",
         "feedback": "original-arrival",
@@ -1824,5 +1122,8 @@
         "simulator_software_sha256": "b136a750db835961f5356781a1d341054802e6d827c0545daa6bfc76c5995300"
       }
     }
-  }
+  },
+  "group_match": "实际公开参数与既有semantic组完全相同；沿用semantic，不创建重复组。",
+  "previous_setting_id": "sha256:0d0bc94ab2640a0010e5431b8640927e84f36cc2f84aa41f13faa1ce8a69fd51",
+  "fingerprint_change_reason": "沿用common+per_run规范化算法；本次为42个已批准run，旧版69个run；run集合变化导致指纹变化，并非执行设置变化。"
 }

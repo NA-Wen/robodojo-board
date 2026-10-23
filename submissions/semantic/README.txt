@@ -1,14 +1,9 @@
-semantic-eef 标准同步包
+已批准的42个首轮run、126路视频及完整动作日志；0.2秒基础扫描，动作、疑点及事件边界连续源帧复核。共468条事件，390条确认、78条待确认；候选不计确认值。本次仅导出已完成审核，不重新看图；实际帧索引与历史批次限制单列，不能解释为全帧原图逐张观看或全程连续播放。视觉计数为已声明覆盖内的确认下界；未知保持null，原生指标及逐run不确定项保留。实际索引记录为78969/80397个源帧位置；未记录位置及各路比例见覆盖表。历史图像批次曾超出每批12张源帧的限制，不能宣称历史批次全部合规。
 
-把V2审计69个run和497条事件转成标准submission.json、固定列序CSV和events.json，保留原生结果与全部执行/证据定位。
-看板已有组ID semantic 保持稳定，展示名 semantic-eef；未新增重复实验组。
-看板旧空夹56改为63（含无后续重试）；掉落63改为62（剔除主动释放后的牙刷下落）。V2物理判定未再改动。
-成功重夹为空夹后26、掉落后26；直接换手尝试7成功0，桌面尝试17成功16，其他支撑面尝试1成功0。
-补视野采用实际执行阶段：同臂144、异臂70；用gap_id串联同一观察缺口。
-动作预算与turn预算独立判断，遵循用户原始统计要求。总action上限缺失，两项action放弃指标null/unknown；turn上限原生max_decisions=100，可独立核查。协议§3.2“相关四项一律unknown”存在歧义，本包显式保留turn结果，未据action缺失将turn信息一并抹去。
-协议事件类别覆盖不足的新指标归other，configuration.audit_auxiliary.event_annotations保留原分类、计数贡献、失败链、原语及完整区间。
-三视角原始视频没有已知公开URL，标准media.url=null并提供sha256和bytes；本地完整报告保留原始视频与关键帧的相对引用。
-协议§4.1将empty_retry称为空夹后重试，§3指标5又包含无重试空夹。本包以指标5口径为准；结果字段标明是否存在后续重试。
-碰撞结构化证据为V2已审核视觉接触事件及执行区间，未提供接触传感器；未覆盖run标NA。
-
-数字为确认下界；不得把不同事件类型简单相加为总失败次数。report.html引用相邻robodojo_audit_v2的视频和证据；标准包可独立导入，公开媒体URL为空。
+沿用组ID semantic；源执行模型和工具配置见setting_fingerprint.json。
+26项指标无数值改写；原生success、score、model_decisions、native_controls逐run复算；null保持未知。
+metric_reconciliation.json逐run逐项列出指标、确认/候选事件与复算；event_annotations.json保留源理由和不确定项。
+coverage.json、review_coverage.csv与review_inspected_frames.json只报告实际记录覆盖；含历史接触表批次，不声称全帧原图逐张观看。
+媒体保留原始URL、SHA256及字节数；没有公开URL时为null；没有上传派生帧替代原始媒体。
+main_review.json与native_metrics.json保留验收及原生记录摘要；审核源只读、保护文件哈希不变。
+主线程已获取远端最新协议、schema和官方校验器，SHA256与本次校验所用版本一致；看板发布以PR合并为准。

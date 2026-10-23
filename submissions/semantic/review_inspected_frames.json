@@ -1,0 +1,5660 @@
+[
+  {
+    "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        226
+      ]
+    ],
+    "source_frames": 227,
+    "unique_actual_index_count": 227,
+    "inspection_record_count": 227,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b5e6c24be82a63349435f36568bcc2df6b8f4a28faead51b508433a0d84c77c4",
+    "extracted_index_sha256": "9965d80311ef892e82914acb91abac0b92fb99a90f1462409f7d68a1d7909210",
+    "batch_source_frame_count_histogram": {
+      "12": 56,
+      "9": 1
+    },
+    "batch_observations_sha256": "a3249859ea6e89c04e8c7a94318c7bd22dbabbf83a3e0ed9de86867341fea824",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        226
+      ]
+    ],
+    "source_frames": 227,
+    "unique_actual_index_count": 227,
+    "inspection_record_count": 227,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "7d30c83866a9ed999801882e52f87db68b3da4b257a7c328419d5f5aba8a0750",
+    "extracted_index_sha256": "22d9b722c14fe68e9ad04b7de7fc3feab34ce7c20783ba2cc92ac8faf073e343",
+    "batch_source_frame_count_histogram": {
+      "12": 56,
+      "9": 1
+    },
+    "batch_observations_sha256": "bb16ccdf0dacc48e4e26112695ec588c176dd082d604dc1d6bc706d5d8994912",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        226
+      ]
+    ],
+    "source_frames": 227,
+    "unique_actual_index_count": 227,
+    "inspection_record_count": 227,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "27d01c6a89f9e30b175575388fd72861a85c2b419c5e498105d13d368c379361",
+    "extracted_index_sha256": "274cc8ab3333a25ec3bea6df9ad575558611277f4e39222c2b4dfb9cb8f2a029",
+    "batch_source_frame_count_histogram": {
+      "12": 56,
+      "9": 1
+    },
+    "batch_observations_sha256": "715e79395ca9c3e5dff6384f31b5dea837be837234fc1cf5476f46f6e38da219",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        851
+      ]
+    ],
+    "source_frames": 852,
+    "unique_actual_index_count": 852,
+    "inspection_record_count": 852,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "a5e4a7d4e072afdd20885daaf1aeb044c236ca966186466fac8d6f76ae2647aa",
+    "extracted_index_sha256": "cd8a6c509a66620c1b1efa1d276fa87ef7653c46c3ab452d8e0ff6af58891e21",
+    "batch_source_frame_count_histogram": {
+      "4": 213
+    },
+    "batch_observations_sha256": "afedb67922ef7fcd931efbae209ec0b144f87ca9001de12699d379f2009a586b",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        851
+      ]
+    ],
+    "source_frames": 852,
+    "unique_actual_index_count": 852,
+    "inspection_record_count": 852,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "986f01e5329954c29dff617e9acf498a91892e9834924010cbcb3944ca878e63",
+    "extracted_index_sha256": "b9f21c6d322a24e35763a2ba0273274c428384120759dcc0d228f16512fbf5a6",
+    "batch_source_frame_count_histogram": {
+      "4": 213
+    },
+    "batch_observations_sha256": "7ac2772095b7a80511d6ec3e174894237fe3d56a948cc28df24b4b011141c908",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        851
+      ]
+    ],
+    "source_frames": 852,
+    "unique_actual_index_count": 852,
+    "inspection_record_count": 852,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "3696f5f50b2f6aa4f9c67841b18997442803a65070c18a5297f5c2b7058e392a",
+    "extracted_index_sha256": "7da7f78181a5a5a64f3f9045cfaba1671098c74da526260c03add2e291a5ae5b",
+    "batch_source_frame_count_histogram": {
+      "4": 213
+    },
+    "batch_observations_sha256": "f3a02bed9baf66d6679e777f4b60675774998207599d6eefdc3b53857c3a1df5",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        918
+      ]
+    ],
+    "source_frames": 919,
+    "unique_actual_index_count": 919,
+    "inspection_record_count": 919,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "88cde0ca184c1be4855f4dc3e2a0295ad14e2e56add263677c2608f53b51639b",
+    "extracted_index_sha256": "2ff64d3fb5092d4bd691818df8d5a35b72eb083fa4d9a414f81425d43f3c29bd",
+    "batch_source_frame_count_histogram": {
+      "None": 231
+    },
+    "batch_observations_sha256": "0418ba55f47ba6bd21cb499805329de02b5971c2e8c5bc333253aeac0925aada",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        918
+      ]
+    ],
+    "source_frames": 919,
+    "unique_actual_index_count": 919,
+    "inspection_record_count": 919,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "0daad5b713d76df6d3af74d233e8da343199b82504e698e7f97755d16954b11f",
+    "extracted_index_sha256": "c62ec5ac099a921ffeab9fcbcdeec06690f85420270fc1c633b4c14f3b290427",
+    "batch_source_frame_count_histogram": {
+      "None": 231
+    },
+    "batch_observations_sha256": "26aeaccde1e676d3a3027d170274569e6343063eaff2ba3aef887b2bc2a092a6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        918
+      ]
+    ],
+    "source_frames": 919,
+    "unique_actual_index_count": 919,
+    "inspection_record_count": 919,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "0aef7de5949fecadb6626250d811ff7aa47c66e249c22943f9fc27d82171b665",
+    "extracted_index_sha256": "ac6c989b08b4992158329939613be2addc98ce2e6c21c25595f539a2141c59f2",
+    "batch_source_frame_count_histogram": {
+      "None": 231
+    },
+    "batch_observations_sha256": "52cb1f5091b198dc125500c3f2133751199538564200622b7633a3d95eb832e7",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1177
+      ]
+    ],
+    "source_frames": 1178,
+    "unique_actual_index_count": 1178,
+    "inspection_record_count": 1178,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "038c9b69e3441d5644afa2237a6f1341d4754c1f94bef4d1bf38d68a442e46d3",
+    "extracted_index_sha256": "57fa11ca6c36362b41f8737999cc4b2f76b22f286f2007dc2a6a125072ceac62",
+    "batch_source_frame_count_histogram": {
+      "None": 301
+    },
+    "batch_observations_sha256": "d2a5b0e0b5ecaee66c93f723dbf576a288a0188401258ce41d7f436230e52fa9",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1177
+      ]
+    ],
+    "source_frames": 1178,
+    "unique_actual_index_count": 1178,
+    "inspection_record_count": 1178,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "84a561effd801e5bda319c477f65179a4da822146994ba9cdc73ee6cc0609268",
+    "extracted_index_sha256": "4846f474d12739d311eb9d06e37b827805214849d36b879dbdcc176a2d6e9cec",
+    "batch_source_frame_count_histogram": {
+      "None": 297
+    },
+    "batch_observations_sha256": "0009bf1f07f0a32ca2da9a07909d1dee90d965de7d468e8a14026b9b8b6a43c6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1177
+      ]
+    ],
+    "source_frames": 1178,
+    "unique_actual_index_count": 1178,
+    "inspection_record_count": 1178,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bb5d0434a5f1448d7b9819c1d608e44c110273b4114f690f04848c3aadd165f9",
+    "extracted_index_sha256": "4fad26cef52fa6767796a707038f54f552adf5ff262997256ae461af3f845889",
+    "batch_source_frame_count_histogram": {
+      "None": 298
+    },
+    "batch_observations_sha256": "f65ce4a401aad1ee41f75269a26eb864e15683aa417acf2bf6c40678b0f4945c",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1114
+      ]
+    ],
+    "source_frames": 1115,
+    "unique_actual_index_count": 1115,
+    "inspection_record_count": 1115,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b6abe4c3490680fc1a2eaf99cd63c4fecdb56f31a1a811e6c6d1421947864f96",
+    "extracted_index_sha256": "926ee98a2984064684e7ae1058f23b5f8f068cc05ecd47efbabbe36945818ed7",
+    "batch_source_frame_count_histogram": {
+      "None": 283
+    },
+    "batch_observations_sha256": "c23a8031c57d75c213021e977602cdcffae3d9ccca9abbaa4d9febcfe707ba51",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1114
+      ]
+    ],
+    "source_frames": 1115,
+    "unique_actual_index_count": 1115,
+    "inspection_record_count": 1115,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "ad5169ab8f266b9d26def04470d5c98f13cdc5c4c527f3a5e078bdc09d75df4a",
+    "extracted_index_sha256": "ffd3ca076aef791b8c841d8799671c6e67e2737a78fd0e7faf5a1c4ff4be26b9",
+    "batch_source_frame_count_histogram": {
+      "None": 283
+    },
+    "batch_observations_sha256": "27604669a9cac8649f9566fa6bd3b5d4aef35055a3e7b9a57febe26b2a025df5",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        1114
+      ]
+    ],
+    "source_frames": 1115,
+    "unique_actual_index_count": 1115,
+    "inspection_record_count": 1115,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b43e8e63627247a0fd430b354d6b46b909c4eadcca6632458a0eaa0ac68431d9",
+    "extracted_index_sha256": "9e715bcfc8b35589f683a40a10cf5b788a4a4dcf749fad3a26ce81e0a1cb91d9",
+    "batch_source_frame_count_histogram": {
+      "None": 283
+    },
+    "batch_observations_sha256": "10f2e5f7187ecf911244ff02fbff4c2ad0ef567756f9abed7832078dc3c19179",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        598
+      ]
+    ],
+    "source_frames": 599,
+    "unique_actual_index_count": 599,
+    "inspection_record_count": 599,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "d9b48198ea19f004a1ff11ac84fd533a8e74c4c082c1569ec674ee90b9dff3ef",
+    "extracted_index_sha256": "9e0de81678a9b7fa76bbe6cc28d811766ac1d65aef2d42569921e5ec3b06c0a6",
+    "batch_source_frame_count_histogram": {
+      "None": 153
+    },
+    "batch_observations_sha256": "236154a18b581470ec785b04139cfebca8cb5ba494e8e7b6674ce96c0b2cf354",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        598
+      ]
+    ],
+    "source_frames": 599,
+    "unique_actual_index_count": 599,
+    "inspection_record_count": 599,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "269127685c0203880b165f33fbee72d3b4d5438ee81da460088d592503db6984",
+    "extracted_index_sha256": "eeb807ca32653f035ba05f2d0fbd7a832749c6a51cf3e289c791cfe434d35a0e",
+    "batch_source_frame_count_histogram": {
+      "None": 153
+    },
+    "batch_observations_sha256": "fb358615c3cd89f7f630cd79a1786bfcfc67d7fc5754b2b5b4c24a06eef97dd9",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        598
+      ]
+    ],
+    "source_frames": 599,
+    "unique_actual_index_count": 599,
+    "inspection_record_count": 599,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "7f6faed9d50cd0d4568ea2557d63e306a686f03c8b31ef737a410789b6e783ca",
+    "extracted_index_sha256": "fd955a85cbb38e0e69bd1c351c534e0640b1e1df0ef3020c95b65255e3c49975",
+    "batch_source_frame_count_histogram": {
+      "None": 153
+    },
+    "batch_observations_sha256": "8bc02cf66198eacaeb8862a297cae14574d70bfd1cf77f3a5e9108cadfc8b9e3",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        336
+      ]
+    ],
+    "source_frames": 337,
+    "unique_actual_index_count": 337,
+    "inspection_record_count": 337,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f1cdfec0323c9599b1b655a4856b8835d97a5c66e8991c40152a8c053bb29210",
+    "extracted_index_sha256": "c58084ad8c9ed130aaca28c885f478483152e71aa2a6ec8de426400c4c786919",
+    "batch_source_frame_count_histogram": {
+      "None": 85
+    },
+    "batch_observations_sha256": "ca677f8e5591ba23be92dc19dd4f39d43f767c30093b3abc55cd634a36c4904a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        336
+      ]
+    ],
+    "source_frames": 337,
+    "unique_actual_index_count": 337,
+    "inspection_record_count": 337,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "2c733f9f15b19fb29755b02f74cc7fed61a02cb27deaf51676b4129e4d6786d2",
+    "extracted_index_sha256": "8a8fe5e04c1d736993c4a013563e32cae2892d1693987d52a2add9710533aac6",
+    "batch_source_frame_count_histogram": {
+      "None": 85
+    },
+    "batch_observations_sha256": "9c5173f2c7840fbf08097fd3dd8bd44907b070e8dc8befc8d9dd55d78e94b3ba",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        336
+      ]
+    ],
+    "source_frames": 337,
+    "unique_actual_index_count": 337,
+    "inspection_record_count": 337,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6ad264394e10eb053a1d957cc6f656b61310174ddbc64491b9cdf9c454b78982",
+    "extracted_index_sha256": "091d52c96c04f6707008b3505853e39b64c0df643b846ba3fa5b0a680e5c9eb3",
+    "batch_source_frame_count_histogram": {
+      "None": 85
+    },
+    "batch_observations_sha256": "fc99131a95714e71526f9970ba55439fd562d92edf6d6c53933115ea9eb07876",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        875
+      ]
+    ],
+    "source_frames": 876,
+    "unique_actual_index_count": 876,
+    "inspection_record_count": 876,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "014df3217cd2fdd78656019eee01348bd932769cc2934605da19f9dc5867ff5a",
+    "extracted_index_sha256": "a3d083f11f38a633b5b7a18f51ef353090f9e65247b8b22069eff1940a4629e8",
+    "batch_source_frame_count_histogram": {
+      "None": 219
+    },
+    "batch_observations_sha256": "fee4b77f8a4df3af2f80317b80f786fe9b55e3a48c383e637b8f9c7fef3b4815",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        875
+      ]
+    ],
+    "source_frames": 876,
+    "unique_actual_index_count": 876,
+    "inspection_record_count": 876,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "3ebcdbecf24b4e5596bc2ae7785dfae3240f60167819cab6b09bc7a4c18458ee",
+    "extracted_index_sha256": "534f5fe7b26d05bf89b59e1a4ded90fd77f131800019e9ca41cda2b1040c3d87",
+    "batch_source_frame_count_histogram": {
+      "None": 219
+    },
+    "batch_observations_sha256": "f2adaac0ca7e92e510c0477738cf1691c4724e179113ad3ddd2321318967802f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        875
+      ]
+    ],
+    "source_frames": 876,
+    "unique_actual_index_count": 876,
+    "inspection_record_count": 876,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b080e10a6b95243661f4248ffb4768be54343274f5570da12a855655dd7ae90b",
+    "extracted_index_sha256": "80ccfd293460f88138fbfcd7b27d60833342361d4ed884d978b1ea34616d1543",
+    "batch_source_frame_count_histogram": {
+      "None": 219
+    },
+    "batch_observations_sha256": "9d379f993e9a22bcb18e4ab112f503f44877fee3e199f128fa90f0b9419b2f78",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        742
+      ]
+    ],
+    "source_frames": 743,
+    "unique_actual_index_count": 743,
+    "inspection_record_count": 743,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b38971e756b4eee49308e7c761481479d73d67b413ecb48fc50fdd8fbd40a434",
+    "extracted_index_sha256": "85bb7c4e2f2cd330065b46c2c54bfa6fa34b47baf70b465970163df76261b960",
+    "batch_source_frame_count_histogram": {
+      "None": 192
+    },
+    "batch_observations_sha256": "e6c4d2523287b0dc66007fed7a0f34661103295e7b1161dfca83210697900b72",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        742
+      ]
+    ],
+    "source_frames": 743,
+    "unique_actual_index_count": 743,
+    "inspection_record_count": 743,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "4e9a3191a557602564c483151e404254cac37c4d2bea38f0852989a34a86f07c",
+    "extracted_index_sha256": "6844fc0d75e2807d4375b14a8f1177521c04d85c0bec132ded60db62d76ed866",
+    "batch_source_frame_count_histogram": {
+      "None": 192
+    },
+    "batch_observations_sha256": "7f699e69f065104438bd03b14389d9cb9f93ef42a585ffaf7a24b0c8ac19e50a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        742
+      ]
+    ],
+    "source_frames": 743,
+    "unique_actual_index_count": 743,
+    "inspection_record_count": 743,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f45beb4be9408c2f1920b4fb6024dd9ea326b1edc2bbfd8a6e02b480edf77408",
+    "extracted_index_sha256": "0590825a076232970098f11d8eb4a9036e5dcaf13914a726c377a5a579312487",
+    "batch_source_frame_count_histogram": {
+      "None": 192
+    },
+    "batch_observations_sha256": "b6003b0b7f14b6854087bbda6c2f10d7ef603d28a45743799d28c1be63e96b6b",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        971
+      ]
+    ],
+    "source_frames": 972,
+    "unique_actual_index_count": 972,
+    "inspection_record_count": 972,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b23918ce352394d2fe6dfbed8f9ec2a2d7a842947d0a29dfe016bd995af9b2f5",
+    "extracted_index_sha256": "bcf7f40c5a091c19aa8cdf60d16c190abfcd93a8f7eced208a40d9c3456fbe33",
+    "batch_source_frame_count_histogram": {
+      "None": 243
+    },
+    "batch_observations_sha256": "7960638a7f1d940e7fa99b909d41ae8a62640c25e1e7251bab678673f82b2607",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        971
+      ]
+    ],
+    "source_frames": 972,
+    "unique_actual_index_count": 972,
+    "inspection_record_count": 972,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "a6b3bb2c70a71be3fce3d9bba47f04328fc6a911ce78354085207cbee42537b8",
+    "extracted_index_sha256": "b2367e77dcf902a23e1ae0edf1564107c7322854f4788571905814bbc1c3e81c",
+    "batch_source_frame_count_histogram": {
+      "None": 243
+    },
+    "batch_observations_sha256": "1407958f63678eafdce65fe669189acde753d0e49a7bdb89d93567b98d7c2d01",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        971
+      ]
+    ],
+    "source_frames": 972,
+    "unique_actual_index_count": 972,
+    "inspection_record_count": 972,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "8dba2a5303aece7a67ce1c7447a0974aa05a6d1cba59d9937743b0b6137daa33",
+    "extracted_index_sha256": "adcf53f1a891f3982d4286e771bedf56124190be77a7646ff305fb5071747cdb",
+    "batch_source_frame_count_histogram": {
+      "None": 243
+    },
+    "batch_observations_sha256": "ed516f2cf2badc1f21790fd22f1c8e9d9307cb24b735857b4527cf774aa79c15",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        370
+      ]
+    ],
+    "source_frames": 371,
+    "unique_actual_index_count": 371,
+    "inspection_record_count": 371,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "62a329d543d157d9d472d0ba8598886dfbdae8ed2f78d58fec16d778d31cbe84",
+    "extracted_index_sha256": "0a3e03306b272b6f31a53e8c6009c56f48a57bd6e9d28a46c16bf201551d02b9",
+    "batch_source_frame_count_histogram": {
+      "12": 92,
+      "9": 1
+    },
+    "batch_observations_sha256": "a47c6ac0665b57947fa99daacd22609e1859df995bba32a778667bb2bad51bb6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        370
+      ]
+    ],
+    "source_frames": 371,
+    "unique_actual_index_count": 371,
+    "inspection_record_count": 371,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "cff59543eef39e6e858fb5f820c5ceb1db9b7bfcec99a9a8c66b250f36feea99",
+    "extracted_index_sha256": "e13877680de54f7d2fa72e9775f37753ae5b6d80ae89b21752c38085ea1b93a3",
+    "batch_source_frame_count_histogram": {
+      "12": 92,
+      "9": 1
+    },
+    "batch_observations_sha256": "405b21927fd3b2134a5778a086c1b43fec2991f3cf5811a3a82f3620acebb427",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        370
+      ]
+    ],
+    "source_frames": 371,
+    "unique_actual_index_count": 371,
+    "inspection_record_count": 371,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "06ec0a2e5b2f454bdd0b458c0d192bb9c061a337cde13b584c06544ffb5c0058",
+    "extracted_index_sha256": "1936429a719df0b2d25db6ebfebc007d708c14c40625176ddc0895409890be54",
+    "batch_source_frame_count_histogram": {
+      "12": 92,
+      "9": 1
+    },
+    "batch_observations_sha256": "c07027d821ed08d727587904edcbc991239273c162ffb4776839f89781be45a8",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        124
+      ]
+    ],
+    "source_frames": 125,
+    "unique_actual_index_count": 125,
+    "inspection_record_count": 125,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "91c00f5fa2c23e816a1d158265c8e2796aa62dfd1e2963f5bc6dcedfce7114e4",
+    "extracted_index_sha256": "9692c260e9a39381b63af1b3f9aa11be261f62bee5b68092d59e145e1e3226ab",
+    "batch_source_frame_count_histogram": {
+      "None": 32
+    },
+    "batch_observations_sha256": "f61f4617b1c74d36db30f3329ded81d96c9b9a8c87a64aee31d775193d06ef71",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        124
+      ]
+    ],
+    "source_frames": 125,
+    "unique_actual_index_count": 125,
+    "inspection_record_count": 125,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "cfe0a1fe0985e788e74541613185038d92f01b2d7a9a1c4f579f63d69bb8cf42",
+    "extracted_index_sha256": "46717a55002e973956117b1327b5113ef564e1ca208bbee22409d82446697d87",
+    "batch_source_frame_count_histogram": {
+      "None": 32
+    },
+    "batch_observations_sha256": "c7bc0997b30eb8079ca0e8eb105ab00febe99533a1fd5a31a6ac616efe2a0d4f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        124
+      ]
+    ],
+    "source_frames": 125,
+    "unique_actual_index_count": 125,
+    "inspection_record_count": 125,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f7bcd54d375d7f37f516396c678d74f2a580b83027f67808e00aaf1aabe45dfd",
+    "extracted_index_sha256": "2b4952333ce0574cb6132726ce2b7aad9c4103241ef25550fb2e3b416d2cbd2c",
+    "batch_source_frame_count_histogram": {
+      "None": 32
+    },
+    "batch_observations_sha256": "7f8615676bad653676b6452847736744637e2eb3a3a22999d12279af7e4ac699",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        709
+      ]
+    ],
+    "source_frames": 710,
+    "unique_actual_index_count": 710,
+    "inspection_record_count": 710,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "42fe36a74d6abe1d76ede109c916e580122a3294b20e2bfc30b652fdb68c282d",
+    "extracted_index_sha256": "107c41ddf791fb3055bc2dbc2e7e5253eeaa3778e416c7673f3d4c9cc667fb19",
+    "batch_source_frame_count_histogram": {
+      "None": 178
+    },
+    "batch_observations_sha256": "4ef69dd12e366c1673811e9515952c924d8719fc035211201f743ab116eaba36",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        709
+      ]
+    ],
+    "source_frames": 710,
+    "unique_actual_index_count": 710,
+    "inspection_record_count": 710,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "1a3ffe2f44c895d337360a8dd08b6c2368043f33d8eac19ef1f837cc644cc3ea",
+    "extracted_index_sha256": "bb4776fb4bafa03328dcb18d304841f6368159ff9d8ec5b7e2c3be845cdf09d5",
+    "batch_source_frame_count_histogram": {
+      "None": 178
+    },
+    "batch_observations_sha256": "090bd120f84e801984ab058b3e460b3e77a7c4b8e609fc322ecbb42a856dfdeb",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        709
+      ]
+    ],
+    "source_frames": 710,
+    "unique_actual_index_count": 710,
+    "inspection_record_count": 710,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "60f58a31836039bb97ff8213d893ebb371dc29b23948f93ca5f327a69d96e39b",
+    "extracted_index_sha256": "ed72c614802fa8012047d94a0e67f4b075f8bd610c0be9b1ac00f420525f1bb1",
+    "batch_source_frame_count_histogram": {
+      "None": 178
+    },
+    "batch_observations_sha256": "f5b2726059ff3ad5abb0e5015e16959f48dcfad964a0abd709cf5df16822313b",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        0
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        25,
+        25
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        45,
+        45
+      ],
+      [
+        50,
+        50
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        60,
+        60
+      ],
+      [
+        65,
+        65
+      ],
+      [
+        70,
+        70
+      ],
+      [
+        75,
+        75
+      ],
+      [
+        80,
+        80
+      ],
+      [
+        85,
+        85
+      ],
+      [
+        90,
+        90
+      ],
+      [
+        95,
+        95
+      ],
+      [
+        100,
+        100
+      ],
+      [
+        105,
+        105
+      ],
+      [
+        110,
+        110
+      ],
+      [
+        115,
+        115
+      ],
+      [
+        120,
+        120
+      ],
+      [
+        125,
+        125
+      ],
+      [
+        130,
+        130
+      ],
+      [
+        135,
+        135
+      ],
+      [
+        140,
+        140
+      ],
+      [
+        145,
+        145
+      ],
+      [
+        150,
+        150
+      ],
+      [
+        155,
+        155
+      ],
+      [
+        160,
+        160
+      ],
+      [
+        165,
+        165
+      ],
+      [
+        170,
+        170
+      ],
+      [
+        175,
+        175
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        185,
+        185
+      ],
+      [
+        190,
+        190
+      ],
+      [
+        195,
+        195
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        205,
+        205
+      ],
+      [
+        210,
+        210
+      ],
+      [
+        215,
+        215
+      ],
+      [
+        220,
+        220
+      ],
+      [
+        225,
+        225
+      ],
+      [
+        230,
+        230
+      ],
+      [
+        235,
+        235
+      ],
+      [
+        240,
+        240
+      ],
+      [
+        245,
+        245
+      ],
+      [
+        250,
+        250
+      ],
+      [
+        255,
+        255
+      ],
+      [
+        260,
+        260
+      ],
+      [
+        265,
+        265
+      ],
+      [
+        270,
+        270
+      ],
+      [
+        275,
+        275
+      ],
+      [
+        280,
+        280
+      ],
+      [
+        285,
+        285
+      ],
+      [
+        290,
+        290
+      ],
+      [
+        295,
+        295
+      ],
+      [
+        300,
+        300
+      ],
+      [
+        305,
+        305
+      ],
+      [
+        310,
+        310
+      ],
+      [
+        315,
+        315
+      ],
+      [
+        320,
+        320
+      ],
+      [
+        325,
+        325
+      ],
+      [
+        330,
+        330
+      ],
+      [
+        335,
+        335
+      ],
+      [
+        340,
+        340
+      ],
+      [
+        345,
+        345
+      ],
+      [
+        350,
+        350
+      ],
+      [
+        355,
+        355
+      ],
+      [
+        360,
+        360
+      ],
+      [
+        365,
+        365
+      ],
+      [
+        370,
+        370
+      ],
+      [
+        375,
+        375
+      ],
+      [
+        380,
+        380
+      ],
+      [
+        385,
+        385
+      ],
+      [
+        390,
+        390
+      ],
+      [
+        395,
+        395
+      ],
+      [
+        400,
+        400
+      ],
+      [
+        405,
+        405
+      ],
+      [
+        410,
+        410
+      ],
+      [
+        415,
+        415
+      ],
+      [
+        420,
+        420
+      ],
+      [
+        425,
+        425
+      ],
+      [
+        430,
+        430
+      ],
+      [
+        435,
+        435
+      ],
+      [
+        440,
+        440
+      ],
+      [
+        445,
+        445
+      ],
+      [
+        450,
+        450
+      ],
+      [
+        455,
+        455
+      ],
+      [
+        460,
+        460
+      ],
+      [
+        465,
+        465
+      ],
+      [
+        470,
+        470
+      ],
+      [
+        475,
+        475
+      ],
+      [
+        480,
+        480
+      ],
+      [
+        485,
+        485
+      ],
+      [
+        490,
+        490
+      ],
+      [
+        495,
+        495
+      ],
+      [
+        500,
+        500
+      ],
+      [
+        505,
+        505
+      ],
+      [
+        510,
+        510
+      ],
+      [
+        515,
+        515
+      ],
+      [
+        520,
+        520
+      ],
+      [
+        525,
+        525
+      ],
+      [
+        530,
+        530
+      ],
+      [
+        535,
+        535
+      ],
+      [
+        540,
+        540
+      ],
+      [
+        545,
+        545
+      ],
+      [
+        550,
+        550
+      ],
+      [
+        555,
+        555
+      ],
+      [
+        560,
+        560
+      ],
+      [
+        565,
+        565
+      ],
+      [
+        570,
+        570
+      ],
+      [
+        575,
+        575
+      ],
+      [
+        580,
+        580
+      ],
+      [
+        585,
+        585
+      ],
+      [
+        590,
+        590
+      ],
+      [
+        595,
+        1538
+      ]
+    ],
+    "source_frames": 1539,
+    "unique_actual_index_count": 1063,
+    "inspection_record_count": 1063,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [
+      [
+        1,
+        4
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        16,
+        19
+      ],
+      [
+        21,
+        24
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        31,
+        34
+      ],
+      [
+        36,
+        39
+      ],
+      [
+        41,
+        44
+      ],
+      [
+        46,
+        49
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        56,
+        59
+      ],
+      [
+        61,
+        64
+      ],
+      [
+        66,
+        69
+      ],
+      [
+        71,
+        74
+      ],
+      [
+        76,
+        79
+      ],
+      [
+        81,
+        84
+      ],
+      [
+        86,
+        89
+      ],
+      [
+        91,
+        94
+      ],
+      [
+        96,
+        99
+      ],
+      [
+        101,
+        104
+      ],
+      [
+        106,
+        109
+      ],
+      [
+        111,
+        114
+      ],
+      [
+        116,
+        119
+      ],
+      [
+        121,
+        124
+      ],
+      [
+        126,
+        129
+      ],
+      [
+        131,
+        134
+      ],
+      [
+        136,
+        139
+      ],
+      [
+        141,
+        144
+      ],
+      [
+        146,
+        149
+      ],
+      [
+        151,
+        154
+      ],
+      [
+        156,
+        159
+      ],
+      [
+        161,
+        164
+      ],
+      [
+        166,
+        169
+      ],
+      [
+        171,
+        174
+      ],
+      [
+        176,
+        179
+      ],
+      [
+        181,
+        184
+      ],
+      [
+        186,
+        189
+      ],
+      [
+        191,
+        194
+      ],
+      [
+        196,
+        199
+      ],
+      [
+        201,
+        204
+      ],
+      [
+        206,
+        209
+      ],
+      [
+        211,
+        214
+      ],
+      [
+        216,
+        219
+      ],
+      [
+        221,
+        224
+      ],
+      [
+        226,
+        229
+      ],
+      [
+        231,
+        234
+      ],
+      [
+        236,
+        239
+      ],
+      [
+        241,
+        244
+      ],
+      [
+        246,
+        249
+      ],
+      [
+        251,
+        254
+      ],
+      [
+        256,
+        259
+      ],
+      [
+        261,
+        264
+      ],
+      [
+        266,
+        269
+      ],
+      [
+        271,
+        274
+      ],
+      [
+        276,
+        279
+      ],
+      [
+        281,
+        284
+      ],
+      [
+        286,
+        289
+      ],
+      [
+        291,
+        294
+      ],
+      [
+        296,
+        299
+      ],
+      [
+        301,
+        304
+      ],
+      [
+        306,
+        309
+      ],
+      [
+        311,
+        314
+      ],
+      [
+        316,
+        319
+      ],
+      [
+        321,
+        324
+      ],
+      [
+        326,
+        329
+      ],
+      [
+        331,
+        334
+      ],
+      [
+        336,
+        339
+      ],
+      [
+        341,
+        344
+      ],
+      [
+        346,
+        349
+      ],
+      [
+        351,
+        354
+      ],
+      [
+        356,
+        359
+      ],
+      [
+        361,
+        364
+      ],
+      [
+        366,
+        369
+      ],
+      [
+        371,
+        374
+      ],
+      [
+        376,
+        379
+      ],
+      [
+        381,
+        384
+      ],
+      [
+        386,
+        389
+      ],
+      [
+        391,
+        394
+      ],
+      [
+        396,
+        399
+      ],
+      [
+        401,
+        404
+      ],
+      [
+        406,
+        409
+      ],
+      [
+        411,
+        414
+      ],
+      [
+        416,
+        419
+      ],
+      [
+        421,
+        424
+      ],
+      [
+        426,
+        429
+      ],
+      [
+        431,
+        434
+      ],
+      [
+        436,
+        439
+      ],
+      [
+        441,
+        444
+      ],
+      [
+        446,
+        449
+      ],
+      [
+        451,
+        454
+      ],
+      [
+        456,
+        459
+      ],
+      [
+        461,
+        464
+      ],
+      [
+        466,
+        469
+      ],
+      [
+        471,
+        474
+      ],
+      [
+        476,
+        479
+      ],
+      [
+        481,
+        484
+      ],
+      [
+        486,
+        489
+      ],
+      [
+        491,
+        494
+      ],
+      [
+        496,
+        499
+      ],
+      [
+        501,
+        504
+      ],
+      [
+        506,
+        509
+      ],
+      [
+        511,
+        514
+      ],
+      [
+        516,
+        519
+      ],
+      [
+        521,
+        524
+      ],
+      [
+        526,
+        529
+      ],
+      [
+        531,
+        534
+      ],
+      [
+        536,
+        539
+      ],
+      [
+        541,
+        544
+      ],
+      [
+        546,
+        549
+      ],
+      [
+        551,
+        554
+      ],
+      [
+        556,
+        559
+      ],
+      [
+        561,
+        564
+      ],
+      [
+        566,
+        569
+      ],
+      [
+        571,
+        574
+      ],
+      [
+        576,
+        579
+      ],
+      [
+        581,
+        584
+      ],
+      [
+        586,
+        589
+      ],
+      [
+        591,
+        594
+      ]
+    ],
+    "inspection_index_sha256": "f9fae39417bfdbc2df9919040e8483789e598acfdbe28abbd483868f99e8a1a7",
+    "extracted_index_sha256": "f0be0bf8264d9e1fb63a9e615441ae9b6ea50ff95c2bf3a1e3c3f50fbc50e9e5",
+    "batch_source_frame_count_histogram": {
+      "None": 267
+    },
+    "batch_observations_sha256": "ab48de0fed19205211f6e4c3017d4a63e0e468b67f1c774a30b5756bd7f14aa7",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        0
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        25,
+        25
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        45,
+        45
+      ],
+      [
+        50,
+        50
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        60,
+        60
+      ],
+      [
+        65,
+        65
+      ],
+      [
+        70,
+        70
+      ],
+      [
+        75,
+        75
+      ],
+      [
+        80,
+        80
+      ],
+      [
+        85,
+        85
+      ],
+      [
+        90,
+        90
+      ],
+      [
+        95,
+        95
+      ],
+      [
+        100,
+        100
+      ],
+      [
+        105,
+        105
+      ],
+      [
+        110,
+        110
+      ],
+      [
+        115,
+        115
+      ],
+      [
+        120,
+        120
+      ],
+      [
+        125,
+        125
+      ],
+      [
+        130,
+        130
+      ],
+      [
+        135,
+        135
+      ],
+      [
+        140,
+        140
+      ],
+      [
+        145,
+        145
+      ],
+      [
+        150,
+        150
+      ],
+      [
+        155,
+        155
+      ],
+      [
+        160,
+        160
+      ],
+      [
+        165,
+        165
+      ],
+      [
+        170,
+        170
+      ],
+      [
+        175,
+        175
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        185,
+        185
+      ],
+      [
+        190,
+        190
+      ],
+      [
+        195,
+        195
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        205,
+        205
+      ],
+      [
+        210,
+        210
+      ],
+      [
+        215,
+        215
+      ],
+      [
+        220,
+        220
+      ],
+      [
+        225,
+        225
+      ],
+      [
+        230,
+        230
+      ],
+      [
+        235,
+        235
+      ],
+      [
+        240,
+        240
+      ],
+      [
+        245,
+        245
+      ],
+      [
+        250,
+        250
+      ],
+      [
+        255,
+        255
+      ],
+      [
+        260,
+        260
+      ],
+      [
+        265,
+        265
+      ],
+      [
+        270,
+        270
+      ],
+      [
+        275,
+        275
+      ],
+      [
+        280,
+        280
+      ],
+      [
+        285,
+        285
+      ],
+      [
+        290,
+        290
+      ],
+      [
+        295,
+        295
+      ],
+      [
+        300,
+        300
+      ],
+      [
+        305,
+        305
+      ],
+      [
+        310,
+        310
+      ],
+      [
+        315,
+        315
+      ],
+      [
+        320,
+        320
+      ],
+      [
+        325,
+        325
+      ],
+      [
+        330,
+        330
+      ],
+      [
+        335,
+        335
+      ],
+      [
+        340,
+        340
+      ],
+      [
+        345,
+        345
+      ],
+      [
+        350,
+        350
+      ],
+      [
+        355,
+        355
+      ],
+      [
+        360,
+        360
+      ],
+      [
+        365,
+        365
+      ],
+      [
+        370,
+        370
+      ],
+      [
+        375,
+        375
+      ],
+      [
+        380,
+        380
+      ],
+      [
+        385,
+        385
+      ],
+      [
+        390,
+        390
+      ],
+      [
+        395,
+        395
+      ],
+      [
+        400,
+        400
+      ],
+      [
+        405,
+        405
+      ],
+      [
+        410,
+        410
+      ],
+      [
+        415,
+        415
+      ],
+      [
+        420,
+        420
+      ],
+      [
+        425,
+        425
+      ],
+      [
+        430,
+        430
+      ],
+      [
+        435,
+        435
+      ],
+      [
+        440,
+        440
+      ],
+      [
+        445,
+        445
+      ],
+      [
+        450,
+        450
+      ],
+      [
+        455,
+        455
+      ],
+      [
+        460,
+        460
+      ],
+      [
+        465,
+        465
+      ],
+      [
+        470,
+        470
+      ],
+      [
+        475,
+        475
+      ],
+      [
+        480,
+        480
+      ],
+      [
+        485,
+        485
+      ],
+      [
+        490,
+        490
+      ],
+      [
+        495,
+        495
+      ],
+      [
+        500,
+        500
+      ],
+      [
+        505,
+        505
+      ],
+      [
+        510,
+        510
+      ],
+      [
+        515,
+        515
+      ],
+      [
+        520,
+        520
+      ],
+      [
+        525,
+        525
+      ],
+      [
+        530,
+        530
+      ],
+      [
+        535,
+        535
+      ],
+      [
+        540,
+        540
+      ],
+      [
+        545,
+        545
+      ],
+      [
+        550,
+        550
+      ],
+      [
+        555,
+        555
+      ],
+      [
+        560,
+        560
+      ],
+      [
+        565,
+        565
+      ],
+      [
+        570,
+        570
+      ],
+      [
+        575,
+        575
+      ],
+      [
+        580,
+        580
+      ],
+      [
+        585,
+        585
+      ],
+      [
+        590,
+        590
+      ],
+      [
+        595,
+        1538
+      ]
+    ],
+    "source_frames": 1539,
+    "unique_actual_index_count": 1063,
+    "inspection_record_count": 1063,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [
+      [
+        1,
+        4
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        16,
+        19
+      ],
+      [
+        21,
+        24
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        31,
+        34
+      ],
+      [
+        36,
+        39
+      ],
+      [
+        41,
+        44
+      ],
+      [
+        46,
+        49
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        56,
+        59
+      ],
+      [
+        61,
+        64
+      ],
+      [
+        66,
+        69
+      ],
+      [
+        71,
+        74
+      ],
+      [
+        76,
+        79
+      ],
+      [
+        81,
+        84
+      ],
+      [
+        86,
+        89
+      ],
+      [
+        91,
+        94
+      ],
+      [
+        96,
+        99
+      ],
+      [
+        101,
+        104
+      ],
+      [
+        106,
+        109
+      ],
+      [
+        111,
+        114
+      ],
+      [
+        116,
+        119
+      ],
+      [
+        121,
+        124
+      ],
+      [
+        126,
+        129
+      ],
+      [
+        131,
+        134
+      ],
+      [
+        136,
+        139
+      ],
+      [
+        141,
+        144
+      ],
+      [
+        146,
+        149
+      ],
+      [
+        151,
+        154
+      ],
+      [
+        156,
+        159
+      ],
+      [
+        161,
+        164
+      ],
+      [
+        166,
+        169
+      ],
+      [
+        171,
+        174
+      ],
+      [
+        176,
+        179
+      ],
+      [
+        181,
+        184
+      ],
+      [
+        186,
+        189
+      ],
+      [
+        191,
+        194
+      ],
+      [
+        196,
+        199
+      ],
+      [
+        201,
+        204
+      ],
+      [
+        206,
+        209
+      ],
+      [
+        211,
+        214
+      ],
+      [
+        216,
+        219
+      ],
+      [
+        221,
+        224
+      ],
+      [
+        226,
+        229
+      ],
+      [
+        231,
+        234
+      ],
+      [
+        236,
+        239
+      ],
+      [
+        241,
+        244
+      ],
+      [
+        246,
+        249
+      ],
+      [
+        251,
+        254
+      ],
+      [
+        256,
+        259
+      ],
+      [
+        261,
+        264
+      ],
+      [
+        266,
+        269
+      ],
+      [
+        271,
+        274
+      ],
+      [
+        276,
+        279
+      ],
+      [
+        281,
+        284
+      ],
+      [
+        286,
+        289
+      ],
+      [
+        291,
+        294
+      ],
+      [
+        296,
+        299
+      ],
+      [
+        301,
+        304
+      ],
+      [
+        306,
+        309
+      ],
+      [
+        311,
+        314
+      ],
+      [
+        316,
+        319
+      ],
+      [
+        321,
+        324
+      ],
+      [
+        326,
+        329
+      ],
+      [
+        331,
+        334
+      ],
+      [
+        336,
+        339
+      ],
+      [
+        341,
+        344
+      ],
+      [
+        346,
+        349
+      ],
+      [
+        351,
+        354
+      ],
+      [
+        356,
+        359
+      ],
+      [
+        361,
+        364
+      ],
+      [
+        366,
+        369
+      ],
+      [
+        371,
+        374
+      ],
+      [
+        376,
+        379
+      ],
+      [
+        381,
+        384
+      ],
+      [
+        386,
+        389
+      ],
+      [
+        391,
+        394
+      ],
+      [
+        396,
+        399
+      ],
+      [
+        401,
+        404
+      ],
+      [
+        406,
+        409
+      ],
+      [
+        411,
+        414
+      ],
+      [
+        416,
+        419
+      ],
+      [
+        421,
+        424
+      ],
+      [
+        426,
+        429
+      ],
+      [
+        431,
+        434
+      ],
+      [
+        436,
+        439
+      ],
+      [
+        441,
+        444
+      ],
+      [
+        446,
+        449
+      ],
+      [
+        451,
+        454
+      ],
+      [
+        456,
+        459
+      ],
+      [
+        461,
+        464
+      ],
+      [
+        466,
+        469
+      ],
+      [
+        471,
+        474
+      ],
+      [
+        476,
+        479
+      ],
+      [
+        481,
+        484
+      ],
+      [
+        486,
+        489
+      ],
+      [
+        491,
+        494
+      ],
+      [
+        496,
+        499
+      ],
+      [
+        501,
+        504
+      ],
+      [
+        506,
+        509
+      ],
+      [
+        511,
+        514
+      ],
+      [
+        516,
+        519
+      ],
+      [
+        521,
+        524
+      ],
+      [
+        526,
+        529
+      ],
+      [
+        531,
+        534
+      ],
+      [
+        536,
+        539
+      ],
+      [
+        541,
+        544
+      ],
+      [
+        546,
+        549
+      ],
+      [
+        551,
+        554
+      ],
+      [
+        556,
+        559
+      ],
+      [
+        561,
+        564
+      ],
+      [
+        566,
+        569
+      ],
+      [
+        571,
+        574
+      ],
+      [
+        576,
+        579
+      ],
+      [
+        581,
+        584
+      ],
+      [
+        586,
+        589
+      ],
+      [
+        591,
+        594
+      ]
+    ],
+    "inspection_index_sha256": "88a52330d5953d7773a9d903f143def7ec1804027bc891a8ae3606f5dc275bbe",
+    "extracted_index_sha256": "c379676a25a6dd41fcdbf00f3f1b512fbec7d95fea46b7b834e55dda8212c646",
+    "batch_source_frame_count_histogram": {
+      "None": 267
+    },
+    "batch_observations_sha256": "ff5f2b434048d4edcd8f8c6b18862b0552bbb92deabfb5b7e527d938652bd573",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        0
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        15,
+        15
+      ],
+      [
+        20,
+        20
+      ],
+      [
+        25,
+        25
+      ],
+      [
+        30,
+        30
+      ],
+      [
+        35,
+        35
+      ],
+      [
+        40,
+        40
+      ],
+      [
+        45,
+        45
+      ],
+      [
+        50,
+        50
+      ],
+      [
+        55,
+        55
+      ],
+      [
+        60,
+        60
+      ],
+      [
+        65,
+        65
+      ],
+      [
+        70,
+        70
+      ],
+      [
+        75,
+        75
+      ],
+      [
+        80,
+        80
+      ],
+      [
+        85,
+        85
+      ],
+      [
+        90,
+        90
+      ],
+      [
+        95,
+        95
+      ],
+      [
+        100,
+        100
+      ],
+      [
+        105,
+        105
+      ],
+      [
+        110,
+        110
+      ],
+      [
+        115,
+        115
+      ],
+      [
+        120,
+        120
+      ],
+      [
+        125,
+        125
+      ],
+      [
+        130,
+        130
+      ],
+      [
+        135,
+        135
+      ],
+      [
+        140,
+        140
+      ],
+      [
+        145,
+        145
+      ],
+      [
+        150,
+        150
+      ],
+      [
+        155,
+        155
+      ],
+      [
+        160,
+        160
+      ],
+      [
+        165,
+        165
+      ],
+      [
+        170,
+        170
+      ],
+      [
+        175,
+        175
+      ],
+      [
+        180,
+        180
+      ],
+      [
+        185,
+        185
+      ],
+      [
+        190,
+        190
+      ],
+      [
+        195,
+        195
+      ],
+      [
+        200,
+        200
+      ],
+      [
+        205,
+        205
+      ],
+      [
+        210,
+        210
+      ],
+      [
+        215,
+        215
+      ],
+      [
+        220,
+        220
+      ],
+      [
+        225,
+        225
+      ],
+      [
+        230,
+        230
+      ],
+      [
+        235,
+        235
+      ],
+      [
+        240,
+        240
+      ],
+      [
+        245,
+        245
+      ],
+      [
+        250,
+        250
+      ],
+      [
+        255,
+        255
+      ],
+      [
+        260,
+        260
+      ],
+      [
+        265,
+        265
+      ],
+      [
+        270,
+        270
+      ],
+      [
+        275,
+        275
+      ],
+      [
+        280,
+        280
+      ],
+      [
+        285,
+        285
+      ],
+      [
+        290,
+        290
+      ],
+      [
+        295,
+        295
+      ],
+      [
+        300,
+        300
+      ],
+      [
+        305,
+        305
+      ],
+      [
+        310,
+        310
+      ],
+      [
+        315,
+        315
+      ],
+      [
+        320,
+        320
+      ],
+      [
+        325,
+        325
+      ],
+      [
+        330,
+        330
+      ],
+      [
+        335,
+        335
+      ],
+      [
+        340,
+        340
+      ],
+      [
+        345,
+        345
+      ],
+      [
+        350,
+        350
+      ],
+      [
+        355,
+        355
+      ],
+      [
+        360,
+        360
+      ],
+      [
+        365,
+        365
+      ],
+      [
+        370,
+        370
+      ],
+      [
+        375,
+        375
+      ],
+      [
+        380,
+        380
+      ],
+      [
+        385,
+        385
+      ],
+      [
+        390,
+        390
+      ],
+      [
+        395,
+        395
+      ],
+      [
+        400,
+        400
+      ],
+      [
+        405,
+        405
+      ],
+      [
+        410,
+        410
+      ],
+      [
+        415,
+        415
+      ],
+      [
+        420,
+        420
+      ],
+      [
+        425,
+        425
+      ],
+      [
+        430,
+        430
+      ],
+      [
+        435,
+        435
+      ],
+      [
+        440,
+        440
+      ],
+      [
+        445,
+        445
+      ],
+      [
+        450,
+        450
+      ],
+      [
+        455,
+        455
+      ],
+      [
+        460,
+        460
+      ],
+      [
+        465,
+        465
+      ],
+      [
+        470,
+        470
+      ],
+      [
+        475,
+        475
+      ],
+      [
+        480,
+        480
+      ],
+      [
+        485,
+        485
+      ],
+      [
+        490,
+        490
+      ],
+      [
+        495,
+        495
+      ],
+      [
+        500,
+        500
+      ],
+      [
+        505,
+        505
+      ],
+      [
+        510,
+        510
+      ],
+      [
+        515,
+        515
+      ],
+      [
+        520,
+        520
+      ],
+      [
+        525,
+        525
+      ],
+      [
+        530,
+        530
+      ],
+      [
+        535,
+        535
+      ],
+      [
+        540,
+        540
+      ],
+      [
+        545,
+        545
+      ],
+      [
+        550,
+        550
+      ],
+      [
+        555,
+        555
+      ],
+      [
+        560,
+        560
+      ],
+      [
+        565,
+        565
+      ],
+      [
+        570,
+        570
+      ],
+      [
+        575,
+        575
+      ],
+      [
+        580,
+        580
+      ],
+      [
+        585,
+        585
+      ],
+      [
+        590,
+        590
+      ],
+      [
+        595,
+        1538
+      ]
+    ],
+    "source_frames": 1539,
+    "unique_actual_index_count": 1063,
+    "inspection_record_count": 1063,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [
+      [
+        1,
+        4
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        11,
+        14
+      ],
+      [
+        16,
+        19
+      ],
+      [
+        21,
+        24
+      ],
+      [
+        26,
+        29
+      ],
+      [
+        31,
+        34
+      ],
+      [
+        36,
+        39
+      ],
+      [
+        41,
+        44
+      ],
+      [
+        46,
+        49
+      ],
+      [
+        51,
+        54
+      ],
+      [
+        56,
+        59
+      ],
+      [
+        61,
+        64
+      ],
+      [
+        66,
+        69
+      ],
+      [
+        71,
+        74
+      ],
+      [
+        76,
+        79
+      ],
+      [
+        81,
+        84
+      ],
+      [
+        86,
+        89
+      ],
+      [
+        91,
+        94
+      ],
+      [
+        96,
+        99
+      ],
+      [
+        101,
+        104
+      ],
+      [
+        106,
+        109
+      ],
+      [
+        111,
+        114
+      ],
+      [
+        116,
+        119
+      ],
+      [
+        121,
+        124
+      ],
+      [
+        126,
+        129
+      ],
+      [
+        131,
+        134
+      ],
+      [
+        136,
+        139
+      ],
+      [
+        141,
+        144
+      ],
+      [
+        146,
+        149
+      ],
+      [
+        151,
+        154
+      ],
+      [
+        156,
+        159
+      ],
+      [
+        161,
+        164
+      ],
+      [
+        166,
+        169
+      ],
+      [
+        171,
+        174
+      ],
+      [
+        176,
+        179
+      ],
+      [
+        181,
+        184
+      ],
+      [
+        186,
+        189
+      ],
+      [
+        191,
+        194
+      ],
+      [
+        196,
+        199
+      ],
+      [
+        201,
+        204
+      ],
+      [
+        206,
+        209
+      ],
+      [
+        211,
+        214
+      ],
+      [
+        216,
+        219
+      ],
+      [
+        221,
+        224
+      ],
+      [
+        226,
+        229
+      ],
+      [
+        231,
+        234
+      ],
+      [
+        236,
+        239
+      ],
+      [
+        241,
+        244
+      ],
+      [
+        246,
+        249
+      ],
+      [
+        251,
+        254
+      ],
+      [
+        256,
+        259
+      ],
+      [
+        261,
+        264
+      ],
+      [
+        266,
+        269
+      ],
+      [
+        271,
+        274
+      ],
+      [
+        276,
+        279
+      ],
+      [
+        281,
+        284
+      ],
+      [
+        286,
+        289
+      ],
+      [
+        291,
+        294
+      ],
+      [
+        296,
+        299
+      ],
+      [
+        301,
+        304
+      ],
+      [
+        306,
+        309
+      ],
+      [
+        311,
+        314
+      ],
+      [
+        316,
+        319
+      ],
+      [
+        321,
+        324
+      ],
+      [
+        326,
+        329
+      ],
+      [
+        331,
+        334
+      ],
+      [
+        336,
+        339
+      ],
+      [
+        341,
+        344
+      ],
+      [
+        346,
+        349
+      ],
+      [
+        351,
+        354
+      ],
+      [
+        356,
+        359
+      ],
+      [
+        361,
+        364
+      ],
+      [
+        366,
+        369
+      ],
+      [
+        371,
+        374
+      ],
+      [
+        376,
+        379
+      ],
+      [
+        381,
+        384
+      ],
+      [
+        386,
+        389
+      ],
+      [
+        391,
+        394
+      ],
+      [
+        396,
+        399
+      ],
+      [
+        401,
+        404
+      ],
+      [
+        406,
+        409
+      ],
+      [
+        411,
+        414
+      ],
+      [
+        416,
+        419
+      ],
+      [
+        421,
+        424
+      ],
+      [
+        426,
+        429
+      ],
+      [
+        431,
+        434
+      ],
+      [
+        436,
+        439
+      ],
+      [
+        441,
+        444
+      ],
+      [
+        446,
+        449
+      ],
+      [
+        451,
+        454
+      ],
+      [
+        456,
+        459
+      ],
+      [
+        461,
+        464
+      ],
+      [
+        466,
+        469
+      ],
+      [
+        471,
+        474
+      ],
+      [
+        476,
+        479
+      ],
+      [
+        481,
+        484
+      ],
+      [
+        486,
+        489
+      ],
+      [
+        491,
+        494
+      ],
+      [
+        496,
+        499
+      ],
+      [
+        501,
+        504
+      ],
+      [
+        506,
+        509
+      ],
+      [
+        511,
+        514
+      ],
+      [
+        516,
+        519
+      ],
+      [
+        521,
+        524
+      ],
+      [
+        526,
+        529
+      ],
+      [
+        531,
+        534
+      ],
+      [
+        536,
+        539
+      ],
+      [
+        541,
+        544
+      ],
+      [
+        546,
+        549
+      ],
+      [
+        551,
+        554
+      ],
+      [
+        556,
+        559
+      ],
+      [
+        561,
+        564
+      ],
+      [
+        566,
+        569
+      ],
+      [
+        571,
+        574
+      ],
+      [
+        576,
+        579
+      ],
+      [
+        581,
+        584
+      ],
+      [
+        586,
+        589
+      ],
+      [
+        591,
+        594
+      ]
+    ],
+    "inspection_index_sha256": "0ceed55f026a70b25af95f8529e6a5a75507edb5b165023a8c2e01f38673a92a",
+    "extracted_index_sha256": "e0ad08e4a2977c6bada481ef72b70e7e5583c05ae4b94254db4dd009272d1bc0",
+    "batch_source_frame_count_histogram": {
+      "None": 266
+    },
+    "batch_observations_sha256": "16e266396e8139c34d3d7601ca15b6f5c4f2898fcb8a950e107f0b9da15238c5",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        303
+      ]
+    ],
+    "source_frames": 304,
+    "unique_actual_index_count": 304,
+    "inspection_record_count": 304,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "309719883ae9cdb7d3bca60f4b10f543d9b4bb6301bfa0b029e012f71e36b215",
+    "extracted_index_sha256": "1e9148a38713ff02bdb79377c6c55fc8afabda5b8e374374122744434c7ae270",
+    "batch_source_frame_count_histogram": {
+      "12": 77
+    },
+    "batch_observations_sha256": "cd80adec5f02183cb7e6ceecb9fd770d3c9517f6c179e951a8c97f9e47ea250a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        303
+      ]
+    ],
+    "source_frames": 304,
+    "unique_actual_index_count": 304,
+    "inspection_record_count": 304,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "26ba4260b72c8c16ed7a26c76814335d5c897de5bc7e893955fa0e150e103650",
+    "extracted_index_sha256": "eaffa3a3540ee9fcc724eae90158052a2e771fcc8397af331c10b8fad99cec47",
+    "batch_source_frame_count_histogram": {
+      "12": 77
+    },
+    "batch_observations_sha256": "86fce5561c403398a7d7e7f139853ba7859a001b5c6d523076a2ac5a94531c60",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        303
+      ]
+    ],
+    "source_frames": 304,
+    "unique_actual_index_count": 304,
+    "inspection_record_count": 304,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "aabd672a8433a85b85030fe4820cea206f1da820ec1b4b72239c527261b0dc53",
+    "extracted_index_sha256": "54477334130866cf16707d352be2e3dcdd1505397881155c2709a0bae6aaaddb",
+    "batch_source_frame_count_histogram": {
+      "12": 77
+    },
+    "batch_observations_sha256": "7639138b75f11fb5a4c19a45265acb6ea7831e36421be244b915fbeebf2338a8",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        552
+      ]
+    ],
+    "source_frames": 553,
+    "unique_actual_index_count": 553,
+    "inspection_record_count": 553,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "c154ac356b17f7d08b125414c90c93c1c5dda78a91dc0ba2ab8f61f04ad4c471",
+    "extracted_index_sha256": "27ff45bbaa2f81dfc7be669aa9d0bb4793b73e68d08b67a0e62cded03103773f",
+    "batch_source_frame_count_histogram": {
+      "4": 138,
+      "1": 1
+    },
+    "batch_observations_sha256": "2736c09f531828bbb7c060ebc8be626894ca2d822112b8431dbb80017c89ed9b",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        552
+      ]
+    ],
+    "source_frames": 553,
+    "unique_actual_index_count": 553,
+    "inspection_record_count": 553,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "3f48b71fa52fb48f7681138ab3f7c81ee108ad29f5f212a32b3c74cbe2746d08",
+    "extracted_index_sha256": "3b501f9bf130651708815a211a6a9e3a04fbbcafe0625bd5777e6c898db93b59",
+    "batch_source_frame_count_histogram": {
+      "4": 138,
+      "1": 1
+    },
+    "batch_observations_sha256": "835c46034ce2860fed79d901a8a383b345178567156c8a04fe20f5e5c415f410",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        552
+      ]
+    ],
+    "source_frames": 553,
+    "unique_actual_index_count": 553,
+    "inspection_record_count": 553,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "635547578366e90cb174fa7f08b8a30644903d063ab23bf8140faf0a557221d3",
+    "extracted_index_sha256": "ae36f0c2376f15fcd6f05000da3937d922e59b065fec51174046a932d25015ea",
+    "batch_source_frame_count_histogram": {
+      "4": 138,
+      "1": 1
+    },
+    "batch_observations_sha256": "a5746bd45945104d8580914dcec187f29fc6333d1203b010968a9aada27174fe",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        595
+      ]
+    ],
+    "source_frames": 596,
+    "unique_actual_index_count": 596,
+    "inspection_record_count": 596,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "995a38d84d7477d2fde85f8e7ab3e4eebcde604b40b733964d2a44bb1607946a",
+    "extracted_index_sha256": "16f91c9896644c3c5e2efcd8bab52741c672fb41c35229eb98f821d1dec07514",
+    "batch_source_frame_count_histogram": {
+      "None": 151
+    },
+    "batch_observations_sha256": "a6b432f88a1b13e51331ad0f84a84ed1f3604172ac44f42d6f17e5b7b57db301",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        595
+      ]
+    ],
+    "source_frames": 596,
+    "unique_actual_index_count": 596,
+    "inspection_record_count": 596,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b940290b3e6887275e069385c373abe6e28bc53b1b2aab902f371439af862f35",
+    "extracted_index_sha256": "db83c3281a76fc74d8035fe983869984e489edbe828b4e4e88f5873eeab614ba",
+    "batch_source_frame_count_histogram": {
+      "None": 149
+    },
+    "batch_observations_sha256": "d83be73f039b5f333390662f795dae4165b7e6287e6bd11d548c296fc53eddf6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        595
+      ]
+    ],
+    "source_frames": 596,
+    "unique_actual_index_count": 596,
+    "inspection_record_count": 596,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "1fff0574861355d9a044ec2bdfc5bd7ba555d3de1d2456049052b0e71af66821",
+    "extracted_index_sha256": "cdaae68b4760c74d7e4b95e34945e5f24c1ac9df0700fb510d78775744acd269",
+    "batch_source_frame_count_histogram": {
+      "None": 149
+    },
+    "batch_observations_sha256": "05d1e37428ac533956d6a6c77669069d51baca775e87f30ac2cff5d9af40e4fa",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        861
+      ]
+    ],
+    "source_frames": 862,
+    "unique_actual_index_count": 862,
+    "inspection_record_count": 862,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "d76e9c9711eef18fa4982ff95096a2ac88db2b6a28d737fc7cfb5c5919d482d1",
+    "extracted_index_sha256": "d605df8c6d1b9a63ba902d0d26d0d1f723926fe1e3f66f8b99fa1d2cc898efc3",
+    "batch_source_frame_count_histogram": {
+      "None": 216
+    },
+    "batch_observations_sha256": "8aeae14b3416cbf48709a8e7d295adc5573dab7636a19599376c641754d3e85d",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        861
+      ]
+    ],
+    "source_frames": 862,
+    "unique_actual_index_count": 862,
+    "inspection_record_count": 862,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "79aa2108a3bc3eaa148b2364b9a490f8019f5b44b7601eb42bf59e941d3ca1f9",
+    "extracted_index_sha256": "63645e5d80f3e3195c530f7abe4b43af7bbb5da6a5f36e191120b8018ae8ec41",
+    "batch_source_frame_count_histogram": {
+      "None": 216
+    },
+    "batch_observations_sha256": "a17ba579915cdbaf32128fa2dccde60b5e845956733411134577d426c55b1a5c",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        861
+      ]
+    ],
+    "source_frames": 862,
+    "unique_actual_index_count": 862,
+    "inspection_record_count": 862,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "aa3f3840a9f68935782899aec4762b4df7c8b45dce81ad3661a5d708b9182566",
+    "extracted_index_sha256": "4a3f83d6a391d54171a42dc85168bf7f0903230f7a280f00416ba50426dc019d",
+    "batch_source_frame_count_histogram": {
+      "None": 216
+    },
+    "batch_observations_sha256": "a3542a4bf4d64d670bc0a3116c1b0b255edec0bf14d6929744ed85a04e69fa7a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        347
+      ]
+    ],
+    "source_frames": 348,
+    "unique_actual_index_count": 348,
+    "inspection_record_count": 348,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "920aec34bff09b07a7a00a34a778652d8e2f643bee8741276053465f1b51967f",
+    "extracted_index_sha256": "166ad09f62dcc0c20df9865c49cfc9e238bd59df2e744d68c2686f96bf0b051e",
+    "batch_source_frame_count_histogram": {
+      "None": 87
+    },
+    "batch_observations_sha256": "509eddd5fdb8d259a95cf5fa720c6a074c80b23f7d427aeccf4beebaa2b641cd",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        347
+      ]
+    ],
+    "source_frames": 348,
+    "unique_actual_index_count": 348,
+    "inspection_record_count": 348,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "604b7b8ed76877339ee58be345f49407a5c29c4a2261a783a6caaa32f6501e9a",
+    "extracted_index_sha256": "b45a352c0da127056c62eb2381fc3a9f332dd372a77d7fcc7f2146537ce6c37e",
+    "batch_source_frame_count_histogram": {
+      "None": 87
+    },
+    "batch_observations_sha256": "4846d948fa77d5c5413c917e4d4c32ed179cae3c2c05a55e7e8b5469fa22e528",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        347
+      ]
+    ],
+    "source_frames": 348,
+    "unique_actual_index_count": 348,
+    "inspection_record_count": 348,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "345f94dd6fc26bb952aec49793c730fe0aa3d96ea91594b767f50d25e022d3c4",
+    "extracted_index_sha256": "9e87fbd8a89a12852165d8e1a26c190848b77bcb9711be18cb612b228efa6f70",
+    "batch_source_frame_count_histogram": {
+      "None": 87
+    },
+    "batch_observations_sha256": "a2ce9f27bf6c3ef593b106d8e10d9545b44545f473b646acb50c9e18daddfc16",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        885
+      ]
+    ],
+    "source_frames": 886,
+    "unique_actual_index_count": 886,
+    "inspection_record_count": 886,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6643c95acf30c68e2803d1dd1faf8605b110ca38f0d7bb22ff1ad86db7347a46",
+    "extracted_index_sha256": "f7d4c4b89619ac22d9f1c4427c64d91edfbd525b5841c64dc17fa49cc653c9b5",
+    "batch_source_frame_count_histogram": {
+      "None": 222
+    },
+    "batch_observations_sha256": "fa06e38c25ca74dd88ba7e5ec5eadbc817b22d0a18619d697ae8f5a37f3b5fc3",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        885
+      ]
+    ],
+    "source_frames": 886,
+    "unique_actual_index_count": 886,
+    "inspection_record_count": 886,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "fb6b279e2eaaa3496352d3da7793c4a25452a3ff0585e2f6dd3bd48df063c43b",
+    "extracted_index_sha256": "3c39bf3bb3b063336749fc58ece8679fd97c02c3076298c83f5ec4e0d87b98b3",
+    "batch_source_frame_count_histogram": {
+      "None": 222
+    },
+    "batch_observations_sha256": "660e785d38c9beaf35f21067ec8ea8680b2c5ae6b32f8f455a948dde74c4b39a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        885
+      ]
+    ],
+    "source_frames": 886,
+    "unique_actual_index_count": 886,
+    "inspection_record_count": 886,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6bad96d17bac2f42a8dabddcf2184a83148433bfa708f8105900a0b35119e82f",
+    "extracted_index_sha256": "5c70dd513268f5cd3fd50f2b24a9fab9a82eb5ef4897a36e6bb1340502c1cf6c",
+    "batch_source_frame_count_histogram": {
+      "None": 222
+    },
+    "batch_observations_sha256": "8f71b04632b1b78d64898b1831b3b22c0e203cb341efe3c16a314b7e0d5c15cc",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        998
+      ]
+    ],
+    "source_frames": 999,
+    "unique_actual_index_count": 999,
+    "inspection_record_count": 999,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f4e9749293f88b8024b9297c0d26151379acd0d85d4941dcc37938e215ec56cb",
+    "extracted_index_sha256": "3b8df9487fa8b0410ec1c40ae5ca511717d4b458f68183a8e56ee9be96908b77",
+    "batch_source_frame_count_histogram": {
+      "12": 249,
+      "9": 1
+    },
+    "batch_observations_sha256": "f7be61952706a1d813cc5d9cb7d8e52223a515bfa10a442ccf22e4af2f4005c6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        998
+      ]
+    ],
+    "source_frames": 999,
+    "unique_actual_index_count": 999,
+    "inspection_record_count": 999,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "a182ba55e1eb4d4b440429609e8c03d6ce1788670a7ce90003c594a310cc95f3",
+    "extracted_index_sha256": "91726693ec7371e228db5dca6804c42906de6a7dd2c5950737a04b98e7daefe9",
+    "batch_source_frame_count_histogram": {
+      "12": 249,
+      "9": 1
+    },
+    "batch_observations_sha256": "c026c163dc93f51e24495406c761c58baefa215af9486388e2469b3b8c3bc203",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        998
+      ]
+    ],
+    "source_frames": 999,
+    "unique_actual_index_count": 999,
+    "inspection_record_count": 999,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bed89f9b5d5fe99392dcbf43ce6d42d1d53121515722ffd6b4655a7fb3382690",
+    "extracted_index_sha256": "d47539743810d129adc34c266a4c98ba9752340a6c31789e4625285ef0a8602a",
+    "batch_source_frame_count_histogram": {
+      "12": 249,
+      "9": 1
+    },
+    "batch_observations_sha256": "c4e6be47500969c953dbb5da0515bb85b084c5814cb09f6993f227dcf75ff548",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        558
+      ]
+    ],
+    "source_frames": 559,
+    "unique_actual_index_count": 559,
+    "inspection_record_count": 559,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "4d0a85cd6ea1522854c7978d6f753417d9fb7a69375b4afed5a87b104709fe66",
+    "extracted_index_sha256": "eb9def7e387e9530e011bba7bbcaa0367f079e0ecb96fde51817dcb181441114",
+    "batch_source_frame_count_histogram": {
+      "12": 139,
+      "9": 1
+    },
+    "batch_observations_sha256": "cf9dd1d55dc4bc1494fa47e82f178b3eb427d913e513361a5ee8938496db5185",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        558
+      ]
+    ],
+    "source_frames": 559,
+    "unique_actual_index_count": 559,
+    "inspection_record_count": 559,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "aede96f6f30be62060878cc4d81a12372bee505fbb9f2f597875e126b2bbdc93",
+    "extracted_index_sha256": "4f468f3fdcc5164dd89671b91377b5a637ed137d7c0eb0e77c942dfb6ee4131c",
+    "batch_source_frame_count_histogram": {
+      "12": 139,
+      "9": 1
+    },
+    "batch_observations_sha256": "e724e7fad9137cd2d15e6b7289aed7a6979976bb09e4d01512f1b37f8fb13bb1",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        558
+      ]
+    ],
+    "source_frames": 559,
+    "unique_actual_index_count": 559,
+    "inspection_record_count": 559,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "2d7fe6b61825f4e7115d4b1b71cbcd3a5cfa5ab18da1fe375b4122f4cbd179e1",
+    "extracted_index_sha256": "5cf34d3bb5c404a103e7a92888327490bd0b0f7a764bb7a2b4e7e445f85c98dd",
+    "batch_source_frame_count_histogram": {
+      "12": 139,
+      "9": 1
+    },
+    "batch_observations_sha256": "6e53673a5a23532cf3a8c5b5560269151f8252083c09247401cbe17d1c514602",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        348
+      ]
+    ],
+    "source_frames": 349,
+    "unique_actual_index_count": 349,
+    "inspection_record_count": 349,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "e4eccefaea9c1b4b09d4cbc56620dbb6e2a1480077c808f2655c501882e6be89",
+    "extracted_index_sha256": "f81550b769e8fb9ea8b1c131857c2f2e9ce4b36efcb3ad250a124124e6225c57",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "d131b787f01c4fd890ec9d208a2d82524f656d3db976d7274340b42c1534ff32",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        348
+      ]
+    ],
+    "source_frames": 349,
+    "unique_actual_index_count": 349,
+    "inspection_record_count": 349,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "ae7aca127c2f46067565e1bb87edda8f317287dc6cbe91dbc4416bf4666896ed",
+    "extracted_index_sha256": "354c4ebabbe56186859e66f5ada29a306be6eccb5a18762ba7a66b05a13dd67a",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "247153ba99ee41c79582c0af8f6b0ffbf06d850972a163d1ccfa89ff140cb386",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        348
+      ]
+    ],
+    "source_frames": 349,
+    "unique_actual_index_count": 349,
+    "inspection_record_count": 349,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "cf19de15574c830bd7d9be4f6390101c1353a092cb39b6820c5db777f52d4fef",
+    "extracted_index_sha256": "fb641304d7d68306608d0b531932ed106deb549b2bdeaa4c0c10386752cd5b96",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "df6d0f18b56a7f4d4d0d3ce4221d31a83d0fc98665c5bb12006a3ced369c27d5",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        632
+      ]
+    ],
+    "source_frames": 633,
+    "unique_actual_index_count": 633,
+    "inspection_record_count": 633,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "c982d19d57f1b8b6abcd2a445a26cef931fd9c2f42bd3707cc94d4ed1e0cd9fe",
+    "extracted_index_sha256": "d7d15a934370b1f62a96517a0560fecfe969f828f13461075206456da2e86009",
+    "batch_source_frame_count_histogram": {
+      "None": 159
+    },
+    "batch_observations_sha256": "9585d93a5f6123ea94e4a0ab11fb4cda0cb2ccf87f7dd759f513e8d88f8b8f2e",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        632
+      ]
+    ],
+    "source_frames": 633,
+    "unique_actual_index_count": 633,
+    "inspection_record_count": 633,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6d1ab62bdfab7d284e1edddaac6e1d77098a262db96db886084e31468f45fb55",
+    "extracted_index_sha256": "3eda005cdc2437ac6c8805e0ec13723270e6c58b7d0f41188305d5e38d2dc80b",
+    "batch_source_frame_count_histogram": {
+      "None": 159
+    },
+    "batch_observations_sha256": "a960e5930fac50669df626e24293a7387e86cd6faa4da252abdbad974af51127",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        632
+      ]
+    ],
+    "source_frames": 633,
+    "unique_actual_index_count": 633,
+    "inspection_record_count": 633,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bd375935fb3f35af1c3ff4baa56258b70228b42791ca16aeddbb6ce98160cd1f",
+    "extracted_index_sha256": "f2e4e680340ee9303dbf424eb5e01fb6c218574719b4d498dbadf3cd021b70bb",
+    "batch_source_frame_count_histogram": {
+      "None": 159
+    },
+    "batch_observations_sha256": "da45027b9f1cfce261fa650be11c903ef8439b297fbfbdf0b3043739f150397e",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        350
+      ]
+    ],
+    "source_frames": 351,
+    "unique_actual_index_count": 351,
+    "inspection_record_count": 351,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "5b9ff038bea67556b0766321a5c1ca2ae038797ee9d089478d0a5bf5420158bb",
+    "extracted_index_sha256": "7bf3b59b88e7d686a04852bce66fb96903f93664a20121cd0d46711a46803ee3",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "cae91e58625b6225f72cb1a4bef6c2fa212cf72e2aa7d47ccb3180fe6fe6a17c",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        350
+      ]
+    ],
+    "source_frames": 351,
+    "unique_actual_index_count": 351,
+    "inspection_record_count": 351,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "57d02624d36db55926e742ea443d90c790e461f6a833e4058800fb3768181938",
+    "extracted_index_sha256": "a9e4a42461689bb22740befe26ac656a2bc369426f7196daf3ad90092644a169",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "fa36f9cfe3e021fece2b3b8940df8229a11d4387ae745964678df5f50f9a6a6f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        350
+      ]
+    ],
+    "source_frames": 351,
+    "unique_actual_index_count": 351,
+    "inspection_record_count": 351,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "653275ad7c3f61ee1a601040262f506efa3de1d7884a6dc54b755c977efd3615",
+    "extracted_index_sha256": "ff6729e80d7b9790633563d78c78e00acf5cbba107647f53273d8415b64c607e",
+    "batch_source_frame_count_histogram": {
+      "None": 88
+    },
+    "batch_observations_sha256": "5108d917b329216002ecf2631c9a9d22fbff50f19271fbbfa458935785c038ac",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        367
+      ]
+    ],
+    "source_frames": 368,
+    "unique_actual_index_count": 368,
+    "inspection_record_count": 368,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6153e21ef00b1f23dc199a793d261fca22d8a409df6dcc71ff9ac2e2198823c4",
+    "extracted_index_sha256": "60bc0b2737c1f355b8e7518afde2f6422bbe3167af7246335aef40069c61c6bc",
+    "batch_source_frame_count_histogram": {
+      "None": 93
+    },
+    "batch_observations_sha256": "333dee92c0af4732f95c9fecacc49882334cc109c91d5e4f0f05871443e25cc1",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        367
+      ]
+    ],
+    "source_frames": 368,
+    "unique_actual_index_count": 368,
+    "inspection_record_count": 368,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "7e7fa73512da87b66f5b8f275e506d07d674e1cf23b4113fb8e08206fe25e65d",
+    "extracted_index_sha256": "b24a6a2c6873d5bf91bb9905937d86c3d0247fce56b50f9fe937309881899db5",
+    "batch_source_frame_count_histogram": {
+      "None": 92
+    },
+    "batch_observations_sha256": "954d624cd25672e5251ac4045449536d5fab883d61b134fc96463327cd586ac2",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        367
+      ]
+    ],
+    "source_frames": 368,
+    "unique_actual_index_count": 368,
+    "inspection_record_count": 368,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "724400c3d6c3c7829c889f732932f0ba51bbe7c5e7aea091dc7ff17424d7da88",
+    "extracted_index_sha256": "7b58152cf66d6d070cf84f7e36af27ab06977c01dad336c1096a6085d48ba1a4",
+    "batch_source_frame_count_histogram": {
+      "None": 92
+    },
+    "batch_observations_sha256": "29b9960284516e981484eda7c71e2db5ce64565f6fc6776d0df62c1cbd8a0a2e",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        640
+      ]
+    ],
+    "source_frames": 641,
+    "unique_actual_index_count": 641,
+    "inspection_record_count": 641,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f3ebc7feb20aef87817735c0271bdafc2219a4d0a0585c98cfda2e2fed09ba58",
+    "extracted_index_sha256": "6ca1f06371284f2249fd6648b306a5fccad77702b9e7841409d6e2f9a604dbc7",
+    "batch_source_frame_count_histogram": {
+      "None": 161
+    },
+    "batch_observations_sha256": "a40388905fbc2135195cf7e0136f8a0ebd6fd5a68ff35e7d6a69ee271fe757c4",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        640
+      ]
+    ],
+    "source_frames": 641,
+    "unique_actual_index_count": 641,
+    "inspection_record_count": 641,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f082912c971cb42f3df49266c440bd5b0911c171f8a46307143e89d04a564ba5",
+    "extracted_index_sha256": "1d3ba3053a5842aecc000b48f56321143e9e3f8fac22bf8169b3dbe84d097fe9",
+    "batch_source_frame_count_histogram": {
+      "None": 161
+    },
+    "batch_observations_sha256": "44abff35aee6d47fe6e26c4a0f322c9b04b49cc85c7854df7f8b8473466589fe",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        640
+      ]
+    ],
+    "source_frames": 641,
+    "unique_actual_index_count": 641,
+    "inspection_record_count": 641,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "46a4e7814557d1a580bd58279eccf59f8a45f2eb598d0c441b3e0eeaf77a6732",
+    "extracted_index_sha256": "f6f1c8a6c3f6c5088e8a5ca65a7821adb8cc15f52d53d799fc31724e8f0097d5",
+    "batch_source_frame_count_histogram": {
+      "None": 161
+    },
+    "batch_observations_sha256": "1881e179e0c257f481d1f19cacbc71b74e6eb23d607037dec612821b1cd7ba14",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        810
+      ]
+    ],
+    "source_frames": 811,
+    "unique_actual_index_count": 811,
+    "inspection_record_count": 811,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "8fbfa52ac880c2b31f3a9c26c94e0e79e655b525acf574c4b4dfb7ee800ee8a3",
+    "extracted_index_sha256": "a17907e86b9d4e0a593e24ebd7109e03079c97fb49fca5999ce35fdf71193935",
+    "batch_source_frame_count_histogram": {
+      "4": 202,
+      "3": 1
+    },
+    "batch_observations_sha256": "f90e0c8b7114e3f2836f8469346d234cb9557a842b48323598017c9f5ef82b7d",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        810
+      ]
+    ],
+    "source_frames": 811,
+    "unique_actual_index_count": 811,
+    "inspection_record_count": 811,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "ce7936791d09c9643330593897fe018e358f305e3ed14dc7161b6eb4782e9e1c",
+    "extracted_index_sha256": "e129339d5fc02925f29bee630553ef6c02606e7f80a607fb6c232ab67b1b5de2",
+    "batch_source_frame_count_histogram": {
+      "4": 202,
+      "3": 1
+    },
+    "batch_observations_sha256": "84bb8d5e6c58cfdbf1c7d601de513a56238d0be7be1761f1f34058f639349281",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        810
+      ]
+    ],
+    "source_frames": 811,
+    "unique_actual_index_count": 811,
+    "inspection_record_count": 811,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bf49842eda922e4c71d246bcacd727521f242bc92c1e500cfade72ffb2843f31",
+    "extracted_index_sha256": "8cb28ae4596e5ec5ff79057d245084d4cd0bb34ce9779ea8549f855b2f4064c8",
+    "batch_source_frame_count_histogram": {
+      "4": 202,
+      "3": 1
+    },
+    "batch_observations_sha256": "3c936b57e9c1036fbfebac766b458af8f5c667894f18aa960d22b90a7cfd3ff1",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        413
+      ]
+    ],
+    "source_frames": 414,
+    "unique_actual_index_count": 414,
+    "inspection_record_count": 414,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "cf813ad30f0cfcdf7e93be4c5498b668a219cfb9590f31b8f4443da1a73f1e86",
+    "extracted_index_sha256": "8fb7ee686a29100a4d6b40d246c878487ec12f88e2dd7f246ec5f24018b387b8",
+    "batch_source_frame_count_histogram": {
+      "None": 105
+    },
+    "batch_observations_sha256": "cf8119c3e6321a02ab06624e72e304e5862852044e1de1ff8978df5208661ac3",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        413
+      ]
+    ],
+    "source_frames": 414,
+    "unique_actual_index_count": 414,
+    "inspection_record_count": 414,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "9c518df9c8974adc1cdb27ee3b205fb716d955a8e24adca046e1abce108d9759",
+    "extracted_index_sha256": "3714763e9608a1b8ca73f0a7137a190f8589da8aaaa5cd1c2da48f9b8777e6a9",
+    "batch_source_frame_count_histogram": {
+      "None": 105
+    },
+    "batch_observations_sha256": "a9c0168ba091ae2e2b4f1f217920721a9128ef51dc164d29284e42b41d4774b3",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        413
+      ]
+    ],
+    "source_frames": 414,
+    "unique_actual_index_count": 414,
+    "inspection_record_count": 414,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "8691c7cb7716cfd48d934dfdaea96f2c2871649fdfab17620219415bef82fe55",
+    "extracted_index_sha256": "149d272313816166c3859d906ed0b8ae77d971a54516b524cef625082ec9548d",
+    "batch_source_frame_count_histogram": {
+      "None": 104
+    },
+    "batch_observations_sha256": "06a06ecb8c108bb7809fb7918c8f7cdf0f51b6c1e906141cb74e5b6dc18d6e0e",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        382
+      ]
+    ],
+    "source_frames": 383,
+    "unique_actual_index_count": 383,
+    "inspection_record_count": 383,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "e0e605917a3b277bcb81ea5a3496a4e344d07861500fd6089a2eb359da1d4fff",
+    "extracted_index_sha256": "5e87ba9d5118dfe8cfbb45c775a4c462d7c7f1705b540bf1e149b673f32854ca",
+    "batch_source_frame_count_histogram": {
+      "None": 97
+    },
+    "batch_observations_sha256": "4567bad3f656cc08cb29f03c0e6e000d30ee6292e2cdf80a51453b446223705a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        382
+      ]
+    ],
+    "source_frames": 383,
+    "unique_actual_index_count": 383,
+    "inspection_record_count": 383,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "22f3043b3e037791070881cf0715571922381f1f14311006fbcea7053d3c5d2d",
+    "extracted_index_sha256": "4a4e8a3679d69a8ba0cad2efa221661f9fd5de6506db8a873acfa85a3bf9e192",
+    "batch_source_frame_count_histogram": {
+      "None": 96
+    },
+    "batch_observations_sha256": "144a4842445fb9ca589c6715ea85789a28c7a82f6a8ea854a557d22466a5a650",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        382
+      ]
+    ],
+    "source_frames": 383,
+    "unique_actual_index_count": 383,
+    "inspection_record_count": 383,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "1abcbff0e3ae6d10322240ff12e8aa885fc7c9fcb0f2289096e0cf3bc772dc20",
+    "extracted_index_sha256": "5a7759865940725dead252f933f69d26275ad8556fd2f8c88b5e5404d8e75303",
+    "batch_source_frame_count_histogram": {
+      "None": 96
+    },
+    "batch_observations_sha256": "4c4546013f8ee1470929da0d9552f812ce664d15986b8e44032fec6d020678e5",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        304
+      ]
+    ],
+    "source_frames": 305,
+    "unique_actual_index_count": 305,
+    "inspection_record_count": 305,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "3dfe42f538300729a042b3147c48f50dcd3935e0c9291d0f55d515c594a901a1",
+    "extracted_index_sha256": "15b8e2a881954971c925b9533052b573dff9748d18e4657d055fd69b3a1f4c03",
+    "batch_source_frame_count_histogram": {
+      "None": 77
+    },
+    "batch_observations_sha256": "f985b2674dbb49c7a6979788e5d5b0afc3cfc0ebc5386b7b023ffd3fbd918566",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        304
+      ]
+    ],
+    "source_frames": 305,
+    "unique_actual_index_count": 305,
+    "inspection_record_count": 305,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "46e403ddaace85ebbce5e7a74a6e860f42951237d70076d575b36b0322fa60cc",
+    "extracted_index_sha256": "b3fc2fcd510ed0fcdf06730c430652d3abd3ff75997537c0c811637cd837bcfe",
+    "batch_source_frame_count_histogram": {
+      "None": 77
+    },
+    "batch_observations_sha256": "eff3ffe14b83abec0a6f5960cce0f8a7feb811484c6eb0000c84a74719b611c1",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        304
+      ]
+    ],
+    "source_frames": 305,
+    "unique_actual_index_count": 305,
+    "inspection_record_count": 305,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b8db9c241f31d945b5ce9a256d1821feaeea4ff1a82670237354d39542b8f705",
+    "extracted_index_sha256": "5e2690ec4c2b0a2b9a5bda258f0d2788eb9892e577a1f93bbb35e21c348633ad",
+    "batch_source_frame_count_histogram": {
+      "None": 77
+    },
+    "batch_observations_sha256": "1c4a39a9003d41493287e0dd5841af025972730c328989513f96e85ad4ed7ab3",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        720
+      ]
+    ],
+    "source_frames": 721,
+    "unique_actual_index_count": 721,
+    "inspection_record_count": 721,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "dea45730308610c9d095ec07d7f630707720215531ab13a87e30f8a19cca427f",
+    "extracted_index_sha256": "2bd17598eb0e3c544e609b960280c66337cd9af2cd6eead2e9b5e08317b17e0c",
+    "batch_source_frame_count_histogram": {
+      "None": 183
+    },
+    "batch_observations_sha256": "0b56d06e842f49b1964e610f922daf0ce916bd803de2c60dac7feb94df2de9e8",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        720
+      ]
+    ],
+    "source_frames": 721,
+    "unique_actual_index_count": 721,
+    "inspection_record_count": 721,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bce561fb9f2974ecc76d7baea41a1b84fe5a65f95c235e33895221369f79dc59",
+    "extracted_index_sha256": "a59bcd1d9a42da1fcef03545c1c784f23c2384b17258ba599a3d2487b1cd30b4",
+    "batch_source_frame_count_histogram": {
+      "None": 182
+    },
+    "batch_observations_sha256": "b64f3907dac01a5b97a356b8f20820172a233c8db85afa46bb342341a3a4fde0",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        720
+      ]
+    ],
+    "source_frames": 721,
+    "unique_actual_index_count": 721,
+    "inspection_record_count": 721,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b7689ad927f298e3750d917ba11bcc312f7da7c103442bb5b9ddb4e4ed7ae1bd",
+    "extracted_index_sha256": "7e087c8c3b8d4400f90a68bd4ccd98c2b527385252de95c3526e3b50f69ba2ff",
+    "batch_source_frame_count_histogram": {
+      "None": 183
+    },
+    "batch_observations_sha256": "c72edd080507604e75f5d63bf0ed1d51bd1036ea5234333812734e44a0732e72",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        327
+      ]
+    ],
+    "source_frames": 328,
+    "unique_actual_index_count": 328,
+    "inspection_record_count": 328,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b517729895042ce0ae2f76dde79d17f90c87580970fdfa034e66995dab6a6fc9",
+    "extracted_index_sha256": "84b2fc042e5c4ff3d3fbb1d91e7e4ca38d93172f30ffdd6fdf9f453ee3b483b0",
+    "batch_source_frame_count_histogram": {
+      "12": 82
+    },
+    "batch_observations_sha256": "b2333f6bfa9d86841221c90b973953b3bfc646bd6889d50781a80817a200cdeb",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        327
+      ]
+    ],
+    "source_frames": 328,
+    "unique_actual_index_count": 328,
+    "inspection_record_count": 328,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "ee2d06f6a3851c57441eb91849364f963a7e3e431a66c6c00f90bb8f381bf473",
+    "extracted_index_sha256": "aebf1762770e5e12ea6a920fe1b6b1c75a5df64082e0fc1b971e67197180a4c4",
+    "batch_source_frame_count_histogram": {
+      "12": 82
+    },
+    "batch_observations_sha256": "0c7a364acb2f0b7c3e02b2a731cf0eef78771b3a0ffdab27d8365449bd2d15a1",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        327
+      ]
+    ],
+    "source_frames": 328,
+    "unique_actual_index_count": 328,
+    "inspection_record_count": 328,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "3202a46d1d82c8336d5d2b1b58042c531b26272fee02beb01e59ac2993e261a5",
+    "extracted_index_sha256": "a73bd47ed1024a2ed2a76029d91f03055e2b51c43ad419899f735a2df8fa965b",
+    "batch_source_frame_count_histogram": {
+      "12": 82
+    },
+    "batch_observations_sha256": "c6c81f6dc8eeeac3fbddfdf0bcf2e8a439880b4b0ccacc556c7597a7f42b0f4f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        724
+      ]
+    ],
+    "source_frames": 725,
+    "unique_actual_index_count": 725,
+    "inspection_record_count": 725,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "f1fc8c843b36e8a51dce0c1a2bc0df1c370a343a657f6f0031f88ebb4f9c5b93",
+    "extracted_index_sha256": "3a01f8e598a7ecdac7a693a396e16aead2fc95f7c61c8d73ff1c448981a128ef",
+    "batch_source_frame_count_histogram": {
+      "4": 181,
+      "1": 1
+    },
+    "batch_observations_sha256": "0f9022cb0f2ce4be807084cd8cd74c874b16ed01799a07dce4cd1063d689becc",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        724
+      ]
+    ],
+    "source_frames": 725,
+    "unique_actual_index_count": 725,
+    "inspection_record_count": 725,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "646064e106dee67cb4d331e299f8b99ec54990c7dcad32927cc7d1aa25249f6d",
+    "extracted_index_sha256": "b76a507f4aeb9a1f5edd337658f9bde9e07a0ee76a3b833c9ca652078554c4ad",
+    "batch_source_frame_count_histogram": {
+      "4": 181,
+      "1": 1
+    },
+    "batch_observations_sha256": "9719412b433df74c3aa3eeb7b9c746191df7e7fb541c893630df4cd2714197b6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        724
+      ]
+    ],
+    "source_frames": 725,
+    "unique_actual_index_count": 725,
+    "inspection_record_count": 725,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "86afdbbe534bf65c532857842a6e3bce875dbbc4e80e194ab65515df419488ad",
+    "extracted_index_sha256": "0ffaf94e1e187df9bf2f3b37bcb36c9418cca0356d54feede8b21bab4f11896b",
+    "batch_source_frame_count_histogram": {
+      "4": 181,
+      "1": 1
+    },
+    "batch_observations_sha256": "4d1b32b5ce0faec236d93888c53b47d53f175692b7f933f355ee1d12030beb56",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        612
+      ]
+    ],
+    "source_frames": 613,
+    "unique_actual_index_count": 613,
+    "inspection_record_count": 613,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "1b9bc8f012cebebec49d1456dcbe5b4608e1ff53880568ff4e1e363e7a5f477b",
+    "extracted_index_sha256": "282767f5cc2ff6e6973ac6ddfe166ce8414ecb8175cfb20633fec8bf15d65d64",
+    "batch_source_frame_count_histogram": {
+      "None": 155
+    },
+    "batch_observations_sha256": "49cf6b75aa4a2212a97a726fc5065df80d022034ae10445572a7d8f65db99a7a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        612
+      ]
+    ],
+    "source_frames": 613,
+    "unique_actual_index_count": 613,
+    "inspection_record_count": 613,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "248a29006b07044dcd3920d7ba11c5f383dd9f9170977abe7338b30adb90bbbd",
+    "extracted_index_sha256": "9fde3b2de4373f50aed17d7c1f073c1ac0311505e83ac457175ed90613d80a54",
+    "batch_source_frame_count_histogram": {
+      "None": 154
+    },
+    "batch_observations_sha256": "1fdb1a045a6b38753951e472b2a6c317b04d376a8b09f81bbc15cf33b96b4a01",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        612
+      ]
+    ],
+    "source_frames": 613,
+    "unique_actual_index_count": 613,
+    "inspection_record_count": 613,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "c8322bc90dcd05af9c5fa45f6baeb5d2386a8ce86ab1c9d5bc8f4d7bcae9aa26",
+    "extracted_index_sha256": "5dca4115c8fbf7b503a5fecbec002efce49f17210f36792dac9f215757dfd605",
+    "batch_source_frame_count_histogram": {
+      "None": 155
+    },
+    "batch_observations_sha256": "72148068e535aa51d8ddbe69a1f76365f5a4ab778ea52f36c4301a2322939c06",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        432
+      ]
+    ],
+    "source_frames": 433,
+    "unique_actual_index_count": 433,
+    "inspection_record_count": 433,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "93fb0ec29d47ffb10a925f2e4af8124f2b338692ea247214a0d185f050e9a331",
+    "extracted_index_sha256": "eab756417c6c4cb22e8428a505e77a6e3376bb6b7e4ed6d19ff89b3383dbd80b",
+    "batch_source_frame_count_histogram": {
+      "None": 110
+    },
+    "batch_observations_sha256": "daa748a988c107e4b3271301ceef84a6ecf3e8d4a5fa0f4fbeb70fd0aa385ef9",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        432
+      ]
+    ],
+    "source_frames": 433,
+    "unique_actual_index_count": 433,
+    "inspection_record_count": 433,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "4e3ff69b126917931ce04d12163eae4c943f25426794479688522c643687d191",
+    "extracted_index_sha256": "3eb054ed08f89d8635289ba4c4b43f85c8d57c46bb20f24e53829bb97c05760f",
+    "batch_source_frame_count_histogram": {
+      "None": 109
+    },
+    "batch_observations_sha256": "0d36bef3442743d3262984320aab400f9e27be6f66cb48d992da19e7c8a63f57",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        432
+      ]
+    ],
+    "source_frames": 433,
+    "unique_actual_index_count": 433,
+    "inspection_record_count": 433,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "379b881573648c9c0d879a79f5b1bbd47da08805b7e03d9b6b98c136c9d5cc9a",
+    "extracted_index_sha256": "663af121fe37972cad5addc69dc14c49f3884ef210a4de77730e6dd0082ffe58",
+    "batch_source_frame_count_histogram": {
+      "None": 109
+    },
+    "batch_observations_sha256": "f0538d5a773e23c21d0edbcc11fbfc254087aeac2e3674b0d66f8b98f22d56c2",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        592
+      ]
+    ],
+    "source_frames": 593,
+    "unique_actual_index_count": 593,
+    "inspection_record_count": 593,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "8fd3666008c21c4ea6c1ab84113cd0bf5bc4eef50acc98d3234a53bf9df2def7",
+    "extracted_index_sha256": "91ee00a569041288cd8bb18edd5e82172475010ea0bcfd2698a1f4c087165af5",
+    "batch_source_frame_count_histogram": {
+      "4": 148,
+      "1": 1
+    },
+    "batch_observations_sha256": "35b02333836c0617de5db971048faf3c3209057bde7fd9175236a7b545171699",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        592
+      ]
+    ],
+    "source_frames": 593,
+    "unique_actual_index_count": 593,
+    "inspection_record_count": 593,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b3d17242d531c909a4529ddcea1a90e230b25c99cb78accfd0ac226f2f555f1c",
+    "extracted_index_sha256": "f6cd81a6fd5288d0dd7f3430d265ed53173488fb7b2ac0906f2d41ddc1e5955f",
+    "batch_source_frame_count_histogram": {
+      "4": 148,
+      "1": 1
+    },
+    "batch_observations_sha256": "79a207341782440fad012207beda4d77c2323cace14f0f92ede3ac9f16fa8c58",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        592
+      ]
+    ],
+    "source_frames": 593,
+    "unique_actual_index_count": 593,
+    "inspection_record_count": 593,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "fc239a09c1ff0679c40188d2c6dec0e57403903a30e7976242ec683028204773",
+    "extracted_index_sha256": "96e10cea08314ac12c69f536997c091333aec69b4d886e91a69ec08233cb0a91",
+    "batch_source_frame_count_histogram": {
+      "4": 148,
+      "1": 1
+    },
+    "batch_observations_sha256": "2de3dc0ab6c82b150fbbd76f067d20221c6bc5d8004938e00f655d56bddb116a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        842
+      ]
+    ],
+    "source_frames": 843,
+    "unique_actual_index_count": 843,
+    "inspection_record_count": 843,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "010918675b5ec9485b8e4981428ea0b07ba3ccd60830879e219ef1a59ec0093b",
+    "extracted_index_sha256": "e14799b3fd3ca4d5ef8b121b369acd00f0b7e07cc67a5c9930dd601e50d2af73",
+    "batch_source_frame_count_histogram": {
+      "None": 211
+    },
+    "batch_observations_sha256": "2349929951f64d5f80ae0056bbb8b112d987b82aaf0b5c8b6d7fdc1bb57497b6",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        842
+      ]
+    ],
+    "source_frames": 843,
+    "unique_actual_index_count": 843,
+    "inspection_record_count": 843,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "48c230af67500957d85706bbda9dd25af9b7f23f61ca929a3b97fa966b1b91b9",
+    "extracted_index_sha256": "aed83a4cdb440b4b9be79c0d6671beef181e76e46ca4044fb22b65f83094f452",
+    "batch_source_frame_count_histogram": {
+      "None": 211
+    },
+    "batch_observations_sha256": "bf5e2afab78d288f9965d0701e19855fe154a14399e3d9656d3835ab721478a0",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        842
+      ]
+    ],
+    "source_frames": 843,
+    "unique_actual_index_count": 843,
+    "inspection_record_count": 843,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "0fee1bc4161dc83d4bcf28b9db5db475d6a5b5e95c70808da826d813ace5c20a",
+    "extracted_index_sha256": "cfef2ab4ef8fbbcf480242257264ae5360f6b4081112013cb7a57ca946ca9309",
+    "batch_source_frame_count_histogram": {
+      "None": 211
+    },
+    "batch_observations_sha256": "f6e9e86ea62f431b5c83f919d707f776680772fe5d6c30e465c6ea69b0a51e0c",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        942
+      ]
+    ],
+    "source_frames": 943,
+    "unique_actual_index_count": 943,
+    "inspection_record_count": 943,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "2acc1552aa6f10d6c8d995eaec262595913657f13a99014d334cf4778e5b48cd",
+    "extracted_index_sha256": "b8fc8b4213a9f544f4cf59e74dc8441024da51e7af30d6a749ff7ce255373bf4",
+    "batch_source_frame_count_histogram": {
+      "None": 236
+    },
+    "batch_observations_sha256": "090aa2d2419ad2a675bd59abd8ca3108995d16f440d6fb235cfadc3ce77e1bf0",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        942
+      ]
+    ],
+    "source_frames": 943,
+    "unique_actual_index_count": 943,
+    "inspection_record_count": 943,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "8747b6c7244398ce2f4f8ff839e0e1a87b3403be914102f579cbe23d80c558db",
+    "extracted_index_sha256": "c03deb055eb7a21acd85616ebc23828b6080527c181b4b851d1113898d73640e",
+    "batch_source_frame_count_histogram": {
+      "None": 236
+    },
+    "batch_observations_sha256": "58b87d0910356aee7aa358141d74613c1674efb10ab24c6f976cfc52a10ed721",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        942
+      ]
+    ],
+    "source_frames": 943,
+    "unique_actual_index_count": 943,
+    "inspection_record_count": 943,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b72923ce79d8ff5a0e75de25d32a6642d0d05c87ec31aab62a91fbf01b7eb73e",
+    "extracted_index_sha256": "60248559b32905dd229a5b0ad766b00904f2a31ab8f2bc1633839b256086c0e3",
+    "batch_source_frame_count_histogram": {
+      "None": 236
+    },
+    "batch_observations_sha256": "78786aab73f7094946f1f79adc1e2676de55cac0a4c5f2b2df7abc4b7b3bee0d",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        401
+      ]
+    ],
+    "source_frames": 402,
+    "unique_actual_index_count": 402,
+    "inspection_record_count": 402,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "46aa7836374ac3ac18e85fc44b079888e834fb7d3b92bdf4f08260d5039a953e",
+    "extracted_index_sha256": "c3b6b2108d57f596d97a1902f40c449b9150d56c1a70b75aa7a647a7a7e3820b",
+    "batch_source_frame_count_histogram": {
+      "None": 101
+    },
+    "batch_observations_sha256": "3da8973cb0e76b18946b5952fefd4da2f530acc5f1e612f45bbbf695700e68dc",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        401
+      ]
+    ],
+    "source_frames": 402,
+    "unique_actual_index_count": 402,
+    "inspection_record_count": 402,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "a5fb8e1c84197811d4c0ee7250c1c7f210800ced7339449778e50b3834314cc0",
+    "extracted_index_sha256": "8415c5ccf9fc10e7fe32ba48a9fe345d602628a1004dd04b2ee6859bce291ef7",
+    "batch_source_frame_count_histogram": {
+      "None": 101
+    },
+    "batch_observations_sha256": "ad0b25caa8ad8b2ada46a90b97038ebd7d3d3cb9a5323539843b6e506900e974",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        401
+      ]
+    ],
+    "source_frames": 402,
+    "unique_actual_index_count": 402,
+    "inspection_record_count": 402,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "b5a837d51230026e59a1f0ab897e53e2993324fa14b11ad33c25041554465be7",
+    "extracted_index_sha256": "be2c494edcdd44f41965a5c75ecc20eaaa560e9de040b52b2fe749c356f8d556",
+    "batch_source_frame_count_histogram": {
+      "None": 101
+    },
+    "batch_observations_sha256": "b5b022ffb5802b4d631b29e78ece057b8d39c44739eb261af6b1d99fe79a803a",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        505
+      ]
+    ],
+    "source_frames": 506,
+    "unique_actual_index_count": 506,
+    "inspection_record_count": 506,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "ecd0226595cbc0309e4c13544ea33845086fcc568a8dc93c740818ec651aca3d",
+    "extracted_index_sha256": "5ae9c5004928196bf93976d3078c90e321ef7fce885dcce43358045ef707d472",
+    "batch_source_frame_count_histogram": {
+      "12": 126,
+      "6": 1
+    },
+    "batch_observations_sha256": "5cb22a914cc9493d014c8d130321a71226189a4635e119c137e414db5c2a3acf",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        505
+      ]
+    ],
+    "source_frames": 506,
+    "unique_actual_index_count": 506,
+    "inspection_record_count": 506,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "fffca10bf487943b0c9110435ab62a1b4fd7f4965fd3f0124bb57afa53c757d9",
+    "extracted_index_sha256": "b296ab7a9e2c020048af1fae029ecdf2340953b236b4b16a47b84a46796f5d05",
+    "batch_source_frame_count_histogram": {
+      "12": 126,
+      "6": 1
+    },
+    "batch_observations_sha256": "41fa3ce2f4b7e1745a2ae448180939581ac56ff82710d782ede6ba38c7931f92",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        505
+      ]
+    ],
+    "source_frames": 506,
+    "unique_actual_index_count": 506,
+    "inspection_record_count": 506,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "055f4a9f1d51d2de5847157d5528411cfebce0564447daff93af70e84b4065d3",
+    "extracted_index_sha256": "875023f2b70b0ef4c4c4111463ba21336d8ea51eeeea1b97150e4b278b5d815d",
+    "batch_source_frame_count_histogram": {
+      "12": 126,
+      "6": 1
+    },
+    "batch_observations_sha256": "fef8f431b0ed1e10a6dee22ae968a26578c71633332a60c12b99abc4deaa5a1c",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+    "camera": "head",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        766
+      ]
+    ],
+    "source_frames": 767,
+    "unique_actual_index_count": 767,
+    "inspection_record_count": 767,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "bcaef2c03e0f189866de8f7ff3c557213c24a4cf37a78f11fd827da0563aa6d2",
+    "extracted_index_sha256": "a44cc015ce028dbd348d1e8c3d6c5fc7802e535e6b70b7f7b0a3f886099a31a3",
+    "batch_source_frame_count_histogram": {
+      "None": 201
+    },
+    "batch_observations_sha256": "23217d7dda3278e8dce33ece497c74213f3ac0faa9dec4f2d23209366b0ab65f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+    "camera": "left_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        766
+      ]
+    ],
+    "source_frames": 767,
+    "unique_actual_index_count": 767,
+    "inspection_record_count": 767,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "839680fd0abd9caa42c4d6e9673ac57c718f96a1f5f15e10753b0954cfb55263",
+    "extracted_index_sha256": "a2a5daa84750ef4ba3f355834ff5623d6089de04315a6ecc620a6f3bc4c1a482",
+    "batch_source_frame_count_histogram": {
+      "None": 198
+    },
+    "batch_observations_sha256": "3c7854eff048ef5bc8c8871b8a7d1c16cab817dfebaeaad4c3538b4b28b4ec2f",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  },
+  {
+    "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+    "camera": "right_wrist",
+    "unique_actual_index_intervals_inclusive": [
+      [
+        0,
+        766
+      ]
+    ],
+    "source_frames": 767,
+    "unique_actual_index_count": 767,
+    "inspection_record_count": 767,
+    "duplicate_records": 0,
+    "missing_index_intervals_inclusive": [],
+    "inspection_index_sha256": "6dbc9c72e83c72c1e9ac0e082b3b6960845328f0340e46e9b10f147f827c8346",
+    "extracted_index_sha256": "236eeb964526b06254847034916a7a68407a2196c26332c5dab6527b541b5570",
+    "batch_source_frame_count_histogram": {
+      "None": 192
+    },
+    "batch_observations_sha256": "8a05c58bf78c1616fc721a51ab058b0a5d32d9e72c11d05f57372318ded29f93",
+    "index_count_is_not_full_original_image_viewing_claim": true
+  }
+]
