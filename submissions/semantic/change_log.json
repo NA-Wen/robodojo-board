@@ -1,5 +1,11 @@
 {
-  "change": "强制完整核查状态修订",
-  "completion": "pending",
-  "description": "旧版局部证据保留；18项视觉指标逐run标pending。全量轨迹、控制步和文件/视频完整性已重新核验。没有实际全程观看，不声称完成。"
+  "date": "2026-10-23",
+  "group_id": "semantic",
+  "previous_submission_sha256": "b7e5bbef588fbc3c2e90b05293e6b466fde1d7e0e43436f87192f57a31dd3868",
+  "old_run_count": 69,
+  "new_run_count": 42,
+  "old_version_preserved_in_git": true,
+  "scope": "用已批准首轮42个真实run替换同名semantic阶段性结果；不触碰persistent或action_horizon。",
+  "coverage": "已批准的42个首轮run、126路视频及完整动作日志；0.2秒基础扫描，动作、疑点及事件边界连续源帧复核。共468条事件，390条确认、78条待确认；候选不计确认值。本次仅导出已完成审核，不重新看图；实际帧索引与历史批次限制单列，不能解释为全帧原图逐张观看或全程连续播放。视觉计数为已声明覆盖内的确认下界；未知保持null，原生指标及逐run不确定项保留。实际索引记录为78969/80397个源帧位置；未记录位置及各路比例见覆盖表。历史图像批次曾超出每批12张源帧的限制，不能宣称历史批次全部合规。",
+  "setting_id_recomputed": "sha256:f2ad94065bce85bfb30ddd268b3a72060d22c6b6124b667d535f68ce8b8c193b"
 }

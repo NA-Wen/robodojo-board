@@ -1,0 +1,3575 @@
+{
+  "policy": {
+    "mode": "sampled_0p2_continuous_actions",
+    "base_interval": 0.2,
+    "continuous_review": [
+      "all_actions",
+      "suspected_events",
+      "event_boundaries"
+    ],
+    "event_padding_seconds": 0.2,
+    "preserve_inspected_frames": true,
+    "changed_at": "2026-10-22T11:42:54.586394+00:00",
+    "authorization": "User explicitly requested this policy"
+  },
+  "coverage": [
+    {
+      "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/align_blocks/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 9.08,
+      "frame_count": 227,
+      "frame_index_basis": "zero-based source decode frame_index 0–226; native PTS retained",
+      "mapping": "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/inspection/head.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 9.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–41及全部note/执行反馈已逐项核对；没有可靠PTS到控制步同步表，为避免猜测动作边界，将动作连续复核范围扩展至整个可用视频0.00–9.04秒（25fps，源帧间隔0.04秒）。覆盖抓取闭合、桌面控尺/对齐、释放、补视野、复位、规划拒绝前后；窗口及事件前后扩展裁到源首尾。沿用本run此前分批实际查看记录，不重复看图。"
+        }
+      ],
+      "missing_or_damaged": "逐帧解码无错误，227/227；无已知缺帧/损坏区间。原始生成链是否另有未保存图像未知。",
+      "limitations": [
+        "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+        "腕部局部遮挡；二维图像不能直接测力、接触或微小离桌高度。",
+        "审核策略：每0.2秒基础扫描（25fps时零基帧0、5、10…225及末帧226）；所有动作段、疑点及事件边界连续源帧复核。因无可靠视频到控制步映射，连续窗口保守扩大为0.00–9.04秒，沿用本run已实际查看记录；不重复计数，不将解码或提取视为检查，也不描述为连续播放。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/align_blocks/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 9.08,
+      "frame_count": 227,
+      "frame_index_basis": "zero-based source decode frame_index 0–226; native PTS retained",
+      "mapping": "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/inspection/left_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 9.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–41及全部note/执行反馈已逐项核对；没有可靠PTS到控制步同步表，为避免猜测动作边界，将动作连续复核范围扩展至整个可用视频0.00–9.04秒（25fps，源帧间隔0.04秒）。覆盖抓取闭合、桌面控尺/对齐、释放、补视野、复位、规划拒绝前后；窗口及事件前后扩展裁到源首尾。沿用本run此前分批实际查看记录，不重复看图。"
+        }
+      ],
+      "missing_or_damaged": "逐帧解码无错误，227/227；无已知缺帧/损坏区间。原始生成链是否另有未保存图像未知。",
+      "limitations": [
+        "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+        "腕部局部遮挡；二维图像不能直接测力、接触或微小离桌高度。",
+        "审核策略：每0.2秒基础扫描（25fps时零基帧0、5、10…225及末帧226）；所有动作段、疑点及事件边界连续源帧复核。因无可靠视频到控制步映射，连续窗口保守扩大为0.00–9.04秒，沿用本run已实际查看记录；不重复计数，不将解码或提取视为检查，也不描述为连续播放。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/align_blocks/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 9.08,
+      "frame_count": 227,
+      "frame_index_basis": "zero-based source decode frame_index 0–226; native PTS retained",
+      "mapping": "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-stand_ff895e/inspection/right_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 9.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–41及全部note/执行反馈已逐项核对；没有可靠PTS到控制步同步表，为避免猜测动作边界，将动作连续复核范围扩展至整个可用视频0.00–9.04秒（25fps，源帧间隔0.04秒）。覆盖抓取闭合、桌面控尺/对齐、释放、补视野、复位、规划拒绝前后；窗口及事件前后扩展裁到源首尾。沿用本run此前分批实际查看记录，不重复看图。"
+        }
+      ],
+      "missing_or_damaged": "逐帧解码无错误，227/227；无已知缺帧/损坏区间。原始生成链是否另有未保存图像未知。",
+      "limitations": [
+        "零基解码帧号；原生PTS×1/12800得到容器时间。三路同号帧PTS相同，容器时间差0；没有独立采集同步表，真实采集误差未知。没有视频PTS到控制步或decision的可靠同步表；事件的动作与视觉关联只按顺序和状态核对，不表示精确对时。",
+        "腕部局部遮挡；二维图像不能直接测力、接触或微小离桌高度。",
+        "审核策略：每0.2秒基础扫描（25fps时零基帧0、5、10…225及末帧226）；所有动作段、疑点及事件边界连续源帧复核。因无可靠视频到控制步映射，连续窗口保守扩大为0.00–9.04秒，沿用本run已实际查看记录；不重复计数，不将解码或提取视为检查，也不描述为连续播放。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/arrange_largest_number/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 34.08,
+      "frame_count": 852,
+      "frame_index_basis": "zero-based decoded source frames, 0..851",
+      "mapping": "Encoded PTS n/25 verified. No reliable PTS-to-env_step/decision synchronization; content/order association only, physical cross-camera sync error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 34.04,
+          "interval": 0.04,
+          "reason": "全部动作、疑点及事件边界±0.2秒；因映射不可靠扩大至全时段连续源帧静态复核。"
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing PTS found; no frame after final PTS 34.04.",
+      "limitations": [
+        "采用静态抽帧审核，基础策略0.2秒（帧0、5、10…850及851）；因缺少可靠动作时间映射，将动作连续复核扩大至0–34.04秒，密度0.04秒。不是连续播放观看；计数为该证据范围内确认下界。",
+        "三视角各852帧、25fps，PTS从0至34.04秒，容器时长34.08秒；相同编码PTS不证明传感器物理同步精度。遮挡和有限分辨率不能排除不可见接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/arrange_largest_number/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 34.08,
+      "frame_count": 852,
+      "frame_index_basis": "zero-based decoded source frames, 0..851",
+      "mapping": "Encoded PTS n/25 verified. No reliable PTS-to-env_step/decision synchronization; content/order association only, physical cross-camera sync error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 34.04,
+          "interval": 0.04,
+          "reason": "全部动作、疑点及事件边界±0.2秒；因映射不可靠扩大至全时段连续源帧静态复核。"
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing PTS found; no frame after final PTS 34.04.",
+      "limitations": [
+        "采用静态抽帧审核，基础策略0.2秒（帧0、5、10…850及851）；因缺少可靠动作时间映射，将动作连续复核扩大至0–34.04秒，密度0.04秒。不是连续播放观看；计数为该证据范围内确认下界。",
+        "三视角各852帧、25fps，PTS从0至34.04秒，容器时长34.08秒；相同编码PTS不证明传感器物理同步精度。遮挡和有限分辨率不能排除不可见接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/arrange_largest_number/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 34.08,
+      "frame_count": 852,
+      "frame_index_basis": "zero-based decoded source frames, 0..851",
+      "mapping": "Encoded PTS n/25 verified. No reliable PTS-to-env_step/decision synchronization; content/order association only, physical cross-camera sync error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_da8573/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 34.04,
+          "interval": 0.04,
+          "reason": "全部动作、疑点及事件边界±0.2秒；因映射不可靠扩大至全时段连续源帧静态复核。"
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing PTS found; no frame after final PTS 34.04.",
+      "limitations": [
+        "采用静态抽帧审核，基础策略0.2秒（帧0、5、10…850及851）；因缺少可靠动作时间映射，将动作连续复核扩大至0–34.04秒，密度0.04秒。不是连续播放观看；计数为该证据范围内确认下界。",
+        "三视角各852帧、25fps，PTS从0至34.04秒，容器时长34.08秒；相同编码PTS不证明传感器物理同步精度。遮挡和有限分辨率不能排除不可见接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/build_tower/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 36.76,
+      "frame_count": 919,
+      "frame_index_basis": "zero-based decoded source index0–918",
+      "mapping": "PTS*time_base(1/12800)；无可靠decision/env_step映射，零基decision_index独立记录。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 36.72,
+          "interval": 0.04,
+          "reason": "映射不可靠，扩大至全时段，覆盖全部动作及事件前后余量（视频首尾截断）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺损",
+      "limitations": [
+        "源视频25fps，时间精度0.04秒；只有相同PTS网格，不能证明物理同步；决策和env_step不可按帧号推算。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/build_tower/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 36.76,
+      "frame_count": 919,
+      "frame_index_basis": "zero-based decoded source index0–918",
+      "mapping": "PTS*time_base(1/12800)；无可靠decision/env_step映射，零基decision_index独立记录。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 36.72,
+          "interval": 0.04,
+          "reason": "映射不可靠，扩大至全时段，覆盖全部动作及事件前后余量（视频首尾截断）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺损",
+      "limitations": [
+        "源视频25fps，时间精度0.04秒；只有相同PTS网格，不能证明物理同步；决策和env_step不可按帧号推算。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/build_tower/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 36.76,
+      "frame_count": 919,
+      "frame_index_basis": "zero-based decoded source index0–918",
+      "mapping": "PTS*time_base(1/12800)；无可靠decision/env_step映射，零基decision_index独立记录。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-build-tower-cap20-20261019-2151-build_tower-standar_0d5660/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 36.72,
+          "interval": 0.04,
+          "reason": "映射不可靠，扩大至全时段，覆盖全部动作及事件前后余量（视频首尾截断）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺损",
+      "limitations": [
+        "源视频25fps，时间精度0.04秒；只有相同PTS网格，不能证明物理同步；决策和env_step不可按帧号推算。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/classify_objects/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 47.12,
+      "frame_count": 1178,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路同帧PTS一致；无控制步同步表，不能把源帧号当env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/extracted/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/inspected/head.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 47.08,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–94, all executed macro stages, all event boundaries plus 0.2 seconds clipped to video. No trustworthy video/control synchronization; expanded continuous source-frame image review across the available video."
+        }
+      ],
+      "missing_or_damaged": "",
+      "limitations": [
+        "静态图像按每批最多4时间点×3视角检查；基础0.2秒，动作连续源帧复核因映射缺失扩大到全时段。不是连续播放视频；遮挡及接触深度限制仍存在。",
+        "PTS仅定位视频，不能以帧号代替decision或env_step。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/classify_objects/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 47.12,
+      "frame_count": 1178,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路同帧PTS一致；无控制步同步表，不能把源帧号当env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/extracted/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/inspected/left_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 47.08,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–94, all executed macro stages, all event boundaries plus 0.2 seconds clipped to video. No trustworthy video/control synchronization; expanded continuous source-frame image review across the available video."
+        }
+      ],
+      "missing_or_damaged": "",
+      "limitations": [
+        "静态图像按每批最多4时间点×3视角检查；基础0.2秒，动作连续源帧复核因映射缺失扩大到全时段。不是连续播放视频；遮挡及接触深度限制仍存在。",
+        "PTS仅定位视频，不能以帧号代替decision或env_step。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/classify_objects/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 47.12,
+      "frame_count": 1178,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路同帧PTS一致；无控制步同步表，不能把源帧号当env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/extracted/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-cap20-20261019-2039-classify_objects-stand_83e85e/inspected/right_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 47.08,
+          "interval": 0.04,
+          "reason": "actions.json decisions 0–94, all executed macro stages, all event boundaries plus 0.2 seconds clipped to video. No trustworthy video/control synchronization; expanded continuous source-frame image review across the available video."
+        }
+      ],
+      "missing_or_damaged": "",
+      "limitations": [
+        "静态图像按每批最多4时间点×3视角检查；基础0.2秒，动作连续源帧复核因映射缺失扩大到全时段。不是连续播放视频；遮挡及接触深度限制仍存在。",
+        "PTS仅定位视频，不能以帧号代替decision或env_step。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/classify_objects_by_language/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 44.6,
+      "frame_count": 1115,
+      "frame_index_basis": "zero-based; 0–1114",
+      "mapping": "PTS*time_base=time_seconds; 每帧0.04秒。三路帧PTS一致；缺少env_step同步元数据，禁止按比例映射decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 44.56,
+          "interval": 0.04,
+          "reason": "全部87条决策、97个实际阶段及所有事件；缺少可靠PTS/控制步同步，保守扩大连续源帧复核至全时段，事件前后0.2秒均包含。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧/损坏；每路1115帧，末帧44.56秒。",
+      "limitations": [
+        "采用0.2秒基础静态抽帧扫描，动作、疑点和事件边界按0.04秒连续源帧复核；因无可靠动作时间映射，复核范围扩大至0–44.56秒。方法不是连续视频播放，计数为所声明可见证据中的确认下界。",
+        "视频PTS仅映射零基源帧，无法可靠换算env_step；日志decision_index为零基、origin_call_index为一基，policy_step为零基宏阶段。事件日志关联依据对象、动作顺序和note，不声称精确同步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/classify_objects_by_language/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 44.6,
+      "frame_count": 1115,
+      "frame_index_basis": "zero-based; 0–1114",
+      "mapping": "PTS*time_base=time_seconds; 每帧0.04秒。三路帧PTS一致；缺少env_step同步元数据，禁止按比例映射decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 44.56,
+          "interval": 0.04,
+          "reason": "全部87条决策、97个实际阶段及所有事件；缺少可靠PTS/控制步同步，保守扩大连续源帧复核至全时段，事件前后0.2秒均包含。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧/损坏；每路1115帧，末帧44.56秒。",
+      "limitations": [
+        "采用0.2秒基础静态抽帧扫描，动作、疑点和事件边界按0.04秒连续源帧复核；因无可靠动作时间映射，复核范围扩大至0–44.56秒。方法不是连续视频播放，计数为所声明可见证据中的确认下界。",
+        "视频PTS仅映射零基源帧，无法可靠换算env_step；日志decision_index为零基、origin_call_index为一基，policy_step为零基宏阶段。事件日志关联依据对象、动作顺序和note，不声称精确同步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/classify_objects_by_language/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 44.6,
+      "frame_count": 1115,
+      "frame_index_basis": "zero-based; 0–1114",
+      "mapping": "PTS*time_base=time_seconds; 每帧0.04秒。三路帧PTS一致；缺少env_step同步元数据，禁止按比例映射decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-classify-objects-by-language-cap20-20261019-2151-cl_6bda0c/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 44.56,
+          "interval": 0.04,
+          "reason": "全部87条决策、97个实际阶段及所有事件；缺少可靠PTS/控制步同步，保守扩大连续源帧复核至全时段，事件前后0.2秒均包含。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧/损坏；每路1115帧，末帧44.56秒。",
+      "limitations": [
+        "采用0.2秒基础静态抽帧扫描，动作、疑点和事件边界按0.04秒连续源帧复核；因无可靠动作时间映射，复核范围扩大至0–44.56秒。方法不是连续视频播放，计数为所声明可见证据中的确认下界。",
+        "视频PTS仅映射零基源帧，无法可靠换算env_step；日志decision_index为零基、origin_call_index为一基，policy_step为零基宏阶段。事件日志关联依据对象、动作顺序和note，不声称精确同步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/cover_blocks/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 23.96,
+      "frame_count": 599,
+      "frame_index_basis": "zero-based decoded source frame 0..598; native PTS preserved in extracted_index",
+      "mapping": "Equal encoded PTS across three views (numeric delta 0 s); true capture synchronization unverified. No reliable PTS→decision/env_step mapping.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.92,
+          "interval": 0.04,
+          "reason": "No reliable PTS-to-control synchronization table; expanded continuous source-frame review to the full available 0–23.92 s interval for every executed action and event, including boundary context."
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing interval detected; no intermediate frames outside source video exist in package.",
+      "limitations": [
+        "采用静态图像审核：0.2秒基础扫描策略，动作段及疑点以25fps连续源帧复核；因动作时间映射不可靠，复核扩大到全可用时段。未连续播放视频，不将提取数量等同实际检查。具体已看记录以inspected_index为准。",
+        "三路编码PTS逐项相同（数值时间差0秒），但无独立相机采集同步凭据，真实采集偏差未知。无PTS→decision/env_step同步表，不提供猜测的精确映射；事件视频区间是视觉范围，控制边界是独立日志范围。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/cover_blocks/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 23.96,
+      "frame_count": 599,
+      "frame_index_basis": "zero-based decoded source frame 0..598; native PTS preserved in extracted_index",
+      "mapping": "Equal encoded PTS across three views (numeric delta 0 s); true capture synchronization unverified. No reliable PTS→decision/env_step mapping.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.92,
+          "interval": 0.04,
+          "reason": "No reliable PTS-to-control synchronization table; expanded continuous source-frame review to the full available 0–23.92 s interval for every executed action and event, including boundary context."
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing interval detected; no intermediate frames outside source video exist in package.",
+      "limitations": [
+        "采用静态图像审核：0.2秒基础扫描策略，动作段及疑点以25fps连续源帧复核；因动作时间映射不可靠，复核扩大到全可用时段。未连续播放视频，不将提取数量等同实际检查。具体已看记录以inspected_index为准。",
+        "三路编码PTS逐项相同（数值时间差0秒），但无独立相机采集同步凭据，真实采集偏差未知。无PTS→decision/env_step同步表，不提供猜测的精确映射；事件视频区间是视觉范围，控制边界是独立日志范围。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/cover_blocks/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 23.96,
+      "frame_count": 599,
+      "frame_index_basis": "zero-based decoded source frame 0..598; native PTS preserved in extracted_index",
+      "mapping": "Equal encoded PTS across three views (numeric delta 0 s); true capture synchronization unverified. No reliable PTS→decision/env_step mapping.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-stand_a00ce3/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.92,
+          "interval": 0.04,
+          "reason": "No reliable PTS-to-control synchronization table; expanded continuous source-frame review to the full available 0–23.92 s interval for every executed action and event, including boundary context."
+        }
+      ],
+      "missing_or_damaged": "No decode failure or missing interval detected; no intermediate frames outside source video exist in package.",
+      "limitations": [
+        "采用静态图像审核：0.2秒基础扫描策略，动作段及疑点以25fps连续源帧复核；因动作时间映射不可靠，复核扩大到全可用时段。未连续播放视频，不将提取数量等同实际检查。具体已看记录以inspected_index为准。",
+        "三路编码PTS逐项相同（数值时间差0秒），但无独立相机采集同步凭据，真实采集偏差未知。无PTS→decision/env_step同步表，不提供猜测的精确映射；事件视频区间是视觉范围，控制边界是独立日志范围。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/deposit_coin/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.48,
+      "frame_count": 337,
+      "frame_index_basis": "零基可解码源帧0–336，原生PTS与time_base保存在extracted_index",
+      "mapping": "同序号三视角原生PTS相同，末帧13.44s，三路容器时长13.48s。时间戳差0s；真实摄像机同步误差未知；无视频到控制步同步表。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/inspection/head.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.44,
+          "interval": 0.04,
+          "reason": "actions.json decision_index 0–45全部已核查；视频到控制步映射缺失，连续复核范围扩大至整段；利用本run已有实际看图记录，包含首尾以及事件前后0.2秒和动作前后1源帧（按视频边界裁切）。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；337源帧完整解码",
+      "limitations": [
+        "采用0.2秒基础扫描及动作/疑点连续源帧静态检查策略；无可靠动作时间映射，连续范围扩大至整段。保留本run既有实际检查记录，本轮未重复看图。",
+        "不是连续播放视频；静态图像不能排除遮挡下不可见接触或物理状态。",
+        "三路原生PTS对应一致，但实际摄像机同步误差未知；无视频PTS到控制步同步表。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/deposit_coin/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.48,
+      "frame_count": 337,
+      "frame_index_basis": "零基可解码源帧0–336，原生PTS与time_base保存在extracted_index",
+      "mapping": "同序号三视角原生PTS相同，末帧13.44s，三路容器时长13.48s。时间戳差0s；真实摄像机同步误差未知；无视频到控制步同步表。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/inspection/left_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.44,
+          "interval": 0.04,
+          "reason": "actions.json decision_index 0–45全部已核查；视频到控制步映射缺失，连续复核范围扩大至整段；利用本run已有实际看图记录，包含首尾以及事件前后0.2秒和动作前后1源帧（按视频边界裁切）。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；337源帧完整解码",
+      "limitations": [
+        "采用0.2秒基础扫描及动作/疑点连续源帧静态检查策略；无可靠动作时间映射，连续范围扩大至整段。保留本run既有实际检查记录，本轮未重复看图。",
+        "不是连续播放视频；静态图像不能排除遮挡下不可见接触或物理状态。",
+        "三路原生PTS对应一致，但实际摄像机同步误差未知；无视频PTS到控制步同步表。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/deposit_coin/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.48,
+      "frame_count": 337,
+      "frame_index_basis": "零基可解码源帧0–336，原生PTS与time_base保存在extracted_index",
+      "mapping": "同序号三视角原生PTS相同，末帧13.44s，三路容器时长13.48s。时间戳差0s；真实摄像机同步误差未知；无视频到控制步同步表。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-s_ca2634/inspection/right_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.44,
+          "interval": 0.04,
+          "reason": "actions.json decision_index 0–45全部已核查；视频到控制步映射缺失，连续复核范围扩大至整段；利用本run已有实际看图记录，包含首尾以及事件前后0.2秒和动作前后1源帧（按视频边界裁切）。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；337源帧完整解码",
+      "limitations": [
+        "采用0.2秒基础扫描及动作/疑点连续源帧静态检查策略；无可靠动作时间映射，连续范围扩大至整段。保留本run既有实际检查记录，本轮未重复看图。",
+        "不是连续播放视频；静态图像不能排除遮挡下不可见接触或物理状态。",
+        "三路原生PTS对应一致，但实际摄像机同步误差未知；无视频PTS到控制步同步表。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/fasten_screws/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 35.04,
+      "frame_count": 876,
+      "frame_index_basis": "zero-based decoded source frame 0–875; PTS retained",
+      "mapping": "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/inspected/head.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 35.0,
+          "interval": 0.04,
+          "reason": "全部90决策/94执行阶段；缺少精确同步，扩大至全可用时段，含事件边界前后0.2秒与动作窗口源帧余量。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；末帧后0.04秒为容器帧显示区间，无新增源帧。",
+      "limitations": [
+        "采用 sampled_0p2_continuous_actions：0.2秒基础扫描，动作和疑点按25fps连续源帧静态图复核；因同步表缺失复核范围扩大至0–35秒。不是连续播放观看，也不据采样策略宣称排除了所有瞬时事件。",
+        "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+        "三路均为25fps、876帧、35.04秒；最后可用帧PTS为35.00秒。PTS一致不证明物理同步误差为零。",
+        "原始任务指令正文缺失；historical-l3-eef仅为配置标签，prompt哈希与semantic工具提示不能替代本run任务指令。",
+        "无逐控制步状态轨迹、接触力、螺纹啮合或紧固深度真值；到达容差仅证明末端到达，不证明夹持或装配成功。计数为确认下界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/fasten_screws/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 35.04,
+      "frame_count": 876,
+      "frame_index_basis": "zero-based decoded source frame 0–875; PTS retained",
+      "mapping": "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/inspected/left_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 35.0,
+          "interval": 0.04,
+          "reason": "全部90决策/94执行阶段；缺少精确同步，扩大至全可用时段，含事件边界前后0.2秒与动作窗口源帧余量。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；末帧后0.04秒为容器帧显示区间，无新增源帧。",
+      "limitations": [
+        "采用 sampled_0p2_continuous_actions：0.2秒基础扫描，动作和疑点按25fps连续源帧静态图复核；因同步表缺失复核范围扩大至0–35秒。不是连续播放观看，也不据采样策略宣称排除了所有瞬时事件。",
+        "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+        "三路均为25fps、876帧、35.04秒；最后可用帧PTS为35.00秒。PTS一致不证明物理同步误差为零。",
+        "原始任务指令正文缺失；historical-l3-eef仅为配置标签，prompt哈希与semantic工具提示不能替代本run任务指令。",
+        "无逐控制步状态轨迹、接触力、螺纹啮合或紧固深度真值；到达容差仅证明末端到达，不证明夹持或装配成功。计数为确认下界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/fasten_screws/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 35.04,
+      "frame_count": 876,
+      "frame_index_basis": "zero-based decoded source frame 0–875; PTS retained",
+      "mapping": "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-sta_9a16c1/inspected/right_wrist.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 35.0,
+          "interval": 0.04,
+          "reason": "全部90决策/94执行阶段；缺少精确同步，扩大至全可用时段，含事件边界前后0.2秒与动作窗口源帧余量。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏；末帧后0.04秒为容器帧显示区间，无新增源帧。",
+      "limitations": [
+        "采用 sampled_0p2_continuous_actions：0.2秒基础扫描，动作和疑点按25fps连续源帧静态图复核；因同步表缺失复核范围扩大至0–35秒。不是连续播放观看，也不据采样策略宣称排除了所有瞬时事件。",
+        "视频零基解码帧与PTS可核实；没有PTS到env_step/decision的同步表，禁止按帧号或时长比例换算。日志阶段与视觉链仅按物体、动作次序关联，事件视频范围来自实际图像观察，不是控制步映射。",
+        "三路均为25fps、876帧、35.04秒；最后可用帧PTS为35.00秒。PTS一致不证明物理同步误差为零。",
+        "原始任务指令正文缺失；historical-l3-eef仅为配置标签，prompt哈希与semantic工具提示不能替代本run任务指令。",
+        "无逐控制步状态轨迹、接触力、螺纹啮合或紧固深度真值；到达容差仅证明末端到达，不证明夹持或装配成功。计数为确认下界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/fill_egg_holder/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 29.72,
+      "frame_count": 743,
+      "frame_index_basis": "zero-based 0..742; last PTS 29.68s",
+      "mapping": "PTS/time_base decoded exactly; three streams matching PTS. No verified video-to-decision/env_step mapping; do not infer from frame index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 29.68,
+          "interval": 0.04,
+          "reason": "All actions, suspected events and event ±0.2s reviewed at consecutive source frames; full range chosen because PTS/control synchronization unavailable."
+        }
+      ],
+      "missing_or_damaged": "None decoded; 743/743 source frames recorded inspected.",
+      "limitations": [
+        "方法为静态图像抽帧审核，policy sampled_0p2_continuous_actions，基础间隔0.2秒；因动作时间映射缺失，连续复核扩大到全时段0–29.68秒，每视角全部743个可用源帧（0.04秒），并非视频连续播放。",
+        "计数为可确认下界；遮挡及25fps之间的更短事件不能据此排除。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/fill_egg_holder/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 29.72,
+      "frame_count": 743,
+      "frame_index_basis": "zero-based 0..742; last PTS 29.68s",
+      "mapping": "PTS/time_base decoded exactly; three streams matching PTS. No verified video-to-decision/env_step mapping; do not infer from frame index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 29.68,
+          "interval": 0.04,
+          "reason": "All actions, suspected events and event ±0.2s reviewed at consecutive source frames; full range chosen because PTS/control synchronization unavailable."
+        }
+      ],
+      "missing_or_damaged": "None decoded; 743/743 source frames recorded inspected.",
+      "limitations": [
+        "方法为静态图像抽帧审核，policy sampled_0p2_continuous_actions，基础间隔0.2秒；因动作时间映射缺失，连续复核扩大到全时段0–29.68秒，每视角全部743个可用源帧（0.04秒），并非视频连续播放。",
+        "计数为可确认下界；遮挡及25fps之间的更短事件不能据此排除。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/fill_egg_holder/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 29.72,
+      "frame_count": 743,
+      "frame_index_basis": "zero-based 0..742; last PTS 29.68s",
+      "mapping": "PTS/time_base decoded exactly; three streams matching PTS. No verified video-to-decision/env_step mapping; do not infer from frame index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder_b5236b/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 29.68,
+          "interval": 0.04,
+          "reason": "All actions, suspected events and event ±0.2s reviewed at consecutive source frames; full range chosen because PTS/control synchronization unavailable."
+        }
+      ],
+      "missing_or_damaged": "None decoded; 743/743 source frames recorded inspected.",
+      "limitations": [
+        "方法为静态图像抽帧审核，policy sampled_0p2_continuous_actions，基础间隔0.2秒；因动作时间映射缺失，连续复核扩大到全时段0–29.68秒，每视角全部743个可用源帧（0.04秒），并非视频连续播放。",
+        "计数为可确认下界；遮挡及25fps之间的更短事件不能据此排除。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/fill_pen_holder/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 38.88,
+      "frame_count": 972,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路相同PTS；未发现可核实的PTS至env_step映射，不能猜测决策边界",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 38.84,
+          "interval": 0.04,
+          "reason": "无可靠动作同步表，扩大连续源帧复核至全时段，覆盖全部动作、疑点与事件边界前后0.2秒（限视频边界）。"
+        }
+      ],
+      "missing_or_damaged": "全部解码成功",
+      "limitations": [
+        "客观同步缺失：三路25fps/相同PTS，未提供PTS到env_step/decision同步表。事件视频区间据视觉帧状态给出，日志语义关联不作为精确时间映射；main如需逐步因果定位，请补原始录制同步记录。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/fill_pen_holder/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 38.88,
+      "frame_count": 972,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路相同PTS；未发现可核实的PTS至env_step映射，不能猜测决策边界",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 38.84,
+          "interval": 0.04,
+          "reason": "无可靠动作同步表，扩大连续源帧复核至全时段，覆盖全部动作、疑点与事件边界前后0.2秒（限视频边界）。"
+        }
+      ],
+      "missing_or_damaged": "全部解码成功",
+      "limitations": [
+        "客观同步缺失：三路25fps/相同PTS，未提供PTS到env_step/decision同步表。事件视频区间据视觉帧状态给出，日志语义关联不作为精确时间映射；main如需逐步因果定位，请补原始录制同步记录。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/fill_pen_holder/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 38.88,
+      "frame_count": 972,
+      "frame_index_basis": "zero-based decoded source frame",
+      "mapping": "三路相同PTS；未发现可核实的PTS至env_step映射，不能猜测决策边界",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder_acc504/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 38.84,
+          "interval": 0.04,
+          "reason": "无可靠动作同步表，扩大连续源帧复核至全时段，覆盖全部动作、疑点与事件边界前后0.2秒（限视频边界）。"
+        }
+      ],
+      "missing_or_damaged": "全部解码成功",
+      "limitations": [
+        "客观同步缺失：三路25fps/相同PTS，未提供PTS到env_step/decision同步表。事件视频区间据视觉帧状态给出，日志语义关联不作为精确时间映射；main如需逐步因果定位，请补原始录制同步记录。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/fold_clothes/random-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 14.84,
+      "frame_count": 371,
+      "frame_index_basis": "zero-based; PTS seconds retained",
+      "mapping": "无可靠env_step到PTS映射；按真实PTS与动作语义顺序关联，不采用控制步/帧号等同。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.8,
+          "interval": 0.04,
+          "reason": "全部d0–37动作及事件边界复核；映射不可靠而扩大至全时段，含首尾及事件前后0.2秒（视频边界截齐）。"
+        }
+      ],
+      "missing_or_damaged": "完整解码无缺帧或损坏迹象；未发现缺失视角。",
+      "limitations": [
+        "视频PTS与env_step没有可靠映射：视频371帧、25fps，执行332控制步。决策/控制区间来自actions.json，事件视频区间仅来自视觉及顺序关联，不构成精确同步；请main补逐帧控制时间戳，重点d0/d1/d14/d23。",
+        "采用sampled_0p2_continuous_actions：0.2秒基础扫描，动作及事件边界连续源帧复核。因PTS到控制步映射不可靠，连续复核扩大至0–14.8秒；静态联系表审核，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/fold_clothes/random-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 14.84,
+      "frame_count": 371,
+      "frame_index_basis": "zero-based; PTS seconds retained",
+      "mapping": "无可靠env_step到PTS映射；按真实PTS与动作语义顺序关联，不采用控制步/帧号等同。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.8,
+          "interval": 0.04,
+          "reason": "全部d0–37动作及事件边界复核；映射不可靠而扩大至全时段，含首尾及事件前后0.2秒（视频边界截齐）。"
+        }
+      ],
+      "missing_or_damaged": "完整解码无缺帧或损坏迹象；未发现缺失视角。",
+      "limitations": [
+        "视频PTS与env_step没有可靠映射：视频371帧、25fps，执行332控制步。决策/控制区间来自actions.json，事件视频区间仅来自视觉及顺序关联，不构成精确同步；请main补逐帧控制时间戳，重点d0/d1/d14/d23。",
+        "采用sampled_0p2_continuous_actions：0.2秒基础扫描，动作及事件边界连续源帧复核。因PTS到控制步映射不可靠，连续复核扩大至0–14.8秒；静态联系表审核，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/fold_clothes/random-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 14.84,
+      "frame_count": 371,
+      "frame_index_basis": "zero-based; PTS seconds retained",
+      "mapping": "无可靠env_step到PTS映射；按真实PTS与动作语义顺序关联，不采用控制步/帧号等同。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-rando_cb8b22/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.8,
+          "interval": 0.04,
+          "reason": "全部d0–37动作及事件边界复核；映射不可靠而扩大至全时段，含首尾及事件前后0.2秒（视频边界截齐）。"
+        }
+      ],
+      "missing_or_damaged": "完整解码无缺帧或损坏迹象；未发现缺失视角。",
+      "limitations": [
+        "视频PTS与env_step没有可靠映射：视频371帧、25fps，执行332控制步。决策/控制区间来自actions.json，事件视频区间仅来自视觉及顺序关联，不构成精确同步；请main补逐帧控制时间戳，重点d0/d1/d14/d23。",
+        "采用sampled_0p2_continuous_actions：0.2秒基础扫描，动作及事件边界连续源帧复核。因PTS到控制步映射不可靠，连续复核扩大至0–14.8秒；静态联系表审核，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/general_pickup/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 5.0,
+      "frame_count": 125,
+      "frame_index_basis": "zero-based; source PTS retained, first=0.00,last=4.96",
+      "mapping": "relative PTS aligned between views; no reliable source PTS-to-control/decision mapping; all action intervals enlarged to full available clip",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 4.96,
+          "interval": 0.04,
+          "reason": "全部17条动作逐项核对，包含14个执行阶段、3次拒绝；无可靠动作PTS映射，动作复核扩大至全时段，事件前后0.2秒及边界相邻源帧均由此覆盖（视频端点截断）。"
+        }
+      ],
+      "missing_or_damaged": "none decoded; no post-terminal footage beyond last PTS 4.96",
+      "limitations": [
+        "采用静态抽帧审核：0.2秒基础扫描（零基帧0,5,...,120,124），动作区间按源帧0.04秒复核；没有连续播放视频，不将抽帧方法概称为全部源帧审核，也不能排除源帧间瞬时事件。",
+        "导出未提供可靠的视频PTS到env_step或decision映射；125帧与111控制步数量不同，禁止以帧号替代控制步。全部动作的视觉复核范围扩大至0–4.96秒，跨视角仅依相同相对PTS对齐，未有独立同步时钟证明。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/general_pickup/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 5.0,
+      "frame_count": 125,
+      "frame_index_basis": "zero-based; source PTS retained, first=0.00,last=4.96",
+      "mapping": "relative PTS aligned between views; no reliable source PTS-to-control/decision mapping; all action intervals enlarged to full available clip",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 4.96,
+          "interval": 0.04,
+          "reason": "全部17条动作逐项核对，包含14个执行阶段、3次拒绝；无可靠动作PTS映射，动作复核扩大至全时段，事件前后0.2秒及边界相邻源帧均由此覆盖（视频端点截断）。"
+        }
+      ],
+      "missing_or_damaged": "none decoded; no post-terminal footage beyond last PTS 4.96",
+      "limitations": [
+        "采用静态抽帧审核：0.2秒基础扫描（零基帧0,5,...,120,124），动作区间按源帧0.04秒复核；没有连续播放视频，不将抽帧方法概称为全部源帧审核，也不能排除源帧间瞬时事件。",
+        "导出未提供可靠的视频PTS到env_step或decision映射；125帧与111控制步数量不同，禁止以帧号替代控制步。全部动作的视觉复核范围扩大至0–4.96秒，跨视角仅依相同相对PTS对齐，未有独立同步时钟证明。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/general_pickup/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 5.0,
+      "frame_count": 125,
+      "frame_index_basis": "zero-based; source PTS retained, first=0.00,last=4.96",
+      "mapping": "relative PTS aligned between views; no reliable source PTS-to-control/decision mapping; all action intervals enlarged to full available clip",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-s_ab002f/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 4.96,
+          "interval": 0.04,
+          "reason": "全部17条动作逐项核对，包含14个执行阶段、3次拒绝；无可靠动作PTS映射，动作复核扩大至全时段，事件前后0.2秒及边界相邻源帧均由此覆盖（视频端点截断）。"
+        }
+      ],
+      "missing_or_damaged": "none decoded; no post-terminal footage beyond last PTS 4.96",
+      "limitations": [
+        "采用静态抽帧审核：0.2秒基础扫描（零基帧0,5,...,120,124），动作区间按源帧0.04秒复核；没有连续播放视频，不将抽帧方法概称为全部源帧审核，也不能排除源帧间瞬时事件。",
+        "导出未提供可靠的视频PTS到env_step或decision映射；125帧与111控制步数量不同，禁止以帧号替代控制步。全部动作的视觉复核范围扩大至0–4.96秒，跨视角仅依相同相对PTS对齐，未有独立同步时钟证明。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/hang_mugs/random-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.4,
+      "frame_count": 710,
+      "frame_index_basis": "zero-based; PTS 0..28.36, last frame709; duration includes last frame display",
+      "mapping": "PTS=f.time_base*f.pts；三视角相同帧序列时间。无可靠PTS到env_step映射；不可用710帧对633步线性换算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/head/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.36,
+          "interval": 0.04,
+          "reason": "全部已执行动作、疑点与事件边界；日志无可靠PTS映射，扩大至全时段（事件前后0.2秒及动作前后源帧，按视频边界截取）。"
+        }
+      ],
+      "missing_or_damaged": "none detected during decode",
+      "limitations": [
+        "静态图像审核策略sampled_0p2_continuous_actions：基础帧每0.2秒（零基0,5,10,…,705及709）；动作与疑点按25fps连续源帧复核。因无可靠动作-PTS映射，将复核区间扩大至0–28.36秒；178批，每批最多4时间点×3视角。不是实时连续播放，具体实际检查记录以inspected_index为准。",
+        "客观映射限制：视频各710帧、25fps、PTS 0–28.36秒，而执行633环境控制步；日志没有逐步视频PTS。decision_index为零基0–78，semantic policy_step为零基0–74，二者不同。事件时间直接来自图像；日志动作按对象/顺序/执行语义关联，不提供精确PTS到控制步换算。请main索取编码/仿真逐步时间戳。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/hang_mugs/random-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.4,
+      "frame_count": 710,
+      "frame_index_basis": "zero-based; PTS 0..28.36, last frame709; duration includes last frame display",
+      "mapping": "PTS=f.time_base*f.pts；三视角相同帧序列时间。无可靠PTS到env_step映射；不可用710帧对633步线性换算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/left_wrist/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.36,
+          "interval": 0.04,
+          "reason": "全部已执行动作、疑点与事件边界；日志无可靠PTS映射，扩大至全时段（事件前后0.2秒及动作前后源帧，按视频边界截取）。"
+        }
+      ],
+      "missing_or_damaged": "none detected during decode",
+      "limitations": [
+        "静态图像审核策略sampled_0p2_continuous_actions：基础帧每0.2秒（零基0,5,10,…,705及709）；动作与疑点按25fps连续源帧复核。因无可靠动作-PTS映射，将复核区间扩大至0–28.36秒；178批，每批最多4时间点×3视角。不是实时连续播放，具体实际检查记录以inspected_index为准。",
+        "客观映射限制：视频各710帧、25fps、PTS 0–28.36秒，而执行633环境控制步；日志没有逐步视频PTS。decision_index为零基0–78，semantic policy_step为零基0–74，二者不同。事件时间直接来自图像；日志动作按对象/顺序/执行语义关联，不提供精确PTS到控制步换算。请main索取编码/仿真逐步时间戳。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/hang_mugs/random-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.4,
+      "frame_count": 710,
+      "frame_index_basis": "zero-based; PTS 0..28.36, last frame709; duration includes last frame display",
+      "mapping": "PTS=f.time_base*f.pts；三视角相同帧序列时间。无可靠PTS到env_step映射；不可用710帧对633步线性换算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-s_3f6d3a/media/right_wrist/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.36,
+          "interval": 0.04,
+          "reason": "全部已执行动作、疑点与事件边界；日志无可靠PTS映射，扩大至全时段（事件前后0.2秒及动作前后源帧，按视频边界截取）。"
+        }
+      ],
+      "missing_or_damaged": "none detected during decode",
+      "limitations": [
+        "静态图像审核策略sampled_0p2_continuous_actions：基础帧每0.2秒（零基0,5,10,…,705及709）；动作与疑点按25fps连续源帧复核。因无可靠动作-PTS映射，将复核区间扩大至0–28.36秒；178批，每批最多4时间点×3视角。不是实时连续播放，具体实际检查记录以inspected_index为准。",
+        "客观映射限制：视频各710帧、25fps、PTS 0–28.36秒，而执行633环境控制步；日志没有逐步视频PTS。decision_index为零基0–78，semantic policy_step为零基0–74，二者不同。事件时间直接来自图像；日志动作按对象/顺序/执行语义关联，不提供精确PTS到控制步换算。请main索取编码/仿真逐步时间戳。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/imitate_sorting_sequence/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 61.56,
+      "frame_count": 1539,
+      "frame_index_basis": "zero-based",
+      "mapping": "各源帧有解码PTS；未提供可靠PTS/env_step映射。事件与决策按目标及动作顺序关联，禁止用1539=1415+124推定精确映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/head/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 23.84,
+          "end": 61.52,
+          "interval": 0.04,
+          "reason": "无法可靠精确映射日志边界，扩大连续检查到策略开始前等待至末帧，涵盖全部策略动作、失败链及事件前后0.2秒。"
+        }
+      ],
+      "missing_or_damaged": "完整解码未发现缺损",
+      "limitations": [
+        "0–23.8秒演示/非模型等待段按0.2秒基础扫描；策略段23.84–61.52秒逐源帧静态复核，未声称全部视频源帧均检查。",
+        "二维遮挡不能排除完全不可见短暂接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/imitate_sorting_sequence/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 61.56,
+      "frame_count": 1539,
+      "frame_index_basis": "zero-based",
+      "mapping": "各源帧有解码PTS；未提供可靠PTS/env_step映射。事件与决策按目标及动作顺序关联，禁止用1539=1415+124推定精确映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/left_wrist/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 23.84,
+          "end": 61.52,
+          "interval": 0.04,
+          "reason": "无法可靠精确映射日志边界，扩大连续检查到策略开始前等待至末帧，涵盖全部策略动作、失败链及事件前后0.2秒。"
+        }
+      ],
+      "missing_or_damaged": "完整解码未发现缺损",
+      "limitations": [
+        "0–23.8秒演示/非模型等待段按0.2秒基础扫描；策略段23.84–61.52秒逐源帧静态复核，未声称全部视频源帧均检查。",
+        "二维遮挡不能排除完全不可见短暂接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/imitate_sorting_sequence/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 61.56,
+      "frame_count": 1539,
+      "frame_index_basis": "zero-based",
+      "mapping": "各源帧有解码PTS；未提供可靠PTS/env_step映射。事件与决策按目标及动作顺序关联，禁止用1539=1415+124推定精确映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitat_914460/evidence/right_wrist/inspected_index.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 23.84,
+          "end": 61.52,
+          "interval": 0.04,
+          "reason": "无法可靠精确映射日志边界，扩大连续检查到策略开始前等待至末帧，涵盖全部策略动作、失败链及事件前后0.2秒。"
+        }
+      ],
+      "missing_or_damaged": "完整解码未发现缺损",
+      "limitations": [
+        "0–23.8秒演示/非模型等待段按0.2秒基础扫描；策略段23.84–61.52秒逐源帧静态复核，未声称全部视频源帧均检查。",
+        "二维遮挡不能排除完全不可见短暂接触。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/insert_key/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 12.16,
+      "frame_count": 304,
+      "frame_index_basis": "zero-based, 0..303; source PTS 0..12.12s",
+      "mapping": "三路帧率与相对编码PTS序列一致；物理同步精度未知，未提供曝光或录像时钟对齐证据。未提供可靠PTS↔env_step映射；按可辨状态次序关联动作，不假定一帧一控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 12.12,
+          "interval": 0.04,
+          "reason": "全部动作的精确PTS边界未可靠映射，故扩大连续复核至完整录像范围；事件边界±0.2s包含在内。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失/损坏；末帧PTS12.12，容器持续12.16。",
+      "limitations": [
+        "图像只能支持所见物理状态，不能排除遮挡接触或帧间瞬态；事件计数为确认下界。",
+        "事件关联的env_step为动作日志累计零基范围，不将视频帧号当decision或控制步。",
+        "原始完整模型对话/推理、原始任务指令、全局动作上限和接触遥测不在可用包内；所有可用action note均已核对。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/insert_key/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 12.16,
+      "frame_count": 304,
+      "frame_index_basis": "zero-based, 0..303; source PTS 0..12.12s",
+      "mapping": "三路帧率与相对编码PTS序列一致；物理同步精度未知，未提供曝光或录像时钟对齐证据。未提供可靠PTS↔env_step映射；按可辨状态次序关联动作，不假定一帧一控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 12.12,
+          "interval": 0.04,
+          "reason": "全部动作的精确PTS边界未可靠映射，故扩大连续复核至完整录像范围；事件边界±0.2s包含在内。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失/损坏；末帧PTS12.12，容器持续12.16。",
+      "limitations": [
+        "图像只能支持所见物理状态，不能排除遮挡接触或帧间瞬态；事件计数为确认下界。",
+        "事件关联的env_step为动作日志累计零基范围，不将视频帧号当decision或控制步。",
+        "原始完整模型对话/推理、原始任务指令、全局动作上限和接触遥测不在可用包内；所有可用action note均已核对。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/insert_key/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 12.16,
+      "frame_count": 304,
+      "frame_index_basis": "zero-based, 0..303; source PTS 0..12.12s",
+      "mapping": "三路帧率与相对编码PTS序列一致；物理同步精度未知，未提供曝光或录像时钟对齐证据。未提供可靠PTS↔env_step映射；按可辨状态次序关联动作，不假定一帧一控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-_e5a78b/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 12.12,
+          "interval": 0.04,
+          "reason": "全部动作的精确PTS边界未可靠映射，故扩大连续复核至完整录像范围；事件边界±0.2s包含在内。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失/损坏；末帧PTS12.12，容器持续12.16。",
+      "limitations": [
+        "图像只能支持所见物理状态，不能排除遮挡接触或帧间瞬态；事件计数为确认下界。",
+        "事件关联的env_step为动作日志累计零基范围，不将视频帧号当decision或控制步。",
+        "原始完整模型对话/推理、原始任务指令、全局动作上限和接触遥测不在可用包内；所有可用action note均已核对。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/insert_tubes/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 22.12,
+      "frame_count": 553,
+      "frame_index_basis": "zero-based 0–552; first PTS=0,last PTS=22.08",
+      "mapping": "同PTS三视角同步；没有可信PTS到控制步映射，相关动作按顺序关联、全时段加密消除漏窗风险。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 22.08,
+          "interval": 0.04,
+          "reason": "全部动作、疑点、事件边界；映射不可靠，扩大到全时段；首尾按视频边界截取。"
+        }
+      ],
+      "missing_or_damaged": "未发现；每路成功解码553帧。",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions静态抽帧审核：基础每0.2秒，所有动作及事件边界连续源帧复核；因缺少可靠PTS到控制步映射，加密范围扩大为0–22.08秒。不是连续播放视频。",
+        "三视角均以最多4时点×3视角联系表分139批实际检查；单格480×360，遮挡与渲染分辨率仍限制接触和孔内深度判断。计数为所声明证据范围内确认下界，0不代表物理上绝无事件。",
+        "decision_index及policy_step均零基，origin_call_index一基；env_step为累计控制步边界。日志动作与视觉阶段仅按事件顺序关联，不声称精确PTS到env_step映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/insert_tubes/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 22.12,
+      "frame_count": 553,
+      "frame_index_basis": "zero-based 0–552; first PTS=0,last PTS=22.08",
+      "mapping": "同PTS三视角同步；没有可信PTS到控制步映射，相关动作按顺序关联、全时段加密消除漏窗风险。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 22.08,
+          "interval": 0.04,
+          "reason": "全部动作、疑点、事件边界；映射不可靠，扩大到全时段；首尾按视频边界截取。"
+        }
+      ],
+      "missing_or_damaged": "未发现；每路成功解码553帧。",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions静态抽帧审核：基础每0.2秒，所有动作及事件边界连续源帧复核；因缺少可靠PTS到控制步映射，加密范围扩大为0–22.08秒。不是连续播放视频。",
+        "三视角均以最多4时点×3视角联系表分139批实际检查；单格480×360，遮挡与渲染分辨率仍限制接触和孔内深度判断。计数为所声明证据范围内确认下界，0不代表物理上绝无事件。",
+        "decision_index及policy_step均零基，origin_call_index一基；env_step为累计控制步边界。日志动作与视觉阶段仅按事件顺序关联，不声称精确PTS到env_step映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/insert_tubes/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 22.12,
+      "frame_count": 553,
+      "frame_index_basis": "zero-based 0–552; first PTS=0,last PTS=22.08",
+      "mapping": "同PTS三视角同步；没有可信PTS到控制步映射，相关动作按顺序关联、全时段加密消除漏窗风险。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-stand_3a8ca6/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 22.08,
+          "interval": 0.04,
+          "reason": "全部动作、疑点、事件边界；映射不可靠，扩大到全时段；首尾按视频边界截取。"
+        }
+      ],
+      "missing_or_damaged": "未发现；每路成功解码553帧。",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions静态抽帧审核：基础每0.2秒，所有动作及事件边界连续源帧复核；因缺少可靠PTS到控制步映射，加密范围扩大为0–22.08秒。不是连续播放视频。",
+        "三视角均以最多4时点×3视角联系表分139批实际检查；单格480×360，遮挡与渲染分辨率仍限制接触和孔内深度判断。计数为所声明证据范围内确认下界，0不代表物理上绝无事件。",
+        "decision_index及policy_step均零基，origin_call_index一基；env_step为累计控制步边界。日志动作与视觉阶段仅按事件顺序关联，不声称精确PTS到env_step映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/make_kong/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 23.84,
+      "frame_count": 596,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index由解码顺序零基编号，PTS=frame_index/25为本视频实测时间；三路PTS范围一致。无控制步同步映射，不按视频帧号替代decision或env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 23.8,
+          "interval": 0.04,
+          "reason": "控制步/PTS映射不可靠，将全部动作及事件±0.2秒的连续复核范围扩展至完整可用时间轴；实际检查明细见inspected_index。"
+        }
+      ],
+      "missing_or_damaged": "未发现缺帧或解码损坏；末帧PTS23.8，容器末尾23.84无另一个源帧。",
+      "limitations": [
+        "静态联系表和疑点放大检查，非连续播放。",
+        "接触区部分遮挡，不能证明所有短暂接触或细微事件不存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/make_kong/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 23.84,
+      "frame_count": 596,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index由解码顺序零基编号，PTS=frame_index/25为本视频实测时间；三路PTS范围一致。无控制步同步映射，不按视频帧号替代decision或env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 23.8,
+          "interval": 0.04,
+          "reason": "控制步/PTS映射不可靠，将全部动作及事件±0.2秒的连续复核范围扩展至完整可用时间轴；实际检查明细见inspected_index。"
+        }
+      ],
+      "missing_or_damaged": "未发现缺帧或解码损坏；末帧PTS23.8，容器末尾23.84无另一个源帧。",
+      "limitations": [
+        "静态联系表和疑点放大检查，非连续播放。",
+        "接触区部分遮挡，不能证明所有短暂接触或细微事件不存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/make_kong/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 23.84,
+      "frame_count": 596,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index由解码顺序零基编号，PTS=frame_index/25为本视频实测时间；三路PTS范围一致。无控制步同步映射，不按视频帧号替代decision或env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0_d73881/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 23.8,
+          "interval": 0.04,
+          "reason": "控制步/PTS映射不可靠，将全部动作及事件±0.2秒的连续复核范围扩展至完整可用时间轴；实际检查明细见inspected_index。"
+        }
+      ],
+      "missing_or_damaged": "未发现缺帧或解码损坏；末帧PTS23.8，容器末尾23.84无另一个源帧。",
+      "limitations": [
+        "静态联系表和疑点放大检查，非连续播放。",
+        "接触区部分遮挡，不能证明所有短暂接触或细微事件不存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/make_toast/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 34.48,
+      "frame_count": 862,
+      "frame_index_basis": "zero_based; 0–861; last PTS=34.44s",
+      "mapping": "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 34.44,
+          "interval": 0.04,
+          "reason": "无可靠控制步PTS映射，动作复核扩大为整个视频，包含事件边界±0.2秒及动作前后源帧；分批静态检查。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/make_toast/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 34.48,
+      "frame_count": 862,
+      "frame_index_basis": "zero_based; 0–861; last PTS=34.44s",
+      "mapping": "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 34.44,
+          "interval": 0.04,
+          "reason": "无可靠控制步PTS映射，动作复核扩大为整个视频，包含事件边界±0.2秒及动作前后源帧；分批静态检查。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/make_toast/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 34.48,
+      "frame_count": 862,
+      "frame_index_basis": "zero_based; 0–861; last PTS=34.44s",
+      "mapping": "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0_98b818/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 34.44,
+          "interval": 0.04,
+          "reason": "无可靠控制步PTS映射，动作复核扩大为整个视频，包含事件边界±0.2秒及动作前后源帧；分批静态检查。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "源帧零基，PTS时间可靠；862视频帧与767控制步不同，无逐控制步时间戳。decision/env范围来自日志，视频区间来自视觉语义匹配，两者不是精确同步映射，误差不可量化。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/match_and_pick_from_conveyor/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.92,
+      "frame_count": 348,
+      "frame_index_basis": "zero-based; 0–347; PTS 0–13.88s",
+      "mapping": "Frame times from decoded PTS. No reliable env_step/decision-to-PTS mapping; no inferred exact synchronization.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.88,
+          "interval": 0.04,
+          "reason": "Mapping unavailable: expanded every action and boundary review to all available source frames."
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧或损坏；所有348帧已解码。",
+      "limitations": [
+        "静态源帧分批检查；不属于连续播放观看。",
+        "控制步与PTS精确映射缺失。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/match_and_pick_from_conveyor/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.92,
+      "frame_count": 348,
+      "frame_index_basis": "zero-based; 0–347; PTS 0–13.88s",
+      "mapping": "Frame times from decoded PTS. No reliable env_step/decision-to-PTS mapping; no inferred exact synchronization.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.88,
+          "interval": 0.04,
+          "reason": "Mapping unavailable: expanded every action and boundary review to all available source frames."
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧或损坏；所有348帧已解码。",
+      "limitations": [
+        "静态源帧分批检查；不属于连续播放观看。",
+        "控制步与PTS精确映射缺失。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/match_and_pick_from_conveyor/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.92,
+      "frame_count": 348,
+      "frame_index_basis": "zero-based; 0–347; PTS 0–13.88s",
+      "mapping": "Frame times from decoded PTS. No reliable env_step/decision-to-PTS mapping; no inferred exact synchronization.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-ma_be8909/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.88,
+          "interval": 0.04,
+          "reason": "Mapping unavailable: expanded every action and boundary review to all available source frames."
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧或损坏；所有348帧已解码。",
+      "limitations": [
+        "静态源帧分批检查；不属于连续播放观看。",
+        "控制步与PTS精确映射缺失。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/organize_table/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 35.44,
+      "frame_count": 886,
+      "frame_index_basis": "zero-based decoded presentation order; PTS retained in extracted index",
+      "mapping": "Videos share 25fps PTS 0..35.4s. 886 video frames != 795 controls; no reliable source PTS-to-env_step mapping; exact decision timestamps unavailable. Whole video interval reviewed to cover all actions.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 35.4,
+          "interval": 0.04,
+          "reason": "Unreliable PTS/control mapping; expanded all action and event review to entire available time range, including event ±0.2s and neighboring source frames where available."
+        }
+      ],
+      "missing_or_damaged": "No decoding gaps or damaged frames found.",
+      "limitations": [
+        "Static synchronized contact sheets, up to 4 times × 3 views per batch; wrists sometimes occluded. Exact simulator control timestamps unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/organize_table/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 35.44,
+      "frame_count": 886,
+      "frame_index_basis": "zero-based decoded presentation order; PTS retained in extracted index",
+      "mapping": "Videos share 25fps PTS 0..35.4s. 886 video frames != 795 controls; no reliable source PTS-to-env_step mapping; exact decision timestamps unavailable. Whole video interval reviewed to cover all actions.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 35.4,
+          "interval": 0.04,
+          "reason": "Unreliable PTS/control mapping; expanded all action and event review to entire available time range, including event ±0.2s and neighboring source frames where available."
+        }
+      ],
+      "missing_or_damaged": "No decoding gaps or damaged frames found.",
+      "limitations": [
+        "Static synchronized contact sheets, up to 4 times × 3 views per batch; wrists sometimes occluded. Exact simulator control timestamps unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/organize_table/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 35.44,
+      "frame_count": 886,
+      "frame_index_basis": "zero-based decoded presentation order; PTS retained in extracted index",
+      "mapping": "Videos share 25fps PTS 0..35.4s. 886 video frames != 795 controls; no reliable source PTS-to-env_step mapping; exact decision timestamps unavailable. Whole video interval reviewed to cover all actions.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-organize-table-cap20-20261019-2151-organize_table-s_0cc8e9/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 35.4,
+          "interval": 0.04,
+          "reason": "Unreliable PTS/control mapping; expanded all action and event review to entire available time range, including event ±0.2s and neighboring source frames where available."
+        }
+      ],
+      "missing_or_damaged": "No decoding gaps or damaged frames found.",
+      "limitations": [
+        "Static synchronized contact sheets, up to 4 times × 3 views per batch; wrists sometimes occluded. Exact simulator control timestamps unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/pack_objects_into_box/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 39.96,
+      "frame_count": 999,
+      "frame_index_basis": "zero-based 0..998",
+      "mapping": "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 39.92,
+          "interval": 0.04,
+          "reason": "无法可靠映射各动作的PTS；扩大连续复核至全时段，包含所有动作前后及事件±0.2秒（首尾裁切至可用范围）"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；999帧/视角",
+      "limitations": [
+        "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+        "采用静态抽帧图像审核，基础策略每0.2秒（frame0,5,10,...,998）；因动作时间映射不可靠，将相关连续复核范围扩大为三视角0..39.92秒，源帧间隔0.04秒。每批最多4个时间点×3视角，保留真实逐帧观察，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/pack_objects_into_box/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 39.96,
+      "frame_count": 999,
+      "frame_index_basis": "zero-based 0..998",
+      "mapping": "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 39.92,
+          "interval": 0.04,
+          "reason": "无法可靠映射各动作的PTS；扩大连续复核至全时段，包含所有动作前后及事件±0.2秒（首尾裁切至可用范围）"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；999帧/视角",
+      "limitations": [
+        "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+        "采用静态抽帧图像审核，基础策略每0.2秒（frame0,5,10,...,998）；因动作时间映射不可靠，将相关连续复核范围扩大为三视角0..39.92秒，源帧间隔0.04秒。每批最多4个时间点×3视角，保留真实逐帧观察，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/pack_objects_into_box/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 39.96,
+      "frame_count": 999,
+      "frame_index_basis": "zero-based 0..998",
+      "mapping": "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-rand_e9a0d3/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 39.92,
+          "interval": 0.04,
+          "reason": "无法可靠映射各动作的PTS；扩大连续复核至全时段，包含所有动作前后及事件±0.2秒（首尾裁切至可用范围）"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；999帧/视角",
+      "limitations": [
+        "各视频相对首PTS同步；25fps，零基frame_index，PTS=frame_index/25。999视频帧与916控制步不一致，原始文件没有PTS到env_step的可靠映射。事件时间来自图像；动作归属依据顺序、目标及语义，不能解释为精确时间配准。",
+        "采用静态抽帧图像审核，基础策略每0.2秒（frame0,5,10,...,998）；因动作时间映射不可靠，将相关连续复核范围扩大为三视角0..39.92秒，源帧间隔0.04秒。每批最多4个时间点×3视角，保留真实逐帧观察，不是连续播放观看。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/pick_from_conveyor_by_image/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 22.36,
+      "frame_count": 559,
+      "frame_index_basis": "zero-based 0..558; last PTS=22.32",
+      "mapping": "源帧PTS用于视频时刻；无可靠env_step/decision到PTS映射，不以帧号替代decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 22.32,
+          "interval": 0.04,
+          "reason": "完整动作日志0–59已核对；无可靠时序映射，连续检查扩展到整个视频，包含事件前后0.2秒（视频边界内）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧；三视角帧数与PTS一致。",
+      "limitations": [
+        "采用静态抽帧图像审核：0.2秒全程基础扫描，所有动作及事件边界连续源帧复核；因PTS到控制步映射未记录，将连续复核范围扩展至0–22.32秒。不是连续播放视频；计数为所声明范围内确认下界。",
+        "decision_index及policy_step按零基处理；env_step为从0累计的半开控制步范围。视频事件时间由图像PTS定位，日志决策关联基于动作顺序和状态，不声称精确控制步到视频映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/pick_from_conveyor_by_image/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 22.36,
+      "frame_count": 559,
+      "frame_index_basis": "zero-based 0..558; last PTS=22.32",
+      "mapping": "源帧PTS用于视频时刻；无可靠env_step/decision到PTS映射，不以帧号替代decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 22.32,
+          "interval": 0.04,
+          "reason": "完整动作日志0–59已核对；无可靠时序映射，连续检查扩展到整个视频，包含事件前后0.2秒（视频边界内）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧；三视角帧数与PTS一致。",
+      "limitations": [
+        "采用静态抽帧图像审核：0.2秒全程基础扫描，所有动作及事件边界连续源帧复核；因PTS到控制步映射未记录，将连续复核范围扩展至0–22.32秒。不是连续播放视频；计数为所声明范围内确认下界。",
+        "decision_index及policy_step按零基处理；env_step为从0累计的半开控制步范围。视频事件时间由图像PTS定位，日志决策关联基于动作顺序和状态，不声称精确控制步到视频映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/pick_from_conveyor_by_image/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 22.36,
+      "frame_count": 559,
+      "frame_index_basis": "zero-based 0..558; last PTS=22.32",
+      "mapping": "源帧PTS用于视频时刻；无可靠env_step/decision到PTS映射，不以帧号替代decision或控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pic_131118/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 22.32,
+          "interval": 0.04,
+          "reason": "完整动作日志0–59已核对；无可靠时序映射，连续检查扩展到整个视频，包含事件前后0.2秒（视频边界内）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺帧；三视角帧数与PTS一致。",
+      "limitations": [
+        "采用静态抽帧图像审核：0.2秒全程基础扫描，所有动作及事件边界连续源帧复核；因PTS到控制步映射未记录，将连续复核范围扩展至0–22.32秒。不是连续播放视频；计数为所声明范围内确认下界。",
+        "decision_index及policy_step按零基处理；env_step为从0累计的半开控制步范围。视频事件时间由图像PTS定位，日志决策关联基于动作顺序和状态，不声称精确控制步到视频映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/play_Xylophone/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.96,
+      "frame_count": 349,
+      "frame_index_basis": "zero_based decoded source frames; 0–348; PTS 0–13.92 seconds",
+      "mapping": "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.92,
+          "interval": 0.04,
+          "reason": "All executed actions and event boundaries; unreliable PTS/control mapping required expansion to entire recording. Includes all available pre/post frames and ±0.2 s event context, clipped at recording boundaries."
+        }
+      ],
+      "missing_or_damaged": "完整解码349帧；未发现损坏或缺帧区段；末帧后无记录。",
+      "limitations": [
+        "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+        "腕部或机械臂局部遮挡由其他视角辅助；无接触传感器。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/play_Xylophone/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.96,
+      "frame_count": 349,
+      "frame_index_basis": "zero_based decoded source frames; 0–348; PTS 0–13.92 seconds",
+      "mapping": "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.92,
+          "interval": 0.04,
+          "reason": "All executed actions and event boundaries; unreliable PTS/control mapping required expansion to entire recording. Includes all available pre/post frames and ±0.2 s event context, clipped at recording boundaries."
+        }
+      ],
+      "missing_or_damaged": "完整解码349帧；未发现损坏或缺帧区段；末帧后无记录。",
+      "limitations": [
+        "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+        "腕部或机械臂局部遮挡由其他视角辅助；无接触传感器。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/play_Xylophone/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 13.96,
+      "frame_count": 349,
+      "frame_index_basis": "zero_based decoded source frames; 0–348; PTS 0–13.92 seconds",
+      "mapping": "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-s_f7ae1d/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 13.92,
+          "interval": 0.04,
+          "reason": "All executed actions and event boundaries; unreliable PTS/control mapping required expansion to entire recording. Includes all available pre/post frames and ±0.2 s event context, clipped at recording boundaries."
+        }
+      ],
+      "missing_or_damaged": "完整解码349帧；未发现损坏或缺帧区段；末帧后无记录。",
+      "limitations": [
+        "三视角PTS一致、25fps，零基帧0–348对应0–13.92秒，容器时长13.96秒。349视频帧与280控制步不一一对应，日志无视频时间戳；不提供决策/控制步到PTS精确映射。事件视频范围来自视觉动作边界，日志阶段与之按唯一动作顺序对应，非校准时间映射。",
+        "腕部或机械臂局部遮挡由其他视角辅助；无接触传感器。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/play_stacking_toy/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 25.32,
+      "frame_count": 633,
+      "frame_index_basis": "zero-based decoded frame index; original PTS retained",
+      "mapping": "PTS from decoder, time_seconds=PTS*time_base. Three views have matching frame indices/PTS. No supplied exact video-to-env-step map; semantic order only; action windows expanded to whole video, timing error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 25.28,
+          "interval": 0.04,
+          "reason": "Every action and all event boundaries ±0.2 s covered by expanded whole-video source-frame static-image batches; exact PTS-control map absent."
+        }
+      ],
+      "missing_or_damaged": "No missing/damaged decoded interval detected;633 frames, lastPTS25.28,duration25.32.",
+      "limitations": [
+        "Physical occlusion persists despite complete declared review. See uncertainties."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/play_stacking_toy/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 25.32,
+      "frame_count": 633,
+      "frame_index_basis": "zero-based decoded frame index; original PTS retained",
+      "mapping": "PTS from decoder, time_seconds=PTS*time_base. Three views have matching frame indices/PTS. No supplied exact video-to-env-step map; semantic order only; action windows expanded to whole video, timing error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 25.28,
+          "interval": 0.04,
+          "reason": "Every action and all event boundaries ±0.2 s covered by expanded whole-video source-frame static-image batches; exact PTS-control map absent."
+        }
+      ],
+      "missing_or_damaged": "No missing/damaged decoded interval detected;633 frames, lastPTS25.28,duration25.32.",
+      "limitations": [
+        "Physical occlusion persists despite complete declared review. See uncertainties."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/play_stacking_toy/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 25.32,
+      "frame_count": 633,
+      "frame_index_basis": "zero-based decoded frame index; original PTS retained",
+      "mapping": "PTS from decoder, time_seconds=PTS*time_base. Three views have matching frame indices/PTS. No supplied exact video-to-env-step map; semantic order only; action windows expanded to whole video, timing error unknown.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_7aae7e/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 25.28,
+          "interval": 0.04,
+          "reason": "Every action and all event boundaries ±0.2 s covered by expanded whole-video source-frame static-image batches; exact PTS-control map absent."
+        }
+      ],
+      "missing_or_damaged": "No missing/damaged decoded interval detected;633 frames, lastPTS25.28,duration25.32.",
+      "limitations": [
+        "Physical occlusion persists despite complete declared review. See uncertainties."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/play_tic_tac_toe/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 14.04,
+      "frame_count": 351,
+      "frame_index_basis": "zero-based decoded frame_index 0..350; PTS 0..14.00s",
+      "mapping": "Views aligned by identical relative PTS; no reliable PTS-to-env_step or decision mapping in source. Review expanded to full 0..14s rather than guessing action boundaries.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.0,
+          "interval": 0.04,
+          "reason": "All actions.json records 0..100; unavailable action/video mapping requires expanded continuous-source-frame interval; includes event E01 boundary padding and first/last frames."
+        }
+      ],
+      "missing_or_damaged": "None detected in decoding; no timestamp gap.",
+      "limitations": [
+        "Static image batch inspection; frame-level visual visibility does not prove hidden contacts absent.",
+        "PTS-to-control mapping unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/play_tic_tac_toe/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 14.04,
+      "frame_count": 351,
+      "frame_index_basis": "zero-based decoded frame_index 0..350; PTS 0..14.00s",
+      "mapping": "Views aligned by identical relative PTS; no reliable PTS-to-env_step or decision mapping in source. Review expanded to full 0..14s rather than guessing action boundaries.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.0,
+          "interval": 0.04,
+          "reason": "All actions.json records 0..100; unavailable action/video mapping requires expanded continuous-source-frame interval; includes event E01 boundary padding and first/last frames."
+        }
+      ],
+      "missing_or_damaged": "None detected in decoding; no timestamp gap.",
+      "limitations": [
+        "Static image batch inspection; frame-level visual visibility does not prove hidden contacts absent.",
+        "PTS-to-control mapping unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/play_tic_tac_toe/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 14.04,
+      "frame_count": 351,
+      "frame_index_basis": "zero-based decoded frame_index 0..350; PTS 0..14.00s",
+      "mapping": "Views aligned by identical relative PTS; no reliable PTS-to-env_step or decision mapping in source. Review expanded to full 0..14s rather than guessing action boundaries.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_t_291b5c/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 14.0,
+          "interval": 0.04,
+          "reason": "All actions.json records 0..100; unavailable action/video mapping requires expanded continuous-source-frame interval; includes event E01 boundary padding and first/last frames."
+        }
+      ],
+      "missing_or_damaged": "None detected in decoding; no timestamp gap.",
+      "limitations": [
+        "Static image batch inspection; frame-level visual visibility does not prove hidden contacts absent.",
+        "PTS-to-control mapping unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/plug_in_charger/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 14.72,
+      "frame_count": 368,
+      "frame_index_basis": "zero-based decoded source frames; final PTS14.68s; 14.72s nominal duration",
+      "mapping": "PTS=index/25 verified in decode index. No reliable video-to-env_step mapping; expanded continuous review to full source interval.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 14.68,
+          "interval": 0.04,
+          "reason": "All action segments and event boundaries; unreliable control-step mapping requires full-range continuous-source review"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "Occlusion and frame-time contact ambiguity; exact logged action PTS boundaries unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/plug_in_charger/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 14.72,
+      "frame_count": 368,
+      "frame_index_basis": "zero-based decoded source frames; final PTS14.68s; 14.72s nominal duration",
+      "mapping": "PTS=index/25 verified in decode index. No reliable video-to-env_step mapping; expanded continuous review to full source interval.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 14.68,
+          "interval": 0.04,
+          "reason": "All action segments and event boundaries; unreliable control-step mapping requires full-range continuous-source review"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "Occlusion and frame-time contact ambiguity; exact logged action PTS boundaries unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/plug_in_charger/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 14.72,
+      "frame_count": 368,
+      "frame_index_basis": "zero-based decoded source frames; final PTS14.68s; 14.72s nominal duration",
+      "mapping": "PTS=index/25 verified in decode index. No reliable video-to-env_step mapping; expanded continuous review to full source interval.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-st_31b169/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 14.68,
+          "interval": 0.04,
+          "reason": "All action segments and event boundaries; unreliable control-step mapping requires full-range continuous-source review"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "Occlusion and frame-time contact ambiguity; exact logged action PTS boundaries unavailable."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/pour_balls_into_vase/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 25.64,
+      "frame_count": 641,
+      "frame_index_basis": "zero-based; PTS relative to first decoded frame",
+      "mapping": "PTS available per source frame; no reliable env_step-to-PTS mapping. decision index zero-based; origin_call_index one-based; policy_step counts accepted stages, excludes refusals.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 25.6,
+          "interval": 0.04,
+          "reason": "All actions decisions0–59 and all event margins reviewed by expanded continuous source-frame extraction because control/PTS mapping is absent; includes first/last available frame."
+        }
+      ],
+      "missing_or_damaged": "none detected by complete decode",
+      "limitations": [
+        "三路视频均25fps、641帧，末帧PTS25.60秒，容器声明时长25.64秒；同步按各路首帧相对PTS。视频641帧与588环境控制步不同，不能线性换算或用帧号替代decision。",
+        "零值仅为声明检查范围内未确认发现，计数是确认下界；遮挡、二维投影和25fps记录不能排除不可见接触或帧间瞬态。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/pour_balls_into_vase/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 25.64,
+      "frame_count": 641,
+      "frame_index_basis": "zero-based; PTS relative to first decoded frame",
+      "mapping": "PTS available per source frame; no reliable env_step-to-PTS mapping. decision index zero-based; origin_call_index one-based; policy_step counts accepted stages, excludes refusals.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 25.6,
+          "interval": 0.04,
+          "reason": "All actions decisions0–59 and all event margins reviewed by expanded continuous source-frame extraction because control/PTS mapping is absent; includes first/last available frame."
+        }
+      ],
+      "missing_or_damaged": "none detected by complete decode",
+      "limitations": [
+        "三路视频均25fps、641帧，末帧PTS25.60秒，容器声明时长25.64秒；同步按各路首帧相对PTS。视频641帧与588环境控制步不同，不能线性换算或用帧号替代decision。",
+        "零值仅为声明检查范围内未确认发现，计数是确认下界；遮挡、二维投影和25fps记录不能排除不可见接触或帧间瞬态。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/pour_balls_into_vase/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 25.64,
+      "frame_count": 641,
+      "frame_index_basis": "zero-based; PTS relative to first decoded frame",
+      "mapping": "PTS available per source frame; no reliable env_step-to-PTS mapping. decision index zero-based; origin_call_index one-based; policy_step counts accepted stages, excludes refusals.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-stand_edd121/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 25.6,
+          "interval": 0.04,
+          "reason": "All actions decisions0–59 and all event margins reviewed by expanded continuous source-frame extraction because control/PTS mapping is absent; includes first/last available frame."
+        }
+      ],
+      "missing_or_damaged": "none detected by complete decode",
+      "limitations": [
+        "三路视频均25fps、641帧，末帧PTS25.60秒，容器声明时长25.64秒；同步按各路首帧相对PTS。视频641帧与588环境控制步不同，不能线性换算或用帧号替代decision。",
+        "零值仅为声明检查范围内未确认发现，计数是确认下界；遮挡、二维投影和25fps记录不能排除不可见接触或帧间瞬态。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/pour_by_language/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 32.44,
+      "frame_count": 811,
+      "frame_index_basis": "zero-based source decoded frame index0..810; PTS0..32.40s",
+      "mapping": "PTS from decoded source stream; no verified PTS-to-control mapping. No frame=decision assumption.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 32.4,
+          "interval": 0.04,
+          "reason": "All actions, suspects and event padding covered by whole-span continuous-source-frame expansion due absent synchronization."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decode",
+      "limitations": [
+        "Occlusion and 2D projection can prevent contact classification.",
+        "No trustworthy control/PTS synchronization metadata."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/pour_by_language/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 32.44,
+      "frame_count": 811,
+      "frame_index_basis": "zero-based source decoded frame index0..810; PTS0..32.40s",
+      "mapping": "PTS from decoded source stream; no verified PTS-to-control mapping. No frame=decision assumption.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 32.4,
+          "interval": 0.04,
+          "reason": "All actions, suspects and event padding covered by whole-span continuous-source-frame expansion due absent synchronization."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decode",
+      "limitations": [
+        "Occlusion and 2D projection can prevent contact classification.",
+        "No trustworthy control/PTS synchronization metadata."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/pour_by_language/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 32.44,
+      "frame_count": 811,
+      "frame_index_basis": "zero-based source decoded frame index0..810; PTS0..32.40s",
+      "mapping": "PTS from decoded source stream; no verified PTS-to-control mapping. No frame=decision assumption.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_langua_bfcdaf/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 32.4,
+          "interval": 0.04,
+          "reason": "All actions, suspects and event padding covered by whole-span continuous-source-frame expansion due absent synchronization."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decode",
+      "limitations": [
+        "Occlusion and 2D projection can prevent contact classification.",
+        "No trustworthy control/PTS synchronization metadata."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/pour_liquid_into_cup/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 16.56,
+      "frame_count": 414,
+      "frame_index_basis": "zero-based source decode order 0..413; PTS seconds retained; last PTS16.52",
+      "mapping": "All views share 25fps/414 PTS sequence. No trustworthy control-to-PTS mapping; full-video continuous action review used. Decision0..43 differs from policy_step after rejected d6; no frame-derived decision index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 16.52,
+          "interval": 0.04,
+          "reason": "All44 logged requests reviewed; uncertain action timing expands every action window to full video, including boundaries and first/last available frames."
+        }
+      ],
+      "missing_or_damaged": "No decode errors/missing source frames detected; final frame presentation extends to16.56.",
+      "limitations": [
+        "Static synchronized contact sheets, maximum12 source frames/batch; occlusion can prevent contact attribution.",
+        "duration_seconds includes final-frame presentation; frame timestamps end16.52."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/pour_liquid_into_cup/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 16.56,
+      "frame_count": 414,
+      "frame_index_basis": "zero-based source decode order 0..413; PTS seconds retained; last PTS16.52",
+      "mapping": "All views share 25fps/414 PTS sequence. No trustworthy control-to-PTS mapping; full-video continuous action review used. Decision0..43 differs from policy_step after rejected d6; no frame-derived decision index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 16.52,
+          "interval": 0.04,
+          "reason": "All44 logged requests reviewed; uncertain action timing expands every action window to full video, including boundaries and first/last available frames."
+        }
+      ],
+      "missing_or_damaged": "No decode errors/missing source frames detected; final frame presentation extends to16.56.",
+      "limitations": [
+        "Static synchronized contact sheets, maximum12 source frames/batch; occlusion can prevent contact attribution.",
+        "duration_seconds includes final-frame presentation; frame timestamps end16.52."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/pour_liquid_into_cup/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 16.56,
+      "frame_count": 414,
+      "frame_index_basis": "zero-based source decode order 0..413; PTS seconds retained; last PTS16.52",
+      "mapping": "All views share 25fps/414 PTS sequence. No trustworthy control-to-PTS mapping; full-video continuous action review used. Decision0..43 differs from policy_step after rejected d6; no frame-derived decision index.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liqui_4bd745/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 16.52,
+          "interval": 0.04,
+          "reason": "All44 logged requests reviewed; uncertain action timing expands every action window to full video, including boundaries and first/last available frames."
+        }
+      ],
+      "missing_or_damaged": "No decode errors/missing source frames detected; final frame presentation extends to16.56.",
+      "limitations": [
+        "Static synchronized contact sheets, maximum12 source frames/batch; occlusion can prevent contact attribution.",
+        "duration_seconds includes final-frame presentation; frame timestamps end16.52."
+      ]
+    },
+    {
+      "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/press_by_number/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 15.32,
+      "frame_count": 383,
+      "frame_index_basis": "zero-based decoded frame_index; PTS seconds from decoder; last frame 382 at15.28s",
+      "mapping": "No verified control/PTS mapping; ordered visual/log association only; full timeline dense review conservatively covers every action.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 15.28,
+          "interval": 0.04,
+          "reason": "All39 action logs; unreliable precise mapping requires full-timeline continuous source-frame review, including event ±0.2s and one-frame action margins."
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decode",
+      "limitations": [
+        "采用静态抽帧审核：基础间隔0.2秒（帧0、5、…、380及382）；动作映射不可靠，相关连续源帧复核扩大至0–15.28秒，按每批最多12张源帧的联系表检查，非连续视频播放。实际查看范围以inspected_index为准，不宣称连续观看或以提取数冒充检查数。",
+        "0仅表示所声明证据范围内未确认发生；碰撞候选另列，遮挡及二维图像不能证明所有接触性质。",
+        "视频时间段是视觉状态区间；日志env边界为累计已执行控制数，不构成精确PTS映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/press_by_number/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 15.32,
+      "frame_count": 383,
+      "frame_index_basis": "zero-based decoded frame_index; PTS seconds from decoder; last frame 382 at15.28s",
+      "mapping": "No verified control/PTS mapping; ordered visual/log association only; full timeline dense review conservatively covers every action.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 15.28,
+          "interval": 0.04,
+          "reason": "All39 action logs; unreliable precise mapping requires full-timeline continuous source-frame review, including event ±0.2s and one-frame action margins."
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decode",
+      "limitations": [
+        "采用静态抽帧审核：基础间隔0.2秒（帧0、5、…、380及382）；动作映射不可靠，相关连续源帧复核扩大至0–15.28秒，按每批最多12张源帧的联系表检查，非连续视频播放。实际查看范围以inspected_index为准，不宣称连续观看或以提取数冒充检查数。",
+        "0仅表示所声明证据范围内未确认发生；碰撞候选另列，遮挡及二维图像不能证明所有接触性质。",
+        "视频时间段是视觉状态区间；日志env边界为累计已执行控制数，不构成精确PTS映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/press_by_number/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 15.32,
+      "frame_count": 383,
+      "frame_index_basis": "zero-based decoded frame_index; PTS seconds from decoder; last frame 382 at15.28s",
+      "mapping": "No verified control/PTS mapping; ordered visual/log association only; full timeline dense review conservatively covers every action.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-press-by-number-cap20-20261019-2151-press_by_number_b2f4a5/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 15.28,
+          "interval": 0.04,
+          "reason": "All39 action logs; unreliable precise mapping requires full-timeline continuous source-frame review, including event ±0.2s and one-frame action margins."
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decode",
+      "limitations": [
+        "采用静态抽帧审核：基础间隔0.2秒（帧0、5、…、380及382）；动作映射不可靠，相关连续源帧复核扩大至0–15.28秒，按每批最多12张源帧的联系表检查，非连续视频播放。实际查看范围以inspected_index为准，不宣称连续观看或以提取数冒充检查数。",
+        "0仅表示所声明证据范围内未确认发生；碰撞候选另列，遮挡及二维图像不能证明所有接触性质。",
+        "视频时间段是视觉状态区间；日志env边界为累计已执行控制数，不构成精确PTS映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/push_T/random-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 12.2,
+      "frame_count": 305,
+      "frame_index_basis": "zero-based",
+      "mapping": "源帧PTS时间有效；PTS与env_step对应不可用，305视频帧不等于260控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 12.16,
+          "interval": 0.04,
+          "reason": "动作映射不可靠，扩大全时段；包含所有事件边界前后0.2秒及动作前后源帧，首尾按视频边界截断。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺损",
+      "limitations": [
+        "二维图像、遮挡及25fps时间分辨率无法排除所有瞬时或隐蔽接触；事件计数为本次证据下确认下界。",
+        "decision_index为零基0–44，origin_call_index为一基1–45；env_step为累计执行控制步边界，与视频帧号不同。",
+        "日志动作与视频行为通过顺序及状态相互核对，不提供未经验证的精确PTS到env_step映射；事件视频区间为视觉候选范围，非日志精确边界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/push_T/random-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 12.2,
+      "frame_count": 305,
+      "frame_index_basis": "zero-based",
+      "mapping": "源帧PTS时间有效；PTS与env_step对应不可用，305视频帧不等于260控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 12.16,
+          "interval": 0.04,
+          "reason": "动作映射不可靠，扩大全时段；包含所有事件边界前后0.2秒及动作前后源帧，首尾按视频边界截断。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺损",
+      "limitations": [
+        "二维图像、遮挡及25fps时间分辨率无法排除所有瞬时或隐蔽接触；事件计数为本次证据下确认下界。",
+        "decision_index为零基0–44，origin_call_index为一基1–45；env_step为累计执行控制步边界，与视频帧号不同。",
+        "日志动作与视频行为通过顺序及状态相互核对，不提供未经验证的精确PTS到env_step映射；事件视频区间为视觉候选范围，非日志精确边界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/push_T/random-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 12.2,
+      "frame_count": 305,
+      "frame_index_basis": "zero-based",
+      "mapping": "源帧PTS时间有效；PTS与env_step对应不可用，305视频帧不等于260控制步。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-_7cf2e1/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 12.16,
+          "interval": 0.04,
+          "reason": "动作映射不可靠，扩大全时段；包含所有事件边界前后0.2秒及动作前后源帧，首尾按视频边界截断。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺损",
+      "limitations": [
+        "二维图像、遮挡及25fps时间分辨率无法排除所有瞬时或隐蔽接触；事件计数为本次证据下确认下界。",
+        "decision_index为零基0–44，origin_call_index为一基1–45；env_step为累计执行控制步边界，与视频帧号不同。",
+        "日志动作与视频行为通过顺序及状态相互核对，不提供未经验证的精确PTS到env_step映射；事件视频区间为视觉候选范围，非日志精确边界。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/put_bottles_into_dustbin/standard-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.84,
+      "frame_count": 721,
+      "frame_index_basis": "zero-based source decode index; PTS seconds preserved",
+      "mapping": "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.8,
+          "interval": 0.04,
+          "reason": "all executed actions and event boundaries; unreliable PTS/control linkage required widening to entire recording"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions：三视角全程0.2秒基础帧、首尾帧，动作段及事件边界按连续源帧静态联系表复核；因动作/PTS映射不可靠，连续复核窗口扩大为0..28.8秒。没有使用视频连续播放。",
+        "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+        "历史图像传输批次存在超限：按一次实际工具返回计批，共30批，28批超过12张源帧（6批72张、14批96张、7批48张、1批51张），最大96张；另2批原图复核为8张和12张。全部批次源JPEG总量各自低于15MiB。每张联系表最多12源帧不代表每批合规。完整工具调用→联系表/原图→源帧→既有观察映射见visual_tool_batches.json及CSV。保留实际看图记录；没有把历史大批次事后拆成合规批次，未发现具体观察缺口需重复看图。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/put_bottles_into_dustbin/standard-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.84,
+      "frame_count": 721,
+      "frame_index_basis": "zero-based source decode index; PTS seconds preserved",
+      "mapping": "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.8,
+          "interval": 0.04,
+          "reason": "all executed actions and event boundaries; unreliable PTS/control linkage required widening to entire recording"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions：三视角全程0.2秒基础帧、首尾帧，动作段及事件边界按连续源帧静态联系表复核；因动作/PTS映射不可靠，连续复核窗口扩大为0..28.8秒。没有使用视频连续播放。",
+        "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+        "历史图像传输批次存在超限：按一次实际工具返回计批，共30批，28批超过12张源帧（6批72张、14批96张、7批48张、1批51张），最大96张；另2批原图复核为8张和12张。全部批次源JPEG总量各自低于15MiB。每张联系表最多12源帧不代表每批合规。完整工具调用→联系表/原图→源帧→既有观察映射见visual_tool_batches.json及CSV。保留实际看图记录；没有把历史大批次事后拆成合规批次，未发现具体观察缺口需重复看图。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/put_bottles_into_dustbin/standard-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 28.84,
+      "frame_count": 721,
+      "frame_index_basis": "zero-based source decode index; PTS seconds preserved",
+      "mapping": "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bo_17d35f/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.8,
+          "interval": 0.04,
+          "reason": "all executed actions and event boundaries; unreliable PTS/control linkage required widening to entire recording"
+        }
+      ],
+      "missing_or_damaged": "none detected during complete decoding",
+      "limitations": [
+        "采用sampled_0p2_continuous_actions：三视角全程0.2秒基础帧、首尾帧，动作段及事件边界按连续源帧静态联系表复核；因动作/PTS映射不可靠，连续复核窗口扩大为0..28.8秒。没有使用视频连续播放。",
+        "三路视频各25fps、721帧，PTS为0..28.8秒；日志无可信PTS到控制步映射。事件的decision/env范围来自日志、视频范围来自视觉事件，按唯一动作顺序关联，不能当逐控制步精确映射。main若需精确时序请查录制器逐帧控制步映射。",
+        "历史图像传输批次存在超限：按一次实际工具返回计批，共30批，28批超过12张源帧（6批72张、14批96张、7批48张、1批51张），最大96张；另2批原图复核为8张和12张。全部批次源JPEG总量各自低于15MiB。每张联系表最多12源帧不代表每批合规。完整工具调用→联系表/原图→源帧→既有观察映射见visual_tool_batches.json及CSV。保留实际看图记录；没有把历史大批次事后拆成合规批次，未发现具体观察缺口需重复看图。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/solve_equation/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 13.12,
+      "frame_count": 328,
+      "frame_index_basis": "zero-based; PTS=i/25; final index327",
+      "mapping": "No reliable control-step→PTS mapping; native_controls289 != decoded_frames328. Visual sequence association only.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 13.08,
+          "interval": 0.04,
+          "reason": "All action logs decisions0–38 reviewed; mapping unavailable, expand continuous-source-frame review to complete video including event±0.2 clipped to video."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decoding",
+      "limitations": [
+        "视频时长13.12秒，最后帧PTS13.08秒；源视频25fps。日志控制步和视频帧数不同（289 vs 328），不能一帧对应一步；事件视频区间按视觉状态界定，不推造精确decision/PTS对应。",
+        "原始任务指令、原始完整对话/历史观测图像未包含在本run七个JSON及三路视频中。historical-l3-eef只是配置标识，prompt哈希不等于指令文本。可用模型文本为39次动作内note及反馈。",
+        "二维图像不能确定所有接触力、遮挡处接触或亚帧事件；零值仅代表本次声明范围内未确认发现。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/solve_equation/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 13.12,
+      "frame_count": 328,
+      "frame_index_basis": "zero-based; PTS=i/25; final index327",
+      "mapping": "No reliable control-step→PTS mapping; native_controls289 != decoded_frames328. Visual sequence association only.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 13.08,
+          "interval": 0.04,
+          "reason": "All action logs decisions0–38 reviewed; mapping unavailable, expand continuous-source-frame review to complete video including event±0.2 clipped to video."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decoding",
+      "limitations": [
+        "视频时长13.12秒，最后帧PTS13.08秒；源视频25fps。日志控制步和视频帧数不同（289 vs 328），不能一帧对应一步；事件视频区间按视觉状态界定，不推造精确decision/PTS对应。",
+        "原始任务指令、原始完整对话/历史观测图像未包含在本run七个JSON及三路视频中。historical-l3-eef只是配置标识，prompt哈希不等于指令文本。可用模型文本为39次动作内note及反馈。",
+        "二维图像不能确定所有接触力、遮挡处接触或亚帧事件；零值仅代表本次声明范围内未确认发现。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/solve_equation/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 13.12,
+      "frame_count": 328,
+      "frame_index_basis": "zero-based; PTS=i/25; final index327",
+      "mapping": "No reliable control-step→PTS mapping; native_controls289 != decoded_frames328. Visual sequence association only.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-s_d4c95f/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 13.08,
+          "interval": 0.04,
+          "reason": "All action logs decisions0–38 reviewed; mapping unavailable, expand continuous-source-frame review to complete video including event±0.2 clipped to video."
+        }
+      ],
+      "missing_or_damaged": "none found during complete decoding",
+      "limitations": [
+        "视频时长13.12秒，最后帧PTS13.08秒；源视频25fps。日志控制步和视频帧数不同（289 vs 328），不能一帧对应一步；事件视频区间按视觉状态界定，不推造精确decision/PTS对应。",
+        "原始任务指令、原始完整对话/历史观测图像未包含在本run七个JSON及三路视频中。historical-l3-eef只是配置标识，prompt哈希不等于指令文本。可用模型文本为39次动作内note及反馈。",
+        "二维图像不能确定所有接触力、遮挡处接触或亚帧事件；零值仅代表本次声明范围内未确认发现。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/sort_nesting_dolls_by_size/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 29.0,
+      "frame_count": 725,
+      "frame_index_basis": "zero-based 0–724; PTS first=0 last=28.96; duration includes final frame period",
+      "mapping": "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.96,
+          "interval": 0.04,
+          "reason": "无法精确同步控制步，扩大至整个视频连续源帧复核，包含事件前后0.2秒（片首尾裁至有效范围）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；各725帧。",
+      "limitations": [
+        "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/sort_nesting_dolls_by_size/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 29.0,
+      "frame_count": 725,
+      "frame_index_basis": "zero-based 0–724; PTS first=0 last=28.96; duration includes final frame period",
+      "mapping": "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.96,
+          "interval": 0.04,
+          "reason": "无法精确同步控制步，扩大至整个视频连续源帧复核，包含事件前后0.2秒（片首尾裁至有效范围）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；各725帧。",
+      "limitations": [
+        "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/sort_nesting_dolls_by_size/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 29.0,
+      "frame_count": 725,
+      "frame_index_basis": "zero-based 0–724; PTS first=0 last=28.96; duration includes final frame period",
+      "mapping": "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_c8c4d4/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 28.96,
+          "interval": 0.04,
+          "reason": "无法精确同步控制步，扩大至整个视频连续源帧复核，包含事件前后0.2秒（片首尾裁至有效范围）。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；各725帧。",
+      "limitations": [
+        "视频帧号零基、PTS秒已解码核实；decision_index零基0–72，env_step为按实际增量推导的一基1–646。725帧与646控制步不等，原始数据没有可靠PTS→env_step映射；按动作顺序联合核查，事件时间为视觉区间，不是精确控制步时间。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/stack_blocks/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 24.52,
+      "frame_count": 613,
+      "frame_index_basis": "zero-based 0..612; PTS 0..24.48 s",
+      "mapping": "relative PTS synchronized across views; no verified PTS↔control mapping; whole interval expanded for all action review",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 24.48,
+          "interval": 0.04,
+          "reason": "all 61 decision calls / 63 macro stages plus all event boundaries expanded ±0.2sec; no reliable narrower control mapping"
+        }
+      ],
+      "missing_or_damaged": "none found during decode; 613 decoded frames, first and last included",
+      "limitations": [
+        "support/contact depth occluded at P02/P03",
+        "video/control exact mapping unavailable"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/stack_blocks/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 24.52,
+      "frame_count": 613,
+      "frame_index_basis": "zero-based 0..612; PTS 0..24.48 s",
+      "mapping": "relative PTS synchronized across views; no verified PTS↔control mapping; whole interval expanded for all action review",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 24.48,
+          "interval": 0.04,
+          "reason": "all 61 decision calls / 63 macro stages plus all event boundaries expanded ±0.2sec; no reliable narrower control mapping"
+        }
+      ],
+      "missing_or_damaged": "none found during decode; 613 decoded frames, first and last included",
+      "limitations": [
+        "support/contact depth occluded at P02/P03",
+        "video/control exact mapping unavailable"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/stack_blocks/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 24.52,
+      "frame_count": 613,
+      "frame_index_basis": "zero-based 0..612; PTS 0..24.48 s",
+      "mapping": "relative PTS synchronized across views; no verified PTS↔control mapping; whole interval expanded for all action review",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-rando_9c14cb/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 24.48,
+          "interval": 0.04,
+          "reason": "all 61 decision calls / 63 macro stages plus all event boundaries expanded ±0.2sec; no reliable narrower control mapping"
+        }
+      ],
+      "missing_or_damaged": "none found during decode; 613 decoded frames, first and last included",
+      "limitations": [
+        "support/contact depth occluded at P02/P03",
+        "video/control exact mapping unavailable"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/stack_blocks_by_language/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 17.32,
+      "frame_count": 433,
+      "frame_index_basis": "zero-based; first=0 last=432; PTS in seconds",
+      "mapping": "视频PTS可靠；无原生控制步映射。决策零基0..47，调用一基1..48，控制步一基1..385；不能以帧号替代决策。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 17.28,
+          "interval": 0.04,
+          "reason": "No authoritative action/video mapping: expanded all-action continuous source-frame inspection across available duration, including event ±0.2s clipped at endpoints."
+        }
+      ],
+      "missing_or_damaged": "none detected in full decode",
+      "limitations": [
+        "可见RGB与有限分辨率不能排除遮挡处短暂接触；0为所声明核查范围内未确认发现，计数为确认下界。",
+        "视频含433帧，末帧PTS17.28秒、容器名义时长17.32秒；无法将视频时间按比例映射385控制步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/stack_blocks_by_language/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 17.32,
+      "frame_count": 433,
+      "frame_index_basis": "zero-based; first=0 last=432; PTS in seconds",
+      "mapping": "视频PTS可靠；无原生控制步映射。决策零基0..47，调用一基1..48，控制步一基1..385；不能以帧号替代决策。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 17.28,
+          "interval": 0.04,
+          "reason": "No authoritative action/video mapping: expanded all-action continuous source-frame inspection across available duration, including event ±0.2s clipped at endpoints."
+        }
+      ],
+      "missing_or_damaged": "none detected in full decode",
+      "limitations": [
+        "可见RGB与有限分辨率不能排除遮挡处短暂接触；0为所声明核查范围内未确认发现，计数为确认下界。",
+        "视频含433帧，末帧PTS17.28秒、容器名义时长17.32秒；无法将视频时间按比例映射385控制步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/stack_blocks_by_language/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 17.32,
+      "frame_count": 433,
+      "frame_index_basis": "zero-based; first=0 last=432; PTS in seconds",
+      "mapping": "视频PTS可靠；无原生控制步映射。决策零基0..47，调用一基1..48，控制步一基1..385；不能以帧号替代决策。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_63745f/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 17.28,
+          "interval": 0.04,
+          "reason": "No authoritative action/video mapping: expanded all-action continuous source-frame inspection across available duration, including event ±0.2s clipped at endpoints."
+        }
+      ],
+      "missing_or_damaged": "none detected in full decode",
+      "limitations": [
+        "可见RGB与有限分辨率不能排除遮挡处短暂接触；0为所声明核查范围内未确认发现，计数为确认下界。",
+        "视频含433帧，末帧PTS17.28秒、容器名义时长17.32秒；无法将视频时间按比例映射385控制步。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/stack_bowls/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 23.72,
+      "frame_count": 593,
+      "frame_index_basis": "zero-based 0..592; PTS last=23.68s; container duration=593/25=23.72s",
+      "mapping": "PTS/index retained; three views synchronized by matching PTS. Native controls530 != video frames593; exact env-step/video mapping unavailable.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.68,
+          "interval": 0.04,
+          "reason": "所有动作及事件±0.2秒复核；映射不可靠故扩大到全时段；首尾处裁剪至可用源帧。"
+        }
+      ],
+      "missing_or_damaged": "No decode gaps or damaged frames found.",
+      "limitations": [
+        "三视角存在夹爪、碗壁遮挡；不能排除不可见或帧间短暂接触，计数为所声明范围内确认下界。",
+        "帧号零基、PTS保留；593个视频样本不等于530个控制步。事件决策关联依动作顺序、执行反馈和note确认，视频边界不宣称精确控制步映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/stack_bowls/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 23.72,
+      "frame_count": 593,
+      "frame_index_basis": "zero-based 0..592; PTS last=23.68s; container duration=593/25=23.72s",
+      "mapping": "PTS/index retained; three views synchronized by matching PTS. Native controls530 != video frames593; exact env-step/video mapping unavailable.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.68,
+          "interval": 0.04,
+          "reason": "所有动作及事件±0.2秒复核；映射不可靠故扩大到全时段；首尾处裁剪至可用源帧。"
+        }
+      ],
+      "missing_or_damaged": "No decode gaps or damaged frames found.",
+      "limitations": [
+        "三视角存在夹爪、碗壁遮挡；不能排除不可见或帧间短暂接触，计数为所声明范围内确认下界。",
+        "帧号零基、PTS保留；593个视频样本不等于530个控制步。事件决策关联依动作顺序、执行反馈和note确认，视频边界不宣称精确控制步映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/stack_bowls/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 23.72,
+      "frame_count": 593,
+      "frame_index_basis": "zero-based 0..592; PTS last=23.68s; container duration=593/25=23.72s",
+      "mapping": "PTS/index retained; three views synchronized by matching PTS. Native controls530 != video frames593; exact env-step/video mapping unavailable.",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-_08f2f3/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 23.68,
+          "interval": 0.04,
+          "reason": "所有动作及事件±0.2秒复核；映射不可靠故扩大到全时段；首尾处裁剪至可用源帧。"
+        }
+      ],
+      "missing_or_damaged": "No decode gaps or damaged frames found.",
+      "limitations": [
+        "三视角存在夹爪、碗壁遮挡；不能排除不可见或帧间短暂接触，计数为所声明范围内确认下界。",
+        "帧号零基、PTS保留；593个视频样本不等于530个控制步。事件决策关联依动作顺序、执行反馈和note确认，视频边界不宣称精确控制步映射。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/store_laptop_and_headphones/random-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 33.72,
+      "frame_count": 843,
+      "frame_index_basis": "zero-based",
+      "mapping": "三路相对PTS同步；env_step到PTS无可靠映射，动作连续复核扩大到全部视频。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 33.68,
+          "interval": 0.04,
+          "reason": "动作PTS映射不可靠，连续复核扩大到全时段，含全部动作与事件±0.2秒可用源帧"
+        }
+      ],
+      "missing_or_damaged": "未发现解码损坏",
+      "limitations": [
+        "动作控制步到PTS无可靠精确映射；自遮挡限制物理接触确认。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/store_laptop_and_headphones/random-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 33.72,
+      "frame_count": 843,
+      "frame_index_basis": "zero-based",
+      "mapping": "三路相对PTS同步；env_step到PTS无可靠映射，动作连续复核扩大到全部视频。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 33.68,
+          "interval": 0.04,
+          "reason": "动作PTS映射不可靠，连续复核扩大到全时段，含全部动作与事件±0.2秒可用源帧"
+        }
+      ],
+      "missing_or_damaged": "未发现解码损坏",
+      "limitations": [
+        "动作控制步到PTS无可靠精确映射；自遮挡限制物理接触确认。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/store_laptop_and_headphones/random-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 33.72,
+      "frame_count": 843,
+      "frame_index_basis": "zero-based",
+      "mapping": "三路相对PTS同步；env_step到PTS无可靠映射，动作连续复核扩大到全部视频。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-sto_f4831c/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 33.68,
+          "interval": 0.04,
+          "reason": "动作PTS映射不可靠，连续复核扩大到全时段，含全部动作与事件±0.2秒可用源帧"
+        }
+      ],
+      "missing_or_damaged": "未发现解码损坏",
+      "limitations": [
+        "动作控制步到PTS无可靠精确映射；自遮挡限制物理接触确认。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/store_tools_in_toolbox/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 37.72,
+      "frame_count": 943,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index与PTS确定；PTS=frame_index/25。PTS到decision/env_step无可靠映射，禁止线性推算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 37.68,
+          "interval": 0.04,
+          "reason": "全部动作及事件前后边界；无可靠时间映射，保守扩展全时段"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏帧",
+      "limitations": [
+        "采用静态图像分批审核，不是连续视频播放；基础策略每0.2秒（零基帧0,5,10…及942），动作/疑点连续源图间隔0.04秒。因映射不可靠，连续复核范围扩展0–37.68s。",
+        "计数为已确认下界；二维遮挡、深度与接触力缺失仍可能影响事件分类，疑似与确认分列。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/store_tools_in_toolbox/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 37.72,
+      "frame_count": 943,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index与PTS确定；PTS=frame_index/25。PTS到decision/env_step无可靠映射，禁止线性推算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 37.68,
+          "interval": 0.04,
+          "reason": "全部动作及事件前后边界；无可靠时间映射，保守扩展全时段"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏帧",
+      "limitations": [
+        "采用静态图像分批审核，不是连续视频播放；基础策略每0.2秒（零基帧0,5,10…及942），动作/疑点连续源图间隔0.04秒。因映射不可靠，连续复核范围扩展0–37.68s。",
+        "计数为已确认下界；二维遮挡、深度与接触力缺失仍可能影响事件分类，疑似与确认分列。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/store_tools_in_toolbox/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 37.72,
+      "frame_count": 943,
+      "frame_index_basis": "zero_based",
+      "mapping": "源帧frame_index与PTS确定；PTS=frame_index/25。PTS到decision/env_step无可靠映射，禁止线性推算。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_to_874ab6/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 37.68,
+          "interval": 0.04,
+          "reason": "全部动作及事件前后边界；无可靠时间映射，保守扩展全时段"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏帧",
+      "limitations": [
+        "采用静态图像分批审核，不是连续视频播放；基础策略每0.2秒（零基帧0,5,10…及942），动作/疑点连续源图间隔0.04秒。因映射不可靠，连续复核范围扩展0–37.68s。",
+        "计数为已确认下界；二维遮挡、深度与接触力缺失仍可能影响事件分类，疑似与确认分列。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/swap_T/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 16.08,
+      "frame_count": 402,
+      "frame_index_basis": "zero-based 0–401; time_seconds is decoded PTS",
+      "mapping": "PTS可靠；没有PTS到env_step/decision的显式映射，误差不可量化；动作审核扩大为全时段连续源帧。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 16.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions0–35全部动作/疑点；无可信控制时间映射，扩大连续源帧范围，含事件±0.2秒及首尾。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；末PTS16.04，编码时长16.08。",
+      "limitations": [
+        "动作控制步映射未知；遮挡区域接触归属见Ucontact。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/swap_T/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 16.08,
+      "frame_count": 402,
+      "frame_index_basis": "zero-based 0–401; time_seconds is decoded PTS",
+      "mapping": "PTS可靠；没有PTS到env_step/decision的显式映射，误差不可量化；动作审核扩大为全时段连续源帧。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 16.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions0–35全部动作/疑点；无可信控制时间映射，扩大连续源帧范围，含事件±0.2秒及首尾。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；末PTS16.04，编码时长16.08。",
+      "limitations": [
+        "动作控制步映射未知；遮挡区域接触归属见Ucontact。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/swap_T/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 16.08,
+      "frame_count": 402,
+      "frame_index_basis": "zero-based 0–401; time_seconds is decoded PTS",
+      "mapping": "PTS可靠；没有PTS到env_step/decision的显式映射，误差不可量化；动作审核扩大为全时段连续源帧。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene_735b84/frames/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 16.04,
+          "interval": 0.04,
+          "reason": "actions.json decisions0–35全部动作/疑点；无可信控制时间映射，扩大连续源帧范围，含事件±0.2秒及首尾。"
+        }
+      ],
+      "missing_or_damaged": "无解码缺失或损坏；末PTS16.04，编码时长16.08。",
+      "limitations": [
+        "动作控制步映射未知；遮挡区域接触归属见Ucontact。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/swap_blocks/standard-scene0/head.mp4",
+      "fps": 25,
+      "duration_seconds": 20.24,
+      "frame_count": 506,
+      "frame_index_basis": "zero-based; source PTS time_base=1/12800; last frame 505 at 20.20s",
+      "mapping": "源PTS可靠；无控制步时间戳，506帧与447控制步不等。仅按动作顺序联合核查，不按比例映射decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 20.2,
+          "interval": 0.04,
+          "reason": "全部动作的精确控制步到PTS映射缺失，故扩大为全时段源帧序列静态复核，包含首尾及事件边界。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "静态图像分批审核，并非连续视频播放；遮挡及二维投影限制仍存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/swap_blocks/standard-scene0/left_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 20.24,
+      "frame_count": 506,
+      "frame_index_basis": "zero-based; source PTS time_base=1/12800; last frame 505 at 20.20s",
+      "mapping": "源PTS可靠；无控制步时间戳，506帧与447控制步不等。仅按动作顺序联合核查，不按比例映射decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 20.2,
+          "interval": 0.04,
+          "reason": "全部动作的精确控制步到PTS映射缺失，故扩大为全时段源帧序列静态复核，包含首尾及事件边界。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "静态图像分批审核，并非连续视频播放；遮挡及二维投影限制仍存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/swap_blocks/standard-scene0/right_wrist.mp4",
+      "fps": 25,
+      "duration_seconds": 20.24,
+      "frame_count": 506,
+      "frame_index_basis": "zero-based; source PTS time_base=1/12800; last frame 505 at 20.20s",
+      "mapping": "源PTS可靠；无控制步时间戳，506帧与447控制步不等。仅按动作顺序联合核查，不按比例映射decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standar_4dd380/media/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0,
+          "end": 20.2,
+          "interval": 0.04,
+          "reason": "全部动作的精确控制步到PTS映射缺失，故扩大为全时段源帧序列静态复核，包含首尾及事件边界。"
+        }
+      ],
+      "missing_or_damaged": "未发现解码缺失或损坏",
+      "limitations": [
+        "静态图像分批审核，并非连续视频播放；遮挡及二维投影限制仍存在。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+      "view": "head",
+      "video_path": "source-data/demos/robodojo/sweep_blocks/random-scene0/head.mp4",
+      "fps": 25.0,
+      "duration_seconds": 30.68,
+      "frame_count": 767,
+      "frame_index_basis": "zero_based; PTS retained in extracted_index",
+      "mapping": "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/head/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/head/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 30.64,
+          "interval": 0.04,
+          "reason": "全部动作decision0–89及候选接触/换手边界；因PTS映射不可靠扩展至整个视频，首尾截于源帧边界。"
+        }
+      ],
+      "missing_or_damaged": "无解码失败或缺失视角；末帧30.64s，容器时长30.68s。",
+      "limitations": [
+        "按 sampled_0p2_continuous_actions 策略进行静态JPEG联系表审核；基础帧为0、5、10…765及766，相关动作采用连续源帧复核。因无可靠动作到PTS映射，复核范围扩大至0–30.64s；未连续播放视频。",
+        "二维图像仍存在遮挡、深度与接触力信息缺失；计数为所声明检查范围内确认下界，0不表示绝无短暂事件。",
+        "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+      "view": "left_wrist",
+      "video_path": "source-data/demos/robodojo/sweep_blocks/random-scene0/left_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 30.68,
+      "frame_count": 767,
+      "frame_index_basis": "zero_based; PTS retained in extracted_index",
+      "mapping": "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/left_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/left_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 30.64,
+          "interval": 0.04,
+          "reason": "全部动作decision0–89及候选接触/换手边界；因PTS映射不可靠扩展至整个视频，首尾截于源帧边界。"
+        }
+      ],
+      "missing_or_damaged": "无解码失败或缺失视角；末帧30.64s，容器时长30.68s。",
+      "limitations": [
+        "按 sampled_0p2_continuous_actions 策略进行静态JPEG联系表审核；基础帧为0、5、10…765及766，相关动作采用连续源帧复核。因无可靠动作到PTS映射，复核范围扩大至0–30.64s；未连续播放视频。",
+        "二维图像仍存在遮挡、深度与接触力信息缺失；计数为所声明检查范围内确认下界，0不表示绝无短暂事件。",
+        "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。"
+      ]
+    },
+    {
+      "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+      "view": "right_wrist",
+      "video_path": "source-data/demos/robodojo/sweep_blocks/random-scene0/right_wrist.mp4",
+      "fps": 25.0,
+      "duration_seconds": 30.68,
+      "frame_count": 767,
+      "frame_index_basis": "zero_based; PTS retained in extracted_index",
+      "mapping": "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。",
+      "base_interval": 0.2,
+      "extracted_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/right_wrist/index.json",
+      "inspected_index": "audit-source/run-semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-rando_17c68b/evidence/right_wrist/inspected.json",
+      "base_complete": true,
+      "action_review_complete": true,
+      "dense_intervals": [
+        {
+          "start": 0.0,
+          "end": 30.64,
+          "interval": 0.04,
+          "reason": "全部动作decision0–89及候选接触/换手边界；因PTS映射不可靠扩展至整个视频，首尾截于源帧边界。"
+        }
+      ],
+      "missing_or_damaged": "无解码失败或缺失视角；末帧30.64s，容器时长30.68s。",
+      "limitations": [
+        "按 sampled_0p2_continuous_actions 策略进行静态JPEG联系表审核；基础帧为0、5、10…765及766，相关动作采用连续源帧复核。因无可靠动作到PTS映射，复核范围扩大至0–30.64s；未连续播放视频。",
+        "二维图像仍存在遮挡、深度与接触力信息缺失；计数为所声明检查范围内确认下界，0不表示绝无短暂事件。",
+        "视频帧号与PTS零基；25fps、源帧PTS间隔0.04s。767帧与680环境控制步不等，导出无可靠逐步映射。事件决策/控制区间由日志独立核对，视频区间由视觉识别；不得将帧号或PTS换算成decision/env_step。"
+      ]
+    }
+  ],
+  "historical_batch_limits": {
+    "source_frame_count_histogram": {
+      "12": 2463,
+      "9": 12,
+      "4": 2646,
+      "None": 14742,
+      "1": 9,
+      "3": 3,
+      "6": 3
+    },
+    "historical_over_12_source_frame_batches_disclosed": true,
+    "all_historical_batches_within_12_claimed": false,
+    "prior_main_limitations": [
+      "原始任务指令缺失，m25保留null；不得改成0。",
+      "缺少可靠视频PTS到decision/env_step映射，保留语义关联范围，不编造精确同步。",
+      "78条不确定事件及恢复归因、遮挡接触、预算分类等客观限制继续保留；确认次数按下界解释。",
+      "历史图像批次超限已有披露，不能将其描述为符合每批最多12张源帧的要求。"
+    ],
+    "note": "上一轮main已披露历史图像批次超限；保留索引的批次字段并不完整，null表示批次未记录source_frame_count，不能用本表推翻历史限制。只报告实际索引和批次规模，不将提取/解码、索引覆盖或批次标签等同逐张原图观看；本次未重新打开历史图像。"
+  },
+  "indexed_source_frames": 80397,
+  "unique_indexed_inspected_frames": 78969,
+  "continuous_full_video_playback_claimed": false,
+  "all_original_images_individually_viewed_claimed": false
+}
