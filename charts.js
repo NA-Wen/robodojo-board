@@ -106,9 +106,9 @@ window.metricOutcomeAnalysis = (() => {
 /* Homepage charts share the exact selected runs used by the task and event pages. */
 window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings, metricDefinitions=[]}) {
   const active = groups.filter(g => runs.some(r => r.g.id === g.id));
-  const PAL=['#58A165','#E68A36','#438FC4','#9474B5','#CF626D'];
+  const PAL=['#58A165','#E68A36','#438FC4','#9474B5','#CF626D','#357F87'];
   const colors = {semantic:PAL[0], persistent:PAL[1]};
-  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || PAL[active.indexOf(g)%PAL.length]}));
+  const series = active.map(g => ({...g, runs:runs.filter(r => r.g.id === g.id), color:colors[g.id] || PAL[groups.findIndex(group=>group.id===g.id)%PAL.length]}));
   const num = (v, decimals=0) => v.toLocaleString('en-US',{maximumFractionDigits:decimals,minimumFractionDigits:decimals});
   const label = g => `<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`;
   const BIGTASKBARS=new Set(['score','emptyRetry','drops','turns','actions','finePlacementFail']);
@@ -304,11 +304,11 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings, 
       const ev=x.empty||x.drop?`空夹 ${x.empty} · 掉落 ${x.drop}`:'无空夹与掉落';
       return `<div class="bc-chip${x.succ?' bc-chip-win':''}" title="${esc(x.t)} · ${Math.round(x.succ/x.n*100)}% 成功 · ${ev}"><span class="bc-chip-name">${esc(x.t)}</span><span class="bc-chip-meta">${dots}<span class="bc-chip-rate">${Math.round(x.succ/x.n*100)}%</span></span></div>`;
     };
-    return `<article class="bc-card bc-card-wide">${cardHead('任务难度排序','按完全成功率升序；三格依次对应三个实验，实心＝成功','排名')}
-      <p class="bc-rank-summary"><strong>${never}</strong> / ${list.length} 个 task 在三个实验里全部失败；只有 <strong>${list.length-never}</strong> 个至少成功过一次。</p>
+    return `<article class="bc-card bc-card-wide">${cardHead('任务难度排序',`按完全成功率升序；各格对应当前 ${audited.length} 个实验，实心＝成功`,'排名')}
+      <p class="bc-rank-summary"><strong>${never}</strong> / ${list.length} 个 task 在当前实验中全部失败；只有 <strong>${list.length-never}</strong> 个至少成功过一次。</p>
       <div class="bc-chips">${list.map(chip).join('')}</div>
       <div class="bc-sc-legend">${audited.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')}</div>
-      <p class="bc-footnote">只用已完成审核的实验；semantic-eef 待复核，暂不参与。悬停任意任务可看其空夹与掉落合计。</p></article>`;
+      <p class="bc-footnote">按当前范围的原生结果计算；阶段性结果保留名称标记。悬停任意任务可看其空夹与掉落记录合计。</p></article>`;
   }
 
   // ── 补充 2：执行成本 vs 得分散点 ──
@@ -334,7 +334,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings, 
       <text x="${W-PR}" y="${H-8}" text-anchor="end" class="bc-sc-tick">轮</text>
       ${dots}</svg>
       <div class="bc-sc-legend">${series.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')}</div>
-      <p class="bc-footnote">得分取自原生结果，与事件审核状态无关，因此四组同图；点在下、右代表花费更多轮次却得分更低。</p></article>`;
+      <p class="bc-footnote">得分取自原生结果，与事件审核状态无关；点在下、右代表花费更多轮次却得分更低。</p></article>`;
   }
 
   // ── 补充 3：事件共现矩阵 ──
@@ -536,7 +536,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings, 
   const semantic=active.find(g=>g.id==='semantic'&&g.submission_links);
   const semanticPanel=semantic?`<div class="bc-source"><div><b>semantic-eef · ${semantic.audit_completion==='pending'?'阶段性结果：完整审核未完成':'26项标准包已同步'}</b><p>${semantic.cases.length}个run · ${semantic.cases.reduce((n,c)=>n+(c.events||[]).length,0)}条事件 · ${semantic.audit_completion==='pending'?'完整审核待完成，旧版事件不作为最终计数':'†为确认下界'}</p></div><a class="button" href="${esc(semantic.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(semantic.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(semantic.submission_links.events)}">events.json</a><a class="button" href="${esc(semantic.submission_links.validation)}">校验记录</a>${semantic.submission_links.coverage?`<a class="button" href="${esc(semantic.submission_links.coverage)}">观看覆盖记录</a>`:''}</div>`:'';
   const persistent=active.find(g=>g.id==='persistent'&&g.submission_links);
-  const persistentPanel=persistent?`<div class="bc-source"><div><b>persistent-cap20 · 26项标准包已更新</b><p>42个run · 292条事件 · 0阻断 · 靠近action确认5次、turn确认4次（各3任务未知） · †为确认下界</p></div><a class="button" href="${esc(persistent.submission_links.budget_review)}">预算复核</a><a class="button" href="${esc(persistent.submission_links.xlsx)}">Excel</a><a class="button" href="${esc(persistent.submission_links.csv)}">标准CSV</a><a class="button" href="${esc(persistent.submission_links.bundle)}">submission.json</a><a class="button" href="${esc(persistent.submission_links.validation)}">校验记录</a></div>`:'';
+  const persistentPanel=persistent?`<div class="bc-source"><div><b>persistent-cap20 · 26项标准包已更新</b><p>${persistent.cases.length}个run · ${persistent.cases.reduce((n,c)=>n+c.events.length,0)}条事件 · †为确认下界</p></div>${[['budget_review','预算复核'],['xlsx','Excel'],['csv','标准CSV'],['bundle','submission.json'],['validation','校验记录']].filter(([key])=>persistent.submission_links[key]).map(([key,label])=>`<a class="button" href="${esc(persistent.submission_links[key])}">${label}</a>`).join('')}</div>`:'';
   const scope=series.map(g=>`${g.name} ${g.runs.length} 条运行`).join(' / ');
   return `<div class="bc-intro"><div><p class="eyebrow">BEHAVIOR OVERVIEW</p><h1>从总体结果，到每一类行为</h1><p class="subtitle">${esc(scope)} · 所有图表随上方筛选联动</p></div><button class="button" id="export-scope">导出当前范围 JSON ↓</button></div>
     <div class="bc-toolbar"><div class="bc-global-legend">${series.map(label).join('')}</div><span>颜色固定代表实验，不表示好坏</span></div>

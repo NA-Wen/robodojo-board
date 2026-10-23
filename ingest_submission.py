@@ -367,8 +367,10 @@ def to_group(doc, annotations=None, coverage=None):
         by_run = {r['run_id']: r for r in annotations}
         for case in cases:
             source = by_run[case['run_id']]
-            events = {e['event_id']: e for e in source['source_events']}
-            views = [c for c in coverage['coverage'] if c['run_id'] == case['run_id']]
+            source_events = source['source_events'] if 'source_events' in source else source['events']
+            events = {e['event_id']: e for e in source_events}
+            coverage_rows = coverage if isinstance(coverage, list) else coverage['coverage']
+            views = [c for c in coverage_rows if c['run_id'] == case['run_id']]
             case['review_coverage'] = views
             durations = [v.get('duration_seconds') for v in views]
             if (len(views) == 3 and {v['view'] for v in views} ==
@@ -431,6 +433,27 @@ def main(argv):
             with open(os.path.join(path, name), encoding='utf-8') as source:
                 supplemental[key] = json.load(source)
     group = to_group(doc, **supplemental)
+    # Link only artifacts actually shipped with the submission.
+    links = group.setdefault('submission_links', {})
+    for key, names in {
+        'report': ['report.html'], 'bundle': ['submission.json'],
+        'csv': ['task_metrics.csv'], 'events': ['events.json'],
+        'audit': ['audit_data.json'], 'coverage': ['review_coverage.csv', 'coverage.json'],
+        'provenance': ['provenance.json'],
+        'validation': ['validation-report.json', 'validation_report.json', 'validation.json'],
+    }.items():
+        for name in names:
+            if os.path.isfile(os.path.join(path, name)):
+                links.setdefault(key, f"submissions/{group['id']}/{name}")
+                break
+    provenance_path = os.path.join(path, 'provenance.json')
+    if os.path.isfile(provenance_path):
+        with open(provenance_path, encoding='utf-8') as source:
+            provenance = json.load(source)
+        if provenance.get('main_approved') is False or provenance.get('final_main_approved') is False:
+            group['audit_completion'] = 'interim'
+            if '阶段性' not in group['name']:
+                group['name'] += ' · 阶段性结果'
     out_dir = os.path.join(board, 'incoming')
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, group['id'] + '.json')

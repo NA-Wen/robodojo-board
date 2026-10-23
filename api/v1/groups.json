@@ -47,6 +47,8 @@
       "coverage": "submissions/semantic/coverage.json",
       "csv": "submissions/semantic/task_metrics.csv",
       "events": "submissions/semantic/events.json",
+      "provenance": "submissions/semantic/provenance.json",
+      "report": "submissions/semantic/report.html",
       "validation": "submissions/semantic/validation-report.json"
     },
     "submission_version": null,
@@ -67,44 +69,28 @@
   },
   {
     "audit_completion": null,
-    "coverage": "动作前观测 + 视频片段补查",
+    "coverage": "42个run完整日志与三视角静态抽帧审核，经main批准全部当前指纹。保留26指标、307条事件和126路覆盖。全程0.2秒基础扫描含首尾；所有执行动作、疑点及事件前后边界连续源帧复核。不代表全帧观看或连续播放；确认计数为所声明范围内下界。历史批次按实际检查记录披露：常规批次三视角各4帧，部分补查为单视角6/8/12帧；逐视角记录不能一概相加为同一次请求，不宣称所有历史批次统一大小。未知null，候选保留但不计确认值；原生结果与模型自述及命令ACK分开。",
     "id": "persistent",
     "methodology": [
-      "检查42个case的result.json执行轨迹与三路MP4。校验2,674轮动作前观测、8,022张三视角图像；视觉复核覆盖每次夹爪指令及相邻观测、换手与观察动作。疑难提拉/失持及直接换手另查看视频内采样帧，部分片段逐帧加密；并非逐帧穷尽观看全部视频。",
-      "空夹后重试：实际闭合但未形成有效抓取，之后对同一物体重新接近或重试；可跨轮次或换臂。仅发出闭合计划、未执行闭合不计；最终空夹且没有后续重试不计此类。",
-      "夹取后掉落：物体离开支撑并随手运动，随后在主动松爪前失持。同一物体一次失持只计一次。主动释放后的倒下或落偏归放置失败。",
-      "待确认：夹指遮挡或支撑接触不清，使空夹、支撑滑移、短暂提起后掉落无法可靠区分；不进入确认空夹或确认掉落。因此确认数是保守计数，0表示未确认发现。",
-      "换手按同一物体跨左右手计。分别记录桌面中转、任务支撑面中转、直接稳定成功、直接尝试失败和掉落后另一手恢复。直接稳定成功要求供给手释放后接收手继续保持并执行后续动作；实际接近受阻也可构成失败尝试，纯文字计划不计。",
-      "补视野：另一臂实际移动以补足执行臂缺失的几何观察，包含观察臂撤离以恢复可见性；执行臂自看、常规闲臂扫描、仅清运动路径和被拒未动均排除。同一未解决缺口的连续调整计一轮；恢复执行后再次出现缺口计新一轮。动作数按实际运动的轨迹turn计。",
-      "cap20可能截断移动或夹爪动作。统计结合executed_waypoints、后续夹爪状态和图像，不以请求targets或accepted作为实际完成证据。模型note只作定位线索，不单独证明夹取或掉落。",
-      "T为本报告1起始轨迹序号；P为原始policy_step；E为动作前env_step；F为各MP4内0起始帧号，F不等于E。执行视频帧区间为[start,end)。事件列出的T覆盖动作前、动作与后续结果，非每个T各计一次。",
-      "原生分数原样保留；完全成功数按score==1计算。补充发现仅是检查中遇到的示例，未对碰撞、放置失败、洒漏等作穷尽统计。当前数量是事件数，不是以抓取机会数为分母的失败率。",
-      "与semantic-eef旧报告比较时须注意证据差异：本组有连续视频补查，旧组主要基于稀疏动作前图像；待确认事件占比和可确认事件数会受此影响。"
+      "42个run完整日志与三视角静态抽帧审核，经main批准全部当前指纹。保留26指标、307条事件和126路覆盖。全程0.2秒基础扫描含首尾；所有执行动作、疑点及事件前后边界连续源帧复核。不代表全帧观看或连续播放；确认计数为所声明范围内下界。历史批次按实际检查记录披露：常规批次三视角各4帧，部分补查为单视角6/8/12帧；逐视角记录不能一概相加为同一次请求，不宣称所有历史批次统一大小。未知null，候选保留但不计确认值；原生结果与模型自述及命令ACK分开。"
     ],
     "name": "persistent-cap20",
     "runs": 42,
     "setting": {
-      "id": "persistent-cap20",
+      "id": "sha256:5a58fe46ca1cd6bc8e96664e6e8c893422609d2a75bf9ece097326ca632ac2fc",
       "label": "persistent-cap20",
-      "notes": [
-        "42 条运行的设置逐条核对一致；仅每 run 的 manifest/hash 字段不同。"
-      ],
-      "source": "result.json → protocol / model / evidence.config.parameters（42 条一致）",
+      "source": "submission.json → group.setting",
+      "unknown_reason": null,
       "values": [
         {
           "known": true,
-          "name": "client_version",
-          "value": "0.153.4"
+          "name": "profile",
+          "value": "persistent-cap20"
         },
         {
           "known": true,
-          "name": "feedback",
-          "value": "original-arrival"
-        },
-        {
-          "known": true,
-          "name": "full_history",
-          "value": true
+          "name": "native_control_cap",
+          "value": 20
         },
         {
           "known": true,
@@ -118,40 +104,36 @@
         },
         {
           "known": true,
-          "name": "native_control_cap",
-          "value": 20
-        },
-        {
-          "known": true,
-          "name": "profile",
-          "value": "persistent-cap20"
-        },
-        {
-          "known": true,
-          "name": "thinking_effort",
-          "value": "medium"
+          "name": "client_version",
+          "value": "0.153.4"
         }
       ]
     },
-    "submission_links": null,
+    "submission_links": {
+      "annotations": "submissions/persistent/event_annotations.json",
+      "bundle": "submissions/persistent/submission.json",
+      "coverage": "submissions/persistent/coverage.json",
+      "csv": "submissions/persistent/task_metrics.csv",
+      "events": "submissions/persistent/events.json",
+      "provenance": "submissions/persistent/provenance.json",
+      "report": "submissions/persistent/report.html",
+      "validation": "submissions/persistent/validation-report.json"
+    },
     "submission_version": null,
     "tasks": 42,
     "totals": {
       "cases": 42,
-      "direct_failed": 3,
+      "direct_failed": 4,
       "direct_transfer": 1,
-      "drop": 21,
-      "empty_retry": 37,
-      "images": 8022,
-      "other": 13,
-      "recovery_other": 2,
+      "drop": 26,
+      "empty_retry": 47,
+      "other": 79,
       "success": 15,
       "support_transfer": 1,
       "table_transfer": 9,
-      "turns": 2674,
-      "uncertain": 30,
-      "view": 12,
-      "view_motions": 23
+      "turns": 2843,
+      "uncertain": 81,
+      "view": 59
     }
   },
   {
@@ -196,7 +178,14 @@
         }
       ]
     },
-    "submission_links": null,
+    "submission_links": {
+      "bundle": "submissions/action_horizon/submission.json",
+      "coverage": "submissions/action_horizon/review_coverage.csv",
+      "csv": "submissions/action_horizon/task_metrics.csv",
+      "events": "submissions/action_horizon/events.json",
+      "report": "submissions/action_horizon/report.html",
+      "validation": "submissions/action_horizon/validation-report.json"
+    },
     "submission_version": null,
     "tasks": 42,
     "totals": {
@@ -279,6 +268,139 @@
       "turns": 2454,
       "uncertain": 78,
       "view": 45
+    }
+  },
+  {
+    "audit_completion": "interim",
+    "coverage": "O23 compact medium R1；42个run、三视角原始视频与动作日志均保留。实际核查采用0.2秒基础扫描，并对关键动作、疑点和事件边界使用局部连续窗口；不声称全帧连续观看。当前为用户授权的阶段性结果：rolling/main批准数量与final recheck要求见 provenance.json；main未最终批准，严禁视为审核完成。原始任务指令缺失、视频PTS与控制步无精确映射、部分响应数缺失等已知问题保留；pending指标留空，未知值为null。",
+    "id": "o23-compact-medium-r1",
+    "methodology": [
+      "O23 compact medium R1；42个run、三视角原始视频与动作日志均保留。实际核查采用0.2秒基础扫描，并对关键动作、疑点和事件边界使用局部连续窗口；不声称全帧连续观看。当前为用户授权的阶段性结果：rolling/main批准数量与final recheck要求见 provenance.json；main未最终批准，严禁视为审核完成。原始任务指令缺失、视频PTS与控制步无精确映射、部分响应数缺失等已知问题保留；pending指标留空，未知值为null。"
+    ],
+    "name": "O23 compact · medium · R1 · 首轮42 · 阶段性结果",
+    "runs": 42,
+    "setting": {
+      "id": "sha256:022e0c4606d1a12b4fda1bdeaf10b826dee5b7e956f1cd9e78819a695d4aefd1",
+      "label": "O23 compact · medium · R1 · 首轮42",
+      "source": "submission.json → group.setting",
+      "unknown_reason": null,
+      "values": [
+        {
+          "known": true,
+          "name": "profile",
+          "value": "persistent-cap20-o23"
+        },
+        {
+          "known": true,
+          "name": "native_control_cap",
+          "value": 20
+        },
+        {
+          "known": true,
+          "name": "max_decisions",
+          "value": 100
+        },
+        {
+          "known": true,
+          "name": "model",
+          "value": "gpt-6-astra"
+        },
+        {
+          "known": true,
+          "name": "client_version",
+          "value": "0.153.4"
+        }
+      ]
+    },
+    "submission_links": {
+      "bundle": "submissions/o23-compact-medium-r1/submission.json",
+      "csv": "submissions/o23-compact-medium-r1/task_metrics.csv",
+      "events": "submissions/o23-compact-medium-r1/events.json",
+      "provenance": "submissions/o23-compact-medium-r1/provenance.json",
+      "report": "submissions/o23-compact-medium-r1/report.html",
+      "validation": "submissions/o23-compact-medium-r1/validation.json"
+    },
+    "submission_version": null,
+    "tasks": 42,
+    "totals": {
+      "cases": 42,
+      "direct_failed": 1,
+      "direct_transfer": 1,
+      "drop": 35,
+      "empty_retry": 17,
+      "other": 56,
+      "success": 18,
+      "table_transfer": 8,
+      "turns": 2812,
+      "uncertain": 68,
+      "view": 48
+    }
+  },
+  {
+    "audit_completion": "interim",
+    "coverage": "用户授权提交当前阶段性结果；rolling批准42/42，final main尚未批准，汇总辅助列修正仍需final recheck。42 run、126路视频、全部26项指标；0.2秒基础抽帧及关键动作、疑点和事件边界局部连续窗口，逐run实际覆盖另列，不宣称全帧观看或连续播放。确认视觉计数为声明覆盖内下界，候选不计数；原始指令、精确同步及宏内部阶段等未知保持null。",
+    "id": "persistent-cap20-o23-depthpro",
+    "methodology": [
+      "用户授权提交当前阶段性结果；rolling批准42/42，final main尚未批准，汇总辅助列修正仍需final recheck。42 run、126路视频、全部26项指标；0.2秒基础抽帧及关键动作、疑点和事件边界局部连续窗口，逐run实际覆盖另列，不宣称全帧观看或连续播放。确认视觉计数为声明覆盖内下界，候选不计数；原始指令、精确同步及宏内部阶段等未知保持null。"
+    ],
+    "name": "persistent-cap20-o23-depthpro · 首轮42 · 用户授权阶段性结果",
+    "runs": 42,
+    "setting": {
+      "id": "sha256:9aa1fb524df003ab334304bebdab4d54f89cd559400d761208123c27cb7bb638",
+      "label": "persistent-cap20-o23-depthpro · 首轮42 · 用户授权阶段性结果",
+      "source": "submission.json → group.setting",
+      "unknown_reason": "native_control_cap=20为单次调用前缀上限，不是episode总控制步预算；总预算、独立系统turn与宏内部阶段未导出。",
+      "values": [
+        {
+          "known": true,
+          "name": "profile",
+          "value": "persistent-cap20-o23-depthpro"
+        },
+        {
+          "known": true,
+          "name": "model",
+          "value": "gpt-6-astra"
+        },
+        {
+          "known": true,
+          "name": "client_version",
+          "value": "0.153.4"
+        },
+        {
+          "known": true,
+          "name": "max_decisions",
+          "value": 100
+        },
+        {
+          "known": true,
+          "name": "native_control_cap",
+          "value": 20
+        }
+      ]
+    },
+    "submission_links": {
+      "bundle": "submissions/persistent-cap20-o23-depthpro/submission.json",
+      "coverage": "submissions/persistent-cap20-o23-depthpro/review_coverage.csv",
+      "csv": "submissions/persistent-cap20-o23-depthpro/task_metrics.csv",
+      "events": "submissions/persistent-cap20-o23-depthpro/events.json",
+      "provenance": "submissions/persistent-cap20-o23-depthpro/provenance.json",
+      "report": "submissions/persistent-cap20-o23-depthpro/report.html",
+      "validation": "submissions/persistent-cap20-o23-depthpro/validation-report.json"
+    },
+    "submission_version": null,
+    "tasks": 42,
+    "totals": {
+      "cases": 42,
+      "direct_failed": 2,
+      "direct_transfer": 2,
+      "drop": 28,
+      "empty_retry": 16,
+      "other": 44,
+      "success": 17,
+      "table_transfer": 11,
+      "turns": 2938,
+      "uncertain": 92,
+      "view": 49
     }
   }
 ]

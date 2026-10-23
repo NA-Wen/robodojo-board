@@ -1,7 +1,7 @@
 name: publish-submission
 
 # 合并 PR 后自动入库：校验 → 生成组数据 → 合并进 data.js → 提交 → Pages 自动发布。
-# 触发条件限定 submissions/，而本 workflow 的产物只改 data.js / audit-data.json / incoming/，
+# 由提交包和入库脚本变更触发，而本 workflow 的产物只改 data.js / audit-data.json / incoming/ / api/，
 # 因此不会再次触发自己。
 
 on:
@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - 'submissions/**'
+      - 'ingest_submission.py'
+      - '.github/workflows/publish-submission.yml'
 
 permissions:
   contents: write
