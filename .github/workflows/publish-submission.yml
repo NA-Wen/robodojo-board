@@ -56,12 +56,15 @@ jobs:
             python3 ingest_submission.py "$dir" --board . --merge --force
           done
 
+      - name: Regenerate static API
+        run: python3 build_api.py --board .
+
       - name: Commit regenerated data
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.js audit-data.json incoming
+          git add data.js audit-data.json incoming api
           if git diff --cached --quiet; then
             echo "数据无变化，跳过提交"
             exit 0

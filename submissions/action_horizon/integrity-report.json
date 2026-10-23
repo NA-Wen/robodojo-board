@@ -1,0 +1,13 @@
+{
+  "run_count": 42,
+  "video_refs": 126,
+  "events": 256,
+  "confirmed_events": 213,
+  "uncertain_events": 43,
+  "metric_event_reconciliation": "pass: all source confirmed counts match linked events",
+  "native_counts_reconciliation": "pass: unique decision_index and sum(native_controls)",
+  "video_and_artifact_hashes": "pass: recomputed from original local bytes",
+  "csv_mirror": "checked_by_official_validator",
+  "sampled_review_complete": true,
+  "continuous_full_video_review_complete": false
+}

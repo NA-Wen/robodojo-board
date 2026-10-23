@@ -1,0 +1,198 @@
+{
+  "definitions": [
+    {
+      "description": "取原生结果的 success；score==1 才算成功。不得用模型自述、accepted 或 note 判定。",
+      "group": "任务结果与成本",
+      "key": "success",
+      "kind": "bool",
+      "label": "成功"
+    },
+    {
+      "description": "原生任务得分，范围 0–1；与 success 分开保留，不用得分反推成功。",
+      "group": "任务结果与成本",
+      "key": "score",
+      "kind": "score",
+      "label": "得分"
+    },
+    {
+      "description": "semantic-eef：原生模型决策轮；轨迹记录与宏执行阶段分列。历史组按其来源定义。",
+      "group": "任务结果与成本",
+      "key": "turns",
+      "kind": "number",
+      "label": "总体轮数"
+    },
+    {
+      "description": "仅指实际执行的控制步数：双臂同步一步计一个环境控制步；规划器拒绝的调用和未执行计划不计；须与原生累计值核对并解释差异。",
+      "group": "任务结果与成本",
+      "key": "actions",
+      "kind": "number",
+      "label": "总体 action 次数"
+    },
+    {
+      "description": "semantic-eef：实际闭合但未形成有效夹持，包含之后没有重试的空夹；正常按压、推物、空手收爪不计；每次独立抓取尝试计一次。 其他组核查范围与历史口径见组说明。",
+      "group": "抓取与恢复",
+      "key": "emptyRetry",
+      "kind": "number",
+      "label": "空夹次数"
+    },
+    {
+      "description": "semantic-eef：已离开支撑并形成夹持，随后在主动释放前失持；主动释放后的倒下或落偏不计入掉落。 其他组核查范围与历史口径见组说明。",
+      "group": "抓取与恢复",
+      "key": "drops",
+      "kind": "number",
+      "label": "夹取掉落次数"
+    },
+    {
+      "description": "同一物体在空夹后重新形成有效夹持，并在后续提拉或搬运中保持；连续多次空夹后一次抓稳只计一次，须关联此前失败链，不能重复归因。",
+      "group": "抓取与恢复",
+      "key": "emptyRegrasp",
+      "kind": "pending",
+      "label": "空夹后成功重夹次数"
+    },
+    {
+      "description": "同一物体在掉落后重新形成有效夹持并保持；关联掉落事件，同一掉落链只计一次成功重夹。",
+      "group": "抓取与恢复",
+      "key": "dropRegrasp",
+      "kind": "pending",
+      "label": "掉落后成功重夹次数"
+    },
+    {
+      "description": "两臂直接转交同一物体的实际执行尝试，包含失败的尝试；纯文字计划不计。",
+      "group": "直接换手",
+      "key": "directAttempts",
+      "kind": "number",
+      "label": "直接换手出现次数"
+    },
+    {
+      "description": "要求接收臂独立保持该物体并继续操作，供给臂已释放；仅接触不算成功。",
+      "group": "直接换手",
+      "key": "directSuccess",
+      "kind": "number",
+      "label": "直接换手成功次数"
+    },
+    {
+      "description": "经由裸桌面中转换手的实际执行尝试；意外掉落之后另一臂拾取属于辅助事件，不算桌面换手。",
+      "group": "桌面换手",
+      "key": "tableAttempts",
+      "kind": "number",
+      "label": "桌面换手出现次数"
+    },
+    {
+      "description": "中转后接收臂重新持物并继续操作。",
+      "group": "桌面换手",
+      "key": "tableSuccess",
+      "kind": "number",
+      "label": "桌面换手成功次数"
+    },
+    {
+      "description": "经由桌面以外的支撑结构（容器边缘、支架等）中转换手，与桌面中转分开计数。",
+      "group": "其他支撑面换手",
+      "key": "supportAttempts",
+      "kind": "number",
+      "label": "其他支撑面换手出现次数"
+    },
+    {
+      "description": "中转后接收臂重新持物并继续操作。",
+      "group": "其他支撑面换手",
+      "key": "supportSuccess",
+      "kind": "number",
+      "label": "其他支撑面换手成功次数"
+    },
+    {
+      "description": "semantic-eef：执行臂为补足自身缺失观察而实际移动；普通任务接近、仅为避碰的移动不计；按实际执行的轨迹动作阶段计，一个阶段同类计一次。 其他组核查范围与历史口径见组说明。",
+      "group": "视野调整",
+      "key": "viewSame",
+      "kind": "pending",
+      "label": "同手臂补视野次数"
+    },
+    {
+      "description": "semantic-eef：另一臂补看执行臂被遮挡区域，或撤离以恢复可见性；按动作阶段计。同一观察缺口的连续动作以 gap_id 关联，不与“观察轮数”混用。 其他组核查范围与历史口径见组说明。",
+      "group": "视野调整",
+      "key": "viewOpposite",
+      "kind": "number",
+      "label": "异侧手臂补视野次数"
+    },
+    {
+      "description": "动作预算使用率 ≥90% 且尚未达到上限时，明确执行或记录主动放弃，并有证据表明该预算是放弃原因；自动耗尽终止不算。",
+      "group": "主动放弃",
+      "key": "abandonNearAction",
+      "kind": "pending",
+      "label": "靠近动作上限时主动放弃"
+    },
+    {
+      "description": "同上，针对 turn 预算。",
+      "group": "主动放弃",
+      "key": "abandonNearTurn",
+      "kind": "pending",
+      "label": "靠近 turn 上限时主动放弃"
+    },
+    {
+      "description": "动作预算已耗尽且明确记录主动放弃；与“靠近动作上限”互斥，同一预算不得同时计两类。",
+      "group": "主动放弃",
+      "key": "abandonActionLimit",
+      "kind": "pending",
+      "label": "达到动作上限时主动放弃"
+    },
+    {
+      "description": "turn 预算已耗尽且明确记录主动放弃；与“靠近 turn 上限”互斥。两种预算同时满足时分别记录，并注明是同一终止事件。",
+      "group": "主动放弃",
+      "key": "abandonTurnLimit",
+      "kind": "pending",
+      "label": "达到 turn 上限时主动放弃"
+    },
+    {
+      "description": "要求实际非预期接触；正常抓取、推物、按压、装配接触及规划器拒绝不计；一次连续接触只计一次，分离后再次接触才算新事件。",
+      "group": "异常碰撞",
+      "key": "collisionArms",
+      "kind": "pending",
+      "label": "两手臂之间异常碰撞"
+    },
+    {
+      "description": "同上；正常操作中的有意接触不计。",
+      "group": "异常碰撞",
+      "key": "collisionArmObject",
+      "kind": "pending",
+      "label": "手臂与物体异常碰撞"
+    },
+    {
+      "description": "同上；抓取平面上的正常按压与放置不计。",
+      "group": "异常碰撞",
+      "key": "collisionArmTable",
+      "kind": "pending",
+      "label": "手臂与桌面异常碰撞"
+    },
+    {
+      "description": "实际操作导致非目标物倒下或翻倒；仅被平移不计；同一动作可同时计入对应异常碰撞。",
+      "group": "新增三项",
+      "key": "knockdown",
+      "kind": "pending",
+      "label": "非目标物被碰倒"
+    },
+    {
+      "description": "实际开始操作的对象不符合任务要求；仅文字判断错误不计；合法的中间操作或工具使用不计。",
+      "group": "新增三项",
+      "key": "wrongObject",
+      "kind": "pending",
+      "label": "选错物体"
+    },
+    {
+      "description": "一次实际插入、套入、悬挂、装配、堆叠或精确对齐尝试未达到要求；连续执行中的微调不逐帧计数；退出后重新尝试算新一次；普通搬运掉落不计此项。",
+      "group": "新增三项",
+      "key": "finePlacementFail",
+      "kind": "pending",
+      "label": "精细放置失败"
+    }
+  ],
+  "labels": {
+    "direct_failed": "直接换手失败",
+    "direct_transfer": "直接换手成功",
+    "drop": "夹起后掉落",
+    "empty_retry": "空夹",
+    "other": "补充发现",
+    "recovery_other": "另一手恢复",
+    "support_transfer": "支撑面中转换手",
+    "table_transfer": "桌面中转换手",
+    "uncertain": "待确认",
+    "view": "补视野"
+  }
+}

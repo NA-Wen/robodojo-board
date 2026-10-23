@@ -1,0 +1,593 @@
+{
+  "runs": [
+    {
+      "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+      "native": {
+        "model_decisions": 42,
+        "model_responses": 42,
+        "native_controls": 185,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "0c88b2707b6a14beebe784f6227a2fca8cf5753eea387ec2b92e72f7ccf14591",
+      "audit_metric_values_sha256": "2fe8523caf30d95da38f08df81980e33a3eed58c2a3e4cd316a8037eb236da5a"
+    },
+    {
+      "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+      "native": {
+        "model_decisions": 87,
+        "model_responses": 87,
+        "native_controls": 754,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "917e1cfa167f170a76cf66cc2634939c63124b7a46f40bce2cb1bca4e879fe5b",
+      "audit_metric_values_sha256": "e492e82c15ecdba927d143216eabef8018d0416cbc76ead22dc0c3f30342b5bc"
+    },
+    {
+      "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+      "native": {
+        "model_decisions": 91,
+        "model_responses": 91,
+        "native_controls": 825,
+        "native_terminal": true,
+        "score": 0.1,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "5da1ba5051baeea4ef38963d89039b6ba403c97d6af8316caf37a962fa38f368",
+      "audit_metric_values_sha256": "58e0e4e93f5a4d90b706c8a01f7d9caf32f3fad3cc6c2397825c75b7353acbdd"
+    },
+    {
+      "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+      "native": {
+        "model_decisions": 95,
+        "model_responses": 95,
+        "native_controls": 1075,
+        "native_terminal": true,
+        "score": 0.4,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "b35ca9477c190a90c5b4209514642a8d7fbab12adf17cd9a02c4fc38abe5c86e",
+      "audit_metric_values_sha256": "72c2ff5fc644c2ac3811637106001dfa14a45059a5c5690d0503610acc98894c"
+    },
+    {
+      "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+      "native": {
+        "model_decisions": 87,
+        "model_responses": 87,
+        "native_controls": 1018,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "c3ea7cb7efab8b842a87d12aeb7e457aca3095cf0017f80852950de9f175b74e",
+      "audit_metric_values_sha256": "4822ea3b434b82e85e51229ed9ae458996740f9933fcf18c28a8ff9d70fa8a74"
+    },
+    {
+      "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+      "native": {
+        "model_decisions": 65,
+        "model_responses": 65,
+        "native_controls": 542,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "9a1b7d59d5fe6c0d1197a7e5d0b093d3f74908dfa6eef13d5244b3007e6cd874",
+      "audit_metric_values_sha256": "3d79f15ef283533ddee74023fbf7e35b4860392e93ab180156f2d15f6f513b1e"
+    },
+    {
+      "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+      "native": {
+        "model_decisions": 46,
+        "model_responses": 46,
+        "native_controls": 287,
+        "native_terminal": true,
+        "score": 0.2,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "122b0a17cebf558bc752fb2ff9072b17669055f8988053f4999329a181ba268b",
+      "audit_metric_values_sha256": "19cfa623ad81969b83ed0a7f2a918e57e0351256b04bbbe58f45dcf609501f22"
+    },
+    {
+      "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+      "native": {
+        "model_decisions": 90,
+        "model_responses": 90,
+        "native_controls": 782,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "6fc991bbd0cced0f6bbec2da16d10187217b9e0347419f8add0b50a1ac04ed60",
+      "audit_metric_values_sha256": "d7646b392ef5a6b66bb8b2151e2c92e4b32eb5d84ff5eb36a8625ffe50df9b82"
+    },
+    {
+      "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+      "native": {
+        "model_decisions": 91,
+        "model_responses": 91,
+        "native_controls": 641,
+        "native_terminal": true,
+        "score": 0.1,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "eb88ff77fcb85eb5bfb5defb26f5b0dadce6fa5bac01fcb517e92f16435f7d4b",
+      "audit_metric_values_sha256": "8f5989e4a437fda763ca225898de6f160db59f9648fdf148612d9538e5357344"
+    },
+    {
+      "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+      "native": {
+        "model_decisions": 89,
+        "model_responses": 89,
+        "native_controls": 887,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "3931fce20b1f8d2ac4cb966b3b976ee8a146b648bb74099caed1a433c9598169",
+      "audit_metric_values_sha256": "71f81a44214fb771f1bed859e078891835b5f01ae35cdd2ccaea497d3e09b9b7"
+    },
+    {
+      "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+      "native": {
+        "model_decisions": 38,
+        "model_responses": 38,
+        "native_controls": 332,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "b6f1195220cf86f52fe378a579278a41cbe7f32c88247d44da771c18df947ced",
+      "audit_metric_values_sha256": "87eea6042719520a0b5df88277deb096b6c29ab1795061b1e21fbafbbce44aea"
+    },
+    {
+      "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+      "native": {
+        "model_decisions": 17,
+        "model_responses": 17,
+        "native_controls": 111,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "654c4d0218377e8e319db83a0140a38e4e82f1ee80ae2f3f09000b0f2715c45b",
+      "audit_metric_values_sha256": "1504c443331d8698e9accbf56b0036105d5dfc8cd1b1d1d2e42d7755b71682c7"
+    },
+    {
+      "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+      "native": {
+        "model_decisions": 79,
+        "model_responses": 79,
+        "native_controls": 633,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "4cb1ba013b8cd998b3052a40c071264e29aeda299afc8c3723911bcad8b7d370",
+      "audit_metric_values_sha256": "91422dfe27e0af0681f0bf8dce36d1c59cde173398476d932d42d1a49b9f5f14"
+    },
+    {
+      "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+      "native": {
+        "model_decisions": 92,
+        "model_responses": 93,
+        "native_controls": 1415,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "50ec5e8d2f60228193fe9686607e3b5198bfa70080163e517c65dfbd3235893b",
+      "audit_metric_values_sha256": "39a87dab9b96f1c067ed75a59143ce23be66180ea269ba4c1ae08000bd07044d"
+    },
+    {
+      "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+      "native": {
+        "model_decisions": 29,
+        "model_responses": 29,
+        "native_controls": 271,
+        "native_terminal": true,
+        "score": 0.15,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "c8cab1709aca85f2c1527889b6cfa9553a39d6ff87c2e1568a8c5ceea19c5e6f",
+      "audit_metric_values_sha256": "249c63a809dbdb3160e7bd697749b36d7dbe0fd64f33e968c3c6e09b46641d9c"
+    },
+    {
+      "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+      "native": {
+        "model_decisions": 56,
+        "model_responses": 56,
+        "native_controls": 500,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "5df84de735a58fbf7415a584c20df17c1e0d12fc38800a38dd04c0fcd15628c4",
+      "audit_metric_values_sha256": "80e658c1e7a0956c4094095e9a6bc5a8a99c9d0cfe3c68c5c1cf443e989e67b0"
+    },
+    {
+      "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+      "native": {
+        "model_decisions": 85,
+        "model_responses": 85,
+        "native_controls": 515,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "905e0dde134c6737d1091ba539cda86d373d1dcb5bf5ff0b93119bd40eed53a2",
+      "audit_metric_values_sha256": "c76b21911d5a78ed8726299c1a52f60ba7ddc66f1b158aaa90083dd47be1487d"
+    },
+    {
+      "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+      "native": {
+        "model_decisions": 100,
+        "model_responses": 100,
+        "native_controls": 767,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "15df036433ba639e7a3d5a6fef655c546fdc636d9fedc767e8ed12da79d83568",
+      "audit_metric_values_sha256": "da91d1c47f116e310c823a4d86d1b8730df5297469d1403bf10a614b41e0f0eb"
+    },
+    {
+      "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+      "native": {
+        "model_decisions": 29,
+        "model_responses": 29,
+        "native_controls": 320,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "1e85f431cff90921ba9aa7a70d227465ec14114f420d3a39053baa6b3d0ae577",
+      "audit_metric_values_sha256": "1519aadbca3545b87bcb2a55431e3aa7aae76d8a68ca41bb5c82ed487b75b936"
+    },
+    {
+      "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+      "native": {
+        "model_decisions": 95,
+        "model_responses": 95,
+        "native_controls": 795,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "6c50c07949b6d5c766a02e2fbd246837f41c7c0a4fa2c72a822d136d3f58d301",
+      "audit_metric_values_sha256": "0cb63b93cbe820ca895c123f6fa2193d215f83b7298220d63586b5af9eac17d1"
+    },
+    {
+      "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+      "native": {
+        "model_decisions": 86,
+        "model_responses": 86,
+        "native_controls": 916,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "a1e967c85f68cbe9b5aa16395f32ec3a25ef9b82cc9a7d305d5252955a5179c1",
+      "audit_metric_values_sha256": "f3bfcae6081e6ced4e631473f5ad04a55a2ccb38a460452a09e7ff908ab608cb"
+    },
+    {
+      "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+      "native": {
+        "model_decisions": 60,
+        "model_responses": 60,
+        "native_controls": 511,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "8feb5b45ab8d9bffcae8680dbc60d9380498739a5e77002203a2a7af94db1cd3",
+      "audit_metric_values_sha256": "716ab6219438e4cfa3dcf9b9988918bab5af0914904a62a0cafaa7c5e9aa8e85"
+    },
+    {
+      "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+      "native": {
+        "model_decisions": 68,
+        "model_responses": 68,
+        "native_controls": 280,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "415f90fffede998bf12e92ab6cc55fb404cf34b8f4097cb604cdb812095a7570",
+      "audit_metric_values_sha256": "c1f46416160447e1f3a61e7c133577a57b68a75e489a6e6c90120f5d8353de24"
+    },
+    {
+      "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+      "native": {
+        "model_decisions": 88,
+        "model_responses": 88,
+        "native_controls": 540,
+        "native_terminal": true,
+        "score": 0.1,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "dbc0d7cf9cd91a8ce21902a1731a4dfd9b0b3e10d939b730a7975cce9a4f1da2",
+      "audit_metric_values_sha256": "c1fd1ecbeb28c85b9a3ceaa105ba36574eeccc8c9499877b5f060bc3a01af56a"
+    },
+    {
+      "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+      "native": {
+        "model_decisions": 100,
+        "model_responses": 100,
+        "native_controls": 250,
+        "native_terminal": true,
+        "score": 0.1,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "760353464bc4d8009a4e3542726bd5c51de063bcdbd71348ee2d562b021c508f",
+      "audit_metric_values_sha256": "62abbe9ede432c7f746de9159d44982d4998043c2e91d242463c90793bc28e3f"
+    },
+    {
+      "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+      "native": {
+        "model_decisions": 37,
+        "model_responses": 37,
+        "native_controls": 330,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "07add2fe3e62ef55f41f7f8d26b2e8c2b6e7c2b9964454c321c7c0d09f6b2247",
+      "audit_metric_values_sha256": "f397dd525a0989bb6626c177056aa31b69d9188c2a9cf52c830ab1c045ecbd26"
+    },
+    {
+      "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+      "native": {
+        "model_decisions": 60,
+        "model_responses": 60,
+        "native_controls": 588,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "77468cae21988e16a20b6591b02383c012565004bb3c42f450fbeb7b251b1b75",
+      "audit_metric_values_sha256": "6f3f8dfc46a61630c1a64616ae96637cb17a50ad972c1364e6761397b165a631"
+    },
+    {
+      "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+      "native": {
+        "model_decisions": 77,
+        "model_responses": 77,
+        "native_controls": 743,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "bfad7e39d75184aae60dff3973c403e877115a89d208548e6c4777e92c97def0",
+      "audit_metric_values_sha256": "4e9541152adfae8dd3668dc5a73d92f97ea4a780692c22a09e896d7070695c35"
+    },
+    {
+      "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+      "native": {
+        "model_decisions": 44,
+        "model_responses": 44,
+        "native_controls": 370,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "8f4b5df064ea3fee51885c4459ec46684f9304e3e50c20a1e3b7548192292191",
+      "audit_metric_values_sha256": "79b2be43c6e4d6d4bb279226e66a7648ad2ab0001cafd864b6fcf2c22a4bc287"
+    },
+    {
+      "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+      "native": {
+        "model_decisions": 39,
+        "model_responses": 39,
+        "native_controls": 345,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "9644ddfeb012747a8d5890cbe6681217fadd45bcd1eb43717883b5a6635925eb",
+      "audit_metric_values_sha256": "720d5f2bc46389f98ed0295edcf31e8e301282607446adc3f4d635b8814482b8"
+    },
+    {
+      "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+      "native": {
+        "model_decisions": 45,
+        "model_responses": 45,
+        "native_controls": 260,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "7d9b39e8d1813932091354a470b20518ab2e1795312726cb4cb834881562a696",
+      "audit_metric_values_sha256": "f5e20837a201cfbaff4b3ea723d54fe12719665620af9ceb3daa9c8fb54fbdd3"
+    },
+    {
+      "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+      "native": {
+        "model_decisions": 61,
+        "model_responses": 61,
+        "native_controls": 660,
+        "native_terminal": true,
+        "score": 0.25,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "6ae107a39e7095b17a017b0aed495bfbef9ca583e285f0bf4879e6cfaaa3f223",
+      "audit_metric_values_sha256": "ca1e58b556de8640e88d0da10bec46ba817abf5414f81e772724138b95233e1d"
+    },
+    {
+      "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+      "native": {
+        "model_decisions": 39,
+        "model_responses": 39,
+        "native_controls": 289,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "090b6fc0fa72ffd067e38c764a8e161efcc3bede3f21fdce00a3e2904b85abfc",
+      "audit_metric_values_sha256": "f52444b684c29906573dd036c78a015e6d1551b7a64d74724e322be190dd82f5"
+    },
+    {
+      "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+      "native": {
+        "model_decisions": 73,
+        "model_responses": 73,
+        "native_controls": 646,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "be402b3fe61596cfc7c7dc02116f70c04d3b843c371f9a5375ace3668ae0c3d2",
+      "audit_metric_values_sha256": "3448fd6f71a3eb1faa463b4654ae880c0b6cac413f4b1abfad25204c760e5fdc"
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+      "native": {
+        "model_decisions": 61,
+        "model_responses": 61,
+        "native_controls": 550,
+        "native_terminal": true,
+        "score": 0.15,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "ed8ca198c097744d11e1f10bde78413e4fbd8cad9a3482672c81b34728125511",
+      "audit_metric_values_sha256": "a4fbb9c46be99c8261c5c751e579f0e38b14ecec142db4cfcdc890391c76828f"
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+      "native": {
+        "model_decisions": 48,
+        "model_responses": 48,
+        "native_controls": 385,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "76452d3d79845de008bc544f79986b795be3ace1b91f2460844b4bc326fa6479",
+      "audit_metric_values_sha256": "9a6d45cd728f12a0988484e8034d49cf2aee8ad223cb95bd742a4379227073f9"
+    },
+    {
+      "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+      "native": {
+        "model_decisions": 64,
+        "model_responses": 64,
+        "native_controls": 530,
+        "native_terminal": true,
+        "score": 1.0,
+        "status": "complete",
+        "success": true
+      },
+      "native_terminal_sha256": "9457d793fa144933fd1c648ca5151be9895fdd2ebe99fd337d25976ecbf4d131",
+      "audit_metric_values_sha256": "ab1ed5b2266ad126f4005fd1e90ddd9ef5115b2e83b7728a8f0a535194627f1c"
+    },
+    {
+      "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+      "native": {
+        "model_decisions": 91,
+        "model_responses": 91,
+        "native_controls": 763,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "534cfb3e551a3fac8b991664d9679e87851e5480587ebedb64aa4e5bb2f8c1a9",
+      "audit_metric_values_sha256": "9732d8dcc9f35126ddeeafdd514dfdd8aecf30f0b33eb58f2af905b0cb8a3000"
+    },
+    {
+      "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+      "native": {
+        "model_decisions": 90,
+        "model_responses": 90,
+        "native_controls": 850,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "23131352a57793d73b49a1b46a5ac2d6502886ddf3b3974e9cd4c1d1c5daed9c",
+      "audit_metric_values_sha256": "2f90ce4ef0815eb23edb05771953c36b38f709c37bbf8e3ea5fb25fefc50c0b3"
+    },
+    {
+      "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+      "native": {
+        "model_decisions": 36,
+        "model_responses": 36,
+        "native_controls": 363,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "7f9ea3687639461e22120a84ca4b8c7ace9f5b3ae23f006230d0802ab00fea49",
+      "audit_metric_values_sha256": "62ba1a490d887d7cf2e0715b755babca1fad4ac32819f6d21dce10c19f4b38ab"
+    },
+    {
+      "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+      "native": {
+        "model_decisions": 55,
+        "model_responses": 55,
+        "native_controls": 447,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "e1d9b72c2953ac60ebd8d8f937a73d7b741c44fe22eaf4a614eb85a9b9f293a5",
+      "audit_metric_values_sha256": "de9a831eb86c6be253521d47671d5e9eeff46b7c67703c581cbe19af80024f82"
+    },
+    {
+      "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+      "native": {
+        "model_decisions": 90,
+        "model_responses": 90,
+        "native_controls": 680,
+        "native_terminal": true,
+        "score": 0.0,
+        "status": "complete",
+        "success": false
+      },
+      "native_terminal_sha256": "d5bb1ee60cc7107a1f774f8feecbd154a3032cbcc76ba43f3ab884d4fbf8d97d",
+      "audit_metric_values_sha256": "5f4a56a1bed426c362f7edaec84c298b6c9b9261c964c0b4e83833d77a7d3808"
+    }
+  ],
+  "main_review_sha256": "d48f3830933acbadb429e3d4d216afffac524e204a5a47058608c9e3307ba44f"
+}

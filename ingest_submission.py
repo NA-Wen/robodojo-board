@@ -50,6 +50,9 @@ def merge_into_site(dist, incoming_dir, only=None):
     原则：只增不减。既有 filters 内容原样保留，新值并入；不认识的键不碰。
     """
     data = load_site(dist)
+    # The machine-readable protocol is authoritative for newly supported states.
+    with open(os.path.join(dist, 'protocol.json'), encoding='utf-8') as source:
+        data['protocol'] = json.load(source)
     groups = data['groups']
     index = {g['id']: i for i, g in enumerate(groups)}
     added, replaced = [], []
@@ -118,6 +121,10 @@ def merge_into_site(dist, incoming_dir, only=None):
         entry.setdefault('name', g['name'])
         entry.setdefault('label', (g.get('setting') or {}).get('label', g['name']))
         entry.setdefault('coverage', (g.get('setting') or {}).get('coverage', ''))
+        if g['id'] in added + replaced:
+            entry.update(name=g['name'],
+                         label=(g.get('setting') or {}).get('label', g['name']),
+                         coverage=g.get('coverage', ''))
         settings.append(entry)
     filters['settings'] = settings
 
@@ -146,7 +153,7 @@ def load_validator():
     return mod
 
 
-def to_group(doc):
+def to_group(doc, annotations=None, coverage=None):
     group = doc['group']
     setting = group.get('setting') or {}
     cases = []
@@ -229,42 +236,6 @@ def to_group(doc):
     for cat in {e['category'] for c in cases for e in c['events']}:
         totals[cat] = sum(1 for c in cases for e in c['events'] if e['category'] == cat)
 
-    # Preserve audit provenance supplied by standardized packages, including budget
-    # decision anchors. These annotations are evidence, not experiment settings.
-    by_run = {r['run_id']: r for r in doc['runs']}
-    has_audit = False
-    for c in cases:
-        run = by_run[c['run_id']]
-        aux = (run.get('configuration') or {}).get('audit_auxiliary')
-        if not aux or group['id'] != 'persistent':
-            continue
-        has_audit = True
-        c['instruction'] = aux.get('instruction', c['instruction'])
-        c['decisions'] = aux.get('native_model_decisions', c['turns'])
-        c['turns_basis'] = 'model_decisions'
-        c['trajectory_stages'] = aux.get('trajectory_stages')
-        c['submission_version'] = 'budget-v2' if aux.get('budget_review') else 'protocol-v1'
-        c['note'] = (aux.get('budget_review') or {}).get('adjudication', '')
-        c['metrics']['lowerBound'] = [FIELD_TO_KEY[f] for f, status in run['metric_status'].items() if status == 'lower_bound']
-        c['counts']['view_motions'] = run['metrics']['view_opposite']
-        c['counts']['view_same_motions'] = run['metrics']['view_same']
-        original = {e['id']: e for e in run['events']}
-        annotations = aux.get('event_annotations', {})
-        c['counts']['view_episodes'] = len({e.get('gap_id') for e in run['events'] if e.get('gap_id') and annotations.get(e['id'], {}).get('view_type') == 'opposite'})
-        for e in c['events']:
-            a = annotations.get(e['id'], {})
-            raw = original[e['id']]
-            for key in ['subcategory', 'related_event_ids', 'metric_contributions', 'trajectory_stages', 'view_type', 'budget_review']:
-                if key in a:
-                    e[key] = a[key]
-            e['gap_id'] = raw.get('gap_id')
-            e['media'] = raw.get('media', [])
-            e['turn_basis'] = 'model_call'
-            e['view_motion_turns'] = [a['executed_stage']] if a.get('executed_stage') is not None else []
-            e['evidence'][0]['turn_basis'] = 'model_call'
-        c['submission_events'] = run['events']
-        c['artifacts'] = run.get('artifacts', [])
-
     values = [{'name': k, 'value': v, 'known': v is not None}
               for k, v in setting.items() if k not in ('setting_id', 'unknown_reason')]
     converted = {
@@ -295,6 +266,11 @@ def to_group(doc):
             }.items()
         }
         first_aux = doc['runs'][0]['configuration']['audit_auxiliary']
+        if first_aux.get('review_completion') == 'pending':
+            converted['audit_completion'] = 'pending'
+            converted['submission_links']['coverage'] = 'submissions/semantic/review_coverage.csv'
+            converted['submission_links']['review_metrics'] = 'submissions/semantic/review_task_metrics.csv'
+            converted['submission_links']['completion'] = 'submissions/semantic/completion_validation.json'
         converted['methodology'] += [
             first_aux['budget_interpretation'], first_aux['turn_definition'],
             first_aux['action_definition'], first_aux['frame_mapping'],
@@ -332,23 +308,93 @@ def to_group(doc):
                     frame_end=annotation['frame_end'], tool=annotation['primitive'])
             case['submission_events'] = run['events']
             case['artifacts'] = run['artifacts']
-        converted['totals'].update({key: sum(c['metrics'].get(key) or 0 for c in cases)
+            if aux.get('review_completion') == 'pending':
+                case.update(audit_completion='pending',
+                            review_coverage=aux['review_coverage'],
+                            previous_metrics=aux['previous_protocol_metrics'],
+                            note='阶段性结果：三路全程观看及18项视觉指标待审核。旧版局部证据保留，未作为完成结果。')
+                case['metrics']['recoveryOther'] = None
+                case['counts']['view_episodes'] = None
+        converted['totals'].update({key: (sum(c['metrics'][key] for c in cases if c['metrics'].get(key) is not None)
+                                         if any(c['metrics'].get(key) is not None for c in cases) else None)
                                    for key in ('emptyRetry', 'drops', 'emptyRegrasp',
                                                'dropRegrasp', 'directAttempts', 'directSuccess',
                                                'tableAttempts', 'tableSuccess', 'supportAttempts',
                                                'supportSuccess', 'viewSame', 'viewOpposite')})
-    if has_audit:
-        converted['submission_version'] = cases[0].get('submission_version', 'protocol-v1')
-        converted['submission_links'] = {key: 'submissions/' + group['id'] + '/' + name for key, name in {
-            'bundle':'submission.json', 'csv':'task_metrics.csv', 'xlsx':'metrics.xlsx',
-            'validation':'validation_report.json', 'budget_review':'budget_review.html'}.items()}
-        budget = [c['configuration']['audit_auxiliary'].get('budget_review') for c in cases]
-        if all(budget):
-            converted['budget_summary'] = {field: {
-                'confirmed_sum': sum(c['metrics'][FIELD_TO_KEY[field]] or 0 for c in cases),
-                'known_runs': sum(c['metrics'][FIELD_TO_KEY[field]] is not None for c in cases),
-                'unknown_tasks': [c['task'] for c in cases if c['metrics'][FIELD_TO_KEY[field]] is None]
-            } for field in ['abandon_near_action','abandon_near_turn','abandon_action_limit','abandon_turn_limit']}
+    # Preserve the completed log/image fallback audit across CI regeneration.
+    if doc['runs'] and all(r.get('configuration', {}).get('audit_auxiliary', {}).get(
+            'schema_version') == 'robodojo-log-image-audit-v3' for r in doc['runs']):
+        first_aux = doc['runs'][0]['configuration']['audit_auxiliary']
+        converted.update(submission_version='robodojo-log-image-audit-v3',
+                         audit_completion='completed_logs_and_images')
+        converted['submission_links'] = {
+            key: f"submissions/{group['id']}/{name}" for key, name in {
+                'report': 'report.html', 'bundle': 'submission.json',
+                'csv': 'task_metrics.csv', 'events': 'event_details.csv',
+                'audit': 'audit_data.json', 'coverage': 'review_coverage.csv',
+                'validation': 'validation_report.json',
+            }.items()
+        }
+        converted['methodology'].append(first_aux['budget_interpretation'])
+        for case, run in zip(cases, doc['runs']):
+            aux = run['configuration']['audit_auxiliary']
+            details = aux['run_details']
+            case.update(decisions=details['model_decisions'], turns_basis='model_decisions',
+                        trajectory_stages=details['executed_trajectory_stages'],
+                        trajectory_records=details['action_records'],
+                        review_coverage=aux['review_coverage'], artifacts=run['artifacts'],
+                        note=aux['coverage_note'] + ' ' + aux['budget_interpretation'])
+            case['metrics']['lowerBound'] = [FIELD_TO_KEY[k] for k, s in
+                                            run['metric_status'].items() if s == 'lower_bound']
+            case['counts'] = {'view_motions': run['metrics']['view_opposite'],
+                              'view_same_motions': run['metrics']['view_same'],
+                              'view_episodes': details['view_episode_count'],
+                              'view_decisions': details['view_adjustment_decision_count']}
+            for event in case['events']:
+                annotation = aux['event_annotations'][event['id']]
+                event.update(audit_annotation=annotation,
+                             chain_id=annotation.get('recovery_chain_id'),
+                             related_event_ids=annotation.get('recovery_failure_event_ids', []),
+                             gap_id=annotation.get('episode_id'),
+                             view_type='same' if annotation['category'] == 'same_arm_view_adjustment'
+                             else 'opposite' if annotation['category'] == 'other_arm_view_adjustment' else None,
+                             uncertainty=annotation.get('uncertainty_reason'))
+                frames = annotation.get('video_frame_interval')
+                event['evidence'][0].update(frame_end=frames[1] if frames else None)
+    # Approved video audits retain independent log and video coordinates.
+    # A decision window does not assert an exact video-to-decision mapping.
+    if annotations is not None and coverage is not None:
+        by_run = {r['run_id']: r for r in annotations}
+        for case in cases:
+            source = by_run[case['run_id']]
+            events = {e['event_id']: e for e in source['source_events']}
+            views = [c for c in coverage['coverage'] if c['run_id'] == case['run_id']]
+            case['review_coverage'] = views
+            durations = [v.get('duration_seconds') for v in views]
+            if (len(views) == 3 and {v['view'] for v in views} ==
+                    {'head', 'left_wrist', 'right_wrist'} and
+                    all(isinstance(d, (int, float)) and d > 0 for d in durations) and
+                    len(set(durations)) == 1):
+                case['video_duration_seconds'] = durations[0]
+            for event in case['events']:
+                annotation = events[event['id']]
+                event['audit_annotation'] = annotation
+                lo, hi = annotation.get('decision_start'), annotation.get('decision_end')
+                if (type(lo) is int and type(hi) is int and
+                        0 <= lo <= hi < case['metrics']['turns']):
+                    event['decision_window'] = [lo, hi]
+                event['position_source'] = {
+                    'decisions': 'event_annotations.json',
+                    'video_duration': 'coverage.json',
+                    'video_time': 'submission.json',
+                }
+        converted['submission_links'] = {
+            key: f"submissions/{group['id']}/{name}" for key, name in {
+                'bundle': 'submission.json', 'csv': 'task_metrics.csv',
+                'events': 'events.json', 'validation': 'validation-report.json',
+                'coverage': 'coverage.json', 'annotations': 'event_annotations.json',
+            }.items()
+        }
     return converted
 
 
@@ -378,7 +424,13 @@ def main(argv):
             print('  ✗ ' + b)
         return 1
 
-    group = to_group(doc)
+    supplemental = {}
+    if doc['runs'] and all(r.get('configuration', {}).get('audit_auxiliary', {}).get(
+            'review_method') == 'sampled_0p2_continuous_actions' for r in doc['runs']):
+        for key, name in [('annotations', 'event_annotations.json'), ('coverage', 'coverage.json')]:
+            with open(os.path.join(path, name), encoding='utf-8') as source:
+                supplemental[key] = json.load(source)
+    group = to_group(doc, **supplemental)
     out_dir = os.path.join(board, 'incoming')
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, group['id'] + '.json')

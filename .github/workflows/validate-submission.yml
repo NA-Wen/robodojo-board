@@ -6,6 +6,12 @@ on:
       - 'submissions/**'
       - 'validate_submission.py'
       - 'submission.schema.json'
+      - 'ingest_submission.py'
+      - 'test_log_image_ingestion.py'
+      - 'test_semantic_positions.py'
+      - 'test_positions.cjs'
+      - 'charts.js'
+      - 'build_api.py'
   push:
     branches: [main]
     paths:
@@ -26,6 +32,10 @@ jobs:
           python-version: '3.12'
       - name: Validate shipped example
         run: python3 validate_submission.py example
+      - name: Verify log/image audit ingestion
+        run: python3 -m unittest test_log_image_ingestion.py test_semantic_positions.py
+      - name: Verify event position charts
+        run: node test_positions.cjs
 
   # PR 里改动的提交目录逐个校验，任一不过即失败。
   bundles:

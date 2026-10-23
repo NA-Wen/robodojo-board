@@ -1,0 +1,697 @@
+{
+  "group_id": "semantic",
+  "source_audit_sha256": "74ae5ad870a214b8ef7cd291c1a80c90f24bba02d658fdaaf0957ab36cf1f033",
+  "source_main_review_sha256": "d48f3830933acbadb429e3d4d216afffac524e204a5a47058608c9e3307ba44f",
+  "previous_submission_sha256": "b7e5bbef588fbc3c2e90b05293e6b466fde1d7e0e43436f87192f57a31dd3868",
+  "runs": [
+    {
+      "run_id": "semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-align-blocks-cap20-20261019-2151-align_blocks-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "df364b32828088a8b18a5889f418f21a93059d00ff508a6b65b94d5d4e5640a9",
+        "provenance.json": "74cb134d94f34457676f8a697984cd5bdc72bcb892322fe2dfd121412855dfdb",
+        "result.json": "8d4afdb72e98cdaba7826dbca7c9ce6846a2216f8c7a5849c54f16f0e67d8630",
+        "actions.json": "250672842176a3421b13dd825131ab2da30f89c0aa6a203c8a9ff36384c8d1de",
+        "manifest.json": "d2c2f73b792e0cb3d7e6657fecd0ba9cbeec7946b030e0b05f405cccd67857e7",
+        "native-terminal.json": "0c88b2707b6a14beebe784f6227a2fca8cf5753eea387ec2b92e72f7ccf14591"
+      },
+      "audit_result_sha256": "cc35f167843623363da0978b2ec5812779d60aae6532fa14c3ddb917d3aabefc",
+      "approved_evidence_fingerprint": "493a3c4b33ddfaba36037c7f874993ec9564004d7f68f0d228276496c1b6daf8"
+    },
+    {
+      "run_id": "semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-arrange-largest-number-cap20-20261019-2151-arrange_largest_number-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "8409cb83cb7851d1be93d1efa06483b70a7a270b568cd8f6398e134ea98bbf8a",
+        "provenance.json": "12b0602ea1c46d719dd0d7488bc90878107e7156dcc50a606e2bab4cad95ef86",
+        "result.json": "bc2a1f61f9d48341ee2af1f9dfda8c2c5efbd5061c15e5083134200aaecb2b48",
+        "actions.json": "dc19dae57060387f3ea01d318add946d438161324a6ba6b75c45cc1b3d27e40c",
+        "manifest.json": "1d7e02110983c265de5026fa0c7c29d08cc56f407defdbde45601ff8a3ff5b7f",
+        "native-terminal.json": "917e1cfa167f170a76cf66cc2634939c63124b7a46f40bce2cb1bca4e879fe5b"
+      },
+      "audit_result_sha256": "c9587a438274c845b3c9d361ff446db2a6fc18f9ac1161f195cfb6e17d830363",
+      "approved_evidence_fingerprint": "4cbfb4819eef892987eea51b0e9843c47a7bfd14138da1853b2c9c0e63ec0d45"
+    },
+    {
+      "run_id": "semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-build-tower-cap20-20261019-2151-build_tower-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "e61cbb6fcf3c0d7521f2cd296b876fd4db04ae13f6ca322bda430dc53b58e74c",
+        "provenance.json": "e4fe829339f7c22dceb14faae13aed41924cc0a45abee142cba1976db7dd5a96",
+        "result.json": "86fd93a697ba52f9dfb72db32d34bad67470ca916e8320655baaf633d84e2aee",
+        "actions.json": "14f8a500a7895302f0f37469ce228d5a658a4aa3ede2d5a3a3ef633fffda712b",
+        "manifest.json": "ed09eab309aee2978823730f01d55d121816df5214c51ed51225b79c91b9a0a9",
+        "native-terminal.json": "5da1ba5051baeea4ef38963d89039b6ba403c97d6af8316caf37a962fa38f368"
+      },
+      "audit_result_sha256": "2d02cc7aaf72add1a8f8aaa127441c9de05a86a7a9f43e189538cc03ed02abb0",
+      "approved_evidence_fingerprint": "57684b92e09227cef4958105a55ece1269a4977bd21c0cd87fe1e0b799662bb2"
+    },
+    {
+      "run_id": "semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-classify-cap20-20261019-2039-classify_objects-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "9e63c805fdc66d92e2ae21c585e2cc7ce2d82f755421fa3c0481be3ed30b745b",
+        "provenance.json": "a185045719d73f5351f9c19b4f63e1919bc5939be9342246fbe725ab3d33e789",
+        "result.json": "d5502b3ed8699843ee50a3c90ee220f2854e0d77de4aca903923db3f1ef0604c",
+        "actions.json": "4dbda6299c491981e1cee1c259d513cf66b37b94f7697734ad9e8e8811b8d624",
+        "manifest.json": "77aab50d81e3ba71c1d1e84310c307f5a3e778df5069c7cfb5b67bcb4f57642d",
+        "native-terminal.json": "b35ca9477c190a90c5b4209514642a8d7fbab12adf17cd9a02c4fc38abe5c86e"
+      },
+      "audit_result_sha256": "67d709e1d216a7747c505698806d30be6a2f132d043c2459c27cbee2c4597bf8",
+      "approved_evidence_fingerprint": "e41fa5144afd4c481d57e083c90e24544f1bf502ac9a7d97dac71ff0dd3769ca"
+    },
+    {
+      "run_id": "semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-classify-objects-by-language-cap20-20261019-2151-classify_objects_by_language-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "22a8956b82bbe74e44fc52f5073958dc72cd595b0590217b7e44054f5082eedb",
+        "provenance.json": "2a35947d996ea1f1d01695515f6cb7da4641c5d2e1e14fe03647c7e1a2eba1ab",
+        "result.json": "5ee8eccf52f56e62fae714fa976ab87ece34e40414ff50567cf1611bec946150",
+        "actions.json": "bba03bc4e56b280d95b5e87753fd0053d485c766608d801651027e1dcdb2f7e2",
+        "manifest.json": "8b1da4c234b2a93e958ac1005872d27ad4453c76e0316e3590d847cc2de72567",
+        "native-terminal.json": "c3ea7cb7efab8b842a87d12aeb7e457aca3095cf0017f80852950de9f175b74e"
+      },
+      "audit_result_sha256": "4deb078405b53eb7ac8a72cb1b02d4555789200cede5f661c4acd757066116d7",
+      "approved_evidence_fingerprint": "606985fbadc19b76ba56a58e629c0c62d23222d79baf4fa225e9e6fe7bfab4fb"
+    },
+    {
+      "run_id": "semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-cover-blocks-cap20-20261019-2151-cover_blocks-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "87142720a7a5e857a1ce1ec8e627f738d47f83e9286e5e7782989a20f504c164",
+        "provenance.json": "26a63c9c116fbd46f426dc3cb77070ecbbe73e615cabedbd8d083939fc424390",
+        "result.json": "c516b1446b3192f8b55189d8b1ba079f4c0123d43989edb79c63cc1e10ed3f1a",
+        "actions.json": "2ee2168274d713fc9604867f91d068bf9c6c9a92b1160cb5736eb73489a50f22",
+        "manifest.json": "5abbaa3b6c21605655134b7395b7b4dbaef1443907be910be2021edacc0eb273",
+        "native-terminal.json": "9a1b7d59d5fe6c0d1197a7e5d0b093d3f74908dfa6eef13d5244b3007e6cd874"
+      },
+      "audit_result_sha256": "f02cdac5b081c5e1797b719dfa18c7d9782532fcc34910d40cbdf7b5bfa1c831",
+      "approved_evidence_fingerprint": "b21f38403c71f0813b221d2e1e9f441967ed8919e0e2603921eb55150269ccef"
+    },
+    {
+      "run_id": "semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-coin-cap20-20261019-1955-deposit_coin-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "b6a0daafb710a02c68063fc315137405e80b535b843c8c1192428cd155c78024",
+        "provenance.json": "e5659bdb79e87404a46942609b536aeb4247bb9677dea7027443e94c4d72327f",
+        "result.json": "e64c83364e326dd2cd67c2ff74e5b764bbe985f425ba0f2302198b105fef85cb",
+        "actions.json": "0aa4f2fa65c095ea460a84e06931a54d4fd10509d5091ea73e19a786c051f869",
+        "manifest.json": "9b38ce1f81887bf2f96a7501eba380d60e063265c452988b0e53c60196a14632",
+        "native-terminal.json": "122b0a17cebf558bc752fb2ff9072b17669055f8988053f4999329a181ba268b"
+      },
+      "audit_result_sha256": "b26b5fca9280d10879b5a60158fbdac518c3ff05ed508f0b2c2bcc735ffceced",
+      "approved_evidence_fingerprint": "058ee1269df94eee4a32bb8f5b7522afbae7ac73f6a407e051811dbd3b7474fc"
+    },
+    {
+      "run_id": "semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-fasten-screws-cap20-20261019-2151-fasten_screws-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "f02ce98f7b8475b58e2ea5e11e2aa3dcfc338dbc125ecf9eb12246ba68ab7605",
+        "provenance.json": "b0b7b5e7e08df6b4cff8fccacf40f5ac95576275d1a41d1b887a39e0ff32d221",
+        "result.json": "4c7ed851eea0cbfb26d3ca2d21f9b692dffada342c2a884d748aae042d8866b3",
+        "actions.json": "866e909a29ece945498c1f0e1c787eac0f0e8587df2bb132c31ac81b88a3ce41",
+        "manifest.json": "082cbd2f6fb17bbc97a7c7c12480d5d1fcf04f5b7aa23c1c83caba7737b42fb7",
+        "native-terminal.json": "6fc991bbd0cced0f6bbec2da16d10187217b9e0347419f8add0b50a1ac04ed60"
+      },
+      "audit_result_sha256": "f248d319ec4a190702001a3f484cfdf6048c69689346af80687b613b691008e7",
+      "approved_evidence_fingerprint": "b36b61f0fc0f80df0974226ebd0094bff91aafc89c9589f3426d1fb016070451"
+    },
+    {
+      "run_id": "semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-fill-egg-holder-cap20-20261019-2151-fill_egg_holder-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "4c5492456849c767d3a7857df91078f0c273cb53358b2e4c6581d8e3068a704c",
+        "provenance.json": "0121d0127cb2d53bb82de3064b73352f7a98bea40439d0570ec56d4423fec642",
+        "result.json": "0463a28bafacbc8e79a9ae062e02b80edd50f070e52638035907c8b830e9841e",
+        "actions.json": "9975ab5c2c758a35e0dd59ada9e2cfea0db656a2e5c75e85ad41e8252780cd43",
+        "manifest.json": "2dd084cf22dc7755ee2ea1a5e45595f7b4bf67bf2cdfb89e224f9df3da3a1218",
+        "native-terminal.json": "eb88ff77fcb85eb5bfb5defb26f5b0dadce6fa5bac01fcb517e92f16435f7d4b"
+      },
+      "audit_result_sha256": "332e07ef519251027be3dfa99371b40f8c774e2017f771669eb662043bae380f",
+      "approved_evidence_fingerprint": "e80199932dc10604de1ef1f579a37ef4a1089e8a2765b04dd196dc994cad062f"
+    },
+    {
+      "run_id": "semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-fill-pen-holder-cap20-20261019-2151-fill_pen_holder-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "f6ecfaec02ffae18030475ca43d3f40a6fec354d5060d2ed12b728f523e034f3",
+        "provenance.json": "fae7107539eda2d9243d18fcf4de1cb11c65a2fe15f248cf0ad7dee6cbfe91e7",
+        "result.json": "0cbd1ab1728c8f35fe0bcc3e2b06f6f236450c3f1e3dd10991c21e95c9dcadfb",
+        "actions.json": "720d1ff5707452be23bd5eb31ffcfe1e981b46c15f59dabd0e5f1f102689d36c",
+        "manifest.json": "4591718e4f9d61dd7aeb2e02a758048432f72f13d3995d49c13374207f23a27d",
+        "native-terminal.json": "3931fce20b1f8d2ac4cb966b3b976ee8a146b648bb74099caed1a433c9598169"
+      },
+      "audit_result_sha256": "1b877680fc58e5ddec8ad8c07bd9dbe83ecb2a4d6e5888f412974072f58efafd",
+      "approved_evidence_fingerprint": "97bad0f6b8dce164379d030036dcbfb468bf0cae8b71b0b88583c03ada25fb50"
+    },
+    {
+      "run_id": "semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-fold-clothes-cap20-20261019-2151-fold_clothes-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "e30d0e38dd52c6ff094036983614f97030d02d3778d9d4abdc6557c6f92a0a08",
+        "provenance.json": "48f449f9c4547232a51abb966785bdee7205136c7a52b42bfa06551062ff9778",
+        "result.json": "ca4e27b30c99cbd8a6e138f4f228a58d6230f1df6376c3765b3b9455e1f936d5",
+        "actions.json": "6d7ef49eb659613cfa54febb5fff8951113d2a08b21b568679b6a2f811a2395e",
+        "manifest.json": "28cb6d0e0b5f3c5d7c904ba899ccd9aa45bef43765de83637f3f977f9fc6ab81",
+        "native-terminal.json": "b6f1195220cf86f52fe378a579278a41cbe7f32c88247d44da771c18df947ced"
+      },
+      "audit_result_sha256": "66b262e58121a45dee0a2d915ed7538e958f533a3145673d1719e2dc7be42ca0",
+      "approved_evidence_fingerprint": "974c738c72c065f639f2b07ccb25b7640f9f3ae7f2a53b12b0be6c3e4c15e4c5"
+    },
+    {
+      "run_id": "semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-general-pickup-cap20-20261019-2151-general_pickup-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "fe49454c0cb1849a925676052cf9636d22928cda7b87a11ed90929e7d4b9d19d",
+        "provenance.json": "a85d4bfb14abce2e594ab49fcc12606538089f1f75d233746b2e58bad1cd6564",
+        "result.json": "5ca1b660a3428c7b580d7b923723b331c37b6788e108d2e06ca9c4678c953610",
+        "actions.json": "00f50bed838ced3019327948ece18de72c7df9a2528e6a0989ff5b4c76811c73",
+        "manifest.json": "6a3c75f6e21b2ea28dd8b3e8ab7e0503b3b9ca22d15aaa6128099ecefe5e0728",
+        "native-terminal.json": "654c4d0218377e8e319db83a0140a38e4e82f1ee80ae2f3f09000b0f2715c45b"
+      },
+      "audit_result_sha256": "e138633e3d40396656a62693684b30b58647e6031a9d78fdf30c6d0a85fcc716",
+      "approved_evidence_fingerprint": "95f1adaaf68e8467e23bc85f23ea26e0f36e0710b8ab3259d5ad723612483216"
+    },
+    {
+      "run_id": "semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-hang-mugs-cap20-20261019-2039-hang_mugs-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "04cc53a0cd904cd9eec57036aa4b61cf9ce7fd76be5d419ffcbff7891caa588c",
+        "provenance.json": "a44e44af8be3dc647638bfa019dfa7f40d78f90a3d23fb7d756ebbdf192fd7db",
+        "result.json": "f77eb591b88cd26a47bafe14fea061dff73acfef703777a62ecb56abb3df95a1",
+        "actions.json": "de7dd4bf6df4f64dbe78b676a2f7b986aae9f1a4ce7550bffd906b788e935bc7",
+        "manifest.json": "7a96ebfe3631f13593e6829eb1eb128c6b8bc6b45c3a5eaa8b107a94b32429d3",
+        "native-terminal.json": "4cb1ba013b8cd998b3052a40c071264e29aeda299afc8c3723911bcad8b7d370"
+      },
+      "audit_result_sha256": "169c422899acedeea8ae09a2bc772a2194bcb0a24d704b50f0bd3320eee9749a",
+      "approved_evidence_fingerprint": "fa1efa3d43225f415d29918a5a41f8db95f546cf2af8c52334e24876ee8e4c3f"
+    },
+    {
+      "run_id": "semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-imitate-sorting-sequence-cap20-20261019-2151-imitate_sorting_sequence-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "7a99a51ed652368112c67ba9bd7c17a7c2f2deabc4869702b855218e86d8ae43",
+        "provenance.json": "3689ca87c142754097d26e4d25b1daaebb09d45cf0b51aed324caea0fd57360e",
+        "result.json": "1ebcf03e7a3959bbef78a45576db5a2a396233bb22942882ca48eea3b43a5a1c",
+        "actions.json": "fdb4a97dbba4bc55148f16f8a1f755ad1a614bc920c3da2b43a6e96d1082b20d",
+        "manifest.json": "2c04af69030de34bc450a68e0397a60979954665674b13989e510013af706818",
+        "native-terminal.json": "50ec5e8d2f60228193fe9686607e3b5198bfa70080163e517c65dfbd3235893b"
+      },
+      "audit_result_sha256": "bac38c4f97c51a6f47a353fdb29956efd22adf24aaeeb1bed5924fb3cf3f5323",
+      "approved_evidence_fingerprint": "15ce58a334f2913e607124704ddbc2d38353880b6faf53ba9389b0ffbd5e3af6"
+    },
+    {
+      "run_id": "semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-insert-key-cap20-20261019-2151-insert_key-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "127c26e5d90810291da78d53cfbe2fe5dc3df168fb6c274a7c0a5b0a29291e41",
+        "provenance.json": "a646e2b95d9327cad1591a035b5c1818ed0cc59af5dd7167fecf119c2fc29c08",
+        "result.json": "304c690a984dc8bbb8169d6d037990fac96d96a0a786953b28010f4b74397279",
+        "actions.json": "110ca44b6fb585ce2a9e9a3844a12185bdd87ab1d92688adf99dba04f29c1517",
+        "manifest.json": "e14dbf30c9fdd09b1a07f298c38ae9d739a35c2398d736dca9a1ff48043cfd6b",
+        "native-terminal.json": "c8cab1709aca85f2c1527889b6cfa9553a39d6ff87c2e1568a8c5ceea19c5e6f"
+      },
+      "audit_result_sha256": "9fd11d29ca5816072c0dfd10b74df69d9740698d50cb6285adb377344902ac00",
+      "approved_evidence_fingerprint": "d162a22eb855f34af6b691baef3b252a837e6b33474522a612e8be1c666b6b60"
+    },
+    {
+      "run_id": "semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-insert-tubes-cap20-20261019-2039-insert_tubes-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "3295401785ec304c194f8ae690309ef94013d5d3be70a5bcc8efd96c1b2e5c41",
+        "provenance.json": "db9a1adb7427c28dbbf62ba9f2db9f7a5cffcb33bac84058d27906e1878ce21a",
+        "result.json": "4e7c490b2349532f8fe488141da77728ee7b9cc4faf42d9b2aa24d0f4c8cf802",
+        "actions.json": "6b447eb01529478d6477900ce18fa6027f78d09d3fd27719fd94fdf06b5d32cc",
+        "manifest.json": "ef91487bdfc93f84f2b3b2a368d9867ea190dc778616a3da603d42871070d4ae",
+        "native-terminal.json": "5df84de735a58fbf7415a584c20df17c1e0d12fc38800a38dd04c0fcd15628c4"
+      },
+      "audit_result_sha256": "ba283eab39698842f127188c4b09b68fd404e573887679563ce32afe27a0ca5a",
+      "approved_evidence_fingerprint": "9d3e803993c6b43281e119c4e8f93d2b4376985a3380a4889906bac68e155145"
+    },
+    {
+      "run_id": "semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-make-kong-cap20-20261019-2151-make_kong-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "d4818cc02a9dd8dc238d12e073a409980f96447ed66ab0615ac3be4b9fd62595",
+        "provenance.json": "da8b234902573f39880f903775c141492eb1e4f4a8bccb7e07c66895358fbd46",
+        "result.json": "f5991deb4ca3f31a94db5dc89bd8688180514321b7b41508f02a430ab7ae3900",
+        "actions.json": "2f9930bc85c2a577c2273145f31d34891714a1e6a1aae525c7cb4162790c518d",
+        "manifest.json": "5a78eecbca7f56f5f542158128e134e3f40dae69498cd7eaa963f9193bf208db",
+        "native-terminal.json": "905e0dde134c6737d1091ba539cda86d373d1dcb5bf5ff0b93119bd40eed53a2"
+      },
+      "audit_result_sha256": "7a3d848a2c7c8ce1c5806b45c1c45c990aad36bc5f8ad2e18b6c7bab5c4f81de",
+      "approved_evidence_fingerprint": "0e8b5d407520a0074481df47052f27b04049a8ca658174e1ccd650290fe322d7"
+    },
+    {
+      "run_id": "semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-make-toast-cap20-20261019-2151-make_toast-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "2839c65d042cfcd89b9a39e8517b1ed50acd9978dcdb0815bc0f2a6d94ed8667",
+        "provenance.json": "9a8a99432c35015a6803521fc731aeba71e201eca7fbc4bb1b213f139054799e",
+        "result.json": "3dd2fe329c0f05511ba4cde609e0aa0804fbab409be5071b741d176d04fd8081",
+        "actions.json": "f58d918e4e3d127190b7c8a996203b50cc1386419afbf105c1bf5e96f2253fec",
+        "manifest.json": "35a475c933ba8b8321bb23ac63109afd9dd0619cc2388a280b8fdb8ae7291dd4",
+        "native-terminal.json": "15df036433ba639e7a3d5a6fef655c546fdc636d9fedc767e8ed12da79d83568"
+      },
+      "audit_result_sha256": "83d968860e83c89e8ae4eecc233addac78aecde378ae7574b25023cf9f41fa27",
+      "approved_evidence_fingerprint": "b84514e8cf5b345d16ab43c029be4e6b705b131ced93e75e1099bc0d7a56a3f6"
+    },
+    {
+      "run_id": "semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-match-and-pick-from-conveyor-cap20-20261019-2151-match_and_pick_from_conveyor-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "d379e03c1637dbc500f3158f0e825b61eae6ea769e4bf66226e6a048a5a48e99",
+        "provenance.json": "b89da83875d6c872e7748e6523ab3470cbcb14260cb0135cc6e1443a2103ddcf",
+        "result.json": "c5a51d3482e92fbf3bbc2c3ee7b5f2d4a411afbf966c1c348455286e7ecd1b16",
+        "actions.json": "d51f296755f8869ea80d71a77846cec352224460cc7f4f0752609ea6cf492e9d",
+        "manifest.json": "2679a6964004aa701ac977ec9ed6258688fe70d0e6f8d91a55d0917f54f353c2",
+        "native-terminal.json": "1e85f431cff90921ba9aa7a70d227465ec14114f420d3a39053baa6b3d0ae577"
+      },
+      "audit_result_sha256": "947eb43895360944beb7a4589263d96479edb4295a91ac467b83fb6f68d09be0",
+      "approved_evidence_fingerprint": "b95e09535fcdf90adc3edb48023a0fcecec6825c80b4cca3b612be79103b1de6"
+    },
+    {
+      "run_id": "semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-organize-table-cap20-20261019-2151-organize_table-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "6f91971591834e4e74ccd1456a48ea65bf4d1146c5daf9a0c0b587486a42f04e",
+        "provenance.json": "072a318edeb1f19f236ab3e7903869ddeb78c96b2bff07d8ad41441a3579e8f7",
+        "result.json": "6194c1f9d0849ea4e230d7728cc8e8e2a399ab21569571d10d74a639bd789b5e",
+        "actions.json": "e02832dc76f093c6186c153fbd174fd9fcd4f85fc1f7e4aaf30e1f8befe1600b",
+        "manifest.json": "76b6e88ad54d2f610797dbd941a77d07ef00b68ba48d5d65917647cdf2382931",
+        "native-terminal.json": "6c50c07949b6d5c766a02e2fbd246837f41c7c0a4fa2c72a822d136d3f58d301"
+      },
+      "audit_result_sha256": "0fc183f4bac1e8c76c558047adfcab494f8e51d496f36345003c97e0605dd7eb",
+      "approved_evidence_fingerprint": "81d8174107279ca82df5dfe8b7608eeb2cb74b60f69c19fcef799d30b1eaaf88"
+    },
+    {
+      "run_id": "semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-pack-cap20-20261019-1955-pack_objects_into_box-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "062ecc126f0abcf47acfc3c79f35cf78ca9e83e7e889064d5a2d0ce682a13775",
+        "provenance.json": "534ea0bac8b863e8256a5a8da9bcd7c8c026eb6a737efacda7e6d0ea5deb8c8b",
+        "result.json": "3b290e2b3d573c87c5a9988a880ad6286f8f763df23c30858b049653f63d2637",
+        "actions.json": "194570e01c4d814a59d26bfca2e5c0ac1f6fa4596224870db3acba2340289506",
+        "manifest.json": "0b4899c7b8a67e6267f025ae637a091ee96b4598635d1654564d0c58be822cd5",
+        "native-terminal.json": "a1e967c85f68cbe9b5aa16395f32ec3a25ef9b82cc9a7d305d5252955a5179c1"
+      },
+      "audit_result_sha256": "4e7068c8ed57d4fb701e8011e0c19057160a3d2ce25b6801486498facac59f2f",
+      "approved_evidence_fingerprint": "c7c45b9619e769012499e68f2fb137c0accb37abd360bf95c3b0de1ae1d7cb3a"
+    },
+    {
+      "run_id": "semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-pick-from-conveyor-by-image-cap20-20261019-2151-pick_from_conveyor_by_image-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "e55f5b7698d687de2764ccccd87dd71b44576d4f0681fa3e492915b23dfb9dd6",
+        "provenance.json": "36147fd4837c90ec94fb41f98cb0feaab09d187dade34c4413b13995cc22e3aa",
+        "result.json": "de35b51f1a479e537f0bebcd423dea03dfc7bc8b9b9f3b680ac275f77908745e",
+        "actions.json": "eb3c2701981e55343bb8e77630f89eda7d8ce26056771f7bd4dc870dde2287fb",
+        "manifest.json": "eff2ef64b969f04db3d5e2f46a9175b57efe8035da01c9df683476f9c4bf7c4f",
+        "native-terminal.json": "8feb5b45ab8d9bffcae8680dbc60d9380498739a5e77002203a2a7af94db1cd3"
+      },
+      "audit_result_sha256": "3ad8c840f4bee42a50ac9ad2f4f498a0d1edea82e4665f7f00e9dde727a7f804",
+      "approved_evidence_fingerprint": "eac7482e01dac3fa54f3117256eff863f6d839b6ccc40e42b6d0a497a47fa5db"
+    },
+    {
+      "run_id": "semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-play-xylophone-cap20-20261019-2151-play_Xylophone-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "1c8edc3604563083e3206ead490fb0179ce43268294f63290b730db2d444a41b",
+        "provenance.json": "ba263c4aae8ee44b9d9972edd83cab0814b71603f2f2fd4eb3821dd50910f544",
+        "result.json": "985e98aa536861bff4af9c9254a61e54260f2c738e3c71cfe4a8543d2d8ade6d",
+        "actions.json": "b858335339174b3ed98256f6e4ff19ee388bac66d0633f1f6b4e17790df677d0",
+        "manifest.json": "1ded9fb4f1f91dafc470f7a9aba4f93c75e51e5cfee0e4e0965455b01912378c",
+        "native-terminal.json": "415f90fffede998bf12e92ab6cc55fb404cf34b8f4097cb604cdb812095a7570"
+      },
+      "audit_result_sha256": "cc4517ddea188fe428e636a204fba2b2637b275436df54b0025a28ae834c00ec",
+      "approved_evidence_fingerprint": "7c65c74091e3885ba5b3caf20afcc85be649f40fe993b403e1c661de16ed64e8"
+    },
+    {
+      "run_id": "semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-play-stacking-toy-cap20-20261019-2151-play_stacking_toy-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "33cf9d250fd5f09720c85af2263a7dc464dbf57823f0ab37906e0fbf3b62cf91",
+        "provenance.json": "7f104b3846871c3a26fe2c9624b2ad3299bdbdc0e05aaf112354c90ed538c5da",
+        "result.json": "00b50be56b8750804290d60fde556f1b7f6910458cde9052f528c11b3e4b49da",
+        "actions.json": "d2913bfe9d1cf5bd1b6f0a8831b9fe05d9432017fff1621cb14186db2647942c",
+        "manifest.json": "0179f5b044219bfe25783c5a50bc8ea4b8224578ab8ee3aada436ccc6ebe713b",
+        "native-terminal.json": "dbc0d7cf9cd91a8ce21902a1731a4dfd9b0b3e10d939b730a7975cce9a4f1da2"
+      },
+      "audit_result_sha256": "d6923c1edacba12360b8f714944d2532076a1157df89667df4719925fcb5c034",
+      "approved_evidence_fingerprint": "7c5e83a641b12a93bb9b79447544a12bd2c43b75c7b0c4b6e6882a89d989bd1b"
+    },
+    {
+      "run_id": "semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-play-tic-tac-toe-cap20-20261019-2151-play_tic_tac_toe-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "40f18b65b1ba86ab4cd4959520c82a546388701b9aa4470d96b3bd5f07de49b8",
+        "provenance.json": "6ba0589e620a2c9c861c275c3d68e41f4fa813467bb32754c8b3b91c1046631a",
+        "result.json": "845f1e8b3f3fff6492f633c51ffde5b4547f6ff67f68c2b872bc5efc155176f4",
+        "actions.json": "d5be8ce054686435566bd8271b2713426d3850b553c4c6af8b62c41985682f65",
+        "manifest.json": "2eb1dd2db49430ccaead8825ef454d546592f8570cbf2c537913b1a13f4a3297",
+        "native-terminal.json": "760353464bc4d8009a4e3542726bd5c51de063bcdbd71348ee2d562b021c508f"
+      },
+      "audit_result_sha256": "3d9dbe8a07c0b29576546db3e20d771e34741054e8dc76c8b310618dbf799ddb",
+      "approved_evidence_fingerprint": "15052283b9557b8804f2344a3e310892c7d634226ea73daeb5be136e32f5e66e"
+    },
+    {
+      "run_id": "semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-plug-charger-cap20-20261019-2123-plug_in_charger-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "60587e410dd88b8e4afd3093bf883275b9032c98c5741d6feaf8845fc9446302",
+        "provenance.json": "44d9629b26d7a820d0b4bf4f3f9a571aee155139161efd8c8bb6afee057a4451",
+        "result.json": "0048c41957e6974a80af09e8f8119a4c783df40b81ce98e827395f29d8e0b486",
+        "actions.json": "e7b0f2a6be0299b426a5177eae7c0977ef012b884f5ad30f308e7edc449ebd4e",
+        "manifest.json": "1817986aa16503b42875118a842a0bc0a1badfdc3265d98fe8c58bae7ddc86e3",
+        "native-terminal.json": "07add2fe3e62ef55f41f7f8d26b2e8c2b6e7c2b9964454c321c7c0d09f6b2247"
+      },
+      "audit_result_sha256": "98a687f085d350102ece1c351a5f9255e5d907ce4cb94e2eaf7c76422521e3d5",
+      "approved_evidence_fingerprint": "255c0e3d105b77d97991519ef533ac1eb60467938e045414285bb61c2cd5d00b"
+    },
+    {
+      "run_id": "semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-pour-cap20-20261019-1955-pour_balls_into_vase-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "187851587a1b0447a233ef654b34244259c3c48817bb020ddcb78400d2108255",
+        "provenance.json": "5ca8513fbdcb684805b0aa3b16fbe629c3bfecd6d2b069dcc07f0edb41a4a32a",
+        "result.json": "608848c31e9b8677f25861c88849d3c102bb45a99377e934641113ab05c58332",
+        "actions.json": "0b57d6d393a55f6251107d3b314cbd142f9c9d95915868dbe610d72e04e8359a",
+        "manifest.json": "d432e3472b054f149ad9d0d68daf3af0bf84f3432151df2d31138a3622314e3f",
+        "native-terminal.json": "77468cae21988e16a20b6591b02383c012565004bb3c42f450fbeb7b251b1b75"
+      },
+      "audit_result_sha256": "132bbff8ed604afd468da2a1db713bd01f05b9fe093222ebf849515243bdd58e",
+      "approved_evidence_fingerprint": "fbf3d92086e97a3ed54cafba55fcf906d7fde6b94e2edf466bb585445ddfff92"
+    },
+    {
+      "run_id": "semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-pour-by-language-cap20-20261019-2151-pour_by_language-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "12a76b1f092c6cd93c4ff8f3381a8d8bcc8f0eae795e3b0fdc0d9bf1f74b73c0",
+        "provenance.json": "9668f74884372fbec21fe529174c290e3fc8b43cd98ce458bef6d91498d44700",
+        "result.json": "a11bbffe27d1dcb7cbf070c79f25b9ffba6f34a402a9f8abb1643b4b020f79de",
+        "actions.json": "7fbfd0ce9f9b5e7ebca2f2d188beef6bb1de8f04d85dd1d0cefb814d38f047c5",
+        "manifest.json": "79d7d25b94b30af22011110f76707f40a5905afd09d9d3e304baa06c4864884c",
+        "native-terminal.json": "bfad7e39d75184aae60dff3973c403e877115a89d208548e6c4777e92c97def0"
+      },
+      "audit_result_sha256": "af189490fecc1f85368a5f6e75ef77f1a52ca7eee5a1a574442d7d37f185c123",
+      "approved_evidence_fingerprint": "46056d8a80bfc595f19ebc66c1d09a8048cf2b11c56d1d35ccc7fef1313513ad"
+    },
+    {
+      "run_id": "semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-pour-liquid-into-cup-cap20-20261019-2151-pour_liquid_into_cup-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "7f8b35cb0a79eacd5a03963c1497c65764cbe8ae3a068a9827e15ce3a1ab96dc",
+        "provenance.json": "bd3b80d3f6aeed70de3d1eec9d5ba4920d881f0b968787600584e45bb938ef1a",
+        "result.json": "625c65221a2d795e9659dc053f083b988ea176ed4e3c17af1d8e0bb6081f5839",
+        "actions.json": "ba35fbd3b0bfb7804b0afcf17a1546fdbf5ef354f5c252aaa51ef795ef3e536d",
+        "manifest.json": "7a2e52c70d86694cb4d87ad8db4c4ede01d78a8ef43233f3d8f75bb25f1477ab",
+        "native-terminal.json": "8f4b5df064ea3fee51885c4459ec46684f9304e3e50c20a1e3b7548192292191"
+      },
+      "audit_result_sha256": "32b2a8f35f04e974feb3f52d5b5baa3e55c7f423d8c587c042cf0d702afd0bcc",
+      "approved_evidence_fingerprint": "af6c2cc5661f1cac33343468008d61a58bb6bde9959105f2a41db3e0446ebcb1"
+    },
+    {
+      "run_id": "semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-press-by-number-cap20-20261019-2151-press_by_number-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "cb31305996711c9a15151dd74c12bd512e68b10e9dfc23db09ea59f434095bc2",
+        "provenance.json": "848e77f17da263775d84aa01a22029f075d1ba5a7cd3a8af5a941d7175a1febe",
+        "result.json": "5854f00baca610dbf89fb879006fde36f43260b6ed18bc76047b427cd829e2c4",
+        "actions.json": "5e9d6da336572513b55c02297684e3613d14333f6899825b45f550456613b9f4",
+        "manifest.json": "e23cfb9c1050eadc36dbc556afeaf20403b553181b5be72e908d5e3dccb8a556",
+        "native-terminal.json": "9644ddfeb012747a8d5890cbe6681217fadd45bcd1eb43717883b5a6635925eb"
+      },
+      "audit_result_sha256": "f229977c159f4f0c2fcbdc125de2e689f5c37593a96b0de7879a763a5b6b48da",
+      "approved_evidence_fingerprint": "35f062d371f080f68a42c10ecb1322f93dd69fb203b28635cce329613efa61f8"
+    },
+    {
+      "run_id": "semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-push-t-cap20-retry1-20261019-2247-push_T-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "456c9ce4fb79951c69de54d6ad56e1865a2e4887799f656ccdd8fd77ae27eb4d",
+        "provenance.json": "6f5536d5b92a70a2d377ffec0f9686f7d9ffaaaaeb41c106610fcad8e6881a9f",
+        "result.json": "37fa9a29b9dd9f8c6b4d87c27df712caad4554e192d5ee26286f9b0525357183",
+        "actions.json": "d534276e159cf1258d09ef8cc370107a5ad81114927136749a1055bc38bd2ec5",
+        "manifest.json": "cc0b1109cf86248ec1e190f6bb19223e183e7e1fbca2f819a0598777810db211",
+        "native-terminal.json": "7d9b39e8d1813932091354a470b20518ab2e1795312726cb4cb834881562a696"
+      },
+      "audit_result_sha256": "0fe7631152c05096c6e887ec23a3a8ac46dac334b118378b0e5f8af1a118c234",
+      "approved_evidence_fingerprint": "09c8d00dc0fcd62a10426f41cf234d10e2c01cb8a57363254578f9969aab551e"
+    },
+    {
+      "run_id": "semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-put-bottles-into-dustbin-cap20-20261019-2151-put_bottles_into_dustbin-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "6a777d908cfeaab7d242d70ac9fb07fe2caa98d5c82677acc0eb915872120e2b",
+        "provenance.json": "2312fdbf0019fad029e18b312e3af5f42e6b58f1aba705128c064a2b9b11f6c9",
+        "result.json": "fd725a3b06052e2a58202428c6e7cda57017d51259987a2baecd3a68fb22c5cc",
+        "actions.json": "9a5e91a1a919cc7017f1d2af69c9d0a609e0f674140c155f234c116e52a64365",
+        "manifest.json": "68c0f8bc3fe2dddbff9dc5033cb6e635efb61e7eba761a7c595a65dd9c5eacdd",
+        "native-terminal.json": "6ae107a39e7095b17a017b0aed495bfbef9ca583e285f0bf4879e6cfaaa3f223"
+      },
+      "audit_result_sha256": "beabca03839b6b4fab28edf99c4f49a63311d78b31e0fe54b23929096b23cf5f",
+      "approved_evidence_fingerprint": "b372b1fe5cc9cd058aedefc69dd6520728b14c0eea98746156504fbf60e647ca"
+    },
+    {
+      "run_id": "semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-solve-equation-cap20-20261019-2151-solve_equation-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "a1940095303ed38ddd4d86bc6157d4e950bd0a33accf3e675bc3e8d55558e620",
+        "provenance.json": "954dc26c4b6ce952d941912781788390033ae2f097d89a60c5f394d295411f18",
+        "result.json": "891c20501276ea9a3477cf26d781e234b3bcd0f71caa6f3457c7c51ad73146d6",
+        "actions.json": "28ad00b029b62aa5b6a7d7460f8030d50fc16fb7fe9f72299460c1d9933ea0f9",
+        "manifest.json": "ebb63044e93f186c7012e3d7837de06c0788db9e3ce2cc4876e69072dc5c532c",
+        "native-terminal.json": "090b6fc0fa72ffd067e38c764a8e161efcc3bede3f21fdce00a3e2904b85abfc"
+      },
+      "audit_result_sha256": "46ed72e620718d044a7981032ed7798eb5c0c807dd36375ff56df668c78cc10d",
+      "approved_evidence_fingerprint": "7d5c4a2cf3b25a6412cf17245801e2fa42a88bb0658818f2bdad3a4b782a0b4f"
+    },
+    {
+      "run_id": "semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-sort-nesting-dolls-by-size-cap20-20261019-2151-sort_nesting_dolls_by_size-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "2a943d1af3102bfacf7575fffa2baba1eddcb5be08f34a78c10b54993b0f18b2",
+        "provenance.json": "1e797f85e261d9dfa56ee15adefeb35421b3c292d37aa4f4f977cbcf76ad23c4",
+        "result.json": "b2e2f01789963bc3c632e1b3df62e81078cac0c01351fbeec5637ff5aa80cdad",
+        "actions.json": "af1b6c4d8aee4cc6f9074768dc8036da22d2a67d716e879569b1cc71265537cd",
+        "manifest.json": "eb53e18d7f37cfb76ba01def3e8a9f77fb67271f70a1e5d5b3b90ae9c198ae9f",
+        "native-terminal.json": "be402b3fe61596cfc7c7dc02116f70c04d3b843c371f9a5375ace3668ae0c3d2"
+      },
+      "audit_result_sha256": "ecd6f1b9fa677f452e20ec9833a20a3c5df6681144d4855ea19d21a027a06f96",
+      "approved_evidence_fingerprint": "9e7fc91427dd7c0aaeb1578cd0e09ce2b62eae11d0896e616971c75fb3ec05c9"
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-stack-blocks-cap20-20261019-2151-stack_blocks-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "fbeb5d02fea55270ce37790b39bf6f403a82ea7c9108440865e8b6e541e6cb11",
+        "provenance.json": "b6ee8488ee086d261d0aebf98ca34805b1a635f694afdcabf4414adcb88634df",
+        "result.json": "ba59290c6e806f2f6319cd0b9bb8b55347c0bf050e6901336a9ac66a8b273ea3",
+        "actions.json": "8738c7d0fc5dabefd32519d6d48b4b47f3cd61fe24e096145191b5759b41d96a",
+        "manifest.json": "9be209313e99c65bd78741753115cd341dc91a91fbcced743eb883c77cdf193e",
+        "native-terminal.json": "ed8ca198c097744d11e1f10bde78413e4fbd8cad9a3482672c81b34728125511"
+      },
+      "audit_result_sha256": "2e51bee45c2f748948034e352e230c8f3819a5fec2254f11bac61d8c7d265857",
+      "approved_evidence_fingerprint": "508cf36701a48b304c973d9e9f447f220dfde6bc3f80b4f16683e9b6bad5417b"
+    },
+    {
+      "run_id": "semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-stack-blocks-by-language-cap20-20261019-2151-stack_blocks_by_language-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "34aa5e82a460da603674047b26e215f6c85723785bd78b34360ee129c1e7e1d6",
+        "provenance.json": "1166167d796f62134d73fa9e1f37dfc76e8c285941da27767b0edecefbc3f754",
+        "result.json": "487cdecec5355ba5d5fa242635041ce0eb7feda7680ab43fb4f796036ceddca5",
+        "actions.json": "97185c6736e030bc1e182c6403d98a71e9ab1672cfc58108c553cfa11e357201",
+        "manifest.json": "5e0f8445629de1c155ba843a3ea058525408d6c06fad537c3f1dd88bafaa183e",
+        "native-terminal.json": "76452d3d79845de008bc544f79986b795be3ace1b91f2460844b4bc326fa6479"
+      },
+      "audit_result_sha256": "93626c491823e3eafe03d071276bf34b0224f9202f200d852854794a702eb907",
+      "approved_evidence_fingerprint": "65bff104abd05386d8e227eb55b023f649077d9c3b39bc3e47b9fa10777394eb"
+    },
+    {
+      "run_id": "semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-stack-bowls-cap20-20261019-2123-stack_bowls-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "567c27185c3a0c8f3e055516a5cf6ef003cc903da97f0c2ddf7566c872c62ff7",
+        "provenance.json": "8dc8ee2e67152027771692ca96c3fedc8a7e9ee6d6f1d7cf72242699b30b6ce0",
+        "result.json": "3355eb3b3257cfb46f0d7f99d0732e09a29ca01cfd6429b969de9330c345efdf",
+        "actions.json": "b07fc040db4a5a963c8143b34ab0531663ffc00de20f3963f27820987d0a2d81",
+        "manifest.json": "c3b89c552960a760259767ae986c94fa7f973be390636f87531b2947047f4589",
+        "native-terminal.json": "9457d793fa144933fd1c648ca5151be9895fdd2ebe99fd337d25976ecbf4d131"
+      },
+      "audit_result_sha256": "a9015f3b419c84bc229db2479901d6a25ef0f4e6972ac228fa86bbe61272901e",
+      "approved_evidence_fingerprint": "4344b3d003c58b60133c4c913b002bd1c7622dd53c0c75122a8bf8ca2a40df19"
+    },
+    {
+      "run_id": "semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-store-laptop-and-headphones-cap20-20261019-2151-store_laptop_and_headphones-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "b986651476f775739a6217318e51e5b3a90091864d1df081856d20eab8538493",
+        "provenance.json": "aff97c88cc6a7c58ab7e9c33e7d83199dd36d04908fe7a7fad8e0e05c6dd477d",
+        "result.json": "9d3d7cffe5ca8d7b8dc451d99df91f3adb40f4421427c7ff83d571b65aaf2175",
+        "actions.json": "7b9ba0cca6f4cf5d24fa8197517bdaed537234f75b8e05ddadb863147e7976b6",
+        "manifest.json": "1b499dd6388cd4e3ebfe2c50f72114ec7f22a44470a763104d2eca31453b5ec9",
+        "native-terminal.json": "534cfb3e551a3fac8b991664d9679e87851e5480587ebedb64aa4e5bb2f8c1a9"
+      },
+      "audit_result_sha256": "c1e0c54185b08e1337a0a125f904886846880e29994874c1059b064b5887c162",
+      "approved_evidence_fingerprint": "6254488a1b6639c13008578198304af2df28e048c185de6507f7fadae125ea0c"
+    },
+    {
+      "run_id": "semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-store-tools-in-toolbox-cap20-20261019-2151-store_tools_in_toolbox-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "8d9624e1d42c378058b77b982597db9fadcae863f10e3b85a485eeff0b08931c",
+        "provenance.json": "72ffa09671d127eab2a91c28ece60b4f474d9602e3ca49098e7fc6a54be9ac9e",
+        "result.json": "1f895e9edf1e27b3008eb6274e2bb61ecc6e24a0fcd92ec59cc023c43b7671ca",
+        "actions.json": "863c60537ee255da952ebfec6e6ae6a024768776ea8eb76456acc9ada3a2fd93",
+        "manifest.json": "8d904ea51bf3b7da0c1a4627372c3a48bf7169be57faa0720ba7d9ab46e1ef3f",
+        "native-terminal.json": "23131352a57793d73b49a1b46a5ac2d6502886ddf3b3974e9cd4c1d1c5daed9c"
+      },
+      "audit_result_sha256": "8dc9c91679a6fed207ffaeb92a2e95e878b71e7c8c6445de490c6fe9ad886102",
+      "approved_evidence_fingerprint": "8d612b8b97df0625192e89adf028e9d87564130c801cafc82f879722b4ab9272"
+    },
+    {
+      "run_id": "semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-swap-t-cap20-20261019-2151-swap_T-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "ecd1b1b7309f7dc6f569a11002d7a46338c8d1f26e8a3d6d17a5ae01a19f172e",
+        "provenance.json": "529553f1778c0ee6a2967d9ca74520ab0ca046a98163c1a07f88b13e8bfeed8c",
+        "result.json": "cd4e02a0fbb93c0be38b2c59bb21de57211e062ae4d007e5d796d196bb12c6f4",
+        "actions.json": "1276e2b23f2827ce6d1723c7d94b08914accf9126bfdcc141d9815b19d8985a8",
+        "manifest.json": "77f31f71136a15c415dffd951bdcab94775b82a5582dcef99417bf15ae70dc15",
+        "native-terminal.json": "7f9ea3687639461e22120a84ca4b8c7ace9f5b3ae23f006230d0802ab00fea49"
+      },
+      "audit_result_sha256": "4ce2eb96c780797000455bd49d3af5a701b88ef38f0a4728da813122ac68ff96",
+      "approved_evidence_fingerprint": "8d44b5ea1264135e546c8dd889f899021e91a450eb53fdfa6317f1a2db637c7c"
+    },
+    {
+      "run_id": "semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-swap-blocks-cap20-20261019-2151-swap_blocks-standard-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "66be2b97b95ef9b6d9fbc074a04dabf68855603964bd42fd319552607884efa7",
+        "provenance.json": "5bf0c902983a8b8b567c02d6be9fec07b4af4561474d8817cc41839a5005f950",
+        "result.json": "9763b64083a772deee2e3aaa093f010ae3f2de1d966f974ce901eec9e3f59544",
+        "actions.json": "736677f570f5e27cb96fa3de917cef8a8d089d2a3250025940ccd506af92d201",
+        "manifest.json": "ed0b35c6dd3f27d86a612a296b8d5bdb54609386389d98103e216562aa47d17a",
+        "native-terminal.json": "e1d9b72c2953ac60ebd8d8f937a73d7b741c44fe22eaf4a614eb85a9b9f293a5"
+      },
+      "audit_result_sha256": "9e3d24cbacf88ad8b6626e3902d196a2d0001a7c89d0087ccf8dde51af28cd52",
+      "approved_evidence_fingerprint": "7c27dd0a46c6afb518cd4453962437ab7d0247b290d7c7aa657d8883ac6dd685"
+    },
+    {
+      "run_id": "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0",
+      "source_api_url": "https://zefanw.github.io/robodojo-l3-dashboard/api/v1/results/semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0.json",
+      "scene": 0,
+      "identity_verified": true,
+      "source_sha256": {
+        "config.json": "cdb9e041aa8ca2ff943251e661f1afceb2880cb3f51840923dffaa04fdd32b6d",
+        "provenance.json": "ecb7c48d0f79c9b9abebc3dd7594c0bb863b8ff4b65d9bdada5a863a0d1dada4",
+        "result.json": "6523b5d2a461877a6c15b5a2fa78d038b7e502f56ef58e4d6fff886aafab9960",
+        "actions.json": "7e201c76743dd73147b99baa772f8d28f3f8b421d2710e3faea5c7a7b69a8f07",
+        "manifest.json": "04b98402c2a2f11caad756f9d20ed7e594c8df09bd6b4b8addc63684f49834b3",
+        "native-terminal.json": "d5bb1ee60cc7107a1f774f8feecbd154a3032cbcc76ba43f3ab884d4fbf8d97d"
+      },
+      "audit_result_sha256": "29a88edd2709cfb70aa0ffb135f8c6f026e0fd34f92a19f99ace7e42ede95c14",
+      "approved_evidence_fingerprint": "066835b0708aea06a4f956ca2a92385ea691c4b9ed894b81d96fbf0ff0e81fca"
+    }
+  ],
+  "protocol_files_sha256": {
+    "protocol.md": "9e5d99795ae827c38ba2486426eec94869c9d2cd52c31d10a748deb340f6940a",
+    "protocol.json": "b33929b498398936e9c1e216ad134716240db4314f7e243d9dcf645d45e158b7",
+    "submission.schema.json": "4ac5c04f6ea6df015a776f57f107567ed8959085c37340cf9ac164e7d4245551",
+    "validate_submission.py": "fcfb353af3c3016a9d19d272e4567e57ec718e6e14061d0ec9e691a03303267e"
+  },
+  "protocol_freshness": {
+    "verified_latest": true,
+    "reason": "main沙箱首次获取遇到DNS失败后，主线程已获取公开站点的protocol.md、protocol.json、schema及官方校验器，四个文件SHA256均与本次校验所用版本一致。",
+    "attempted_urls": [
+      "https://na-wen.github.io/robodojo-board/protocol.md",
+      "https://na-wen.github.io/robodojo-board/protocol.json",
+      "https://na-wen.github.io/robodojo-board/submission.schema.json",
+      "https://na-wen.github.io/robodojo-board/validate_submission.py"
+    ]
+  },
+  "privacy": "只包含公开源配置及证据引用/摘要；不导出凭证、provider配置、CLI日志或个人绝对路径。"
+}
