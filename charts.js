@@ -1,5 +1,110 @@
+/* Correlations use paired run observations within each experiment. */
+window.metricOutcomeAnalysis = (() => {
+  const view={metric:'emptyRetry',target:'success',method:'spearman',quality:'available'};
+  let currentContext;
+  const finite=v=>typeof v==='number'&&Number.isFinite(v);
+  function ranks(values) {
+    const sorted=values.map((v,i)=>({v,i})).sort((a,b)=>a.v-b.v), result=[];
+    for(let i=0;i<sorted.length;) {
+      let end=i+1;
+      while(end<sorted.length&&sorted[end].v===sorted[i].v) end++;
+      for(let j=i;j<end;j++) result[sorted[j].i]=(i+end-1)/2+1;
+      i=end;
+    }
+    return result;
+  }
+  function coefficient(pairs,method) {
+    if(pairs.length<3) return {value:null,reason:'少于3条配对样本'};
+    let xs=pairs.map(p=>p.x), ys=pairs.map(p=>p.y);
+    if(method==='spearman') {xs=ranks(xs);ys=ranks(ys);}
+    const mean=vs=>vs.reduce((a,b)=>a+b,0)/vs.length, mx=mean(xs), my=mean(ys);
+    let xx=0,yy=0,xy=0;
+    xs.forEach((x,i)=>{const dx=x-mx,dy=ys[i]-my;xx+=dx*dx;yy+=dy*dy;xy+=dx*dy;});
+    if(xx===0||yy===0) return {value:null,reason:xx===0?'指标无变化':'结果无变化'};
+    return {value:Math.max(-1,Math.min(1,xy/Math.sqrt(xx*yy))),reason:null};
+  }
+  function observations(group,metric,target,quality) {
+    if(group.audit_completion==='pending') return [];
+    return group.runs.flatMap(({c})=>{
+      if(c.audit_completion==='pending') return [];
+      const metricFields=metric.fields||[metric.field];
+      const statuses=metricFields.map(f=>c.metricStatus?.[f]);
+      const resultStatus=c.metricStatus?.[target];
+      if([...statuses,resultStatus].some(s=>['pending','unknown','na'].includes(s))) return [];
+      if(quality==='confirmed'&&[...statuses,resultStatus].some(s=>s!=='confirmed')) return [];
+      const x=metric.key==='actionsPerTurn'?
+        (finite(c.metrics.actions)&&finite(c.metrics.turns)&&c.metrics.turns>0?c.metrics.actions/c.metrics.turns:null):c.metrics[metric.key];
+      const y=c.metrics[target];
+      if(!finite(x)||!finite(y)||(target==='success'&&y!==0&&y!==1)||y<0||y>1) return [];
+      return [{x,y,c,lower:statuses.includes('lower_bound'),unclassified:statuses.some(s=>s==null)}];
+    });
+  }
+  const format=v=>v===null?'—':(v>0?'+':'')+v.toFixed(2);
+  function render({series,definitions,escape:esc}) {
+    currentContext={series,definitions,escape:esc};
+    const metrics=definitions.filter(m=>!['success','score'].includes(m.key)).concat([
+      {key:'actionsPerTurn',label:'每轮 action 数',fields:['actions','turns']}
+    ]);
+    if(!definitions.length) return '';
+    if(!metrics.some(m=>m.key===view.metric)) view.metric=metrics[0].key;
+    const selected=metrics.find(m=>m.key===view.metric);
+    const pair=(g,m,t)=>observations(g,m,t,view.quality);
+    const cell=(g,m)=>{
+      const ps=pair(g,m,view.target), stat=coefficient(ps,view.method);
+      const lower=ps.filter(p=>p.lower).length, unknown=ps.filter(p=>p.unclassified).length;
+      const color=stat.value===null?'transparent':stat.value>=0?`rgba(45,127,111,${Math.abs(stat.value)*.28})`:`rgba(185,81,94,${Math.abs(stat.value)*.28})`;
+      const title=stat.reason||`${view.method==='spearman'?'Spearman ρ':'Pearson r'}=${stat.value.toFixed(4)}`;
+      return `<td style="background:${color}" data-correlation-group="${esc(g.id)}" data-correlation-metric="${m.key}" data-correlation-n="${ps.length}"><b title="${esc(title)}">${format(stat.value)}</b><small>n=${ps.length}/${g.runs.length}${lower?' · 下界'+lower:''}${unknown?' · 未分级'+unknown:''}${stat.reason?' · '+stat.reason:ps.length<10?' · 小样本':''}</small></td>`;
+    };
+    const rows=metrics.map(m=>`<tr${m.key===view.metric?' class="bc-corr-selected"':''}><th scope="row"><button data-correlation-pick="${m.key}" aria-pressed="${m.key===view.metric}">${esc(m.label)}</button></th>${series.map(g=>cell(g,m)).join('')}</tr>`).join('');
+    const scatter=()=>{
+      const W=900,H=255,PL=45,PR=20,PT=15,PB=40;
+      const data=series.flatMap(g=>pair(g,selected,'score').map(p=>({...p,g})));
+      if(!data.length) return '<p class="bc-corr-empty">当前范围没有有效的指标与 score 配对。</p>';
+      const min=Math.min(0,...data.map(p=>p.x)), max=Math.max(1,...data.map(p=>p.x));
+      const sx=x=>PL+(x-min)/(max-min)*(W-PL-PR), sy=y=>H-PB-y*(H-PT-PB);
+      const grid=[0,.5,1].map(y=>`<line x1="${PL}" x2="${W-PR}" y1="${sy(y)}" y2="${sy(y)}" class="bc-sc-grid"/><text x="${PL-8}" y="${sy(y)+4}" text-anchor="end" class="bc-sc-tick">${y}</text>`).join('');
+      const ticks=[min,(min+max)/2,max].map(x=>`<text x="${sx(x)}" y="${H-PB+18}" text-anchor="middle" class="bc-sc-tick">${Number(x.toFixed(2))}</text>`).join('');
+      const dots=data.map(p=>`<circle cx="${sx(p.x)}" cy="${sy(p.y)}" r="4" fill="${p.g.color}" fill-opacity=".55" stroke="#fff" stroke-width=".5"><title>${esc(p.g.name)} · ${esc(p.c.task)} · ${esc(p.c.run_id)} · ${esc(selected.label)}=${p.x} · score=${p.y}${p.lower?' · 指标为确认下界':''}</title></circle>`).join('');
+      return `<div class="bc-corr-scatter-scroll"><svg class="bc-corr-scatter" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(selected.label)}与score逐运行散点图">${grid}${ticks}${dots}<text x="${PL}" y="${H-5}" class="bc-sc-tick">${esc(selected.label)}</text><text x="${W-PR}" y="12" text-anchor="end" class="bc-sc-tick">score</text></svg></div>`;
+    };
+    const details=series.map(g=>{
+      // Use the metric population for bins; each outcome has its own denominator.
+      const ps=pair(g,selected,'success'), scores=pair(g,selected,'score');
+      const all=[...ps,...scores];
+      const keys=[...new Set(all.map(p=>p.x))].sort((a,b)=>a-b);
+      const edges=keys.length<=6?null:[0,1,2,3,4,5,6].map(i=>{
+        const values=all.map(p=>p.x);return Math.min(...values)+(Math.max(...values)-Math.min(...values))*i/6;
+      });
+      const bins=edges?edges.slice(0,-1).map((lo,i)=>({label:`${Number(lo.toPrecision(4))}–${Number(edges[i+1].toPrecision(4))}${i===5?'（含右端）':''}`,test:x=>x>=lo&&(i===5?x<=edges[i+1]:x<edges[i+1])})):keys.map(x=>({label:Number(x.toFixed(3)).toString(),test:v=>v===x}));
+      const body=bins.map(b=>{
+        const a=ps.filter(p=>b.test(p.x)),s=scores.filter(p=>b.test(p.x)),wins=a.filter(p=>p.y===1).length;
+        return `<tr><th scope="row">${esc(b.label)}</th><td>${a.length?`${(wins/a.length*100).toFixed(1)}% <small>${wins}/${a.length}</small>`:'—'}</td><td>${s.length?`${(s.reduce((n,p)=>n+p.y,0)/s.length).toFixed(3)} <small>n=${s.length}</small>`:'—'}</td></tr>`;
+      }).join('');
+      return `<div class="bc-corr-group"><h4><i style="background:${g.color}"></i>${esc(g.name)}</h4>${bins.length?`<table><thead><tr><th>指标值${edges?'区间':''}</th><th>成功率</th><th>平均 score</th></tr></thead><tbody>${body}</tbody></table>`:'<p class="bc-corr-empty">当前范围无有效配对样本。</p>'}</div>`;
+    }).join('');
+    return `<article class="bc-card bc-card-wide bc-correlation"><header class="bc-card-head"><div><h3>各项 metric 与任务结果的相关性</h3><p>每条运行一个样本，按实验组分别计算；成功结果使用原生 success 0/1</p></div><span class="bc-unit">−1 至 +1</span></header>
+      <div class="bc-corr-controls"><fieldset><legend>结果</legend><label><input type="radio" name="correlation-target" value="success"${view.target==='success'?' checked':''}>成功率</label><label><input type="radio" name="correlation-target" value="score"${view.target==='score'?' checked':''}>score</label></fieldset><label>相关系数<select id="correlation-method"><option value="spearman"${view.method==='spearman'?' selected':''}>Spearman ρ</option><option value="pearson"${view.method==='pearson'?' selected':''}>Pearson r</option></select></label><label>审核口径<select id="correlation-quality"><option value="available"${view.quality==='available'?' selected':''}>包含确认下界</option><option value="confirmed"${view.quality==='confirmed'?' selected':''}>仅已确认数值</option></select></label></div>
+      <div class="bc-corr-scale"><span>负相关</span><i></i><span>正相关</span></div><div class="bc-corr-scroll"><table class="bc-corr-table"><thead><tr><th>metric</th>${series.map(g=>`<th>${esc(g.name)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="bc-footnote">Spearman 使用平均秩处理并列值；Pearson 衡量线性关系，对二元 success 等价于点二列相关。未知、NA、待审核及缺失配对排除；常数或 n&lt;3 不计算，n&lt;10 标小样本。下界和未分级值单列，可切换审核口径。相关性未控制任务难度、运行长度或设置差异，不代表因果或显著性；多指标探索不作显著性检验。</p>
+      <div class="bc-corr-detail"><label>查看指标<select id="correlation-metric">${metrics.map(m=>`<option value="${m.key}"${m.key===view.metric?' selected':''}>${esc(m.label)}</option>`).join('')}</select></label><h3>${esc(selected.label)}与 score</h3>${scatter()}<div class="bc-tb-legend">${series.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('')}</div><div class="bc-corr-groups">${details}</div><p class="bc-footnote">散点保持实际位置，重合样本可能遮挡；分档表保留全部样本。最多6档，超过6种取值时按当前范围各组自身指标范围等宽分档；左闭右开，末档含右端。成功率和 score 分别使用有效配对分母。</p></div></article>`;
+  }
+  function bind(root,context=currentContext) {
+    const region=root.querySelector('#metric-outcome-analysis');
+    if(!region) return;
+    const update=()=>{region.innerHTML=render(context);bind(root,context);};
+    region.querySelectorAll('[name="correlation-target"]').forEach(el=>el.onchange=()=>{view.target=el.value;update();});
+    for(const key of ['metric','method','quality']) {
+      const el=region.querySelector('#correlation-'+key);
+      if(el) el.onchange=()=>{view[key]=el.value;update();};
+    }
+    region.querySelectorAll('[data-correlation-pick]').forEach(el=>el.onclick=()=>{view.metric=el.dataset.correlationPick;update();});
+  }
+  return {ranks,coefficient,observations,render,bind,view};
+})();
+
 /* Homepage charts share the exact selected runs used by the task and event pages. */
-window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings}) {
+window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings, metricDefinitions=[]}) {
   const active = groups.filter(g => runs.some(r => r.g.id === g.id));
   const PAL=['#58A165','#E68A36','#438FC4','#9474B5','#CF626D'];
   const colors = {semantic:PAL[0], persistent:PAL[1]};
@@ -290,7 +395,7 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
                  {t:'失败',vals:cat(false,rs=>rs.reduce((s,r)=>s+r.c.metrics.turns,0)/rs.length)}];
     return `<article class="bc-card bc-card-wide">${cardHead('成功与失败的成本差异','同一实验内部对比：成功的运行和失败的运行，执行节奏有什么不同','对比')}
       <div class="bc-gb-pair">${miniGB(apt,{unit:'个',decimals:1,title:'每轮 action 数'})}${miniGB(turns,{unit:'轮',decimals:0,title:'平均轮数'})}</div>
-      <p class="bc-footnote">四组方向一致：成功的运行每轮动作更多、总轮数更少；失败的运行轮数更多而每轮更短——失败更像“反复犹豫”而不是“一口气走远”。只统计轮数大于 0 的运行。</p></article>`;
+      <p class="bc-footnote">按当前范围分别比较成功与未成功运行；只统计轮数大于 0 的运行。差异同时受任务构成与提前结束影响，不能据此推断失败原因。</p></article>`;
   }
 
   // ── 诊断 2：得分分布 ──
@@ -317,20 +422,21 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
   // ── 诊断 3：空夹次数与成功率 ──
   function emptyRetryOutcome() {
     const BINS=[['0 次',v=>v===0],['1–2 次',v=>v>=1&&v<=2],['3–5 次',v=>v>=3&&v<=5],['6 次以上',v=>v>=6]];
+    const valid=g=>window.metricOutcomeAnalysis.observations(g,{key:'emptyRetry',field:'empty_retry'},'success','available');
     const cats=BINS.map(([lab,f])=>({t:lab,vals:series.map(g=>{
-      const rs=g.runs.filter(r=>f(r.c.metrics.emptyRetry||0));
+      const rs=valid(g).filter(p=>f(p.x));
       if(!rs.length) return null;
-      return {g,v:100*rs.filter(r=>r.c.metrics.success===1).length/rs.length};
+      return {g,v:100*rs.filter(p=>p.y===1).length/rs.length};
     }).filter(Boolean)}));
     const total=BINS.map(([lab,f])=>{
-      const rs=series.flatMap(g=>g.runs).filter(r=>f(r.c.metrics.emptyRetry||0));
-      return {lab,n:rs.length,s:rs.filter(r=>r.c.metrics.success===1).length};
+      const rs=series.flatMap(valid).filter(p=>f(p.x));
+      return {lab,n:rs.length,s:rs.filter(p=>p.y===1).length};
     });
     const legend=series.map(g=>`<span class="bc-legend"><i style="background:${g.color}"></i>${esc(g.name)}</span>`).join('');
     return `<article class="bc-card bc-card-wide">${cardHead('空夹次数与成功率','把运行按“记录了几次空夹”分组，看成功率怎么变','%')}
       ${miniGB(cats,{unit:'%',decimals:0,fixed:100})}
       <div class="bc-tb-legend">${legend}</div>
-      <p class="bc-footnote">合并四组：${total.map(t=>`${t.lab} ${t.s}/${t.n}`).join(' · ')}。空夹 3 次以上的运行没有一次成功，它更像是“已经卡住”的标记，而不是原因。</p></article>`;
+      <p class="bc-footnote">当前范围合计：${total.map(t=>`${t.lab} ${t.s}/${t.n}`).join(' · ')}（成功数/有效运行数）。排除未知与待审核，包含确认下界；每组分开绘制，不推断因果。</p></article>`;
   }
 
   // ── 诊断 4：可重复性 ──
@@ -409,6 +515,9 @@ window.renderBehaviorOverview = function ({runs, groups, escape: esc, settings})
       ranking(),
       scatter(),
       cooccurrence()
+    ]},
+    {id:'correlation',name:'结果关联',en:'OUTCOME ASSOCIATIONS',desc:'各项指标与成功率、score；按实验组独立计算',cards:[
+      `<div id="metric-outcome-analysis">${window.metricOutcomeAnalysis.render({series,definitions:metricDefinitions,escape:esc})}</div>`
     ]},
     {id:'insight',name:'诊断',en:'DIAGNOSTICS',desc:'拆开平均值：成败差异、结果分布、稳定性与审计深度',cards:[
       successVsFail(),

@@ -11,6 +11,8 @@ on:
       - 'test_semantic_positions.py'
       - 'test_positions.cjs'
       - 'charts.js'
+      - 'app.js'
+      - 'test_correlations.cjs'
       - 'build_api.py'
   push:
     branches: [main]
@@ -36,6 +38,8 @@ jobs:
         run: python3 -m unittest test_log_image_ingestion.py test_semantic_positions.py
       - name: Verify event position charts
         run: node test_positions.cjs
+      - name: Verify metric outcome correlations
+        run: node test_correlations.cjs
 
   # PR 里改动的提交目录逐个校验，任一不过即失败。
   bundles:
