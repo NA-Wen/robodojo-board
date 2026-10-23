@@ -43,13 +43,13 @@
     "success": 18,
     "uncertain": 78,
     "turns": 2815,
-    "other": 80,
     "drop": 35,
     "table_transfer": 8,
+    "view": 210,
     "empty_retry": 47,
+    "other": 80,
     "direct_failed": 8,
-    "support_transfer": 2,
-    "view": 210
+    "support_transfer": 2
   },
   "cases": [
     {
@@ -54342,6 +54342,8 @@
     "events": "submissions/semantic/events.json",
     "validation": "submissions/semantic/validation-report.json",
     "coverage": "submissions/semantic/coverage.json",
-    "annotations": "submissions/semantic/event_annotations.json"
+    "annotations": "submissions/semantic/event_annotations.json",
+    "report": "submissions/semantic/report.html",
+    "provenance": "submissions/semantic/provenance.json"
   }
 }

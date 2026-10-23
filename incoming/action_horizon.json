@@ -43,13 +43,13 @@
     "success": 15,
     "uncertain": 43,
     "turns": 2727,
-    "view": 61,
-    "empty_retry": 43,
+    "direct_failed": 2,
+    "direct_transfer": 3,
     "table_transfer": 9,
     "drop": 29,
-    "direct_transfer": 3,
+    "empty_retry": 43,
     "other": 66,
-    "direct_failed": 2
+    "view": 61
   },
   "cases": [
     {
@@ -16113,5 +16113,13 @@
         }
       ]
     }
-  ]
+  ],
+  "submission_links": {
+    "report": "submissions/action_horizon/report.html",
+    "bundle": "submissions/action_horizon/submission.json",
+    "csv": "submissions/action_horizon/task_metrics.csv",
+    "events": "submissions/action_horizon/events.json",
+    "coverage": "submissions/action_horizon/review_coverage.csv",
+    "validation": "submissions/action_horizon/validation-report.json"
+  }
 }

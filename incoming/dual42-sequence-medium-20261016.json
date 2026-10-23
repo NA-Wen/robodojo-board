@@ -44,13 +44,13 @@
     "success": 13,
     "uncertain": 78,
     "turns": 2454,
-    "direct_failed": 3,
-    "table_transfer": 11,
+    "recovery_other": 4,
+    "empty_retry": 38,
     "drop": 27,
+    "direct_failed": 3,
     "view": 45,
     "other": 74,
-    "recovery_other": 4,
-    "empty_retry": 38
+    "table_transfer": 11
   },
   "cases": [
     {
