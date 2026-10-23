@@ -1,0 +1,8 @@
+{
+  "runs": 42,
+  "events": 234,
+  "source_audit_sha256": "cb5be942c96445187eeac427675ee462295a91014749a1bef392614da9700b2c",
+  "native_results_recomputed": "pass",
+  "metrics_export_reimport": "pass",
+  "event_export_reimport": "pass"
+}
