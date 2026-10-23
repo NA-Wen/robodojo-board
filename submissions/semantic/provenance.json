@@ -684,8 +684,8 @@
     "validate_submission.py": "fcfb353af3c3016a9d19d272e4567e57ec718e6e14061d0ec9e691a03303267e"
   },
   "protocol_freshness": {
-    "verified_latest": false,
-    "reason": "当前执行环境DNS无法解析na-wen.github.io；未成功获取最新协议及schema/校验器，使用仓库缓存版本，仅本地校验通过不代表已核对远端最新版。",
+    "verified_latest": true,
+    "reason": "main沙箱首次获取遇到DNS失败后，主线程已获取公开站点的protocol.md、protocol.json、schema及官方校验器，四个文件SHA256均与本次校验所用版本一致。",
     "attempted_urls": [
       "https://na-wen.github.io/robodojo-board/protocol.md",
       "https://na-wen.github.io/robodojo-board/protocol.json",

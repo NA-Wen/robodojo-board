@@ -46,7 +46,7 @@
     "semantic-eef-sweep-blocks-cap20-20261019-2151-sweep_blocks-random-s0-scene0: 1 项标为 na/unknown：wrong_object"
   ],
   "validator_sha256": "fcfb353af3c3016a9d19d272e4567e57ec718e6e14061d0ec9e691a03303267e",
-  "remote_latest_verified": false,
+  "remote_latest_verified": true,
   "submission_sha256": "08bcd4968f0c3c382c547b8cf5b76cf497d9290f5ff41fd3469f64efab397781",
   "metric_reconciliation": "1092/1092 equal",
   "runs": 42,

@@ -6,4 +6,4 @@ metric_reconciliation.json逐run逐项列出指标、确认/候选事件与复�
 coverage.json、review_coverage.csv与review_inspected_frames.json只报告实际记录覆盖；含历史接触表批次，不声称全帧原图逐张观看。
 媒体保留原始URL、SHA256及字节数；没有公开URL时为null；没有上传派生帧替代原始媒体。
 main_review.json与native_metrics.json保留验收及原生记录摘要；审核源只读、保护文件哈希不变。
-环境DNS阻止重新获取远端最新协议和GitHub提交；当前使用仓库缓存协议校验，不能宣称已发布或已远端提交。
+主线程已获取远端最新协议、schema和官方校验器，SHA256与本次校验所用版本一致；看板发布以PR合并为准。
